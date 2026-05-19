@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "serverInfo": {
+    "name": "PDFRápido",
+    "version": "1.0.0",
+    "description": "Herramientas de procesamiento de PDF online — OCR, resumen, traducción, extracción de datos, conversión y más, usando inteligencia artificial.",
+    "homepage": "https://pdfrapido.eu",
+    "contact": "https://pdfrapido.eu/contacto"
+  },
+  "transport": [
+    {
+      "type": "http",
+      "url": "https://pdfrapido.eu/api"
+    }
+  ],
+  "capabilities": {
+    "tools": [
+      {
+        "name": "ocr-a-pdf",
+        "description": "Extrae texto de PDFs escaneados usando OCR",
+        "endpoint": "https://pdfrapido.eu/api/ocr-a-pdf"
+      },
+      {
+        "name": "resumir-pdf",
+        "description": "Resume documentos PDF con IA",
+        "endpoint": "https://pdfrapido.eu/api/resumir-pdf"
+      },
+      {
+        "name": "chat-pdf",
+        "description": "Responde preguntas sobre el contenido de un PDF",
+        "endpoint": "https://pdfrapido.eu/api/chat-pdf"
+      },
+      {
+        "name": "traducir-pdf",
+        "description": "Traduce PDFs a otro idioma conservando el formato",
+        "endpoint": "https://pdfrapido.eu/api/traducir-pdf"
+      },
+      {
+        "name": "extraer-datos",
+        "description": "Extrae datos estructurados de PDFs (tablas, campos, valores)",
+        "endpoint": "https://pdfrapido.eu/api/extraer-datos"
+      },
+      {
+        "name": "redactar-pdf",
+        "description": "Genera documentos PDF desde instrucciones en lenguaje natural",
+        "endpoint": "https://pdfrapido.eu/api/redactar-pdf"
+      },
+      {
+        "name": "corregir-pdf",
+        "description": "Corrige gramática y ortografía en documentos PDF",
+        "endpoint": "https://pdfrapido.eu/api/corregir-pdf"
+      },
+      {
+        "name": "pdf-a-audio",
+        "description": "Convierte PDFs en audio MP3 con text-to-speech",
+        "endpoint": "https://pdfrapido.eu/api/pdf-a-audio"
+      },
+      {
+        "name": "pdf-a-png",
+        "description": "Convierte páginas de PDF a imágenes PNG",
+        "endpoint": "https://pdfrapido.eu/api/pdf-a-png"
+      }
+    ]
+  },
+  "privacy": {
+    "data_retention": "none",
+    "processes_pii": false,
+    "gdpr_compliant": true
+  }
+}

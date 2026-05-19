@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# No indexar áreas de administración y APIs internas
+Disallow: /api/
+Disallow: /wopi/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Sitemap principal
+Sitemap: https://pdfrapido.eu/sitemap_index.xml
+
+# AI content usage preferences (https://contentsignals.org/)
+Content-Signal: ai-train=no, search=yes, ai-input=yes

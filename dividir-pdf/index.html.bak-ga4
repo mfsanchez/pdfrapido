@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dividir PDF, separar páginas PDF, split PDF online, cortar PDF gratis, partir PDF">
+    <meta name="description" content="Divide un PDF en varios archivos gratis y sin registro. Elige páginas o rangos que quieres separar y descarga cada parte en segundos. Sin instalar nada.">
+    <meta name="author" content="MF Sanchez">
+    <title>Dividir PDF Online Gratis — Separa Páginas | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#4285F4;--accent-light:#EBF2FE;--accent-dark:#2B6BD0;--gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--radius:12px;--radius-lg:16px;--radius-xl:24px;--shadow-sm:0 1px 2px rgba(0,0,0,.05);--shadow-lg:0 10px 25px -3px rgba(0,0,0,.08),0 4px 6px -4px rgba(0,0,0,.04)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--gray-800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.logo-text{font-size:20px;font-weight:700;letter-spacing:-.5px}.logo-text span{color:var(--primary)}.nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--gray-500);font-size:14px;font-weight:500;transition:color .2s}.nav-back:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:800px;margin:0 auto;width:100%}
+        .tool-header{text-align:center;margin-bottom:36px}.tool-header .icon-badge{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.tool-header h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.tool-header p{font-size:16px;color:var(--gray-500)}
+        .upload-zone{border:2px dashed var(--gray-300);border-radius:var(--radius-xl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--gray-50)}.upload-zone:hover{border-color:var(--accent);background:rgba(66,133,244,.03)}.upload-icon{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.upload-zone:hover .upload-icon{transform:translateY(-4px)}.upload-zone h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.upload-zone h3 span{color:var(--accent)}.upload-zone p{font-size:14px;color:var(--gray-400)}.upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .file-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:16px 20px;display:flex;align-items:center;gap:14px;margin-bottom:20px}.file-card-icon{width:40px;height:40px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}.file-card-info{flex:1;min-width:0}.file-card-info h4{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.file-card-info span{font-size:12px;color:var(--gray-400)}
+        .mode-select{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+        .mode-btn{border:2px solid var(--gray-200);border-radius:var(--radius);padding:20px 16px;text-align:center;cursor:pointer;transition:all .25s;background:#fff}.mode-btn:hover{border-color:var(--accent)}.mode-btn.selected{border-color:var(--accent);background:rgba(66,133,244,.04)}.mode-btn h5{font-size:14px;font-weight:600;color:var(--gray-800);margin-bottom:4px}.mode-btn span{font-size:12px;color:var(--gray-400);line-height:1.3;display:block}
+        .range-input{margin-bottom:24px}.range-input label{display:block;font-size:14px;font-weight:500;color:var(--gray-700);margin-bottom:8px}.range-input input{width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:15px;outline:none;transition:border-color .2s}.range-input input:focus{border-color:var(--accent)}.range-input .hint{font-size:12px;color:var(--gray-400);margin-top:6px}
+        .action-btn{width:100%;padding:16px;border:none;border-radius:var(--radius);background:var(--accent);color:#fff;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}.action-btn:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 4px 14px rgba(66,133,244,.3)}.action-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+        .progress-area{display:none;text-align:center;padding:40px 0}.progress-area.active{display:block}.spinner{width:48px;height:48px;border:4px solid var(--gray-200);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}@keyframes spin{to{transform:rotate(360deg)}}.progress-area p{font-size:15px;color:var(--gray-500)}
+        .result-area{display:none;animation:fadeInUp .5s ease-out}.result-area.active{display:block}.result-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:36px;text-align:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#64B5F6)}.result-success-icon{width:64px;height:64px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:scaleIn .4s cubic-bezier(.34,1.56,.64,1)}@keyframes scaleIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.result-card h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.result-card .result-desc{font-size:14px;color:var(--gray-400);margin-bottom:24px}.result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn-download{padding:14px 32px;border:none;border-radius:var(--radius);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:8px}.btn-download:hover{background:var(--accent-dark)}.btn-reset{padding:14px 24px;border:1px solid var(--gray-200);border-radius:var(--radius);background:#fff;color:var(--gray-600);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}.btn-reset:hover{background:var(--gray-50)}
+        .seo-content{max-width:700px;margin:60px auto 0}.seo-content h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo-content p{font-size:15px;color:var(--gray-500);line-height:1.7;margin-bottom:12px}
+        .ad-placeholder{background:var(--gray-50);border:1px dashed var(--gray-300);border-radius:var(--radius);padding:16px;text-align:center;color:var(--gray-400);font-size:13px;margin-top:40px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        .thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(85px,1fr));gap:8px;margin-bottom:20px;max-height:360px;overflow-y:auto;padding:2px}
+        .thumb-item{border:2px solid var(--gray-200);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;align-items:center;transition:all .2s;background:#fff}
+        .thumb-item.selectable{cursor:pointer}.thumb-item.selectable:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .thumb-item.selected{border-color:var(--accent);background:rgba(66,133,244,.07)}
+        .thumb-item canvas{width:100%;height:auto;display:block}
+        .thumb-num{font-size:11px;font-weight:600;color:var(--gray-500);padding:4px 0;text-align:center}
+        .thumb-item.selected .thumb-num{color:var(--accent)}
+        .thumb-loading{background:var(--gray-100);min-height:80px;width:100%;display:flex;align-items:center;justify-content:center;color:var(--gray-400);font-size:11px}
+        .thumb-item.dragging{opacity:.35;transform:scale(.95)}.thumb-item.drag-over{border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(66,133,244,.2);transform:scale(1.02)}
+        .thumb-hint{font-size:12px;color:var(--gray-400);margin-bottom:12px;text-align:center}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:640px){main{padding:100px 16px 40px}.tool-header h1{font-size:26px}.upload-zone{padding:40px 24px}.mode-select{grid-template-columns:1fr}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <link rel="canonical" href="https://pdfrapido.eu/dividir-pdf/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Dividir PDF Online Gratis",
+          "url": "https://pdfrapido.eu/dividir-pdf/",
+          "description": "Separa páginas de tu PDF online. Extrae páginas concretas o divide en partes iguales. Gratis y sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+  "publisher": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dividir PDF Online Gratis",
+              "item": "https://pdfrapido.eu/dividir-pdf/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo dividir un PDF en varias partes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sube el PDF, elige cómo quieres dividirlo (por rangos de páginas, cada N páginas, o extrayendo páginas concretas) y pulsa dividir. Recibirás los archivos resultantes en un ZIP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo extraer solo algunas páginas de un PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, puedes seleccionar exactamente las páginas que necesitas (por ejemplo: 1, 3-5, 8) y extraerlas como un nuevo PDF independiente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede dividir un PDF escaneado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, PDFRápido puede dividir cualquier tipo de PDF, incluyendo PDFs escaneados o de imagen, ya que el proceso trabaja a nivel de página sin necesidad de leer el contenido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántas páginas puede tener el PDF para dividirlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay límite de páginas para dividir. El único límite es el tamaño del archivo (50 MB máximo)."
+          }
+        }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="Dividir PDF Online Gratis — Separa páginas de tu PDF | PDFRápido">
+    <meta property="og:description" content="Divide un PDF en varios archivos gratis y sin registro. Elige las páginas o rangos que quieres separar y descarga el resultado en segundos.">
+    <meta property="og:url" content="https://pdfrapido.eu/dividir-pdf/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dividir PDF Online Gratis — Separa páginas de tu PDF | PDFRápido">
+    <meta name="twitter:description" content="Divide un PDF en varios archivos gratis y sin registro. Elige las páginas o rangos que quieres separar y descarga el resultado en segundos.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/" class="logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="logo-text">PDF<span>Rápido</span></div></a><a href="/" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a></div></nav>
+
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Dividir PDF</li>
+    </ol>
+</nav>
+<div class="tool-header">
+        <div class="icon-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="1.5"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
+        <h1>Dividir PDF</h1>
+        <p>Separa páginas de tu PDF o extrae un rango específico de páginas.</p>
+    </div>
+
+    <div class="upload-zone" id="uploadZone">
+        <input type="file" accept=".pdf" id="fileInput">
+        <div class="upload-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
+        <p>Selecciona el archivo que quieres dividir</p>
+    </div>
+
+    <div class="step" id="stepOptions">
+        <div class="file-card">
+            <div class="file-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="file-card-info"><h4 id="fileName">doc.pdf</h4><span id="fileInfo">10 páginas · 2.4 MB</span></div>
+        </div>
+        <div class="thumb-grid" id="thumbGrid"></div>
+        <p class="thumb-hint" id="thumbHint" style="display:none">Haz clic en las páginas que quieres extraer</p>
+        <div class="mode-select">
+            <div class="mode-btn selected" data-mode="range" onclick="selectMode(this)">
+                <h5>Extraer rango</h5>
+                <span>Selecciona las páginas que quieres extraer</span>
+            </div>
+            <div class="mode-btn" data-mode="all" onclick="selectMode(this)">
+                <h5>Separar todas</h5>
+                <span>Cada página como un PDF independiente</span>
+            </div>
+        </div>
+        <div class="range-input" id="rangeInput">
+            <label>Páginas a extraer</label>
+            <input type="text" id="pageRange" placeholder="Ej: 1-3, 5, 8-10">
+            <p class="hint" id="rangeHint">Páginas disponibles: 1-10. Usa comas y guiones.</p>
+        </div>
+        <button class="action-btn" onclick="splitPDF()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="18" rx="1.5"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+            Dividir PDF
+        </button>
+    </div>
+
+    <div class="progress-area" id="progressArea">
+        <div class="spinner"></div>
+        <p id="progressLabel">Dividiendo PDF...</p>
+    </div>
+
+    <div class="result-area" id="resultArea">
+        <div class="result-card">
+            <div class="result-success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>PDF dividido correctamente</h3>
+            <p class="result-desc" id="resultDesc"></p>
+            <div class="result-actions" id="resultActions"></div>
+        </div>
+    </div>
+
+    <div class="ad-placeholder">Espacio publicitario — Google AdSense</div>
+    <div class="seo-content">
+        <h2>Cómo dividir un PDF online gratis</h2>
+        <p>Extrae páginas específicas de tu documento PDF o separa cada página en archivos independientes. El proceso se realiza completamente en tu navegador, sin enviar datos a ningún servidor.</p>
+        <p>Ideal para extraer capítulos de un libro, separar facturas, o quedarte solo con las páginas que necesitas de un documento largo.</p>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/unir-pdf/">Unir PDF</a></li>
+            <li><a href="/extraer-paginas/">Extraer páginas</a></li>
+            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
+            <li><a href="/organizar-pdf/">Organizar páginas</a></li>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+        </ul>
+    
+        <h3>Formas de dividir un PDF</h3>
+        <p>Hay varias formas de dividir un PDF según tus necesidades:</p>
+        <ul>
+            <li><strong>Por rangos de páginas:</strong> Especifica qué páginas van en cada archivo (ej: páginas 1-10, 11-25, 26-final).</li>
+            <li><strong>Una página por archivo:</strong> Divide el PDF en tantos archivos como páginas tenga, con una página cada uno.</li>
+            <li><strong>Por tamaño:</strong> Divide el PDF en partes de tamaño aproximadamente igual.</li>
+        </ul>
+
+        <h3>Cuándo dividir un PDF</h3>
+        <ul>
+            <li>El PDF es demasiado grande para enviarlo por email (límite habitual: 25 MB)</li>
+            <li>Necesitas enviar solo un capítulo o sección de un documento largo</li>
+            <li>Una plataforma tiene límite de páginas por archivo subido</li>
+            <li>Quieres separar un PDF combinado en sus documentos originales</li>
+        </ul>
+
+        <h3>¿Se mantiene la calidad al dividir?</h3>
+        <p>Sí. Dividir un PDF es una operación de reorganización que no afecta a la calidad del contenido. Las páginas en los archivos resultantes son idénticas a las del original.</p>
+
+        <h3>¿Puedo dividir un PDF protegido?</h3>
+        <p>No directamente. Primero necesitas <a href="/desbloquear-pdf/">eliminar la protección</a> del PDF y luego dividirlo.</p>
+</div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Dividir PDF?</h2>
+  <p>Usar Dividir PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Carga el PDF</h3>
+          <p>Selecciona el PDF que quieres dividir desde tu ordenador, tablet o móvil. No hay necesidad de crear una cuenta ni instalar ningún programa.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Elige cómo dividirlo</h3>
+          <p>Indica el rango de páginas que quieres extraer, el número de páginas por documento o los puntos exactos donde separar el PDF.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga los fragmentos</h3>
+          <p>Obtienes los archivos resultantes en segundos. Puedes descargarlos individualmente o todos de una vez en un archivo ZIP.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Dividir PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Extraer capítulos de un libro</strong>
+        <span>Cuando recibes un libro o manual completo en PDF y solo necesitas un capítulo concreto, dividir el archivo te permite quedarte con la parte relevante y compartirla sin difundir el documento entero.</span>
+      </div>
+      <div class="use-case">
+        <strong>Separar facturas o contratos</strong>
+        <span>Si tienes un PDF que contiene varios documentos escaneados juntos, puedes separarlos en archivos independientes para archivarlos o enviarlos de forma organizada.</span>
+      </div>
+      <div class="use-case">
+        <strong>Reducir el tamaño para el envío</strong>
+        <span>A veces no es posible comprimir más un PDF. Dividirlo en partes más pequeñas permite enviarlo en varios correos o subirlo a plataformas con límites de tamaño.</span>
+      </div>
+      <div class="use-case">
+        <strong>Preparar presentaciones</strong>
+        <span>Extrae las diapositivas más relevantes de una presentación larga para crear una versión resumida adaptada a un público concreto.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Dividir PDF</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿Puedo elegir exactamente qué páginas conservar?</h3>
+        <p>Sí. Puedes introducir rangos específicos como páginas 1-5, 10, 15-20 y la herramienta extraerá únicamente esas páginas en el orden que definas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿El PDF resultante mantiene los hiperenlaces y el texto seleccionable?</h3>
+        <p>Sí, el contenido del PDF se conserva intacto. El texto sigue siendo seleccionable, los enlaces funcionan y las imágenes mantienen su calidad original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Cuántos fragmentos puedo crear en una sola operación?</h3>
+        <p>No hay un límite fijo de fragmentos. Puedes dividir un PDF en tantas partes como páginas tenga, aunque el proceso puede ser más lento con documentos muy extensos.</p>
+      </div>
+  </div>
+</section>
+</main>
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p></footer>
+
+<script src="/js/pdf-3.11.min.js"></script>
+<script src="/js/pdf-lib.min.js"></script>
+<script>
+let originalFile = null, totalPages = 0, mode = 'range', resultBlobs = [];
+let selectedPages = new Set(), pageOrder = [], dragSrc = null;
+
+document.getElementById('fileInput').addEventListener('change', async e => {
+    const f = e.target.files[0]; if (!f) return;
+    originalFile = f;
+    selectedPages = new Set(); pageOrder = []; dragSrc = null;
+    const bytes = await f.arrayBuffer();
+    const doc = await PDFLib.PDFDocument.load(bytes);
+    totalPages = doc.getPageCount();
+    pageOrder = Array.from({length: totalPages}, (_, i) => i + 1);
+    document.getElementById('fileName').textContent = f.name;
+    document.getElementById('fileInfo').textContent = `${totalPages} página${totalPages > 1 ? 's' : ''} · ${formatSize(f.size)}`;
+    document.getElementById('rangeHint').textContent = `Páginas disponibles: 1-${totalPages}. Usa comas y guiones.`;
+    document.getElementById('uploadZone').style.display = 'none';
+    document.getElementById('stepOptions').classList.add('active');
+    buildThumbGrid(totalPages);
+    renderThumbs(f);
+});
+
+function buildThumbGrid(n) {
+    const grid = document.getElementById('thumbGrid');
+    grid.innerHTML = '';
+    for (let i = 1; i <= n; i++) {
+        const item = document.createElement('div');
+        item.className = 'thumb-item' + (mode === 'range' ? ' selectable' : '');
+        item.id = 'th-' + i;
+        const ld = document.createElement('div');
+        ld.className = 'thumb-loading'; ld.textContent = '···';
+        const num = document.createElement('div');
+        num.className = 'thumb-num'; num.textContent = 'Pág. ' + i;
+        item.appendChild(ld); item.appendChild(num);
+        item.draggable = true;
+        (n => {
+            item.addEventListener('click', () => toggleThumb(n));
+            item.ondragstart = e => { dragSrc = n; e.dataTransfer.effectAllowed = 'move'; item.classList.add('dragging'); };
+            item.ondragend = () => item.classList.remove('dragging');
+            item.ondragover = e => { e.preventDefault(); item.classList.add('drag-over'); };
+            item.ondragleave = () => item.classList.remove('drag-over');
+            item.ondrop = e => {
+                e.preventDefault(); item.classList.remove('drag-over');
+                if (dragSrc === n) return;
+                const grid = document.getElementById('thumbGrid');
+                const srcEl = document.getElementById('th-' + dragSrc);
+                grid.insertBefore(srcEl, item);
+                const si = pageOrder.indexOf(dragSrc), ti = pageOrder.indexOf(n);
+                pageOrder.splice(si, 1); pageOrder.splice(pageOrder.indexOf(n), 0, dragSrc);
+                dragSrc = null;
+                if (mode === 'range') syncRangeInput();
+            };
+        })(i);
+        grid.appendChild(item);
+    }
+    document.getElementById('thumbHint').style.display = mode === 'range' ? '' : 'none';
+}
+
+function toggleThumb(n) {
+    if (mode !== 'range') return;
+    const item = document.getElementById('th-' + n);
+    if (!item) return;
+    if (selectedPages.has(n)) { selectedPages.delete(n); item.classList.remove('selected'); }
+    else { selectedPages.add(n); item.classList.add('selected'); }
+    syncRangeInput();
+}
+
+function syncRangeInput() {
+    if (selectedPages.size === 0) { document.getElementById('pageRange').value = ''; return; }
+    const sorted = [...selectedPages].sort((a, b) => a - b);
+    const ranges = [];
+    let start = sorted[0], end = sorted[0];
+    for (let i = 1; i < sorted.length; i++) {
+        if (sorted[i] === end + 1) { end = sorted[i]; }
+        else { ranges.push(start === end ? start : start + '-' + end); start = end = sorted[i]; }
+    }
+    ranges.push(start === end ? start : start + '-' + end);
+    document.getElementById('pageRange').value = ranges.join(', ');
+}
+
+async function renderThumbs(f) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdf-3.11.worker.min.js';
+    const ab = await f.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: ab }).promise;
+    for (let i = 1; i <= pdf.numPages; i++) {
+        const pg = await pdf.getPage(i);
+        const vp = pg.getViewport({ scale: 0.35 });
+        const canvas = document.createElement('canvas');
+        canvas.width = vp.width; canvas.height = vp.height;
+        await pg.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+        const item = document.getElementById('th-' + i);
+        if (item) { const ld = item.querySelector('.thumb-loading'); if (ld) ld.replaceWith(canvas); }
+    }
+}
+
+function selectMode(el) {
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    mode = el.dataset.mode;
+    document.getElementById('rangeInput').style.display = mode === 'range' ? '' : 'none';
+    document.getElementById('thumbHint').style.display = mode === 'range' ? '' : 'none';
+    document.querySelectorAll('.thumb-item').forEach(t => {
+        if (mode === 'range') t.classList.add('selectable');
+        else { t.classList.remove('selectable', 'selected'); }
+    });
+    if (mode !== 'range') selectedPages = new Set();
+}
+
+function parseRange(str, max) {
+    const pages = new Set();
+    str.split(',').forEach(part => {
+        part = part.trim();
+        if (part.includes('-')) {
+            const [a, b] = part.split('-').map(Number);
+            if (!isNaN(a) && !isNaN(b)) for (let i = Math.max(1, a); i <= Math.min(max, b); i++) pages.add(i);
+        } else {
+            const n = parseInt(part);
+            if (!isNaN(n) && n >= 1 && n <= max) pages.add(n);
+        }
+    });
+    return [...pages].sort((a, b) => a - b);
+}
+
+async function splitPDF() {
+    if (!originalFile) return;
+    document.getElementById('stepOptions').classList.remove('active');
+    document.getElementById('progressArea').classList.add('active');
+    resultBlobs = [];
+
+    try {
+        const bytes = await originalFile.arrayBuffer();
+        const srcDoc = await PDFLib.PDFDocument.load(bytes);
+
+        if (mode === 'range') {
+            // Use visual order if pages were selected by clicking, otherwise parse text range
+            let pages;
+            if (selectedPages.size > 0) {
+                pages = pageOrder.filter(n => selectedPages.has(n));
+            } else {
+                const rangeStr = document.getElementById('pageRange').value;
+                pages = parseRange(rangeStr, totalPages);
+            }
+            if (pages.length === 0) { alert('Introduce un rango de páginas válido.'); resetTool(); return; }
+            const newDoc = await PDFLib.PDFDocument.create();
+            const copied = await newDoc.copyPages(srcDoc, pages.map(p => p - 1));
+            copied.forEach(p => newDoc.addPage(p));
+            newDoc.setProducer('PDFRápido');
+            const out = await newDoc.save({ useObjectStreams: true });
+            resultBlobs.push({ name: `${originalFile.name.replace(/\.pdf$/i, '')}_pags_${rangeStr.replace(/\s/g, '')}.pdf`, blob: new Blob([out], { type: 'application/pdf' }), pages: pages.length });
+        } else {
+            for (let i = 0; i < pageOrder.length; i++) {
+                const pageNum = pageOrder[i];
+                document.getElementById('progressLabel').textContent = `Separando página ${i + 1} de ${pageOrder.length}...`;
+                const newDoc = await PDFLib.PDFDocument.create();
+                const [page] = await newDoc.copyPages(srcDoc, [pageNum - 1]);
+                newDoc.addPage(page);
+                newDoc.setProducer('PDFRápido');
+                const out = await newDoc.save({ useObjectStreams: true });
+                resultBlobs.push({ name: `pagina_${pageNum}.pdf`, blob: new Blob([out], { type: 'application/pdf' }), pages: 1 });
+            }
+        }
+
+        document.getElementById('progressArea').classList.remove('active');
+        document.getElementById('resultArea').classList.add('active');
+
+        if (mode === 'range') {
+            document.getElementById('resultDesc').textContent = `${resultBlobs[0].pages} páginas extraídas · ${formatSize(resultBlobs[0].blob.size)}`;
+        } else {
+            document.getElementById('resultDesc').textContent = `${resultBlobs.length} archivos PDF generados`;
+        }
+
+        const actions = document.getElementById('resultActions');
+        actions.innerHTML = '';
+        if (resultBlobs.length === 1) {
+            actions.innerHTML = `<button class="btn-download" onclick="dl(0)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button>`;
+        } else {
+            actions.innerHTML = `<button class="btn-download" onclick="dlAll()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar todos</button>`;
+        }
+        actions.innerHTML += `<button class="btn-reset" onclick="resetTool()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Dividir otro</button>`;
+    } catch (err) {
+        console.error(err);
+        alert('Error al dividir el PDF.');
+        resetTool();
+    }
+}
+
+function dl(i) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(resultBlobs[i].blob);
+    a.download = resultBlobs[i].name;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+function dlAll() { resultBlobs.forEach((_, i) => setTimeout(() => dl(i), i * 300)); }
+
+function resetTool() {
+    originalFile = null; resultBlobs = []; selectedPages = new Set(); pageOrder = []; dragSrc = null;
+    document.getElementById('fileInput').value = '';
+    document.getElementById('thumbGrid').innerHTML = '';
+    document.getElementById('thumbHint').style.display = 'none';
+    document.getElementById('uploadZone').style.display = '';
+    ['stepOptions', 'progressArea', 'resultArea'].forEach(id => document.getElementById(id).classList.remove('active'));
+}
+
+function formatSize(b) {
+    if (b < 1024) return b + ' B';
+    if (b < 1048576) return (b / 1024).toFixed(1) + ' KB';
+    return (b / 1048576).toFixed(1) + ' MB';
+}
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

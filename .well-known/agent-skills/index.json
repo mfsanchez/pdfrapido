@@ -1,0 +1,82 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "ocr-pdf",
+      "type": "api",
+      "description": "Extrae texto de PDFs escaneados usando OCR",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/ocr-pdf/SKILL.md",
+      "sha256": "0c63a4f3820bddde572f8382ad7be5a5cb7e08c6df37532cfd29ad5339679947"
+    },
+    {
+      "name": "resumir-pdf",
+      "type": "api",
+      "description": "Resume documentos PDF con inteligencia artificial",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/resumir-pdf/SKILL.md",
+      "sha256": "1aa0ab0034c7211f747770b014e4fa7b33a8c4e9efa4ad7803354a55ad2db9e7"
+    },
+    {
+      "name": "chat-pdf",
+      "type": "api",
+      "description": "Responde preguntas sobre el contenido de un PDF usando IA",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/chat-pdf/SKILL.md",
+      "sha256": "735cbed572da87ec730245f4767d2af1e467b0f49cb08a9b343141a1a965f0e1"
+    },
+    {
+      "name": "traducir-pdf",
+      "type": "api",
+      "description": "Traduce PDFs a otro idioma manteniendo el formato",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/traducir-pdf/SKILL.md",
+      "sha256": "66fa0189a00cb7a87faf45ef61d7ee65e25738a3471b3b06b42b0fbf176a6ce5"
+    },
+    {
+      "name": "extraer-datos",
+      "type": "api",
+      "description": "Extrae datos estructurados (tablas, campos) de PDFs",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/extraer-datos/SKILL.md",
+      "sha256": "5a81c18bd8c47fdc4883cc7a2b9a0b9a6184b356116b215ca2d9bfe740c5531c"
+    },
+    {
+      "name": "redactar-pdf",
+      "type": "api",
+      "description": "Genera documentos PDF a partir de instrucciones en lenguaje natural",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/redactar-pdf/SKILL.md",
+      "sha256": "4806a7523ab94932cf983529c8e81e9cda0e029d5c24733b62ee2bc351734eb2"
+    },
+    {
+      "name": "corregir-pdf",
+      "type": "api",
+      "description": "Corrige gramática y ortografía en documentos PDF",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/corregir-pdf/SKILL.md",
+      "sha256": "38d2b869ef9cd071dca6d5803ad72efcf4c35332e7bb08f055c16cee51b150c2"
+    },
+    {
+      "name": "pdf-a-audio",
+      "type": "api",
+      "description": "Convierte PDFs en audio MP3 con text-to-speech",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/pdf-a-audio/SKILL.md",
+      "sha256": "112cab6ce62afd13b227995b45ab98236e9ca4026c4ec1d6e3acb4e9c995a4d4"
+    },
+    {
+      "name": "pdf-a-imagen",
+      "type": "api",
+      "description": "Convierte páginas de PDF a imágenes PNG",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/pdf-a-imagen/SKILL.md",
+      "sha256": "d291a6be2bcdea166f36deb159472943b1d1a42dcd1083eb9158c0404d4ee3b6"
+    },
+    {
+      "name": "comprimir-pdf",
+      "type": "tool",
+      "description": "Reduce el tamaño de PDFs en el navegador sin subir archivos al servidor",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/comprimir-pdf/SKILL.md",
+      "sha256": "18402eef68f010e8482f7f13ae9f9bdfd125e474a19155dfd92a189c64719ee8"
+    },
+    {
+      "name": "webmcp",
+      "type": "browser",
+      "description": "Expone herramientas PDFRápido a agentes de IA vía WebMCP en el navegador",
+      "url": "https://pdfrapido.eu/.well-known/agent-skills/webmcp/SKILL.md",
+      "sha256": "72d64836e8577ae99af90d261d9e92a165cd0c47283112994bfad0347a5b9f5b"
+    }
+  ]
+}

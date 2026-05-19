@@ -1,0 +1,30 @@
+{
+  "name": "PDFRápido",
+  "short_name": "PDFRápido",
+  "description": "Herramientas PDF online gratis. Unir, dividir, comprimir y convertir PDF sin registro.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#E8453C",
+  "background_color": "#ffffff",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

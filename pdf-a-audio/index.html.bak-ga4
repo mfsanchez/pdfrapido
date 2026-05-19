@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pdf a mp3, pdf a audio, escuchar pdf, convertir pdf a voz, leer pdf en voz alta, pdf a audio online gratis">
+    <meta name="description" content="Convierte cualquier PDF a audio MP3 con voz natural gratis. Elige idioma y velocidad. Escucha tus documentos mientras conduces, haces deporte o cocinas.">
+    <meta name="author" content="MF Sanchez">
+    <title>PDF a Audio MP3 Online Gratis — Escucha tus PDFs | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>
+    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#F5913E;--accent-light:#FFF4EB;--accent-dark:#D97706;--gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--radius:12px;--radius-lg:16px;--radius-xl:24px;--shadow-sm:0 1px 2px rgba(0,0,0,.05);--shadow-lg:0 10px 25px -3px rgba(0,0,0,.08),0 4px 6px -4px rgba(0,0,0,.04)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--gray-800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.logo-text{font-size:20px;font-weight:700;letter-spacing:-.5px}.logo-text span{color:var(--primary)}.nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--gray-500);font-size:14px;font-weight:500;transition:color .2s}.nav-back:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:800px;margin:0 auto;width:100%}
+        .tool-header{text-align:center;margin-bottom:36px}.tool-header .icon-badge{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.tool-header h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.tool-header p{font-size:16px;color:var(--gray-500)}
+        .upload-zone{border:2px dashed var(--gray-300);border-radius:var(--radius-xl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--gray-50)}.upload-zone:hover,.upload-zone.drag-over{border-color:var(--accent);background:rgba(245,145,62,.04)}.upload-icon{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.upload-zone:hover .upload-icon,.upload-zone.drag-over .upload-icon{transform:translateY(-4px)}.upload-zone h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.upload-zone h3 span{color:var(--accent)}.upload-zone p{font-size:14px;color:var(--gray-400)}.upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .options-panel{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px;margin-top:24px;display:none}.options-panel.active{display:block}
+        .opt-row{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap}.opt-group{flex:1;min-width:200px}.opt-group label{display:block;font-size:13px;font-weight:600;color:var(--gray-600);margin-bottom:8px}
+        .opt-group select{width:100%;padding:10px 14px;border:1px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:14px;color:var(--gray-700);background:#fff;cursor:pointer;outline:none;transition:border-color .2s}.opt-group select:focus{border-color:var(--accent)}
+        .file-info{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);margin-bottom:20px}.file-info svg{flex-shrink:0}.file-name{font-size:14px;font-weight:600;color:var(--secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.file-size{font-size:12px;color:var(--gray-400)}
+        .btn-convert{width:100%;padding:14px 20px;border:none;border-radius:var(--radius);background:var(--accent);color:#fff;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}.btn-convert:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 4px 14px rgba(245,145,62,.28)}.btn-convert:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+        .info-note{font-size:12px;color:var(--gray-400);text-align:center;margin-top:12px}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .progress-wrap{background:var(--gray-100);border-radius:8px;height:8px;overflow:hidden;margin:20px 0 10px}.progress-fill{height:100%;background:var(--accent);border-radius:8px;transition:width .5s;width:0}.progress-label{text-align:center;font-size:14px;color:var(--gray-500);margin-bottom:8px}
+        .result-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:28px;text-align:center}.result-card .success-icon{width:56px;height:56px;border-radius:50%;background:#ECFDF5;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.result-card h3{font-size:18px;font-weight:700;color:var(--secondary);margin-bottom:6px}.result-card .desc{font-size:14px;color:var(--gray-500);margin-bottom:20px}
+        .audio-player{width:100%;margin:16px 0 20px;border-radius:var(--radius)}
+        .truncated-notice{background:#FFFBEB;border:1px solid #FEF3C7;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:#92400E;margin-bottom:16px;display:none}
+        .action-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .btn-primary{padding:13px 24px;border:none;border-radius:var(--radius);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:8px}.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+        .btn-secondary{padding:13px 24px;border:1px solid var(--gray-200);border-radius:var(--radius);background:#fff;color:var(--gray-700);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+        .seo-content{max-width:700px;margin:60px auto 0}.seo-content h2{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:14px}.seo-content p{font-size:15px;color:var(--gray-500);line-height:1.7;margin-bottom:12px}
+        .faq{margin-top:40px}.faq h2{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:20px}.faq-item{border-bottom:1px solid var(--gray-200);padding:18px 0}.faq-item:last-child{border-bottom:none}.faq-q{font-size:15px;font-weight:600;color:var(--secondary);margin-bottom:8px}.faq-a{font-size:14px;color:var(--gray-500);line-height:1.7}
+        .ad-placeholder{background:var(--gray-50);border:1px dashed var(--gray-300);border-radius:var(--radius);padding:16px;text-align:center;color:var(--gray-400);font-size:13px;margin-top:40px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        .spinner{display:inline-block;width:20px;height:20px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+        @media(max-width:640px){main{padding:100px 16px 40px}.tool-header h1{font-size:26px}.upload-zone{padding:40px 20px}.opt-row{flex-direction:column}.action-row{flex-direction:column}.btn-primary,.btn-secondary{width:100%;justify-content:center}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-93B5VKXW7W");</script>
+    <link rel="canonical" href="https://pdfrapido.eu/pdf-a-audio/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "PDF a Audio MP3 Online Gratis",
+          "url": "https://pdfrapido.eu/pdf-a-audio/",
+          "description": "Convierte cualquier PDF a audio MP3 con voz natural. Elige idioma y velocidad. Gratis y sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+          "publisher": {
+            "@type": "Person",
+            "name": "MF Sanchez",
+            "url": "https://mfsanchez.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "PDF a Audio MP3 Online Gratis",
+              "item": "https://pdfrapido.eu/pdf-a-audio/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo convertir un PDF a audio MP3?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sube tu PDF, elige el idioma y la velocidad de lectura, y pulsa Generar audio. En segundos tendrás un MP3 con voz natural que puedes escuchar o descargar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué idiomas están disponibles?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Español (España y México), inglés (EEUU y Reino Unido), francés, alemán, italiano y portugués brasileño. Todas las voces son neuronales de alta calidad."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hay límite de tamaño?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El PDF puede pesar hasta 20 MB. Se procesan hasta 10.000 caracteres de texto, lo que equivale a unos 8-12 minutos de audio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Es gratis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, la herramienta es 100% gratuita y no requiere registro."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <meta property="og:title" content="PDF a Audio MP3 Online Gratis — Escucha tus PDFs | PDFRápido">
+    <meta property="og:description" content="Convierte cualquier PDF a audio MP3 con voz natural gratis. Elige idioma y velocidad. Escucha tus documentos mientras conduces, haces deporte o cocinas.">
+    <meta property="og:url" content="https://pdfrapido.eu/pdf-a-audio/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF a Audio MP3 Online Gratis — Escucha tus PDFs | PDFRápido">
+    <meta name="twitter:description" content="Convierte cualquier PDF a audio MP3 con voz natural gratis. Elige idioma y velocidad. Escucha tus documentos.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="logo-text">PDF<span>Rápido</span></div>
+        </a>
+        <a href="/" class="nav-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            Todas las herramientas
+        </a>
+    </div>
+</nav>
+
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">PDF a Audio</li>
+    </ol>
+</nav>
+<div class="tool-header">
+        <div class="icon-badge">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
+        </div>
+        <h1>PDF a Audio</h1>
+        <p>Convierte tu PDF en MP3 con voz natural. Perfecto para escuchar documentos mientras conduces, haces deporte o cocinas.</p>
+    </div>
+
+    <!-- Step 0: Upload -->
+    <div id="stepUpload">
+        <div class="upload-zone" id="uploadZone">
+            <input type="file" accept=".pdf" id="fileInput" aria-label="Seleccionar archivo PDF">
+            <div class="upload-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
+            <p>Máximo 20 MB &middot; Se procesan hasta 10.000 caracteres (~8-12 min de audio)</p>
+        </div>
+
+        <div class="options-panel" id="optionsPanel">
+            <div class="file-info" id="fileInfo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <div>
+                    <div class="file-name" id="fileName"></div>
+                    <div class="file-size" id="fileSize"></div>
+                </div>
+            </div>
+            <div class="opt-row">
+                <div class="opt-group">
+                    <label for="selIdioma">Idioma / Voz</label>
+                    <select id="selIdioma">
+                        <option value="es-ES">🇪🇸 Español (España) — Elvira</option>
+                        <option value="es-MX">🇲🇽 Español (México) — Dalia</option>
+                        <option value="en-US">🇺🇸 Inglés (EEUU) — Aria</option>
+                        <option value="en-GB">🇬🇧 Inglés (Reino Unido) — Sonia</option>
+                        <option value="fr-FR">🇫🇷 Francés — Denise</option>
+                        <option value="de-DE">🇩🇪 Alemán — Katja</option>
+                        <option value="it-IT">🇮🇹 Italiano — Elsa</option>
+                        <option value="pt-BR">🇧🇷 Portugués (Brasil) — Francisca</option>
+                    </select>
+                </div>
+                <div class="opt-group">
+                    <label for="selVelocidad">Velocidad</label>
+                    <select id="selVelocidad">
+                        <option value="-20%">🐢 Lenta</option>
+                        <option value="0%" selected>▶ Normal</option>
+                        <option value="+20%">⏩ Rápida</option>
+                        <option value="+40%">⚡ Muy rápida</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-convert" id="btnConvert" onclick="startConversion()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                Generar audio MP3
+            </button>
+            <p class="info-note">Se procesan hasta 10.000 caracteres (~8-12 minutos de audio)</p>
+        </div>
+    </div>
+
+    <!-- Step 1: Progress -->
+    <div class="step" id="stepProgress">
+        <p class="progress-label" id="progressLabel">Subiendo PDF...</p>
+        <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <!-- Step 2: Result -->
+    <div class="step" id="stepResult">
+        <div class="result-card">
+            <div class="success-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Audio generado</h3>
+            <p class="desc" id="resultDesc"></p>
+            <div class="truncated-notice" id="truncNotice">El documento es largo. Se ha convertido a audio la primera parte (10.000 caracteres).</div>
+            <audio class="audio-player" id="audioPlayer" controls></audio>
+            <div class="action-row">
+                <button class="btn-primary" id="btnDownload" onclick="downloadAudio()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Descargar MP3
+                </button>
+                <button class="btn-secondary" onclick="resetTool()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                    Convertir otro
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-placeholder">Espacio publicitario — Google AdSense</div>
+
+    <div class="seo-content">
+        <h2>Cómo convertir PDF a audio MP3 online</h2>
+        <p>Selecciona o arrastra tu documento PDF a la zona de carga. Elige el idioma de la voz y la velocidad de lectura que prefieras. La herramienta extrae el texto del PDF y lo convierte en un archivo MP3 de alta calidad usando voces neuronales de Microsoft Edge.</p>
+        <p>El audio resultante suena natural y fluido, con entonación realista en cada idioma. Puedes escuchar una vista previa directamente en el navegador y descargar el MP3 para llevarlo en el coche, mientras haces ejercicio o en cualquier momento.</p>
+        <p>Se procesan hasta 10.000 caracteres por documento, lo que equivale aproximadamente a 8-12 minutos de audio. Si tu PDF es más largo, se convierte la primera parte automáticamente. La herramienta es gratuita, no requiere registro y funciona con PDFs en cualquier idioma soportado.</p>
+        <p>Ideal para estudiantes que quieren repasar apuntes, profesionales que prefieren escuchar informes en el coche, o cualquier persona que quiera aprovechar el tiempo convirtiendo lectura en audio.</p>
+
+        <div class="faq">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-item">
+                <p class="faq-q">¿Cómo convertir un PDF a audio MP3?</p>
+                <p class="faq-a">Sube tu PDF, selecciona el idioma y la velocidad, y pulsa "Generar audio". En segundos obtendrás un MP3 con voz natural que puedes escuchar online o descargar.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">¿Qué idiomas y voces están disponibles?</p>
+                <p class="faq-a">Hay 8 voces neuronales de alta calidad: español (España y México), inglés (EEUU y Reino Unido), francés, alemán, italiano y portugués brasileño. Todas suenan naturales y con buena entonación.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">¿Cuánto texto se puede convertir?</p>
+                <p class="faq-a">Se procesan hasta 10.000 caracteres por documento, lo que equivale a unas 5-8 páginas de texto o 8-12 minutos de audio. Si el documento es más largo, se convierte la primera parte.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q">¿Funciona con PDFs escaneados?</p>
+                <p class="faq-a">La herramienta necesita que el PDF tenga texto digital. Si es un PDF escaneado (solo imagen), primero usa la herramienta <a href="/ocr-a-pdf/" style="color:var(--accent)">OCR a PDF</a> para convertirlo en texto seleccionable.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/resumir-pdf/">Resumir PDF</a></li>
+            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
+            <li><a href="/traducir-pdf/">Traducir PDF</a></li>
+            <li><a href="/chat-pdf/">Chat con PDF</a></li>
+            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
+        </ul>
+    </div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona PDF a Audio?</h2>
+  <p>Usar PDF a Audio en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Sube el PDF</h3>
+          <p>Carga el PDF cuyo texto quieres escuchar. La herramienta extrae el texto automáticamente para convertirlo en voz.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Selecciona el idioma y la voz</h3>
+          <p>Elige el idioma del texto y el tipo de voz. Disponemos de voces naturales en español y otros idiomas con entonación natural.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga el archivo de audio</h3>
+          <p>Obtén el PDF convertido en un archivo MP3 o WAV listo para escuchar en cualquier dispositivo, reproductor de audio o aplicación de podcast.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de PDF a Audio es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Escuchar documentos durante el desplazamiento</strong>
+        <span>Convierte informes, artículos y libros en PDF a audio para escucharlos mientras conduces, haces ejercicio o realizas tareas que no requieren atención visual.</span>
+      </div>
+      <div class="use-case">
+        <strong>Accesibilidad para personas con dislexia o problemas visuales</strong>
+        <span>El PDF a audio convierte documentos escritos en contenido auditivo, haciendo la información accesible para personas con dislexia, baja visión o ceguera.</span>
+      </div>
+      <div class="use-case">
+        <strong>Estudiar escuchando apuntes</strong>
+        <span>Convierte tus apuntes o manuales en PDF a formato de audio para repasar el contenido de una forma diferente que refuerza la memorización.</span>
+      </div>
+      <div class="use-case">
+        <strong>Crear podcasts a partir de artículos</strong>
+        <span>Periodistas, bloggers y creadores de contenido pueden convertir sus artículos escritos en episodios de audio para llegar a nuevas audiencias.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre PDF a Audio</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿Qué idiomas están disponibles para la conversión a audio?</h3>
+        <p>La herramienta soporta español, inglés, francés, alemán, portugués e italiano, entre otros. El idioma se detecta automáticamente del texto del PDF o puedes seleccionarlo manualmente.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué calidad tiene la voz generada?</h3>
+        <p>Las voces son sintéticas de alta calidad basadas en tecnología de inteligencia artificial, con entonación natural y pronunciación correcta. Son perfectamente comprensibles y agradables de escuchar.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Funciona con documentos escaneados?</h3>
+        <p>No directamente, ya que los PDFs escaneados son imágenes sin texto. Primero debes aplicar OCR al PDF para extraer el texto y luego convertirlo a audio.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p>
+</footer>
+
+<script>
+let selectedFile = null;
+let audioBlob = null;
+let audioFilename = '';
+
+const fileInput    = document.getElementById('fileInput');
+const uploadZone   = document.getElementById('uploadZone');
+const optionsPanel = document.getElementById('optionsPanel');
+
+fileInput.addEventListener('change', e => {
+    const f = e.target.files[0];
+    if (f) selectFile(f);
+});
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault();
+    uploadZone.classList.remove('drag-over');
+    const f = e.dataTransfer.files[0];
+    if (f && f.type === 'application/pdf') selectFile(f);
+});
+
+function selectFile(file) {
+    selectedFile = file;
+    document.getElementById('fileName').textContent = file.name;
+    document.getElementById('fileSize').textContent = formatSize(file.size);
+    optionsPanel.classList.add('active');
+}
+
+function formatSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / 1048576).toFixed(1) + ' MB';
+}
+
+async function startConversion() {
+    if (!selectedFile) return;
+
+    const btn = document.getElementById('btnConvert');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> Generando audio...';
+
+    document.getElementById('stepUpload').style.display = 'none';
+    showStep('stepProgress');
+
+    const stages = [
+        { pct: 10, label: 'Subiendo PDF...' },
+        { pct: 30, label: 'Extrayendo texto...' },
+        { pct: 55, label: 'Generando voz...' },
+        { pct: 80, label: 'Procesando audio...' },
+        { pct: 92, label: 'Casi listo...' },
+    ];
+    let stageIdx = 0;
+    setProgress(stages[0].pct, stages[0].label);
+    const timer = setInterval(() => {
+        stageIdx = Math.min(stageIdx + 1, stages.length - 1);
+        setProgress(stages[stageIdx].pct, stages[stageIdx].label);
+    }, 3000);
+
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+    formData.append('idioma', document.getElementById('selIdioma').value);
+    formData.append('velocidad', document.getElementById('selVelocidad').value);
+
+    try {
+        const resp = await fetch('/api/pdf-a-audio', { method: 'POST', body: formData });
+        clearInterval(timer);
+
+        if (!resp.ok) {
+            const errData = await resp.json().catch(() => ({}));
+            throw new Error(errData.detail || 'Error en la conversión');
+        }
+
+        setProgress(96, 'Descargando audio...');
+
+        const truncado = resp.headers.get('X-Truncado') === 'true';
+        const disposition = resp.headers.get('Content-Disposition') || '';
+        const fnMatch = disposition.match(/filename="?([^"]+)"?/);
+        audioFilename = fnMatch ? fnMatch[1] : 'audio_documento.mp3';
+
+        audioBlob = await resp.blob();
+        setProgress(100, '¡Listo!');
+
+        const audioURL = URL.createObjectURL(audioBlob);
+        document.getElementById('audioPlayer').src = audioURL;
+
+        const sizeMB = (audioBlob.size / 1048576).toFixed(1);
+        document.getElementById('resultDesc').textContent = `${audioFilename} — ${sizeMB} MB`;
+
+        if (truncado) {
+            document.getElementById('truncNotice').style.display = 'block';
+        }
+
+        showStep('stepResult');
+
+    } catch (err) {
+        clearInterval(timer);
+        document.getElementById('progressLabel').textContent = err.message || 'Error al generar el audio.';
+        document.getElementById('progressFill').style.background = '#EF4444';
+        setTimeout(() => resetTool(), 4000);
+    }
+}
+
+function downloadAudio() {
+    if (!audioBlob) return;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(audioBlob);
+    a.download = audioFilename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+}
+
+function resetTool() {
+    selectedFile = null;
+    audioBlob = null;
+    audioFilename = '';
+    fileInput.value = '';
+    optionsPanel.classList.remove('active');
+    document.getElementById('stepUpload').style.display = '';
+    ['stepProgress', 'stepResult'].forEach(id => document.getElementById(id).classList.remove('active'));
+    document.getElementById('progressFill').style.width = '0';
+    document.getElementById('progressFill').style.background = '';
+    document.getElementById('truncNotice').style.display = 'none';
+    document.getElementById('audioPlayer').src = '';
+    const btn = document.getElementById('btnConvert');
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Generar audio MP3';
+}
+
+function setProgress(pct, label) {
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = label;
+}
+
+function showStep(id) {
+    ['stepProgress', 'stepResult'].forEach(s => document.getElementById(s).classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

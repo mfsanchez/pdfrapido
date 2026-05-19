@@ -1,0 +1,54 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://pdfrapido.eu/api/ocr-a-pdf",
+      "service-doc": [{"href": "https://pdfrapido.eu/ocr-pdf", "type": "text/html"}],
+      "type": [{"value": "PDF OCR — Extrae texto de PDFs escaneados"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/resumir-pdf",
+      "service-doc": [{"href": "https://pdfrapido.eu/resumir-pdf", "type": "text/html"}],
+      "type": [{"value": "Resumir PDF — Resume documentos PDF con IA"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/pdf-a-png",
+      "service-doc": [{"href": "https://pdfrapido.eu/pdf-a-imagen", "type": "text/html"}],
+      "type": [{"value": "PDF a PNG — Convierte páginas PDF a imágenes"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/chat-pdf",
+      "service-doc": [{"href": "https://pdfrapido.eu/chat-pdf", "type": "text/html"}],
+      "type": [{"value": "Chat PDF — Haz preguntas a tus documentos PDF con IA"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/traducir-pdf",
+      "service-doc": [{"href": "https://pdfrapido.eu/traducir-pdf", "type": "text/html"}],
+      "type": [{"value": "Traducir PDF — Traduce documentos PDF a otro idioma"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/extraer-datos",
+      "service-doc": [{"href": "https://pdfrapido.eu/extraer-datos-pdf", "type": "text/html"}],
+      "type": [{"value": "Extraer Datos — Extrae datos estructurados de PDFs"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/redactar-pdf",
+      "service-doc": [{"href": "https://pdfrapido.eu/redactar-pdf", "type": "text/html"}],
+      "type": [{"value": "Redactar PDF — Genera documentos PDF con IA"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/corregir-pdf",
+      "service-doc": [{"href": "https://pdfrapido.eu/corregir-pdf", "type": "text/html"}],
+      "type": [{"value": "Corregir PDF — Corrige gramática y ortografía en PDFs"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/pdf-a-audio",
+      "service-doc": [{"href": "https://pdfrapido.eu/pdf-a-audio", "type": "text/html"}],
+      "type": [{"value": "PDF a Audio — Convierte PDFs en audio con IA"}]
+    },
+    {
+      "anchor": "https://pdfrapido.eu/api/upload",
+      "service-doc": [{"href": "https://pdfrapido.eu/editor-pdf", "type": "text/html"}],
+      "type": [{"value": "Upload — Sube un PDF al editor online"}]
+    }
+  ]
+}

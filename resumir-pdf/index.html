@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume cualquier PDF con IA gratis y sin registro. Obtén resumen y puntos clave en español o inglés en segundos. Powered by Llama 3.3 en Groq | PDFRápido"
+    <meta name="keywords" content="resumir PDF, resumen PDF IA, resumen automático PDF, inteligencia artificial PDF, puntos clave PDF, resumir documento gratis">
+    <meta name="author" content="MF Sanchez - PDFRápido">
+    <title>Resumir PDF con IA Gratis en Español | PDFRápido</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
+    <link rel="canonical" href="https://pdfrapido.eu/resumir-pdf/">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root {
+            --primary: #E8453C;
+            --primary-dark: #C73830;
+            --primary-light: #FFF0EF;
+            --secondary: #1B2A4A;
+            --accent-green: #34A853;
+            --accent-green-light: #E8F5E9;
+            --accent-purple: #8E44AD;
+            --accent-purple-light: #F3E8FF;
+            --accent-purple-dark: #6C3483;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            color: var(--gray-800);
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--secondary);
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-text { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+        .logo-text span { color: var(--primary); }
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: var(--gray-500);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: var(--primary); }
+
+        /* ── MAIN ── */
+        main {
+            flex: 1;
+            padding: 80px 24px 60px;
+            max-width: 820px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* ── TOOL HEADER ── */
+        .tool-header {
+            text-align: center;
+            margin-bottom: 36px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        .tool-header .icon-badge {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: var(--accent-purple-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .tool-header h1 { font-size: 32px; font-weight: 700; color: var(--secondary); letter-spacing: -0.8px; margin-bottom: 8px; }
+        .tool-header p { font-size: 16px; color: var(--gray-500); line-height: 1.5; }
+        .badge-ia {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--accent-purple-light);
+            color: var(--accent-purple);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-top: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ── UPLOAD ZONE ── */
+        .upload-zone {
+            border: 2px dashed var(--gray-300);
+            border-radius: var(--radius-xl);
+            padding: 60px 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: var(--gray-50);
+            animation: fadeInUp 0.5s ease-out 0.1s both;
+        }
+        .upload-zone::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(142,68,173,0.04), transparent 70%);
+            pointer-events: none;
+        }
+        .upload-zone:hover, .upload-zone.dragover {
+            border-color: var(--accent-purple);
+            background: rgba(142,68,173,0.03);
+            transform: scale(1.005);
+        }
+        .upload-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: var(--accent-purple-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: transform 0.3s;
+        }
+        .upload-zone:hover .upload-icon { transform: translateY(-4px); }
+        .upload-zone h3 { font-size: 18px; font-weight: 600; color: var(--secondary); margin-bottom: 8px; }
+        .upload-zone h3 span { color: var(--accent-purple); text-decoration: underline; text-underline-offset: 3px; }
+        .upload-zone p { font-size: 14px; color: var(--gray-400); }
+        .upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+        /* ── PROCESS AREA ── */
+        .process-area { display: none; animation: fadeInUp 0.4s ease-out; }
+        .process-area.active { display: block; }
+
+        /* File card */
+        .file-card {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        .file-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .file-card-info { flex: 1; min-width: 0; }
+        .file-card-info h4 { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .file-card-info span { font-size: 13px; color: var(--gray-400); }
+        .file-card-remove {
+            width: 32px; height: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            background: #fff;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .file-card-remove:hover { background: var(--primary-light); border-color: var(--primary); }
+
+        /* Options */
+        .options-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+        .options-card h4 { font-size: 14px; font-weight: 600; color: var(--gray-700); margin-bottom: 14px; }
+        .options-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 500px) { .options-row { grid-template-columns: 1fr; } }
+        .option-group label { display: block; font-size: 13px; font-weight: 500; color: var(--gray-600); margin-bottom: 6px; }
+        .option-group select {
+            width: 100%;
+            padding: 10px 32px 10px 12px;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            background: #fff;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--gray-800);
+            cursor: pointer;
+            transition: border-color 0.2s;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+        .option-group select:focus { outline: none; border-color: var(--accent-purple); box-shadow: 0 0 0 3px rgba(142,68,173,0.1); }
+
+        /* Submit button */
+        .btn-resumir {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent-purple);
+            color: #fff;
+            border: none;
+            border-radius: var(--radius-lg);
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn-resumir:hover { background: var(--accent-purple-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        .btn-resumir:active { transform: translateY(0); }
+        .btn-resumir:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        /* ── LOADING ── */
+        .loading-area { display: none; text-align: center; padding: 56px 24px; animation: fadeIn 0.3s ease-out; }
+        .loading-area.active { display: block; }
+        .loading-spinner {
+            width: 56px; height: 56px;
+            border: 4px solid var(--gray-200);
+            border-top-color: var(--accent-purple);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 24px;
+        }
+        .loading-area h3 { font-size: 20px; font-weight: 600; color: var(--secondary); margin-bottom: 8px; }
+        .loading-area p { font-size: 14px; color: var(--gray-400); }
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots { 0%,20%{content:''} 40%{content:'.'} 60%{content:'..'} 80%,100%{content:'...'} }
+
+        /* ── RESULT AREA ── */
+        .result-area { display: none; animation: fadeInUp 0.4s ease-out; }
+        .result-area.active { display: block; }
+
+        .result-stats {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .stat-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--gray-100);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--gray-600);
+        }
+        .stat-pill svg { flex-shrink: 0; }
+
+        .result-block {
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 16px;
+        }
+        .result-block-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .result-block-header h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .result-body {
+            padding: 20px 24px;
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.75;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .puntos-list { list-style: none; padding: 16px 20px; }
+        .puntos-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.55;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .puntos-list li:last-child { border-bottom: none; }
+        .punto-dot {
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: var(--accent-purple-light);
+            color: var(--accent-purple);
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+        .btn-action {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 11px 20px;
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid var(--gray-200);
+            background: #fff;
+            color: var(--gray-700);
+        }
+        .btn-action:hover { background: var(--gray-100); border-color: var(--gray-300); }
+        .btn-action.primary {
+            background: var(--accent-purple);
+            color: #fff;
+            border-color: transparent;
+        }
+        .btn-action.primary:hover { background: var(--accent-purple-dark); }
+        .btn-action.success {
+            background: var(--accent-green-light);
+            color: var(--accent-green);
+            border-color: transparent;
+        }
+        .btn-new {
+            margin-top: 20px;
+            width: 100%;
+            padding: 13px;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-new:hover { background: var(--gray-200); }
+
+        /* ── AVISO ── */
+        .aviso-banner {
+            display: none;
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+            border-radius: var(--radius);
+            padding: 11px 16px;
+            color: #92400E;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 12px;
+            align-items: center;
+            gap: 8px;
+        }
+        .aviso-banner.active { display: flex; }
+
+        /* ── ERROR ── */
+        .error-banner {
+            display: none;
+            background: #FEF2F2;
+            border: 1px solid #FECACA;
+            border-radius: var(--radius-lg);
+            padding: 14px 18px;
+            color: #DC2626;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            align-items: center;
+            gap: 10px;
+        }
+        .error-banner.active { display: flex; }
+
+        /* ── SEO ── */
+        .seo-content { margin-top: 60px; padding-top: 48px; border-top: 1px solid var(--gray-200); }
+        .seo-content h2 { font-size: 22px; font-weight: 700; color: var(--secondary); margin-bottom: 12px; }
+        .seo-content h3 { font-size: 18px; font-weight: 600; color: var(--secondary); margin: 28px 0 10px; }
+        .seo-content p { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 14px; }
+        .seo-content ul { padding-left: 20px; margin-bottom: 14px; }
+        .seo-content ul li { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 6px; }
+
+        /* ── FOOTER ── */
+        footer { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 24px; text-align: center; }
+        footer p { font-size: 13px; color: var(--gray-400); }
+        footer a { color: var(--gray-500); text-decoration: none; }
+        footer a:hover { color: var(--primary); }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @media (max-width: 640px) {
+            main { padding: 88px 16px 48px; }
+            .tool-header h1 { font-size: 26px; }
+            .upload-zone { padding: 40px 20px; }
+        }
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+                .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
+</style>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Resumir PDF con IA Gratis en Español — Puntos Clave | PDFRápido",
+          "url": "https://pdfrapido.eu/resumir-pdf/",
+          "description": "Resume cualquier PDF con IA gratis y sin registro. Obtén resumen y puntos clave en español o inglés en segundos. Powered by Llama 3.3 en Groq.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+          "publisher": {
+            "@type": "Person",
+            "name": "MF Sanchez",
+            "url": "https://mfsanchez.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resumir PDF",
+              "item": "https://pdfrapido.eu/resumir-pdf/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuántas páginas puede resumir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puede resumir documentos de cualquier extensión, desde unas pocas páginas hasta informes extensos, extrayendo los puntos clave más relevantes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El resumen pierde información importante?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El resumen identifica y conserva la información más relevante. Para detalles específicos siempre puedes consultar el documento original."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿En qué idiomas genera el resumen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Genera resúmenes en español e inglés, manteniendo el idioma principal del documento original."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="Resumir PDF con IA Gratis en Español — Puntos Clave | PDFRápido">
+    <meta property="og:description" content="Resume cualquier PDF con IA gratis y sin registro. Obtén resumen y puntos clave en español o inglés en segundos. Powered by Llama 3.3 en Groq.">
+    <meta property="og:url" content="https://pdfrapido.eu/resumir-pdf/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resumir PDF con IA Gratis en Español — Puntos Clave | PDFRápido">
+    <meta name="twitter:description" content="Resume cualquier PDF con IA gratis y sin registro. Obtén resumen y puntos clave en español o inglés en segundos. Powered by Llama 3.3 en Groq.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pdfrapido.eu/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu",
+  "logo": "https://pdfrapido.eu/favicon.svg",
+  "sameAs": [
+    "https://github.com/mfsanchez/pdfrapido",
+    "https://twitter.com/pdfrapido"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="logo-text">PDF<span>Rápido</span></div>
+        </a>
+        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <ul class="nav-links">
+            <li><a href="/#herramientas">Herramientas</a></li>
+            <li><a href="/#caracteristicas">Características</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+<div role="navigation" aria-label="breadcrumb" style="max-width:1140px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Resumir PDF</li>
+    </ol>
+</div>
+<div class="tool-header">
+        <div class="icon-badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><path d="M18 2v4"/><path d="M22 6h-4"/></svg>
+        </div>
+        <h1>Resumir PDF con IA — PDFRápido</h1>
+        <p>Sube cualquier PDF y obtén un resumen inteligente con los puntos más importantes</p>
+        <span class="badge-ia">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Powered by Llama 3.3 · Groq
+        </span>
+    </div>
+
+    <!-- Error -->
+    <div class="error-banner" id="errorBanner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="errorText">Error al procesar el archivo.</span>
+    </div>
+
+    <!-- Upload zone -->
+    <div class="upload-zone" id="uploadZone">
+        <input type="file" id="fileInput" accept=".pdf">
+        <div class="upload-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="12"/><line x1="15" y1="15" x2="12" y2="12"/></svg>
+        </div>
+        <h3>Arrastra tu PDF aquí o <span>selecciona un archivo</span></h3>
+        <p>Solo PDF · Máximo 20 MB</p>
+    </div>
+
+    <!-- Process area -->
+    <div class="process-area" id="processArea">
+        <div class="file-card">
+            <div class="file-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="file-card-info">
+                <h4 id="fileName">documento.pdf</h4>
+                <span id="fileSize">0 KB</span>
+            </div>
+            <button class="file-card-remove" onclick="resetTool()" title="Quitar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <div class="options-card">
+            <h4>Opciones del resumen</h4>
+            <div class="options-row">
+                <div class="option-group">
+                    <label for="modoSelect">Tipo de resumen</label>
+                    <select id="modoSelect">
+                        <option value="breve" selected>Breve (5-7 líneas)</option>
+                        <option value="detallado">Detallado (por secciones)</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="idiomaSelect">Idioma del resultado</label>
+                    <select id="idiomaSelect">
+                        <option value="español" selected>Español</option>
+                        <option value="inglés">Inglés</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-resumir" id="btnResumir" onclick="runResumir()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Resumir con IA
+        </button>
+    </div>
+
+    <!-- Loading -->
+    <div class="loading-area" id="loadingArea">
+        <div class="loading-spinner"></div>
+        <h3>La IA está leyendo tu PDF<span class="loading-dots"></span></h3>
+        <p id="loadingMsg">Extrayendo texto y generando el resumen...</p>
+    </div>
+
+    <!-- Result -->
+    <div class="result-area" id="resultArea">
+        <!-- Stats -->
+        <div class="result-stats">
+            <div class="stat-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span id="statPaginas">0 páginas</span>
+            </div>
+            <div class="stat-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+                <span id="statPalabras">0 palabras</span>
+            </div>
+            <div class="stat-pill" id="statModo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Resumen breve
+            </div>
+        </div>
+
+        <!-- Resumen -->
+        <div class="result-block">
+            <div class="result-block-header">
+                <h4>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+                    Resumen
+                </h4>
+                <div class="result-actions">
+                    <button class="btn-action" id="btnCopiar" onclick="copiarResumen()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        Copiar
+                    </button>
+                    <button class="btn-action" onclick="descargarTxt()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Descargar TXT
+                    </button>
+                </div>
+            </div>
+            <div class="result-body" id="resumenTexto"></div>
+        </div>
+
+        <!-- Puntos clave -->
+        <div class="result-block" id="puntosBlock">
+            <div class="result-block-header">
+                <h4>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Puntos clave
+                </h4>
+            </div>
+            <ul class="puntos-list" id="puntosList"></ul>
+        </div>
+
+        <div class="aviso-banner" id="avisoBanner">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span id="avisoText"></span>
+        </div>
+
+        <button class="btn-new" onclick="resetTool()">← Resumir otro PDF</button>
+    </div>
+
+    <!-- SEO -->
+    <div class="seo-content">
+        <h2>Resumir PDF con Inteligencia Artificial</h2>
+        <p>Nuestra herramienta usa el modelo <strong>Llama 3.3 70B</strong> de Meta, ejecutado en los servidores ultrarrápidos de Groq, para analizar y resumir cualquier documento PDF en segundos.</p>
+
+        <h3>¿Para qué sirve?</h3>
+        <ul>
+            <li>Resumir artículos científicos, informes o contratos</li>
+            <li>Extraer los puntos clave de documentos largos</li>
+            <li>Obtener una visión general rápida antes de leer el documento completo</li>
+            <li>Preparar resúmenes ejecutivos de manera automática</li>
+        </ul>
+
+        <h3>Modos de resumen</h3>
+        <p><strong>Breve:</strong> Genera un párrafo conciso de 5-7 líneas con la esencia del documento, ideal para tener una visión rápida.</p>
+        <p><strong>Detallado:</strong> Organiza el resumen por secciones con encabezados, siguiendo la estructura del documento original.</p>
+
+        <h3>Privacidad</h3>
+        <p>Tu PDF se procesa en nuestros servidores y se elimina inmediatamente tras generar el resumen. No almacenamos ni el archivo ni su contenido.</p>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/chat-pdf/">Chat con PDF</a></li>
+            <li><a href="/traducir-pdf/">Traducir PDF</a></li>
+            <li><a href="/extraer-datos/">Extraer datos</a></li>
+            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
+            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
+        </ul>
+    
+        <h3>¿Qué tipo de documentos se pueden resumir?</h3>
+        <p>La herramienta funciona con cualquier PDF que contenga texto: informes empresariales, artículos académicos, noticias, contratos, manuales técnicos y libros. El resumen se adapta al tipo de contenido para extraer la información más relevante.</p>
+
+        <h3>¿Cuánto se reduce el texto en el resumen?</h3>
+        <p>Por defecto se genera un resumen de aproximadamente el 20-30% del texto original. Un informe de 50 páginas puede resumirse en 1-2 páginas con los puntos clave. Puedes ajustar la longitud del resumen según tus necesidades.</p>
+
+        <h3>¿El resumen está en el mismo idioma que el PDF?</h3>
+        <p>Sí. La IA detecta automáticamente el idioma del documento y genera el resumen en el mismo idioma. Si prefieres el resumen en otro idioma, usa nuestra herramienta de <a href="/traducir-pdf/">traducción de PDF</a> después de resumir.</p>
+
+        <h3>Casos de uso habituales</h3>
+        <ul>
+            <li>Revisar rápidamente informes largos antes de reuniones</li>
+            <li>Estudiar el contenido esencial de artículos académicos</li>
+            <li>Obtener los puntos clave de contratos antes de leerlos en detalle</li>
+            <li>Procesar grandes volúmenes de documentos en poco tiempo</li>
+        </ul>
+</div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Resumir PDF con IA?</h2>
+  <p>Usar Resumir PDF con IA en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Carga el documento</h3>
+          <p>Sube el PDF que quieres resumir. Funciona con informes, artículos, contratos, libros y cualquier documento con contenido textual.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Selecciona el tipo de resumen</h3>
+          <p>Elige entre resumen ejecutivo, puntos clave, resumen por secciones o una combinación. Indica la longitud aproximada del resumen deseado.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Obtén el resumen</h3>
+          <p>La IA genera un resumen conciso y fiel al contenido original. Puedes copiarlo directamente o descargarlo como documento de texto.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Resumir PDF con IA es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Revisar informes largos rápidamente</strong>
+        <span>Antes de una reunión, obtén los puntos más importantes de un informe de 50 páginas en un resumen de una sola página para llegar preparado sin haber leído el documento completo.</span>
+      </div>
+      <div class="use-case">
+        <strong>Evaluar documentos académicos y publicaciones</strong>
+        <span>Investigadores y estudiantes pueden obtener rápidamente la idea principal de artículos científicos, tesis y publicaciones técnicas antes de decidir si leen el documento completo.</span>
+      </div>
+      <div class="use-case">
+        <strong>Procesar contratos y documentos legales</strong>
+        <span>Los contratos extensos pueden resumirse para identificar rápidamente las cláusulas clave, las obligaciones de cada parte y las fechas importantes.</span>
+      </div>
+      <div class="use-case">
+        <strong>Preparar briefings ejecutivos</strong>
+        <span>Transforma informes técnicos, estudios de mercado o análisis financieros en resúmenes ejecutivos concisos listos para presentar a la dirección.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Resumir PDF con IA</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿La IA comprende documentos en español?</h3>
+        <p>Sí. El modelo de IA está optimizado para documentos en español y otros idiomas principales. El resumen se genera en el mismo idioma que el documento original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿El resumen es fiel al contenido original?</h3>
+        <p>El modelo de IA está entrenado para extraer y sintetizar el contenido real del documento sin añadir información externa ni distorsionar el significado original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Funciona con documentos técnicos muy especializados?</h3>
+        <p>Sí, aunque la calidad puede variar con terminología muy específica de campos altamente técnicos. Para textos generales, legales, financieros y académicos los resultados son excelentes.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<section style="max-width:820px;margin:0 auto;padding:32px 24px 0">
+    <div style="background:linear-gradient(135deg,#f3e8ff,#fff);border:1px solid #e1bee7;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <div style="flex:1;min-width:220px">
+            <span style="font-size:11px;font-weight:600;color:#6c3483;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
+            <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo resumir un PDF largo gratis con IA</h3>
+            <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Guía paso a paso para estudiantes, abogados e investigadores. Aprende a ahorrar horas de lectura cada semana.</p>
+        </div>
+        <a href="/blog/como-resumir-pdf-gratis-ia/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#8e44ad;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0;transition:all .2s" onmouseover="this.style.background='#6c3483'" onmouseout="this.style.background='#8e44ad'">Leer guía →</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> &nbsp;|&nbsp; <a href="/">Inicio</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a></p>
+</footer>
+
+<script src="/js/main.js" defer></script>
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+let selectedFile = null;
+let lastResult   = null;
+
+// ── Upload ─────────────────────────────────────────────────────────────────
+const uploadZone = document.getElementById('uploadZone');
+const fileInput  = document.getElementById('fileInput');
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault();
+    uploadZone.classList.remove('dragover');
+    const f = e.dataTransfer.files[0];
+    if (f) handleFile(f);
+});
+fileInput.addEventListener('change', () => { if (fileInput.files[0]) handleFile(fileInput.files[0]); fileInput.value = ''; });
+
+function handleFile(f) {
+    hideError();
+    if (!f.name.toLowerCase().endsWith('.pdf')) { showError('Solo se admiten archivos PDF.'); return; }
+    if (f.size > 20 * 1024 * 1024) { showError('El archivo supera el límite de 20 MB.'); return; }
+    selectedFile = f;
+    document.getElementById('fileName').textContent = f.name;
+    document.getElementById('fileSize').textContent = formatBytes(f.size);
+    showState('process');
+}
+
+// ── UI States ──────────────────────────────────────────────────────────────
+function showState(state) {
+    uploadZone.style.display  = state === 'upload'   ? '' : 'none';
+    document.getElementById('processArea').classList.toggle('active', state === 'process');
+    document.getElementById('loadingArea').classList.toggle('active', state === 'loading');
+    document.getElementById('resultArea').classList.toggle('active',  state === 'result');
+}
+
+function resetTool() {
+    selectedFile = null;
+    lastResult   = null;
+    hideError();
+    showState('upload');
+}
+
+function showError(msg) {
+    document.getElementById('errorText').textContent = msg;
+    document.getElementById('errorBanner').classList.add('active');
+}
+function hideError() {
+    document.getElementById('errorBanner').classList.remove('active');
+}
+
+// ── Resumir ────────────────────────────────────────────────────────────────
+const loadingMessages = [
+    'Extrayendo texto del documento...',
+    'La IA está analizando el contenido...',
+    'Identificando ideas principales...',
+    'Generando el resumen...',
+    'Casi listo...',
+];
+
+async function runResumir() {
+    if (!selectedFile) return;
+    hideError();
+
+    const modo    = document.getElementById('modoSelect').value;
+    const idioma  = document.getElementById('idiomaSelect').value;
+
+    showState('loading');
+
+    // Rotar mensajes de carga
+    let msgIdx = 0;
+    const msgEl = document.getElementById('loadingMsg');
+    const msgInterval = setInterval(() => {
+        msgIdx = (msgIdx + 1) % loadingMessages.length;
+        msgEl.textContent = loadingMessages[msgIdx];
+    }, 2500);
+
+    const fd = new FormData();
+    fd.append('file', selectedFile);
+    fd.append('modo', modo);
+    fd.append('idioma_salida', idioma);
+
+    try {
+        const resp = await fetch('/api/resumir-pdf', { method: 'POST', body: fd });
+        clearInterval(msgInterval);
+
+        if (!resp.ok) {
+            let errMsg = `Error del servidor (${resp.status})`;
+            try { const j = await resp.json(); errMsg = j.detail || errMsg; } catch(_) {}
+            showError(errMsg);
+            showState('process');
+            return;
+        }
+
+        const data = await resp.json();
+        lastResult = data;
+        renderResult(data, modo, idioma);
+
+    } catch (err) {
+        clearInterval(msgInterval);
+        showError('No se pudo conectar con el servidor. Inténtalo de nuevo.');
+        showState('process');
+    }
+}
+
+function renderResult(data, modo, idioma) {
+    // Stats
+    document.getElementById('statPaginas').textContent  = `${data.num_paginas} página${data.num_paginas !== 1 ? 's' : ''}`;
+    document.getElementById('statPalabras').textContent = `${data.num_palabras.toLocaleString('es')} palabras`;
+    document.getElementById('statModo').lastChild.textContent = ` Resumen ${modo}`;
+
+    // Resumen
+    document.getElementById('resumenTexto').textContent = data.resumen;
+
+    // Puntos clave
+    const puntosList  = document.getElementById('puntosList');
+    const puntosBlock = document.getElementById('puntosBlock');
+    if (data.puntos_clave && data.puntos_clave.length > 0) {
+        puntosList.innerHTML = data.puntos_clave.map((p, i) =>
+            `<li><span class="punto-dot">${i+1}</span><span>${escapeHtml(p)}</span></li>`
+        ).join('');
+        puntosBlock.style.display = '';
+    } else {
+        puntosBlock.style.display = 'none';
+    }
+
+    // Aviso de truncado
+    const avisoBanner = document.getElementById('avisoBanner');
+    if (data.aviso) {
+        document.getElementById('avisoText').textContent = data.aviso;
+        avisoBanner.classList.add('active');
+    } else {
+        avisoBanner.classList.remove('active');
+    }
+
+    showState('result');
+}
+
+// ── Actions ────────────────────────────────────────────────────────────────
+async function copiarResumen() {
+    if (!lastResult) return;
+    const texto = buildFullText(lastResult);
+    try {
+        await navigator.clipboard.writeText(texto);
+        const btn = document.getElementById('btnCopiar');
+        const orig = btn.innerHTML;
+        btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ¡Copiado!`;
+        btn.classList.add('success');
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('success'); }, 2000);
+    } catch(_) {
+        showError('No se pudo copiar. Selecciona el texto manualmente.');
+    }
+}
+
+function descargarTxt() {
+    if (!lastResult) return;
+    const texto = buildFullText(lastResult);
+    const blob  = new Blob([texto], { type: 'text/plain;charset=utf-8' });
+    const url   = URL.createObjectURL(blob);
+    const a     = document.createElement('a');
+    a.href      = url;
+    a.download  = (selectedFile ? selectedFile.name.replace(/\.pdf$/i, '') : 'resumen') + '_resumen.txt';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+
+function buildFullText(data) {
+    let txt = `RESUMEN\n${'='.repeat(60)}\n\n${data.resumen}`;
+    if (data.puntos_clave && data.puntos_clave.length > 0) {
+        txt += `\n\nPUNTOS CLAVE\n${'='.repeat(60)}\n`;
+        data.puntos_clave.forEach((p, i) => { txt += `\n${i+1}. ${p}`; });
+    }
+    txt += `\n\n${'─'.repeat(60)}\nGenerado con PDFRápido — pdfrapido.eu`;
+    return txt;
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+function formatBytes(b) {
+    if (b < 1024) return b + ' B';
+    if (b < 1024*1024) return (b/1024).toFixed(0) + ' KB';
+    return (b/(1024*1024)).toFixed(1) + ' MB';
+}
+function escapeHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+<script src="/js/error-modal.js"></script>
+<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
+</body>
+</html>

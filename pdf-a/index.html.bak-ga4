@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="PDF a PDF/A, convertir PDF/A, PDF archivable, ISO 19005, PDF/A-1b online gratis">
+    <meta name="description" content="Convierte PDF a PDF/A gratis y sin registro. Crea documentos archivables según la norma ISO 19005, compatibles con sistemas de gestión documental.">
+    <meta name="author" content="MF Sanchez">
+    <title>PDF a PDF/A Online Gratis — Formato ISO | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#7C3AED;--accent-light:#EDE9FE;--accent-dark:#6D28D9;--g50:#F9FAFB;--g200:#E5E7EB;--g300:#D1D5DB;--g400:#9CA3AF;--g500:#6B7280;--g700:#374151;--g800:#1F2937;--r:12px;--rl:16px;--rxl:24px;--sl:0 10px 25px -3px rgba(0,0,0,.08)}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--g800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--g200)}.ni{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.li{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.lt{font-size:20px;font-weight:700;letter-spacing:-.5px}.lt span{color:var(--primary)}.nb{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--g500);font-size:14px;font-weight:500}.nb:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:700px;margin:0 auto;width:100%}
+        .th{text-align:center;margin-bottom:36px}.th .ib{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.th h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.th p{font-size:16px;color:var(--g500)}
+        .uz{border:2px dashed var(--g300);border-radius:var(--rxl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--g50)}.uz:hover,.uz.dragover{border-color:var(--accent)}.ui{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.uz:hover .ui{transform:translateY(-4px)}.uz h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.uz h3 span{color:var(--accent)}.uz p{font-size:14px;color:var(--g400)}.uz input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .info-box{background:var(--accent-light);border:1px solid #C4B5FD;border-radius:var(--r);padding:16px 20px;margin-bottom:24px;display:none}
+        .info-box.show{display:block}.info-box p{font-size:13px;color:#5B21B6;line-height:1.6}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .progress-wrap{padding:48px 0;text-align:center}
+        .progress-bar-track{height:8px;background:var(--g200);border-radius:4px;overflow:hidden;margin-bottom:20px}
+        .progress-bar-fill{height:100%;background:var(--accent);border-radius:4px;transition:width .6s cubic-bezier(.4,0,.2,1);width:0%}
+        .progress-stage{font-size:15px;font-weight:600;color:var(--g800);margin-bottom:6px}
+        .progress-sub{font-size:13px;color:var(--g400)}
+        .ra{display:none;animation:fadeInUp .5s ease-out}.ra.active{display:block}.rc{background:#fff;border:1px solid var(--g200);border-radius:var(--rxl);padding:36px;text-align:center;box-shadow:var(--sl);position:relative;overflow:hidden}.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#A78BFA)}.rsi{width:64px;height:64px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:si .4s cubic-bezier(.34,1.56,.64,1)}@keyframes si{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.rc h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.rc .desc{font-size:14px;color:var(--g400);margin-bottom:24px}.rac{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .bd{padding:14px 32px;border:none;border-radius:var(--r);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px}.bd:hover{background:var(--accent-dark)}.br{padding:14px 24px;border:1px solid var(--g200);border-radius:var(--r);background:#fff;color:var(--g500);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px}.br:hover{background:var(--g50)}
+        .error-msg{background:#FFF0EF;border:1px solid #E8453C;border-radius:var(--r);padding:16px;text-align:center;color:#C73830;font-size:14px;margin-bottom:20px;display:none}.error-msg.show{display:block}
+        .ad{background:var(--g50);border:1px dashed var(--g300);border-radius:var(--r);padding:16px;text-align:center;color:var(--g400);font-size:13px;margin-top:40px}
+        .seo{max-width:700px;margin:60px auto 0}.seo h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo p{font-size:15px;color:var(--g500);line-height:1.7;margin-bottom:12px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:640px){main{padding:100px 16px 40px}.th h1{font-size:26px}.uz{padding:40px 24px}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+                .seo-content {
+            max-width: 700px;
+            margin: 60px auto 0;
+            padding: 0 4px;
+        }
+        .seo-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .seo-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin: 28px 0 10px;
+        }
+        .seo-content p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .seo-content ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .seo-content li {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <link rel="canonical" href="https://pdfrapido.eu/pdf-a/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "PDF a PDF/A Online Gratis",
+          "url": "https://pdfrapido.eu/pdf-a/",
+          "description": "Convierte tu PDF al formato archivable PDF/A conforme con ISO 19005. Gratis y sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "inLanguage": "es",
+  "publisher": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "PDFRápido", "item": "https://pdfrapido.eu" },
+            { "@type": "ListItem", "position": 2, "name": "PDF a PDF/A", "item": "https://pdfrapido.eu/pdf-a/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es el formato PDF/A?",
+              "acceptedAnswer": { "@type": "Answer", "text": "PDF/A es una variante del PDF estandarizada por ISO (ISO 19005) diseñada para el archivado a largo plazo de documentos electrónicos. Garantiza que el documento se pueda reproducir exactamente igual en el futuro, independientemente del software utilizado." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuándo necesito un PDF/A?",
+              "acceptedAnswer": { "@type": "Answer", "text": "El PDF/A es obligatorio o recomendado en administraciones públicas, archivos oficiales, despachos jurídicos y cualquier contexto donde se requiera conservar documentos de forma permanente y verificable." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué diferencia hay entre PDF/A-1 y PDF/A-2?",
+              "acceptedAnswer": { "@type": "Answer", "text": "PDF/A-1 (basado en PDF 1.4) es el más compatible y ampliamente aceptado. PDF/A-2 (basado en PDF 1.7) permite capas, transparencias y compresión JPEG2000. PDFRápido genera PDF/A-2b, que ofrece la mejor compatibilidad moderna." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="PDF a PDF/A Online Gratis — Formato Archivable ISO 19005 | PDFRápido">
+    <meta property="og:description" content="Convierte PDF a PDF/A gratis y sin registro. Crea documentos archivables según la norma ISO 19005, compatibles con sistemas de gestión documental.">
+    <meta property="og:url" content="https://pdfrapido.eu/pdf-a/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF a PDF/A Online Gratis — Formato Archivable ISO 19005 | PDFRápido">
+    <meta name="twitter:description" content="Convierte PDF a PDF/A gratis y sin registro. Crea documentos archivables según la norma ISO 19005, compatibles con sistemas de gestión documental.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+<nav><div class="ni"><a href="/" class="logo"><div class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="lt">PDF<span>Rápido</span></div></a><a href="/" class="nb"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a></div></nav>
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">PDF a PDF/A</li>
+    </ol>
+</nav>
+<div class="th">
+        <div class="ib">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6"/><path d="M9 17h4"/><circle cx="17" cy="17" r="4"/><path d="M17 15v2l1 1"/></svg>
+        </div>
+        <h1>PDF a PDF/A</h1>
+        <p>Convierte tu PDF al formato archivable ISO 19005, necesario para administraciones y archivos oficiales.</p>
+    </div>
+
+    <div class="uz" id="uploadZone">
+        <input type="file" accept=".pdf" id="fileInput">
+        <div class="ui"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
+        <p>Archivos PDF hasta 50 MB</p>
+    </div>
+
+    <div class="step" id="stepProgress">
+        <div class="progress-wrap">
+            <div class="progress-bar-track"><div class="progress-bar-fill" id="progressBar"></div></div>
+            <p class="progress-stage" id="progressLabel">Subiendo archivo...</p>
+            <p class="progress-sub">Ghostscript está generando el PDF/A</p>
+        </div>
+    </div>
+    <div class="error-msg" id="errorMsg"></div>
+    <div class="ra" id="resultArea">
+        <div class="rc">
+            <div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>PDF/A generado</h3>
+            <p class="desc" id="resultDesc"></p>
+            <div class="rac">
+                <button class="bd" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF/A</button>
+                <button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad">Espacio publicitario — Google AdSense</div>
+
+    <div class="seo">
+        <h2>¿Qué es el PDF/A y para qué sirve?</h2>
+        <p>PDF/A (ISO 19005) es el estándar internacional para el archivado permanente de documentos electrónicos. A diferencia del PDF convencional, el PDF/A embebe todas las fuentes, perfiles de color e información necesaria para garantizar que el documento se verá exactamente igual dentro de 20 o 50 años.</p>
+        <p>Es obligatorio en muchas administraciones públicas europeas, juzgados, notarías y archivos oficiales. Si necesitas presentar documentación oficial o archivar contratos a largo plazo, el PDF/A es el formato correcto.</p>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
+            <li><a href="/unir-pdf/">Unir PDF</a></li>
+            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
+        </ul>
+    </div>
+    <!-- SEO CONTENT -->
+    <div class="seo-content">
+        <h2>Cómo convertir PDF a PDF/A online gratis</h2>
+        <p>Convierte tus PDFs normales al formato PDF/A, el estándar ISO para archivado a largo plazo. Los PDF/A garantizan que tu documento se verá igual dentro de 20 años que hoy.</p>
+
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>Sube tu archivo PDF estándar.</li>
+            <li>La herramienta convierte automáticamente el documento a formato PDF/A.</li>
+            <li>Descarga el PDF/A archivable listo para guardar en tu sistema documental.</li>
+        </ul>
+
+        <h3>¿Por qué usar esta herramienta?</h3>
+        <p>El formato PDF/A es obligatorio en muchas administraciones públicas, sistemas de gestión documental y archivos digitales porque garantiza la conservación fiel del documento en el tiempo.</p>
+
+        <h3>Seguridad y privacidad</h3>
+        <p>La conversión se realiza localmente en tu navegador. Tus documentos no se suben a servidores externos.</p>
+
+        <h3>Preguntas frecuentes</h3>
+        <details>
+            <summary>¿Qué diferencia hay entre PDF y PDF/A?</summary>
+            <p>El PDF/A elimina elementos que podrían no mostrarse correctamente en el futuro, como fuentes no embebidas, contenido multimedia y cifrado.</p>
+        </details>
+        <details>
+            <summary>¿Puedo convertir PDFs protegidos a PDF/A?</summary>
+            <p>No, primero debes eliminar la protección con la contraseña usando nuestra herramienta de desbloqueo.</p>
+        </details>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
+            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
+            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
+            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
+        </ul>
+    </div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Convertir PDF a PDF/A?</h2>
+  <p>Usar Convertir PDF a PDF/A en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Sube tu PDF</h3>
+          <p>Carga el documento PDF que necesitas convertir al estándar de archivo PDF/A. La herramienta es compatible con cualquier versión de PDF.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Selecciona la variante PDF/A</h3>
+          <p>Elige entre PDF/A-1b para máxima compatibilidad, PDF/A-2b para mejor compresión o PDF/A-3b que permite adjuntar cualquier tipo de archivo.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Convierte y descarga</h3>
+          <p>Obtén el PDF/A listo para archivo a largo plazo, cumplimiento normativo o presentación ante organismos oficiales.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Convertir PDF a PDF/A es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Archivo documental en empresas</strong>
+        <span>El estándar PDF/A garantiza que los documentos serán legibles en el futuro, independientemente del software o versión del lector PDF utilizado. Es el formato preferido para los archivos corporativos.</span>
+      </div>
+      <div class="use-case">
+        <strong>Presentación ante administraciones públicas</strong>
+        <span>Muchos organismos públicos en España y la UE exigen el formato PDF/A para la presentación de documentación en sede electrónica, contratos y expedientes administrativos.</span>
+      </div>
+      <div class="use-case">
+        <strong>Cumplimiento RGPD y normativas legales</strong>
+        <span>La conservación de documentos legales, contratos y datos personales en PDF/A facilita el cumplimiento de los plazos de conservación definidos por el RGPD y otras normativas.</span>
+      </div>
+      <div class="use-case">
+        <strong>Bibliotecas y archivos digitales</strong>
+        <span>Las bibliotecas nacionales, universidades y archivos históricos utilizan PDF/A para preservar documentos digitalizados y garantizar su acceso a las generaciones futuras.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Convertir PDF a PDF/A</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿Qué diferencia hay entre PDF normal y PDF/A?</h3>
+        <p>El PDF/A es un subconjunto del estándar PDF diseñado específicamente para el archivo a largo plazo. Prohíbe elementos que podrían impedir la reproducción fiel en el futuro, como el cifrado, las fuentes no incrustadas o el JavaScript.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿El PDF/A ocupa más espacio que el PDF original?</h3>
+        <p>Generalmente sí, porque debe incrustar todas las fuentes tipográficas y no puede usar ciertos métodos de compresión. El aumento de tamaño suele estar entre un 10% y un 30%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo convertir un PDF escaneado a PDF/A?</h3>
+        <p>Sí. Los PDFs escaneados también pueden convertirse a PDF/A. Si necesitas que el texto sea seleccionable, primero aplica OCR al documento antes de convertirlo.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+
+<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
+    <div style="font-size:14px;color:#6B7280;line-height:1.75">
+        <p>Convierte cualquier PDF al formato PDF/A, el estándar ISO para la conservación y el archivo a largo plazo de documentos electrónicos.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Qué es PDF/A y para qué sirve?</h2>
+        <p>PDF/A es una versión del formato PDF diseñada específicamente para el archivo y la conservación de documentos a largo plazo. A diferencia de un PDF normal, PDF/A incluye todos los recursos necesarios para reproducir el documento exactamente igual en el futuro, independientemente del software o hardware disponible.</p>
+        <p>Es el formato exigido por muchas administraciones públicas, archivos históricos, tribunales y empresas para el almacenamiento oficial de documentos electrónicos.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Diferencias entre PDF y PDF/A</h2>
+        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
+            <li>PDF/A incrusta siempre todas las fuentes tipográficas</li>
+            <li>No permite contenido cifrado ni DRM</li>
+            <li>No permite JavaScript ni contenido multimedia incrustado</li>
+            <li>Garantiza reproducibilidad a largo plazo sin dependencia de software externo</li>
+        </ul>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
+        <p><strong>¿Qué versión de PDF/A genera la herramienta?</strong><br>La herramienta genera PDF/A-1b, la versión más ampliamente aceptada y compatible con la mayoría de sistemas de archivo institucional.</p>
+        <p><strong>¿El tamaño del archivo aumenta al convertir a PDF/A?</strong><br>Ligeramente sí, porque se incrustan todas las fuentes completas. El aumento suele ser pequeño a menos que el PDF original usara muchas fuentes externas.</p>
+        <p><strong>¿Es obligatorio usar PDF/A para la administración pública española?</strong><br>Sí. La Ley 39/2015 y el Esquema Nacional de Interoperabilidad exigen PDF/A para la conservación de documentos electrónicos en la administración española.</p>
+
+    </div>
+    </section>
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p></footer>
+
+<script src="/js/convert.js" defer></script>
+<script>
+const ACTION = 'pdf-to-pdfa';
+const EXTRA_DATA = {};
+let resultBlob = null, resultFilename = '';
+
+const uploadZone = document.getElementById('uploadZone');
+const fileInput  = document.getElementById('fileInput');
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault(); uploadZone.classList.remove('dragover');
+    const f = [...e.dataTransfer.files].find(f => f.name.endsWith('.pdf'));
+    if (f) processFile(f);
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) processFile(e.target.files[0]); });
+document.getElementById('dlBtn').addEventListener('click', () => {
+    if (resultBlob) downloadBlob(resultBlob, resultFilename);
+});
+
+async function processFile(file) {
+    uploadZone.style.display = 'none';
+    document.getElementById('errorMsg').classList.remove('show');
+    document.getElementById('stepProgress').classList.add('active');
+    const bar   = document.getElementById('progressBar');
+    const label = document.getElementById('progressLabel');
+
+    try {
+        const result = await convertFile(file, ACTION, EXTRA_DATA, (pct, lbl) => {
+            bar.style.width = pct + '%';
+            label.textContent = lbl;
+        });
+        resultBlob     = result.blob;
+        resultFilename = result.filename;
+        document.getElementById('resultDesc').textContent = result.filename + ' · ' + formatSize(result.size);
+        document.getElementById('stepProgress').classList.remove('active');
+        document.getElementById('resultArea').classList.add('active');
+    } catch (err) {
+        document.getElementById('stepProgress').classList.remove('active');
+        document.getElementById('errorMsg').textContent = err.message;
+        document.getElementById('errorMsg').classList.add('show');
+        uploadZone.style.display = '';
+    }
+}
+
+function reset() {
+    resultBlob = null; resultFilename = '';
+    fileInput.value = '';
+    uploadZone.style.display = '';
+    document.getElementById('errorMsg').classList.remove('show');
+    ['stepProgress', 'resultArea'].forEach(id => document.getElementById(id).classList.remove('active'));
+}
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

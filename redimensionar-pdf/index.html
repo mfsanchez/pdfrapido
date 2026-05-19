@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-93B5VKXW7W');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta o tamaño personalizado. Gratis, sin registro y sin instalar nada | PDFRápido"
+    <meta name="keywords" content="redimensionar PDF, cambiar tamaño PDF, PDF a A4, PDF a A3, cambiar formato PDF online">
+    <meta name="author" content="MF Sanchez - PDFRápido">
+    <title>Redimensionar PDF Gratis — Cambia Tamaño | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
+    <link rel="canonical" href="https://pdfrapido.eu/redimensionar-pdf/">
+    <style>
+:root {
+    --primary: #E8453C;
+    --primary-dark: #C73830;
+    --primary-light: #FFF0EF;
+    --secondary: #1B2A4A;
+    --tool-color: #4285F4;
+    --tool-light: #EBF2FD;
+    --tool-dark: #2B6BD0;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+    --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+    --shadow-hover: 0 20px 40px -8px rgba(0,0,0,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    color: var(--gray-800);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--gray-200);
+}
+.nav-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    height: 64px; display: flex; align-items: center; justify-content: space-between;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--secondary); }
+.logo-icon { width: 36px; height: 36px; background: var(--primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.logo-text { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+.logo-text span { color: var(--primary); }
+.nav-back { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--gray-500); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-back:hover { color: var(--primary); }
+main { flex: 1; padding: 80px 24px 60px; max-width: 800px; margin: 0 auto; width: 100%; }
+.tool-header { text-align: center; margin-bottom: 36px; animation: fadeIn 0.5s ease-out; }
+.tool-header .icon-badge {
+    width: 64px; height: 64px; border-radius: 16px; background: var(--tool-light);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+}
+.tool-header h1 { font-size: 32px; font-weight: 700; color: var(--secondary); letter-spacing: -0.8px; margin-bottom: 8px; }
+.tool-header p { font-size: 16px; color: var(--gray-500); line-height: 1.5; }
+.upload-zone {
+    border: 2px dashed var(--gray-300); border-radius: var(--radius-xl);
+    padding: 60px 40px; text-align: center; cursor: pointer;
+    transition: all 0.3s ease; position: relative; overflow: hidden;
+    background: var(--gray-50); animation: fadeInUp 0.5s ease-out 0.1s both;
+}
+.upload-zone::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(66,133,244,0.04), transparent 70%);
+    pointer-events: none;
+}
+.upload-zone:hover, .upload-zone.dragover {
+    border-color: var(--tool-color); background: rgba(66,133,244,0.03); transform: scale(1.005);
+}
+.upload-icon {
+    width: 72px; height: 72px; border-radius: 20px; background: var(--tool-light);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.3s;
+}
+.upload-zone:hover .upload-icon { transform: translateY(-4px); }
+.upload-zone h3 { font-size: 18px; font-weight: 600; color: var(--secondary); margin-bottom: 8px; }
+.upload-zone h3 span { color: var(--tool-color); text-decoration: underline; text-underline-offset: 3px; }
+.upload-zone p { font-size: 14px; color: var(--gray-400); }
+.upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.process-area { display: none; animation: fadeInUp 0.4s ease-out; }
+.process-area.active { display: block; }
+.file-card {
+    background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg);
+    padding: 20px 24px; display: flex; align-items: center; gap: 16px; margin-bottom: 24px; box-shadow: var(--shadow-sm);
+}
+.file-icon {
+    width: 48px; height: 48px; border-radius: 12px; background: var(--primary-light);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.file-info { flex: 1; min-width: 0; }
+.file-info h4 { font-size: 15px; font-weight: 600; color: var(--gray-800); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-info span { font-size: 13px; color: var(--gray-400); }
+.file-remove {
+    width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--gray-200);
+    background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0;
+}
+.file-remove:hover { background: var(--primary-light); border-color: var(--primary); }
+.options-card {
+    background: var(--gray-50); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px;
+}
+.options-card h4 { font-size: 14px; font-weight: 600; color: var(--gray-700); margin-bottom: 16px; }
+.options-card h4 + h4 { margin-top: 20px; }
+
+/* Format grid */
+.format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.format-btn {
+    border: 2px solid var(--gray-200); border-radius: var(--radius); padding: 14px 10px;
+    text-align: center; cursor: pointer; transition: all 0.25s ease; background: #fff; position: relative;
+}
+.format-btn:hover { border-color: var(--tool-color); box-shadow: var(--shadow-sm); }
+.format-btn.selected { border-color: var(--tool-color); background: rgba(66,133,244,0.05); }
+.format-btn.selected::after {
+    content: ''; position: absolute; top: 8px; right: 8px; width: 8px; height: 8px;
+    background: var(--tool-color); border-radius: 50%;
+}
+.format-btn h5 { font-size: 14px; font-weight: 700; color: var(--gray-800); margin-bottom: 2px; }
+.format-btn span { font-size: 11px; color: var(--gray-400); line-height: 1.3; display: block; }
+
+/* Custom size inputs */
+.custom-size { display: none; gap: 12px; align-items: center; margin-top: 12px; }
+.custom-size.visible { display: flex; }
+.custom-size label { font-size: 13px; font-weight: 500; color: var(--gray-600); white-space: nowrap; }
+.custom-size input[type="number"] {
+    width: 90px; padding: 9px 12px; border: 1px solid var(--gray-300); border-radius: 8px;
+    font-family: inherit; font-size: 14px; color: var(--gray-800);
+    transition: border-color 0.2s; background: #fff;
+}
+.custom-size input[type="number"]:focus { outline: none; border-color: var(--tool-color); }
+.custom-size span { font-size: 13px; color: var(--gray-400); }
+
+/* Toggle row */
+.toggle-row { display: flex; gap: 10px; }
+.toggle-btn {
+    flex: 1; border: 2px solid var(--gray-200); border-radius: var(--radius); padding: 12px 16px;
+    display: flex; align-items: center; gap: 10px; cursor: pointer; transition: all 0.25s ease;
+    background: #fff; position: relative;
+}
+.toggle-btn:hover { border-color: var(--tool-color); }
+.toggle-btn.selected { border-color: var(--tool-color); background: rgba(66,133,244,0.05); }
+.toggle-btn.selected::after {
+    content: ''; position: absolute; top: 8px; right: 8px; width: 8px; height: 8px;
+    background: var(--tool-color); border-radius: 50%;
+}
+.toggle-btn h5 { font-size: 14px; font-weight: 600; color: var(--gray-800); }
+.toggle-btn span { font-size: 12px; color: var(--gray-400); display: block; margin-top: 2px; }
+
+/* Mode radio */
+.mode-options { display: flex; flex-direction: column; gap: 10px; }
+.mode-option {
+    display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px;
+    border: 2px solid var(--gray-200); border-radius: var(--radius); cursor: pointer;
+    transition: all 0.2s; background: #fff;
+}
+.mode-option:hover { border-color: var(--tool-color); }
+.mode-option.selected { border-color: var(--tool-color); background: rgba(66,133,244,0.05); }
+.mode-radio {
+    width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--gray-300);
+    flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+}
+.mode-option.selected .mode-radio { border-color: var(--tool-color); }
+.mode-option.selected .mode-radio::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--tool-color); }
+.mode-text h5 { font-size: 14px; font-weight: 600; color: var(--gray-800); margin-bottom: 2px; }
+.mode-text p { font-size: 12px; color: var(--gray-500); line-height: 1.5; }
+
+/* Action button */
+.action-btn {
+    width: 100%; padding: 16px; border: none; border-radius: var(--radius);
+    background: var(--tool-color); color: #fff; font-family: inherit; font-size: 16px; font-weight: 600;
+    cursor: pointer; transition: all 0.25s ease; display: flex; align-items: center; justify-content: center;
+    gap: 10px; letter-spacing: -0.2px;
+}
+.action-btn:hover { background: var(--tool-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(66,133,244,0.35); }
+.action-btn:active { transform: translateY(0); }
+.action-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+
+/* Progress */
+.progress-area { display: none; text-align: center; padding: 40px 0; animation: fadeIn 0.3s ease; }
+.progress-area.active { display: block; }
+.progress-ring { width: 100px; height: 100px; margin: 0 auto 20px; position: relative; }
+.progress-ring svg { transform: rotate(-90deg); }
+.progress-ring circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+.progress-ring .bg { stroke: var(--gray-200); }
+.progress-ring .fg { stroke: var(--tool-color); transition: stroke-dashoffset 0.4s ease; }
+.progress-pct { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: var(--secondary); }
+.progress-label { font-size: 15px; color: var(--gray-500); font-weight: 500; }
+
+/* Result */
+.result-area { display: none; animation: fadeInUp 0.5s ease-out; }
+.result-area.active { display: block; }
+.result-card {
+    background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-xl);
+    padding: 36px; text-align: center; box-shadow: var(--shadow-lg); position: relative; overflow: hidden;
+}
+.result-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--tool-color), #7CB3F8);
+}
+.result-success-icon {
+    width: 64px; height: 64px; border-radius: 50%; background: var(--tool-light);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+    animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes scaleIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.result-card h3 { font-size: 22px; font-weight: 700; color: var(--secondary); margin-bottom: 8px; }
+.result-meta { font-size: 14px; color: var(--gray-400); margin-bottom: 24px; }
+.result-dims {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: var(--tool-light); border-radius: var(--radius); padding: 16px 24px;
+    margin-bottom: 28px;
+}
+.dim-box { text-align: center; }
+.dim-box label { display: block; font-size: 11px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.dim-box .dim-val { font-size: 18px; font-weight: 700; color: var(--secondary); }
+.dim-arrow { font-size: 20px; color: var(--tool-color); font-weight: 700; }
+.result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-download {
+    padding: 14px 32px; border: none; border-radius: var(--radius); background: var(--tool-color);
+    color: #fff; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+    transition: all 0.25s; display: flex; align-items: center; gap: 8px;
+}
+.btn-download:hover { background: var(--tool-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(66,133,244,0.3); }
+.btn-reset {
+    padding: 14px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius);
+    background: #fff; color: var(--gray-600); font-family: inherit; font-size: 15px; font-weight: 500;
+    cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px;
+}
+.btn-reset:hover { background: var(--gray-50); border-color: var(--gray-300); }
+
+/* SEO content */
+.seo-content { max-width: 700px; margin: 60px auto 0; padding: 0 4px; }
+.seo-content h2 { font-size: 24px; font-weight: 700; color: var(--secondary); margin-bottom: 16px; letter-spacing: -0.5px; }
+.seo-content h3 { font-size: 18px; font-weight: 600; color: var(--gray-700); margin: 28px 0 10px; }
+.seo-content p { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin-bottom: 12px; }
+.seo-content ul { padding-left: 20px; margin-bottom: 12px; }
+.seo-content li { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin-bottom: 4px; }
+.related-tools {
+    max-width: 700px; margin: 40px auto 0; padding: 28px;
+    background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200);
+}
+.related-tools h3 { font-size: 16px; font-weight: 600; color: var(--secondary); margin-bottom: 16px; }
+.related-tools ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.related-tools ul li a {
+    display: inline-block; padding: 7px 16px; background: #fff; border: 1px solid var(--gray-200);
+    border-radius: 100px; font-size: 14px; font-weight: 500; color: var(--secondary);
+    text-decoration: none; transition: border-color 0.15s, color 0.15s;
+}
+.related-tools ul li a:hover { border-color: var(--primary); color: var(--primary); }
+
+footer { background: var(--secondary); color: #fff; padding: 30px 24px; text-align: center; margin-top: auto; }
+footer p { font-size: 13px; color: rgba(255,255,255,0.4); }
+footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 640px) {
+    main { padding: 76px 16px 40px; }
+    .tool-header h1 { font-size: 26px; }
+    .upload-zone { padding: 40px 24px; }
+    .format-grid { grid-template-columns: repeat(2, 1fr); }
+    .toggle-row { flex-direction: column; }
+    .result-card { padding: 28px 20px; }
+    .result-dims { flex-direction: column; gap: 8px; }
+    .custom-size { flex-wrap: wrap; }
+}
+
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#4285F4;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #4285F4;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+            .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
+</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Redimensionar PDF Online Gratis",
+          "url": "https://pdfrapido.eu/redimensionar-pdf/",
+          "description": "Cambia el tamaño de las páginas de tu PDF a A4, A3, A5, Carta, Legal o medidas personalizadas. Gratis, sin registro y sin instalar nada.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "inLanguage": "es",
+          "publisher": { "@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "PDFRápido", "item": "https://pdfrapido.eu" },
+            { "@type": "ListItem", "position": 2, "name": "Redimensionar PDF", "item": "https://pdfrapido.eu/redimensionar-pdf/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Puedo cambiar un PDF de A4 a Carta sin perder contenido?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Activa la opción 'Ajustar contenido' para que el texto e imágenes se escalen automáticamente al nuevo tamaño. Si el tamaño destino es mayor, el contenido queda centrado en la página ampliada." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Se sube el PDF al servidor al redimensionarlo?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería pdf-lib. Tu documento no abandona tu dispositivo en ningún momento." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué formatos de página admite la herramienta?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Puedes elegir entre A4 (210×297 mm), A3 (297×420 mm), A5 (148×210 mm), Carta/Letter (215,9×279,4 mm), Legal (215,9×355,6 mm) y tamaño personalizado en milímetros, con orientación vertical u horizontal." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <meta property="og:title" content="Redimensionar PDF Gratis — Cambia Tamaño | PDFRápido">
+    <meta property="og:description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta o tamaño personalizado. Gratis, sin registro y sin instalar nada.">
+    <meta property="og:url" content="https://pdfrapido.eu/redimensionar-pdf/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Redimensionar PDF Online Gratis | PDFRápido">
+    <meta name="twitter:description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta o tamaño personalizado. Gratis y sin registro.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pdfrapido.eu/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu",
+  "logo": "https://pdfrapido.eu/favicon.svg",
+  "sameAs": [
+    "https://github.com/mfsanchez/pdfrapido",
+    "https://twitter.com/pdfrapido"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="logo-text">PDF<span>Rápido</span></div>
+        </a>
+        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <ul class="nav-links">
+            <li><a href="/#herramientas">Herramientas</a></li>
+            <li><a href="/#caracteristicas">Características</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+<div role="navigation" aria-label="breadcrumb" style="max-width:1140px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Redimensionar PDF</li>
+    </ol>
+</div>
+
+<div class="tool-header">
+    <div class="icon-badge">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18"/>
+            <path d="M9 21V9"/>
+        </svg>
+    </div>
+    <h1>Redimensionar PDF Online Gratis — PDFRápido</h1>
+    <p>Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta y más. Procesamiento en tu navegador, sin subir nada.</p>
+</div>
+
+<!-- UPLOAD ZONE -->
+<div class="upload-zone" id="uploadZone">
+    <input type="file" accept=".pdf,application/pdf" id="fileInput">
+    <div class="upload-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+    </div>
+    <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
+    <p>Tamaño máximo: 100 MB · Todo el procesamiento ocurre en tu navegador</p>
+</div>
+
+<!-- PROCESS AREA -->
+<div class="process-area" id="processArea">
+    <div class="file-card">
+        <div class="file-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+            </svg>
+        </div>
+        <div class="file-info">
+            <h4 id="fileName">documento.pdf</h4>
+            <span id="fileSize">—</span>
+        </div>
+        <button class="file-remove" id="removeFile" title="Eliminar archivo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="options-card">
+        <!-- Format -->
+        <h4>Formato de página destino</h4>
+        <div class="format-grid">
+            <div class="format-btn selected" data-format="a4" onclick="selectFormat(this)">
+                <h5>A4</h5>
+                <span>210 × 297 mm</span>
+            </div>
+            <div class="format-btn" data-format="a3" onclick="selectFormat(this)">
+                <h5>A3</h5>
+                <span>297 × 420 mm</span>
+            </div>
+            <div class="format-btn" data-format="a5" onclick="selectFormat(this)">
+                <h5>A5</h5>
+                <span>148 × 210 mm</span>
+            </div>
+            <div class="format-btn" data-format="letter" onclick="selectFormat(this)">
+                <h5>Carta</h5>
+                <span>215,9 × 279,4 mm</span>
+            </div>
+            <div class="format-btn" data-format="legal" onclick="selectFormat(this)">
+                <h5>Legal</h5>
+                <span>215,9 × 355,6 mm</span>
+            </div>
+            <div class="format-btn" data-format="custom" onclick="selectFormat(this)">
+                <h5>Personalizado</h5>
+                <span>Ancho × Alto en mm</span>
+            </div>
+        </div>
+        <div class="custom-size" id="customSize">
+            <label>Ancho</label>
+            <input type="number" id="customW" value="210" min="10" max="5000" step="0.1">
+            <span>mm ×</span>
+            <label>Alto</label>
+            <input type="number" id="customH" value="297" min="10" max="5000" step="0.1">
+            <span>mm</span>
+        </div>
+
+        <!-- Orientation -->
+        <h4 style="margin-top:20px">Orientación</h4>
+        <div class="toggle-row">
+            <div class="toggle-btn selected" data-orient="portrait" onclick="selectOrientation(this)">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2"/>
+                </svg>
+                <div>
+                    <h5>Vertical</h5>
+                    <span>Portrait</span>
+                </div>
+            </div>
+            <div class="toggle-btn" data-orient="landscape" onclick="selectOrientation(this)">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                </svg>
+                <div>
+                    <h5>Horizontal</h5>
+                    <span>Landscape</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mode -->
+        <h4 style="margin-top:20px">Modo de redimensionado</h4>
+        <div class="mode-options">
+            <div class="mode-option selected" data-mode="fit" onclick="selectMode(this)">
+                <div class="mode-radio"></div>
+                <div class="mode-text">
+                    <h5>Ajustar contenido al nuevo tamaño</h5>
+                    <p>El texto, imágenes y elementos se escalan y centran proporcionalmente en la nueva página.</p>
+                </div>
+            </div>
+            <div class="mode-option" data-mode="crop" onclick="selectMode(this)">
+                <div class="mode-radio"></div>
+                <div class="mode-text">
+                    <h5>Solo cambiar el tamaño de la página</h5>
+                    <p>El contenido permanece en su posición original. Útil para ampliar el lienzo o recortar el área visible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="action-btn" id="resizeBtn" onclick="resizePDF()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18"/><path d="M9 21V9"/>
+        </svg>
+        Redimensionar PDF
+    </button>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-area" id="progressArea">
+    <div class="progress-ring">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle class="bg" cx="50" cy="50" r="44"/>
+            <circle class="fg" id="progressCircle" cx="50" cy="50" r="44"
+                stroke-dasharray="276.46" stroke-dashoffset="276.46"/>
+        </svg>
+        <div class="progress-pct" id="progressPct">0%</div>
+    </div>
+    <p class="progress-label" id="progressLabel">Cargando PDF...</p>
+</div>
+
+<!-- RESULT -->
+<div class="result-area" id="resultArea">
+    <div class="result-card">
+        <div class="result-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+            </svg>
+        </div>
+        <h3>PDF redimensionado correctamente</h3>
+        <p class="result-meta" id="resultMeta">—</p>
+        <div class="result-dims">
+            <div class="dim-box">
+                <label>Tamaño original</label>
+                <div class="dim-val" id="origDims">—</div>
+            </div>
+            <div class="dim-arrow">→</div>
+            <div class="dim-box">
+                <label>Nuevo tamaño</label>
+                <div class="dim-val" id="newDims">—</div>
+            </div>
+        </div>
+        <div class="result-actions">
+            <button class="btn-download" onclick="downloadResult()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Descargar PDF
+            </button>
+            <button class="btn-reset" onclick="resetTool()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="1 4 1 10 7 10"/>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                </svg>
+                Redimensionar otro
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- AD -->
+<div style="max-width:800px;margin:40px auto 0;padding:0">
+    <div style="background:var(--gray-50);border:1px dashed var(--gray-300);border-radius:var(--radius);padding:16px;text-align:center;color:var(--gray-400);font-size:13px">
+        Espacio publicitario — Google AdSense
+    </div>
+</div>
+
+<!-- SEO CONTENT (inline, tool-specific) -->
+<div class="seo-content">
+    <h2>Cómo redimensionar las páginas de un PDF</h2>
+    <p>Con esta herramienta puedes cambiar el formato de página de cualquier PDF en segundos. Tanto si necesitas convertir un documento de tamaño Carta a A4 para imprimirlo en Europa, como si quieres pasar de A4 a A3 para una presentación, el proceso es completamente automático y gratuito.</p>
+
+    <h3>Diferencia entre formatos de papel</h3>
+    <p>El formato A4 (210 × 297 mm) es el estándar en España y Europa. El formato Carta (Letter, 215,9 × 279,4 mm) es el habitual en Estados Unidos y América Latina. Aunque son parecidos, las diferencias hacen que un documento pensado para uno no encaje bien en el otro al imprimir. Redimensionar el PDF soluciona este problema sin tener que editar el documento original.</p>
+
+    <h3>Opciones disponibles</h3>
+    <ul>
+        <li><strong>A4, A3, A5:</strong> estándares ISO usados en Europa, Asia y la mayoría del mundo.</li>
+        <li><strong>Carta (Letter):</strong> 215,9 × 279,4 mm, formato habitual en EE.UU. y México.</li>
+        <li><strong>Legal:</strong> 215,9 × 355,6 mm, para documentos legales norteamericanos.</li>
+        <li><strong>Personalizado:</strong> introduce cualquier dimensión en milímetros.</li>
+    </ul>
+
+    <h3>¿Ajustar contenido o solo cambiar tamaño?</h3>
+    <p>Si activas <em>Ajustar contenido</em>, el texto y los elementos gráficos se escalan proporcionalmente para llenar la nueva página. Si solo cambias el tamaño de la página sin ajustar, el contenido permanece en las mismas coordenadas: esto es útil para añadir márgenes a un PDF demasiado justo o para recortar un área específica.</p>
+</div>
+
+<div class="related-tools">
+    <h3>Herramientas relacionadas</h3>
+    <ul>
+        <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+        <li><a href="/recortar-pdf/">Recortar PDF</a></li>
+        <li><a href="/rotar-pdf/">Rotar PDF</a></li>
+        <li><a href="/organizar-pdf/">Organizar páginas</a></li>
+        <li><a href="/dividir-pdf/">Dividir PDF</a></li>
+        <li><a href="/numerar-paginas/">Numerar páginas</a></li>
+    </ul>
+</div>
+
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Redimensionar PDF?</h2>
+  <p>El proceso de redimensionado de páginas PDF se realiza íntegramente en tu navegador. No se envía ningún archivo a servidores externos, lo que garantiza la privacidad de tus documentos.</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Sube tu PDF</h3>
+          <p>Arrastra el archivo o haz clic para seleccionarlo. Compatible con cualquier PDF, incluyendo documentos de varias páginas.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Elige el formato y opciones</h3>
+          <p>Selecciona el tamaño destino (A4, A3, Carta, etc.), la orientación y si deseas escalar el contenido al nuevo tamaño.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga el resultado</h3>
+          <p>En segundos obtienes el PDF con las nuevas dimensiones de página. Descárgalo directamente a tu dispositivo.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo necesitas redimensionar un PDF?</h2>
+  <p>Cambiar el tamaño de página de un PDF es necesario en múltiples situaciones del trabajo diario:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Impresión en papel estándar</strong>
+        <span>Un PDF recibido desde EE.UU. en formato Carta no imprime bien en papel A4 europeo. Redimensionarlo a A4 evita márgenes incorrectos y contenido cortado.</span>
+      </div>
+      <div class="use-case">
+        <strong>Presentaciones y carteles</strong>
+        <span>Convertir un informe A4 a A3 para imprimirlo como cartel o mural, manteniendo todo el contenido escalado y centrado en el formato mayor.</span>
+      </div>
+      <div class="use-case">
+        <strong>Documentos para móvil o tablet</strong>
+        <span>Reducir un PDF A4 a A5 lo hace más cómodo de leer en pantallas pequeñas o en lectores de ebooks.</span>
+      </div>
+      <div class="use-case">
+        <strong>Normalización de documentos</strong>
+        <span>Estandarizar todos los documentos de una empresa al mismo formato antes de unirlos o archivarlos.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Redimensionar PDF</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿Puedo cambiar un PDF de A4 a Carta sin perder contenido?</h3>
+        <p>Sí. Activa la opción "Ajustar contenido" para que el texto e imágenes se escalen automáticamente al nuevo tamaño de página. La herramienta aplica escala uniforme y centra el contenido, por lo que no se pierde ningún elemento del documento original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Se sube el PDF al servidor al redimensionarlo?</h3>
+        <p>No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería open-source pdf-lib. Tu documento no abandona tu dispositivo en ningún momento, lo que garantiza total privacidad y funciona incluso sin conexión a internet una vez cargada la página.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué ocurre si el PDF tiene varias páginas?</h3>
+        <p>La herramienta redimensiona todas las páginas del PDF simultáneamente, aplicando el mismo formato y opciones a cada una. Si tu documento tiene páginas de distintos tamaños originales, el resultado unificará todas al formato elegido.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p>
+</footer>
+
+<script src="/js/pdf-lib.min.js"></script>
+<script>
+// ── State ──
+let originalFile = null;
+let resultBlob = null;
+let selectedFormat = 'a4';
+let selectedOrientation = 'portrait';
+let selectedMode = 'fit';
+
+// Page sizes in PDF points (1pt = 1/72 inch)
+const PAGE_SIZES = {
+    a4:     { w: 595.28,  h: 841.89  },
+    a3:     { w: 841.89,  h: 1190.55 },
+    a5:     { w: 419.53,  h: 595.28  },
+    letter: { w: 612.00,  h: 792.00  },
+    legal:  { w: 612.00,  h: 1008.00 }
+};
+
+function mmToPoints(mm) { return mm * 72 / 25.4; }
+function ptsToMm(pts)   { return Math.round(pts * 25.4 / 72); }
+
+// ── DOM refs ──
+const uploadZone  = document.getElementById('uploadZone');
+const fileInput   = document.getElementById('fileInput');
+const processArea = document.getElementById('processArea');
+const progressArea = document.getElementById('progressArea');
+const resultArea  = document.getElementById('resultArea');
+
+// ── Drag & drop ──
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault(); uploadZone.classList.remove('dragover');
+    const f = e.dataTransfer.files[0];
+    if (f && f.type === 'application/pdf') handleFile(f);
+    else showError('Por favor, selecciona un archivo PDF válido.');
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+document.getElementById('removeFile').addEventListener('click', resetTool);
+
+function handleFile(file) {
+    if (file.size > 100 * 1024 * 1024) { showError('El archivo supera el límite de 100 MB.'); return; }
+    originalFile = file;
+    document.getElementById('fileName').textContent = file.name;
+    document.getElementById('fileSize').textContent = formatSize(file.size);
+    uploadZone.style.display = 'none';
+    processArea.classList.add('active');
+    progressArea.classList.remove('active');
+    resultArea.classList.remove('active');
+}
+
+// ── Option selectors ──
+function selectFormat(el) {
+    document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedFormat = el.dataset.format;
+    const customBox = document.getElementById('customSize');
+    customBox.classList.toggle('visible', selectedFormat === 'custom');
+}
+
+function selectOrientation(el) {
+    document.querySelectorAll('.toggle-btn').forEach(b => {
+        b.classList.remove('selected');
+        b.querySelector('svg').setAttribute('stroke', 'var(--gray-400)');
+    });
+    el.classList.add('selected');
+    el.querySelector('svg').setAttribute('stroke', '#4285F4');
+    selectedOrientation = el.dataset.orient;
+}
+
+function selectMode(el) {
+    document.querySelectorAll('.mode-option').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedMode = el.dataset.mode;
+}
+
+// ── Progress ──
+function updateProgress(pct, label) {
+    const c = document.getElementById('progressCircle');
+    const circ = 2 * Math.PI * 44;
+    c.style.strokeDashoffset = circ - (pct / 100) * circ;
+    document.getElementById('progressPct').textContent = Math.round(pct) + '%';
+    if (label) document.getElementById('progressLabel').textContent = label;
+}
+
+// ── Core resize ──
+async function resizePDF() {
+    if (!originalFile) return;
+    const btn = document.getElementById('resizeBtn');
+    btn.disabled = true;
+    processArea.classList.remove('active');
+    progressArea.classList.add('active');
+    resultArea.classList.remove('active');
+    updateProgress(5, 'Cargando PDF...');
+
+    try {
+        const arrayBuffer = await originalFile.arrayBuffer();
+        updateProgress(20, 'Analizando páginas...');
+
+        const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
+        const pages = pdfDoc.getPages();
+        const pageCount = pages.length;
+
+        updateProgress(35, 'Calculando nuevas dimensiones...');
+
+        // Determine target dimensions
+        let targetW, targetH;
+        if (selectedFormat === 'custom') {
+            const cw = parseFloat(document.getElementById('customW').value) || 210;
+            const ch = parseFloat(document.getElementById('customH').value) || 297;
+            if (cw < 10 || ch < 10) throw new Error('Las dimensiones personalizadas deben ser al menos 10 mm.');
+            targetW = mmToPoints(cw);
+            targetH = mmToPoints(ch);
+        } else {
+            targetW = PAGE_SIZES[selectedFormat].w;
+            targetH = PAGE_SIZES[selectedFormat].h;
+        }
+
+        // Apply orientation
+        const isPortrait = selectedOrientation === 'portrait';
+        if (isPortrait && targetW > targetH)  { [targetW, targetH] = [targetH, targetW]; }
+        if (!isPortrait && targetW < targetH) { [targetW, targetH] = [targetH, targetW]; }
+
+        // Capture original dims from first page for display
+        const { width: firstOrigW, height: firstOrigH } = pages[0].getSize();
+
+        updateProgress(50, `Redimensionando ${pageCount} página${pageCount > 1 ? 's' : ''}...`);
+
+        for (let i = 0; i < pages.length; i++) {
+            const page = pages[i];
+            const { width: origW, height: origH } = page.getSize();
+
+            if (selectedMode === 'fit') {
+                const scaleX = targetW / origW;
+                const scaleY = targetH / origH;
+                const s = Math.min(scaleX, scaleY);
+                page.setSize(targetW, targetH);
+                if (Math.abs(s - 1) > 0.0001) {
+                    page.scaleContent(s, s);
+                    const offsetX = (targetW - origW * s) / 2;
+                    const offsetY = (targetH - origH * s) / 2;
+                    if (offsetX > 0.5 || offsetY > 0.5) {
+                        page.translateContent(offsetX, offsetY);
+                    }
+                }
+            } else {
+                page.setSize(targetW, targetH);
+            }
+
+            updateProgress(50 + Math.round((i + 1) / pageCount * 35), `Página ${i + 1} de ${pageCount}...`);
+        }
+
+        updateProgress(88, 'Generando PDF...');
+        const pdfBytes = await pdfDoc.save();
+        resultBlob = new Blob([pdfBytes], { type: 'application/pdf' });
+
+        updateProgress(100, '¡Listo!');
+        await new Promise(r => setTimeout(r, 350));
+
+        // Show result
+        progressArea.classList.remove('active');
+        resultArea.classList.add('active');
+
+        const formatLabel = selectedFormat === 'custom' ? 'Personalizado' :
+            { a4: 'A4', a3: 'A3', a5: 'A5', letter: 'Carta', legal: 'Legal' }[selectedFormat];
+        const orientLabel = selectedOrientation === 'portrait' ? 'Vertical' : 'Horizontal';
+
+        document.getElementById('origDims').textContent = `${ptsToMm(firstOrigW)} × ${ptsToMm(firstOrigH)} mm`;
+        document.getElementById('newDims').textContent  = `${ptsToMm(targetW)} × ${ptsToMm(targetH)} mm`;
+        document.getElementById('resultMeta').textContent =
+            `${formatLabel} · ${orientLabel} · ${pageCount} página${pageCount > 1 ? 's' : ''}`;
+
+    } catch (err) {
+        console.error(err);
+        progressArea.classList.remove('active');
+        processArea.classList.add('active');
+        showError('Error al procesar el PDF: ' + (err.message || 'el archivo podría estar protegido o dañado.'));
+    } finally {
+        btn.disabled = false;
+    }
+}
+
+function downloadResult() {
+    if (!resultBlob) return;
+    const url = URL.createObjectURL(resultBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    const base = originalFile.name.replace(/\.pdf$/i, '');
+    a.download = `${base}_redimensionado.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function resetTool() {
+    originalFile = null; resultBlob = null;
+    fileInput.value = '';
+    uploadZone.style.display = '';
+    processArea.classList.remove('active');
+    progressArea.classList.remove('active');
+    resultArea.classList.remove('active');
+    updateProgress(0, 'Cargando PDF...');
+    document.getElementById('resizeBtn').disabled = false;
+}
+
+function showError(msg) { alert(msg); }
+
+function formatSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / 1048576).toFixed(1) + ' MB';
+}
+</script>
+
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cómo proteger datos sensibles en un PDF cumpliendo el RGPD: diferencia entre tachar y redactar, errores comunes y tutorial para abogados y RRHH.">
+    <meta name="keywords" content="redactar pdf, rgpd pdf, censurar pdf, anonimizar pdf, proteger datos pdf rgpd">
+    <meta name="author" content="MF Sanchez">
+    <title>Cómo proteger datos sensibles en un PDF cumpliendo el RGPD (2026) | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
+    <style>
+        .article{max-width:720px;margin:0 auto;padding:0 4px}
+        .article-header{margin-bottom:40px}
+        .article-header .tag{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:4px 12px;border-radius:100px;background:var(--accent-teal-light);color:#00695C;margin-bottom:16px}
+        .article-header h1{font-size:clamp(28px,4vw,38px);font-weight:700;color:var(--secondary);line-height:1.2;letter-spacing:-.8px;margin-bottom:12px}
+        .article-header .meta{font-size:13px;color:var(--gray-400)}
+        .article h2{font-size:22px;font-weight:600;color:var(--secondary);margin:36px 0 14px;letter-spacing:-.3px}
+        .article h3{font-size:18px;font-weight:600;color:var(--gray-700);margin:28px 0 10px}
+        .article p{font-size:16px;color:var(--gray-600);line-height:1.8;margin-bottom:16px}
+        .article ul,.article ol{padding-left:24px;margin-bottom:16px}
+        .article li{font-size:16px;color:var(--gray-600);line-height:1.8;margin-bottom:6px}
+        .article a{color:var(--primary);text-decoration:none;font-weight:500}
+        .article a:hover{text-decoration:underline}
+        .article strong{color:var(--gray-800)}
+        .cta-box{background:linear-gradient(135deg,var(--accent-teal-light),#fff);border:1px solid #B2DFDB;border-radius:var(--radius-lg);padding:28px 32px;margin:32px 0;text-align:center}
+        .cta-box h3{font-size:18px;font-weight:600;color:var(--secondary);margin:0 0 8px}
+        .cta-box p{font-size:14px;color:var(--gray-500);margin:0 0 16px}
+        .cta-box a{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:#00897B;color:#fff;border-radius:var(--radius);font-weight:600;font-size:15px;text-decoration:none;transition:all .2s}
+        .cta-box a:hover{background:#00695C;transform:translateY(-1px);text-decoration:none}
+        .tip-box{background:var(--gray-50);border-left:3px solid #00897B;border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:20px 0;font-size:15px;color:var(--gray-600);line-height:1.7}
+        .tip-box strong{color:#00695C}
+        .warning-box{background:#FFF3E0;border-left:3px solid #F57C00;border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:20px 0;font-size:15px;color:var(--gray-600);line-height:1.7}
+        .warning-box strong{color:#E65100}
+        .article-nav{display:flex;justify-content:space-between;align-items:center;margin:48px 0 0;padding:24px 0;border-top:1px solid var(--gray-200)}
+        .article-nav a{font-size:14px;color:var(--primary);text-decoration:none;font-weight:500;display:flex;align-items:center;gap:6px}
+    
+        .breadcrumb{padding:16px 0;margin-bottom:8px;font-size:13px;color:var(--gray-400)}
+        .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+        .breadcrumb li{display:flex;align-items:center;gap:6px}
+        .breadcrumb a{color:var(--primary);text-decoration:none;font-weight:500}
+        .breadcrumb a:hover{text-decoration:underline}
+        .breadcrumb li:last-child{color:var(--gray-500)}
+</style>
+    <link rel="canonical" href="https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/">
+    <meta property="og:title" content="Cómo proteger datos sensibles en un PDF cumpliendo el RGPD (2026)">
+    <meta property="og:description" content="Guía completa sobre redacción de PDFs, RGPD y anonimización de documentos. Errores comunes al censurar texto y cómo hacerlo correctamente.">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2026-04-25">
+    <meta property="article:modified_time" content="2026-04-29">
+    <meta property="article:section" content="PDF">
+    <meta property="og:url" content="https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta property="og:image" content="https://pdfrapido.eu/og-blog.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cómo proteger datos sensibles en un PDF cumpliendo el RGPD (2026)">
+    <meta name="twitter:description" content="Guía completa sobre redacción de PDFs, RGPD y anonimización de documentos. Errores comunes al censurar texto y cómo hacerlo correctamente.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-blog.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo proteger datos sensibles en un PDF cumpliendo el RGPD (2026)",
+      "description": "Guía completa sobre redacción de PDFs, RGPD y anonimización de documentos. Errores comunes al censurar texto y cómo hacerlo correctamente.",
+      "url": "https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/",
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/"},
+      "datePublished": "2026-04-25",
+      "dateModified": "2026-04-29",
+      "author": {"@type": "Person","name": "MF Sanchez"},
+      "publisher": {"@type": "Organization","name": "PDFRápido","url": "https://pdfrapido.eu"},
+      "inLanguage": "es",
+      "isPartOf": {"@type": "WebSite","name": "PDFRápido","url": "https://pdfrapido.eu"}
+    }
+    </script>
+    <script src="/js/webmcp.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://pdfrapido.eu/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pdfrapido.eu/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Cómo proteger datos sensibles en un PDF cumpliendo el RGPD", "item": "https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/"}
+  ]
+}
+</script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/" class="logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="logo-text">PDF<span>Rápido</span></div></a><a href="/blog/" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Blog</a></div></nav>
+
+<main class="narrow" style="padding-top:120px">
+<nav aria-label="breadcrumb" class="breadcrumb"><ol>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li aria-current="page">Cómo proteger datos sensibles en un PDF cumpliendo el RGPD</li>
+        </ol></nav>
+<article class="article">
+    <div class="article-header">
+        <span class="tag">Seguridad</span>
+        <h1>Cómo proteger datos sensibles en un PDF cumpliendo el RGPD</h1>
+        <p class="meta">Por MF Sanchez · 25 abril 2026 · 8 min lectura</p>
+    </div>
+
+    <p>Cuando un ayuntamiento publica un acta en su web, cuando un bufete comparte una sentencia con un cliente o cuando un departamento de RRHH envía un expediente a otra empresa, tiene la obligación legal de proteger los datos personales de las personas que aparecen en esos documentos. El Reglamento General de Protección de Datos (RGPD) es claro al respecto.</p>
+
+    <p>El problema es que muchas organizaciones siguen "tachando" datos con un rectángulo negro en Word o PowerPoint, ignorando que esa técnica <strong>no elimina el texto del PDF</strong> y cualquiera puede recuperarlo. En esta guía te explicamos cómo hacerlo correctamente.</p>
+
+    <h2>Qué exige el RGPD sobre el tratamiento de documentos</h2>
+
+    <p>El RGPD (Reglamento UE 2016/679) establece que los datos personales deben tratarse con las garantías técnicas y organizativas apropiadas. Cuando se comparte un documento que contiene datos de terceros, la organización responsable debe asegurarse de que los datos no necesarios para el receptor quedan efectivamente eliminados o anonimizados.</p>
+
+    <p>Las categorías de datos especialmente protegidos incluyen:</p>
+    <ul>
+        <li>Datos de salud y condición médica</li>
+        <li>Origen racial o étnico</li>
+        <li>Opiniones políticas y creencias religiosas</li>
+        <li>Datos biométricos y genéticos</li>
+        <li>Vida sexual y orientación sexual</li>
+        <li>Datos relativos a condenas e infracciones penales</li>
+    </ul>
+
+    <p>El incumplimiento puede conllevar sanciones de hasta 20 millones de euros o el 4% de la facturación anual global, según cuál sea mayor.</p>
+
+    <h2>La diferencia crítica entre tachar y redactar</h2>
+
+    <h3>Tachar (incorrecto y peligroso)</h3>
+    <p>Consiste en añadir una capa visual opaca sobre el texto: un rectángulo negro, un resaltado oscuro, una imagen encima. El problema es que el texto original sigue existiendo en el PDF por debajo de esa capa. Cualquiera puede copiar y pegar el texto aunque esté "tachado", o abrirlo con un editor y eliminar la capa de color.</p>
+
+    <div class="warning-box">
+        <strong>Caso real:</strong> En 2019, la NSA publicó un informe desclasificado en PDF con datos "redactados" mediante rectángulos negros superpuestos. Los periodistas recuperaron el texto original en minutos usando Acrobat. Este error se repite en administraciones públicas de todo el mundo.
+    </div>
+
+    <h3>Redactar (correcto e irreversible)</h3>
+    <p>La redacción verdadera elimina el texto del propio PDF a nivel de estructura del archivo. El texto no existe en ninguna capa, no se puede recuperar con ninguna herramienta. Lo que ves es exactamente lo que hay: un espacio vacío o un bloque negro, pero sin datos subyacentes.</p>
+
+    <h2>Casos de uso: quién necesita redactar PDFs correctamente</h2>
+
+    <h3>Administraciones públicas</h3>
+    <p>Ayuntamientos, juzgados, ministerios y organismos públicos publican documentos oficiales con frecuencia. Las actas de plenos municipales, los expedientes de contratación o las sentencias publicadas en boletines oficiales deben anonimizar los datos personales antes de su publicación.</p>
+
+    <h3>Despachos de abogados</h3>
+    <p>Al compartir sentencias como precedentes o adjuntarlas a escritos, los abogados deben proteger los datos de las partes no relevantes para el caso en cuestión. El deber de confidencialidad profesional lo exige además del RGPD.</p>
+
+    <h3>Recursos Humanos</h3>
+    <p>Los expedientes de empleados, los informes de selección con datos de candidatos, o los contratos compartidos entre departamentos contienen datos personales que deben protegerse al circular internamente o enviarse a terceros.</p>
+
+    <h3>Sector sanitario</h3>
+    <p>Los informes médicos, los diagnósticos y los historiales clínicos son datos de categoría especial bajo el RGPD. Su tratamiento requiere las máximas garantías técnicas, lo que incluye una redacción correcta cuando deben compartirse para investigación o facturación.</p>
+
+    <h2>Tutorial: cómo usar la herramienta de redacción de PDFRápido</h2>
+
+    <ol>
+        <li>Accede a <a href="/redactar-pdf/">la herramienta de redactar PDF</a>.</li>
+        <li>Sube el documento PDF que contiene los datos a proteger.</li>
+        <li>Selecciona con el ratón los fragmentos de texto que quieres redactar.</li>
+        <li>Confirma la redacción: el sistema eliminará el texto de la estructura del archivo, no solo visualmente.</li>
+        <li>Descarga el PDF redactado. Los datos ya no existen en el archivo.</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Protege también el resultado:</strong> una vez redactado el documento, considera <a href="/proteger-pdf/">añadir una contraseña de apertura</a> para controlar quién puede acceder al archivo antes de compartirlo.
+    </div>
+
+    <div class="cta-box">
+        <h3>Redacta tus PDFs correctamente</h3>
+        <p>Elimina datos sensibles de forma irreversible. Sin registro, cumpliendo el RGPD.</p>
+        <a href="/redactar-pdf/">Redactar PDF ahora →</a>
+    </div>
+
+    <h2>Buenas prácticas de anonimización de documentos</h2>
+
+    <p>Además de redactar, muchas organizaciones necesitan comparar versiones de un documento antes y después de la anonimización. Nuestra herramienta de <a href="/comparar-pdfs/">comparar PDFs</a> te permite ver exactamente qué se ha modificado entre dos versiones del mismo archivo.</p>
+
+    <ol>
+        <li><strong>Buscar todos los datos antes de redactar:</strong> usa la función de búsqueda del PDF para localizar el DNI, el nombre completo o la dirección en todas sus apariciones. Un solo olvido puede comprometer la anonimización.</li>
+        <li><strong>Revisar metadatos:</strong> los PDFs almacenan metadatos (autor, empresa, historial de versiones) que pueden contener datos personales aunque el documento esté redactado.</li>
+        <li><strong>No confiar en el OCR posterior:</strong> si el PDF permanece digital, asegúrate de que la redacción es real y no solo visual.</li>
+        <li><strong>Documentar el proceso:</strong> para cumplir con el principio de responsabilidad proactiva del RGPD, conviene registrar qué datos se redactaron, quién lo hizo y con qué herramienta.</li>
+    </ol>
+
+    <h2>Errores comunes al censurar PDFs</h2>
+
+    <ul>
+        <li><strong>Caja negra en Word antes de exportar a PDF:</strong> la caja es un objeto visual superpuesto al texto. Al exportar, el texto sigue en el PDF debajo de la caja.</li>
+        <li><strong>Resaltar en negro con el marcador de PDF:</strong> el marcado es una anotación, no una eliminación del texto.</li>
+        <li><strong>Imprimir a papel y escanear:</strong> funciona si el escáner no aplica OCR automático, pero genera documentos de mucha peor calidad.</li>
+        <li><strong>Cambiar el color del texto a blanco:</strong> el texto sigue estando en el archivo. Un simple cambio de color vuelve a hacerlo visible.</li>
+    </ul>
+
+    <h2>Ventajas legales de redactar correctamente</h2>
+
+    <p>Cumplir el RGPD no es solo evitar sanciones. Una organización que trata correctamente los datos personales genera confianza en sus clientes, reduce el riesgo de brechas de seguridad, cumple con su deber de diligencia y facilita la auditoría interna y externa de sus procesos.</p>
+
+    <p>La redacción correcta de documentos es una medida técnica de bajo coste y alto impacto en el cumplimiento normativo.</p>
+
+    <h2>Conclusión</h2>
+
+    <p>Proteger datos sensibles en documentos PDF no es opcional bajo el RGPD: es una obligación legal. Y hacerlo correctamente no requiere herramientas costosas ni conocimientos técnicos avanzados.</p>
+
+    <p>La diferencia entre tachar (incorrecto) y redactar (correcto) es fundamental. La primera da una falsa sensación de seguridad; la segunda elimina realmente los datos. PDFRápido te permite hacer esto gratis, sin registro y de forma que cumple con los estándares técnicos que exige la normativa.</p>
+
+    <div class="cta-box">
+        <h3>¿Necesitas redactar datos de un PDF?</h3>
+        <p>Hazlo correctamente y de forma irreversible. Gratis, sin registro, sin límites.</p>
+        <a href="/redactar-pdf/">Ir a Redactar PDF →</a>
+    </div>
+
+    <div class="article-nav">
+        <a href="/blog/extraer-datos-facturas-pdf-ia/">← Anterior: Extraer datos de facturas</a>
+        <a href="/blog/alternativas-gratis-adobe-acrobat-pdf/">Siguiente: Alternativas a Adobe Acrobat →</a>
+    </div>
+</article>
+</main>
+
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a></p></footer>
+<script src="/js/main.js"></script>
+<script src="/js/cookies-banner.js"></script>
+</body>
+</html>

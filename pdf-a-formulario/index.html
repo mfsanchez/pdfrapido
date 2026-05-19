@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-93B5VKXW7W');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convierte cualquier PDF en un formulario rellenable automaticamente. Detecta campos en PDFs digitales y escaneados. Gratis y sin registro | PDFRápido"
+    <meta name="keywords" content="PDF a formulario rellenable, convertir PDF en formulario, campos interactivos PDF, formulario PDF editable, detectar campos PDF">
+    <meta name="author" content="MF Sanchez - PDFRápido">
+    <title>PDF a Formulario Rellenable Online Gratis | PDFRapido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
+    <link rel="canonical" href="https://pdfrapido.eu/pdf-a-formulario/">
+    <style>
+:root{--primary:#E8453C;--primary-dark:#C73830;--primary-light:#FFF0EF;--secondary:#1B2A4A;--tool-color:#4285F4;--tool-light:#EBF2FD;--tool-dark:#2B6BD0;--gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--gray-900:#111827;--radius:12px;--radius-lg:16px;--radius-xl:24px;--shadow-sm:0 1px 2px rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.07),0 2px 4px -2px rgba(0,0,0,0.05);--shadow-lg:0 10px 25px -3px rgba(0,0,0,0.08),0 4px 6px -4px rgba(0,0,0,0.04);--shadow-hover:0 20px 40px -8px rgba(0,0,0,0.12);}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', -apple-system, sans-serif; color: var(--gray-800); background: #fff; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--gray-200); }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--secondary); }
+.logo-icon { width: 36px; height: 36px; background: var(--primary); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.logo-text { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+.logo-text span { color: var(--primary); }
+.nav-back { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--gray-500); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-back:hover { color: var(--primary); }
+main { flex: 1; padding: 80px 24px 60px; max-width: 800px; margin: 0 auto; width: 100%; }
+.tool-header { text-align: center; margin-bottom: 36px; animation: fadeIn 0.5s ease-out; }
+.tool-header .icon-badge { width: 64px; height: 64px; border-radius: 16px; background: var(--tool-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.tool-header h1 { font-size: 32px; font-weight: 700; color: var(--secondary); letter-spacing: -0.8px; margin-bottom: 8px; }
+.tool-header p { font-size: 16px; color: var(--gray-500); line-height: 1.5; }
+.upload-zone { border: 2px dashed var(--gray-300); border-radius: var(--radius-xl); padding: 60px 40px; text-align: center; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; background: var(--gray-50); animation: fadeInUp 0.5s ease-out 0.1s both; }
+.upload-zone::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(66,133,244,0.04), transparent 70%); pointer-events: none; }
+.upload-zone:hover, .upload-zone.dragover { border-color: var(--tool-color); background: rgba(66,133,244,0.03); transform: scale(1.005); }
+.upload-icon { width: 72px; height: 72px; border-radius: 20px; background: var(--tool-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.3s; }
+.upload-zone:hover .upload-icon { transform: translateY(-4px); }
+.upload-zone h3 { font-size: 18px; font-weight: 600; color: var(--secondary); margin-bottom: 8px; }
+.upload-zone h3 span { color: var(--tool-color); text-decoration: underline; text-underline-offset: 3px; }
+.upload-zone p { font-size: 14px; color: var(--gray-400); }
+.upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.process-area { display: none; animation: fadeInUp 0.4s ease-out; }
+.process-area.active { display: block; }
+.file-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 20px 24px; display: flex; align-items: center; gap: 16px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.file-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--primary-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.file-info { flex: 1; min-width: 0; }
+.file-info h4 { font-size: 15px; font-weight: 600; color: var(--gray-800); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-info span { font-size: 13px; color: var(--gray-400); }
+.file-remove { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--gray-200); background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0; }
+.file-remove:hover { background: var(--primary-light); border-color: var(--primary); }
+.action-btn { width: 100%; padding: 16px; border: none; border-radius: var(--radius); background: var(--tool-color); color: #fff; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.25s ease; display: flex; align-items: center; justify-content: center; gap: 10px; letter-spacing: -0.2px; }
+.action-btn:hover { background: var(--tool-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(66,133,244,0.35); }
+.action-btn:active { transform: translateY(0); }
+.action-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+.progress-area { display: none; text-align: center; padding: 40px 0; animation: fadeIn 0.3s ease; }
+.progress-area.active { display: block; }
+.spinner { width: 64px; height: 64px; border: 4px solid var(--gray-200); border-top-color: var(--tool-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.progress-label { font-size: 15px; color: var(--gray-500); font-weight: 500; }
+.result-area { display: none; animation: fadeInUp 0.5s ease-out; }
+.result-area.active { display: block; }
+.result-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); padding: 36px; text-align: center; box-shadow: var(--shadow-lg); position: relative; overflow: hidden; }
+.result-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--tool-color), #7CB3F8); }
+.result-success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--tool-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes scaleIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.result-card h3 { font-size: 22px; font-weight: 700; color: var(--secondary); margin-bottom: 8px; }
+.result-meta { font-size: 14px; color: var(--gray-400); margin-bottom: 24px; }
+.result-fields { background: var(--tool-light); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 28px; text-align: left; }
+.result-fields h4 { font-size: 13px; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+.result-fields ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.result-fields li { background: #fff; border: 1px solid var(--gray-200); border-radius: 100px; padding: 5px 14px; font-size: 13px; color: var(--gray-700); font-weight: 500; }
+.result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-download { padding: 14px 32px; border: none; border-radius: var(--radius); background: var(--tool-color); color: #fff; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; gap: 8px; }
+.btn-download:hover { background: var(--tool-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(66,133,244,0.3); }
+.btn-reset { padding: 14px 24px; border: 1px solid var(--gray-200); border-radius: var(--radius); background: #fff; color: var(--gray-600); font-family: inherit; font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+.btn-reset:hover { background: var(--gray-50); border-color: var(--gray-300); }
+.error-box { display: none; background: var(--primary-light); border: 1px solid #FDC6C3; border-radius: var(--radius-lg); padding: 24px; text-align: center; margin-bottom: 24px; animation: fadeIn 0.3s ease; }
+.error-box.active { display: block; }
+.error-box h4 { color: var(--primary-dark); font-size: 16px; margin-bottom: 8px; }
+.error-box p { color: #B94A44; font-size: 14px; line-height: 1.6; }
+.error-box a { color: var(--primary); font-weight: 600; text-decoration: underline; }
+.seo-content { max-width: 700px; margin: 60px auto 0; padding: 0 4px; }
+.seo-content h2 { font-size: 24px; font-weight: 700; color: var(--secondary); margin-bottom: 16px; letter-spacing: -0.5px; }
+.seo-content h3 { font-size: 18px; font-weight: 600; color: var(--gray-700); margin: 28px 0 10px; }
+.seo-content p { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin-bottom: 12px; }
+.seo-content ul { padding-left: 20px; margin-bottom: 12px; }
+.seo-content li { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin-bottom: 4px; }
+.related-tools { max-width: 700px; margin: 40px auto 0; padding: 28px; background: var(--gray-50); border-radius: var(--radius-lg); border: 1px solid var(--gray-200); }
+.related-tools h3 { font-size: 16px; font-weight: 600; color: var(--secondary); margin-bottom: 16px; }
+.related-tools ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.related-tools ul li a { display: inline-block; padding: 7px 16px; background: #fff; border: 1px solid var(--gray-200); border-radius: 100px; font-size: 14px; font-weight: 500; color: var(--secondary); text-decoration: none; transition: border-color 0.15s, color 0.15s; }
+.related-tools ul li a:hover { border-color: var(--primary); color: var(--primary); }
+footer { background: var(--secondary); color: #fff; padding: 30px 24px; text-align: center; margin-top: auto; }
+footer p { font-size: 13px; color: rgba(255,255,255,0.4); }
+footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 640px) { main { padding: 76px 16px 40px; } .tool-header h1 { font-size: 26px; } .upload-zone { padding: 40px 24px; } .result-card { padding: 28px 20px; } }
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#4285F4;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+            .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
+</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "PDF a Formulario Rellenable Online Gratis",
+          "url": "https://pdfrapido.eu/pdf-a-formulario/",
+          "description": "Convierte cualquier PDF en un formulario rellenable automaticamente. Detecta campos en PDFs digitales y escaneados. Gratis y sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "inLanguage": "es",
+          "publisher": { "@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "PDFRapido", "item": "https://pdfrapido.eu" },
+            { "@type": "ListItem", "position": 2, "name": "PDF a Formulario Rellenable", "item": "https://pdfrapido.eu/pdf-a-formulario/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Detecta campos en PDFs escaneados?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Si. Si el PDF no contiene texto digital, la herramienta convierte automaticamente las paginas a imagen y aplica OCR con Tesseract para detectar etiquetas y crear los campos interactivos en las posiciones correctas." }
+            },
+            {
+              "@type": "Question",
+              "name": "Que tipos de campos detecta?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Detecta campos de texto (Nombre, Apellidos, Fecha, DNI, Email, etc.) y casillas de verificacion. Busca palabras clave, lineas horizontales en blanco y simbolos de casilla como cuadrado vacio." }
+            },
+            {
+              "@type": "Question",
+              "name": "Es seguro subir documentos confidenciales?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Si. Los archivos se procesan en el servidor de forma temporal y se eliminan inmediatamente despues del procesamiento. No guardamos copias ni usamos los documentos para ningun otro fin." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <meta property="og:title" content="PDF a Formulario Rellenable Online Gratis | PDFRapido">
+    <meta property="og:description" content="Convierte cualquier PDF en un formulario rellenable automaticamente. Detecta campos en PDFs digitales y escaneados. Gratis y sin registro.">
+    <meta property="og:url" content="https://pdfrapido.eu/pdf-a-formulario/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRapido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF a Formulario Rellenable Online Gratis | PDFRapido">
+    <meta name="twitter:description" content="Convierte cualquier PDF en un formulario rellenable automaticamente. Gratis y sin registro.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pdfrapido.eu/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu",
+  "logo": "https://pdfrapido.eu/favicon.svg",
+  "sameAs": [
+    "https://github.com/mfsanchez/pdfrapido",
+    "https://twitter.com/pdfrapido"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="logo-text">PDF<span>Rápido</span></div>
+        </a>
+        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <ul class="nav-links">
+            <li><a href="/#herramientas">Herramientas</a></li>
+            <li><a href="/#caracteristicas">Características</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+<div role="navigation" aria-label="breadcrumb" style="max-width:1140px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">PDF a Formulario Rellenable</li>
+    </ol>
+</div>
+
+<div class="tool-header">
+    <div class="icon-badge">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <path d="M9 21V9"/>
+            <line x1="13" y1="13" x2="17" y2="13"/>
+            <line x1="13" y1="17" x2="17" y2="17"/>
+        </svg>
+    </div>
+    <h1>PDF a Formulario Rellenable Online Gratis — PDFRápido</h1>
+    <p>Convierte automaticamente cualquier PDF en un formulario con campos interactivos. Detecta etiquetas, lineas en blanco y casillas.</p>
+</div>
+
+<div class="upload-zone" id="uploadZone">
+    <input type="file" accept=".pdf,application/pdf" id="fileInput">
+    <div class="upload-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+    </div>
+    <h3>Arrastra tu PDF aqui o <span>seleccionalo</span></h3>
+    <p>Tamano maximo: 50 MB - Detecta campos en digitales y escaneados</p>
+</div>
+
+<div class="process-area" id="processArea">
+    <div class="file-card">
+        <div class="file-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+            </svg>
+        </div>
+        <div class="file-info">
+            <h4 id="fileName">documento.pdf</h4>
+            <span id="fileSize">--</span>
+        </div>
+        <button class="file-remove" id="removeFile" title="Eliminar archivo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="error-box" id="errorBox">
+        <h4>No se detectaron campos rellenables</h4>
+        <p>Este PDF no parece contener campos reconocibles automaticamente. Puedes usar nuestra herramienta <a href="/crear-formulario-pdf/">Crear formulario PDF</a> para disenar los campos manualmente.</p>
+    </div>
+
+    <button class="action-btn" id="convertBtn" onclick="convertPDF()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <path d="M9 21V9"/>
+            <line x1="13" y1="13" x2="17" y2="13"/>
+            <line x1="13" y1="17" x2="17" y2="17"/>
+        </svg>
+        Convertir a formulario rellenable
+    </button>
+</div>
+
+<div class="progress-area" id="progressArea">
+    <div class="spinner"></div>
+    <p class="progress-label" id="progressLabel">Analizando el documento y detectando campos...</p>
+</div>
+
+<div class="result-area" id="resultArea">
+    <div class="result-card">
+        <div class="result-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+            </svg>
+        </div>
+        <h3>Formulario rellenable creado</h3>
+        <p class="result-meta" id="resultMeta">--</p>
+        <div class="result-fields">
+            <h4 id="fieldsTitle">Campos detectados</h4>
+            <ul id="fieldsList"></ul>
+        </div>
+        <div class="result-actions">
+            <button class="btn-download" id="downloadBtn" onclick="downloadResult()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Descargar formulario PDF rellenable
+            </button>
+            <button class="btn-reset" onclick="resetTool()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="1 4 1 10 7 10"/>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                </svg>
+                Procesar otro PDF
+            </button>
+        </div>
+    </div>
+</div>
+
+<div style="max-width:800px;margin:40px auto 0;padding:0">
+    <div style="background:var(--gray-50);border:1px dashed var(--gray-300);border-radius:var(--radius);padding:16px;text-align:center;color:var(--gray-400);font-size:13px">
+        Espacio publicitario -- Google AdSense
+    </div>
+</div>
+
+<div class="seo-content">
+    <h2>Convierte tu PDF en un formulario interactivo</h2>
+    <p>Esta herramienta analiza cualquier documento PDF y detecta automaticamente los espacios destinados a ser rellenados. Ya sea un contrato, una solicitud de empleo, un formulario administrativo o una factura, el sistema identifica etiquetas como Nombre, Fecha, DNI o Importe y convierte esas zonas en campos de texto o casillas de verificacion interactivos.</p>
+    <p>El proceso funciona tanto con PDFs digitales (que contienen texto seleccionable) como con documentos escaneados. En el segundo caso, la herramienta aplica reconocimiento optico de caracteres (OCR) para leer el contenido de la imagen y localizar los campos con precision.</p>
+
+    <h3>Tipos de campos que detecta</h3>
+    <ul>
+        <li><strong>Campos de texto:</strong> detectados tras palabras clave como Nombre, Apellidos, Direccion, Email, Telefono, Fecha, DNI, NIF, Importe, Total, Observaciones, etc.</li>
+        <li><strong>Lineas horizontales en blanco:</strong> subrayados o espacios vacios que indican donde se debe escribir.</li>
+        <li><strong>Casillas de verificacion:</strong> simbolos como cuadrado vacio o palabras clave como Acepto, Conforme, Si, No.</li>
+    </ul>
+
+    <h3>Como usar la herramienta</h3>
+    <p>Sube tu PDF, pulsa el boton de conversion y espera unos segundos. La herramienta te mostrara un resumen con los campos encontrados y te permitira descargar el PDF con campos AcroForm interactivos, compatibles con Adobe Reader, navegadores y cualquier visor de PDF estandar.</p>
+</div>
+
+<div class="related-tools">
+    <h3>Herramientas relacionadas</h3>
+    <ul>
+        <li><a href="/crear-formulario-pdf/">Crear formulario PDF</a></li>
+        <li><a href="/editor-pdf/">Editor PDF Visual</a></li>
+        <li><a href="/firmar-pdf/">Firmar PDF</a></li>
+        <li><a href="/rellenar-formulario/">Rellenar Formulario</a></li>
+        <li><a href="/extraer-datos/">Extraer datos</a></li>
+        <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+    </ul>
+</div>
+
+<section class="content-seo" aria-label="Guia y preguntas frecuentes">
+  <h2>Como funciona PDF a Formulario Rellenable?</h2>
+  <p>La herramienta analiza el contenido visual y textual de cada pagina del PDF para identificar zonas que probablemente sean campos de formulario. Utiliza dos estrategias complementarias segun el tipo de documento.</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Sube tu PDF</h3>
+          <p>Arrastra el archivo o haz clic para seleccionarlo. Acepta PDFs digitales y documentos escaneados de hasta 50 MB.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Deteccion automatica de campos</h3>
+          <p>El sistema analiza el texto, las lineas horizontales y los simbolos de casilla para ubicar cada campo en su coordenada exacta.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga el formulario interactivo</h3>
+          <p>Recibes un PDF estandar con campos AcroForm que puedes rellenar desde el navegador, el movil o cualquier lector de PDF.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre PDF a Formulario Rellenable</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>Detecta campos en PDFs escaneados?</h3>
+        <p>Si. Si el PDF no contiene texto digital, la herramienta convierte automaticamente las paginas a imagen y aplica OCR con Tesseract para detectar etiquetas y crear los campos interactivos en las posiciones correctas. El proceso puede tardar un poco mas en documentos de muchas paginas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Que tipos de campos detecta?</h3>
+        <p>Detecta campos de texto (Nombre, Apellidos, Fecha, DNI, Email, etc.) y casillas de verificacion. Busca palabras clave, lineas horizontales en blanco y simbolos de casilla como cuadrado vacio. Si el documento no tiene etiquetas claras, la deteccion puede ser limitada.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Es seguro subir documentos confidenciales?</h3>
+        <p>Si. Los archivos se procesan en el servidor de forma temporal y se eliminan inmediatamente despues del procesamiento. No guardamos copias ni usamos los documentos para ningun otro fin. Ademas, la conexion esta protegida con HTTPS.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 PDFRapido -- dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> -- <a href="/privacidad/">Privacidad</a> -- <a href="/cookies/">Cookies</a> -- <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p>
+</footer>
+
+<script>
+let originalFile = null;
+let resultPdfB64 = null;
+let resultFilename = 'formulario.pdf';
+
+const uploadZone  = document.getElementById('uploadZone');
+const fileInput   = document.getElementById('fileInput');
+const processArea = document.getElementById('processArea');
+const progressArea = document.getElementById('progressArea');
+const resultArea  = document.getElementById('resultArea');
+const errorBox    = document.getElementById('errorBox');
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault(); uploadZone.classList.remove('dragover');
+    const f = e.dataTransfer.files[0];
+    if (f && f.type === 'application/pdf') handleFile(f);
+    else showError('Por favor, selecciona un archivo PDF valido.');
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+document.getElementById('removeFile').addEventListener('click', resetTool);
+
+function handleFile(file) {
+    if (file.size > 50 * 1024 * 1024) { showError('El archivo supera el limite de 50 MB.'); return; }
+    originalFile = file;
+    document.getElementById('fileName').textContent = file.name;
+    document.getElementById('fileSize').textContent = formatSize(file.size);
+    uploadZone.style.display = 'none';
+    processArea.classList.add('active');
+    progressArea.classList.remove('active');
+    resultArea.classList.remove('active');
+    errorBox.classList.remove('active');
+}
+
+async function convertPDF() {
+    if (!originalFile) return;
+    const btn = document.getElementById('convertBtn');
+    btn.disabled = true;
+    processArea.classList.remove('active');
+    progressArea.classList.add('active');
+    resultArea.classList.remove('active');
+    errorBox.classList.remove('active');
+
+    try {
+        const formData = new FormData();
+        formData.append('file', originalFile);
+
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 60000);
+
+        const resp = await fetch('/api/pdf-a-formulario', {
+            method: 'POST',
+            body: formData,
+            signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        if (!resp.ok) {
+            const data = await resp.json().catch(() => ({}));
+            if (resp.status === 422) {
+                progressArea.classList.remove('active');
+                processArea.classList.add('active');
+                errorBox.classList.add('active');
+                btn.disabled = false;
+                return;
+            }
+            throw new Error(data.detail || 'Error del servidor');
+        }
+
+        const data = await resp.json();
+        if (!data.ok) throw new Error(data.detail || 'Error al procesar');
+
+        resultPdfB64 = data.pdf_b64;
+        resultFilename = data.nombre_archivo;
+
+        progressArea.classList.remove('active');
+        resultArea.classList.add('active');
+
+        document.getElementById('resultMeta').textContent =
+            'Se han detectado ' + data.campos_detectados + ' campo' + (data.campos_detectados !== 1 ? 's' : '') + ' rellenable' + (data.campos_detectados !== 1 ? 's' : '');
+        document.getElementById('fieldsTitle').textContent =
+            'Campos detectados (' + data.nombres_campos.length + ')';
+        const list = document.getElementById('fieldsList');
+        list.innerHTML = '';
+        data.nombres_campos.forEach(name => {
+            const li = document.createElement('li');
+            li.textContent = name;
+            list.appendChild(li);
+        });
+
+    } catch (err) {
+        console.error(err);
+        progressArea.classList.remove('active');
+        processArea.classList.add('active');
+        if (err.name === 'AbortError') {
+            showError('El proceso ha tardado demasiado. Intenta con un PDF mas pequeno.');
+        } else {
+            showError('Error al procesar el PDF: ' + (err.message || 'el archivo podria estar protegido o danado.'));
+        }
+    } finally {
+        btn.disabled = false;
+    }
+}
+
+function downloadResult() {
+    if (!resultPdfB64) return;
+    const blob = b64toBlob(resultPdfB64, 'application/pdf');
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = resultFilename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function b64toBlob(b64Data, contentType, sliceSize) {
+    contentType = contentType || '';
+    sliceSize = sliceSize || 512;
+    const byteCharacters = atob(b64Data);
+    const byteArrays = [];
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+        const slice = byteCharacters.slice(offset, offset + sliceSize);
+        const byteNumbers = new Array(slice.length);
+        for (let i = 0; i < slice.length; i++) byteNumbers[i] = slice.charCodeAt(i);
+        byteArrays.push(new Uint8Array(byteNumbers));
+    }
+    return new Blob(byteArrays, {type: contentType});
+}
+
+function resetTool() {
+    originalFile = null; resultPdfB64 = null;
+    fileInput.value = '';
+    uploadZone.style.display = '';
+    processArea.classList.remove('active');
+    progressArea.classList.remove('active');
+    resultArea.classList.remove('active');
+    errorBox.classList.remove('active');
+    document.getElementById('convertBtn').disabled = false;
+}
+
+function showError(msg) { alert(msg); }
+function formatSize(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+    return (bytes / 1048576).toFixed(1) + ' MB';
+}
+</script>
+
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
+</body>
+</html>

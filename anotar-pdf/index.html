@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotar PDF Gratis — Subrayar y Comentar | PDFRápido</title>
+    <meta name="description" content="Anota PDFs online gratis: subraya texto, añade comentarios, flechas, rectángulos y dibujos directamente en el navegador. Sin registro, sin instalación | PDFRápido"
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pdfrapido.eu/anotar-pdf/">
+    <meta property="og:title" content="Anotar PDF Online Gratis | PDFRápido">
+    <meta property="og:description" content="Añade anotaciones a tus PDFs: subraya, comenta, dibuja y marca documentos directamente en el navegador. Gratis y sin registro.">
+    <meta property="og:url" content="https://pdfrapido.eu/anotar-pdf/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-93B5VKXW7W');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
+    <script src="/js/pdf-lib.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Anotar PDF Online",
+          "url": "https://pdfrapido.eu/anotar-pdf/",
+          "description": "Herramienta online gratuita para anotar PDFs: subrayar, comentar, añadir flechas, rectángulos y dibujos directamente en el navegador.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"PDFRápido","item":"https://pdfrapido.eu/"},
+            {"@type":"ListItem","position":2,"name":"Anotar PDF","item":"https://pdfrapido.eu/anotar-pdf/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Puedo anotar un PDF sin instalar nada?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. La herramienta funciona completamente en el navegador: no requiere instalar software, registrarse ni enviar el archivo a ningún servidor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Las anotaciones se guardan en el PDF definitivamente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Al pulsar «Guardar PDF anotado» se descarga un nuevo PDF con las anotaciones incrustadas como imágenes, listas para compartir o imprimir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué tipos de anotaciones puedo añadir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puedes subrayar texto, añadir notas adhesivas, escribir texto libre, dibujar a mano alzada, insertar flechas, rectángulos y elipses, y borrar cualquier anotación."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.logo-text{font-size:20px;font-weight:700;letter-spacing:-.5px}.logo-text span{color:var(--primary)}.nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--gray-500);font-size:14px;font-weight:500;transition:color .2s}.nav-back:hover{color:var(--primary)}
+        .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
+        :root {
+            --accent: #0891B2;
+            --accent-dark: #0e7490;
+            --accent-light: #e0f2fe;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --radius: 10px;
+            --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+
+        /* ── Upload zone ── */
+        .upload-section { max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
+        .upload-zone {
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: var(--surface);
+            cursor: pointer;
+            transition: border-color .2s, background .2s;
+        }
+        .upload-zone:hover, .upload-zone.drag-over { border-color: var(--accent); background: var(--accent-light); }
+        .upload-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .upload-zone h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: .5rem; }
+        .upload-zone p { color: var(--text-muted); font-size: .9rem; margin-bottom: 1.25rem; }
+        .btn-upload {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: var(--accent); color: #fff; border: none;
+            padding: .7rem 1.5rem; border-radius: 8px; font-size: .95rem;
+            font-weight: 600; cursor: pointer; transition: background .2s;
+        }
+        .btn-upload:hover { background: var(--accent-dark); }
+        #file-input { display: none; }
+
+        /* ── Editor app ── */
+        #editor-app { display: none; flex-direction: column; height: calc(100vh - 64px); }
+
+        /* Topbar */
+        .topbar {
+            display: flex; align-items: center; gap: .5rem;
+            padding: .5rem 1rem; background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0; flex-wrap: wrap;
+        }
+        .topbar-left { display: flex; align-items: center; gap: .5rem; flex: 1; min-width: 0; }
+        .topbar-right { display: flex; align-items: center; gap: .5rem; }
+        .file-name {
+            font-size: .85rem; color: var(--text-muted);
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;
+        }
+        .btn-new {
+            display: inline-flex; align-items: center; gap: .4rem;
+            background: none; border: 1px solid var(--border);
+            color: var(--text-muted); padding: .4rem .8rem; border-radius: 6px;
+            font-size: .82rem; cursor: pointer; transition: all .15s;
+        }
+        .btn-new:hover { border-color: var(--accent); color: var(--accent); }
+        .page-nav { display: flex; align-items: center; gap: .4rem; }
+        .page-nav button {
+            background: none; border: 1px solid var(--border); border-radius: 6px;
+            width: 30px; height: 30px; cursor: pointer; font-size: 1rem; display: flex;
+            align-items: center; justify-content: center; transition: all .15s;
+        }
+        .page-nav button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+        .page-nav button:disabled { opacity: .4; cursor: default; }
+        #page-input {
+            width: 42px; text-align: center; border: 1px solid var(--border);
+            border-radius: 6px; padding: .25rem; font-size: .85rem;
+        }
+        #page-total { font-size: .85rem; color: var(--text-muted); }
+        #zoom-select {
+            border: 1px solid var(--border); border-radius: 6px; padding: .3rem .5rem;
+            font-size: .82rem; background: var(--surface); cursor: pointer;
+        }
+        .btn-undo, .btn-redo {
+            background: none; border: 1px solid var(--border); border-radius: 6px;
+            width: 32px; height: 32px; cursor: pointer; font-size: .95rem;
+            display: flex; align-items: center; justify-content: center; transition: all .15s;
+        }
+        .btn-undo:hover, .btn-redo:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-undo:disabled, .btn-redo:disabled { opacity: .35; cursor: default; }
+        .btn-save {
+            display: inline-flex; align-items: center; gap: .4rem;
+            background: var(--accent); color: #fff; border: none;
+            padding: .45rem 1rem; border-radius: 7px; font-size: .88rem;
+            font-weight: 600; cursor: pointer; transition: background .2s; white-space: nowrap;
+        }
+        .btn-save:hover { background: var(--accent-dark); }
+        .btn-save:disabled { opacity: .5; cursor: default; }
+
+        /* Workspace */
+        .workspace {
+            display: flex; flex: 1; overflow: hidden;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            width: 52px; background: var(--surface); border-right: 1px solid var(--border);
+            display: flex; flex-direction: column; align-items: center;
+            padding: .5rem 0; gap: .15rem; flex-shrink: 0; overflow-y: auto;
+        }
+        .tool-btn {
+            width: 38px; height: 38px; border: none; border-radius: 8px;
+            background: none; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; font-size: 1.1rem; transition: all .15s;
+            color: var(--text-muted); position: relative;
+        }
+        .tool-btn:hover { background: var(--accent-light); color: var(--accent); }
+        .tool-btn.active { background: var(--accent); color: #fff; }
+        .tool-sep { width: 28px; height: 1px; background: var(--border); margin: .25rem 0; }
+        .tool-tip {
+            position: absolute; left: 46px; top: 50%; transform: translateY(-50%);
+            background: #1e293b; color: #fff; font-size: .75rem; padding: .25rem .6rem;
+            border-radius: 5px; white-space: nowrap; pointer-events: none;
+            opacity: 0; transition: opacity .15s; z-index: 100;
+        }
+        .tool-btn:hover .tool-tip { opacity: 1; }
+
+        /* Canvas area */
+        .canvas-area {
+            flex: 1; overflow: auto; background: #94a3b8;
+            display: flex; flex-direction: column; align-items: center;
+            padding: 1rem;
+        }
+        .canvas-wrap {
+            position: relative; display: inline-block;
+            box-shadow: 0 4px 20px rgba(0,0,0,.3);
+        }
+        #pdf-layer, #ann-layer {
+            position: absolute; top: 0; left: 0; display: block;
+        }
+        #pdf-layer { z-index: 1; }
+        #ann-layer { z-index: 2; }
+        #hit-layer {
+            position: absolute; top: 0; left: 0; z-index: 3;
+            width: 100%; height: 100%;
+        }
+
+        /* Props panel */
+        .props-panel {
+            width: 200px; background: var(--surface);
+            border-left: 1px solid var(--border);
+            padding: .75rem; flex-shrink: 0; overflow-y: auto;
+            display: flex; flex-direction: column; gap: 1rem;
+        }
+        .props-title { font-size: .78rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: .05em; color: var(--text-muted); }
+        .color-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 5px; }
+        .color-swatch {
+            width: 100%; aspect-ratio: 1; border-radius: 6px; border: 2px solid transparent;
+            cursor: pointer; transition: transform .1s;
+        }
+        .color-swatch:hover { transform: scale(1.12); }
+        .color-swatch.active { border-color: var(--text); box-shadow: 0 0 0 2px #fff inset; }
+        .lw-group { display: flex; gap: 4px; }
+        .lw-btn {
+            flex: 1; border: 1px solid var(--border); border-radius: 6px; padding: .35rem .2rem;
+            background: none; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; font-size: .78rem; transition: all .15s; color: var(--text-muted);
+        }
+        .lw-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .lw-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .opacity-wrap { display: flex; flex-direction: column; gap: .35rem; }
+        .opacity-row { display: flex; justify-content: space-between; align-items: center; }
+        .opacity-label { font-size: .8rem; color: var(--text-muted); }
+        #opacity-val { font-size: .8rem; font-weight: 600; }
+        #opacity-range { width: 100%; accent-color: var(--accent); }
+        .del-btn {
+            width: 100%; padding: .45rem; border: 1px solid #fca5a5; border-radius: 7px;
+            background: #fff1f2; color: #dc2626; font-size: .83rem; font-weight: 600;
+            cursor: pointer; transition: all .15s;
+        }
+        .del-btn:hover { background: #dc2626; color: #fff; border-color: #dc2626; }
+
+        /* Floating textarea */
+        #float-input {
+            position: absolute; z-index: 20; display: none;
+            border: 2px solid var(--accent); border-radius: 6px;
+            padding: .35rem .5rem; font-family: 'DM Sans', sans-serif;
+            font-size: 14px; resize: none; min-width: 160px; min-height: 60px;
+            background: rgba(255,255,255,.95); outline: none;
+            box-shadow: 0 2px 12px rgba(8,145,178,.25);
+        }
+
+        /* Toast */
+        #toast {
+            position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(80px);
+            background: #1e293b; color: #fff; padding: .6rem 1.3rem; border-radius: 8px;
+            font-size: .88rem; font-weight: 500; z-index: 9999;
+            transition: transform .3s ease; pointer-events: none;
+        }
+        #toast.show { transform: translateX(-50%) translateY(0); }
+
+        /* Saving overlay */
+        #save-overlay {
+            display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55);
+            z-index: 9998; flex-direction: column; align-items: center; justify-content: center;
+            gap: 1rem; color: #fff; font-size: 1rem; font-weight: 600;
+        }
+        #save-overlay.show { display: flex; }
+        .spinner {
+            width: 40px; height: 40px; border: 4px solid rgba(255,255,255,.3);
+            border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* SEO content */
+        .seo-content {
+            max-width: 760px; margin: 2.5rem auto; padding: 0 1.5rem 2.5rem;
+        }
+        .seo-content h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem; }
+        .seo-content h3 { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 .5rem; color: var(--accent-dark); }
+        .seo-content p { line-height: 1.7; color: var(--text-muted); margin-bottom: .75rem; }
+        .steps-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 1rem; margin: 1.25rem 0;
+        }
+        .step-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.1rem;
+        }
+        .step-num {
+            width: 32px; height: 32px; border-radius: 50%;
+            background: var(--accent); color: #fff; font-weight: 700; font-size: .9rem;
+            display: flex; align-items: center; justify-content: center; margin-bottom: .75rem;
+        }
+        .step-card h4 { font-size: .95rem; font-weight: 600; margin-bottom: .35rem; }
+        .step-card p { font-size: .85rem; color: var(--text-muted); margin: 0; }
+        .faq-list { margin-top: 1rem; }
+        .faq-item { border-top: 1px solid var(--border); padding: 1rem 0; }
+        .faq-item:last-child { border-bottom: 1px solid var(--border); }
+        .faq-q { font-weight: 600; font-size: .95rem; margin-bottom: .4rem; }
+        .faq-a { color: var(--text-muted); font-size: .9rem; line-height: 1.6; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .props-panel { display: none; }
+            .toolbar { width: 44px; }
+            .tool-btn { width: 34px; height: 34px; font-size: 1rem; }
+        }
+        @media (max-width: 480px) {
+            .topbar { padding: .4rem .6rem; }
+            .file-name { max-width: 100px; }
+            .btn-save span { display: none; }
+        }
+    </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pdfrapido.eu/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu",
+  "logo": "https://pdfrapido.eu/favicon.svg",
+  "sameAs": [
+    "https://github.com/mfsanchez/pdfrapido",
+    "https://twitter.com/pdfrapido"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="logo-text">PDF<span>Rápido</span></div>
+        </a>
+        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <ul class="nav-links">
+            <li><a href="/#herramientas">Herramientas</a></li>
+            <li><a href="/#caracteristicas">Características</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div role="navigation" aria-label="breadcrumb" style="max-width:1140px;margin:0 auto;padding:80px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Anotar PDF</li>
+    </ol>
+</div>
+
+<!-- UPLOAD SECTION -->
+<div class="upload-section" id="upload-section">
+    <div style="text-align:center;margin-bottom:1.5rem;">
+        <h1 style="font-size:1.7rem;font-weight:700;margin-bottom:.5rem;">Anotar PDF Online Gratis — PDFRápido</h1>
+        <p style="color:var(--text-muted,#64748b);max-width:520px;margin:0 auto;">
+            Subraya texto, añade comentarios, flechas y formas sobre cualquier PDF. Todo en el navegador, sin subir archivos a ningún servidor.
+        </p>
+    </div>
+    <div class="upload-zone" id="drop-zone">
+        <div class="upload-icon">📄</div>
+        <h2>Arrastra tu PDF aquí</h2>
+        <p>o haz clic para seleccionar un archivo</p>
+        <button class="btn-upload" onclick="document.getElementById('file-input').click()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Seleccionar PDF
+        </button>
+        <input type="file" id="file-input" accept="application/pdf">
+    </div>
+</div>
+
+<!-- EDITOR APP -->
+<div id="editor-app">
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <button class="btn-new" id="btn-new" title="Abrir otro PDF">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Nuevo
+            </button>
+            <span class="file-name" id="file-name"></span>
+        </div>
+        <div class="page-nav">
+            <button id="btn-prev" title="Página anterior">‹</button>
+            <input id="page-input" type="number" min="1" value="1">
+            <span id="page-total">/ 1</span>
+            <button id="btn-next" title="Página siguiente">›</button>
+        </div>
+        <select id="zoom-select" title="Zoom">
+            <option value="0.5">50%</option>
+            <option value="0.75">75%</option>
+            <option value="1" selected>100%</option>
+            <option value="1.25">125%</option>
+            <option value="1.5">150%</option>
+        </select>
+        <div class="topbar-right">
+            <button class="btn-undo" id="btn-undo" title="Deshacer (Ctrl+Z)" disabled>↩</button>
+            <button class="btn-redo" id="btn-redo" title="Rehacer (Ctrl+Y)" disabled>↪</button>
+            <button class="btn-save" id="btn-save">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Guardar PDF anotado</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Workspace -->
+    <div class="workspace">
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button class="tool-btn active" data-tool="select" title="Seleccionar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-7 1-4 7z"/></svg>
+                <span class="tool-tip">Seleccionar (V)</span>
+            </button>
+            <div class="tool-sep"></div>
+            <button class="tool-btn" data-tool="highlight" title="Resaltado">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="13" width="18" height="4" rx="1"/><path d="M7 13V8h10v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span class="tool-tip">Resaltado (H)</span>
+            </button>
+            <button class="tool-btn" data-tool="underline" title="Subrayado">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v7a6 6 0 0 0 12 0V3"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
+                <span class="tool-tip">Subrayado (U)</span>
+            </button>
+            <div class="tool-sep"></div>
+            <button class="tool-btn" data-tool="comment" title="Comentario">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span class="tool-tip">Comentario (C)</span>
+            </button>
+            <button class="tool-btn" data-tool="text" title="Texto">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                <span class="tool-tip">Texto (T)</span>
+            </button>
+            <div class="tool-sep"></div>
+            <button class="tool-btn" data-tool="draw" title="Dibujo libre">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                <span class="tool-tip">Dibujo libre (D)</span>
+            </button>
+            <div class="tool-sep"></div>
+            <button class="tool-btn" data-tool="arrow" title="Flecha">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="12 5 19 5 19 12"/></svg>
+                <span class="tool-tip">Flecha (A)</span>
+            </button>
+            <button class="tool-btn" data-tool="rect" title="Rectángulo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                <span class="tool-tip">Rectángulo (R)</span>
+            </button>
+            <button class="tool-btn" data-tool="ellipse" title="Elipse">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="7"/></svg>
+                <span class="tool-tip">Elipse (E)</span>
+            </button>
+            <div class="tool-sep"></div>
+            <button class="tool-btn" data-tool="eraser" title="Borrar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 20H7L3 16l11-11 6 6-4 4"/><line x1="6" y1="20" x2="20" y2="20"/></svg>
+                <span class="tool-tip">Borrar (X)</span>
+            </button>
+        </div>
+
+        <!-- Canvas area -->
+        <div class="canvas-area" id="canvas-area">
+            <div class="canvas-wrap" id="canvas-wrap">
+                <canvas id="pdf-layer"></canvas>
+                <canvas id="ann-layer"></canvas>
+                <div id="hit-layer"></div>
+                <textarea id="float-input" rows="3" placeholder="Escribe aquí..."></textarea>
+            </div>
+        </div>
+
+        <!-- Props panel -->
+        <div class="props-panel">
+            <div>
+                <div class="props-title" style="margin-bottom:.6rem;">Color</div>
+                <div class="color-grid" id="color-grid">
+                    <div class="color-swatch active" data-color="#FACC15" style="background:#FACC15;" title="Amarillo"></div>
+                    <div class="color-swatch" data-color="#EF4444" style="background:#EF4444;" title="Rojo"></div>
+                    <div class="color-swatch" data-color="#3B82F6" style="background:#3B82F6;" title="Azul"></div>
+                    <div class="color-swatch" data-color="#22C55E" style="background:#22C55E;" title="Verde"></div>
+                    <div class="color-swatch" data-color="#F97316" style="background:#F97316;" title="Naranja"></div>
+                    <div class="color-swatch" data-color="#EC4899" style="background:#EC4899;" title="Rosa"></div>
+                    <div class="color-swatch" data-color="#A855F7" style="background:#A855F7;" title="Morado"></div>
+                    <div class="color-swatch" data-color="#1e293b" style="background:#1e293b;" title="Negro"></div>
+                </div>
+            </div>
+            <div>
+                <div class="props-title" style="margin-bottom:.6rem;">Grosor</div>
+                <div class="lw-group">
+                    <button class="lw-btn" data-lw="1">Fino</button>
+                    <button class="lw-btn active" data-lw="2">Normal</button>
+                    <button class="lw-btn" data-lw="4">Grueso</button>
+                </div>
+            </div>
+            <div>
+                <div class="props-title">Opacidad</div>
+                <div class="opacity-wrap">
+                    <div class="opacity-row">
+                        <span class="opacity-label">Transparencia</span>
+                        <span id="opacity-val">80%</span>
+                    </div>
+                    <input type="range" id="opacity-range" min="20" max="100" value="80">
+                </div>
+            </div>
+            <div id="sel-actions" style="display:none;">
+                <div class="props-title" style="margin-bottom:.6rem;">Selección</div>
+                <button class="del-btn" id="btn-del">🗑 Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Save overlay -->
+<div id="save-overlay">
+    <div class="spinner"></div>
+    <span>Generando PDF anotado…</span>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- SEO content block -->
+<div class="seo-content" id="seo-block">
+    <h2>Cómo anotar un PDF online</h2>
+    <p>Anotar documentos PDF es una tarea habitual al revisar contratos, corregir trabajos, tomar apuntes de estudio o marcar planos de diseño. Con esta herramienta puedes hacerlo directamente en el navegador, sin instalar ningún software.</p>
+
+    <div class="steps-grid">
+        <div class="step-card">
+            <div class="step-num">1</div>
+            <h4>Sube tu PDF</h4>
+            <p>Arrastra el archivo o haz clic para seleccionarlo desde tu dispositivo.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-num">2</div>
+            <h4>Añade anotaciones</h4>
+            <p>Elige una herramienta, selecciona color y grosor, y marca el documento.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-num">3</div>
+            <h4>Descarga el resultado</h4>
+            <p>Pulsa «Guardar PDF anotado» para descargar el PDF con todas tus marcas.</p>
+        </div>
+    </div>
+
+    <h3>Herramientas de anotación disponibles</h3>
+    <p>La barra lateral incluye diez herramientas para cubrir cualquier necesidad de marcado: <strong>resaltado</strong> para colorear fragmentos de texto, <strong>subrayado</strong> para enfatizar líneas, <strong>comentarios</strong> en forma de nota adhesiva, <strong>texto libre</strong>, <strong>dibujo a mano alzada</strong>, <strong>flechas</strong> para señalar elementos, <strong>rectángulos</strong> y <strong>elipses</strong> para enmarcar zonas, y la herramienta <strong>borrar</strong> para eliminar cualquier anotación.</p>
+
+    <h3>Privacidad total: tu PDF no sale del navegador</h3>
+    <p>A diferencia de otros servicios online, esta herramienta procesa el PDF íntegramente en tu dispositivo. El archivo nunca se sube a ningún servidor, lo que garantiza la confidencialidad de contratos, facturas, datos personales o cualquier otro documento sensible.</p>
+
+    <h3>Preguntas frecuentes</h3>
+    <div class="faq-list">
+        <div class="faq-item">
+            <div class="faq-q">¿Puedo anotar un PDF sin instalar nada?</div>
+            <div class="faq-a">Sí. La herramienta funciona completamente en el navegador: no requiere instalar software, registrarse ni enviar el archivo a ningún servidor.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">¿Las anotaciones se guardan en el PDF definitivamente?</div>
+            <div class="faq-a">Al pulsar «Guardar PDF anotado» se descarga un nuevo PDF con las anotaciones incrustadas como imágenes, listas para compartir o imprimir.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">¿Qué tipos de anotaciones puedo añadir?</div>
+            <div class="faq-a">Puedes subrayar texto, añadir notas adhesivas, escribir texto libre, dibujar a mano alzada, insertar flechas, rectángulos y elipses, y borrar cualquier anotación con un solo clic.</div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#0891B2"/><path d="M8 10h10M8 14h10M8 18h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            PDFRápido
+        </div>
+        <div class="footer-links">
+            <a href="/privacidad/">Privacidad</a>
+            <a href="/terminos/">Términos</a>
+            <a href="/blog/">Blog</a>
+        </div>
+        <p class="footer-copy">© 2024 PDFRápido · Herramientas PDF online gratuitas</p>
+    </div>
+</footer>
+
+<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
+
+<script type="module">
+import * as pdfjsLib from '/js/pdf-4.0.min.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdf-4.0.worker.min.mjs';
+
+// ── State ──
+let pdfDoc = null, totalPages = 0, curPage = 1;
+let ZOOM = 1.0, SCALE = 1.5; // SCALE = base render scale, ZOOM applied on top
+let anns = [];        // all annotations across all pages
+let undoStack = [];   // snapshots of anns array
+let redoStack = [];
+let curTool = 'select';
+let curColor = '#FACC15', curLW = 2, curOpacity = 0.8;
+let selAnn = null;
+let drawing = false, drawStart = null, drawPts = [];
+let dragAnn = null, dragOX = 0, dragOY = 0;
+let fileName = '';
+
+// ── DOM refs ──
+const uploadSection = document.getElementById('upload-section');
+const editorApp     = document.getElementById('editor-app');
+const seoBlock      = document.getElementById('seo-block');
+const fileInput     = document.getElementById('file-input');
+const dropZone      = document.getElementById('drop-zone');
+const fileNameEl    = document.getElementById('file-name');
+const pdfCanvas     = document.getElementById('pdf-layer');
+const annCanvas     = document.getElementById('ann-layer');
+const hitLayer      = document.getElementById('hit-layer');
+const canvasWrap    = document.getElementById('canvas-wrap');
+const floatInput    = document.getElementById('float-input');
+const toastEl       = document.getElementById('toast');
+const saveOverlay   = document.getElementById('save-overlay');
+const pageInput     = document.getElementById('page-input');
+const pageTotalEl   = document.getElementById('page-total');
+const btnPrev       = document.getElementById('btn-prev');
+const btnNext       = document.getElementById('btn-next');
+const zoomSelect    = document.getElementById('zoom-select');
+const btnUndo       = document.getElementById('btn-undo');
+const btnRedo       = document.getElementById('btn-redo');
+const btnSave       = document.getElementById('btn-save');
+const btnDel        = document.getElementById('btn-del');
+const selActions    = document.getElementById('sel-actions');
+const opacityRange  = document.getElementById('opacity-range');
+const opacityVal    = document.getElementById('opacity-val');
+
+// ── Toast ──
+let toastTimer = null;
+function toast(msg, dur = 2500) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), dur);
+}
+
+// ── Undo/Redo ──
+function su() { // save undo snapshot
+    undoStack.push(JSON.stringify(anns));
+    if (undoStack.length > 50) undoStack.shift();
+    redoStack = [];
+    btnUndo.disabled = false;
+    btnRedo.disabled = true;
+}
+function undo() {
+    if (!undoStack.length) return;
+    redoStack.push(JSON.stringify(anns));
+    anns = JSON.parse(undoStack.pop());
+    btnUndo.disabled = !undoStack.length;
+    btnRedo.disabled = false;
+    if (selAnn) { selAnn = anns.find(a => a.id === selAnn.id) || null; }
+    updateSelUI();
+    rd();
+}
+function redo() {
+    if (!redoStack.length) return;
+    undoStack.push(JSON.stringify(anns));
+    anns = JSON.parse(redoStack.pop());
+    btnRedo.disabled = !redoStack.length;
+    btnUndo.disabled = false;
+    if (selAnn) { selAnn = anns.find(a => a.id === selAnn.id) || null; }
+    updateSelUI();
+    rd();
+}
+
+// ── Add annotation ──
+let aidSeq = 0;
+function aa(ann) {
+    su();
+    ann.id = ++aidSeq;
+    anns.push(ann);
+    rd();
+}
+
+// ── Bounding box (in PDF units) ──
+function bb(ann) {
+    if (ann.type === 'draw') {
+        const xs = ann.pts.map(p => p.x), ys = ann.pts.map(p => p.y);
+        const pad = (ann.lw || 2) / 2 + 2;
+        return { x: Math.min(...xs)-pad, y: Math.min(...ys)-pad,
+                 w: Math.max(...xs)-Math.min(...xs)+pad*2,
+                 h: Math.max(...ys)-Math.min(...ys)+pad*2 };
+    }
+    if (ann.type === 'arrow') {
+        const x = Math.min(ann.x1,ann.x2)-8, y = Math.min(ann.y1,ann.y2)-8;
+        return { x, y, w: Math.abs(ann.x2-ann.x1)+16, h: Math.abs(ann.y2-ann.y1)+16 };
+    }
+    if (ann.type === 'comment') {
+        return { x: ann.x, y: ann.y, w: 28, h: 28 };
+    }
+    return { x: ann.x, y: ann.y, w: ann.w || 10, h: ann.h || 10 };
+}
+
+// ── Hit test (PDF coords) ──
+function ht(px, py) {
+    const page_anns = anns.filter(a => a.page === curPage);
+    for (let i = page_anns.length - 1; i >= 0; i--) {
+        const a = page_anns[i];
+        const b = bb(a);
+        if (px >= b.x && px <= b.x+b.w && py >= b.y && py <= b.y+b.h) return a;
+    }
+    return null;
+}
+
+// ── Draw annotation on ctx at scale S ──
+function da(ctx, ann, S) {
+    ctx.save();
+    ctx.globalAlpha = ann.opacity || 0.8;
+    const col = ann.color || '#FACC15';
+    const lw  = (ann.lw || 2) * S;
+
+    if (ann.type === 'highlight') {
+        ctx.fillStyle = col;
+        ctx.fillRect(ann.x*S, ann.y*S, ann.w*S, ann.h*S);
+
+    } else if (ann.type === 'underline') {
+        ctx.strokeStyle = col;
+        ctx.lineWidth = lw;
+        ctx.beginPath();
+        ctx.moveTo(ann.x*S, (ann.y+ann.h)*S);
+        ctx.lineTo((ann.x+ann.w)*S, (ann.y+ann.h)*S);
+        ctx.stroke();
+
+    } else if (ann.type === 'comment') {
+        // Pin icon
+        ctx.fillStyle = col;
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(ann.x*S, ann.y*S, 26, 26, 5);
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = '#fff';
+        ctx.font = '14px sans-serif';
+        ctx.fillText('💬', ann.x*S+4, ann.y*S+18);
+        // Tooltip on hover is shown via title attr — just draw icon
+        if (ann.text) {
+            // Draw small dot indicator
+            ctx.fillStyle = '#ef4444';
+            ctx.beginPath();
+            ctx.arc(ann.x*S+22, ann.y*S+4, 4, 0, Math.PI*2);
+            ctx.fill();
+        }
+
+    } else if (ann.type === 'text') {
+        ctx.fillStyle = col;
+        ctx.font = `${(ann.fs||14)*S}px 'DM Sans', sans-serif`;
+        ctx.globalAlpha = 1;
+        wt(ctx, ann.text || '', ann.x*S, ann.y*S, (ann.w||200)*S, (ann.fs||14)*S*1.4);
+
+    } else if (ann.type === 'draw') {
+        if (!ann.pts || ann.pts.length < 2) {
+            ctx.restore(); return;
+        }
+        ctx.strokeStyle = col;
+        ctx.lineWidth = lw;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.beginPath();
+        ctx.moveTo(ann.pts[0].x*S, ann.pts[0].y*S);
+        for (let i = 1; i < ann.pts.length - 1; i++) {
+            const mx = (ann.pts[i].x + ann.pts[i+1].x) / 2 * S;
+            const my = (ann.pts[i].y + ann.pts[i+1].y) / 2 * S;
+            ctx.quadraticCurveTo(ann.pts[i].x*S, ann.pts[i].y*S, mx, my);
+        }
+        const last = ann.pts[ann.pts.length-1];
+        ctx.lineTo(last.x*S, last.y*S);
+        ctx.stroke();
+
+    } else if (ann.type === 'arrow') {
+        ctx.strokeStyle = col;
+        ctx.fillStyle = col;
+        ctx.lineWidth = lw;
+        const x1=ann.x1*S, y1=ann.y1*S, x2=ann.x2*S, y2=ann.y2*S;
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+        // Arrowhead
+        const ang = Math.atan2(y2-y1, x2-x1);
+        const hw = 10 + lw*2;
+        ctx.beginPath();
+        ctx.moveTo(x2, y2);
+        ctx.lineTo(x2 - hw*Math.cos(ang-0.45), y2 - hw*Math.sin(ang-0.45));
+        ctx.lineTo(x2 - hw*Math.cos(ang+0.45), y2 - hw*Math.sin(ang+0.45));
+        ctx.closePath();
+        ctx.fill();
+
+    } else if (ann.type === 'rect') {
+        ctx.strokeStyle = col;
+        ctx.lineWidth = lw;
+        ctx.strokeRect(ann.x*S, ann.y*S, ann.w*S, ann.h*S);
+
+    } else if (ann.type === 'ellipse') {
+        ctx.strokeStyle = col;
+        ctx.lineWidth = lw;
+        ctx.beginPath();
+        ctx.ellipse(
+            (ann.x + ann.w/2)*S, (ann.y + ann.h/2)*S,
+            Math.abs(ann.w/2)*S, Math.abs(ann.h/2)*S,
+            0, 0, Math.PI*2
+        );
+        ctx.stroke();
+    }
+
+    // Selection indicator
+    if (ann === selAnn) {
+        const b = bb(ann);
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = '#0891B2';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([4,3]);
+        ctx.strokeRect(b.x*S-3, b.y*S-3, b.w*S+6, b.h*S+6);
+        ctx.setLineDash([]);
+    }
+
+    ctx.restore();
+}
+
+// ── Word-wrap text ──
+function wt(ctx, text, x, y, mw, lh) {
+    const words = text.split(' ');
+    let line = '', cy = y + lh;
+    for (const w of words) {
+        const test = line + w + ' ';
+        if (ctx.measureText(test).width > mw && line) {
+            ctx.fillText(line.trim(), x, cy);
+            line = w + ' ';
+            cy += lh;
+        } else { line = test; }
+    }
+    if (line.trim()) ctx.fillText(line.trim(), x, cy);
+}
+
+// ── Redraw annotations for current page ──
+function rd() {
+    const S = SCALE * ZOOM;
+    const ac = annCanvas.getContext('2d');
+    ac.clearRect(0, 0, annCanvas.width, annCanvas.height);
+    anns.filter(a => a.page === curPage).forEach(a => da(ac, a, S));
+}
+
+// ── Convert mouse/touch event to canvas and PDF coords ──
+function cxy(e) {
+    const rect = annCanvas.getBoundingClientRect();
+    const S = SCALE * ZOOM;
+    const cx = (e.clientX - rect.left) * (annCanvas.width / rect.width);
+    const cy = (e.clientY - rect.top)  * (annCanvas.height / rect.height);
+    return { cx, cy, px: cx/S, py: cy/S };
+}
+
+// ── Pointer events ──
+hitLayer.addEventListener('mousedown', od);
+hitLayer.addEventListener('mousemove', om);
+hitLayer.addEventListener('mouseup',   ou);
+hitLayer.addEventListener('mouseleave', ou);
+
+// Touch support
+hitLayer.addEventListener('touchstart', e => { e.preventDefault(); od(e.touches[0]); }, {passive:false});
+hitLayer.addEventListener('touchmove',  e => { e.preventDefault(); om(e.touches[0]); }, {passive:false});
+hitLayer.addEventListener('touchend',   e => { e.preventDefault(); ou(e.changedTouches[0]); }, {passive:false});
+
+function od(e) {
+    const {cx, cy, px, py} = cxy(e);
+
+    if (curTool === 'select') {
+        const hit = ht(px, py);
+        if (hit) {
+            su();
+            selAnn = hit;
+            dragAnn = hit;
+            dragOX = px - (hit.x1 !== undefined ? hit.x1 : hit.x);
+            dragOY = py - (hit.y1 !== undefined ? hit.y1 : hit.y);
+        } else {
+            selAnn = null;
+            dragAnn = null;
+        }
+        updateSelUI();
+        rd();
+        return;
+    }
+
+    if (curTool === 'eraser') {
+        const hit = ht(px, py);
+        if (hit) { su(); anns = anns.filter(a => a !== hit); rd(); }
+        return;
+    }
+
+    if (curTool === 'comment' || curTool === 'text') {
+        st(cx, cy, px, py);
+        return;
+    }
+
+    drawing = true;
+    drawStart = {cx, cy, px, py};
+    drawPts = [{x: px, y: py}];
+}
+
+function om(e) {
+    if (!drawing && !dragAnn) return;
+    const {cx, cy, px, py} = cxy(e);
+
+    if (dragAnn) {
+        mv(dragAnn, px - (dragAnn.x1 !== undefined ? dragAnn.x1 : dragAnn.x) - dragOX,
+                    py - (dragAnn.y1 !== undefined ? dragAnn.y1 : dragAnn.y) - dragOY);
+        rd();
+        return;
+    }
+
+    if (!drawing || !drawStart) return;
+
+    if (curTool === 'draw') {
+        drawPts.push({x: px, y: py});
+        const S = SCALE * ZOOM;
+        const ac = annCanvas.getContext('2d');
+        ac.clearRect(0, 0, annCanvas.width, annCanvas.height);
+        anns.filter(a => a.page === curPage).forEach(a => da(ac, a, S));
+        // Preview current stroke
+        if (drawPts.length > 1) {
+            ac.save();
+            ac.globalAlpha = curOpacity;
+            ac.strokeStyle = curColor;
+            ac.lineWidth = curLW * S;
+            ac.lineCap = 'round'; ac.lineJoin = 'round';
+            ac.beginPath();
+            ac.moveTo(drawPts[0].x*S, drawPts[0].y*S);
+            for (let i = 1; i < drawPts.length-1; i++) {
+                const mx = (drawPts[i].x+drawPts[i+1].x)/2*S;
+                const my = (drawPts[i].y+drawPts[i+1].y)/2*S;
+                ac.quadraticCurveTo(drawPts[i].x*S, drawPts[i].y*S, mx, my);
+            }
+            ac.lineTo(drawPts[drawPts.length-1].x*S, drawPts[drawPts.length-1].y*S);
+            ac.stroke();
+            ac.restore();
+        }
+        return;
+    }
+
+    // Preview shape
+    const S = SCALE * ZOOM;
+    const ac = annCanvas.getContext('2d');
+    ac.clearRect(0, 0, annCanvas.width, annCanvas.height);
+    anns.filter(a => a.page === curPage).forEach(a => da(ac, a, S));
+    const preview = buildAnn(drawStart.px, drawStart.py, px, py);
+    if (preview) da(ac, preview, S);
+}
+
+function ou(e) {
+    if (dragAnn) { dragAnn = null; return; }
+    if (!drawing || !drawStart) return;
+    const {px, py} = cxy(e);
+    drawing = false;
+
+    if (curTool === 'draw') {
+        if (drawPts.length < 2) return;
+        aa({ type:'draw', page:curPage, color:curColor, lw:curLW, opacity:curOpacity, pts:[...drawPts] });
+        drawPts = [];
+        return;
+    }
+
+    const ann = buildAnn(drawStart.px, drawStart.py, px, py);
+    if (ann) aa(ann);
+    drawStart = null;
+}
+
+function buildAnn(sx, sy, ex, ey) {
+    const dx = ex-sx, dy = ey-sy;
+    const base = { page:curPage, color:curColor, lw:curLW, opacity:curOpacity };
+    if (curTool === 'highlight') {
+        if (Math.abs(dx)<4) return null;
+        return { ...base, type:'highlight', x:Math.min(sx,ex), y:Math.min(sy,ey)-12, w:Math.abs(dx), h:20 };
+    }
+    if (curTool === 'underline') {
+        if (Math.abs(dx)<4) return null;
+        return { ...base, type:'underline', x:Math.min(sx,ex), y:Math.min(sy,ey), w:Math.abs(dx), h:2 };
+    }
+    if (curTool === 'arrow') {
+        if (Math.abs(dx)<4 && Math.abs(dy)<4) return null;
+        return { ...base, type:'arrow', x1:sx, y1:sy, x2:ex, y2:ey };
+    }
+    if (curTool === 'rect') {
+        if (Math.abs(dx)<4 || Math.abs(dy)<4) return null;
+        return { ...base, type:'rect', x:Math.min(sx,ex), y:Math.min(sy,ey), w:Math.abs(dx), h:Math.abs(dy) };
+    }
+    if (curTool === 'ellipse') {
+        if (Math.abs(dx)<4 || Math.abs(dy)<4) return null;
+        return { ...base, type:'ellipse', x:Math.min(sx,ex), y:Math.min(sy,ey), w:Math.abs(dx), h:Math.abs(dy) };
+    }
+    return null;
+}
+
+// ── Move annotation ──
+function mv(ann, ddx, ddy) {
+    if (ann.type === 'arrow') { ann.x1+=ddx; ann.y1+=ddy; ann.x2+=ddx; ann.y2+=ddy; return; }
+    if (ann.type === 'draw') { ann.pts = ann.pts.map(p => ({x:p.x+ddx, y:p.y+ddy})); return; }
+    ann.x = (ann.x||0)+ddx; ann.y = (ann.y||0)+ddy;
+}
+
+// ── Show floating textarea for comment/text ──
+let floatType = null, floatPX = 0, floatPY = 0;
+function st(cx, cy, px, py) {
+    floatType = curTool; floatPX = px; floatPY = py;
+    const wrap = canvasWrap.getBoundingClientRect();
+    const area = annCanvas.getBoundingClientRect();
+    floatInput.style.display = 'block';
+    floatInput.style.left = (cx / (annCanvas.width / annCanvas.getBoundingClientRect().width)) + 'px';
+    floatInput.style.top  = (cy / (annCanvas.height / annCanvas.getBoundingClientRect().height)) + 'px';
+    floatInput.value = '';
+    floatInput.focus();
+}
+function ct() { // commit textarea
+    const txt = floatInput.value.trim();
+    floatInput.style.display = 'none';
+    if (!txt) return;
+    const S = SCALE * ZOOM;
+    const base = { page:curPage, color:curColor, lw:curLW, opacity:curOpacity };
+    if (floatType === 'comment') {
+        aa({ ...base, type:'comment', x:floatPX-14/S, y:floatPY-14/S, text:txt });
+    } else {
+        aa({ ...base, type:'text', x:floatPX, y:floatPY, text:txt, w:200/S, fs:14/S });
+    }
+}
+floatInput.addEventListener('blur', ct);
+floatInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ct(); }
+    if (e.key === 'Escape') { floatInput.style.display='none'; }
+});
+
+// ── Select tool UI ──
+function updateSelUI() {
+    selActions.style.display = selAnn ? 'block' : 'none';
+}
+
+btnDel.addEventListener('click', () => {
+    if (!selAnn) return;
+    su();
+    anns = anns.filter(a => a !== selAnn);
+    selAnn = null;
+    updateSelUI();
+    rd();
+});
+
+// ── Tool buttons ──
+document.querySelectorAll('.tool-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        curTool = btn.dataset.tool;
+        document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        hitLayer.style.cursor = curTool === 'select' ? 'default' :
+                                curTool === 'eraser'  ? 'cell'    :
+                                curTool === 'text' || curTool === 'comment' ? 'text' : 'crosshair';
+        if (curTool !== 'select') { selAnn = null; updateSelUI(); rd(); }
+    });
+});
+
+// ── Color swatches ──
+document.querySelectorAll('.color-swatch').forEach(sw => {
+    sw.addEventListener('click', () => {
+        curColor = sw.dataset.color;
+        document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+        sw.classList.add('active');
+        if (selAnn) { su(); selAnn.color = curColor; rd(); }
+    });
+});
+
+// ── Line width ──
+document.querySelectorAll('.lw-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        curLW = parseInt(btn.dataset.lw);
+        document.querySelectorAll('.lw-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (selAnn) { su(); selAnn.lw = curLW; rd(); }
+    });
+});
+
+// ── Opacity ──
+opacityRange.addEventListener('input', () => {
+    curOpacity = opacityRange.value / 100;
+    opacityVal.textContent = opacityRange.value + '%';
+    if (selAnn) { su(); selAnn.opacity = curOpacity; rd(); }
+});
+
+// ── Keyboard shortcuts ──
+document.addEventListener('keydown', e => {
+    if (e.target === floatInput || e.target === pageInput) return;
+    if (e.ctrlKey || e.metaKey) {
+        if (e.key === 'z') { e.preventDefault(); undo(); return; }
+        if (e.key === 'y') { e.preventDefault(); redo(); return; }
+    }
+    if (e.key === 'Delete' || e.key === 'Backspace') {
+        if (selAnn) { su(); anns = anns.filter(a=>a!==selAnn); selAnn=null; updateSelUI(); rd(); }
+        return;
+    }
+    const toolMap = { v:'select', h:'highlight', u:'underline', c:'comment', t:'text', d:'draw', a:'arrow', r:'rect', e:'ellipse', x:'eraser' };
+    if (toolMap[e.key]) {
+        document.querySelector(`.tool-btn[data-tool="${toolMap[e.key]}"]`).click();
+    }
+});
+
+// ── Page navigation ──
+function goPage(n) {
+    if (!pdfDoc || n<1 || n>totalPages) return;
+    curPage = n;
+    pageInput.value = n;
+    btnPrev.disabled = n <= 1;
+    btnNext.disabled = n >= totalPages;
+    selAnn = null; updateSelUI();
+    render(n);
+}
+
+btnPrev.addEventListener('click', () => goPage(curPage - 1));
+btnNext.addEventListener('click', () => goPage(curPage + 1));
+pageInput.addEventListener('change', () => goPage(parseInt(pageInput.value) || 1));
+zoomSelect.addEventListener('change', () => { ZOOM = parseFloat(zoomSelect.value); render(curPage); });
+
+// ── Undo/Redo buttons ──
+btnUndo.addEventListener('click', undo);
+btnRedo.addEventListener('click', redo);
+
+// ── New / Reset ──
+document.getElementById('btn-new').addEventListener('click', rst);
+
+// ── Render page ──
+async function render(pn) {
+    const page = await pdfDoc.getPage(pn);
+    const S = SCALE * ZOOM;
+    const vp = page.getViewport({ scale: S });
+    pdfCanvas.width  = annCanvas.width  = vp.width;
+    pdfCanvas.height = annCanvas.height = vp.height;
+    canvasWrap.style.width  = vp.width  + 'px';
+    canvasWrap.style.height = vp.height + 'px';
+    hitLayer.style.width    = vp.width  + 'px';
+    hitLayer.style.height   = vp.height + 'px';
+    await page.render({ canvasContext: pdfCanvas.getContext('2d'), viewport: vp }).promise;
+    rd();
+}
+
+// ── Open PDF ──
+async function openPDF(file) {
+    if (file.type !== 'application/pdf') { toast('Por favor sube un archivo PDF válido'); return; }
+    fileName = file.name;
+    fileNameEl.textContent = file.name;
+    const buf = await file.arrayBuffer();
+    pdfDoc = await pdfjsLib.getDocument({ data: buf }).promise;
+    totalPages = pdfDoc.numPages;
+    pageTotalEl.textContent = '/ ' + totalPages;
+    pageInput.max = totalPages;
+    anns = []; undoStack = []; redoStack = [];
+    btnUndo.disabled = true; btnRedo.disabled = true;
+    curPage = 1;
+    btnPrev.disabled = true;
+    btnNext.disabled = totalPages <= 1;
+    pageInput.value = 1;
+    uploadSection.style.display = 'none';
+    seoBlock.style.display      = 'none';
+    editorApp.style.display     = 'flex';
+    await render(1);
+}
+
+// ── Save annotated PDF ──
+btnSave.addEventListener('click', async () => {
+    if (!pdfDoc || !window.PDFLib) { toast('Error: no hay PDF cargado'); return; }
+    const hasAnns = anns.length > 0;
+    if (!hasAnns) { toast('Añade al menos una anotación antes de guardar'); return; }
+
+    saveOverlay.classList.add('show');
+    btnSave.disabled = true;
+
+    try {
+        const origBuf = await (async () => {
+            // Re-read original file from fileInput
+            return new Promise(res => {
+                const reader = new FileReader();
+                reader._file = fileInput.files[0] || null;
+                if (!fileInput.files[0]) { res(null); return; }
+                reader.onload = e => res(e.target.result);
+                reader.readAsArrayBuffer(fileInput.files[0]);
+            });
+        })();
+        if (!origBuf) { toast('Error al leer el archivo original'); return; }
+
+        const pdfDocLib = await PDFLib.PDFDocument.load(origBuf);
+        const libPages  = pdfDocLib.getPages();
+        const S = SCALE * ZOOM;
+
+        for (let pn = 1; pn <= totalPages; pn++) {
+            const pageAnns = anns.filter(a => a.page === pn);
+            if (!pageAnns.length) continue;
+
+            const page = await pdfDoc.getPage(pn);
+            const vp = page.getViewport({ scale: S });
+
+            // Render PDF page to temp canvas
+            const tmpC = document.createElement('canvas');
+            tmpC.width = vp.width; tmpC.height = vp.height;
+            await page.render({ canvasContext: tmpC.getContext('2d'), viewport: vp }).promise;
+
+            // Draw annotations on top
+            const tmpCtx = tmpC.getContext('2d');
+            pageAnns.forEach(a => da(tmpCtx, a, S));
+
+            // Embed as PNG
+            const pngDataUrl = tmpC.toDataURL('image/png');
+            const b64 = pngDataUrl.split(',')[1];
+            const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+            const img = await pdfDocLib.embedPng(bytes);
+
+            const libPage = libPages[pn - 1];
+            const { width: pdfW, height: pdfH } = libPage.getSize();
+            libPage.drawImage(img, { x:0, y:0, width:pdfW, height:pdfH });
+        }
+
+        const pdfBytes = await pdfDocLib.save();
+        const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName.replace(/\.pdf$/i, '') + '_anotado.pdf';
+        a.click();
+        URL.revokeObjectURL(url);
+        toast('PDF anotado descargado correctamente ✓');
+    } catch (err) {
+        console.error(err);
+        toast('Error al generar el PDF: ' + err.message);
+    } finally {
+        saveOverlay.classList.remove('show');
+        btnSave.disabled = false;
+    }
+});
+
+// ── Reset ──
+function rst() {
+    pdfDoc = null; anns = []; undoStack = []; redoStack = [];
+    selAnn = null; drawing = false; drawStart = null; drawPts = [];
+    editorApp.style.display   = 'none';
+    uploadSection.style.display = '';
+    seoBlock.style.display    = '';
+    fileInput.value = '';
+    btnUndo.disabled = true; btnRedo.disabled = true;
+    updateSelUI();
+}
+
+// ── File input / drag ──
+fileInput.addEventListener('change', e => { if (e.target.files[0]) openPDF(e.target.files[0]); });
+
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+dropZone.addEventListener('drop', e => {
+    e.preventDefault(); dropZone.classList.remove('drag-over');
+    const f = e.dataTransfer.files[0];
+    if (f) openPDF(f);
+});
+dropZone.addEventListener('click', () => fileInput.click());
+</script>
+</body>
+</html>

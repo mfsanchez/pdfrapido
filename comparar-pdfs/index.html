@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compara dos PDFs y detecta diferencias al instante. Visualiza texto añadido, eliminado y modificado entre dos versiones de un documento. Gratis, sin registro | PDFRápido"
+    <meta name="keywords" content="comparar pdf, diferencias pdf, comparar dos pdf, detectar cambios pdf, comparar versiones pdf, control de versiones pdf">
+    <meta name="author" content="MF Sanchez - PDFRápido">
+    <title>Comparar PDFs — Detecta Diferencias | PDFRápido</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="canonical" href="https://pdfrapido.eu/comparar-pdfs/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
+        <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Comparar PDFs — Detecta Diferencias | PDFRápido",
+          "url": "https://pdfrapido.eu/comparar-pdfs/",
+          "description": "Compara dos PDFs y detecta diferencias al instante. Visualiza texto añadido, eliminado y modificado entre dos versiones de un documento. Gratis, sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+          "publisher": {
+            "@type": "Person",
+            "name": "MF Sanchez",
+            "url": "https://mfsanchez.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Comparar PDFs",
+              "item": "https://pdfrapido.eu/comparar-pdfs/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué tipo de diferencias detecta?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Detecta texto añadido, eliminado y modificado entre las dos versiones del PDF. Las diferencias se resaltan para una fácil visualización."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Funciona con PDFs escaneados?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Los PDFs escaneados son imágenes; para compararlos necesitan tener texto seleccionable o haber pasado por OCR primero."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Es seguro comparar documentos confidenciales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, la comparación se realiza localmente en tu navegador. Tus documentos nunca se transmiten por Internet."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <meta property="og:title" content="Comparar PDFs — Detecta Diferencias | PDFRápido">
+    <meta property="og:description" content="Compara dos PDFs y detecta diferencias al instante. Visualiza texto añadido, eliminado y modificado entre dos versiones de un documento. Gratis, sin registro.">
+    <meta property="og:url" content="https://pdfrapido.eu/comparar-pdfs/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comparar PDFs — Detecta Diferencias | PDFRápido">
+    <meta name="twitter:description" content="Compara dos PDFs y detecta diferencias al instante. Visualiza texto añadido, eliminado y modificado entre dos versiones de un documento. Gratis, sin registro.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+    <style>
+:root {
+            --primary:#E8453C;--primary-dark:#C73830;--primary-light:#FFF0EF;
+            --secondary:#1B2A4A;
+            --accent-green:#16A34A;--accent-green-light:#EAFBEA;
+            --accent-red:#DC2626;--accent-red-light:#FFEAEA;
+            --accent-amber:#92400E;--accent-amber-light:#FFF8E1;
+            --accent-blue:#2563EB;--accent-blue-light:#EFF6FF;
+            --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;
+            --gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;
+            --gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;
+            --radius:12px;--radius-lg:16px;--radius-xl:24px;
+            --shadow-sm:0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md:0 4px 6px -1px rgba(0,0,0,0.07),0 2px 4px -2px rgba(0,0,0,0.05);
+        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--gray-800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+        .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary);}
+        .logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+        .logo-text{font-size:20px;font-weight:700;letter-spacing:-0.5px;}
+        .logo-text span{color:var(--primary);}
+        .nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--gray-500);font-size:14px;font-weight:500;transition:color 0.2s;}
+        .nav-back:hover{color:var(--primary);}
+        main{flex:1;padding:80px 24px 60px;max-width:940px;margin:0 auto;width:100%;}
+        .tool-header{text-align:center;margin-bottom:36px;animation:fadeIn 0.5s ease-out;}
+        .tool-header .icon-badge{width:64px;height:64px;border-radius:16px;background:var(--accent-blue-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+        .tool-header h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-0.8px;margin-bottom:8px;}
+        .tool-header p{font-size:16px;color:var(--gray-500);line-height:1.5;}
+        .dropzones-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+        @media(max-width:640px){.dropzones-row{grid-template-columns:1fr;}}
+        .drop-zone{border:2px dashed var(--gray-300);border-radius:var(--radius-xl);padding:36px 24px;text-align:center;cursor:pointer;transition:all 0.3s ease;position:relative;background:var(--gray-50);}
+        .drop-zone.drop-original:hover,.drop-zone.drop-original.dragover{border-color:var(--gray-500);background:var(--gray-100);}
+        .drop-zone.drop-modified:hover,.drop-zone.drop-modified.dragover{border-color:var(--accent-blue);background:var(--accent-blue-light);}
+        .drop-zone.drop-original.has-file{border-style:solid;border-color:var(--gray-400);background:#fff;}
+        .drop-zone.drop-modified.has-file{border-style:solid;border-color:var(--accent-blue);background:var(--accent-blue-light);}
+        .drop-label{font-size:11px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:12px;}
+        .drop-original .drop-label{color:var(--gray-500);}
+        .drop-modified .drop-label{color:var(--accent-blue);}
+        .drop-zone-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+        .drop-original .drop-zone-icon{background:var(--gray-200);}
+        .drop-modified .drop-zone-icon{background:var(--accent-blue-light);}
+        .drop-zone h3{font-size:15px;font-weight:600;color:var(--secondary);margin-bottom:4px;}
+        .drop-zone p{font-size:13px;color:var(--gray-400);}
+        .file-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:8px;padding:6px 12px;font-size:13px;font-weight:500;color:var(--gray-700);margin-top:8px;max-width:100%;}
+        .file-badge span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;}
+        .file-badge-remove{width:18px;height:18px;border-radius:4px;border:none;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gray-400);transition:color 0.2s;flex-shrink:0;padding:0;}
+        .file-badge-remove:hover{color:var(--primary);}
+        .options-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:18px 22px;margin-bottom:16px;}
+        .options-card h4{font-size:14px;font-weight:600;color:var(--gray-700);margin-bottom:12px;}
+        .mode-toggle{display:flex;gap:8px;flex-wrap:wrap;}
+        .mode-btn{display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:var(--radius);font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s;border:2px solid var(--gray-200);background:#fff;color:var(--gray-600);}
+        .mode-btn.active{border-color:var(--accent-blue);background:var(--accent-blue-light);color:var(--accent-blue);}
+        .mode-btn:hover:not(.active){border-color:var(--gray-300);background:var(--gray-100);}
+        .btn-comparar{width:100%;padding:16px;background:var(--accent-blue);color:#fff;border:none;border-radius:var(--radius-lg);font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:10px;}
+        .btn-comparar:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:var(--shadow-md);}
+        .btn-comparar:active{transform:translateY(0);}
+        .btn-comparar:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+        .loading-area{display:none;text-align:center;padding:56px 24px;animation:fadeIn 0.3s ease-out;}
+        .loading-area.active{display:block;}
+        .loading-spinner{width:56px;height:56px;border:4px solid var(--gray-200);border-top-color:var(--accent-blue);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 24px;}
+        .loading-area h3{font-size:20px;font-weight:600;color:var(--secondary);margin-bottom:8px;}
+        .loading-area p{font-size:14px;color:var(--gray-400);}
+        .loading-dots::after{content:'';animation:dots 1.5s steps(4,end) infinite;}
+        @keyframes dots{0%,20%{content:''}40%{content:'.'}60%{content:'..'}80%,100%{content:'...'}}
+        .result-area{display:none;animation:fadeInUp 0.4s ease-out;}
+        .result-area.active{display:block;}
+        .result-stats-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:14px 18px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);margin-bottom:16px;font-size:14px;font-weight:500;}
+        .stat-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;}
+        .stat-added{background:var(--accent-green-light);color:var(--accent-green);}
+        .stat-removed{background:var(--accent-red-light);color:var(--accent-red);}
+        .stat-modified{background:var(--accent-amber-light);color:var(--accent-amber);}
+        .stat-total{color:var(--gray-600);font-weight:500;margin-left:auto;font-size:13px;}
+        .result-actions-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+        .btn-action{display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:var(--radius);font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s;border:1px solid var(--gray-200);background:#fff;color:var(--gray-700);}
+        .btn-action:hover{background:var(--gray-100);border-color:var(--gray-300);}
+        .btn-action.primary{background:var(--accent-blue);color:#fff;border-color:transparent;}
+        .btn-action.primary:hover{background:#1d4ed8;}
+        .diff-view{border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;font-family:'Courier New',Courier,monospace;font-size:13px;line-height:1.6;}
+        .diff-header{display:grid;grid-template-columns:1fr 1fr;background:var(--gray-100);border-bottom:1px solid var(--gray-200);font-family:'DM Sans',sans-serif;}
+        .diff-header-col{padding:10px 16px;font-size:12px;font-weight:600;color:var(--gray-600);letter-spacing:0.4px;text-transform:uppercase;}
+        .diff-header-col:first-child{border-right:1px solid var(--gray-200);}
+        .diff-line{display:grid;grid-template-columns:1fr 1fr;min-height:24px;}
+        .diff-line:not(:last-child){border-bottom:1px solid rgba(0,0,0,0.04);}
+        .diff-cell{padding:3px 12px;word-break:break-all;white-space:pre-wrap;}
+        .diff-cell:first-child{border-right:1px solid rgba(0,0,0,0.06);}
+        .diff-equal .diff-cell{background:var(--gray-50);color:var(--gray-400);}
+        .diff-added .diff-cell{background:var(--accent-green-light);}
+        .diff-added .diff-cell:first-child{background:var(--gray-50);color:var(--gray-300);}
+        .diff-removed .diff-cell{background:var(--gray-50);color:var(--gray-300);}
+        .diff-removed .diff-cell:last-child{background:var(--accent-red-light);color:var(--accent-red);text-decoration:line-through;}
+        .diff-modified .diff-cell:first-child{background:var(--accent-amber-light);color:var(--accent-amber);text-decoration:line-through;}
+        .diff-modified .diff-cell:last-child{background:var(--accent-amber-light);color:var(--accent-amber);font-weight:600;}
+        .error-banner{display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:var(--radius-lg);padding:14px 18px;color:#DC2626;font-size:14px;font-weight:500;margin-bottom:16px;align-items:center;gap:10px;}
+        .error-banner.active{display:flex;}
+        .btn-new{margin-top:20px;width:100%;padding:13px;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--radius-lg);font-family:inherit;font-size:15px;font-weight:500;color:var(--gray-600);cursor:pointer;transition:all 0.2s;}
+        .btn-new:hover{background:var(--gray-200);}
+        .seo-content{margin-top:60px;padding-top:48px;border-top:1px solid var(--gray-200);}
+        .seo-content h2{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:12px;}
+        .seo-content h3{font-size:18px;font-weight:600;color:var(--secondary);margin:28px 0 10px;}
+        .seo-content p{font-size:15px;color:var(--gray-600);line-height:1.7;margin-bottom:14px;}
+        .seo-content ul{padding-left:20px;margin-bottom:14px;}
+        .seo-content ul li{font-size:15px;color:var(--gray-600);line-height:1.7;margin-bottom:6px;}
+        .related-tools{max-width:940px;margin:40px auto 0;padding:28px;background:var(--gray-50);border-radius:var(--radius-lg);border:1px solid var(--gray-200);}
+        .related-tools h3{font-size:16px;font-weight:600;color:var(--secondary);margin-bottom:16px;}
+        .related-tools ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;}
+        .related-tools ul li a{display:inline-block;padding:7px 16px;background:#fff;border:1px solid var(--gray-200);border-radius:100px;font-size:14px;font-weight:500;color:var(--secondary);text-decoration:none;transition:border-color 0.15s,color 0.15s;}
+        .related-tools ul li a:hover{border-color:var(--primary);color:var(--primary);}
+        footer{background:var(--gray-50);border-top:1px solid var(--gray-200);padding:24px;text-align:center;}
+        footer p{font-size:13px;color:var(--gray-400);}
+        footer a{color:var(--gray-500);text-decoration:none;}
+        footer a:hover{color:var(--primary);}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        @media(max-width:640px){
+            main{padding:88px 16px 48px;}
+            .tool-header h1{font-size:26px;}
+            .diff-header,.diff-line{grid-template-columns:1fr;}
+            .diff-header-col:first-child{border-right:none;border-bottom:1px solid var(--gray-200);}
+            .diff-cell:first-child{border-right:none;}
+        }
+            .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pdfrapido.eu/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PDFRápido",
+  "url": "https://pdfrapido.eu",
+  "logo": "https://pdfrapido.eu/favicon.svg",
+  "sameAs": [
+    "https://github.com/mfsanchez/pdfrapido",
+    "https://twitter.com/pdfrapido"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+}
+</script>
+</head>
+<body>
+<nav id="nav">
+    <div class="nav-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="logo-text">PDF<span>Rápido</span></div>
+        </a>
+        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        <ul class="nav-links">
+            <li><a href="/#herramientas">Herramientas</a></li>
+            <li><a href="/#caracteristicas">Características</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+<main>
+<div role="navigation" aria-label="breadcrumb" style="max-width:1140px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Comparar PDFs</li>
+    </ol>
+</div>
+<div class="tool-header">
+        <div class="icon-badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><polyline points="9 9 10 9 15 9"/></svg>
+        </div>
+        <h1>Comparar PDFs — PDFRápido</h1>
+        <p>Sube dos documentos y detecta al instante qué texto se añadió, eliminó o modificó</p>
+    </div>
+
+    <div class="error-banner" id="errorBanner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="errorText">Error al comparar los archivos.</span>
+    </div>
+
+    <div id="uploadSection">
+        <div class="dropzones-row">
+            <!-- Zone A -->
+            <div class="drop-zone drop-original" id="zoneA" onclick="document.getElementById('fileA').click()">
+                <input type="file" id="fileA" accept=".pdf" style="display:none">
+                <div class="drop-label">Documento original</div>
+                <div class="drop-zone-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <h3 id="zoneAText">Arrastra o <span style="text-decoration:underline;text-underline-offset:2px">selecciona</span></h3>
+                <p>PDF · Máx. 20 MB</p>
+                <div class="file-badge" id="badgeA" style="display:none">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <span id="nameA"></span>
+                    <button class="file-badge-remove" onclick="removeFile('A',event)" title="Quitar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+                </div>
+            </div>
+            <!-- Zone B -->
+            <div class="drop-zone drop-modified" id="zoneB" onclick="document.getElementById('fileB').click()">
+                <input type="file" id="fileB" accept=".pdf" style="display:none">
+                <div class="drop-label">Documento modificado</div>
+                <div class="drop-zone-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="12"/><line x1="15" y1="15" x2="12" y2="12"/></svg>
+                </div>
+                <h3 id="zoneBText">Arrastra o <span style="text-decoration:underline;text-underline-offset:2px">selecciona</span></h3>
+                <p>PDF · Máx. 20 MB</p>
+                <div class="file-badge" id="badgeB" style="display:none">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <span id="nameB"></span>
+                    <button class="file-badge-remove" onclick="removeFile('B',event)" title="Quitar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-card">
+            <h4>Modo de resultado</h4>
+            <div class="mode-toggle">
+                <button class="mode-btn active" id="btnModeScreen" onclick="setMode('screen')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Ver en pantalla
+                </button>
+                <button class="mode-btn" id="btnModePDF" onclick="setMode('pdf')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Descargar PDF
+                </button>
+            </div>
+        </div>
+
+        <button class="btn-comparar" id="btnComparar" onclick="runComparar()" disabled>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+            Comparar documentos
+        </button>
+    </div>
+
+    <div class="loading-area" id="loadingArea">
+        <div class="loading-spinner"></div>
+        <h3>Comparando documentos<span class="loading-dots"></span></h3>
+        <p>Extrayendo texto y calculando diferencias...</p>
+    </div>
+
+    <div class="result-area" id="resultArea">
+        <div class="result-stats-bar">
+            <span class="stat-chip stat-added" id="statAdded">+0 añadidas</span>
+            <span class="stat-chip stat-removed" id="statRemoved">-0 eliminadas</span>
+            <span class="stat-chip stat-modified" id="statModified">~0 modificadas</span>
+            <span class="stat-total" id="statTotal">0 cambios</span>
+        </div>
+        <div class="result-actions-bar">
+            <button class="btn-action primary" id="btnDownloadPDF" onclick="downloadPDF()" style="display:none">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar PDF de diferencias
+            </button>
+            <button class="btn-action" id="btnToggleEqual" onclick="toggleIgual()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Mostrar líneas iguales
+            </button>
+        </div>
+        <div class="diff-view" id="diffView">
+            <div class="diff-header">
+                <div class="diff-header-col" id="diffHeaderA">Original</div>
+                <div class="diff-header-col" id="diffHeaderB">Modificado</div>
+            </div>
+            <div id="diffLines"></div>
+        </div>
+        <button class="btn-new" onclick="resetTool()">&#8592; Comparar otros documentos</button>
+    </div>
+
+    <div class="seo-content">
+        <h2>Compara dos PDFs y detecta cada cambio</h2>
+        <p>Nuestra herramienta extrae el texto de ambos documentos con <strong>pdfplumber</strong> y aplica un algoritmo de diferencias línea por línea para identificar exactamente qué ha cambiado entre las dos versiones.</p>
+        <h3>Casos de uso</h3>
+        <p>La comparación de PDFs es especialmente útil en contextos donde la trazabilidad importa. En la <strong>revisión de contratos</strong>, permite detectar cláusulas nuevas o modificadas entre versiones de un acuerdo antes de firmarlo, sin leer el documento entero. Para el <strong>control de versiones de documentos</strong> técnicos —manuales, especificaciones o informes—, identifica exactamente qué secciones han cambiado entre borradores. En la <strong>auditoría de documentos</strong>, verifica que la versión entregada coincide con la aprobada, garantizando integridad documental. Y al <strong>comparar borradores</strong> en procesos de revisión académica o editorial, localiza los cambios del revisor sin perder el hilo del original. En todos estos escenarios, ahorras horas de revisión manual y reduces el riesgo de pasar por alto cambios críticos.</p>
+        <h3>Privacidad</h3>
+        <p>Los PDFs se procesan en nuestros servidores y se eliminan inmediatamente tras calcular las diferencias. No almacenamos ni los archivos ni su contenido.</p>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/extraer-datos/">Extraer datos de PDF</a></li>
+            <li><a href="/resumir-pdf/">Resumir PDF con IA</a></li>
+            <li><a href="/chat-pdf/">Chat con PDF</a></li>
+            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
+            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
+            <li><a href="/unir-pdf/">Unir PDFs</a></li>
+        </ul>
+    </div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Comparar PDFs?</h2>
+  <p>Usar Comparar PDFs en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Carga los dos PDF a comparar</h3>
+          <p>Sube el documento original y la versión revisada. La herramienta analiza ambos en paralelo para identificar las diferencias.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Análisis de diferencias</h3>
+          <p>El motor de comparación detecta texto añadido, eliminado y modificado, así como cambios en imágenes y formato entre ambas versiones del documento.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Revisa el informe de diferencias</h3>
+          <p>Obtén un informe visual donde las adiciones aparecen marcadas en verde y las eliminaciones en rojo, similar al modo de control de cambios de Word.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Comparar PDFs es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Revisar contratos modificados</strong>
+        <span>Cuando recibes una versión revisada de un contrato, comparar los dos PDFs te muestra exactamente qué cláusulas se han modificado, añadido o eliminado sin tener que leer el documento completo.</span>
+      </div>
+      <div class="use-case">
+        <strong>Control de calidad de documentos impresos</strong>
+        <span>Compara el PDF enviado a imprenta con el resultado escaneado para verificar que no hay diferencias entre el diseño original y el impreso.</span>
+      </div>
+      <div class="use-case">
+        <strong>Verificar traducciones y versiones lingüísticas</strong>
+        <span>Compara el documento original con la traducción para verificar que la estructura y extensión del contenido es coherente entre ambas versiones.</span>
+      </div>
+      <div class="use-case">
+        <strong>Detectar cambios entre versiones de informes</strong>
+        <span>Compara el borrador con la versión final de un informe para generar automáticamente un registro de los cambios realizados durante el proceso de revisión.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Comparar PDFs</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿La herramienta detecta cambios en imágenes y gráficos?</h3>
+        <p>Sí. La comparación detecta tanto cambios en el texto como diferencias en las imágenes y elementos gráficos entre las dos versiones del documento.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Funciona con PDFs que tienen diseños de varias columnas?</h3>
+        <p>Sí. El motor de comparación analiza el contenido textual independientemente de su disposición visual, por lo que funciona bien con documentos de una y varias columnas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo comparar PDFs escaneados?</h3>
+        <p>La comparación de PDFs escaneados que son imágenes es menos precisa que con PDFs de texto. Para mejores resultados con documentos escaneados, aplica primero OCR a ambos documentos.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> &nbsp;|&nbsp; <a href="/">Inicio</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a></p>
+</footer>
+
+<script src="/js/main.js" defer></script>
+<script>
+var fileA=null,fileB=null,mode='screen',lastResult=null,showIgual=false;
+
+document.getElementById('fileA').addEventListener('change',function(){if(this.files[0])setFile('A',this.files[0]);});
+document.getElementById('fileB').addEventListener('change',function(){if(this.files[0])setFile('B',this.files[0]);});
+setupDrop('zoneA','A');
+setupDrop('zoneB','B');
+
+function setupDrop(zoneId,which){
+    var zone=document.getElementById(zoneId);
+    zone.addEventListener('dragover',function(e){e.preventDefault();zone.classList.add('dragover');});
+    zone.addEventListener('dragleave',function(){zone.classList.remove('dragover');});
+    zone.addEventListener('drop',function(e){
+        e.preventDefault();zone.classList.remove('dragover');
+        var f=e.dataTransfer.files[0];
+        if(f&&f.name.toLowerCase().endsWith('.pdf'))setFile(which,f);
+    });
+}
+
+function setFile(which,file){
+    if(which==='A'){
+        fileA=file;
+        document.getElementById('nameA').textContent=file.name;
+        document.getElementById('badgeA').style.display='inline-flex';
+        document.getElementById('zoneA').classList.add('has-file');
+        document.getElementById('zoneAText').textContent='Archivo seleccionado';
+    }else{
+        fileB=file;
+        document.getElementById('nameB').textContent=file.name;
+        document.getElementById('badgeB').style.display='inline-flex';
+        document.getElementById('zoneB').classList.add('has-file');
+        document.getElementById('zoneBText').textContent='Archivo seleccionado';
+    }
+    updateBtn();
+}
+
+function removeFile(which,e){
+    e.stopPropagation();
+    if(which==='A'){
+        fileA=null;
+        document.getElementById('badgeA').style.display='none';
+        document.getElementById('zoneA').classList.remove('has-file');
+        document.getElementById('zoneAText').innerHTML='Arrastra o <span style="text-decoration:underline;text-underline-offset:2px">selecciona</span>';
+        document.getElementById('fileA').value='';
+    }else{
+        fileB=null;
+        document.getElementById('badgeB').style.display='none';
+        document.getElementById('zoneB').classList.remove('has-file');
+        document.getElementById('zoneBText').innerHTML='Arrastra o <span style="text-decoration:underline;text-underline-offset:2px">selecciona</span>';
+        document.getElementById('fileB').value='';
+    }
+    updateBtn();
+}
+
+function updateBtn(){document.getElementById('btnComparar').disabled=!(fileA&&fileB);}
+
+function setMode(m){
+    mode=m;
+    document.getElementById('btnModeScreen').classList.toggle('active',m==='screen');
+    document.getElementById('btnModePDF').classList.toggle('active',m==='pdf');
+}
+
+async function runComparar(){
+    hideError();showLoading();
+    var fd=new FormData();
+    fd.append('file_original',fileA);
+    fd.append('file_modificado',fileB);
+    fd.append('modo_salida',mode==='pdf'?'pdf':'json');
+    try{
+        var res=await fetch('/api/comparar-pdfs',{method:'POST',body:fd});
+        if(!res.ok){
+            var msg='Error al comparar los documentos.';
+            try{var d=await res.json();msg=d.detail||msg;}catch(e){}
+            throw new Error(msg);
+        }
+        if(mode==='pdf'){
+            var blob=await res.blob();
+            var url=URL.createObjectURL(blob);
+            var a=document.createElement('a');
+            a.href=url;a.download='comparacion.pdf';a.click();URL.revokeObjectURL(url);
+            hideLoading();showUpload();
+        }else{
+            var data=await res.json();
+            lastResult=data;hideLoading();showResult(data);
+        }
+    }catch(err){hideLoading();showUpload();showError(err.message);}
+}
+
+function showResult(data){
+    document.getElementById('statAdded').textContent='+'+data['lineas_añadidas']+' añadidas';
+    document.getElementById('statRemoved').textContent='-'+data.lineas_eliminadas+' eliminadas';
+    document.getElementById('statModified').textContent='~'+data.lineas_modificadas+' modificadas';
+    document.getElementById('statTotal').textContent=data.total_cambios+' cambios en total';
+    document.getElementById('diffHeaderA').textContent=fileA?fileA.name:'Original';
+    document.getElementById('diffHeaderB').textContent=fileB?fileB.name:'Modificado';
+    renderDiffLines(data.diferencias);
+    document.getElementById('btnDownloadPDF').style.display='flex';
+    document.getElementById('uploadSection').style.display='none';
+    document.getElementById('resultArea').classList.add('active');
+}
+
+function renderDiffLines(diferencias){
+    var container=document.getElementById('diffLines');
+    container.innerHTML='';
+    diferencias.forEach(function(d){
+        if(d.tipo==='igual'&&!showIgual)return;
+        var row=document.createElement('div');
+        var cls=d.tipo==='igual'?'equal':d.tipo==='añadida'?'added':d.tipo==='eliminada'?'removed':'modified';
+        row.className='diff-line diff-'+cls;
+        var cL=document.createElement('div');cL.className='diff-cell';
+        var cR=document.createElement('div');cR.className='diff-cell';
+        if(d.tipo==='igual'){cL.textContent=d.linea_original||' ';cR.textContent=d.linea_nueva||' ';}
+        else if(d.tipo==='añadida'){cL.innerHTML='<span style="color:var(--gray-300)">—</span>';cR.textContent=d.linea_nueva||' ';}
+        else if(d.tipo==='eliminada'){cL.textContent=d.linea_original||' ';cR.innerHTML='<span style="color:var(--gray-300)">—</span>';}
+        else{cL.textContent=d.linea_original||' ';cR.textContent=d.linea_nueva||' ';}
+        row.appendChild(cL);row.appendChild(cR);container.appendChild(row);
+    });
+    if(container.children.length===0){
+        container.innerHTML='<div style="padding:24px;text-align:center;color:var(--gray-400);font-family:DM Sans,sans-serif">No hay diferencias entre los dos documentos.</div>';
+    }
+}
+
+function toggleIgual(){
+    showIgual=!showIgual;
+    var btn=document.getElementById('btnToggleEqual');
+    btn.innerHTML=showIgual
+        ?'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg> Ocultar líneas iguales'
+        :'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg> Mostrar líneas iguales';
+    if(lastResult)renderDiffLines(lastResult.diferencias);
+}
+
+async function downloadPDF(){
+    if(!fileA||!fileB)return;
+    var btn=document.getElementById('btnDownloadPDF');
+    btn.disabled=true;btn.textContent='Generando PDF…';
+    var fd=new FormData();
+    fd.append('file_original',fileA);fd.append('file_modificado',fileB);fd.append('modo_salida','pdf');
+    try{
+        var res=await fetch('/api/comparar-pdfs',{method:'POST',body:fd});
+        if(!res.ok)throw new Error('Error al generar el PDF.');
+        var blob=await res.blob();
+        var url=URL.createObjectURL(blob);
+        var a=document.createElement('a');a.href=url;a.download='comparacion.pdf';a.click();URL.revokeObjectURL(url);
+    }catch(err){showError(err.message);}
+    btn.disabled=false;
+    btn.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Descargar PDF de diferencias';
+}
+
+function showLoading(){document.getElementById('uploadSection').style.display='none';document.getElementById('resultArea').classList.remove('active');document.getElementById('loadingArea').classList.add('active');}
+function hideLoading(){document.getElementById('loadingArea').classList.remove('active');}
+function showUpload(){document.getElementById('uploadSection').style.display='block';}
+function showError(msg){document.getElementById('errorText').innerHTML = msg + ' <a href="/contacto/" style="color:inherit;text-decoration:underline;font-weight:600;white-space:nowrap;">¿Necesitas ayuda?/contacto/</a>';document.getElementById('errorBanner').classList.add('active');}
+function hideError(){document.getElementById('errorBanner').classList.remove('active');}
+
+function resetTool(){
+    fileA=null;fileB=null;lastResult=null;showIgual=false;
+    ['A','B'].forEach(function(w){
+        document.getElementById('badge'+w).style.display='none';
+        document.getElementById('zone'+w).classList.remove('has-file');
+        document.getElementById('file'+w).value='';
+    });
+    document.getElementById('zoneAText').innerHTML='Arrastra o <span style="text-decoration:underline;text-underline-offset:2px">selecciona</span>';
+    document.getElementById('zoneBText').innerHTML='Arrastra o <span style="text-decoration:underline;text-underline-offset:2px">selecciona</span>';
+    document.getElementById('resultArea').classList.remove('active');
+    document.getElementById('uploadSection').style.display='block';
+    document.getElementById('btnDownloadPDF').style.display='none';
+    document.getElementById('diffLines').innerHTML='';
+    updateBtn();hideError();
+}
+</script>
+<script src="/js/error-modal.js"></script>
+<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
+</body>
+</html>

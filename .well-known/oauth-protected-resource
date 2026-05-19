@@ -1,0 +1,8 @@
+{
+  "resource": "https://pdfrapido.eu/api",
+  "authorization_servers": ["https://pdfrapido.eu"],
+  "scopes_supported": ["pdf:read", "pdf:process"],
+  "bearer_methods_supported": ["header"],
+  "resource_documentation": "https://pdfrapido.eu/.well-known/api-catalog",
+  "resource_signing_alg_values_supported": ["RS256"]
+}

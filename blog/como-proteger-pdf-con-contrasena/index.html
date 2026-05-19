@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende a proteger un PDF con contraseña paso a paso. Tipos de contraseñas PDF, niveles de cifrado y cuándo es realmente necesario proteger tus documentos.">
+  <meta name="author" content="MF Sanchez">
+  <title>Cómo proteger un PDF con contraseña (guía completa 2026) | PDFRápido</title>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://pdfrapido.eu/blog/como-proteger-pdf-con-contrasena/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta property="og:title" content="Cómo proteger un PDF con contraseña (guía completa 2026)">
+  <meta property="og:description" content="Guía completa para proteger PDFs con contraseña. Tipos de protección, niveles de cifrado y mejores prácticas.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pdfrapido.eu/blog/como-proteger-pdf-con-contrasena/">
+  <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+  <meta property="article:published_time" content="2026-04-25">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo proteger un PDF con contraseña (guía completa 2026)",
+    "description": "Aprende a proteger un PDF con contraseña. Tipos de contraseñas, niveles de cifrado y cuándo es necesario proteger tus documentos.",
+    "author": {"@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com"},
+    "publisher": {"@type": "Organization", "name": "PDFRápido", "url": "https://pdfrapido.eu"},
+    "datePublished": "2026-04-25",
+    "dateModified": "2026-05-01",
+    "mainEntityOfPage": "https://pdfrapido.eu/blog/como-proteger-pdf-con-contrasena/"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-93B5VKXW7W');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
+  <style>
+    .article{max-width:720px;margin:0 auto;padding:0 24px 80px}
+    .article-header{margin-bottom:40px;padding-top:20px}
+    .article-header .tag{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:4px 12px;border-radius:100px;background:#fce4ec;color:#c62828;margin-bottom:16px}
+    .article-header h1{font-size:clamp(26px,4vw,38px);font-weight:700;color:var(--secondary);line-height:1.2;letter-spacing:-.8px;margin-bottom:12px}
+    .article-header .meta{font-size:13px;color:var(--gray-400)}
+    .article h2{font-size:22px;font-weight:700;color:var(--secondary);margin:40px 0 14px;letter-spacing:-.3px}
+    .article h3{font-size:18px;font-weight:600;color:var(--gray-700);margin:28px 0 10px}
+    .article p{font-size:16px;color:var(--gray-600);line-height:1.85;margin-bottom:16px}
+    .article ul,.article ol{padding-left:24px;margin-bottom:16px}
+    .article li{font-size:16px;color:var(--gray-600);line-height:1.8;margin-bottom:6px}
+    .article a{color:var(--primary);text-decoration:none;font-weight:500}
+    .article a:hover{text-decoration:underline}
+    .article strong{color:var(--gray-800)}
+    .cta-box{background:linear-gradient(135deg,#fce4ec,#fff);border:1px solid #FFCDD2;border-radius:var(--radius-lg);padding:28px 32px;margin:32px 0;text-align:center}
+    .cta-box h3{font-size:18px;font-weight:600;color:var(--secondary);margin:0 0 8px}
+    .cta-box p{font-size:14px;color:var(--gray-500);margin:0 0 16px}
+    .cta-box a{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:var(--primary);color:#fff;border-radius:var(--radius);font-weight:600;font-size:15px;text-decoration:none;transition:all .2s}
+    .cta-box a:hover{background:var(--primary-dark);transform:translateY(-1px);text-decoration:none}
+    .warning-box{background:#fff8e1;border-left:3px solid #f9a825;border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:20px 0;font-size:15px;color:var(--gray-600);line-height:1.7}
+    .warning-box strong{color:#e65100}
+    .tip-box{background:var(--gray-50);border-left:3px solid var(--accent-green);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:20px 0;font-size:15px;color:var(--gray-600);line-height:1.7}
+    .tip-box strong{color:var(--accent-green-dark)}
+    .password-types{display:grid;gap:16px;margin:24px 0}
+    .password-type{background:var(--gray-50);border-radius:var(--radius-lg);padding:20px 24px}
+    .password-type h3{font-size:16px;font-weight:600;color:var(--secondary);margin:0 0 8px}
+    .password-type p{font-size:14px;color:var(--gray-500);line-height:1.7;margin:0}
+    .steps-list{counter-reset:steps;padding:0;list-style:none;margin:20px 0}
+    .steps-list li{counter-increment:steps;display:flex;gap:16px;margin-bottom:20px;align-items:flex-start}
+    .steps-list li::before{content:counter(steps);flex-shrink:0;width:32px;height:32px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+    .breadcrumb{padding:16px 0 8px;font-size:13px;color:var(--gray-400)}
+    .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+    .breadcrumb a{color:var(--primary);text-decoration:none}
+  </style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a href="/" class="logo">
+    <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+    <div class="logo-text">PDF<span>Rápido</span></div>
+  </a>
+  <a href="/" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a>
+</div></nav>
+
+<main class="narrow">
+<div class="article">
+  <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol>
+      <li><a href="/">Inicio</a></li>
+      <li>›</li>
+      <li><a href="/blog/">Blog</a></li>
+      <li>›</li>
+      <li>Proteger PDF con contraseña</li>
+    </ol>
+  </nav>
+
+  <div class="article-header">
+    <span class="tag">Seguridad</span>
+    <h1>Cómo proteger un PDF con contraseña</h1>
+    <p class="meta">Por MF Sanchez · 25 de abril de 2026 · 9 min de lectura</p>
+  </div>
+
+  <p>Cada día compartimos por correo electrónico, WhatsApp y plataformas de almacenamiento en la nube documentos que contienen información sensible: contratos con importes económicos, datos personales de clientes, informes médicos, extractos bancarios. Sin protección, cualquiera que intercepte o tenga acceso accidental al archivo puede leer esa información.</p>
+  <p>Proteger un PDF con contraseña es una medida sencilla y gratuita que añade una capa fundamental de seguridad a tus documentos más sensibles. En esta guía te explicamos todo lo que necesitas saber: tipos de protección, niveles de cifrado, cuándo es realmente necesario y cómo hacerlo en segundos.</p>
+
+  <h2>¿Qué tipos de contraseña puede tener un PDF?</h2>
+  <p>El estándar PDF define dos tipos distintos de contraseña que pueden aplicarse de forma independiente o combinada:</p>
+
+  <div class="password-types">
+    <div class="password-type">
+      <h3>🔑 Contraseña de apertura (User Password)</h3>
+      <p>También llamada contraseña de usuario. Cuando un PDF tiene esta contraseña, el lector solicita la clave antes de mostrar cualquier contenido del documento. Sin la contraseña correcta, el PDF es completamente inaccesible: no puedes ver ninguna página, ni el número de páginas, ni ningún metadato.</p>
+    </div>
+    <div class="password-type">
+      <h3>🔒 Contraseña de propietario (Owner Password)</h3>
+      <p>También llamada contraseña de permisos. Esta contraseña no impide abrir el PDF —el documento puede leerse sin ella—, pero restringe ciertas operaciones: imprimir, copiar texto, editar el contenido, añadir comentarios o extraer páginas. Es ideal para documentos que quieres que el destinatario pueda leer pero no modificar ni distribuir fácilmente.</p>
+    </div>
+  </div>
+
+  <h2>Niveles de cifrado: ¿qué protección aplican?</h2>
+  <p>Las contraseñas del PDF se protegen mediante algoritmos de cifrado. Cuanto más robusto es el cifrado, más difícil es recuperar el contenido sin la contraseña:</p>
+  <ul>
+    <li><strong>RC4 de 40 bits (obsoleto):</strong> Era el estándar hasta PDF 1.3. Es extremadamente vulnerable y puede romperse en segundos con herramientas modernas. Nunca uses este nivel de cifrado.</li>
+    <li><strong>RC4 de 128 bits (PDF 1.4-1.6):</strong> Fue el estándar durante muchos años. Ya no se considera seguro para información muy sensible, aunque sigue siendo una barrera razonable para uso doméstico y profesional básico.</li>
+    <li><strong>AES de 128 bits (PDF 1.6):</strong> Ofrece una seguridad significativamente mayor que RC4. Válido para la mayoría de documentos profesionales.</li>
+    <li><strong>AES de 256 bits (PDF 1.7+):</strong> Es el estándar de cifrado más robusto disponible para PDFs. Es prácticamente imposible de romper por fuerza bruta con la tecnología actual. Usa siempre este nivel para documentos con datos sensibles.</li>
+  </ul>
+
+  <div class="tip-box">
+    <strong>Recomendación:</strong> Nuestra herramienta de <a href="/proteger-pdf/">proteger PDF</a> aplica cifrado AES de 256 bits por defecto, el estándar más seguro disponible.
+  </div>
+
+  <h2>¿Cuándo deberías proteger un PDF?</h2>
+  <p>No todos los PDFs necesitan protección con contraseña. A continuación, los casos donde la protección es claramente recomendable:</p>
+  <ul>
+    <li><strong>Contratos con información económica confidencial:</strong> Importes, condiciones de pago y penalizaciones que no deben ser conocidos por partes que no sean los firmantes.</li>
+    <li><strong>Documentos con datos personales:</strong> El RGPD establece la obligación de proteger los datos personales. Cifrar los documentos que los contienen es una medida de cumplimiento básica.</li>
+    <li><strong>Informes médicos y sanitarios:</strong> La información de salud es especialmente sensible. Cualquier documento con diagnósticos, tratamientos o historiales médicos debe cifrarse antes de compartirse.</li>
+    <li><strong>Nóminas y documentos financieros:</strong> Las nóminas contienen datos salariales e información personal que deben protegerse, especialmente al enviarse a los empleados por correo electrónico.</li>
+    <li><strong>Documentación legal confidencial:</strong> Testamentos, poderes notariales, acuerdos de confidencialidad y documentos legales similares deben protegerse contra accesos no autorizados.</li>
+  </ul>
+
+  <h2>Pasos para proteger un PDF con contraseña en PDFRápido</h2>
+  <ol class="steps-list">
+    <li>
+      <div>
+        <strong>Accede a la herramienta de protección</strong><br>
+        <span style="font-size:14px;color:var(--gray-500)">Ve a <a href="/proteger-pdf/">pdfrapido.eu/proteger-pdf/</a>. No necesitas crear una cuenta ni instalar nada.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Sube el PDF que quieres proteger</strong><br>
+        <span style="font-size:14px;color:var(--gray-500)">Arrastra el archivo al área de carga o haz clic para seleccionarlo. Acepta PDFs de hasta 50 MB.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Elige el tipo de contraseña y escríbela</strong><br>
+        <span style="font-size:14px;color:var(--gray-500)">Introduce la contraseña de apertura, la de propietario o ambas. Usa una contraseña robusta de al menos 12 caracteres combinando letras, números y símbolos.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Descarga el PDF protegido</strong><br>
+        <span style="font-size:14px;color:var(--gray-500)">El PDF cifrado estará listo en segundos. Envíalo al destinatario y comunica la contraseña por un canal separado (SMS, llamada telefónica).</span>
+      </div>
+    </li>
+  </ol>
+
+  <div class="warning-box">
+    <strong>⚠️ Importante:</strong> Si olvidas la contraseña de apertura de un PDF cifrado con AES-256, recuperar el contenido es prácticamente imposible. Guarda siempre la contraseña en un gestor de contraseñas seguro como Bitwarden, 1Password o KeePass.
+  </div>
+
+  <h2>Mejores prácticas para contraseñas de PDF</h2>
+  <h3>Elige una contraseña robusta</h3>
+  <p>Una contraseña débil anula completamente el valor del cifrado. Las contraseñas cortas o predecibles pueden romperse en segundos con herramientas de fuerza bruta. Sigue estas pautas para una contraseña segura:</p>
+  <ul>
+    <li>Mínimo 12 caracteres (cuantos más, mejor)</li>
+    <li>Combinación de letras mayúsculas y minúsculas, números y símbolos</li>
+    <li>No uses palabras del diccionario, nombres propios o fechas fácilmente asociables contigo</li>
+    <li>Considera usar una frase de contraseña: una secuencia de palabras aleatorias es fácil de recordar y difícil de romper (ejemplo: Gato-Azul-Montaña-27)</li>
+  </ul>
+
+  <h3>Comunica la contraseña por un canal diferente</h3>
+  <p>Si envías el PDF protegido por correo electrónico y la contraseña también va en el mismo correo, la protección es inútil. Comunica siempre la contraseña por un canal diferente al que usas para enviar el documento: SMS, llamada telefónica, mensaje directo en una plataforma diferente, etc.</p>
+
+  <h3>Considera la protección de permisos además de la de apertura</h3>
+  <p>Para documentos de lectura obligatoria (como contratos que el cliente debe leer pero no modificar), combinar la contraseña de apertura con restricciones de edición e impresión añade una capa de control adicional sobre el uso del documento.</p>
+
+  <h2>Alternativas a la contraseña en PDF</h2>
+  <p>La contraseña de PDF no es la única forma de proteger la información sensible. Dependiendo del contexto, considera también:</p>
+  <ul>
+    <li><strong>Cifrado del correo electrónico:</strong> Si usas correo corporativo, el cifrado S/MIME o PGP protege el mensaje completo, incluyendo todos los adjuntos, sin necesidad de contraseñas separadas.</li>
+    <li><strong>Plataformas de intercambio seguro:</strong> Herramientas como SharePoint, Google Drive con permisos específicos o plataformas especializadas de envío seguro ofrecen control de acceso más granular que una simple contraseña.</li>
+    <li><strong>Redacción de datos sensibles:</strong> Si solo necesitas proteger partes específicas del documento (datos bancarios, números de identificación), considera usar nuestra herramienta de <a href="/redactar-pdf/">redactar PDF</a> para eliminar permanentemente esa información antes de compartir el documento.</li>
+  </ul>
+
+  <h2>Conclusión</h2>
+  <p>Proteger un PDF con contraseña es un hábito de seguridad básico que debería aplicarse a cualquier documento que contenga información sensible. Con cifrado AES de 256 bits, una contraseña robusta y la práctica de comunicarla por un canal separado, añades una capa de seguridad efectiva a tus comunicaciones digitales con un esfuerzo mínimo.</p>
+  <p>PDFRápido te permite proteger cualquier PDF de forma gratuita en segundos, sin necesidad de instalar software ni crear una cuenta.</p>
+
+  <div class="cta-box">
+    <h3>Protege tu PDF ahora</h3>
+    <p>Cifrado AES-256. Gratis. Sin registro. Sin subir el archivo a ningún servidor.</p>
+    <a href="/proteger-pdf/">Proteger PDF gratis →</a>
+  </div>
+</div>
+</main>
+
+<footer><p>&copy; 2026 PDFRápido — <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/sobre-nosotros/">Sobre nosotros</a> · <a href="/privacidad/">Privacidad</a> · <a href="/contacto/">Contacto</a></p></footer>
+<script src="/js/main.js"></script>
+<script src="/js/cookies-banner.js"></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="PDF a Excel, convertir PDF a Excel, extraer tablas PDF, PDF a XLSX online gratis, PDF a hoja de cálculo">
+    <meta name="description" content="Convierte PDF a Excel gratis y sin registro. Extrae tablas y datos de tu PDF a una hoja de cálculo XLSX editable. Sin instalar nada, resultado en segundos.">
+    <meta name="author" content="MF Sanchez">
+    <title>PDF a Excel Online Gratis — Extrae Tablas a XLSX | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#F5913E;--accent-light:#FFF3E0;--accent-dark:#D97A2B;--g50:#F9FAFB;--g200:#E5E7EB;--g300:#D1D5DB;--g400:#9CA3AF;--g500:#6B7280;--g700:#374151;--g800:#1F2937;--r:12px;--rl:16px;--rxl:24px;--sl:0 10px 25px -3px rgba(0,0,0,.08)}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--g800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--g200)}.ni{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.li{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.lt{font-size:20px;font-weight:700;letter-spacing:-.5px}.lt span{color:var(--primary)}.nb{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--g500);font-size:14px;font-weight:500}.nb:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:700px;margin:0 auto;width:100%}
+        .th{text-align:center;margin-bottom:36px}.th .ib{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.th h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.th p{font-size:16px;color:var(--g500)}
+        .uz{border:2px dashed var(--g300);border-radius:var(--rxl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--g50)}.uz:hover,.uz.dragover{border-color:var(--accent)}.ui{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.uz:hover .ui{transform:translateY(-4px)}.uz h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.uz h3 span{color:var(--accent)}.uz p{font-size:14px;color:var(--g400)}.uz input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .spinner-wrap{text-align:center;padding:50px 0}.spinner{width:48px;height:48px;border:4px solid var(--g200);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 20px}@keyframes spin{to{transform:rotate(360deg)}}.spinner-wrap p{font-size:15px;color:var(--g500);font-weight:500}.spinner-wrap .sub{font-size:13px;color:var(--g400);margin-top:6px}.pbw{width:100%;max-width:300px;height:6px;background:var(--g200);border-radius:3px;margin:14px auto 0;overflow:hidden}.pbf{height:100%;background:var(--accent);border-radius:3px;width:0%;transition:width .6s ease}
+        .ra{display:none;animation:fadeInUp .5s ease-out}.ra.active{display:block}.rc{background:#fff;border:1px solid var(--g200);border-radius:var(--rxl);padding:36px;text-align:center;box-shadow:var(--sl);position:relative;overflow:hidden}.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#FFAB40)}.rsi{width:64px;height:64px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:si .4s cubic-bezier(.34,1.56,.64,1)}@keyframes si{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.rc h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.rc .desc{font-size:14px;color:var(--g400);margin-bottom:24px}.rac{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .bd{padding:14px 32px;border:none;border-radius:var(--r);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s}.bd:hover{background:var(--accent-dark);transform:translateY(-1px)}.br{padding:14px 24px;border:1px solid var(--g200);border-radius:var(--r);background:#fff;color:var(--g500);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s}.br:hover{background:var(--g50)}
+        .error-msg{background:#FFF0EF;border:1px solid #E8453C;border-radius:var(--r);padding:16px;text-align:center;color:#C73830;font-size:14px;margin-bottom:20px;display:none}.error-msg.show{display:block}
+        .ad{background:var(--g50);border:1px dashed var(--g300);border-radius:var(--r);padding:16px;text-align:center;color:var(--g400);font-size:13px;margin-top:40px}
+        .seo{max-width:700px;margin:60px auto 0}.seo h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo p{font-size:15px;color:var(--g500);line-height:1.7;margin-bottom:12px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:640px){main{padding:100px 16px 40px}.th h1{font-size:26px}.uz{padding:40px 24px}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+                .seo-content {
+            max-width: 700px;
+            margin: 60px auto 0;
+            padding: 0 4px;
+        }
+        .seo-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .seo-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin: 28px 0 10px;
+        }
+        .seo-content p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .seo-content ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .seo-content li {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <link rel="canonical" href="https://pdfrapido.eu/pdf-a-excel/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Convertir PDF a Excel Online Gratis",
+          "url": "https://pdfrapido.eu/pdf-a-excel/",
+          "description": "Convierte tablas de PDF a Excel XLSX editable. Extrae datos numéricos y tablas. Gratis.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+  "publisher": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Convertir PDF a Excel Online Gratis",
+              "item": "https://pdfrapido.eu/pdf-a-excel/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo convertir un PDF a Excel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sube el PDF que contiene tablas o datos numéricos, pulsa 'Convertir a Excel' y descarga el archivo XLSX. Las tablas se extraen automáticamente a hojas de cálculo editables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se conservan las fórmulas del PDF al convertir a Excel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, los PDFs no almacenan fórmulas sino solo los valores resultantes. Al convertir, obtendrás los datos numéricos pero sin fórmulas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona bien con PDFs de facturas o extractos bancarios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, PDFRápido está optimizado para extraer datos de facturas, extractos, informes financieros y cualquier documento con tablas estructuradas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el PDF es una imagen escaneada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los PDFs escaneados requieren OCR para extraer el texto. PDFRápido aplica reconocimiento óptico básico, aunque la precisión es mayor en PDFs nativos que en escaneados."
+          }
+        }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="PDF a Excel Online Gratis — Extrae Tablas a XLSX | PDFRápido">
+    <meta property="og:description" content="Convierte PDF a Excel gratis y sin registro. Extrae tablas y datos de tu PDF a una hoja de cálculo XLSX editable. Sin instalar nada, resultado en segundos.">
+    <meta property="og:url" content="https://pdfrapido.eu/pdf-a-excel/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF a Excel Online Gratis — Extrae Tablas a XLSX | PDFRápido">
+    <meta name="twitter:description" content="Convierte PDF a Excel gratis y sin registro. Extrae tablas y datos de tu PDF a una hoja de cálculo XLSX editable. Sin instalar nada, resultado en segundos.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+<nav><div class="ni"><a href="/" class="logo"><div class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="lt">PDF<span>Rápido</span></div></a><a href="/" class="nb"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a></div></nav>
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">PDF a Excel</li>
+    </ol>
+</nav>
+<div class="th"><div class="ib"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h1>PDF a Excel</h1><p>Extrae tablas de tu PDF y conviértelas en una hoja de cálculo Excel.</p></div>
+    <div class="uz" id="uploadZone">
+        <input type="file" accept=".pdf,application/pdf" id="fileInput">
+        <div class="ui"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Arrastra tu archivo aquí o <span>selecciónalo</span></h3>
+        <p>Archivos PDF con tablas</p>
+    </div>
+    
+    <div class="step" id="stepProgress">
+        <div class="spinner-wrap"><div class="spinner"></div><p id="progressLabel">Convirtiendo archivo...</p><div class="pbw"><div class="pbf" id="progressBar"></div></div><p class="sub">Esto puede tardar unos segundos</p></div>
+    </div>
+    <div class="error-msg" id="errorMsg"></div>
+    <div class="ra" id="resultArea"><div class="rc"><div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>PDF convertido a Excel</h3><p class="desc" id="resultDesc"></p><div class="rac"><button class="bd" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar XLSX</button><button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button></div></div></div>
+    <div class="ad">Espacio publicitario — Google AdSense</div>
+    <div class="seo"><h2>Cómo convertir PDF a Excel online gratis</h2><p>Extrae las tablas y datos de tu documento PDF directamente a una hoja de cálculo Excel editable.</p></div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/excel-a-pdf/">Excel a PDF</a></li>
+            <li><a href="/pdf-a-word/">PDF a Word</a></li>
+            <li><a href="/extraer-datos/">Extraer datos</a></li>
+            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
+            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
+        </ul>
+    </div>
+    <!-- SEO CONTENT -->
+    <div class="seo-content">
+        <h2>Cómo convertir PDF a Excel online gratis</h2>
+        <p>Extrae tablas y datos de un PDF a una hoja de cálculo Excel (XLSX) editable. Ideal para recuperar informes financieros, listas de datos y tablas para análisis.</p>
+
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>Sube tu archivo PDF que contenga tablas o datos.</li>
+            <li>La herramienta detecta automáticamente las tablas y las convierte a Excel.</li>
+            <li>Descarga el archivo XLSX listo para editar y analizar.</li>
+        </ul>
+
+        <h3>¿Por qué usar esta herramienta?</h3>
+        <p>Convertir PDF a Excel te permite recuperar datos tabulares para hacer cálculos, crear gráficos, aplicar filtros y realizar análisis que no son posibles en un PDF estático.</p>
+
+        <h3>Seguridad y privacidad</h3>
+        <p>Todo el procesamiento ocurre en tu navegador. Tus datos financieros y empresariales nunca se suben a servidores externos.</p>
+
+        <h3>Preguntas frecuentes</h3>
+        <details>
+            <summary>¿Se conserva el formato de las tablas?</summary>
+            <p>Se intenta preservar la estructura de filas y columnas. Tablas complejas pueden requerir ajustes menores después de la conversión.</p>
+        </details>
+        <details>
+            <summary>¿Funciona con PDFs escaneados?</summary>
+            <p>Los PDFs escaneados necesitan OCR primero. Usa nuestra herramienta OCR a PDF antes de convertir a Excel.</p>
+        </details>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/excel-a-pdf/">Excel a PDF</a></li>
+            <li><a href="/pdf-a-word/">PDF a Word</a></li>
+            <li><a href="/pdf-a-pptx/">PDF a PowerPoint</a></li>
+            <li><a href="/extraer-datos/">Extraer Datos</a></li>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+        </ul>
+    </div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona PDF a Excel?</h2>
+  <p>Usar PDF a Excel en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Carga el PDF con tablas</h3>
+          <p>Sube el PDF que contiene las tablas o datos que quieres extraer. La herramienta identifica automáticamente las estructuras tabulares.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Extracción de datos</h3>
+          <p>El motor de conversión analiza las tablas del PDF y las reproduce en hojas de cálculo Excel con las filas y columnas correctamente organizadas.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga el archivo .xlsx</h3>
+          <p>Obtén un libro de Excel listo para usar, donde puedes aplicar fórmulas, ordenar datos, crear gráficos y realizar todos los análisis que necesites.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de PDF a Excel es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Procesar facturas para contabilidad</strong>
+        <span>Extrae las líneas de detalle de facturas en PDF para importarlas directamente al sistema de contabilidad, evitando la introducción manual de datos y los errores asociados.</span>
+      </div>
+      <div class="use-case">
+        <strong>Analizar datos de informes PDF</strong>
+        <span>Los informes financieros, estudios de mercado e informes gubernamentales suelen publicarse en PDF. Extrae sus tablas a Excel para analizarlos y crear visualizaciones propias.</span>
+      </div>
+      <div class="use-case">
+        <strong>Migrar datos entre sistemas</strong>
+        <span>Cuando recibes datos exportados en PDF desde un sistema legacy, la conversión a Excel es el primer paso para importarlos a una nueva base de datos o sistema ERP.</span>
+      </div>
+      <div class="use-case">
+        <strong>Crear bases de datos a partir de catálogos PDF</strong>
+        <span>Los catálogos de productos con tablas de precios y especificaciones técnicas en PDF pueden convertirse a Excel para crear listas de productos o inventarios.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre PDF a Excel</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿La herramienta detecta tablas automáticamente?</h3>
+        <p>Sí. El motor de conversión identifica las estructuras tabulares del PDF y las convierte manteniendo la organización de filas y columnas. En PDFs con tablas complejas puede ser necesario revisar el resultado.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Funciona con PDFs de informes escaneados?</h3>
+        <p>Los PDF escaneados son imágenes, no texto estructurado, por lo que la extracción directa es limitada. Para mejores resultados, primero procesa el PDF con nuestra herramienta de OCR y luego convierte a Excel.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Se pueden convertir varias tablas del mismo PDF?</h3>
+        <p>Sí. Si el PDF tiene múltiples tablas en distintas páginas, todas se extraen y se colocan en hojas separadas del libro de Excel, lo que facilita su gestión independiente.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
+    <div style="font-size:14px;color:#6B7280;line-height:1.75">
+        <p>Extrae tablas y datos de un PDF y conviértelos a un archivo Excel editable (.xlsx). Ideal para facturas, informes financieros y cualquier PDF con datos tabulares.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Cuándo usar PDF a Excel?</h2>
+        <p>Esta herramienta es especialmente útil cuando recibes informes, extractos bancarios, facturas o cualquier documento con tablas en formato PDF y necesitas trabajar con esos datos en una hoja de cálculo. En vez de copiar y pegar manualmente, la conversión automática te ahorra horas de trabajo.</p>
+        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
+            <li>Extractos bancarios y estados de cuenta</li>
+            <li>Facturas con múltiples líneas de productos</li>
+            <li>Informes de ventas o inventario</li>
+            <li>Tablas de datos estadísticos o científicos</li>
+            <li>Presupuestos y comparativas de precios</li>
+        </ul>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
+        <p><strong>¿Funciona con PDFs escaneados?</strong><br>Los PDFs escaneados son imágenes. Necesitas primero aplicar <a href="/ocr-a-pdf/" style="color:#E8453C">OCR</a> para convertirlos en texto antes de extraer los datos a Excel.</p>
+        <p><strong>¿Las fórmulas se mantienen?</strong><br>No. El PDF contiene solo los valores finales, no las fórmulas originales de Excel. El archivo resultante tendrá los datos como valores estáticos.</p>
+        <p><strong>¿Qué pasa si el PDF tiene varias tablas por página?</strong><br>La herramienta detecta y extrae todas las tablas, colocando cada una en una hoja diferente del libro Excel.</p>
+
+    
+        <h3>¿Funciona con cualquier tabla de PDF?</h3>
+        <p>La herramienta detecta automáticamente las tablas del PDF, incluyendo tablas simples, tablas con celdas combinadas y tablas distribuidas en varias páginas. Para PDFs con tablas muy complejas o con diseños irregulares, puede ser necesario ajustar manualmente algunas celdas en Excel tras la conversión.</p>
+
+        <h3>¿Qué pasa si el PDF tiene texto además de tablas?</h3>
+        <p>La herramienta extrae preferentemente las tablas estructuradas. El texto fuera de tablas puede incluirse como texto plano en celdas separadas. Puedes eliminar fácilmente el texto no relevante una vez abierto el archivo en Excel.</p>
+
+        <h3>Alternativa para PDFs escaneados</h3>
+        <p>Si tu PDF es un escaneado (imagen), primero aplica <a href="/ocr-a-pdf/" style="color:#E8453C">OCR al PDF</a> para convertir las imágenes en texto seleccionable. Después, la conversión a Excel funcionará correctamente y extraerá las tablas con precisión.</p>
+</div>
+    </section>
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p></footer>
+<script src="/js/convert.js" defer></script>
+<script>
+const ACTION = 'pdf-to-office';
+const EXTRA_DATA = {"format":"xlsx"};
+let resultBlob = null, resultFilename = '';
+
+const uploadZone = document.getElementById('uploadZone');
+const fileInput = document.getElementById('fileInput');
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault(); uploadZone.classList.remove('dragover');
+    if (e.dataTransfer.files[0]) processFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) processFile(e.target.files[0]); });
+document.getElementById('dlBtn').addEventListener('click', () => {
+    if (resultBlob) downloadBlob(resultBlob, resultFilename);
+});
+
+async function processFile(file) {
+    uploadZone.style.display = 'none';
+    document.getElementById('errorMsg').classList.remove('show');
+    document.getElementById('stepProgress').classList.add('active');
+    document.getElementById('progressLabel').textContent = 'Subiendo y convirtiendo...';
+    document.getElementById('progressBar').style.width = '0%';
+
+    try {
+        const result = await convertFile(file, ACTION, EXTRA_DATA, (pct, label) => {
+            document.getElementById('progressLabel').textContent = label;
+            document.getElementById('progressBar').style.width = pct + '%';
+        });
+        resultBlob = result.blob;
+        resultFilename = result.filename;
+        document.getElementById('resultDesc').textContent = `${result.filename} · ${formatSize(result.size)}`;
+        document.getElementById('stepProgress').classList.remove('active');
+        document.getElementById('resultArea').classList.add('active');
+    } catch (err) {
+        document.getElementById('stepProgress').classList.remove('active');
+        document.getElementById('errorMsg').textContent = err.message;
+        document.getElementById('errorMsg').classList.add('show');
+        uploadZone.style.display = '';
+    }
+}
+
+function reset() {
+    resultBlob = null; resultFilename = '';
+    fileInput.value = '';
+    uploadZone.style.display = '';
+    document.getElementById('errorMsg').classList.remove('show');
+    ['stepProgress', 'resultArea'].forEach(id => document.getElementById(id).classList.remove('active'));
+}
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

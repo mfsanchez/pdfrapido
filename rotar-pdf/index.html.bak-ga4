@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="rotar PDF, girar PDF, rotar páginas PDF online, rotar PDF gratis, corregir orientación PDF">
+    <meta name="description" content="Rota las páginas de un PDF gratis y sin registro. Gira páginas individualmente o todas a la vez: 90°, 180° o 270°. Sin instalar nada, en segundos.">
+    <meta name="author" content="MF Sanchez">
+    <title>Rotar PDF Online Gratis — Gira Páginas de tu PDF | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#8E44AD;--accent-light:#F3E5F5;--accent-dark:#6C3483;--g50:#F9FAFB;--g100:#F3F4F6;--g200:#E5E7EB;--g300:#D1D5DB;--g400:#9CA3AF;--g500:#6B7280;--g600:#4B5563;--g700:#374151;--g800:#1F2937;--r:12px;--rl:16px;--rxl:24px;--sl:0 10px 25px -3px rgba(0,0,0,.08)}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--g800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--g200)}.ni{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.li{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.lt{font-size:20px;font-weight:700;letter-spacing:-.5px}.lt span{color:var(--primary)}.nb{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--g500);font-size:14px;font-weight:500}.nb:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:700px;margin:0 auto;width:100%}
+        .th{text-align:center;margin-bottom:36px}.th .ib{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.th h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.th p{font-size:16px;color:var(--g500)}
+        .uz{border:2px dashed var(--g300);border-radius:var(--rxl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--g50)}.uz:hover{border-color:var(--accent)}.ui{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.uz:hover .ui{transform:translateY(-4px)}.uz h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.uz h3 span{color:var(--accent)}.uz p{font-size:14px;color:var(--g400)}.uz input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .fc{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);padding:16px 20px;display:flex;align-items:center;gap:14px;margin-bottom:20px}.fci{width:40px;height:40px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}.fcinfo{flex:1;min-width:0}.fcinfo h4{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fcinfo span{font-size:12px;color:var(--g400)}
+        .rot-options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+        .rot-btn{border:2px solid var(--g200);border-radius:var(--r);padding:20px 12px;text-align:center;cursor:pointer;transition:all .25s;background:#fff}.rot-btn:hover{border-color:var(--accent)}.rot-btn.selected{border-color:var(--accent);background:rgba(142,68,173,.05)}
+        .rot-btn .rot-icon{font-size:28px;margin-bottom:6px;display:block;transition:transform .3s}.rot-btn:hover .rot-icon{transform:rotate(var(--deg))}
+        .rot-btn h5{font-size:14px;font-weight:600;color:var(--g800)}.rot-btn span{font-size:12px;color:var(--g400)}
+        .range-row{background:var(--g50);border:1px solid var(--g200);border-radius:var(--r);padding:14px 16px;margin-bottom:24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+        .range-row label{font-size:13px;font-weight:500;color:var(--g700);white-space:nowrap}.range-row select,.range-row input{padding:8px 12px;border:1px solid var(--g200);border-radius:8px;font-family:inherit;font-size:14px;outline:none;background:#fff}.range-row input{flex:1;min-width:120px}
+        .ab{width:100%;padding:16px;border:none;border-radius:var(--r);background:var(--accent);color:#fff;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}.ab:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 4px 14px rgba(142,68,173,.3)}
+        .ra{display:none;animation:fadeInUp .5s ease-out}.ra.active{display:block}.rc{background:#fff;border:1px solid var(--g200);border-radius:var(--rxl);padding:36px;text-align:center;box-shadow:var(--sl);position:relative;overflow:hidden}.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#AB47BC)}.rsi{width:64px;height:64px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:si .4s cubic-bezier(.34,1.56,.64,1)}@keyframes si{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.rc h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.rc .desc{font-size:14px;color:var(--g400);margin-bottom:24px}.rac{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .bd{padding:14px 32px;border:none;border-radius:var(--r);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:8px}.bd:hover{background:var(--accent-dark)}.br{padding:14px 24px;border:1px solid var(--g200);border-radius:var(--r);background:#fff;color:var(--g600);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}.br:hover{background:var(--g50)}
+        .seo{max-width:700px;margin:60px auto 0}.seo h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo p{font-size:15px;color:var(--g500);line-height:1.7;margin-bottom:12px}
+        .ad{background:var(--g50);border:1px dashed var(--g300);border-radius:var(--r);padding:16px;text-align:center;color:var(--g400);font-size:13px;margin-top:40px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:640px){main{padding:100px 16px 40px}.th h1{font-size:26px}.uz{padding:40px 24px}.rot-options{grid-template-columns:1fr}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+                .seo-content {
+            max-width: 700px;
+            margin: 60px auto 0;
+            padding: 0 4px;
+        }
+        .seo-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .seo-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin: 28px 0 10px;
+        }
+        .seo-content p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .seo-content ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .seo-content li {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <link rel="canonical" href="https://pdfrapido.eu/rotar-pdf/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Rotar PDF Online Gratis",
+          "url": "https://pdfrapido.eu/rotar-pdf/",
+          "description": "Gira páginas de tu PDF online gratis. Rota 90°, 180° o 270°. Página a página o todo el documento.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+  "publisher": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Rotar PDF Online Gratis",
+              "item": "https://pdfrapido.eu/rotar-pdf/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo rotar las páginas de un PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sube el PDF, selecciona las páginas que quieres girar (o selecciona todas), elige el ángulo de rotación (90°, 180° o 270°) y descarga el PDF corregido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo rotar solo algunas páginas del PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, puedes seleccionar individualmente qué páginas rotar y en qué sentido. Muy útil cuando solo algunas páginas de un documento están en orientación incorrecta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La rotación es permanente en el PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, la rotación se guarda permanentemente en el PDF. Ya no necesitarás rotar la pantalla ni usar el visor para ver el documento correctamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Afecta la rotación a la calidad del documento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, la rotación es una operación geométrica que no modifica ni comprime el contenido. La calidad del texto e imágenes se mantiene exactamente igual."
+          }
+        }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="Rotar PDF Online Gratis — Gira Páginas de tu PDF | PDFRápido">
+    <meta property="og:description" content="Rota las páginas de un PDF gratis y sin registro. Gira páginas individualmente o todas a la vez: 90°, 180° o 270°. Sin instalar nada, en segundos.">
+    <meta property="og:url" content="https://pdfrapido.eu/rotar-pdf/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rotar PDF Online Gratis — Gira Páginas de tu PDF | PDFRápido">
+    <meta name="twitter:description" content="Rota las páginas de un PDF gratis y sin registro. Gira páginas individualmente o todas a la vez: 90°, 180° o 270°. Sin instalar nada, en segundos.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+<nav><div class="ni"><a href="/" class="logo"><div class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="lt">PDF<span>Rápido</span></div></a><a href="/" class="nb"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a></div></nav>
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Rotar PDF</li>
+    </ol>
+</nav>
+<div class="th"><div class="ib"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div><h1>Rotar PDF</h1><p>Gira las páginas de tu PDF en la dirección que necesites.</p></div>
+    <div class="uz" id="uploadZone"><input type="file" accept=".pdf" id="fileInput"><div class="ui"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div><h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3><p>El archivo cuyas páginas quieres rotar</p></div>
+    <div class="step" id="stepOptions">
+        <div class="fc"><div class="fci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="fcinfo"><h4 id="fileName">doc.pdf</h4><span id="fileInfo">10 páginas · 2.4 MB</span></div></div>
+        <div class="rot-options">
+            <div class="rot-btn selected" data-deg="90" style="--deg:90deg" onclick="selRot(this)"><span class="rot-icon">↻</span><h5>90° derecha</h5><span>Giro horario</span></div>
+            <div class="rot-btn" data-deg="180" style="--deg:180deg" onclick="selRot(this)"><span class="rot-icon">↕</span><h5>180°</h5><span>Media vuelta</span></div>
+            <div class="rot-btn" data-deg="270" style="--deg:270deg" onclick="selRot(this)"><span class="rot-icon">↺</span><h5>90° izquierda</h5><span>Giro antihorario</span></div>
+        </div>
+        <div class="range-row">
+            <label>Aplicar a:</label>
+            <select id="applyTo" onchange="document.getElementById('customRange').style.display=this.value==='custom'?'':'none'">
+                <option value="all">Todas las páginas</option>
+                <option value="custom">Páginas específicas</option>
+            </select>
+            <input type="text" id="customRange" placeholder="Ej: 1-3, 5" style="display:none">
+        </div>
+        <button class="ab" onclick="rotatePDF()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Rotar PDF</button>
+    </div>
+    <div class="ra" id="resultArea"><div class="rc"><div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>PDF rotado correctamente</h3><p class="desc" id="resultDesc"></p><div class="rac"><button class="bd" onclick="dlPDF()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF rotado</button><button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Rotar otro</button></div></div></div>
+    <div class="ad">Espacio publicitario — Google AdSense</div>
+    <div class="seo"><h2>Cómo rotar un PDF online gratis</h2><p>Gira las páginas de tu PDF 90°, 180° o 270° de forma rápida y gratuita. Puedes rotar todas las páginas o solo las que necesites. Ideal para corregir documentos escaneados al revés.</p></div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/organizar-pdf/">Organizar páginas</a></li>
+            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
+            <li><a href="/numerar-paginas/">Numerar páginas</a></li>
+            <li><a href="/dividir-pdf/">Dividir PDF</a></li>
+            <li><a href="/unir-pdf/">Unir PDF</a></li>
+        </ul>
+    </div>
+    <!-- SEO CONTENT -->
+    <div class="seo-content">
+        <h2>Cómo rotar páginas de un PDF online gratis</h2>
+        <p>Gira las páginas de tu PDF a la orientación correcta. Puedes rotar páginas individuales o todas a la vez: 90°, 180° o 270°. Ideal para corregir documentos escaneados en la orientación equivocada.</p>
+
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>Sube tu archivo PDF.</li>
+            <li>Selecciona las páginas que quieres rotar.</li>
+            <li>Elige el ángulo de rotación: 90°, 180° o 270°.</li>
+            <li>Descarga el PDF con las páginas correctamente orientadas.</li>
+        </ul>
+
+        <h3>¿Por qué usar esta herramienta?</h3>
+        <p>Rotar PDFs es esencial para corregir documentos escaneados en horizontal, páginas subidas al revés o fotos insertadas en la orientación incorrecta.</p>
+
+        <h3>Seguridad y privacidad</h3>
+        <p>La rotación se procesa localmente en tu navegador. No subimos tus archivos a ningún servidor.</p>
+
+        <h3>Preguntas frecuentes</h3>
+        <details>
+            <summary>¿Puedo rotar solo algunas páginas?</summary>
+            <p>Sí, puedes seleccionar páginas individuales o rangos para rotar sin afectar el resto del documento.</p>
+        </details>
+        <details>
+            <summary>¿La rotación pierde calidad?</summary>
+            <p>No, la rotación es una transformación sin pérdida. El contenido mantiene su calidad original.</p>
+        </details>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/organizar-pdf/">Organizar PDF</a></li>
+            <li><a href="/eliminar-paginas/">Eliminar Páginas</a></li>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
+            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
+        </ul>
+    </div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Rotar PDF?</h2>
+  <p>Usar Rotar PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Carga el PDF</h3>
+          <p>Sube el PDF que tiene páginas en orientación incorrecta. Puedes ver una previsualización de todas las páginas.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Selecciona las páginas y la rotación</h3>
+          <p>Elige si rotar todas las páginas o solo las que necesitan corrección. Indica si quieres girarlas 90, 180 o 270 grados en sentido horario o antihorario.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga el PDF corregido</h3>
+          <p>El PDF con las páginas en la orientación correcta está listo en segundos. No hay pérdida de calidad en el proceso.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Rotar PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Corregir páginas escaneadas en horizontal</strong>
+        <span>Los escáneres a veces capturan páginas en orientación horizontal cuando el documento es vertical. Esta herramienta corrige todas las páginas problemáticas de una vez.</span>
+      </div>
+      <div class="use-case">
+        <strong>Preparar documentos de apaisado</strong>
+        <span>Las hojas de cálculo anchas, planos e infografías suelen estar en orientación horizontal. Rotar esas páginas específicas dentro de un documento mixto garantiza la correcta visualización.</span>
+      </div>
+      <div class="use-case">
+        <strong>Corregir fotos de documentos tomadas en vertical</strong>
+        <span>Las fotos tomadas con el móvil a veces quedan giradas al convertirlas a PDF. Rotar esas páginas las deja en la orientación natural de lectura.</span>
+      </div>
+      <div class="use-case">
+        <strong>Preparar documentos para encuadernación</strong>
+        <span>Algunos formatos de encuadernación o presentación requieren que ciertas páginas estén giradas. Esta herramienta aplica la rotación exacta que necesitas.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Rotar PDF</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿La rotación afecta a la calidad de las imágenes del PDF?</h3>
+        <p>No. Rotar un PDF es una operación matemática que modifica la orientación del contenido sin re-renderizar ni comprimir los elementos del documento. La calidad es idéntica al original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo rotar solo algunas páginas y dejar el resto como están?</h3>
+        <p>Sí. Puedes seleccionar páginas individuales o rangos y aplicar la rotación solo a esas páginas, dejando el resto en su orientación original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿El PDF rotado ocupa más espacio que el original?</h3>
+        <p>No. La rotación no añade datos al archivo PDF. El tamaño del documento resultante es prácticamente idéntico al del original.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
+    <div style="font-size:14px;color:#6B7280;line-height:1.75">
+        <p>Rota las páginas de un PDF a 90°, 180° o 270°. Puedes rotar todas las páginas o solo las que necesites, y guardar la orientación para siempre en el archivo.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Por qué rotar un PDF?</h2>
+        <p>El problema más común ocurre al escanear documentos: el escáner guarda la imagen en horizontal cuando debería ser vertical, o viceversa. También pasa con páginas apaisadas en documentos verticales, o con fotos tomadas con el móvil en orientación incorrecta.</p>
+        <p>Rotar el PDF soluciona permanentemente la orientación. A diferencia de rotar la pantalla para leer, la rotación se guarda en el archivo y afecta a todos los dispositivos.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
+        <p><strong>¿Puedo rotar solo algunas páginas?</strong><br>Sí. Puedes seleccionar páginas individuales y rotarlas de forma independiente. Útil cuando solo algunas páginas están mal orientadas.</p>
+        <p><strong>¿La rotación afecta a la calidad del PDF?</strong><br>No. La rotación es una operación matemática que no recomprime ni modifica el contenido del PDF. La calidad se mantiene idéntica.</p>
+        <p><strong>¿Se puede deshacer la rotación?</strong><br>No hay botón de deshacer, pero puedes volver a aplicar la herramienta y rotar en sentido contrario para volver a la orientación original.</p>
+
+    </div>
+    </section>
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p></footer>
+<script src="/js/pdf-lib.min.js"></script>
+<script>
+let file=null,blob=null,deg=90,totalP=0;
+document.getElementById('fileInput').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;file=f;const b=await f.arrayBuffer();const d=await PDFLib.PDFDocument.load(b);totalP=d.getPageCount();document.getElementById('fileName').textContent=f.name;document.getElementById('fileInfo').textContent=`${totalP} páginas · ${fs(f.size)}`;document.getElementById('uploadZone').style.display='none';document.getElementById('stepOptions').classList.add('active')});
+function selRot(el){document.querySelectorAll('.rot-btn').forEach(b=>b.classList.remove('selected'));el.classList.add('selected');deg=parseInt(el.dataset.deg)}
+function parseRange(s,max){const p=new Set();s.split(',').forEach(part=>{part=part.trim();if(part.includes('-')){const[a,b]=part.split('-').map(Number);if(!isNaN(a)&&!isNaN(b))for(let i=Math.max(1,a);i<=Math.min(max,b);i++)p.add(i)}else{const n=parseInt(part);if(!isNaN(n)&&n>=1&&n<=max)p.add(n)}});return[...p]}
+async function rotatePDF(){if(!file)return;try{const b=await file.arrayBuffer();const doc=await PDFLib.PDFDocument.load(b);const apply=document.getElementById('applyTo').value;let pages;if(apply==='all')pages=doc.getPages();else{const indices=parseRange(document.getElementById('customRange').value,totalP);if(!indices.length){alert('Introduce páginas válidas.');return}pages=indices.map(i=>doc.getPage(i-1))}
+pages.forEach(p=>{const cur=p.getRotation().angle;p.setRotation(PDFLib.degrees(cur+deg))});doc.setProducer('PDFRápido');const out=await doc.save({useObjectStreams:true});blob=new Blob([out],{type:'application/pdf'});document.getElementById('resultDesc').textContent=`${pages.length} página${pages.length>1?'s':''} rotada${pages.length>1?'s':''} ${deg}°`;document.getElementById('stepOptions').classList.remove('active');document.getElementById('resultArea').classList.add('active')}catch(err){console.error(err);alert('Error al rotar el PDF.')}}
+function dlPDF(){if(!blob)return;const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=file.name.replace(/\.pdf$/i,'')+'_rotado.pdf';document.body.appendChild(a);a.click();document.body.removeChild(a)}
+function reset(){file=null;blob=null;document.getElementById('fileInput').value='';document.getElementById('uploadZone').style.display='';['stepOptions','resultArea'].forEach(id=>document.getElementById(id).classList.remove('active'))}
+function fs(b){return b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(1)+' MB'}
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="proteger PDF contraseña, cifrar PDF, PDF con contraseña online gratis, bloquear PDF, password PDF">
+    <meta name="description" content="Protege un PDF con contraseña gratis y sin registro. Cifra tu PDF con AES-256 para evitar accesos no autorizados. Sin instalar nada, en segundos.">
+    <meta name="author" content="MF Sanchez">
+    <title>Proteger PDF con Contraseña Online Gratis | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#00897B;--accent-light:#E0F2F1;--accent-dark:#00695C;--gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;--gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--radius:12px;--radius-lg:16px;--radius-xl:24px;--shadow-lg:0 10px 25px -3px rgba(0,0,0,.08)}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--gray-800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.logo-text{font-size:20px;font-weight:700;letter-spacing:-.5px}.logo-text span{color:var(--primary)}.nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--gray-500);font-size:14px;font-weight:500}.nav-back:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:600px;margin:0 auto;width:100%}
+        .tool-header{text-align:center;margin-bottom:36px}.tool-header .icon-badge{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.tool-header h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.tool-header p{font-size:16px;color:var(--gray-500)}
+        .upload-zone{border:2px dashed var(--gray-300);border-radius:var(--radius-xl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--gray-50)}.upload-zone:hover{border-color:var(--accent)}.upload-icon{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.upload-zone:hover .upload-icon{transform:translateY(-4px)}.upload-zone h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.upload-zone h3 span{color:var(--accent)}.upload-zone p{font-size:14px;color:var(--gray-400)}.upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .file-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:16px 20px;display:flex;align-items:center;gap:14px;margin-bottom:24px}.file-card-icon{width:40px;height:40px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}.file-card-info{flex:1;min-width:0}.file-card-info h4{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.file-card-info span{font-size:12px;color:var(--gray-400)}
+        .password-form{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px;margin-bottom:24px}
+        .password-form label{display:block;font-size:14px;font-weight:500;color:var(--gray-700);margin-bottom:8px}
+        .pw-input-wrap{position:relative;margin-bottom:16px}
+        .pw-input-wrap input{width:100%;padding:12px 44px 12px 16px;border:1px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:15px;outline:none;transition:border-color .2s}
+        .pw-input-wrap input:focus{border-color:var(--accent)}
+        .pw-toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gray-400)}
+        .pw-strength{height:4px;border-radius:2px;background:var(--gray-100);overflow:hidden;margin-bottom:6px}
+        .pw-strength-fill{height:100%;border-radius:2px;transition:all .3s;width:0}
+        .pw-hint{font-size:12px;color:var(--gray-400)}
+        .action-btn{width:100%;padding:16px;border:none;border-radius:var(--radius);background:var(--accent);color:#fff;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}.action-btn:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,137,123,.3)}.action-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+        .result-area{display:none;animation:fadeInUp .5s ease-out}.result-area.active{display:block}
+        .result-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:36px;text-align:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#4DB6AC)}
+        .result-success-icon{width:64px;height:64px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:scaleIn .4s cubic-bezier(.34,1.56,.64,1)}@keyframes scaleIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.result-card h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.result-card .desc{font-size:14px;color:var(--gray-400);margin-bottom:24px}
+        .result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .btn-download{padding:14px 32px;border:none;border-radius:var(--radius);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:8px}.btn-download:hover{background:var(--accent-dark)}
+        .btn-reset{padding:14px 24px;border:1px solid var(--gray-200);border-radius:var(--radius);background:#fff;color:var(--gray-600);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}.btn-reset:hover{background:var(--gray-50)}
+        .seo-content{max-width:700px;margin:60px auto 0}.seo-content h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo-content p{font-size:15px;color:var(--gray-500);line-height:1.7;margin-bottom:12px}
+        .ad-placeholder{background:var(--gray-50);border:1px dashed var(--gray-300);border-radius:var(--radius);padding:16px;text-align:center;color:var(--gray-400);font-size:13px;margin-top:40px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:640px){main{padding:100px 16px 40px}.tool-header h1{font-size:26px}.upload-zone{padding:40px 24px}}
+        @keyframes spin{to{transform:rotate(360deg)}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <link rel="canonical" href="https://pdfrapido.eu/proteger-pdf/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Proteger PDF con Contraseña Online Gratis",
+          "url": "https://pdfrapido.eu/proteger-pdf/",
+          "description": "Añade contraseña a tus PDFs para protegerlos. Cifrado AES-256. Gratis y sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "inLanguage": "es",
+  "publisher": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "PDFRápido",
+              "item": "https://pdfrapido.eu"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Proteger PDF con Contraseña Online Gratis",
+              "item": "https://pdfrapido.eu/proteger-pdf/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo poner contraseña a un PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sube el PDF, introduce la contraseña que quieres usar, elige los permisos (solo lectura, sin impresión, sin copia...) y pulsa proteger. El PDF se cifrará con AES-256."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué nivel de seguridad tiene el cifrado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PDFRápido aplica cifrado AES-256, el estándar de seguridad más robusto disponible para PDFs, utilizado también por bancos y administraciones públicas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo proteger solo con contraseña de edición pero no de apertura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, puedes añadir una contraseña de permisos que impida editar, copiar texto o imprimir el documento, pero que permita abrirlo y leerlo sin contraseña."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si pierdo la contraseña del PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si pierdes la contraseña no hay forma de recuperarla. Te recomendamos guardar la contraseña en un gestor de contraseñas seguro antes de proteger el documento."
+          }
+        }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="Proteger PDF con Contraseña Online Gratis | PDFRápido">
+    <meta property="og:description" content="Protege un PDF con contraseña gratis y sin registro. Cifra tu PDF con AES-256 para evitar accesos no autorizados. Sin instalar nada, en segundos.">
+    <meta property="og:url" content="https://pdfrapido.eu/proteger-pdf/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Proteger PDF con Contraseña Online Gratis | PDFRápido">
+    <meta name="twitter:description" content="Protege un PDF con contraseña gratis y sin registro. Cifra tu PDF con AES-256 para evitar accesos no autorizados. Sin instalar nada, en segundos.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/" class="logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="logo-text">PDF<span>Rápido</span></div></a><a href="/" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a></div></nav>
+
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Proteger PDF</li>
+    </ol>
+</nav>
+<div class="tool-header">
+        <div class="icon-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg></div>
+        <h1>Proteger PDF</h1>
+        <p>Añade una contraseña a tu archivo PDF para protegerlo.</p>
+    </div>
+
+    <div class="upload-zone" id="uploadZone">
+        <input type="file" accept=".pdf" id="fileInput">
+        <div class="upload-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
+        <p>El archivo que quieres proteger</p>
+    </div>
+
+    <div class="step" id="stepPassword">
+        <div class="file-card">
+            <div class="file-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="file-card-info"><h4 id="fileName">doc.pdf</h4><span id="fileSize">2.4 MB</span></div>
+        </div>
+        <div class="password-form">
+            <label>Contraseña</label>
+            <div class="pw-input-wrap">
+                <input type="password" id="pw1" placeholder="Escribe una contraseña" oninput="checkStrength()">
+                <button class="pw-toggle" onclick="togglePw('pw1', this)" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            </div>
+            <div class="pw-strength"><div class="pw-strength-fill" id="pwStrength"></div></div>
+            <p class="pw-hint" id="pwHint">Mínimo 4 caracteres</p>
+            <label style="margin-top:16px">Repetir contraseña</label>
+            <div class="pw-input-wrap">
+                <input type="password" id="pw2" placeholder="Repite la contraseña">
+                <button class="pw-toggle" onclick="togglePw('pw2', this)" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            </div>
+        </div>
+        <button class="action-btn" id="protectBtn" onclick="protectPDF()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Proteger PDF
+        </button>
+    </div>
+
+    <div class="result-area" id="resultArea">
+        <div class="result-card">
+            <div class="result-success-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>PDF protegido correctamente</h3>
+            <p class="desc">Tu PDF ahora requiere contraseña para abrirse</p>
+            <div class="result-actions">
+                <button class="btn-download" onclick="downloadPDF()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF protegido</button>
+                <button class="btn-reset" onclick="resetTool()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Proteger otro</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-placeholder">Espacio publicitario — Google AdSense</div>
+    <div class="seo-content">
+        <h2>Cómo proteger un PDF con contraseña online</h2>
+        <p>Añade una contraseña de seguridad a cualquier archivo PDF de forma gratuita. Una vez protegido, el documento solo se podrá abrir introduciendo la contraseña correcta.</p>
+        <p>El cifrado AES-256 se aplica mediante qpdf en el servidor. El archivo se elimina automáticamente tras la descarga.</p>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/desbloquear-pdf/">Desbloquear PDF</a></li>
+            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
+            <li><a href="/marca-agua/">Marca de agua</a></li>
+            <li><a href="/redactar-pdf/">Redactar PDF</a></li>
+            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
+        </ul>
+    
+        <h3>Tipos de protección disponibles</h3>
+        <p>Existen dos tipos de contraseña en un PDF: la contraseña de apertura (el destinatario necesita introducirla para ver el documento) y la contraseña de permisos (restringe acciones como imprimir, copiar texto o editar sin contraseña, aunque el documento puede abrirse sin ella).</p>
+
+        <h3>¿Qué tan segura es la protección de un PDF?</h3>
+        <p>PDFRápido usa cifrado AES de 256 bits, el mismo estándar que usan los bancos y gobiernos. Con una contraseña robusta (más de 12 caracteres combinando letras, números y símbolos), un PDF protegido es prácticamente imposible de forzar.</p>
+
+        <h3>Consejos para elegir una buena contraseña</h3>
+        <ul>
+            <li>Usa al menos 12 caracteres</li>
+            <li>Combina mayúsculas, minúsculas, números y símbolos</li>
+            <li>Evita palabras del diccionario, fechas de nacimiento o nombres</li>
+            <li>Guarda la contraseña en un gestor de contraseñas — si la olvidas, no hay forma de recuperar el acceso al PDF</li>
+        </ul>
+
+        <h3>¿Se puede proteger un PDF ya existente sin modificar el contenido?</h3>
+        <p>Sí. La herramienta añade la protección al PDF existente sin modificar su contenido, formato ni estructura. El resultado es idéntico al original pero con la contraseña añadida.</p>
+</div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Proteger PDF con contraseña?</h2>
+  <p>Usar Proteger PDF con contraseña en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Sube el PDF que quieres proteger</h3>
+          <p>Carga el documento que necesitas asegurar. La herramienta acepta PDFs de cualquier tamaño y sin necesidad de registro.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Establece la contraseña</h3>
+          <p>Introduce la contraseña de apertura que quieres asignar. Puedes añadir también una contraseña de propietario para restringir la impresión, copia de texto o edición del documento.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga el PDF protegido</h3>
+          <p>Obtén el PDF cifrado con encriptación de 128 o 256 bits. Solo quien conozca la contraseña podrá abrirlo.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Proteger PDF con contraseña es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Proteger contratos y documentos legales confidenciales</strong>
+        <span>Antes de enviar un contrato por correo electrónico, protégelo con contraseña y comunica la clave al destinatario por otro canal para garantizar que solo él pueda acceder.</span>
+      </div>
+      <div class="use-case">
+        <strong>Asegurar información personal sensible</strong>
+        <span>Documentos con datos médicos, financieros o personales deben protegerse antes de almacenarse en la nube o enviarse a terceros para evitar accesos no autorizados.</span>
+      </div>
+      <div class="use-case">
+        <strong>Controlar quién puede imprimir o copiar el PDF</strong>
+        <span>La contraseña de propietario permite enviar un PDF que el destinatario puede leer pero no imprimir ni copiar, protegiendo la propiedad intelectual y el contenido exclusivo.</span>
+      </div>
+      <div class="use-case">
+        <strong>Cumplir con normativas de protección de datos</strong>
+        <span>El RGPD exige proteger adecuadamente los datos personales en tránsito. Cifrar los PDFs que contienen datos personales es una medida de seguridad recomendada.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Proteger PDF con contraseña</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿Qué nivel de cifrado se aplica a la contraseña?</h3>
+        <p>La herramienta aplica cifrado AES de 128 o 256 bits, el estándar de la industria para la protección de documentos PDF. Es el mismo nivel de seguridad que usan bancos y empresas para proteger información sensible.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo establecer permisos diferentes para distintos usuarios?</h3>
+        <p>El estándar PDF permite dos contraseñas: una de apertura para leer el documento y una de propietario para modificar los permisos. Con dos contraseñas puedes controlar el acceso de lectura y el de edición por separado.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué ocurre si olvido la contraseña?</h3>
+        <p>Por razones de seguridad, es imposible recuperar la contraseña una vez establecida sin herramientas especializadas de recuperación. Guarda siempre la contraseña en un gestor de contraseñas seguro.</p>
+      </div>
+  </div>
+</section>
+</main>
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p></footer>
+
+<script src="/js/main.js" defer></script>
+<script>
+let originalFile = null, protectedBlob = null;
+
+document.getElementById('fileInput').addEventListener('change', e => {
+    const f = e.target.files[0]; if (!f) return;
+    originalFile = f;
+    document.getElementById('fileName').textContent = f.name;
+    document.getElementById('fileSize').textContent = formatFileSize(f.size);
+    document.getElementById('uploadZone').style.display = 'none';
+    document.getElementById('stepPassword').classList.add('active');
+});
+
+function togglePw(id, btn) {
+    const inp = document.getElementById(id);
+    inp.type = inp.type === 'password' ? 'text' : 'password';
+}
+
+function checkStrength() {
+    const pw = document.getElementById('pw1').value;
+    const bar = document.getElementById('pwStrength');
+    const hint = document.getElementById('pwHint');
+    let strength = 0, color = '#E8453C';
+    if (pw.length >= 4) strength = 25;
+    if (pw.length >= 6) strength = 50;
+    if (pw.length >= 8 && /[A-Z]/.test(pw) && /[0-9]/.test(pw)) strength = 75;
+    if (pw.length >= 10 && /[^A-Za-z0-9]/.test(pw)) strength = 100;
+    if (strength >= 75) color = '#34A853';
+    else if (strength >= 50) color = '#F5913E';
+    bar.style.width = strength + '%';
+    bar.style.background = color;
+    const labels = ['Muy débil', 'Débil', 'Aceptable', 'Fuerte', 'Muy fuerte'];
+    hint.textContent = pw.length < 4 ? 'Mínimo 4 caracteres' : labels[Math.floor(strength / 25)];
+}
+
+async function protectPDF() {
+    const pw1 = document.getElementById('pw1').value;
+    const pw2 = document.getElementById('pw2').value;
+    if (pw1.length < 4) { alert('La contraseña debe tener al menos 4 caracteres.'); return; }
+    if (pw1 !== pw2) { alert('Las contraseñas no coinciden.'); return; }
+    if (!originalFile) return;
+
+    const btn = document.getElementById('protectBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 1 1-9-9"/></svg> Protegiendo…';
+
+    try {
+        const result = await apiConvert(originalFile, 'protect-pdf', { password: pw1 });
+        protectedBlob = result.blob;
+        document.getElementById('stepPassword').classList.remove('active');
+        document.getElementById('resultArea').classList.add('active');
+    } catch (err) {
+        console.error(err);
+        alert('Error al proteger el PDF: ' + (err.message || 'Inténtalo de nuevo.'));
+    }
+
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Proteger PDF';
+}
+
+function downloadPDF() {
+    if (!protectedBlob) return;
+    downloadBlob(protectedBlob, originalFile.name.replace(/\.pdf$/i, '') + '_protegido.pdf');
+}
+
+function resetTool() {
+    originalFile = null; protectedBlob = null;
+    document.getElementById('fileInput').value = '';
+    document.getElementById('pw1').value = ''; document.getElementById('pw2').value = '';
+    document.getElementById('pwStrength').style.width = '0';
+    document.getElementById('uploadZone').style.display = '';
+    ['stepPassword', 'resultArea'].forEach(id => document.getElementById(id).classList.remove('active'));
+}
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>

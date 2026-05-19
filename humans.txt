@@ -1,0 +1,13 @@
+/* TEAM */
+    Founder: MF Sanchez
+    Site: https://mfsanchez.com
+    Twitter: @mfsanchez
+
+/* SITE */
+    Last update: 2026-05-19
+    Standards: HTML5, CSS3, JavaScript
+    Components: Node.js
+    Software: PDFRápido
+
+/* THANKS */
+    Name: Comunidad de usuarios de PDFRápido

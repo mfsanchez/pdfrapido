@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="extraer páginas PDF, extraer páginas de PDF, guardar páginas PDF, seleccionar páginas PDF online">
+    <meta name="description" content="Extrae páginas de un PDF gratis y sin registro. Selecciona las páginas que quieres conservar y descarga un nuevo PDF solo con ellas. Rápido y seguro.">
+    <meta name="author" content="MF Sanchez">
+    <title>Extraer Páginas de PDF Gratis Online | PDFRápido</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <style>
+:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#4285F4;--accent-light:#EBF2FE;--accent-dark:#2B6BD0;--g50:#F9FAFB;--g200:#E5E7EB;--g300:#D1D5DB;--g400:#9CA3AF;--g500:#6B7280;--g700:#374151;--g800:#1F2937;--r:12px;--rl:16px;--rxl:24px;--sl:0 10px 25px -3px rgba(0,0,0,.08)}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--g800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--g200)}.ni{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.li{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.lt{font-size:20px;font-weight:700;letter-spacing:-.5px}.lt span{color:var(--primary)}.nb{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--g500);font-size:14px;font-weight:500}.nb:hover{color:var(--primary)}
+        main{flex:1;padding:104px 24px 60px;max-width:700px;margin:0 auto;width:100%}
+        .th{text-align:center;margin-bottom:36px}.th .ib{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.th h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.th p{font-size:16px;color:var(--g500)}
+        .uz{border:2px dashed var(--g300);border-radius:var(--rxl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--g50)}.uz:hover{border-color:var(--accent)}.ui{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.uz:hover .ui{transform:translateY(-4px)}.uz h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.uz h3 span{color:var(--accent)}.uz p{font-size:14px;color:var(--g400)}.uz input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
+        .fc{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);padding:16px 20px;display:flex;align-items:center;gap:14px;margin-bottom:20px}.fci{width:40px;height:40px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}.fcinfo{flex:1;min-width:0}.fcinfo h4{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fcinfo span{font-size:12px;color:var(--g400)}
+        .sel-actions{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+        .sel-btn{padding:6px 14px;border:1px solid var(--g200);border-radius:20px;background:#fff;color:var(--g500);font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s}.sel-btn:hover{border-color:var(--accent);color:var(--accent)}
+        .pages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:10px;margin-bottom:20px;max-height:440px;overflow-y:auto;padding:2px}
+        .page-btn{border:2px solid var(--g200);border-radius:8px;cursor:pointer;transition:all .2s;background:#fff;overflow:hidden;display:flex;flex-direction:column;align-items:center}
+        .page-btn:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+        .page-btn.keep{border-color:#34A853;background:rgba(52,168,83,.06)}
+        .page-btn canvas{width:100%;height:auto;display:block}
+        .page-btn.keep canvas{opacity:1}
+        .page-btn:not(.keep) canvas{opacity:.5}
+        .pg-num{font-size:11px;font-weight:600;color:var(--g500);padding:4px 0;text-align:center}
+        .page-btn.keep .pg-num{color:#34A853}
+        .pg-loading{background:var(--g50);min-height:80px;width:100%;display:flex;align-items:center;justify-content:center;color:var(--g400);font-size:11px}
+        .hint{font-size:13px;color:var(--g400);margin-bottom:24px;text-align:center}
+        .ab{width:100%;padding:16px;border:none;border-radius:var(--r);background:#34A853;color:#fff;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}.ab:hover{background:#2D9147;transform:translateY(-1px)}.ab:disabled{opacity:.5;cursor:not-allowed;transform:none}
+        .ra{display:none;animation:fadeInUp .5s ease-out}.ra.active{display:block}.rc{background:#fff;border:1px solid var(--g200);border-radius:var(--rxl);padding:36px;text-align:center;box-shadow:var(--sl);position:relative;overflow:hidden}.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#34A853,#81C784)}.rsi{width:64px;height:64px;border-radius:50%;background:#E8F5E9;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:si .4s cubic-bezier(.34,1.56,.64,1)}@keyframes si{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.rc h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.rc .desc{font-size:14px;color:var(--g400);margin-bottom:24px}.rac{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .bd{padding:14px 32px;border:none;border-radius:var(--r);background:#34A853;color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px}.bd:hover{background:#2D9147}.br{padding:14px 24px;border:1px solid var(--g200);border-radius:var(--r);background:#fff;color:var(--g500);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px}.br:hover{background:var(--g50)}
+        .ad{background:var(--g50);border:1px dashed var(--g300);border-radius:var(--r);padding:16px;text-align:center;color:var(--g400);font-size:13px;margin-top:40px}
+        .seo{max-width:700px;margin:60px auto 0}.seo h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo p{font-size:15px;color:var(--g500);line-height:1.7;margin-bottom:12px}
+        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:640px){main{padding:100px 16px 40px}.th h1{font-size:26px}.uz{padding:40px 24px}}
+    
+        /* ── RELATED TOOLS ── */
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+                .seo-content {
+            max-width: 700px;
+            margin: 60px auto 0;
+            padding: 0 4px;
+        }
+        .seo-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .seo-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin: 28px 0 10px;
+        }
+        .seo-content p {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .seo-content ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+        .seo-content li {
+            font-size: 15px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+        .related-tools {
+            max-width: 700px;
+            margin: 40px auto 0;
+            padding: 28px;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+        .related-tools h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 16px;
+        }
+        .related-tools ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-tools ul li a {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #fff;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .related-tools ul li a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-93B5VKXW7W');
+</script>
+    <link rel="canonical" href="https://pdfrapido.eu/extraer-paginas/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Extraer páginas de PDF Online Gratis",
+          "url": "https://pdfrapido.eu/extraer-paginas/",
+          "description": "Selecciona las páginas que quieres conservar y descarga el nuevo PDF. Gratis y sin registro.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+          "inLanguage": "es",
+  "publisher": {
+    "@type": "Person",
+    "name": "MF Sanchez",
+    "url": "https://mfsanchez.com"
+  }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "PDFRápido", "item": "https://pdfrapido.eu" },
+            { "@type": "ListItem", "position": 2, "name": "Extraer páginas PDF", "item": "https://pdfrapido.eu/extraer-paginas/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo extraer páginas concretas de un PDF?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sube el PDF, haz clic en las páginas que quieres conservar (se marcarán en verde) y pulsa 'Extraer páginas'. Descarga el nuevo PDF solo con las páginas seleccionadas." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la diferencia entre extraer y eliminar páginas?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Eliminar páginas quita las que no quieres. Extraer páginas te permite quedarte solo con las que necesitas. El resultado es el mismo si tu documento tiene pocas páginas, pero extraer es más cómodo cuando quieres conservar pocas páginas de un documento largo." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Se sube el PDF a algún servidor?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Todo el proceso ocurre en tu navegador con pdf-lib. Tu archivo nunca sale de tu dispositivo." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+        <meta property="og:title" content="Extraer Páginas de PDF Gratis Online | PDFRápido">
+    <meta property="og:description" content="Extrae páginas de un PDF gratis y sin registro. Selecciona las páginas que quieres guardar y descarga un nuevo PDF solo con esas páginas.">
+    <meta property="og:url" content="https://pdfrapido.eu/extraer-paginas/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta property="og:site_name" content="PDFRápido">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Extraer Páginas de PDF Gratis Online | PDFRápido">
+    <meta name="twitter:description" content="Extrae páginas de un PDF gratis y sin registro. Selecciona las páginas que quieres guardar y descarga un nuevo PDF solo con esas páginas.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
+    <script src="/js/webmcp.js" defer></script>
+</head>
+<body>
+<nav><div class="ni"><a href="/" class="logo"><div class="li"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="lt">PDF<span>Rápido</span></div></a><a href="/" class="nb"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a></div></nav>
+<main>
+<nav aria-label="breadcrumb" style="max-width:800px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
+    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
+        <li style="color:var(--gray-600);font-weight:500">Extraer Páginas</li>
+    </ol>
+</nav>
+<div class="th">
+        <div class="ib">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 12 18 15 15"/><line x1="12" y1="10" x2="12" y2="18"/></svg>
+        </div>
+        <h1>Extraer páginas PDF</h1>
+        <p>Selecciona las páginas que quieres conservar y descarga el nuevo PDF.</p>
+    </div>
+
+    <div class="uz" id="uploadZone">
+        <input type="file" accept=".pdf" id="fileInput">
+        <div class="ui"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
+        <p>Después marca las páginas que quieres extraer</p>
+    </div>
+
+    <div class="step" id="stepOptions">
+        <div class="fc">
+            <div class="fci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="fcinfo"><h4 id="fileName">doc.pdf</h4><span id="fileInfo">10 páginas</span></div>
+        </div>
+        <div class="sel-actions">
+            <button class="sel-btn" onclick="selectAll()">Seleccionar todas</button>
+            <button class="sel-btn" onclick="selectNone()">Deseleccionar todas</button>
+            <button class="sel-btn" onclick="selectOdd()">Solo impares</button>
+            <button class="sel-btn" onclick="selectEven()">Solo pares</button>
+        </div>
+        <p class="hint">Haz clic en las páginas que quieres <strong style="color:#34A853">conservar</strong> (se marcarán en verde)</p>
+        <div class="pages-grid" id="pagesGrid"></div>
+        <p class="hint" id="selCount">0 páginas seleccionadas</p>
+        <button class="ab" id="extractBtn" onclick="extractPages()" disabled>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="9 15 12 18 15 15"/><line x1="12" y1="10" x2="12" y2="18"/></svg>
+            Extraer páginas seleccionadas
+        </button>
+    </div>
+
+    <div class="ra" id="resultArea">
+        <div class="rc">
+            <div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>Páginas extraídas</h3>
+            <p class="desc" id="resultDesc"></p>
+            <div class="rac">
+                <button class="bd" onclick="dlPDF()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button>
+                <button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Otro archivo</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad">Espacio publicitario — Google AdSense</div>
+    <div class="seo">
+        <h2>Cómo extraer páginas de un PDF online</h2>
+        <p>Sube tu PDF, selecciona visualmente las páginas que quieres conservar y descarga un nuevo PDF solo con esas páginas. Útil para extraer un capítulo, una sección o páginas concretas de un documento largo.</p>
+        <p>A diferencia de eliminar páginas, aquí marcas las que <em>quieres quedarte</em>. Todo el proceso es privado: tu archivo nunca se sube a ningún servidor.</p>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
+            <li><a href="/dividir-pdf/">Dividir PDF</a></li>
+            <li><a href="/organizar-pdf/">Organizar páginas</a></li>
+            <li><a href="/unir-pdf/">Unir PDF</a></li>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+        </ul>
+    </div>
+    <!-- SEO CONTENT -->
+    <div class="seo-content">
+        <h2>Cómo extraer páginas de un PDF online gratis</h2>
+        <p>Extrae una o varias páginas de un PDF para crear un nuevo documento solo con el contenido que necesitas. Perfecto para compartir solo una sección de un informe largo.</p>
+
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>Sube tu archivo PDF completo.</li>
+            <li>Selecciona las páginas que quieres extraer.</li>
+            <li>Indica si prefieres un único PDF o archivos separados.</li>
+            <li>Descarga el resultado.</li>
+        </ul>
+
+        <h3>¿Por qué usar esta herramienta?</h3>
+        <p>Extraer páginas es útil cuando solo necesitas compartir una parte de un documento largo, crear un resumen ejecutivo o separar capítulos de un libro.</p>
+
+        <h3>Seguridad y privacidad</h3>
+        <p>La extracción se realiza localmente en tu navegador. Tus archivos nunca se transmiten por Internet.</p>
+
+        <h3>Preguntas frecuentes</h3>
+        <details>
+            <summary>¿Puedo extraer páginas no consecutivas?</summary>
+            <p>Sí, puedes seleccionar cualquier página individual o rangos de páginas.</p>
+        </details>
+        <details>
+            <summary>¿Las páginas extraídas mantienen su calidad?</summary>
+            <p>Sí, las páginas se copian tal cual, sin pérdida de calidad ni formato.</p>
+        </details>
+    </div>
+
+    <div class="related-tools">
+        <h3>Herramientas relacionadas</h3>
+        <ul>
+            <li><a href="/eliminar-paginas/">Eliminar Páginas</a></li>
+            <li><a href="/dividir-pdf/">Dividir PDF</a></li>
+            <li><a href="/organizar-pdf/">Organizar PDF</a></li>
+            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
+            <li><a href="/unir-pdf/">Unir PDF</a></li>
+        </ul>
+    </div>
+
+<style>
+.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
+.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
+.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
+.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
+.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
+.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
+.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
+.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
+.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
+.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .faq{display:grid;gap:12px;margin:20px 0}
+.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
+.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
+.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
+.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
+.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
+.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+</style>
+<section class="content-seo" aria-label="Guía y preguntas frecuentes">
+  <h2>¿Cómo funciona Extraer páginas de PDF?</h2>
+  <p>Usar Extraer páginas de PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+  <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Selecciona el PDF de origen</h3>
+          <p>Carga el PDF completo del que deseas extraer páginas concretas. Verás una vista previa del documento.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Indica las páginas a extraer</h3>
+          <p>Escribe el número o rango de páginas como 3, 7-12, 15 o selecciónalas visualmente en la vista previa.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Descarga las páginas extraídas</h3>
+          <p>Obtienes un nuevo PDF que contiene únicamente las páginas seleccionadas, manteniendo todo su contenido original.</p>
+        </div>
+      </div>
+  </div>
+
+  <h2>¿Cuándo usar esta herramienta?</h2>
+  <p>La herramienta de Extraer páginas de PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <div class="use-cases">
+      <div class="use-case">
+        <strong>Compartir información parcial de un informe</strong>
+        <span>Extrae solo las páginas con los resultados o conclusiones de un informe extenso para compartirlas con quien necesita esa información específica sin revelar el documento completo.</span>
+      </div>
+      <div class="use-case">
+        <strong>Crear resúmenes de contratos</strong>
+        <span>De un contrato de varias decenas de páginas, extrae las cláusulas más importantes para una revisión rápida o para adjuntarlas a una comunicación.</span>
+      </div>
+      <div class="use-case">
+        <strong>Separar documentos combinados</strong>
+        <span>Cuando tienes un PDF con múltiples documentos escaneados juntos, extrae cada uno por separado para archivarlos correctamente.</span>
+      </div>
+      <div class="use-case">
+        <strong>Preparar material de estudio</strong>
+        <span>Extrae los capítulos o secciones más relevantes de manuales y libros para estudiar sin tener que cargar el documento completo.</span>
+      </div>
+  </div>
+
+  <h2>Preguntas frecuentes sobre Extraer páginas de PDF</h2>
+  <div class="faq">
+      <div class="faq-item">
+        <h3>¿Cuál es la diferencia entre extraer y dividir un PDF?</h3>
+        <p>Extraer páginas crea un nuevo PDF con las páginas elegidas, conservando el PDF original intacto. Dividir parte el original en varios fragmentos. Usa extraer cuando quieres copiar páginas concretas sin alterar el documento original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Las páginas extraídas mantienen su calidad original?</h3>
+        <p>Sí, completamente. La extracción no modifica ni recomprime el contenido de las páginas, por lo que la calidad del texto, las imágenes y los gráficos es idéntica al original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo extraer páginas no consecutivas en un solo paso?</h3>
+        <p>Sí. Puedes indicar múltiples rangos separados por comas como 1-3, 7, 10-12 y se generará un único PDF con todas esas páginas en el orden indicado.</p>
+      </div>
+  </div>
+</section>
+</main>
+
+
+<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
+    <div style="font-size:14px;color:#6B7280;line-height:1.75">
+        <p>Extrae páginas específicas de un PDF y guárdalas como un nuevo documento independiente. Perfecto para separar capítulos, secciones o páginas concretas de un PDF largo.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Diferencia entre extraer y dividir páginas</h2>
+        <p>Aunque parecen similares, estas dos operaciones sirven para propósitos diferentes:</p>
+        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
+            <li><strong>Extraer páginas:</strong> Seleccionas páginas específicas (ej: páginas 3, 7 y 15) y las guardas como un nuevo PDF. El original no se modifica.</li>
+            <li><strong>Dividir PDF:</strong> Partes el documento en múltiples archivos por rangos de páginas o de una en una.</li>
+        </ul>
+        <p>Usa "extraer páginas" cuando quieras un subconjunto no consecutivo de páginas. Usa "dividir PDF" cuando quieras partir el documento en bloques.</p>
+
+        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
+        <p><strong>¿Puedo extraer páginas no consecutivas?</strong><br>Sí. Puedes seleccionar cualquier combinación de páginas, por ejemplo páginas 1, 5, 8 y 12, independientemente de si son consecutivas o no.</p>
+        <p><strong>¿El PDF original se modifica?</strong><br>No. La herramienta crea un nuevo PDF con las páginas seleccionadas. El archivo original queda intacto.</p>
+        <p><strong>¿Se mantiene la calidad de las páginas extraídas?</strong><br>Sí. Las páginas extraídas tienen exactamente la misma calidad que en el documento original.</p>
+
+    </div>
+    </section>
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp; <a href="/">Todas las herramientas</a></p></footer>
+
+<script src="/js/pdf-3.11.min.js"></script>
+<script src="/js/pdf-lib.min.js"></script>
+<script>
+let file = null, blob = null, totalP = 0, toKeep = new Set();
+
+const uploadZone = document.getElementById('uploadZone');
+const fileInput  = document.getElementById('fileInput');
+
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.style.borderColor = 'var(--accent)'; });
+uploadZone.addEventListener('dragleave', () => { uploadZone.style.borderColor = ''; });
+uploadZone.addEventListener('drop', e => {
+    e.preventDefault(); uploadZone.style.borderColor = '';
+    const f = [...e.dataTransfer.files].find(f => f.name.endsWith('.pdf'));
+    if (f) loadFile(f);
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) loadFile(e.target.files[0]); });
+
+async function loadFile(f) {
+    file = f; toKeep = new Set();
+    const b = await f.arrayBuffer();
+    const d = await PDFLib.PDFDocument.load(b);
+    totalP = d.getPageCount();
+
+    document.getElementById('fileName').textContent = f.name;
+    document.getElementById('fileInfo').textContent = totalP + ' página' + (totalP > 1 ? 's' : '') + ' · ' + fs(f.size);
+
+    const grid = document.getElementById('pagesGrid');
+    grid.innerHTML = '';
+    for (let i = 1; i <= totalP; i++) {
+        const btn = document.createElement('div');
+        btn.className = 'page-btn'; btn.id = 'pg-' + i;
+        const ld  = document.createElement('div'); ld.className = 'pg-loading'; ld.textContent = '···';
+        const num = document.createElement('div'); num.className = 'pg-num'; num.textContent = 'Pág. ' + i;
+        btn.appendChild(ld); btn.appendChild(num);
+        (n => {
+            btn.onclick = () => {
+                btn.classList.toggle('keep');
+                if (btn.classList.contains('keep')) toKeep.add(n); else toKeep.delete(n);
+                updateCount();
+            };
+        })(i);
+        grid.appendChild(btn);
+    }
+
+    uploadZone.style.display = 'none';
+    document.getElementById('stepOptions').classList.add('active');
+    renderThumbs(f);
+}
+
+async function renderThumbs(f) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdf-3.11.worker.min.js';
+    const ab  = await f.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: ab }).promise;
+    for (let i = 1; i <= pdf.numPages; i++) {
+        const pg = await pdf.getPage(i);
+        const vp = pg.getViewport({ scale: 0.35 });
+        const canvas = document.createElement('canvas');
+        canvas.width = vp.width; canvas.height = vp.height;
+        await pg.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+        const btn = document.getElementById('pg-' + i);
+        if (btn) { const ld = btn.querySelector('.pg-loading'); if (ld) ld.replaceWith(canvas); }
+    }
+}
+
+function updateCount() {
+    const n = toKeep.size;
+    document.getElementById('selCount').textContent = n + ' página' + (n !== 1 ? 's' : '') + ' seleccionada' + (n !== 1 ? 's' : '');
+    document.getElementById('extractBtn').disabled = n === 0;
+}
+
+function selectAll()  { for (let i = 1; i <= totalP; i++) { toKeep.add(i); document.getElementById('pg-'+i).classList.add('keep'); } updateCount(); }
+function selectNone() { toKeep.clear(); document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('keep')); updateCount(); }
+function selectOdd()  { selectNone(); for (let i = 1; i <= totalP; i += 2) { toKeep.add(i); document.getElementById('pg-'+i).classList.add('keep'); } updateCount(); }
+function selectEven() { selectNone(); for (let i = 2; i <= totalP; i += 2) { toKeep.add(i); document.getElementById('pg-'+i).classList.add('keep'); } updateCount(); }
+
+async function extractPages() {
+    if (!file || toKeep.size === 0) return;
+    try {
+        const bytes  = await file.arrayBuffer();
+        const src    = await PDFLib.PDFDocument.load(bytes);
+        const indices = [...toKeep].sort((a, b) => a - b).map(n => n - 1);
+        const newDoc = await PDFLib.PDFDocument.create();
+        const pages  = await newDoc.copyPages(src, indices);
+        pages.forEach(p => newDoc.addPage(p));
+        newDoc.setProducer('PDFRápido');
+        const out = await newDoc.save({ useObjectStreams: true });
+        blob = new Blob([out], { type: 'application/pdf' });
+        document.getElementById('resultDesc').textContent =
+            toKeep.size + ' página' + (toKeep.size !== 1 ? 's' : '') + ' extraída' + (toKeep.size !== 1 ? 's' : '') + ' · ' + fs(blob.size);
+        document.getElementById('stepOptions').classList.remove('active');
+        document.getElementById('resultArea').classList.add('active');
+    } catch (err) {
+        console.error(err);
+        alert('Error al extraer páginas.');
+    }
+}
+
+function dlPDF() {
+    if (!blob) return;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = file.name.replace(/\.pdf$/i, '') + '_extraido.pdf';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+function reset() {
+    file = null; blob = null; totalP = 0; toKeep = new Set();
+    fileInput.value = '';
+    uploadZone.style.display = '';
+    document.getElementById('stepOptions').classList.remove('active');
+    document.getElementById('resultArea').classList.remove('active');
+    document.getElementById('pagesGrid').innerHTML = '';
+}
+
+function fs(b) { return b < 1048576 ? (b / 1024).toFixed(1) + ' KB' : (b / 1048576).toFixed(1) + ' MB'; }
+</script>
+<script src="/js/cookies-banner.js" defer></script>
+<script src="/js/error-modal.js"></script>
+</body>
+</html>
