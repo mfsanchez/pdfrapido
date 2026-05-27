@@ -1065,7 +1065,8 @@ html[data-theme="dark"] .hero::before {
 
 /* Override inline tool-page backgrounds in dark mode */
 html[data-theme="dark"] body {
-    background: var(--bg-root);
+    background-color: #0B0F19 !important;
+    color: #E2E8F0 !important;
 }
 html[data-theme="dark"] nav {
     background: var(--nav-bg);
