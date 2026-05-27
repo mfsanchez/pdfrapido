@@ -434,6 +434,6 @@ btnDownload.addEventListener("click",async function(){if(typeof PDFLib==="undefi
 btnRetry.addEventListener("click",async function(){if(!selectedFile)return;resultArea.classList.remove("active");loadingArea.classList.add("active");startLoading();var fd=new FormData();fd.append("file",selectedFile);fd.append("puesto",puestoInput.value.trim());fd.append("tono",tonoActivo);fd.append("idioma",idiomaActivo);fd.append("info_extra",extraInput.value.trim());try{var resp=await fetch("/api/cv-a-carta",{method:"POST",body:fd});var data=await resp.json();if(!resp.ok)throw new Error(data.detail||"Error desconocido.");stopLoading();loadingArea.classList.remove("active");mostrarResultado(data);}catch(err){stopLoading();loadingArea.classList.remove("active");resultArea.classList.add("active");alert("Error: "+err.message);}});
 document.querySelectorAll(".faq-q").forEach(function(q){q.addEventListener("click",function(){q.closest(".faq-item").classList.toggle("open");});});
 </script>
-<script src="/js/theme-toggle.js?v=13" defer></script>
+<script src="/js/theme-toggle.js?v=14" defer></script>
 </body>
 </html>

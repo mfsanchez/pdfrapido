@@ -4,6 +4,10 @@
     function sync(theme) {
         btn.setAttribute('aria-label', theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
         btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+        var moon = btn.querySelector('.icon-moon');
+        var sun = btn.querySelector('.icon-sun');
+        if (moon) moon.style.display = theme === 'dark' ? 'none' : 'block';
+        if (sun) sun.style.display = theme === 'dark' ? 'block' : 'none';
     }
     sync(document.documentElement.getAttribute('data-theme') || 'light');
     btn.addEventListener('click', function () {
