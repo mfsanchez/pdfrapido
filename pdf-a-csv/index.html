@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
@@ -11,7 +12,7 @@
       gtag('config', 'G-93B5VKXW7W');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Convierte tablas de PDF a CSV gratis. Extrae datos de facturas, informes y hojas de cálculo de tus PDFs. Sin registro | PDFRápido"
+    <meta name="description" content="Convierte tablas de PDF a CSV gratis. Extrae datos de facturas, informes y hojas de cálculo de tus PDFs. Sin registro | PDFRápido">
     <meta name="keywords" content="PDF a CSV, extraer tablas PDF, convertir PDF CSV, exportar datos PDF, PDF a Excel CSV">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>PDF a CSV Online Gratis — Extrae Tablas de PDF | PDFRápido</title>
@@ -21,6 +22,10 @@
     <meta property="og:url" content="https://pdfrapido.eu/pdf-a-csv/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF a CSV Online Gratis — Extrae Tablas de PDF | PDFRápido">
+    <meta name="twitter:description" content="Convierte tablas de PDF a CSV gratis. Extrae datos de facturas, informes y hojas de cálculo de tus PDFs. Sin registro.">
+    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -51,26 +56,39 @@
             { "@type": "ListItem", "position": 2, "name": "Convertir desde PDF", "item": "https://pdfrapido.eu/#convertir-desde" },
             { "@type": "ListItem", "position": 3, "name": "PDF a CSV", "item": "https://pdfrapido.eu/pdf-a-csv/" }
           ]
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué tipos de tablas extrae correctamente?",
+          "acceptedAnswer": { "@type": "Answer", "text": "La herramienta funciona mejor con tablas que tienen líneas visibles (bordes) y con texto alineado en columnas. Facturas, listados de datos, balances e informes financieros suelen extraerse con gran precisión. Las tablas con celdas fusionadas complejas pueden requerir ajuste manual." }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué tipos de PDF puedo convertir a CSV?",
-              "acceptedAnswer": { "@type": "Answer", "text": "La herramienta funciona mejor con PDFs que contienen tablas reales (facturas, informes financieros, listados). Para PDFs escaneados sin texto digital necesitarás primero aplicar OCR." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuál es la diferencia entre UTF-8 y UTF-8 con BOM?",
-              "acceptedAnswer": { "@type": "Answer", "text": "El BOM (Byte Order Mark) es un marcador al inicio del archivo que ayuda a Excel en Windows a detectar automáticamente la codificación UTF-8. Si vas a abrir el CSV con Excel en español, selecciona UTF-8 con BOM para evitar problemas con caracteres como ñ, á, é." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Se suben mis archivos a algún servidor?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí, el PDF se envía al servidor para su procesamiento con pdfplumber, una librería especializada en extracción de tablas. El archivo se elimina automáticamente tras la conversión y nunca se almacena de forma permanente." }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Puedo abrir directamente el CSV en Excel?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Si usas Excel en Windows, selecciona la codificación UTF-8 con BOM para que los caracteres como ñ, á o é se muestren correctamente. Para Google Sheets o importaciones programáticas, usa UTF-8 estándar sin BOM." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se pueden extraer varias tablas del mismo PDF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Si el PDF tiene varias tablas en distintas páginas, la herramienta las extrae todas y las concatena en el mismo archivo CSV. También puedes especificar qué páginas procesar si solo te interesa una parte del documento." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona con PDFs escaneados?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Los PDFs escaneados son imágenes sin texto digital, por lo que no es posible extraer sus tablas directamente. Primero aplica OCR con la herramienta de OCR a PDF de PDFRápido para convertir el escaneado en texto, y luego usa el PDF resultante para extraer a CSV." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se conservan bien los números y los decimales?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Los números se extraen tal como aparecen en el PDF, incluyendo el separador decimal del documento (punto o coma). Si necesitas un formato numérico concreto, puedes ajustarlo fácilmente en Excel o en tu herramienta de hojas de cálculo una vez importado el CSV." }
         }
       ]
     }
@@ -479,83 +497,99 @@ footer a:hover { color: white; }
 
     <!-- SEO Content -->
     <section class="content-seo">
-        <h2>¿Cómo funciona?</h2>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-num">1</div>
-                <h3>Sube tu PDF</h3>
-                <p>Arrastra el archivo o haz clic para seleccionarlo. Admite PDFs de hasta 30 MB con tablas, informes o listados.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-num">2</div>
-                <h3>Elige las opciones</h3>
-                <p>Selecciona el separador (coma o punto y coma), la codificación y las páginas que quieres extraer.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-num">3</div>
-                <h3>Descarga el CSV</h3>
-                <p>Obtén el archivo CSV listo para abrir en Excel, Google Sheets o cualquier programa de hojas de cálculo.</p>
-            </div>
-        </div>
+      <h2>Cómo convertir PDF a CSV gratis en PDFRápido</h2>
+      <p>Extraer tablas de un PDF y convertirlas a CSV con PDFRápido es automático: sin registro, sin instalar nada y con el resultado listo para abrir en Excel, Google Sheets o cualquier herramienta de análisis de datos.</p>
+      <div class="steps-grid">
+          <div class="step-card">
+              <div class="step-num">1</div>
+              <h3>Sube tu PDF</h3>
+              <p>Arrastra el archivo o haz clic para seleccionarlo. Admite PDFs de hasta 30 MB con tablas, informes financieros, facturas o listados de datos.</p>
+          </div>
+          <div class="step-card">
+              <div class="step-num">2</div>
+              <h3>Elige las opciones</h3>
+              <p>Selecciona el separador (coma o punto y coma), la codificación UTF-8 o UTF-8 con BOM y las páginas específicas que quieres extraer.</p>
+          </div>
+          <div class="step-card">
+              <div class="step-num">3</div>
+              <h3>Descarga el CSV</h3>
+              <p>Obtén el archivo CSV listo para abrir en Excel, Google Sheets o importarlo a cualquier base de datos o sistema de contabilidad.</p>
+          </div>
+      </div>
 
-        <h2>Casos de uso habituales</h2>
-        <div class="use-cases">
-            <div class="use-case">
-                <strong>Facturas y albaranes</strong>
-                <span>Extrae las líneas de productos, importes e IVA de facturas en PDF para importarlas a tu contabilidad.</span>
-            </div>
-            <div class="use-case">
-                <strong>Informes financieros</strong>
-                <span>Convierte balances, cuentas de resultados y tablas de Excel exportadas a PDF de vuelta a formato editable.</span>
-            </div>
-            <div class="use-case">
-                <strong>Listados y catálogos</strong>
-                <span>Extrae tablas de precios, inventarios o catálogos de productos publicados como PDF.</span>
-            </div>
-            <div class="use-case">
-                <strong>Datos de investigación</strong>
-                <span>Recupera tablas de resultados, estadísticas o datos de artículos académicos y estudios en PDF.</span>
-            </div>
-        </div>
+      <h2>¿Para qué sirve convertir PDF a CSV?</h2>
+      <p>La conversión de PDF a CSV es útil cuando necesitas trabajar con los datos de un documento, no solo leerlos:</p>
+      <div class="use-cases">
+          <div class="use-case">
+              <strong>Importar facturas y albaranes a contabilidad</strong>
+              <span>Extrae las líneas de productos, importes, IVA y totales de facturas en PDF para importarlas directamente a tu software de contabilidad o a una hoja de cálculo, sin reescribir ningún dato.</span>
+          </div>
+          <div class="use-case">
+              <strong>Recuperar tablas de informes financieros</strong>
+              <span>Los informes anuales, balances y cuentas de resultados se publican en PDF. Convierte sus tablas a CSV para analizarlas, filtrarlas y hacer cálculos en Excel sin copiar dato por dato.</span>
+          </div>
+          <div class="use-case">
+              <strong>Procesar catálogos y listas de precios</strong>
+              <span>Los catálogos de proveedores en PDF con referencias, descripciones y precios se convierten a CSV para actualizar tu base de datos de productos o comparar tarifas fácilmente.</span>
+          </div>
+          <div class="use-case">
+              <strong>Extraer datos de investigación y estadísticas</strong>
+              <span>Recupera tablas de resultados, encuestas o estadísticas publicadas en artículos académicos y estudios en PDF para procesarlas con herramientas de análisis.</span>
+          </div>
+      </div>
 
-        <p style="font-size:14px;color:var(--gray-500);line-height:1.7;margin-top:16px;">
-            La extracción de tablas funciona mejor con PDFs que contienen texto digital (no escaneados). Si tu PDF proviene de un escáner, aplica primero <a href="/ocr-a-pdf/" style="color:var(--tool-color)">OCR</a> para convertirlo en texto buscable antes de exportarlo a CSV. La herramienta detecta automáticamente la estructura de filas y columnas usando <strong>pdfplumber</strong>, una librería especializada que analiza la posición de cada carácter y las líneas de la tabla para reconstruir la estructura original.
-        </p>
+      <h2>Cómo funciona la extracción de tablas</h2>
+      <p>PDFRápido utiliza <strong>pdfplumber</strong>, una librería especializada en extracción de tablas que analiza la posición de cada carácter y las líneas del documento para reconstruir la estructura de filas y columnas del PDF original. El resultado es más preciso que con herramientas genéricas de conversión.</p>
+      <p>La extracción funciona mejor con PDFs que contienen texto digital (creados desde Word, Excel u otras aplicaciones). Si tu PDF proviene de un escáner, aplica primero <a href="/ocr-a-pdf/">OCR</a> para convertirlo en texto buscable antes de exportarlo a CSV.</p>
 
-        <h2 style="margin-top:40px;">Preguntas frecuentes</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">
-                    ¿Qué tipos de PDF puedo convertir a CSV?
-                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </div>
-                <div class="faq-a">La herramienta funciona mejor con PDFs que contienen tablas reales: facturas, informes financieros, listados de datos. Para PDFs escaneados (imágenes) sin texto digital necesitarás aplicar OCR primero. También extrae texto estructurado de documentos que no tienen tablas formales pero sí columnas alineadas.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">
-                    ¿Cuál es la diferencia entre UTF-8 y UTF-8 con BOM?
-                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </div>
-                <div class="faq-a">El BOM (Byte Order Mark) es un marcador de 3 bytes al inicio del archivo que ayuda a Excel en Windows a detectar automáticamente la codificación UTF-8. Si al abrir el CSV en Excel los caracteres ñ, á, é aparecen mal, selecciona "UTF-8 con BOM". Para Google Sheets o importaciones programáticas, usa UTF-8 estándar.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q" onclick="toggleFaq(this)">
-                    ¿Se almacenan mis archivos en el servidor?
-                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-                </div>
-                <div class="faq-a">El PDF se envía al servidor para procesamiento con pdfplumber. El archivo se elimina automáticamente en cuanto finaliza la conversión y nunca se almacena de forma permanente. No se registra ningún contenido de los documentos procesados.</div>
-            </div>
-        </div>
+      <h2>Preguntas frecuentes sobre PDF a CSV</h2>
+      <div class="faq-list">
+          <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                  ¿Qué tipos de tablas extrae correctamente?
+                  <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="faq-a">La herramienta funciona mejor con tablas que tienen líneas visibles (bordes) y con texto alineado en columnas. Facturas, listados de datos, balances e informes financieros suelen extraerse con gran precisión. Las tablas formadas solo por espacios o con celdas fusionadas complejas pueden requerir ajuste manual.</div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                  ¿Puedo abrir directamente el CSV en Excel?
+                  <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="faq-a">Sí. Si usas Excel en Windows, selecciona la codificación "UTF-8 con BOM" para que los caracteres como ñ, á o é se muestren correctamente al abrir el archivo. Para Google Sheets o para importaciones programáticas, usa UTF-8 estándar sin BOM.</div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                  ¿Se pueden extraer varias tablas del mismo PDF?
+                  <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="faq-a">Sí. Si el PDF tiene varias tablas en distintas páginas, la herramienta las extrae todas y las concatena en el mismo archivo CSV. Puedes también especificar qué páginas procesar si solo te interesa una parte del documento.</div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                  ¿Funciona con PDFs escaneados?
+                  <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="faq-a">Los PDFs escaneados son imágenes sin texto digital, por lo que no es posible extraer sus tablas directamente. Primero aplica OCR con nuestra herramienta de <a href="/ocr-a-pdf/">OCR a PDF</a> para convertir el escaneado en texto, y luego usa el PDF resultante para extraer a CSV.</div>
+          </div>
+          <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                  ¿Se conservan bien los números y los decimales?
+                  <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+              <div class="faq-a">Los números se extraen tal como aparecen en el PDF, incluyendo el separador decimal que use el documento (punto o coma). Si necesitas un formato numérico concreto para tu sistema, puedes ajustarlo fácilmente en Excel o en tu herramienta de hojas de cálculo una vez importado el CSV.</div>
+          </div>
+      </div>
 
-        <div class="privacy-note">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Los archivos PDF se procesan en servidor y se eliminan automáticamente tras la conversión. Nunca se almacenan ni comparten con terceros.</span>
-        </div>
+      <div class="privacy-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gray-400)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Los archivos PDF se procesan en servidor y se eliminan automáticamente tras la conversión. Nunca se almacenan ni comparten con terceros.</span>
+      </div>
     </section>
 </main>
 
 <footer>
-    <p>© 2026 PDFRápido &nbsp;·&nbsp; <a href="/privacidad/">Privacidad</a> <a href="/cookies/">Cookies</a> <a href="/contacto/">Contacto</a></p>
+    <p>© 2026 PDFRápido &nbsp;·&nbsp; <a href="/privacidad/">Privacidad</a> <a href="/cookies/">Cookies</a> <a href="/contacto/">Contacto</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p>
 </footer>
 
 <script>

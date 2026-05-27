@@ -1,0 +1,63 @@
+# ===== PDFRápido — .gitignore =====
+
+# --- Backups ---
+*.bak
+*.bak.*
+*.bak-*
+
+# --- Logs y dumps ---
+*.log
+logs/
+*.dump
+*.sql
+
+# --- Credenciales y configuración sensible ---
+# (filtro por NOMBRE de archivo. Para evitar leaks de contenido,
+# instalar pre-commit hook con gitleaks o git-secrets.)
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*
+secrets*
+*.htpasswd
+.htpasswd
+# Defensa por si en el futuro alguien copia configs del sistema dentro del repo:
+www.conf
+*php-fpm*.conf
+*.ini
+api/config.local.php
+
+# --- Workspace local del desarrollador ---
+.assets/
+.agents/
+.claude/
+
+# --- Docs y herramientas internas ---
+CLAUDE.md
+CHANGELOG.md
+GUIA-SEARCH-CONSOLE.md
+INFORME_SEO_INDEXACION.md
+SEO_AUDIT_INFORME.md
+new-page.sh
+
+# --- Build artifacts y caches ---
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+dist/
+build/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

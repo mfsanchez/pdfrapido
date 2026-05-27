@@ -32,10 +32,14 @@ async function convertFile(file, action, extraData = {}, onProgress = null) {
     }
 
     try {
+        const abortController = new AbortController();
+        const abortTimeout = setTimeout(() => abortController.abort(), 330000);
         const response = await fetch(`${API_BASE}?action=${action}`, {
             method: 'POST',
             body: formData,
+            signal: abortController.signal,
         });
+        clearTimeout(abortTimeout);
 
         if (progressTimer) clearInterval(progressTimer);
         if (onProgress) onProgress(96, 'Procesando resultado...');
@@ -56,7 +60,7 @@ async function convertFile(file, action, extraData = {}, onProgress = null) {
         }
         const blob = new Blob([byteArray], { type: result.mime });
 
-        return { blob, filename: result.filename, size: result.size };
+        return { blob, filename: result.filename, size: result.size, nota: result.nota || null };
 
     } catch (err) {
         if (progressTimer) clearInterval(progressTimer);

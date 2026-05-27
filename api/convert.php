@@ -17,9 +17,12 @@
 define('UPLOAD_DIR', '/tmp/pdfrapido/');
 define('MAX_FILE_SIZE', 50 * 1024 * 1024); // 50 MB
 define('LIBREOFFICE_BIN', '/usr/bin/libreoffice');
+define('OCRMYPDF_BIN', '/usr/local/bin/ocrmypdf');
 define('QPDF_BIN', file_exists('/usr/bin/qpdf') ? '/usr/bin/qpdf' : '/usr/local/bin/qpdf');
 define('ALLOWED_ORIGINS', ['https://pdfrapido.es', 'https://www.pdfrapido.es']); // Cambiar al dominio real
 define('CLEANUP_MINUTES', 10);
+define('PDFRAPIDO_DEBUG', false);
+define('DEBUG_LOG', '/tmp/pdfrapido_debug.log');
 
 // ── CORS ──
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -158,16 +161,89 @@ function handle_pdf_to_office() {
     $return_code = 0;
     $output_path = $workdir . 'input.' . $format;
 
-    if ($format === 'docx') {
-        // pdf2docx produce formato mucho mejor que LibreOffice writer_pdf_import
-        $script = __DIR__ . '/pdf2docx_convert.py';
-        $cmd = sprintf(
-            'python3 %s %s %s 2>&1',
-            escapeshellarg($script),
+    $filename_original = $file['name'] ?? 'unknown';
+    $filesize_bytes    = $file['size'] ?? 0;
+    $pdf2docx_output   = [];
+    $pdf2docx_code     = -1;
+    $lo_output         = [];
+    $lo_code           = -1;
+    $txt_output        = [];
+    $txt_code          = -1;
+
+    // Detectar PDF escaneado y aplicar OCR (ocrmypdf) antes de convertir
+    $nota = null;
+    $ocr_applied = apply_ocr_if_scanned($input_path);
+    if ($ocr_applied) {
+        $nota = 'PDF escaneado procesado con OCR. Se ha conservado la estructura del documento. Las imágenes decorativas no se incluyen en el Word.';
+        debug_log('OCR applied', [
+            'file' => $filename_original,
+            'size' => round($filesize_bytes / 1024 / 1024, 2) . ' MB',
+        ]);
+    }
+
+    if ($format === 'docx' && $ocr_applied) {
+        // PDF escaneado ya digitalizado por ocrmypdf. pdf2docx y LibreOffice sólo
+        // incrustarían la imagen escaneada — ignoran la capa de texto OCR invisible.
+        // El extractor PyMuPDF lee esa capa y reconstruye párrafos y títulos editables.
+        $script3 = __DIR__ . '/pdftext_to_docx.py';
+        exec(sprintf('timeout 60 python3 %s %s %s 2>&1',
+            escapeshellarg($script3),
             escapeshellarg($input_path),
             escapeshellarg($output_path)
-        );
-        exec($cmd, $output, $return_code);
+        ), $txt_output, $txt_code);
+        debug_log('pdftext_to_docx (OCR) attempt', [
+            'file'          => $filename_original,
+            'exit_code'     => $txt_code,
+            'output'        => $txt_output ?: ['(sin salida)'],
+            'output_exists' => file_exists($output_path) ? 'yes (' . filesize($output_path) . ' bytes)' : 'no',
+        ]);
+    } elseif ($format === 'docx') {
+        // Para archivos > 8 MB saltar pdf2docx: en PDFs complejos consume el timeout
+        // completo sin producir nada, dejando sin margen al fallback de LibreOffice.
+        $use_pdf2docx = $filesize_bytes <= 8 * 1024 * 1024;
+
+        if ($use_pdf2docx) {
+            $script = __DIR__ . '/pdf2docx_convert.py';
+            $cmd = sprintf(
+                'timeout 90 python3 %s %s %s 2>&1',
+                escapeshellarg($script),
+                escapeshellarg($input_path),
+                escapeshellarg($output_path)
+            );
+            exec($cmd, $pdf2docx_output, $pdf2docx_code);
+            debug_log('pdf2docx attempt', [
+                'file'      => $filename_original,
+                'size'      => round($filesize_bytes / 1024 / 1024, 2) . ' MB',
+                'exit_code' => $pdf2docx_code,
+                'output'    => $pdf2docx_output ?: ['(sin salida)'],
+                'output_exists' => file_exists($output_path) ? 'yes (' . filesize($output_path) . ' bytes)' : 'no',
+            ]);
+        }
+
+        // LibreOffice: para archivos grandes (skip pdf2docx) o como fallback
+        if (!$use_pdf2docx || !file_exists($output_path) || filesize($output_path) < 500) {
+            // Limpiar procesos LibreOffice colgados de intentos anteriores
+            exec('pkill -9 -u apache soffice.bin 2>/dev/null; pkill -9 -u apache oosplash 2>/dev/null; true');
+            $lo_profile = 'file://' . $workdir . 'lo_profile';
+            $cmd = sprintf(
+                'timeout --kill-after=5 90 env HOME=/tmp DCONF_PROFILE=/dev/null %s --headless --norestore'
+                . ' -env:UserInstallation=%s --infilter="writer_pdf_import"'
+                . ' --convert-to docx --outdir %s %s 2>&1',
+                escapeshellarg(LIBREOFFICE_BIN),
+                escapeshellarg($lo_profile),
+                escapeshellarg($workdir),
+                escapeshellarg($input_path)
+            );
+            exec($cmd, $lo_output, $lo_code);
+            debug_log('LibreOffice attempt', [
+                'file'      => $filename_original,
+                'size'      => round($filesize_bytes / 1024 / 1024, 2) . ' MB',
+                'reason'    => $use_pdf2docx ? 'fallback' : 'large-file-direct',
+                'exit_code' => $lo_code,
+                'output'    => $lo_output ?: ['(sin salida)'],
+                'output_exists' => file_exists($output_path) ? 'yes (' . filesize($output_path) . ' bytes)' : 'no',
+            ]);
+        }
     } else {
         // Para xlsx/pptx/odt usar LibreOffice
         $lo_profile = 'file://' . $workdir . 'lo_profile';
@@ -179,12 +255,70 @@ function handle_pdf_to_office() {
             escapeshellarg($workdir),
             escapeshellarg($input_path)
         );
-        exec($cmd, $output, $return_code);
+        exec($cmd, $lo_output, $lo_code);
+        debug_log('LibreOffice conversion', [
+            'file'      => $filename_original,
+            'format'    => $format,
+            'size'      => round($filesize_bytes / 1024 / 1024, 2) . ' MB',
+            'exit_code' => $lo_code,
+            'output'    => $lo_output ?: ['(sin salida)'],
+            'output_exists' => file_exists($output_path) ? 'yes (' . filesize($output_path) . ' bytes)' : 'no',
+        ]);
+    }
+
+    // Tercer motor: pdftotext + python-docx para PDFs nativos con capa de texto.
+    // Se activa solo para DOCX cuando pdf2docx y LibreOffice han fallado.
+    // Los PDF escaneados (OCR) ya pasaron por este extractor más arriba.
+    if ($format === 'docx' && !$ocr_applied && (!file_exists($output_path) || filesize($output_path) < 500)) {
+        $txt_wc = [];
+        exec('pdftotext ' . escapeshellarg($input_path) . ' - 2>/dev/null | wc -c', $txt_wc);
+        if ((int)($txt_wc[0] ?? 0) >= 100) {
+            $script3 = __DIR__ . '/pdftext_to_docx.py';
+            exec(sprintf('timeout 30 python3 %s %s %s 2>&1',
+                escapeshellarg($script3),
+                escapeshellarg($input_path),
+                escapeshellarg($output_path)
+            ), $txt_output, $txt_code);
+            debug_log('pdftext_to_docx attempt', [
+                'file'         => $filename_original,
+                'exit_code'    => $txt_code,
+                'output'       => $txt_output ?: ['(sin salida)'],
+                'output_exists' => file_exists($output_path) ? 'yes (' . filesize($output_path) . ' bytes)' : 'no',
+            ]);
+            if ($nota === null && in_array('OCR_MODE', $txt_output)) {
+                $nota = 'PDF escaneado detectado. Se ha extraído el texto limpio. El formato original no se conserva pero el contenido es totalmente editable.';
+            }
+        }
     }
 
     if (!file_exists($output_path) || filesize($output_path) < 500) {
+        $all_output = array_merge($pdf2docx_output, $lo_output, $txt_output);
+        $combined   = implode("\n", $all_output);
+        $debug_info = [
+            'file'          => $filename_original,
+            'size_mb'       => round($filesize_bytes / 1024 / 1024, 2),
+            'ocr_applied'   => $ocr_applied ? 'yes' : 'no',
+            'pdf2docx_code' => $pdf2docx_code,
+            'pdf2docx_out'  => implode("\n", $pdf2docx_output),
+            'lo_code'       => $lo_code,
+            'lo_out'        => implode("\n", $lo_output),
+            'txt_code'      => $txt_code,
+            'txt_out'       => implode("\n", $txt_output),
+        ];
         cleanup_dir($workdir);
-        json_error('Error en la conversión. El PDF podría estar protegido o tener un formato incompatible.', 422);
+        if ($pdf2docx_code === 124 || $lo_code === 124 || $txt_code === 124) {
+            debug_log('ERROR: timeout', $debug_info);
+            $timeout_msg = $ocr_applied
+                ? 'El PDF es muy extenso para procesarlo con OCR. Intenta con menos páginas.'
+                : 'La conversión tardó demasiado. Intenta con un PDF más pequeño o con menos páginas.';
+            json_error($timeout_msg, 422, $debug_info);
+        }
+        if (stripos($combined, 'password') !== false || stripos($combined, 'encrypt') !== false) {
+            debug_log('ERROR: encrypted PDF', $debug_info);
+            json_error('El PDF está protegido con contraseña. Desbloquéalo primero en /desbloquear-pdf/.', 422, $debug_info);
+        }
+        debug_log('ERROR: all engines failed', $debug_info);
+        json_error('Error en la conversión. El PDF podría estar protegido o tener un formato incompatible.', 422, $debug_info);
     }
 
     $mime_map = [
@@ -196,7 +330,7 @@ function handle_pdf_to_office() {
         'odp'  => 'application/vnd.oasis.opendocument.presentation',
     ];
 
-    send_file($output_path, pathinfo($file['name'], PATHINFO_FILENAME) . '.' . $format, $mime_map[$format]);
+    send_file($output_path, pathinfo($file['name'], PATHINFO_FILENAME) . '.' . $format, $mime_map[$format], $nota);
     cleanup_dir($workdir);
 }
 
@@ -456,24 +590,78 @@ function validate_upload(string $field, array $allowed_mimes): array {
     return $file;
 }
 
-function send_file(string $path, string $filename, string $mime): void {
+function send_file(string $path, string $filename, string $mime, ?string $nota = null): void {
     $data = file_get_contents($path);
     $base64 = base64_encode($data);
-    
+
     header('Content-Type: application/json');
-    echo json_encode([
-        'success' => true,
+    $payload = [
+        'success'  => true,
         'filename' => $filename,
-        'size' => filesize($path),
-        'mime' => $mime,
-        'data' => $base64,
-    ]);
+        'size'     => filesize($path),
+        'mime'     => $mime,
+        'data'     => $base64,
+    ];
+    if ($nota !== null) {
+        $payload['nota'] = $nota;
+    }
+    echo json_encode($payload);
     exit;
 }
 
-function json_error(string $message, int $code = 400): void {
+function apply_ocr_if_scanned(string $input_path): bool {
+    // Contar caracteres extraíbles; si son < 100 el PDF es probablemente escaneado
+    $wc = [];
+    exec('pdftotext ' . escapeshellarg($input_path) . ' - 2>/dev/null | wc -c', $wc);
+    $chars = (int)($wc[0] ?? 0);
+    if ($chars >= 100) return false;
+
+    // PDF escaneado — incrustar capa de texto con ocrmypdf (tesseract spa+eng).
+    // El PDF resultante conserva el layout original, de modo que pdf2docx
+    // puede después extraer negritas, tamaños de fuente y estructura.
+    $workdir    = dirname($input_path);
+    $ocr_output = $workdir . '/ocr_output.pdf';
+    $ocr_cmd = sprintf(
+        'timeout --kill-after=10 180 env HOME=/tmp TMPDIR=%s PATH=/usr/local/bin:/usr/bin %s'
+        . ' --force-ocr --optimize 0 --output-type pdf --language spa+eng %s %s 2>&1',
+        escapeshellarg($workdir),
+        escapeshellarg(OCRMYPDF_BIN),
+        escapeshellarg($input_path),
+        escapeshellarg($ocr_output)
+    );
+    $ocr_out  = [];
+    $ocr_code = -1;
+    exec($ocr_cmd, $ocr_out, $ocr_code);
+    debug_log('ocrmypdf attempt', [
+        'exit_code'     => $ocr_code,
+        'output'        => $ocr_out ?: ['(sin salida)'],
+        'output_exists' => file_exists($ocr_output) ? 'yes (' . filesize($ocr_output) . ' bytes)' : 'no',
+    ]);
+
+    if ($ocr_code === 0 && file_exists($ocr_output) && filesize($ocr_output) > 500) {
+        rename($ocr_output, $input_path);
+        return true;
+    }
+    return false;
+}
+
+function debug_log(string $label, array $context = []): void {
+    if (!PDFRAPIDO_DEBUG) return;
+    $line = "[PDFRAPIDO] $label";
+    foreach ($context as $k => $v) {
+        $val = is_array($v) ? implode(' | ', $v) : $v;
+        $line .= " | $k=$val";
+    }
+    error_log($line);
+}
+
+function json_error(string $message, int $code = 400, array $debug = []): void {
     http_response_code($code);
-    echo json_encode(['success' => false, 'error' => $message]);
+    $payload = ['success' => false, 'error' => $message];
+    if (PDFRAPIDO_DEBUG && !empty($debug)) {
+        $payload['debug'] = $debug;
+    }
+    echo json_encode($payload);
     exit;
 }
 

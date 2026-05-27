@@ -7,7 +7,7 @@
   window._pdfErrorModalLoaded = true;
 
   const CONTACT_URL = '/contacto/';
-  const CONTACT_EMAIL = 'admin@pdfrapido.com';
+  const CONTACT_EMAIL = 'admin@pdfrapido.eu';
 
   function createModal() {
     if (document.getElementById('pdf-error-modal')) return;
