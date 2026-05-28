@@ -16,7 +16,7 @@ const TODAY = new Date().toISOString().split('T')[0];
 /* ─── CONFIG ─── */
 const EXCLUDE_DIRS = new Set([
   'api', 'css', 'js', 'scripts', '.git', '.well-known', '.assets', '.claude', '.agents',
-  'node_modules', 'tmp', 'admin', 'sobre-nosotros',
+  'node_modules', 'tmp', 'admin', 'sobre-nosotros', 'guia-completa-pdf', 'categoria', 'sobre-pdfrapido', 'sobre-mf-sanchez',
   // Structural pages belong in sitemap-pages.xml, not tools
   'contacto', 'cookies', 'privacidad', 'terminos', 'marca'
 ]);
@@ -31,6 +31,12 @@ const PAGES = [
   { loc: '/terminos/',  priority: '0.3',  changefreq: 'yearly' },
   { loc: '/cookies/',   priority: '0.3',  changefreq: 'yearly' },
   { loc: '/blog/',      priority: '0.8',  changefreq: 'weekly' },
+  { loc: '/guia-completa-pdf/', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/categoria/organizar-pdf/', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/categoria/optimizar-pdf/', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/categoria/convertir-pdf/', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/categoria/editar-pdf/', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/categoria/seguridad-pdf/', priority: '0.7', changefreq: 'monthly' },
 ];
 
 /* ─── HELPERS ─── */

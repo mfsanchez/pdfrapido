@@ -4,10 +4,11 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog de PDFRápido: guías prácticas, tutoriales y consejos para trabajar con archivos PDF de forma eficiente. Aprende a comprimir, convertir y editar PDFs.">
+    <meta name="description" content="Blog de PDFRápido: guías prácticas, tutoriales y consejos para trabajar con archivos PDF de forma eficiente. Más de 40 artículos gratuitos.">
     <meta name="author" content="MF Sanchez - PDFRápido">
-    <title>Blog — Guías y trucos PDF | PDFRápido</title>
+    <title>Blog de PDFRápido — Guías y Tutoriales PDF</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://pdfrapido.eu/blog/">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +28,9 @@
         .blog-hero h1{font-size:clamp(32px,5vw,48px);font-weight:700;color:var(--secondary);letter-spacing:-1px;margin-bottom:12px}
         .blog-hero p{font-size:17px;color:var(--gray-500);max-width:600px;margin:0 auto 16px}
         .blog-intro{max-width:800px;margin:0 auto 40px;padding:0 24px;font-size:15px;color:var(--gray-600);line-height:1.75;text-align:center}
+        .filter-bar{max-width:900px;margin:0 auto 24px;padding:0 24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+        .filter-bar button{border:none;background:var(--gray-100);color:var(--gray-600);padding:6px 14px;border-radius:100px;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+        .filter-bar button:hover,.filter-bar button.active{background:var(--primary);color:#fff}
         .articles{max-width:900px;margin:0 auto;padding:0 24px 80px}
         .article-card{display:flex;gap:24px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:28px;margin-bottom:20px;text-decoration:none;color:inherit;transition:all .3s}
         .article-card:hover{border-color:transparent;box-shadow:var(--shadow-hover);transform:translateY(-3px)}
@@ -39,7 +43,7 @@
         @media(max-width:640px){.blog-hero{padding:120px 16px 40px}.articles{padding:0 16px 60px}.article-card{flex-direction:column;gap:16px;padding:20px}}
     </style>
     <link rel="canonical" href="https://pdfrapido.eu/blog/">
-    <meta property="og:title" content="Blog — Guías y trucos PDF | PDFRápido">
+    <meta property="og:title" content="Blog de PDFRápido — Guías y Tutoriales PDF">
     <meta property="og:description" content="Blog de PDFRápido: guías prácticas, tutoriales y consejos para trabajar con archivos PDF de forma eficiente.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pdfrapido.eu/blog/">
@@ -48,326 +52,550 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Blog de PDFRápido — Guías y Tutoriales PDF",
+      "url": "https://pdfrapido.eu/blog/",
+      "description": "Guías prácticas, tutoriales paso a paso y consejos para trabajar con archivos PDF de forma eficiente.",
+      "publisher": {"@type":"Organization","name":"PDFRápido","url":"https://pdfrapido.eu"},
+      "inLanguage": "es"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "Blog",
       "name": "Blog PDFRápido",
       "url": "https://pdfrapido.eu/blog/",
       "description": "Guías prácticas, tutoriales paso a paso y consejos para trabajar con archivos PDF de forma eficiente.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "PDFRápido",
-        "url": "https://pdfrapido.eu"
-      },
+      "publisher": {"@type":"Organization","name":"PDFRápido","url":"https://pdfrapido.eu"},
       "inLanguage": "es",
       "blogPost": [
-        {"@type": "BlogPosting", "headline": "Cómo resumir un PDF largo gratis con IA en español: guía paso a paso 2026", "url": "https://pdfrapido.eu/blog/como-resumir-pdf-gratis-ia/"},
-        {"@type": "BlogPosting", "headline": "Chat con PDF: cómo hacer preguntas a documentos con IA gratis (tutorial completo 2026)", "url": "https://pdfrapido.eu/blog/chat-pdf-preguntar-documentos-ia/"},
-        {"@type": "BlogPosting", "headline": "Cómo extraer datos de facturas PDF automáticamente con IA", "url": "https://pdfrapido.eu/blog/extraer-datos-facturas-pdf-ia/"},
-        {"@type": "BlogPosting", "headline": "Cómo proteger datos sensibles en un PDF cumpliendo el RGPD", "url": "https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/"},
-        {"@type": "BlogPosting", "headline": "10 alternativas gratuitas a Adobe Acrobat en 2026: comparativa completa", "url": "https://pdfrapido.eu/blog/alternativas-gratis-adobe-acrobat-pdf/"},
-        {"@type": "BlogPosting", "headline": "Cómo comprimir un PDF gratis sin perder calidad", "url": "https://pdfrapido.eu/blog/como-comprimir-pdf-gratis/"},
-        {"@type": "BlogPosting", "headline": "Cómo unir varios PDF en uno solo online", "url": "https://pdfrapido.eu/blog/como-unir-pdf-online/"},
-        {"@type": "BlogPosting", "headline": "Convertir imágenes JPG a PDF: guía completa", "url": "https://pdfrapido.eu/blog/convertir-jpg-a-pdf/"},
-        {"@type": "BlogPosting", "headline": "Cómo proteger un PDF con contraseña gratis", "url": "https://pdfrapido.eu/blog/como-proteger-pdf-con-contrasena/"},
-        {"@type": "BlogPosting", "headline": "Convertir PDF a Word gratis: las mejores opciones en 2026", "url": "https://pdfrapido.eu/blog/pdf-a-word-gratis/"},
-        {"@type": "BlogPosting", "headline": "Cómo firmar un PDF online sin programas", "url": "https://pdfrapido.eu/blog/firmar-pdf-online/"},
-        {"@type": "BlogPosting", "headline": "Cómo comprimir un PDF sin perder calidad: guía completa 2026 con métodos y tabla comparativa", "url": "https://pdfrapido.eu/blog/como-comprimir-pdf-sin-perder-calidad/"},
-        {"@type": "BlogPosting", "headline": "PDF vs Word: diferencias y cuándo usar cada formato", "url": "https://pdfrapido.eu/blog/diferencia-pdf-word-cuando-usar-cada-uno/"},
-        {"@type": "BlogPosting", "headline": "Cómo proteger un PDF con contraseña (guía completa 2026)", "url": "https://pdfrapido.eu/blog/como-proteger-pdf-con-contrasena/"},
-        {"@type": "BlogPosting", "headline": "Convertir imágenes a PDF: guía completa (JPG, PNG, WebP)", "url": "https://pdfrapido.eu/blog/convertir-imagenes-a-pdf-guia-completa/"},
-        {"@type": "BlogPosting", "headline": "Cómo redimensionar las páginas de un PDF (A4, A3, Carta)", "url": "https://pdfrapido.eu/blog/como-redimensionar-pdf/"},
-        {"@type": "BlogPosting", "headline": "Cómo convertir texto a PDF gratis y al instante", "url": "https://pdfrapido.eu/blog/convertir-texto-a-pdf/"},
-        {"@type": "BlogPosting", "headline": "Cómo editar los metadatos de un PDF: guía completa", "url": "https://pdfrapido.eu/blog/editar-metadatos-pdf/"},
-        {"@type": "BlogPosting", "headline": "Cómo convertir PDF a CSV: extrae tablas y datos en segundos", "url": "https://pdfrapido.eu/blog/convertir-pdf-a-csv/"},
-        {"@type": "BlogPosting", "headline": "Cómo firmar un PDF desde el móvil gratis (Android e iPhone)", "url": "https://pdfrapido.eu/blog/firmar-pdf-movil-android-iphone/"},
-        {"@type": "BlogPosting", "headline": "Comprimir PDF para WhatsApp sin perder calidad", "url": "https://pdfrapido.eu/blog/comprimir-pdf-para-whatsapp/"},
-        {"@type": "BlogPosting", "headline": "Cómo analizar un contrato de alquiler con IA antes de firmarlo", "url": "https://pdfrapido.eu/blog/analizar-contrato-alquiler-ia/"},
-        {"@type": "BlogPosting", "headline": "PDF/A: qué es, para qué sirve y cuándo debes usarlo", "url": "https://pdfrapido.eu/blog/que-es-pdf-a-archivo/"}
+        {"@type": "BlogPosting", "headline": "Cómo analizar un contrato PDF con IA y detectar cláusulas de riesgo (2026)", "url": "https://pdfrapido.eu/blog/como-analizar-contrato-con-ia/", "datePublished": "2026-05-28"},
+        {"@type": "BlogPosting", "headline": "Como escribir una carta de presentacion con IA (guia completa 2026) | PDFRapido", "url": "https://pdfrapido.eu/blog/como-escribir-carta-presentacion-con-ia/", "datePublished": "2026-05-28"},
+        {"@type": "BlogPosting", "headline": "Redireccionando...", "url": "https://pdfrapido.eu/blog/proteger-pdf-con-contrasena/", "datePublished": "2026-05-28"},
+        {"@type": "BlogPosting", "headline": "Diferencia entre PDF y PDF/A: cuándo usar cada uno (2026)", "url": "https://pdfrapido.eu/blog/diferencia-pdf-y-pdfa/", "datePublished": "2026-05-25"},
+        {"@type": "BlogPosting", "headline": "Firmar PDF gratis sin Adobe Acrobat (guía 2026)", "url": "https://pdfrapido.eu/blog/firmar-pdf-sin-adobe-acrobat/", "datePublished": "2026-05-25"},
+        {"@type": "BlogPosting", "headline": "Convertir foto a PDF desde el móvil (gratis, sin app)", "url": "https://pdfrapido.eu/blog/foto-a-pdf-desde-el-movil/", "datePublished": "2026-05-25"},
+        {"@type": "BlogPosting", "headline": "Cómo unir PDF en el móvil gratis (Android e iPhone)", "url": "https://pdfrapido.eu/blog/unir-pdf-en-el-movil/", "datePublished": "2026-05-25"},
+        {"@type": "BlogPosting", "headline": "Analizar contrato de alquiler con IA: guía 2026", "url": "https://pdfrapido.eu/blog/analizar-contrato-alquiler-ia/", "datePublished": "2026-05-21"},
+        {"@type": "BlogPosting", "headline": "Comprimir PDF para WhatsApp sin perder calidad", "url": "https://pdfrapido.eu/blog/comprimir-pdf-para-whatsapp/", "datePublished": "2026-05-21"},
+        {"@type": "BlogPosting", "headline": "Cómo firmar un PDF desde el móvil gratis", "url": "https://pdfrapido.eu/blog/firmar-pdf-movil-android-iphone/", "datePublished": "2026-05-21"},
+        {"@type": "BlogPosting", "headline": "PDF/A: qué es, para qué sirve y cuándo usarlo", "url": "https://pdfrapido.eu/blog/que-es-pdf-a-archivo/", "datePublished": "2026-05-21"},
+        {"@type": "BlogPosting", "headline": "Cómo Comprimir un PDF Online Gratis sin Perder Calidad", "url": "https://pdfrapido.eu/blog/comprimir-pdf-online/", "datePublished": "2026-05-19"},
+        {"@type": "BlogPosting", "headline": "Las 10 Mejores Herramientas PDF Online Gratis en 2026", "url": "https://pdfrapido.eu/blog/mejores-herramientas-pdf/", "datePublished": "2026-05-19"},
+        {"@type": "BlogPosting", "headline": "Unir PDFs Online Gratis: La Guía Definitiva 2026", "url": "https://pdfrapido.eu/blog/unir-pdf-online/", "datePublished": "2026-05-19"},
+        {"@type": "BlogPosting", "headline": "Cómo anotar un PDF online gratis: subraya, comenta y marca documentos (2026)", "url": "https://pdfrapido.eu/blog/como-anotar-pdf-online/", "datePublished": "2026-05-15"},
+        {"@type": "BlogPosting", "headline": "Como Convertir un PDF en Formulario Rellenable Automaticamente | PDFRapido", "url": "https://pdfrapido.eu/blog/convertir-pdf-a-formulario-rellenable/", "datePublished": "2026-05-13"},
+        {"@type": "BlogPosting", "headline": "Cómo crear un formulario PDF rellenable gratis", "url": "https://pdfrapido.eu/blog/crear-formulario-pdf-rellenable/", "datePublished": "2026-05-13"},
+        {"@type": "BlogPosting", "headline": "Cómo dividir un PDF online gratis (sin instalar nada)", "url": "https://pdfrapido.eu/blog/como-dividir-pdf-online/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo convertir Excel a PDF gratis (XLS y XLSX)", "url": "https://pdfrapido.eu/blog/convertir-excel-a-pdf/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo convertir Word a PDF gratis (DOC y DOCX)", "url": "https://pdfrapido.eu/blog/convertir-word-a-pdf/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo eliminar páginas de un PDF online gratis", "url": "https://pdfrapido.eu/blog/eliminar-paginas-pdf/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo añadir marca de agua a un PDF gratis", "url": "https://pdfrapido.eu/blog/marca-de-agua-pdf/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo numerar páginas en un PDF gratis", "url": "https://pdfrapido.eu/blog/numerar-paginas-pdf/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo hacer OCR a un PDF escaneado gratis", "url": "https://pdfrapido.eu/blog/ocr-pdf-escaneado/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo traducir un PDF gratis a cualquier idioma", "url": "https://pdfrapido.eu/blog/traducir-pdf-gratis/", "datePublished": "2026-05-11"},
+        {"@type": "BlogPosting", "headline": "Cómo redimensionar las páginas de un PDF (A4, A3, Carta) Blog", "url": "https://pdfrapido.eu/blog/como-redimensionar-pdf/", "datePublished": "2026-05-10"},
+        {"@type": "BlogPosting", "headline": "Cómo convertir PDF a CSV: extrae tablas y datos en segundos Blog", "url": "https://pdfrapido.eu/blog/convertir-pdf-a-csv/", "datePublished": "2026-05-10"},
+        {"@type": "BlogPosting", "headline": "Cómo convertir texto a PDF gratis y al instante Blog", "url": "https://pdfrapido.eu/blog/convertir-texto-a-pdf/", "datePublished": "2026-05-10"},
+        {"@type": "BlogPosting", "headline": "Cómo editar los metadatos de un PDF: guía completa Blog", "url": "https://pdfrapido.eu/blog/editar-metadatos-pdf/", "datePublished": "2026-05-10"},
+        {"@type": "BlogPosting", "headline": "Convertir imágenes a PDF: guía completa (JPG, PNG, WebP)", "url": "https://pdfrapido.eu/blog/convertir-imagenes-a-pdf-guia-completa/", "datePublished": "2026-05-02"}
       ]
     }
     </script>
-    <script src="/js/webmcp.js" defer></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PDFRápido",
-  "url": "https://pdfrapido.eu/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://pdfrapido.eu/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "PDFRápido",
-  "url": "https://pdfrapido.eu",
-  "logo": "https://pdfrapido.eu/favicon.svg",
-  "sameAs": [
-    "https://github.com/mfsanchez/pdfrapido",
-    "https://twitter.com/pdfrapido"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "MF Sanchez",
-    "url": "https://mfsanchez.com"
-  }
-}
-</script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"PDFRápido","item":"https://pdfrapido.eu/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://pdfrapido.eu/blog/"}
+      ]
+    }
+    </script>
 </head>
 <body>
-<nav><div class="nav-inner"><a href="/" class="logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="logo-text">PDF<span>Rápido</span></div></a><a href="/" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Todas las herramientas</a>
-    <button class="theme-toggle" aria-label="Activar modo oscuro" aria-pressed="false"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></nav>
+<nav id="nav"><div class="nav-inner">
+  <a href="/" class="logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="logo-text">PDF<span>Rápido</span></div></a>
+  <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <ul class="nav-links">
+    <li><a href="/guia-completa-pdf/">Guía PDF</a></li>
+    <li><a href="/">Herramientas</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="theme-toggle" aria-label="Activar modo oscuro" aria-pressed="false"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+</div></nav>
 
-<section class="blog-hero">
-    <h1>Blog PDFRápido</h1>
-    <p>Guías, trucos y consejos para trabajar con archivos PDF de forma eficiente.</p>
-</section>
+<main>
+  <div class="blog-hero">
+    <h1>Blog de PDFRápido</h1>
+    <p>Guías prácticas, tutoriales y consejos para trabajar con archivos PDF de forma eficiente. Más de 40 artículos escritos por expertos.</p>
+  </div>
+  <div class="blog-intro">
+    <p>¿Buscas una guía completa? Consulta nuestra <a href="/guia-completa-pdf/">Guía Completa de Herramientas PDF</a> con todas las herramientas explicadas paso a paso.</p>
+  </div>
+  <div class="filter-bar">
+    <button class="active" data-filter="all">Todos</button>
+    <button data-filter="Convertir">Convertir</button>
+    <button data-filter="Optimizar">Optimizar</button>
+    <button data-filter="Organizar">Organizar</button>
+    <button data-filter="Editar">Editar</button>
+    <button data-filter="Seguridad">Seguridad</button>
+    <button data-filter="IA">IA</button>
+    <button data-filter="General">General</button>
+  </div>
+  <div class="articles">
 
-<p class="blog-intro">
-    Bienvenido al blog de PDFRápido, el espacio donde compartimos tutoriales detallados, comparativas de herramientas y los mejores consejos para sacar el máximo partido a tus documentos PDF. Ya sea que necesites <strong>comprimir un PDF</strong> para enviarlo por email, <strong>convertir PDF a Word</strong> para editarlo, <strong>firmar un contrato</strong> de forma digital o <strong>extraer datos de facturas</strong> automáticamente con inteligencia artificial, aquí encontrarás guías paso a paso escritas en español y sin tecnicismos innecesarios. Nuestro objetivo es ayudarte a resolver tareas PDF cotidianas de forma rápida, segura y totalmente gratis.
-</p>
-
-<section class="articles">
-
-    <a href="/blog/como-resumir-pdf-gratis-ia/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-green-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-green-light);color:#1E7E34">IA</span>
-            <h2>Cómo resumir un PDF largo gratis con IA en español: guía paso a paso 2026</h2>
-            <p>Guía paso a paso para estudiantes, abogados e investigadores. Sin registro, sin límites.</p>
-            <div class="meta">25 abril 2026 · 6 min lectura</div>
-        </div>
+    <a href="/blog/como-analizar-contrato-con-ia/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Cómo analizar un contrato PDF con IA y detectar cláusulas de riesgo (2026)</h2>
+        <p>Aprende a analizar contratos PDF con inteligencia artificial: detecta cláusulas de riesgo en contratos de alquiler, labo...</p>
+        <div class="meta">2026-05-28 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/chat-pdf-preguntar-documentos-ia/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-blue-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-blue-light);color:#2B6BD0">IA</span>
-            <h2>Chat con PDF: cómo hacer preguntas a documentos con IA gratis (tutorial completo 2026)</h2>
-            <p>Tutorial completo para contratos, sentencias e informes en español.</p>
-            <div class="meta">25 abril 2026 · 5 min lectura</div>
-        </div>
+    <a href="/blog/como-escribir-carta-presentacion-con-ia/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Como escribir una carta de presentacion con IA (guia completa 2026) | PDFRapido</h2>
+        <p>Aprende a escribir una carta de presentacion profesional con IA: estructura, errores comunes, ejemplos y como usar la in...</p>
+        <div class="meta">2026-05-28 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/extraer-datos-facturas-pdf-ia/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-teal-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-teal-light);color:#00695C">IA</span>
-            <h2>Cómo extraer datos de facturas PDF automáticamente con IA</h2>
-            <p>Tutorial para autónomos y empresas. Exporta a Excel/CSV para contabilidad sin esfuerzo.</p>
-            <div class="meta">25 abril 2026 · 6 min lectura</div>
-        </div>
+    <a href="/blog/proteger-pdf-con-contrasena/" class="article-card" data-cat="Seguridad">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">R</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Seguridad</span>
+        <h2>Redireccionando...</h2>
+        <p></p>
+        <div class="meta">2026-05-28 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/redactar-pdf-rgpd-datos-sensibles/" class="article-card">
-        <div class="article-icon" style="background:var(--primary-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--primary-light);color:#C73830">Seguridad</span>
-            <h2>Cómo proteger datos sensibles en un PDF cumpliendo el RGPD</h2>
-            <p>Diferencia entre tachar y redactar, errores comunes y tutorial para abogados y RRHH.</p>
-            <div class="meta">25 abril 2026 · 7 min lectura</div>
-        </div>
+    <a href="/blog/diferencia-pdf-y-pdfa/" class="article-card" data-cat="General">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">D</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">General</span>
+        <h2>Diferencia entre PDF y PDF/A: cuándo usar cada uno (2026)</h2>
+        <p>Diferencia entre PDF y PDF/A explicada: qué cambia, cuándo necesitas PDF/A obligatorio (Administración, archivo legal) y...</p>
+        <div class="meta">2026-05-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/alternativas-gratis-adobe-acrobat-pdf/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-orange-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-orange-light);color:#D97A2B">Comparativa</span>
-            <h2>10 alternativas gratuitas a Adobe Acrobat en 2026: comparativa completa</h2>
-            <p>Editar, firmar, comprimir, OCR, redactar y más. Sin instalar nada, sin pagar 24€/mes.</p>
-            <div class="meta">25 abril 2026 · 8 min lectura</div>
-        </div>
+    <a href="/blog/firmar-pdf-sin-adobe-acrobat/" class="article-card" data-cat="Seguridad">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">F</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Seguridad</span>
+        <h2>Firmar PDF gratis sin Adobe Acrobat (guía 2026)</h2>
+        <p>Firma cualquier PDF gratis sin instalar Adobe Acrobat. Compara qué cobra Adobe, qué da gratis y cómo firmar online en 30...</p>
+        <div class="meta">2026-05-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/convertir-pdf-a-csv/" class="article-card">
-        <div class="article-icon" style="background:#F0FDF4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/><polyline points="12 17 14 21 16 17"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#F0FDF4;color:#15803D">Tutorial</span>
-            <h2>Cómo convertir PDF a CSV: extrae tablas y datos en segundos</h2>
-            <p>Facturas, informes financieros, catálogos: aprende a extraer tablas de PDF a CSV para Excel o Google Sheets sin instalar nada.</p>
-            <div class="meta">10 mayo 2026 · 7 min lectura</div>
-        </div>
+    <a href="/blog/foto-a-pdf-desde-el-movil/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Convertir foto a PDF desde el móvil (gratis, sin app)</h2>
+        <p>Convierte fotos a PDF desde tu móvil gratis y sin app. Guía para pasar JPG, PNG o HEIC a PDF en Android e iPhone: DNI, c...</p>
+        <div class="meta">2026-05-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/editar-metadatos-pdf/" class="article-card">
-        <div class="article-icon" style="background:#F4ECF7"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#F4ECF7;color:#6C3483">Tutorial</span>
-            <h2>Cómo editar los metadatos de un PDF: guía completa</h2>
-            <p>Qué son los metadatos, por qué es importante editarlos o borrarlos (privacidad, RGPD) y cómo hacerlo gratis sin instalar nada.</p>
-            <div class="meta">10 mayo 2026 · 6 min lectura</div>
-        </div>
+    <a href="/blog/unir-pdf-en-el-movil/" class="article-card" data-cat="Organizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Organizar</span>
+        <h2>Cómo unir PDF en el móvil gratis (Android e iPhone)</h2>
+        <p>Cómo unir varios PDF en el móvil gratis (Android e iPhone) sin instalar apps. Guía paso a paso para combinar facturas, e...</p>
+        <div class="meta">2026-05-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/convertir-texto-a-pdf/" class="article-card">
-        <div class="article-icon" style="background:#F5F3FF"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#F5F3FF;color:#7C3AED">Tutorial</span>
-            <h2>Cómo convertir texto a PDF gratis y al instante</h2>
-            <p>Contratos, apuntes, código fuente y borradores rápidos: cuándo usar texto plano y cómo pasarlo a PDF sin instalar nada.</p>
-            <div class="meta">10 mayo 2026 · 6 min lectura</div>
-        </div>
+    <a href="/blog/analizar-contrato-alquiler-ia/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">A</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Analizar contrato de alquiler con IA: guía 2026</h2>
+        <p>Sube tu contrato de alquiler a la IA de PDFRápido y detecta cláusulas abusivas antes de firmar. Guía con los errores más...</p>
+        <div class="meta">2026-05-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/como-redimensionar-pdf/" class="article-card">
-        <div class="article-icon" style="background:#EBF2FD"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#EBF2FD;color:#2B6BD0">Guía</span>
-            <h2>Cómo redimensionar las páginas de un PDF (A4, A3, Carta)</h2>
-            <p>Cuándo cambiar el tamaño de página de un PDF, diferencias entre formatos y cómo hacerlo gratis sin instalar nada.</p>
-            <div class="meta">10 mayo 2026 · 7 min lectura</div>
-        </div>
+    <a href="/blog/comprimir-pdf-para-whatsapp/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>Comprimir PDF para WhatsApp sin perder calidad</h2>
+        <p>¿Tu PDF no cabe en WhatsApp? Reduce el tamaño de cualquier PDF en segundos y envíalo sin problemas. Gratis, sin registro...</p>
+        <div class="meta">2026-05-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/como-comprimir-pdf-sin-perder-calidad/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-green-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l3-3 3 3"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-green-light);color:#1E7E34">Guía</span>
-            <h2>Cómo comprimir un PDF sin perder calidad: guía completa 2026 con métodos y tabla comparativa</h2>
-            <p>Descubre qué métodos realmente conservan la calidad visual, cuánto puedes reducir el tamaño y cuándo usar cada técnica según tu caso de uso.</p>
-            <div class="meta">8 mayo 2026 · 6 min lectura</div>
-        </div>
+    <a href="/blog/firmar-pdf-movil-android-iphone/" class="article-card" data-cat="Seguridad">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Seguridad</span>
+        <h2>Cómo firmar un PDF desde el móvil gratis</h2>
+        <p>Firma un PDF desde tu Android o iPhone en segundos, sin instalar apps. Guía para firmar contratos, facturas y autorizaci...</p>
+        <div class="meta">2026-05-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/diferencia-pdf-word-cuando-usar-cada-uno/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-orange-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-orange-light);color:#D97A2B">Comparativa</span>
-            <h2>PDF vs Word: diferencias y cuándo usar cada formato</h2>
-            <p>¿PDF o Word? Descubre las diferencias clave entre ambos formatos y aprende en qué situaciones debes usar cada uno para maximizar tu productividad.</p>
-            <div class="meta">8 mayo 2026 · 5 min lectura</div>
-        </div>
+    <a href="/blog/que-es-pdf-a-archivo/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">P</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>PDF/A: qué es, para qué sirve y cuándo usarlo</h2>
+        <p>Descubre qué es el formato PDF/A, en qué se diferencia de un PDF normal y cuándo es obligatorio usarlo para trámites con...</p>
+        <div class="meta">2026-05-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/como-proteger-pdf-con-contrasena/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-teal-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-teal-light);color:#00695C">Seguridad</span>
-            <h2>Cómo proteger un PDF con contraseña (guía completa 2026)</h2>
-            <p>Aprende a cifrar tus documentos PDF con contraseña. Tipos de cifrado, niveles de permisos y cuándo es imprescindible proteger tus archivos.</p>
-            <div class="meta">8 mayo 2026 · 5 min lectura</div>
-        </div>
+    <a href="/blog/comprimir-pdf-online/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>Cómo Comprimir un PDF Online Gratis sin Perder Calidad</h2>
+        <p>Aprende a comprimir un PDF online gratis sin perder calidad. Guía paso a paso con PDFRápido, la herramienta rápida y seg...</p>
+        <div class="meta">2026-05-19 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/convertir-imagenes-a-pdf-guia-completa/" class="article-card">
-        <div class="article-icon" style="background:var(--primary-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--primary-light);color:#C73830">Tutorial</span>
-            <h2>Convertir imágenes a PDF: guía completa (JPG, PNG, WebP)</h2>
-            <p>Convierte una o varias imágenes a PDF con calidad profesional. Métodos para JPG, PNG y WebP, sin perder resolución y con ajuste de márgenes.</p>
-            <div class="meta">8 mayo 2026 · 4 min lectura</div>
-        </div>
+    <a href="/blog/mejores-herramientas-pdf/" class="article-card" data-cat="General">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">L</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">General</span>
+        <h2>Las 10 Mejores Herramientas PDF Online Gratis en 2026</h2>
+        <p>Las 10 mejores herramientas PDF online gratis en 2026. PDFRápido lidera la lista con más de 30 utilidades gratuitas, sin...</p>
+        <div class="meta">2026-05-19 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/como-comprimir-pdf-gratis/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-green-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l3-3 3 3"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-green-light);color:#1E7E34">Guía</span>
-            <h2>Cómo comprimir un PDF gratis sin perder calidad</h2>
-            <p>Aprende a reducir el tamaño de tus archivos PDF de forma gratuita. Te explicamos los mejores métodos y herramientas disponibles en 2026.</p>
-            <div class="meta">21 marzo 2026 · 5 min lectura</div>
-        </div>
+    <a href="/blog/unir-pdf-online/" class="article-card" data-cat="Organizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">U</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Organizar</span>
+        <h2>Unir PDFs Online Gratis: La Guía Definitiva 2026</h2>
+        <p>Unir PDFs online gratis nunca fue tan fácil. Descubre la guía definitiva 2026 y por qué PDFRápido es la mejor opción par...</p>
+        <div class="meta">2026-05-19 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/como-unir-pdf-online/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-blue-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="7" height="18" rx="1.5"/><rect x="15" y="3" width="7" height="18" rx="1.5"/><path d="M9 12h6"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-blue-light);color:#2B6BD0">Guía</span>
-            <h2>Cómo unir varios PDF en uno solo online</h2>
-            <p>Combina múltiples documentos PDF en un único archivo de forma rápida y segura. Guía paso a paso con capturas.</p>
-            <div class="meta">21 marzo 2026 · 4 min lectura</div>
-        </div>
+    <a href="/blog/como-anotar-pdf-online/" class="article-card" data-cat="Editar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Editar</span>
+        <h2>Cómo anotar un PDF online gratis: subraya, comenta y marca documentos (2026)</h2>
+        <p>Aprende a anotar PDFs online gratis: subraya texto, añade comentarios, flechas y formas directamente en el navegador sin...</p>
+        <div class="meta">2026-05-15 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/convertir-jpg-a-pdf/" class="article-card">
-        <div class="article-icon" style="background:var(--primary-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--primary-light);color:#C73830">Tutorial</span>
-            <h2>Convertir imágenes JPG a PDF: guía completa</h2>
-            <p>Descubre cómo transformar tus fotos e imágenes en documentos PDF profesionales. Varios métodos explicados.</p>
-            <div class="meta">21 marzo 2026 · 4 min lectura</div>
-        </div>
+    <a href="/blog/convertir-pdf-a-formulario-rellenable/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>Como Convertir un PDF en Formulario Rellenable Automaticamente | PDFRapido</h2>
+        <p>Aprende a convertir cualquier PDF en un formulario rellenable automaticamente. Guia practica con casos de uso: contratos...</p>
+        <div class="meta">2026-05-13 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/como-proteger-pdf-con-contrasena/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-teal-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-teal-light);color:#00695C">Seguridad</span>
-            <h2>Cómo proteger un PDF con contraseña gratis</h2>
-            <p>Aprende a añadir una clave de seguridad a tus documentos PDF para proteger información confidencial.</p>
-            <div class="meta">21 marzo 2026 · 3 min lectura</div>
-        </div>
+    <a href="/blog/crear-formulario-pdf-rellenable/" class="article-card" data-cat="General">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">General</span>
+        <h2>Cómo crear un formulario PDF rellenable gratis</h2>
+        <p>Aprende a crear formularios PDF rellenables online gratis. Guía completa con casos de uso: contratos, encuestas, RRHH y ...</p>
+        <div class="meta">2026-05-13 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/pdf-a-word-gratis/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-orange-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-orange-light);color:#D97A2B">Conversión</span>
-            <h2>Convertir PDF a Word gratis: las mejores opciones en 2026</h2>
-            <p>Transforma tus documentos PDF en archivos Word editables sin perder el formato. Comparativa de herramientas.</p>
-            <div class="meta">21 marzo 2026 · 5 min lectura</div>
-        </div>
+    <a href="/blog/como-dividir-pdf-online/" class="article-card" data-cat="Organizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Organizar</span>
+        <h2>Cómo dividir un PDF online gratis (sin instalar nada)</h2>
+        <p>Aprende a dividir un PDF online gratis sin instalar nada. Cómo separar páginas, dividir por rangos y extraer una sola pá...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/firmar-pdf-online/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-purple-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 19.5v.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8.5"/><path d="M16 2l4 4-8 8-4 1 1-4 7-7z"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-purple-light);color:#6C3483">Tutorial</span>
-            <h2>Cómo firmar un PDF online sin programas</h2>
-            <p>Firma tus documentos PDF directamente desde el navegador. Guía rápida con firma dibujada y digital.</p>
-            <div class="meta">21 marzo 2026 · 3 min lectura</div>
-        </div>
+    <a href="/blog/convertir-excel-a-pdf/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Cómo convertir Excel a PDF gratis (XLS y XLSX)</h2>
+        <p>Cómo convertir Excel a PDF online gratis sin perder formato. Evita columnas cortadas y hojas múltiples con esta guía pas...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/firmar-pdf-movil-android-iphone/" class="article-card">
-        <div class="article-icon" style="background:var(--accent-purple-light)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:var(--accent-purple-light);color:#6C3483">Firma digital</span>
-            <h2>Cómo firmar un PDF desde el móvil gratis (Android e iPhone)</h2>
-            <p>Firma contratos, facturas y autorizaciones desde tu smartphone sin instalar ninguna app. Guía paso a paso para Android e iOS.</p>
-            <div class="meta">21 mayo 2026 · 6 min lectura</div>
-        </div>
+    <a href="/blog/convertir-word-a-pdf/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Cómo convertir Word a PDF gratis (DOC y DOCX)</h2>
+        <p>Cómo convertir Word a PDF gratis online sin instalar nada. Convierte DOC y DOCX a PDF conservando el formato exacto en s...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/comprimir-pdf-para-whatsapp/" class="article-card">
-        <div class="article-icon" style="background:#E8F5E9"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#E8F5E9;color:#2E7D32">Compresión</span>
-            <h2>Comprimir PDF para WhatsApp sin perder calidad</h2>
-            <p>¿Tu PDF supera el límite de WhatsApp? Aprende a reducir el tamaño en segundos sin que pierda calidad visual.</p>
-            <div class="meta">21 mayo 2026 · 5 min lectura</div>
-        </div>
+    <a href="/blog/eliminar-paginas-pdf/" class="article-card" data-cat="Organizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Organizar</span>
+        <h2>Cómo eliminar páginas de un PDF online gratis</h2>
+        <p>Aprende a eliminar páginas de un PDF online gratis sin instalar nada. Cómo borrar hojas sueltas, rangos de páginas y lim...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/analizar-contrato-alquiler-ia/" class="article-card">
-        <div class="article-icon" style="background:#FFF3E0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E65100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#FFF3E0;color:#E65100">IA</span>
-            <h2>Cómo analizar un contrato de alquiler con IA antes de firmarlo</h2>
-            <p>Detecta cláusulas abusivas y condiciones desfavorables en tu contrato de arrendamiento con ayuda de inteligencia artificial.</p>
-            <div class="meta">21 mayo 2026 · 7 min lectura</div>
-        </div>
+    <a href="/blog/marca-de-agua-pdf/" class="article-card" data-cat="Editar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Editar</span>
+        <h2>Cómo añadir marca de agua a un PDF gratis</h2>
+        <p>Aprende a añadir marca de agua a un PDF gratis online. Texto o imagen, posición y opacidad personalizables. Protege tus ...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-    <a href="/blog/que-es-pdf-a-archivo/" class="article-card">
-        <div class="article-icon" style="background:#E3F2FD"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-        <div class="article-body">
-            <span class="tag" style="background:#E3F2FD;color:#1565C0">Formatos</span>
-            <h2>PDF/A: qué es, para qué sirve y cuándo debes usarlo</h2>
-            <p>Todo lo que necesitas saber sobre el formato PDF/A: diferencias con el PDF estándar, versiones y cuándo es obligatorio en España.</p>
-            <div class="meta">21 mayo 2026 · 7 min lectura</div>
-        </div>
+    <a href="/blog/numerar-paginas-pdf/" class="article-card" data-cat="Editar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Editar</span>
+        <h2>Cómo numerar páginas en un PDF gratis</h2>
+        <p>Aprende a numerar páginas en un PDF gratis online. Elige posición, formato y desde qué página empezar. Sin instalar nada...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
     </a>
 
-</section>
+    <a href="/blog/ocr-pdf-escaneado/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>Cómo hacer OCR a un PDF escaneado gratis</h2>
+        <p>Aprende a hacer OCR a un PDF escaneado gratis. Convierte imágenes de documentos en texto seleccionable y buscable. Sin i...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
 
-<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
-<script src="/js/main.js"></script>
+    <a href="/blog/traducir-pdf-gratis/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Cómo traducir un PDF gratis a cualquier idioma</h2>
+        <p>Aprende a traducir un PDF gratis a cualquier idioma manteniendo el formato. Sin instalar nada, con IA. Desde español al ...</p>
+        <div class="meta">2026-05-11 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-redimensionar-pdf/" class="article-card" data-cat="Editar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Editar</span>
+        <h2>Cómo redimensionar las páginas de un PDF (A4, A3, Carta) Blog</h2>
+        <p>Aprende a redimensionar las páginas de un PDF a A4, A3, Carta o tamaño personalizado. Cuándo usar cada formato, diferenc...</p>
+        <div class="meta">2026-05-10 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/convertir-pdf-a-csv/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Cómo convertir PDF a CSV: extrae tablas y datos en segundos Blog</h2>
+        <p>Aprende a extraer tablas de un PDF y convertirlas a CSV para Excel o Google Sheets. Guía completa con casos de uso reale...</p>
+        <div class="meta">2026-05-10 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/convertir-texto-a-pdf/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Cómo convertir texto a PDF gratis y al instante Blog</h2>
+        <p>Aprende a convertir texto plano a PDF gratis. Casos de uso: contratos, apuntes, código fuente y borradores rápidos. Sin ...</p>
+        <div class="meta">2026-05-10 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/editar-metadatos-pdf/" class="article-card" data-cat="Editar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Editar</span>
+        <h2>Cómo editar los metadatos de un PDF: guía completa Blog</h2>
+        <p>Aprende qué son los metadatos de un PDF, por qué editarlos o eliminarlos, y cómo hacerlo gratis desde el navegador sin i...</p>
+        <div class="meta">2026-05-10 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/convertir-imagenes-a-pdf-guia-completa/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Convertir imágenes a PDF: guía completa (JPG, PNG, WebP)</h2>
+        <p>Guía completa para convertir imágenes a PDF: JPG, PNG, WebP y más. Aprende a crear PDFs de una o varias imágenes, ajusta...</p>
+        <div class="meta">2026-05-02 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/alternativas-gratis-adobe-acrobat-pdf/" class="article-card" data-cat="General">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">1</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">General</span>
+        <h2>10 alternativas gratuitas a Adobe Acrobat en 2026 (comparativa completa)</h2>
+        <p>10 herramientas PDF gratis que sustituyen a Adobe Acrobat: editar, firmar, comprimir, OCR, redactar y más. Sin instalar ...</p>
+        <div class="meta">2026-04-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/chat-pdf-preguntar-documentos-ia/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Chat con PDF: cómo hacer preguntas a documentos con IA gratis (tutorial completo 2026)</h2>
+        <p>Aprende a chatear con un PDF y hacer preguntas a tus documentos con IA. Tutorial completo para contratos, sentencias e i...</p>
+        <div class="meta">2026-04-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-proteger-pdf-con-contrasena/" class="article-card" data-cat="Seguridad">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Seguridad</span>
+        <h2>Cómo proteger un PDF con contraseña (guía completa 2026)</h2>
+        <p>Aprende a proteger un PDF con contraseña paso a paso. Tipos de contraseñas PDF, niveles de cifrado y cuándo es realmente...</p>
+        <div class="meta">2026-04-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-resumir-pdf-gratis-ia/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Cómo resumir un PDF largo gratis con IA en español: guía paso a paso 2026</h2>
+        <p>Cómo resumir un PDF largo gratis en español con IA: guía paso a paso para estudiantes, abogados e investigadores. Sin re...</p>
+        <div class="meta">2026-04-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/extraer-datos-facturas-pdf-ia/" class="article-card" data-cat="IA">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">IA</span>
+        <h2>Cómo extraer datos de facturas PDF automáticamente con IA (2026)</h2>
+        <p>Cómo extraer datos de facturas PDF automáticamente con IA: tutorial para autónomos y empresas. Exporta a Excel/CSV para ...</p>
+        <div class="meta">2026-04-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/redactar-pdf-rgpd-datos-sensibles/" class="article-card" data-cat="Seguridad">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Seguridad</span>
+        <h2>Cómo proteger datos sensibles en un PDF cumpliendo el RGPD (2026)</h2>
+        <p>Cómo proteger datos sensibles en un PDF cumpliendo el RGPD: diferencia entre tachar y redactar, errores comunes y tutori...</p>
+        <div class="meta">2026-04-25 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/diferencia-pdf-word-cuando-usar-cada-uno/" class="article-card" data-cat="General">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">P</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">General</span>
+        <h2>PDF vs Word: diferencias y cuándo usar cada formato</h2>
+        <p>¿PDF o Word? Descubre las diferencias clave entre ambos formatos y aprende en qué situaciones debes usar cada uno para m...</p>
+        <div class="meta">2026-04-18 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-comprimir-pdf-sin-perder-calidad/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>Cómo comprimir un PDF sin perder calidad: guía completa 2026 con métodos y tabla</h2>
+        <p>Guía completa para comprimir PDF sin perder calidad en 2026. Aprende qué métodos funcionan, cuánto puedes reducir el tam...</p>
+        <div class="meta">2026-04-10 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-comprimir-pdf-gratis/" class="article-card" data-cat="Optimizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Optimizar</span>
+        <h2>Cómo comprimir un PDF gratis sin perder calidad (2026)</h2>
+        <p>Aprende a comprimir un PDF gratis sin perder calidad. Te explicamos los mejores métodos y herramientas online disponible...</p>
+        <div class="meta">2026-03-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-unir-pdf-online/" class="article-card" data-cat="Organizar">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Organizar</span>
+        <h2>Cómo unir varios PDF en uno solo online gratis (2026)</h2>
+        <p>Aprende a unir varios archivos PDF en uno solo de forma gratuita. Guía paso a paso con las mejores herramientas online d...</p>
+        <div class="meta">2026-03-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/convertir-jpg-a-pdf/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Convertir imágenes JPG a PDF: guía completa (2026)</h2>
+        <p>Convierte imágenes JPG a PDF gratis online. JPG, PNG y WebP a PDF en segundos. Sin registro, sin instalar. Guía completa...</p>
+        <div class="meta">2026-03-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/firmar-pdf-online/" class="article-card" data-cat="Seguridad">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Seguridad</span>
+        <h2>Cómo firmar un PDF online sin programas (2026)</h2>
+        <p>Aprende a firmar un PDF online gratis sin instalar programas. Dibuja tu firma, añádela a cualquier documento y descárgal...</p>
+        <div class="meta">2026-03-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/pdf-a-word-gratis/" class="article-card" data-cat="Convertir">
+      <div class="article-icon" style="background:var(--primary-light);color:var(--primary);font-size:24px;font-weight:700">C</div>
+      <div class="article-body">
+        <span class="tag" style="background:var(--primary-light);color:var(--primary)">Convertir</span>
+        <h2>Convertir PDF a Word gratis: las mejores opciones (2026)</h2>
+        <p>Convierte PDF a Word editable gratis online. Sin registro, sin instalar. Mantiene el formato original. Guía paso a paso ...</p>
+        <div class="meta">2026-03-21 · Por <span rel="author">MF Sanchez</span></div>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer><p>&copy; 2026 PDFRápido — dev: <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a> &nbsp;|&nbsp; <a href="/">Inicio</a> · <a href="/guia-completa-pdf/">Guía PDF</a> · <a href="/blog/">Blog</a> · <a href="/sobre-pdfrapido/">Sobre PDFRápido</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a></p></footer>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.filter-bar button');
+  var cards = document.querySelectorAll('.article-card');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        card.style.display = (filter === 'all' || card.getAttribute('data-cat') === filter) ? 'flex' : 'none';
+      });
+    });
+  });
+})();
+</script>
 <script src="/js/cookies-banner.js"></script>
 <script src="/js/error-modal.js"></script>
 <script src="/js/theme-toggle.js?v=14" defer></script>
