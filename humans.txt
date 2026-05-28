@@ -1,13 +1,26 @@
 /* TEAM */
-    Founder: MF Sanchez
-    Site: /sobre-mf-sanchez/
+    Founder & Developer: MF Sanchez
+    Site: https://pdfrapido.eu/sobre-mf-sanchez/
     Twitter: @mfsanchez
+    GitHub: github.com/mfsanchez
+    From: Spain
 
 /* SITE */
-    Last update: 2026-05-19
-    Standards: HTML5, CSS3, JavaScript
-    Components: Node.js
+    Last update: 2026-05-28
+    Standards: HTML5, CSS3, JavaScript, WebAssembly, JSON-LD
+    Components: Node.js, Python, LibreOffice, PDF.js
     Software: PDFRápido
+    Language: Spanish (es)
+    Doctype: HTML5
 
 /* THANKS */
     Name: Comunidad de usuarios de PDFRápido
+    Name: PDF.js — Mozilla
+    Name: LibreOffice
+    Name: Open source community
+
+/* RELATED PROJECTS */
+    cryptopass.es — Gestor de contraseñas seguro
+    dondeveo.online — Buscador de dónde ver películas y series
+    media.cryptopass.es — Recursos digitales
+    mfsanchez.com — Portafolio profesional

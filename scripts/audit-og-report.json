@@ -1,0 +1,764 @@
+[
+  {
+    "file": "analizar-contrato/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "anotar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "chat-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "comparar-pdfs/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "comprimir-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "contacto/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "cookies/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "corregir-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "crear-formulario-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "cv-a-carta/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "desbloquear-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "dividir-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "editar-metadatos-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "editor-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "eliminar-paginas/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "excel-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "extraer-datos/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "extraer-paginas/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "firmar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "generar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "guia-completa-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "html-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "imagen-a-portada/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "jpg-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "marca/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "marca-agua/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "numerar-paginas/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "ocr-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "organizar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-audio/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-csv/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-excel/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-formulario/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-jpg/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-png/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-pptx/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-texto/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pdf-a-word/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "pptx-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "privacidad/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "proteger-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "recortar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "redactar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "redimensionar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "rellenar-formulario/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "reparar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "resumir-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "rotar-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "sobre-mf-sanchez/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "sobre-nosotros/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "sobre-pdfrapido/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "terminos/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "texto-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "traducir-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "unir-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "word-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/alternativas-gratis-adobe-acrobat-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/analizar-contrato-alquiler-ia/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/chat-pdf-preguntar-documentos-ia/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/como-analizar-contrato-con-ia/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/como-anotar-pdf-online/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/como-comprimir-pdf-gratis/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/como-comprimir-pdf-sin-perder-calidad/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/como-dividir-pdf-online/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/como-escribir-carta-presentacion-con-ia/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/como-proteger-pdf-con-contrasena/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/como-redimensionar-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/como-resumir-pdf-gratis-ia/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/como-unir-pdf-online/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/comprimir-pdf-online/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/comprimir-pdf-para-whatsapp/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/convertir-excel-a-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/convertir-imagenes-a-pdf-guia-completa/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/convertir-jpg-a-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/convertir-pdf-a-csv/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/convertir-pdf-a-formulario-rellenable/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/convertir-texto-a-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/convertir-word-a-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/crear-formulario-pdf-rellenable/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/diferencia-pdf-word-cuando-usar-cada-uno/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/diferencia-pdf-y-pdfa/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/editar-metadatos-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/eliminar-paginas-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/extraer-datos-facturas-pdf-ia/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/firmar-pdf-movil-android-iphone/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/firmar-pdf-online/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/firmar-pdf-sin-adobe-acrobat/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/foto-a-pdf-desde-el-movil/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/marca-de-agua-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/mejores-herramientas-pdf/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/numerar-paginas-pdf/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/ocr-pdf-escaneado/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/pdf-a-word-gratis/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/proteger-pdf-con-contrasena/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/que-es-pdf-a-archivo/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/redactar-pdf-rgpd-datos-sensibles/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  },
+  {
+    "file": "blog/traducir-pdf-gratis/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/unir-pdf-en-el-movil/index.html",
+    "changes": [
+      "added-twitter-card",
+      "added-twitter-creator",
+      "added-twitter-site",
+      "added-og-site-name"
+    ]
+  },
+  {
+    "file": "blog/unir-pdf-online/index.html",
+    "changes": [
+      "added-twitter-creator",
+      "added-twitter-site"
+    ]
+  }
+]
