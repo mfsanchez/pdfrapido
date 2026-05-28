@@ -297,7 +297,7 @@ function generateSchema(tool) {
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-        "author": { "@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com" },
+        "author": { "@type": "Person", "name": "MF Sanchez", "url": "/sobre-mf-sanchez/" },
         "inLanguage": "es",
         "isAccessibleForFree": true,
         "featureList": tool.featureList
@@ -419,7 +419,7 @@ ${faqDetails}
 ${relatedLinks}
     </nav>
     <footer class="author-byline">
-      <p>Por <a href="https://mfsanchez.com" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
+      <p>Por <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
     </footer>`;
       html = beforeFooter + newSections + '\n' + footerMatch[0] + afterFooter;
       modified = true;

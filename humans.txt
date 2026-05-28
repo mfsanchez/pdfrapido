@@ -1,6 +1,6 @@
 /* TEAM */
     Founder: MF Sanchez
-    Site: https://mfsanchez.com
+    Site: /sobre-mf-sanchez/
     Twitter: @mfsanchez
 
 /* SITE */
