@@ -170,3 +170,6 @@ Crawl-delay: 1
 
 # === Sitemaps ===
 Sitemap: https://pdfrapido.eu/sitemap-index.xml
+
+# Archivo para IAs (LLMs)
+LLMs: https://pdfrapido.eu/llms.txt

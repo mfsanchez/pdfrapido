@@ -36,14 +36,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css?v=13">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93B5VKXW7W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-93B5VKXW7W');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
     <style>
         .legal{max-width:760px;margin:0 auto;padding:0 4px}
         .legal h1{font-size:32px;font-weight:700;color:var(--secondary);margin-bottom:8px;letter-spacing:-.8px}
@@ -102,6 +94,38 @@
   ]
 }
 </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué cookies utiliza PDFRápido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PDFRápido utiliza cookies técnicas necesarias para el funcionamiento, cookies analíticas de Google Analytics para medir el tráfico, y cookies publicitarias de Google AdSense para mostrar anuncios personalizados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo rechazar las cookies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes rechazar las cookies no esenciales pulsando el botón Rechazar en el banner de cookies. También puedes gestionarlas desde la configuración de tu navegador."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo revocar mi consentimiento después?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Puedes revocar tu consentimiento en cualquier momento desde la página de política de cookies de PDFRápido, pulsando el botón de revocación."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 <nav><div class="nav-inner"><a href="/" class="logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="logo-text">PDF<span>Rápido</span></div></a><a href="/" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Volver al inicio</a>
@@ -110,7 +134,7 @@
 <main class="narrow">
 <div class="legal">
     <h1>Política de Cookies</h1>
-    <p class="updated">Última actualización: 21 de marzo de 2026</p>
+    <p class="updated">Última actualización: 29 de mayo de 2026</p>
 
     <h2>1. ¿Qué son las cookies?</h2>
     <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Se utilizan para recordar tus preferencias, analizar el tráfico y mostrar publicidad relevante.</p>
@@ -127,6 +151,8 @@
             <tr><td>_gat</td><td>Google Analytics</td><td>Limitar la tasa de solicitudes</td><td>1 minuto</td></tr>
             <tr><td>__gads</td><td>Google AdSense</td><td>Mostrar anuncios personalizados</td><td>13 meses</td></tr>
             <tr><td>__gpi</td><td>Google AdSense</td><td>Almacenar preferencias de anuncios</td><td>13 meses</td></tr>
+            <tr><td>IDE</td><td>Google AdSense / DoubleClick</td><td>Mostrar anuncios personalizados (DART)</td><td>13 meses</td></tr>
+            <tr><td>cookie_consent_v2</td><td>PDFRápido</td><td>Recordar tu decisión sobre cookies (localStorage)</td><td>Persistente</td></tr>
             <tr><td>NID</td><td>Google</td><td>Preferencias y personalización</td><td>6 meses</td></tr>
             <tr><td>CONSENT</td><td>Google</td><td>Almacenar consentimiento de cookies</td><td>2 años</td></tr>
         </tbody>
@@ -148,9 +174,13 @@
     <p>Ten en cuenta que deshabilitar cookies puede afectar al funcionamiento de algunas herramientas del sitio.</p>
 
     <h2>5. Consentimiento</h2>
-    <p>Al navegar por PDFRápido y aceptar el aviso de cookies, consientes el uso de las cookies descritas en esta política. Puedes retirar tu consentimiento en cualquier momento configurando tu navegador.</p>
+    <p>Al navegar por PDFRápido y aceptar el aviso de cookies, consientes el uso de las cookies descritas en esta política. Puedes retirar tu consentimiento en cualquier momento desde esta página o configurando tu navegador.</p>
 
-    <h2>6. Más información</h2>
+    <h2>6. Cómo revocar el consentimiento</h2>
+    <p>Si ya habías aceptado las cookies y deseas revocar tu consentimiento, puedes hacerlo pulsando el siguiente botón. Esto eliminará tu preferencia almacenada, borrará las cookies de terceros y recargará la página para que puedas decidir de nuevo.</p>
+    <button onclick="if(typeof ckRevokeConsent==='function')ckRevokeConsent();else{localStorage.removeItem('cookie_consent_v2');localStorage.removeItem('cookie_consent_date');location.reload();}" style="padding:12px 24px;background:#E8453C;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px;margin-top:8px">Revocar consentimiento y borrar cookies</button>
+
+    <h2>7. Más información</h2>
     <p>Para más información sobre cómo Google utiliza los datos, visita <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Cómo utiliza Google los datos</a>.</p>
     <p>Si tienes dudas sobre nuestra política de cookies, contacta con nosotros a través de la página de <a href="/contacto/">contacto</a>.</p>
 </div>
@@ -158,7 +188,7 @@
 
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> &nbsp;|&nbsp; <a href="/">Inicio</a> · <a href="/privacidad/">Privacidad</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 <script src="/js/main.js"></script>
-<script src="/js/cookies-banner.js"></script>
+<script src="/js/cookies-consent.js?v=2" defer></script>
 <script src="/js/error-modal.js"></script>
 <script src="/js/theme-toggle.js?v=14" defer></script>
 </body>

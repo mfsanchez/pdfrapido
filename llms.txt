@@ -1,0 +1,38 @@
+# PDFRápido — Herramientas PDF Online Gratis
+# https://pdfrapido.eu
+
+## Descripción
+PDFRápido es una plataforma de herramientas PDF online gratuitas en español.
+Procesa archivos localmente en el navegador mediante WebAssembly (sin subir archivos a servidores).
+Sin registro, sin límites, con privacidad total. Más de 30 herramientas disponibles.
+Autor: MF Sanchez.
+
+## Herramientas principales
+- Comprimir PDF: https://pdfrapido.eu/comprimir-pdf/
+- Unir PDF: https://pdfrapido.eu/unir-pdf/
+- Dividir PDF: https://pdfrapido.eu/dividir-pdf/
+- Eliminar páginas: https://pdfrapido.eu/eliminar-paginas/
+- PDF a Word: https://pdfrapido.eu/pdf-a-word/
+- Word a PDF: https://pdfrapido.eu/word-a-pdf/
+- PDF a JPG: https://pdfrapido.eu/pdf-a-jpg/
+- JPG a PDF: https://pdfrapido.eu/jpg-a-pdf/
+- Rotar PDF: https://pdfrapido.eu/rotar-pdf/
+- Proteger PDF: https://pdfrapido.eu/proteger-pdf/
+- Firmar PDF: https://pdfrapido.eu/firmar-pdf/
+- OCR a PDF: https://pdfrapido.eu/ocr-a-pdf/
+- Editor PDF: https://pdfrapido.eu/editor-pdf/
+
+## Herramientas con Inteligencia Artificial
+- Resumir PDF con IA: https://pdfrapido.eu/resumir-pdf/
+- Chat con PDF (IA): https://pdfrapido.eu/chat-pdf/
+- Traducir PDF con IA: https://pdfrapido.eu/traducir-pdf/
+- Extraer datos con IA: https://pdfrapido.eu/extraer-datos/
+- Corregir PDF con IA: https://pdfrapido.eu/corregir-pdf/
+- Generar PDF con IA: https://pdfrapido.eu/generar-pdf/
+- Analizar contrato con IA: https://pdfrapido.eu/analizar-contrato/
+
+## Blog
+https://pdfrapido.eu/blog/
+
+## Sitemap completo
+https://pdfrapido.eu/sitemap.xml
