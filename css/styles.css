@@ -114,6 +114,7 @@ nav.scrolled { box-shadow: var(--shadow-md); }
     list-style: none;
     margin-left: auto;
 }
+.hamburger { display: none; }
 .nav-links a {
     text-decoration: none;
     color: var(--gray-600);
