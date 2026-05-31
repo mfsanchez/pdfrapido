@@ -941,6 +941,10 @@ footer a:hover { color: #fff; }
     to { transform: rotate(360deg); }
 }
 
+/* Fixes movil centralizados 2026-05-31 — base escritorio (trasladado desde inline) */
+.answer-first { text-align: center; }
+.related-tools-nav { flex-wrap: wrap; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
     .tools-grid { grid-template-columns: repeat(3, 1fr); }
@@ -965,7 +969,10 @@ footer a:hover { color: #fff; }
 }
 @media (max-width: 640px) {
     main { padding: 100px 16px 40px; }
-    .tool-header h1 { font-size: 26px; }
+    main .tool-header h1, main .th h1 { font-size: 26px; }
+    .answer-first { text-align: left; }
+    .related-tools-nav { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .related-tools-nav a { flex-shrink: 0; white-space: nowrap; }
     .upload-zone { padding: 40px 24px; }
     .form-row { grid-template-columns: 1fr; }
     .result-card { padding: 28px 20px; }
@@ -975,6 +982,7 @@ footer a:hover { color: #fff; }
     .tools-grid { grid-template-columns: repeat(2, 1fr); }
     .features-grid { grid-template-columns: 1fr; }
     .hero-stats { flex-direction: column; gap: 16px; }
+    main .tool-header h1, main .th h1 { font-size: 22px; letter-spacing: 0; }
 }
 
 
