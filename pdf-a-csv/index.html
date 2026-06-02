@@ -672,7 +672,7 @@ async function convertir() {
 
     try {
         const res = await fetch(`${BACKEND}/pdf-a-csv`, { method: 'POST', body: fd });
-        const data = await res.json();
+        if(!res.ok){progressWrap.style.display='none';btnConvert.disabled=false;var emsg='El servicio de conversión a CSV no está disponible en este momento. Inténtalo de nuevo en unos minutos.';try{var ej=await res.json();if(ej&&(ej.detail||ej.message)&&typeof(ej.detail||ej.message)==='string')emsg=(ej.detail||ej.message);}catch(_){}showError(emsg);return;}const data = await res.json();
 
         progressWrap.style.display = 'none';
         btnConvert.disabled = false;

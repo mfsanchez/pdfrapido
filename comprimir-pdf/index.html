@@ -1418,7 +1418,7 @@
                 body: formData
             });
             updateProgress(70, 'Procesando resultado...');
-            const data = await response.json();
+            if(!response.ok){alert('El servicio de compresión no está disponible en este momento. Inténtalo de nuevo en unos minutos.');resetTool();return;}const data = await response.json();
             if (data.error) throw new Error(data.error);
             updateProgress(100, 'Compresion completada');
             await new Promise(r => setTimeout(r, 400));
