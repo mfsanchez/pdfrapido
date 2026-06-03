@@ -33,6 +33,21 @@ $output  = UPLOAD_DIR . $id . '_output.pdf';
 
 move_uploaded_file($file['tmp_name'], $input);
 
+// Detectar PDF cifrado que requiere contraseña de APERTURA antes de invocar Ghostscript.
+// gs no puede abrir un PDF con user-password y devuelve un error críptico de bajo nivel.
+// qpdf --requires-password: exit 0 = necesita contraseña que no tenemos (gs fallará);
+//                           exit 2/3 = se abre sin contraseña (cifrado solo de permisos) -> seguimos.
+$qpdf_bin = file_exists('/usr/bin/qpdf') ? '/usr/bin/qpdf' : '/usr/local/bin/qpdf';
+exec(escapeshellarg($qpdf_bin) . ' --requires-password ' . escapeshellarg($input), $pw_out, $pw_code);
+if ($pw_code === 0) {
+    @unlink($input);
+    echo json_encode([
+        'error' => 'Este PDF está protegido con contraseña. Quítala primero en /desbloquear-pdf/ y vuelve a intentarlo.',
+        'code'  => 'password_protected'
+    ]);
+    exit;
+}
+
 // Configuración Ghostscript por nivel
 $settings = [
     'low'    => '-dPDFSETTINGS=/printer',
@@ -57,7 +72,6 @@ $origSize = filesize($input);
 $compSize = filesize($output);
 
 // Segunda pasada con qpdf para recomprimir streams (mejora texto y estructura)
-$qpdf_bin = file_exists('/usr/bin/qpdf') ? '/usr/bin/qpdf' : '/usr/local/bin/qpdf';
 $output2 = UPLOAD_DIR . $id . '_output2.pdf';
 $cmd_qpdf = sprintf(
     '%s --compress-streams=y --recompress-flate --compression-level=9 %s %s 2>&1',

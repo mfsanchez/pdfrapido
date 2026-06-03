@@ -904,7 +904,7 @@ async function resizePDF() {
         console.error(err);
         progressArea.classList.remove('active');
         processArea.classList.add('active');
-        showError('Error al procesar el PDF: ' + (err.message || 'el archivo podría estar protegido o dañado.'));
+        showError('Error al procesar el PDF: ' + (err.message || 'inténtalo de nuevo o prueba con otro archivo.'));
     } finally {
         btn.disabled = false;
     }

@@ -409,20 +409,12 @@ function handle_unlock_pdf() {
 
     exec($cmd_qpdf, $output, $return_code);
 
+    // qpdf cubre todos los esquemas de cifrado estándar (RC4 40/128, AES-128, AES-256),
+    // un superconjunto de lo que manejaba el antiguo fallback pdftk (ausente en ambos
+    // servidores). Si qpdf falla, la contraseña es incorrecta o el archivo es inválido.
     if ($return_code !== 0 || !file_exists($output_path)) {
-        // Fallback: intentar con pdftk
-        $cmd_pdftk = sprintf(
-            'pdftk %s input_pw %s output %s 2>&1',
-            escapeshellarg($input_path),
-            escapeshellarg($password),
-            escapeshellarg($output_path)
-        );
-        exec($cmd_pdftk, $output2, $return_code2);
-
-        if ($return_code2 !== 0 || !file_exists($output_path)) {
-            cleanup_dir($workdir);
-            json_error('No se pudo desbloquear el PDF. Verifica la contraseña.', 422);
-        }
+        cleanup_dir($workdir);
+        json_error('No se pudo desbloquear el PDF. Verifica la contraseña.', 422);
     }
 
     send_file($output_path, pathinfo($file['name'], PATHINFO_FILENAME) . '_desbloqueado.pdf', 'application/pdf');

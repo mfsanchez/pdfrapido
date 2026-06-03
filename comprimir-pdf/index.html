@@ -1428,7 +1428,11 @@
             showResult(data.original_size, data.compressed_size);
         } catch (error) {
             console.error('Error:', error);
-            alert('Error al procesar el PDF. El archivo podría estar protegido o dañado.');
+            // Mostrar el mensaje real del backend (p.ej. PDF protegido) en vez de un genérico engañoso.
+            const msg = (error && error.message && error.message !== 'Failed to fetch')
+                ? error.message
+                : 'No se pudo conectar con el servicio de compresión. Inténtalo de nuevo en unos minutos.';
+            alert(msg);
             resetTool();
         }
     }

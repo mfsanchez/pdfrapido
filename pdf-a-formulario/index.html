@@ -519,7 +519,7 @@ async function convertPDF() {
         if (err.name === 'AbortError') {
             showError('El proceso ha tardado demasiado. Intenta con un PDF mas pequeno.');
         } else {
-            showError('Error al procesar el PDF: ' + (err.message || 'el archivo podria estar protegido o danado.'));
+            showError('Error al procesar el PDF: ' + (err.message || 'intentalo de nuevo o prueba con otro archivo.'));
         }
     } finally {
         btn.disabled = false;
