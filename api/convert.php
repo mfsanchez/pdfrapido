@@ -17,12 +17,32 @@
 define('UPLOAD_DIR', '/tmp/pdfrapido/');
 define('MAX_FILE_SIZE', 50 * 1024 * 1024); // 50 MB
 define('LIBREOFFICE_BIN', '/usr/bin/libreoffice');
-define('OCRMYPDF_BIN', '/usr/local/bin/ocrmypdf');
+define('OCRMYPDF_BIN', detect_ocrmypdf_bin()); // detección dinámica: las rutas/versiones difieren entre servidores (Oracle 14.x en /usr/local/bin, VPS en /usr/bin)
 define('QPDF_BIN', file_exists('/usr/bin/qpdf') ? '/usr/bin/qpdf' : '/usr/local/bin/qpdf');
 define('ALLOWED_ORIGINS', ['https://pdfrapido.es', 'https://www.pdfrapido.es']); // Cambiar al dominio real
 define('CLEANUP_MINUTES', 10);
 define('PDFRAPIDO_DEBUG', false);
 define('DEBUG_LOG', '/tmp/pdfrapido_debug.log');
+
+/**
+ * Localiza el binario ocrmypdf de forma dinámica.
+ * Las rutas y versiones difieren entre servidores (Oracle: 14.x en
+ * /usr/local/bin; VPS Nominalia: 13.x/14.x en /usr/bin), por lo que NUNCA se
+ * asume una ruta fija. Devuelve '' si no se encuentra (el llamante decide qué
+ * hacer; jamás se continúa en silencio cuando hace falta OCR).
+ */
+function detect_ocrmypdf_bin(): string {
+    $found = trim((string)@shell_exec('PATH=/usr/local/bin:/usr/bin command -v ocrmypdf 2>/dev/null'));
+    if ($found !== '' && is_executable($found)) {
+        return $found;
+    }
+    foreach (['/usr/local/bin/ocrmypdf', '/usr/bin/ocrmypdf'] as $cand) {
+        if (is_executable($cand)) {
+            return $cand;
+        }
+    }
+    return '';
+}
 
 // ── CORS ──
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -607,6 +627,17 @@ function apply_ocr_if_scanned(string $input_path): bool {
     exec('pdftotext ' . escapeshellarg($input_path) . ' - 2>/dev/null | wc -c', $wc);
     $chars = (int)($wc[0] ?? 0);
     if ($chars >= 100) return false;
+
+    // PDF escaneado: el OCR es OBLIGATORIO. Si ocrmypdf no está disponible en
+    // este servidor, fallar de forma explícita (log + 503) en vez de devolver
+    // un Word sin capa de texto (el fallo silencioso que rompía el VPS).
+    if (OCRMYPDF_BIN === '' || !is_executable(OCRMYPDF_BIN)) {
+        error_log('[PDFRAPIDO] OCR no disponible: binario ocrmypdf no encontrado '
+            . '(command -v + rutas conocidas /usr/local/bin y /usr/bin fallaron). '
+            . 'PDF escaneado rechazado en ' . php_uname('n') . '.');
+        json_error('El servicio OCR no está disponible temporalmente en este servidor. '
+            . 'Vuelve a intentarlo en unos minutos.', 503);
+    }
 
     // PDF escaneado — incrustar capa de texto con ocrmypdf (tesseract spa+eng).
     // El PDF resultante conserva el layout original, de modo que pdf2docx
