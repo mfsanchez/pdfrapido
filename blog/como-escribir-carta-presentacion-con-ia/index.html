@@ -62,7 +62,18 @@
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta name="twitter:card" content="summary_large_image">
-  </head>
+  <style>/* fix-nav-mobile-B */
+@media (max-width: 768px) {
+  .hamburger { display: flex; align-items: center; margin-left: auto; background: none; border: none; cursor: pointer; padding: 8px; color: var(--gray-700); line-height: 0; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--surface, #fff); padding: 8px 0; gap: 0; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,.12); z-index: 99; }
+  .nav-links.open { display: flex; }
+  .nav-links li { border-bottom: 1px solid var(--gray-100); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links li:nth-child(2) { display: block; }
+  .nav-links a { display: block; padding: 12px 24px; font-size: 15px; }
+}
+</style>
+</head>
 <body>
 <nav id="nav">
     <div class="nav-inner">
