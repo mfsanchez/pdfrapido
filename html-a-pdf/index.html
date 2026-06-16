@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google Consent Mode v2 — por defecto denegado (RGPD); /js/cookies-consent.js actualiza el consentimiento al aceptar -->
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});</script>
+    <!-- Google AdSense (código base — sin unidades de anuncio todavía) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
+
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -486,7 +491,7 @@ document.getElementById('dlBtn').addEventListener('click',()=>{if(resultBlob)dow
 async function convertURL(){const url=document.getElementById('urlInput').value.trim();if(!url||!url.startsWith('http')){alert('Introduce una URL válida');return}document.getElementById('errorMsg').classList.remove('show');document.getElementById('urlForm').style.display='none';document.getElementById('progressArea').classList.add('active');try{const fd=new FormData();fd.append('url',url);const r=await fetch('/api/convert.php?action=html-to-pdf',{method:'POST',body:fd});if(!r.ok){var emsg='El servicio de conversión no está disponible en este momento. Inténtalo de nuevo en unos minutos.';try{var ej=await r.json();if(ej&&ej.error&&typeof ej.error==='string')emsg=ej.error;}catch(_){}throw new Error(emsg);}const res=await r.json();if(!res.success)throw new Error(res.error);const bytes=Uint8Array.from(atob(res.data),c=>c.charCodeAt(0));resultBlob=new Blob([bytes],{type:'application/pdf'});resultFilename=res.filename;document.getElementById('resultDesc').textContent=`${res.filename} · ${formatFileSize(res.size)}`;document.getElementById('progressArea').classList.remove('active');document.getElementById('resultArea').classList.add('active')}catch(e){document.getElementById('progressArea').classList.remove('active');document.getElementById('errorMsg').innerHTML = e.message + ' <a href="/contacto/" style="color:inherit;text-decoration:underline;font-weight:600;display:block;margin-top:6px;">¿Necesitas ayuda? Reporta la incidencia en /contacto/</a>';document.getElementById('errorMsg').classList.add('show');document.getElementById('urlForm').style.display=''}}
 function resetTool(){resultBlob=null;document.getElementById('urlInput').value='https://';document.getElementById('urlForm').style.display='';document.getElementById('progressArea').classList.remove('active');document.getElementById('resultArea').classList.remove('active');document.getElementById('errorMsg').classList.remove('show')}
 </script>
-<script src="/js/cookies-consent.js?v=2" defer></script>
+<script src="/js/cookies-consent.js?v=3" defer></script>
 <script src="/js/error-modal.js"></script>
 <script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
 <script src="/js/theme-toggle.js?v=14" defer></script>

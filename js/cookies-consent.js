@@ -1,6 +1,10 @@
 /* ═══════════════════════════════════════════
    PDFRápido — Consentimiento de Cookies (RGPD/EU + Google AdSense)
-   dev: MF Sanchez  |  v2.0  |  2026-05-29
+   dev: MF Sanchez  |  v2.1  |  2026-06-16
+   Integra Google Consent Mode v2: el código base de AdSense y la
+   inicialización de Consent Mode (todo 'denied' por defecto) viven en
+   el <head> de cada página. Aquí solo actualizamos el consentimiento
+   (gtag consent update) según la elección del usuario.
    ═══════════════════════════════════════════ */
 
 (function () {
@@ -63,30 +67,42 @@
         }
     }
 
+    // Consent Mode v2: gtag() ya está definido en el <head> (init 'denied').
+    function updateConsent(granted) {
+        var v = granted ? 'granted' : 'denied';
+        if (typeof window.gtag !== 'function') {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { dataLayer.push(arguments); };
+        }
+        gtag('consent', 'update', {
+            'ad_storage': v,
+            'ad_user_data': v,
+            'ad_personalization': v,
+            'analytics_storage': v
+        });
+    }
+
     function loadGA() {
         if (window.__gaLoaded) return;
         window.__gaLoaded = true;
         window.dataLayer = window.dataLayer || [];
-        window.gtag = function () { dataLayer.push(arguments); };
+        window.gtag = window.gtag || function () { dataLayer.push(arguments); };
         gtag('js', new Date());
         gtag('config', GA_ID, { 'anonymize_ip': true });
         loadScript('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
     }
 
-    function loadAdSense() {
-        if (window.__adsenseLoaded) return;
-        window.__adsenseLoaded = true;
-        loadScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_CLIENT, {
-            crossorigin: 'anonymous'
-        });
-    }
+    // El código base de AdSense (adsbygoogle.js) se carga estáticamente
+    // desde el <head>; Consent Mode v2 gobierna si sirve cookies/anuncios
+    // personalizados. No lo inyectamos aquí para evitar doble carga.
 
     function enableServices() {
+        updateConsent(true);
         loadGA();
-        loadAdSense();
     }
 
     function disableServices() {
+        updateConsent(false);
         window['ga-disable-' + GA_ID] = true;
         deleteGoogleCookies();
     }
