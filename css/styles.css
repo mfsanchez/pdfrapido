@@ -808,17 +808,6 @@ main.narrow { max-width: 700px; }
     margin-bottom: 4px;
 }
 
-/* ── AD PLACEHOLDER ── */
-.ad-placeholder {
-    background: var(--gray-50);
-    border: 1px dashed var(--gray-300);
-    border-radius: var(--radius);
-    padding: 16px;
-    text-align: center;
-    color: var(--gray-400);
-    font-size: 13px;
-    margin-top: 40px;
-}
 
 /* ── FEATURES (index) ── */
 .features {
@@ -1045,10 +1034,6 @@ html[data-theme="dark"] .form-group input,
 html[data-theme="dark"] .form-group select,
 html[data-theme="dark"] .upload-zone,
 html[data-theme="dark"] .options-card,
-html[data-theme="dark"] .ad-placeholder {
-    background: var(--bg-elevated);
-    border-color: var(--bg-border);
-}
 html[data-theme="dark"] .tool-card:hover {
     background: var(--bg-hover);
 }
