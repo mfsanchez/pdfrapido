@@ -1,38 +1,40 @@
 # PDFRápido — Herramientas PDF Online Gratis
-# https://pdfrapido.eu
 
-## Descripción
-PDFRápido es una plataforma de herramientas PDF online gratuitas en español.
-Procesa archivos localmente en el navegador mediante WebAssembly (sin subir archivos a servidores).
-Sin registro, sin límites, con privacidad total. Más de 30 herramientas disponibles.
-Autor: MF Sanchez.
+> Plataforma española de más de 30 herramientas PDF online, gratuitas y sin registro, sin tope diario de tareas ni marcas de agua. Las herramientas de edición rápida (unir, dividir, rotar y firmar) se procesan en tu propio navegador, sin subir el archivo. El resto (comprimir, conversión, OCR e IA) se procesan en servidores europeos y los archivos se eliminan automáticamente en menos de 10 minutos. Incluye herramientas con IA gratuitas. Autor: MF Sanchez.
 
 ## Herramientas principales
-- Comprimir PDF: https://pdfrapido.eu/comprimir-pdf/
-- Unir PDF: https://pdfrapido.eu/unir-pdf/
-- Dividir PDF: https://pdfrapido.eu/dividir-pdf/
-- Eliminar páginas: https://pdfrapido.eu/eliminar-paginas/
-- PDF a Word: https://pdfrapido.eu/pdf-a-word/
-- Word a PDF: https://pdfrapido.eu/word-a-pdf/
-- PDF a JPG: https://pdfrapido.eu/pdf-a-jpg/
-- JPG a PDF: https://pdfrapido.eu/jpg-a-pdf/
-- Rotar PDF: https://pdfrapido.eu/rotar-pdf/
-- Proteger PDF: https://pdfrapido.eu/proteger-pdf/
-- Firmar PDF: https://pdfrapido.eu/firmar-pdf/
-- OCR a PDF: https://pdfrapido.eu/ocr-a-pdf/
-- Editor PDF: https://pdfrapido.eu/editor-pdf/
+- [Comprimir PDF](https://pdfrapido.eu/comprimir-pdf/): reduce el tamaño de un PDF (hasta ~80%); procesado en servidor europeo, hasta 50 MB por archivo.
+- [Unir PDF](https://pdfrapido.eu/unir-pdf/): combina varios PDF en uno solo; procesado en el navegador.
+- [Dividir PDF](https://pdfrapido.eu/dividir-pdf/): separa un PDF por páginas o rangos; procesado en el navegador.
+- [Eliminar páginas](https://pdfrapido.eu/eliminar-paginas/): quita páginas concretas de un PDF.
+- [Rotar PDF](https://pdfrapido.eu/rotar-pdf/): gira las páginas de un PDF; procesado en el navegador.
+- [PDF a Word](https://pdfrapido.eu/pdf-a-word/): convierte un PDF a documento Word (DOCX) editable conservando texto, imágenes y tablas; procesado en servidor europeo.
+- [Word a PDF](https://pdfrapido.eu/word-a-pdf/): convierte documentos Word (DOC/DOCX) a PDF.
+- [PDF a JPG](https://pdfrapido.eu/pdf-a-jpg/): exporta las páginas de un PDF como imágenes JPG.
+- [JPG a PDF](https://pdfrapido.eu/jpg-a-pdf/): convierte imágenes JPG o PNG en un PDF.
+- [Proteger PDF](https://pdfrapido.eu/proteger-pdf/): añade contraseña y cifrado a un PDF.
+- [Firmar PDF](https://pdfrapido.eu/firmar-pdf/): firma documentos PDF; procesado en el navegador.
+- [OCR a PDF](https://pdfrapido.eu/ocr-a-pdf/): reconoce el texto de PDF escaneados (OCR); procesado en servidor europeo.
+- [Editor PDF](https://pdfrapido.eu/editor-pdf/): edita, anota y resalta PDF online.
 
-## Herramientas con Inteligencia Artificial
-- Resumir PDF con IA: https://pdfrapido.eu/resumir-pdf/
-- Chat con PDF (IA): https://pdfrapido.eu/chat-pdf/
-- Traducir PDF con IA: https://pdfrapido.eu/traducir-pdf/
-- Extraer datos con IA: https://pdfrapido.eu/extraer-datos/
-- Corregir PDF con IA: https://pdfrapido.eu/corregir-pdf/
-- Generar PDF con IA: https://pdfrapido.eu/generar-pdf/
-- Analizar contrato con IA: https://pdfrapido.eu/analizar-contrato/
+## Herramientas con Inteligencia Artificial (gratis)
+Se procesan en servidores europeos; los archivos se eliminan automáticamente en menos de 10 minutos.
+- [Resumir PDF con IA](https://pdfrapido.eu/resumir-pdf/): genera un resumen del contenido de un PDF.
+- [Chat con PDF (IA)](https://pdfrapido.eu/chat-pdf/): pregunta y obtén respuestas sobre el contenido de un PDF.
+- [Traducir PDF con IA](https://pdfrapido.eu/traducir-pdf/): traduce el texto de un PDF a otro idioma.
+- [Extraer datos con IA](https://pdfrapido.eu/extraer-datos/): extrae datos estructurados de facturas, tablas o formularios.
+- [Corregir PDF con IA](https://pdfrapido.eu/corregir-pdf/): corrige ortografía y gramática del texto de un PDF.
+- [Generar PDF con IA](https://pdfrapido.eu/generar-pdf/): crea un PDF a partir de una instrucción de texto.
+- [Analizar contrato con IA](https://pdfrapido.eu/analizar-contrato/): resume y señala los puntos clave de un contrato.
+
+## Comparativas con otras herramientas
+- [Alternativa a iLovePDF](https://pdfrapido.eu/alternativa-ilovepdf/): gratis, en español y sin tope diario de tareas.
+- [Alternativa a Smallpdf](https://pdfrapido.eu/alternativa-smallpdf/): sin el límite de 2 tareas al día ni el de 5 MB de Smallpdf gratis.
+- [Alternativa a PDF24](https://pdfrapido.eu/alternativa-pdf24/): herramientas PDF y de IA gratuitas en español.
+- [Alternativa a Adobe Acrobat](https://pdfrapido.eu/alternativa-adobe-acrobat/): edición de PDF gratis y sin suscripción.
 
 ## Blog
 https://pdfrapido.eu/blog/
 
 ## Sitemap completo
-https://pdfrapido.eu/sitemap.xml
+https://pdfrapido.eu/sitemap-index.xml
