@@ -88,6 +88,7 @@
             <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
             <div class="logo-text">PDF<span>Rápido</span></div>
         </a>
+        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
         <ul class="nav-links">
             <li><a href="#herramientas">Herramientas</a></li>
             <li><a href="#caracteristicas">Características</a></li>
@@ -633,6 +634,19 @@
     animation: novedad-pulse 2s ease-in-out infinite;
     z-index: 2;
   }
+  /* Menú móvil: hamburguesa + dropdown (dark-mode-safe) */
+  @media (max-width: 768px) {
+    .hamburger { display: flex; align-items: center; margin-left: auto; background: none;
+                 border: none; cursor: pointer; padding: 8px; color: var(--gray-700); line-height: 0; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0;
+                 background: var(--surface, #fff); padding: 8px 0; gap: 0; margin: 0;
+                 box-shadow: 0 4px 12px rgba(0,0,0,.12); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--gray-100); }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-links li:nth-child(2) { display: block; }
+    .nav-links a { display: block; padding: 12px 24px; font-size: 15px; }
+  }
 </style>
 <script>
   (function () {
@@ -684,5 +698,6 @@
   })();
 </script>
 <script src="/js/theme-toggle.js?v=14" defer></script>
+<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
 </body>
 </html>
