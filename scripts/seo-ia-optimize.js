@@ -9,22 +9,22 @@ const TOOLS = [
     action: 'comprimir',
     category: 'Optimizar PDF',
     categorySlug: 'optimizar-pdf',
-    privacyType: 'local',
-    featureList: 'Compresión con 3 niveles de calidad, Procesamiento local en navegador, Reducción de tamaño hasta 80%, Comparación visual de tamaños, Sin límite de archivos',
+    privacyType: 'server',
+    featureList: 'Compresión con 3 niveles de calidad, Procesamiento en servidores europeos, Reducción de tamaño hasta 80%, Comparación visual de tamaños, Sin límite de archivos',
     title: 'Comprimir PDF Gratis Online | PDFRápido',
-    description: 'Comprime PDF gratis y reduce su tamaño hasta un 80% sin perder calidad. Gratuito, sin registro, procesamiento local. Prueba ahora.',
+    description: 'Comprime PDF gratis y reduce su tamaño hasta un 80% sin perder calidad. Gratuito, sin registro, procesamiento en servidor seguro. Prueba ahora.',
     ogTitle: 'Comprimir PDF Gratis Online | PDFRápido',
     ogDesc: 'Reduce el tamaño de tu PDF hasta un 80% sin perder calidad visible. Sin registro, sin instalar nada.',
-    answerFirst: 'PDFRápido te permite comprimir archivos PDF reduciendo su tamaño hasta un 80% sin pérdida visible de calidad. El procesamiento es instantáneo en tu navegador. Es gratuito, no requiere registro y funciona en cualquier dispositivo.',
-    tldr: ['Gratuito y sin registro','Compresión local en navegador con 3 niveles','Tus archivos nunca salen de tu dispositivo','Funciona en PC, móvil y tablet','Reduce hasta un 80% el tamaño del PDF'],
+    answerFirst: 'PDFRápido te permite comprimir archivos PDF reduciendo su tamaño hasta un 80% sin pérdida visible de calidad. El procesamiento es rápido y seguro en servidores europeos. Es gratuito, no requiere registro y funciona en cualquier dispositivo.',
+    tldr: ['Gratuito y sin registro','Compresión en servidor con 3 niveles','Archivos eliminados del servidor en ~10 minutos','Funciona en PC, móvil y tablet','Reduce hasta un 80% el tamaño del PDF'],
     howItWorks: [
       { strong: 'Sube tu archivo', text: 'Arrastra o selecciona tu PDF en el área de carga. Sin límite de tamaño.' },
       { strong: 'Elige el nivel', text: 'Selecciona compresión suave, recomendada o máxima según tus necesidades.' },
       { strong: 'Descarga', text: 'Guarda tu PDF comprimido en segundos, con comparación visual de tamaños.' }
     ],
     faqs: [
-      { q: '¿Cómo comprimir un PDF gratis online?', a: 'PDFRápido te permite comprimir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro comprimir PDFs con PDFRápido?', a: 'Sí, la compresión se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo comprimir un PDF gratis online?', a: 'PDFRápido te permite comprimir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es en servidores europeos seguros y gratuito.' },
+      { q: '¿Es seguro comprimir PDFs con PDFRápido?', a: 'Sí, la compresión se realiza en nuestros servidores europeos mediante una conexión segura y tu archivo se elimina automáticamente en menos de 10 minutos. Tus documentos nunca se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Comprimir PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Comprimir PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -51,8 +51,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Pulsa "Unir PDFs" y descarga el documento combinado en segundos.' }
     ],
     faqs: [
-      { q: '¿Cómo unir un PDF gratis online?', a: 'PDFRápido te permite unir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro unir PDFs con PDFRápido?', a: 'Sí, la unión se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo unir un PDF gratis online?', a: 'PDFRápido te permite unir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro unir PDFs con PDFRápido?', a: 'Sí, la unión se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Unir PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Unir PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -79,8 +79,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Obtén los archivos resultantes individualmente o en un ZIP.' }
     ],
     faqs: [
-      { q: '¿Cómo dividir un PDF gratis online?', a: 'PDFRápido te permite dividir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro dividir PDFs con PDFRápido?', a: 'Sí, la división se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo dividir un PDF gratis online?', a: 'PDFRápido te permite dividir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro dividir PDFs con PDFRápido?', a: 'Sí, la división se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Dividir PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Dividir PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -163,8 +163,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Guarda tu PDF cifrado. Ahora requerirá la contraseña para abrirse.' }
     ],
     faqs: [
-      { q: '¿Cómo proteger un PDF gratis online?', a: 'PDFRápido te permite proteger archivos PDF con contraseña directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro proteger PDFs con PDFRápido?', a: 'Sí, el cifrado se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo proteger un PDF gratis online?', a: 'PDFRápido te permite proteger archivos PDF con contraseña directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro proteger PDFs con PDFRápido?', a: 'Sí, el cifrado se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Proteger PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Proteger PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -191,8 +191,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Guarda tu PDF editado con todos los cambios aplicados.' }
     ],
     faqs: [
-      { q: '¿Cómo editar un PDF gratis online?', a: 'PDFRápido te permite editar archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro editar PDFs con PDFRápido?', a: 'Sí, la edición se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo editar un PDF gratis online?', a: 'PDFRápido te permite editar archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro editar PDFs con PDFRápido?', a: 'Sí, la edición se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Editar PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Editar PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -219,8 +219,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Guarda tu PDF firmado con la firma posicionada donde prefieras.' }
     ],
     faqs: [
-      { q: '¿Cómo firmar un PDF gratis online?', a: 'PDFRápido te permite firmar archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro firmar PDFs con PDFRápido?', a: 'Sí, el proceso de firma se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo firmar un PDF gratis online?', a: 'PDFRápido te permite firmar archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro firmar PDFs con PDFRápido?', a: 'Sí, el proceso de firma se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Firmar PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Firmar PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -247,8 +247,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Guarda tu PDF con las páginas orientadas correctamente.' }
     ],
     faqs: [
-      { q: '¿Cómo rotar un PDF gratis online?', a: 'PDFRápido te permite rotar archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro rotar PDFs con PDFRápido?', a: 'Sí, la rotación se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo rotar un PDF gratis online?', a: 'PDFRápido te permite rotar archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro rotar PDFs con PDFRápido?', a: 'Sí, la rotación se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Rotar PDF?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Rotar PDF en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -275,8 +275,8 @@ const TOOLS = [
       { strong: 'Descarga', text: 'Obtén las páginas extraídas en un solo PDF o descárgalas individualmente.' }
     ],
     faqs: [
-      { q: '¿Cómo extraer páginas de un PDF gratis online?', a: 'PDFRápido te permite extraer páginas de archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.' },
-      { q: '¿Es seguro extraer páginas de PDFs con PDFRápido?', a: 'Sí, la extracción se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
+      { q: '¿Cómo extraer páginas de un PDF gratis online?', a: 'PDFRápido te permite extraer páginas de archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local (en tu navegador) y gratuito.' },
+      { q: '¿Es seguro extraer páginas de PDFs con PDFRápido?', a: 'Sí, la extracción se realiza completamente en tu navegador. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.' },
       { q: '¿PDFRápido tiene límite de archivos o tamaño?', a: 'No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.' },
       { q: '¿Necesito registrarme para usar Extraer páginas?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona Extraer páginas en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
@@ -344,8 +344,8 @@ const INJECTED_STYLES = `<style>
 .author-byline a:hover{text-decoration:underline}
 </style>`;
 
-function processPage(tool) {
-  const filePath = path.join(__dirname, '..', tool.slug, 'index.html');
+function processPage(tool, baseDir) {
+  const filePath = path.join(baseDir || path.join(__dirname, '..'), tool.slug, 'index.html');
   if (!fs.existsSync(filePath)) { console.warn('File not found: '+filePath); return false; }
   let html = fs.readFileSync(filePath, 'utf8');
   let modified = false;
@@ -449,11 +449,53 @@ ${relatedLinks}
   else { console.log('  No changes\n'); return false; }
 }
 
-console.log('PDFRapido SEO IA Optimization\n');
-let success = 0, failed = 0;
-for (const tool of TOOLS) {
-  console.log(tool.name + ' (' + tool.slug + ')');
-  try { if (processPage(tool)) success++; else failed++; }
-  catch (err) { console.error('Error: ' + err.message); failed++; }
+// --- GUARD cliente/servidor + OCR: aborta la generación si detecta un claim falso ---
+const OCR_CAPABLE = new Set(['pdf-a-word']); // convert.php hace OCR real; el backend de IA NO (devuelve 422)
+const _BT = ['web', 'assembly'].join(''), _BT2 = ['wa', 'sm'].join(''); // tokens construidos para no dejar el literal en el fichero
+const BANNED_TECH_RE = new RegExp(_BT + '|' + _BT2, 'i');
+function toolText(t) {
+  return [t.title, t.description, t.ogTitle, t.ogDesc, t.answerFirst, t.featureList]
+    .concat(t.tldr || [])
+    .concat((t.howItWorks || []).map(function (h) { return (h.strong || '') + ' ' + (h.text || ''); }))
+    .concat((t.faqs || []).reduce(function (a, f) { return a.concat([f.q, f.a]); }, []))
+    .filter(Boolean).join(' \n ');
 }
-console.log('\nDone: ' + success + ' success, ' + failed + ' failed');
+function validateTool(t) {
+  const txt = toolText(t);
+  const errs = [];
+  if (BANNED_TECH_RE.test(txt)) errs.push('menciona ' + _BT + '/' + _BT2 + ' (ningún tool lo usa: el stack es JS/pdf-lib)');
+  if (t.privacyType === 'server') {
+    if (/\ben (el|tu)\s+navegador\b/i.test(txt)) errs.push('tool SERVIDOR afirma procesar "en tu/el navegador" (in-browser falso)');
+    if (/procesamiento (es )?local|\blocalmente\b|no se suben a ning|(no|nunca) salen de tu dispositivo/i.test(txt)) errs.push('tool SERVIDOR afirma procesamiento local / que el archivo no se sube');
+  } else if (t.privacyType === 'local') {
+    if (/en (el|los|nuestros)\s+servidor|en servidores/i.test(txt)) errs.push('tool CLIENTE afirma procesar en servidor');
+  } else {
+    errs.push('privacyType ausente o inválido: ' + t.privacyType);
+  }
+  if (!OCR_CAPABLE.has(t.slug) && /ocr autom\w*|aplica(mos)? ocr|incluye ocr|reconoce[^.]{0,25}autom|ocr integrad/i.test(txt)) errs.push('afirma OCR automático sin estar en OCR_CAPABLE (el backend de IA NUNCA auto-OCR -> 422)');
+  return errs;
+}
+function runGuard() {
+  const all = [];
+  for (const t of TOOLS) for (const e of validateTool(t)) all.push('[' + t.slug + '] ' + e);
+  if (all.length) {
+    console.error('\nGUARD: claims falsos detectados -- generacion ABORTADA (grifo cerrado):');
+    all.forEach(function (e) { console.error('  - ' + e); });
+    process.exit(1);
+  }
+  console.log('Guard OK: 0 claims falsos en TOOLS\n');
+}
+
+module.exports = { TOOLS: TOOLS, validateTool: validateTool, runGuard: runGuard, generateSchema: generateSchema, processPage: processPage };
+
+if (require.main === module) {
+  runGuard();
+  console.log('PDFRapido SEO IA Optimization\n');
+  let success = 0, failed = 0;
+  for (const tool of TOOLS) {
+    console.log(tool.name + ' (' + tool.slug + ')');
+    try { if (processPage(tool)) success++; else failed++; }
+    catch (err) { console.error('Error: ' + err.message); failed++; }
+  }
+  console.log('\nDone: ' + success + ' success, ' + failed + ' failed');
+}
