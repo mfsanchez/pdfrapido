@@ -16,7 +16,7 @@ const TODAY = new Date().toISOString().split('T')[0];
 /* ─── CONFIG ─── */
 const EXCLUDE_DIRS = new Set([
   'api', 'css', 'js', 'scripts', '.git', '.well-known', '.assets', '.claude', '.agents',
-  'node_modules', 'tmp', 'admin', 'sobre-nosotros', 'guia-completa-pdf', 'categoria', 'sobre-pdfrapido', 'sobre-mf-sanchez', 'product-hunt', 'prensa', 'alternativas', 'estadisticas-pdf',
+  'node_modules', 'tmp', 'admin', 'editor-pdf', 'sobre-nosotros', 'guia-completa-pdf', 'categoria', 'sobre-pdfrapido', 'sobre-mf-sanchez', 'product-hunt', 'prensa', 'alternativas', 'estadisticas-pdf',
   // Structural pages belong in sitemap-pages.xml, not tools
   'contacto', 'cookies', 'privacidad', 'terminos', 'marca'
 ]);
@@ -30,7 +30,6 @@ const PAGES = [
   { loc: '/privacidad/',priority: '0.3',  changefreq: 'yearly' },
   { loc: '/terminos/',  priority: '0.3',  changefreq: 'yearly' },
   { loc: '/cookies/',   priority: '0.3',  changefreq: 'yearly' },
-  { loc: '/product-hunt/', priority: '0.5', changefreq: 'monthly' },
   { loc: '/prensa/', priority: '0.5', changefreq: 'monthly' },
   { loc: '/alternativas/', priority: '0.6', changefreq: 'monthly' },
   { loc: '/estadisticas-pdf/', priority: '0.6', changefreq: 'monthly' },
