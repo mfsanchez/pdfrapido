@@ -186,7 +186,7 @@
       },
       "inLanguage": "es",
       "isAccessibleForFree": true,
-      "featureList": "Unión ilimitada de archivos, Arrastrar y ordenar páginas, Procesamiento local en navegador, Conserva marcadores e hipervínculos, Sin límite de archivos"
+      "featureList": "Unión de archivos sin límite fijo, Arrastrar y ordenar antes de combinar, Procesamiento local en el navegador, Conserva el tamaño y la orientación de cada página, Sin subida a servidores"
     },
     {
       "@type": "BreadcrumbList",
@@ -210,48 +210,88 @@
         }
       ]
     },
-    {
+{
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo unir un PDF gratis online?",
+          "name": "¿Se suben mis archivos a algún servidor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDFRápido te permite unir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito."
+            "text": "No. Todo el proceso ocurre en tu navegador con una librería local; los PDF no salen de tu dispositivo. Puedes comprobarlo poniéndote en modo avión: la herramienta sigue uniendo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro unir PDFs con PDFRápido?",
+          "name": "¿Hay límite de número de archivos o de tamaño?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, la unión se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros."
+            "text": "No hay un límite fijo ni de archivos ni de megas. El único tope real es la memoria de tu dispositivo, porque la unión se hace en local. Para combinaciones enormes, hazlas por lotes."
           }
         },
         {
           "@type": "Question",
-          "name": "¿PDFRápido tiene límite de archivos o tamaño?",
+          "name": "¿Se mantiene la calidad y el formato original?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones."
+            "text": "Sí. No se re-renderiza ni se recomprime el contenido: el texto, las imágenes y los enlaces de cada página se copian tal cual, y cada página conserva su tamaño y orientación."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Necesito registrarme para usar Unir PDF?",
+          "name": "¿Puedo unir PDF protegidos con contraseña?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente."
+            "text": "No directamente: un PDF cifrado hace que la unión se detenga. Quítale la protección antes con Desbloquear PDF y luego únelo con el resto."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona Unir PDF en móvil y tablet?",
+          "name": "¿En qué orden se combinan los PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación."
+            "text": "En el orden en que aparecen en la lista, de arriba abajo. Puedes cambiarlo arrastrando cada fila antes de pulsar «Unir PDFs»."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona en el móvil y la tablet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, desde el navegador y sin instalar ninguna app. Para uniones de muchos archivos grandes, un ordenador irá más holgado de memoria."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo unir varios PDF en un solo archivo",
+      "totalTime": "PT1M",
+      "tool": { "@type": "HowToTool", "name": "PDFRápido Unir PDF" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Añade los PDF",
+          "text": "Arrastra los PDF a la zona de carga o pulsa para seleccionarlos. Puedes soltar varios de golpe y sumar más después con Añadir más."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Ponlos en orden",
+          "text": "Cada archivo muestra su número de posición. Arrastra las filas para reordenarlas: el PDF final respetará ese orden, de arriba abajo."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Pulsa «Unir PDFs»",
+          "text": "El botón se activa a partir de dos archivos. Verás el progreso archivo a archivo mientras se combinan."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Descarga el resultado",
+          "text": "Obtienes un único PDF con todas las páginas y un resumen. No queda nada guardado en ningún servidor."
         }
       ]
     }
@@ -362,14 +402,14 @@
     </ol>
 </div>
 
-    <h1>¿Cómo unir un PDF gratis online?</h1>
-    <p class="answer-first">PDFRápido te permite unir varios archivos PDF en un solo documento, arrastrando para ordenarlos como prefieras. El procesamiento es instantáneo en tu navegador. Es gratuito, no requiere registro y funciona en cualquier dispositivo.</p>
+    <h1>Unir PDF: combina varios archivos en uno</h1>
+    <p class="answer-first">Combina varios archivos PDF en un solo documento, en el orden que tú decidas. Arrastras los PDF, los colocas en orden y descargas el resultado. La unión ocurre dentro de tu propio navegador: ni un solo archivo viaja a internet. ¿La prueba? Pon el dispositivo en modo avión y verás que sigue funcionando.</p>
     <ul class="tldr">
-    <li>✅ Gratuito y sin registro</li>
-    <li>✅ Unión local en navegador con ordenación drag & drop</li>
-    <li>✅ Tus archivos nunca salen de tu dispositivo</li>
-    <li>✅ Funciona en PC, móvil y tablet</li>
-    <li>✅ Conserva marcadores e hipervínculos originales</li>
+    <li>✅ La unión ocurre en tu navegador: los PDF no se suben a ningún servidor</li>
+    <li>✅ Ordena los archivos arrastrándolos antes de combinar</li>
+    <li>✅ Sin límite fijo de archivos ni de tamaño (lo marca la memoria de tu dispositivo)</li>
+    <li>✅ Conserva el tamaño y la orientación de cada página, sin recomprimir</li>
+    <li>✅ Funciona en el navegador del PC, el móvil y la tablet</li>
     </ul>
 
     <div class="upload-zone" id="uploadZone">
@@ -411,49 +451,6 @@
     </div>
 
 
-    <div class="seo-content">
-        <h2>Cómo unir archivos PDF online gratis</h2>
-        <p>Con PDFRápido puedes combinar varios documentos PDF en un solo archivo de forma rápida y segura. El procesamiento se realiza directamente en tu navegador, sin subir archivos a ningún servidor.</p>
-        <h3>Pasos para unir PDFs</h3>
-        <ul>
-            <li>Selecciona o arrastra los archivos PDF que quieres unir.</li>
-            <li>Ordénalos arrastrando cada archivo a la posición deseada.</li>
-            <li>Pulsa "Unir PDFs" y espera unos segundos.</li>
-            <li>Descarga tu PDF combinado con un solo clic.</li>
-        </ul>
-        <h3>Privacidad garantizada</h3>
-        <p>Tus archivos se procesan localmente en tu navegador. Nunca se suben a servidores externos ni se almacenan en ningún lugar.</p>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/dividir-pdf/">Dividir PDF</a></li>
-            <li><a href="/organizar-pdf/">Organizar páginas</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/extraer-paginas/">Extraer páginas</a></li>
-            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
-        </ul>
-    
-        <h3>¿Cuántos PDFs puedo unir a la vez?</h3>
-        <p>Puedes combinar tantos PDFs como necesites en una sola operación, siempre que el tamaño total no supere los 100 MB. Si tienes muchos archivos, puedes unirlos en grupos y luego combinar los resultados.</p>
-
-        <h3>¿Se conservan los marcadores e hipervínculos?</h3>
-        <p>Sí. PDFRápido preserva los marcadores internos, la estructura de navegación y los hipervínculos de cada documento al combinarlos. El PDF resultante mantiene toda la navegabilidad de los archivos originales.</p>
-
-        <h3>Casos de uso habituales</h3>
-        <ul>
-            <li>Combinar CV, carta de presentación y certificados en un único archivo para enviar a empresas</li>
-            <li>Reunir facturas mensuales del mismo proveedor en un único PDF para contabilidad</li>
-            <li>Juntar diferentes secciones de un informe elaboradas por varios colaboradores</li>
-            <li>Combinar un contrato con todos sus anexos en un único documento para firmar</li>
-            <li>Unir varias páginas escaneadas de un mismo documento en un único PDF</li>
-        </ul>
-
-        <h3>¿En qué orden se unen los archivos?</h3>
-        <p>En el orden en que los añades. Puedes reordenarlos antes de pulsar "Unir" simplemente arrastrando cada archivo a la posición deseada en la lista.</p>
-</div>
-
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
 .content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
@@ -475,168 +472,77 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-  <section class="content-seo" aria-label="Unir varios PDF en uno rápido y sin registro">
-    <h2>Unir varios PDF en uno: rápido y sin registro</h2>
-    <p>Unir PDF online te permite combinar varios documentos en un único archivo ordenado. PDFRápido lo hace gratis, sin límite de archivos y sin necesidad de crear una cuenta.</p>
-
-    <h3>¿Cómo funciona?</h3>
-    <ol>
-      <li>Sube los PDF que quieres unir (puedes arrastrar varios a la vez).</li>
-      <li>Ordénalos arrastrando para poner las páginas en el orden correcto.</li>
-      <li>Haz clic en «Unir PDF».</li>
-      <li>Descarga el documento combinado.</li>
-    </ol>
-
-    <h3>¿Para qué sirve unir PDFs?</h3>
-    <div class="use-cases">
-      <div class="use-case"><strong>Contratos y anexos</strong><span>Combinar un contrato con sus anexos en un único archivo.</span></div>
-      <div class="use-case"><strong>Facturas para contabilidad</strong><span>Juntar varias facturas en un solo documento para contabilidad.</span></div>
-      <div class="use-case"><strong>Apuntes de estudio</strong><span>Unir apuntes de diferentes temas para estudiar.</span></div>
-      <div class="use-case"><strong>Informes finales</strong><span>Consolidar informes parciales en un informe final.</span></div>
-      <div class="use-case"><strong>Adjuntos por email</strong><span>Adjuntar en un email varios documentos como uno solo.</span></div>
+  <section class="content-seo" aria-label="Guía para unir PDF">
+    <h2>Cómo unir tus PDF, paso a paso</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Añade los PDF</h3><p>Arrástralos a la zona de carga o pulsa para seleccionarlos. Puedes soltar varios de golpe y sumar más después con «Añadir más».</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Ponlos en orden</h3><p>Cada archivo muestra su número de posición. Arrastra las filas para reordenarlas: el PDF final respetará ese orden, de arriba abajo.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Pulsa «Unir PDFs»</h3><p>El botón se activa a partir de dos archivos. Verás el progreso archivo a archivo mientras se combinan.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Descarga el resultado</h3><p>Obtienes un único PDF con todas las páginas y un resumen (archivos, páginas y peso). No queda nada guardado en ningún servidor.</p></div></div>
     </div>
 
-    <p><strong>Privacidad:</strong> todos los archivos se procesan localmente en tu navegador. No se suben a ningún servidor.</p>
-  </section>
+    <h2>Cómo funciona por dentro (y por qué es privado de verdad)</h2>
+    <p>A diferencia de la mayoría de webs para unir PDF, aquí el documento no se sube a ningún sitio. Cuando pulsas «Unir PDFs», tu navegador lee los archivos desde tu disco, los combina con una librería que se ejecuta en la propia página y te devuelve el PDF montado. No hay carga ni descarga desde un servidor, así que no queda ninguna copia de tus documentos en internet que pueda registrarse o quedar en caché. Por eso la herramienta sigue funcionando aunque pongas el dispositivo en modo avión una vez cargada la página, y por eso es apta para documentos sensibles como nóminas, contratos o historiales médicos.</p>
 
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-<div class="aeo-answer" style="background:linear-gradient(135deg,#fff8f7,#ffffff);border-left:4px solid #E8453C;border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 36px;font-size:15.5px;line-height:1.75;color:#1B2A4A">
-  <p style="font-size:17px;font-weight:700;margin:0 0 8px;color:#1B2A4A">¿Cómo unir varios PDF en uno solo?</p>
-  <p style="margin:0;font-size:15.5px;line-height:1.75;color:#374151">PDFRápido junta tantos archivos PDF como necesites en un único documento, en cuestión de segundos y desde el navegador. Arrastras los PDF al área de carga, los reordenas con el ratón en el orden que quieras y descargas el resultado combinado. Sin registro, sin instalar nada y sin marca de agua. Funciona en español y en cualquier dispositivo, ideal para juntar facturas, escaneos, capítulos o cualquier documento dividido en varios PDF.</p>
-</div>
-  <h2>¿Cómo funciona Unir PDF?</h2>
-  <p>Usar Unir PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Selecciona los archivos</h3>
-          <p>Añade dos o más archivos PDF desde tu dispositivo. Puedes arrastrarlos y soltarlos en el área de carga o seleccionarlos con el explorador de archivos.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Ordena los documentos</h3>
-          <p>Reorganiza el orden de los archivos arrastrándolos a la posición deseada. El PDF final respetará el orden que establezcas.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Combina y descarga</h3>
-          <p>Pulsa el botón de unir y en pocos segundos tendrás un único PDF con todas las páginas. Descárgalo directamente desde el navegador.</p>
-        </div>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Contabilidad y gestoría</strong><span>Juntar todas las facturas de un trimestre en un único PDF para enviárselo a tu gestor o adjuntarlo a la declaración.</span></div>
+      <div class="use-case"><strong>Universidad y oposiciones</strong><span>Combinar el TFG o el TFM con sus anexos y las autorizaciones del tutor en el único archivo que admite la plataforma de entrega.</span></div>
+      <div class="use-case"><strong>Contratos con anexos</strong><span>Unir el contrato, las condiciones y los DNI escaneados en un solo expediente antes de <a href="/firmar-pdf/">firmarlo</a>.</span></div>
+      <div class="use-case"><strong>Documentos escaneados</strong><span>Si tu escáner genera un PDF por pasada, reúne todas las partes (un libro, un expediente, varias hojas) en un documento ordenado.</span></div>
+      <div class="use-case"><strong>Dosieres y trámites</strong><span>Montar nómina, DNI y vida laboral en un solo PDF para una solicitud de alquiler, hipoteca o ayuda.</span></div>
+    </div>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Unir PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Presentaciones y propuestas comerciales</strong>
-        <span>Reúne en un único documento la propuesta, el presupuesto, el currículum de la empresa y los anexos. Entrega un archivo profesional y ordenado a tu cliente.</span>
-      </div>
-      <div class="use-case">
-        <strong>Contratos y documentación legal</strong>
-        <span>Fusiona el contrato principal con los anexos, condiciones generales y documentos de identidad escaneados para archivarlos o enviarlos como un único expediente.</span>
-      </div>
-      <div class="use-case">
-        <strong>Trabajos académicos</strong>
-        <span>Combina el cuerpo del trabajo, la bibliografía, los anexos y las autorizaciones de los tutores en un solo archivo para entregarlo al sistema de gestión de la universidad.</span>
-      </div>
-      <div class="use-case">
-        <strong>Facturas y albaranes mensuales</strong>
-        <span>Agrupa todas las facturas de un mes en un único PDF para facilitar la contabilidad, el cierre mensual o la presentación a la gestoría.</span>
-      </div>
-      <div class="use-case">
-        <strong>Digitalización de documentos físicos</strong>
-        <span>Si escaneas documentos en varias pasadas y obtienes múltiples PDFs, únelos en un solo archivo para organizar expedientes, historial médico o documentación administrativa de forma ordenada.</span>
-      </div>
-  </div>
+    <h2>Errores comunes y cómo evitarlos</h2>
+    <ul>
+      <li><strong>«No se pudieron procesar estos archivos».</strong> Uno de tus PDF está dañado o protegido con contraseña; cuando eso ocurre, la unión se cancela entera. Quítalo de la lista. Si está cifrado, <a href="/desbloquear-pdf/">desbloquéalo primero</a> y vuelve a intentarlo.</li>
+      <li><strong>El botón «Unir PDFs» está en gris.</strong> Necesitas al menos dos PDF en la lista para activarlo.</li>
+      <li><strong>«La librería PDF no se cargó».</strong> Casi siempre es un bloqueador de anuncios o de scripts que ha frenado un archivo de la página: desactívalo para este sitio y recarga.</li>
+      <li><strong>Arrastraste un Word, JPG o Excel y no aparece.</strong> La herramienta solo admite PDF. Conviértelo antes con <a href="/word-a-pdf/">Word a PDF</a> o <a href="/jpg-a-pdf/">JPG a PDF</a>.</li>
+      <li><strong>Unes formularios y dejan de ser rellenables.</strong> Al combinar varios PDF, los campos de formulario interactivos pierden su función y quedan como elementos fijos. Rellena el formulario con <a href="/rellenar-formulario/">Rellenar formulario</a> antes de unirlo, o mantenlo aparte.</li>
+      <li><strong>Desapareció el índice de marcadores del original.</strong> Al combinar documentos, el panel de marcadores no se conserva; los enlaces que están dentro de las páginas sí se mantienen.</li>
+      <li><strong>Archivos muy pesados en el móvil.</strong> Todo se procesa en la memoria de tu dispositivo. Si unes varios PDF de cientos de MB en un móvil con poca RAM, puede quedarse sin memoria: hazlo por lotes o desde un ordenador.</li>
+    </ul>
 
-  <h2>Preguntas frecuentes sobre Unir PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Cuántos archivos puedo unir a la vez?</h3>
-        <p>Puedes unir tantos archivos como necesites en una sola operación. El único límite práctico es el rendimiento de tu navegador con archivos muy grandes.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Se mantiene la calidad y el formato del PDF original?</h3>
-        <p>Sí. La herramienta combina los PDFs sin re-renderizar ni modificar el contenido. El texto, las imágenes, los hipervínculos y el formato se conservan íntegramente.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo unir PDFs protegidos con contraseña?</h3>
-        <p>Los PDFs con contraseña de apertura requieren que la introduzcas antes de procesarlos. Si el archivo solo tiene protección de impresión o copia, generalmente pueden unirse sin problemas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo unir PDFs con distintas orientaciones o tamaños de página?</h3>
-        <p>Sí. La herramienta une PDFs con dimensiones, orientaciones y resoluciones distintas en un único documento. Cada página conserva su tamaño y orientación originales, sin ser redimensionada ni alterada.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Se puede unir un PDF con imágenes JPG o PNG?</h3>
-        <p>La herramienta acepta únicamente archivos PDF. Si tienes imágenes que quieres incluir, conviértelas primero con nuestra herramienta <a href="/jpg-a-pdf/">JPG a PDF</a> y luego únelas aquí en un solo paso.</p>
-      </div>
-  </div>
-</section>
-</main>
-
-
-    <h2>¿Cómo funciona?</h2>
-    <ol>
-      <li><strong>Sube tus archivos</strong> - Arrastra o selecciona varios PDFs. Puedes añadir tantos como necesites.</li>
-      <li><strong>Ordena</strong> - Reorganiza el orden de los archivos arrastrándolos a la posición deseada.</li>
-      <li><strong>Descarga</strong> - Pulsa "Unir PDFs" y descarga el documento combinado en segundos.</li>
-    </ol>
     <h2>¿Por qué elegir PDFRápido?</h2>
     <table class="comparison">
       <thead><tr><th>Característica</th><th>PDFRápido</th><th>iLovePDF</th><th>Smallpdf</th></tr></thead>
       <tbody>
         <tr><td>Gratuito</td><td>✅ Sí</td><td>⚠️ Limitado</td><td>⚠️ Limitado</td></tr>
         <tr><td>Sin registro</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
-        <tr><td>Procesamiento local</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
+        <tr><td>Procesamiento local (no se suben los archivos)</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
         <tr><td>Sin tope de tareas</td><td>✅ Sí</td><td>❌ Tope diario</td><td>❌ 2/día</td></tr>
       </tbody>
     </table>
-    <section class="faq-section">
-      <h2>Preguntas frecuentes</h2>
-    <details>
-      <summary>¿Cómo unir un PDF gratis online?</summary>
-      <p>PDFRápido te permite unir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito.</p>
-    </details>
-    <details>
-      <summary>¿Es seguro unir PDFs con PDFRápido?</summary>
-      <p>Sí, la unión se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros.</p>
-    </details>
-    <details>
-      <summary>¿PDFRápido tiene límite de archivos o tamaño?</summary>
-      <p>No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones.</p>
-    </details>
-    <details>
-      <summary>¿Necesito registrarme para usar Unir PDF?</summary>
-      <p>No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.</p>
-    </details>
-    <details>
-      <summary>¿Funciona Unir PDF en móvil y tablet?</summary>
-      <p>Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.</p>
-    </details>
-    </section>
+
+    <h2>Preguntas frecuentes sobre Unir PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Se suben mis archivos a algún servidor?</h3><p>No. Todo el proceso ocurre en tu navegador con una librería local; los PDF no salen de tu dispositivo. Puedes comprobarlo poniéndote en modo avión: la herramienta sigue uniendo.</p></div>
+      <div class="faq-item"><h3>¿Hay límite de número de archivos o de tamaño?</h3><p>No hay un límite fijo ni de archivos ni de megas. El único tope real es la memoria de tu dispositivo, porque la unión se hace en local. Para combinaciones enormes, hazlas por lotes.</p></div>
+      <div class="faq-item"><h3>¿Se mantiene la calidad y el formato original?</h3><p>Sí. No se re-renderiza ni se recomprime el contenido: el texto, las imágenes y los enlaces de cada página se copian tal cual, y cada página conserva su tamaño y orientación.</p></div>
+      <div class="faq-item"><h3>¿Puedo unir PDF protegidos con contraseña?</h3><p>No directamente: un PDF cifrado hace que la unión se detenga. Quítale la protección antes con <a href="/desbloquear-pdf/">Desbloquear PDF</a> y luego únelo con el resto.</p></div>
+      <div class="faq-item"><h3>¿En qué orden se combinan los PDF?</h3><p>En el orden en que aparecen en la lista, de arriba abajo. Puedes cambiarlo arrastrando cada fila antes de pulsar «Unir PDFs».</p></div>
+      <div class="faq-item"><h3>¿Funciona en el móvil y la tablet?</h3><p>Sí, desde el navegador y sin instalar ninguna app. Para uniones de muchos archivos grandes, un ordenador irá más holgado de memoria.</p></div>
+    </div>
+
     <h2>Otras herramientas PDF</h2>
     <nav class="related-tools-nav">
-    <a href="/dividir-pdf/">Dividir PDF</a>
-    <a href="/comprimir-pdf/">Comprimir PDF</a>
-    <a href="/extraer-paginas/">Extraer páginas</a>
+      <a href="/dividir-pdf/">Dividir PDF</a>
+      <a href="/organizar-pdf/">Organizar páginas</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+      <a href="/desbloquear-pdf/">Desbloquear PDF</a>
     </nav>
-    <section style="max-width:1100px;margin:0 auto;padding:32px 24px 0">
-    <div style="background:linear-gradient(135deg,#EBF2FE,#fff);border:1px solid #cfe0fd;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-        <div style="flex:1;min-width:220px">
-            <span style="font-size:11px;font-weight:600;color:#2B6BD0;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
-            <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo unir varios PDF en uno solo</h3>
-            <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Guía paso a paso para combinar varios PDFs en un único archivo, ordenarlos y descargarlos gratis.</p>
-        </div>
-        <a href="/blog/como-unir-pdf-online/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#4285F4;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0;transition:all .2s" onmouseover="this.style.background='#2B6BD0'" onmouseout="this.style.background='#4285F4'">Leer guía →</a>
+
+    <div style="background:linear-gradient(135deg,#EBF2FE,#fff);border:1px solid #cfe0fd;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px">
+      <div style="flex:1;min-width:220px">
+        <span style="font-size:11px;font-weight:600;color:#2B6BD0;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
+        <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo unir varios PDF en uno solo</h3>
+        <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Guía paso a paso para combinar varios PDFs en un único archivo, ordenarlos y descargarlos gratis.</p>
+      </div>
+      <a href="/blog/como-unir-pdf-online/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#4285F4;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0">Leer guía →</a>
     </div>
-</section>
+  </section>
+</main>
 
 <footer class="author-byline">
       <p>Por <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
