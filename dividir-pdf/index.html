@@ -119,7 +119,7 @@
       },
       "inLanguage": "es",
       "isAccessibleForFree": true,
-      "featureList": "División por rangos o páginas individuales, Vista previa de miniaturas, Procesamiento local en navegador, Descarga individual o en ZIP, Sin límite de páginas"
+      "featureList": "Extraer un rango o separar cada página, Vista previa en miniaturas, Selección por clic y reordenado, Procesamiento local en el navegador, Sin límite de páginas"
     },
     {
       "@type": "BreadcrumbList",
@@ -143,48 +143,82 @@
         }
       ]
     },
-    {
+{
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo dividir un PDF gratis online?",
+          "name": "¿Puedo elegir exactamente qué páginas extraer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDFRápido te permite dividir archivos PDF directamente desde tu navegador, sin instalar nada ni crear una cuenta. El procesamiento es local con WebAssembly y gratuito."
+            "text": "Sí. Haz clic en las miniaturas de las páginas que quieres, o escribe un rango de texto como 1-3, 5, 8-10. Solo esas páginas irán al PDF resultante."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro dividir PDFs con PDFRápido?",
+          "name": "¿Se mantiene el texto del PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, la división se realiza completamente en tu navegador mediante tecnología WebAssembly. Tus documentos nunca se suben a ningún servidor ni se comparten con terceros."
+            "text": "Sí. Las páginas se copian tal cual, así que el texto del PDF resultante sigue siendo seleccionable y las imágenes conservan su calidad."
           }
         },
         {
           "@type": "Question",
-          "name": "¿PDFRápido tiene límite de archivos o tamaño?",
+          "name": "¿Puedo separar todas las páginas en archivos sueltos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PDFRápido es completamente gratuito y sin límites de uso. Puedes procesar tantos archivos como necesites, del tamaño que sea, sin restricciones."
+            "text": "Sí. Con el modo Separar todas obtienes un PDF independiente por cada página del documento."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Necesito registrarme para usar Dividir PDF?",
+          "name": "¿Mis archivos se suben a un servidor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente."
+            "text": "No. Todo el proceso ocurre en tu navegador; el PDF no sale de tu dispositivo. Puedes comprobarlo poniéndote en modo avión."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona Dividir PDF en móvil y tablet?",
+          "name": "¿Puedo reordenar las páginas antes de dividir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación."
+            "text": "Sí. Arrastra las miniaturas para cambiar el orden; el PDF resultante respetará el orden que dejes."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo dividir un PDF con contraseña?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No directamente: un PDF cifrado dará error. Quítale la contraseña antes en Desbloquear PDF y vuelve a intentarlo."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo dividir un PDF",
+      "totalTime": "PT1M",
+      "tool": { "@type": "HowToTool", "name": "PDFRápido Dividir PDF" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Carga el PDF",
+          "text": "Arrástralo o selecciónalo; verás una miniatura de cada página."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Elige qué extraer",
+          "text": "Haz clic en las páginas que quieres (modo Extraer rango) o elige Separar todas."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Descarga",
+          "text": "Obtienes un PDF con tu selección, o un archivo independiente por cada página."
         }
       ]
     }
@@ -295,14 +329,14 @@
     </ol>
 </div>
 
-    <h1>¿Cómo dividir un PDF gratis online?</h1>
-    <p class="answer-first">PDFRápido te permite dividir archivos PDF separando páginas por rangos o extrayendo páginas individuales con vista previa visual. El procesamiento es instantáneo en tu navegador. Es gratuito, no requiere registro y funciona en cualquier dispositivo.</p>
+    <h1>Dividir PDF: extrae páginas o sepáralo en archivos</h1>
+    <p class="answer-first">Saca las páginas que necesitas de un PDF, o pártelo en archivos sueltos. Eliges las páginas viendo el documento en miniaturas, las reordenas si quieres y descargas. Todo ocurre dentro de tu navegador: el PDF no se sube a ningún servidor (puedes comprobarlo en modo avión).</p>
     <ul class="tldr">
-    <li>✅ Gratuito y sin registro</li>
-    <li>✅ División local con vista previa de miniaturas</li>
-    <li>✅ Tus archivos nunca salen de tu dispositivo</li>
-    <li>✅ Funciona en PC, móvil y tablet</li>
-    <li>✅ Descarga individual o en archivo ZIP</li>
+    <li>✅ Extrae un rango o separa cada página en un archivo</li>
+    <li>✅ Selecciona páginas haciendo clic en las miniaturas</li>
+    <li>✅ Reordena arrastrando antes de dividir</li>
+    <li>✅ Los PDF no salen de tu dispositivo</li>
+    <li>✅ Sin límite de páginas (lo marca tu navegador)</li>
     </ul>
 
     <div class="upload-zone" id="uploadZone">
@@ -355,27 +389,6 @@
     </div>
 
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/unir-pdf/">Unir PDF</a></li>
-            <li><a href="/extraer-paginas/">Extraer páginas</a></li>
-            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
-            <li><a href="/organizar-pdf/">Organizar páginas</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        </ul>
-    
-        <h3>Formas de dividir un PDF</h3>
-        <p>Hay varias formas de dividir un PDF según tus necesidades:</p>
-        <ul>
-            <li><strong>Por rangos de páginas:</strong> Especifica qué páginas van en cada archivo (ej: páginas 1-10, 11-25, 26-final).</li>
-            <li><strong>Una página por archivo:</strong> Divide el PDF en tantos archivos como páginas tenga, con una página cada uno.</li>
-            <li><strong>Por tamaño:</strong> Divide el PDF en partes de tamaño aproximadamente igual.</li>
-        </ul>
-
-
-</div>
-
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
 .content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
@@ -396,79 +409,57 @@
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .keep-table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0}
+.content-seo .keep-table th,.content-seo .keep-table td{padding:11px 14px;border:1px solid #e5e7eb;color:#4B5563;line-height:1.6;vertical-align:top;text-align:left}
+.content-seo .keep-table th{background:#f9fafb;color:#1B2A4A;font-weight:600}
+.content-seo .keep-table td:first-child{font-weight:600;color:#1B2A4A;white-space:nowrap}
 </style>
-  <section class="content-seo" aria-label="Dividir un PDF y separar páginas sin perder formato">
-    <h2>Dividir un PDF: separa páginas sin perder formato</h2>
-    <p>Dividir un PDF te permite extraer páginas concretas o separar un documento largo en partes más manejables. Todo desde el navegador, gratis y sin registro.</p>
+  <section class="content-seo" aria-label="Guía para dividir PDF">
+    <h2>Las dos formas de dividir tu PDF</h2>
+    <table class="keep-table">
+      <thead><tr><th>Modo</th><th>Qué obtienes</th><th>Úsalo para</th></tr></thead>
+      <tbody>
+        <tr><td>Extraer rango</td><td>Un PDF nuevo solo con las páginas que elijas (ej. 1-3, 7, 10)</td><td>Quedarte con un capítulo, un anexo o unas páginas concretas</td></tr>
+        <tr><td>Separar todas</td><td>Un PDF independiente por cada página</td><td>Trocear un escaneado múltiple en documentos sueltos</td></tr>
+      </tbody>
+    </table>
 
+    <h2>Elige las páginas viendo el documento</h2>
+    <p>Al cargar el PDF verás una miniatura de cada página. Haz clic en las que quieres extraer y se irán marcando; o escribe el rango a mano (por ejemplo 1-3, 5, 8-10). También puedes <strong>arrastrar las miniaturas para reordenarlas</strong> antes de dividir, y el PDF final respetará ese orden. Todo se renderiza en tu propio navegador, así que el archivo no sale de tu dispositivo en ningún momento.</p>
 
-  </section>
+    <h2>Dividir un PDF en 3 pasos</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Carga el PDF</h3><p>Arrástralo o selecciónalo; verás una miniatura de cada página.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige qué extraer</h3><p>Haz clic en las páginas que quieres (modo Extraer rango) o elige Separar todas.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga</h3><p>Obtienes un PDF con tu selección, o un archivo independiente por cada página.</p></div></div>
+    </div>
 
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Dividir PDF?</h2>
-  <p>Usar Dividir PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF</h3>
-          <p>Selecciona el PDF que quieres dividir desde tu ordenador, tablet o móvil. No hay necesidad de crear una cuenta ni instalar ningún programa.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Elige cómo dividirlo</h3>
-          <p>Indica el rango de páginas que quieres extraer, el número de páginas por documento o los puntos exactos donde separar el PDF.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga los fragmentos</h3>
-          <p>Obtienes los archivos resultantes en segundos. Puedes descargarlos individualmente o todos de una vez en un archivo ZIP.</p>
-        </div>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Enviar solo lo necesario</strong><span>Manda únicamente las páginas firmadas de un contrato, no las 40 completas.</span></div>
+      <div class="use-case"><strong>Sacar un capítulo o tema</strong><span>Extrae una sección concreta de un libro o de unos apuntes en PDF.</span></div>
+      <div class="use-case"><strong>Separar un escaneado múltiple</strong><span>Convierte un PDF con DNI, nómina y recibo escaneados juntos en archivos sueltos.</span></div>
+      <div class="use-case"><strong>Quedarte con unas facturas</strong><span>De un PDF que junta las facturas de un proveedor, extrae solo las que necesitas.</span></div>
+      <div class="use-case"><strong>Aislar una página para firmar</strong><span>Saca una página para firmarla o sellarla y vuelve a unirla luego con <a href="/unir-pdf/">Unir PDF</a>.</span></div>
+    </div>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Dividir PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Extraer capítulos de un libro</strong>
-        <span>Cuando recibes un libro o manual completo en PDF y solo necesitas un capítulo concreto, dividir el archivo te permite quedarte con la parte relevante y compartirla sin difundir el documento entero.</span>
-      </div>
-      <div class="use-case">
-        <strong>Separar facturas o contratos</strong>
-        <span>Si tienes un PDF que contiene varios documentos escaneados juntos, puedes separarlos en archivos independientes para archivarlos o enviarlos de forma organizada.</span>
-      </div>
-      <div class="use-case">
-        <strong>Reducir el tamaño para el envío</strong>
-        <span>A veces no es posible comprimir más un PDF. Dividirlo en partes más pequeñas permite enviarlo en varios correos o subirlo a plataformas con límites de tamaño.</span>
-      </div>
-      <div class="use-case">
-        <strong>Preparar presentaciones</strong>
-        <span>Extrae las diapositivas más relevantes de una presentación larga para crear una versión resumida adaptada a un público concreto.</span>
-      </div>
-  </div>
+    <h2>Errores comunes y cómo evitarlos</h2>
+    <ul>
+      <li><strong>«Introduce un rango de páginas válido».</strong> El rango está vacío o fuera de límites: usa números reales del documento (por ejemplo 1-3, 5).</li>
+      <li><strong>«Error al dividir el PDF».</strong> Suele ser un PDF protegido con contraseña; desbloquéalo antes con <a href="/desbloquear-pdf/">Desbloquear PDF</a>.</li>
+      <li><strong>Elegí «Separar todas» y el navegador bloqueó las descargas.</strong> Ese modo genera un archivo por página y se descargan en cadena: permite las descargas múltiples de este sitio.</li>
+      <li><strong>Quiero otro orden.</strong> Arrastra las miniaturas a la posición deseada antes de pulsar dividir.</li>
+    </ul>
 
-  <h2>Preguntas frecuentes sobre Dividir PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Puedo elegir exactamente qué páginas conservar?</h3>
-        <p>Sí. Puedes introducir rangos específicos como páginas 1-5, 10, 15-20 y la herramienta extraerá únicamente esas páginas en el orden que definas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El PDF resultante mantiene los hiperenlaces y el texto seleccionable?</h3>
-        <p>Sí, el contenido del PDF se conserva intacto. El texto sigue siendo seleccionable, los enlaces funcionan y las imágenes mantienen su calidad original.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Cuántos fragmentos puedo crear en una sola operación?</h3>
-        <p>No hay un límite fijo de fragmentos. Puedes dividir un PDF en tantas partes como páginas tenga, aunque el proceso puede ser más lento con documentos muy extensos.</p>
-      </div>
-  </div>
-</section>
-</main>
+    <h2>Preguntas frecuentes sobre dividir PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Puedo elegir exactamente qué páginas extraer?</h3><p>Sí. Haz clic en las miniaturas de las páginas que quieres, o escribe un rango de texto como 1-3, 5, 8-10. Solo esas páginas irán al PDF resultante.</p></div>
+      <div class="faq-item"><h3>¿Se mantiene el texto del PDF?</h3><p>Sí. Las páginas se copian tal cual, así que el texto del PDF resultante sigue siendo seleccionable y las imágenes conservan su calidad.</p></div>
+      <div class="faq-item"><h3>¿Puedo separar todas las páginas en archivos sueltos?</h3><p>Sí. Con el modo Separar todas obtienes un PDF independiente por cada página del documento.</p></div>
+      <div class="faq-item"><h3>¿Mis archivos se suben a un servidor?</h3><p>No. Todo el proceso ocurre en tu navegador; el PDF no sale de tu dispositivo. Puedes comprobarlo poniéndote en modo avión.</p></div>
+      <div class="faq-item"><h3>¿Puedo reordenar las páginas antes de dividir?</h3><p>Sí. Arrastra las miniaturas para cambiar el orden; el PDF resultante respetará el orden que dejes.</p></div>
+      <div class="faq-item"><h3>¿Puedo dividir un PDF con contraseña?</h3><p>No directamente: un PDF cifrado dará error. Quítale la contraseña antes en <a href="/desbloquear-pdf/">Desbloquear PDF</a> y vuelve a intentarlo.</p></div>
+    </div>
 
     <h2>¿Por qué elegir PDFRápido?</h2>
     <table class="comparison">
@@ -476,33 +467,30 @@
       <tbody>
         <tr><td>Gratuito</td><td>✅ Sí</td><td>⚠️ Limitado</td><td>⚠️ Limitado</td></tr>
         <tr><td>Sin registro</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
-        <tr><td>Procesamiento local</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
+        <tr><td>Selección visual por miniaturas</td><td>✅ Sí</td><td>⚠️ Parcial</td><td>⚠️ Parcial</td></tr>
+        <tr><td>Procesamiento local (no se sube el archivo)</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
         <tr><td>Sin tope de tareas</td><td>✅ Sí</td><td>❌ Tope diario</td><td>❌ 2/día</td></tr>
       </tbody>
     </table>
+
     <h2>Otras herramientas PDF</h2>
     <nav class="related-tools-nav">
-    <a href="/unir-pdf/">Unir PDF</a>
-    <a href="/extraer-paginas/">Extraer páginas</a>
-    <a href="/comprimir-pdf/">Comprimir PDF</a>
+      <a href="/unir-pdf/">Unir PDF</a>
+      <a href="/extraer-paginas/">Extraer páginas</a>
+      <a href="/organizar-pdf/">Organizar páginas</a>
+      <a href="/dividir-pdf-por-tamano/">Dividir por nº de páginas</a>
     </nav>
-        <div class="related-tools" style="margin-bottom:40px">
-        <h3>Herramienta relacionada</h3>
-        <ul>
-            <li><a href="/dividir-pdf-por-tamano/">Dividir PDF por tamaño o número de páginas →</a></li>
-        </ul>
-    </div>
 
-<section style="max-width:1100px;margin:0 auto;padding:32px 24px 0">
-    <div style="background:linear-gradient(135deg,#EBF2FE,#fff);border:1px solid #cfe0fd;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-        <div style="flex:1;min-width:220px">
-            <span style="font-size:11px;font-weight:600;color:#2B6BD0;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
-            <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo dividir un PDF online gratis</h3>
-            <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Aprende a separar páginas, extraer secciones o partir un documento largo sin instalar nada.</p>
-        </div>
-        <a href="/blog/como-dividir-pdf-online/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#4285F4;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0;transition:all .2s" onmouseover="this.style.background='#2B6BD0'" onmouseout="this.style.background='#4285F4'">Leer guía →</a>
+    <div style="background:linear-gradient(135deg,#EBF2FE,#fff);border:1px solid #cfe0fd;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px">
+      <div style="flex:1;min-width:220px">
+        <span style="font-size:11px;font-weight:600;color:#2B6BD0;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
+        <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo dividir un PDF online gratis</h3>
+        <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Aprende a separar páginas, extraer secciones o partir un documento largo sin instalar nada.</p>
+      </div>
+      <a href="/blog/como-dividir-pdf-online/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#4285F4;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0">Leer guía →</a>
     </div>
-</section>
+  </section>
+</main>
 
 <footer class="author-byline">
       <p>Por <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
