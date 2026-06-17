@@ -9,7 +9,7 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprime PDF gratis y reduce su tamaño hasta un 80% sin perder calidad. Gratuito, sin registro. Tus archivos se eliminan automáticamente en menos de 10 minutos. Prueba ahora.">
+    <meta name="description" content="Comprime PDF gratis con tres niveles de compresión. Reduce hasta un 80% en PDF con imágenes; el texto y los gráficos vectoriales se mantienen intactos. Servidores europeos, borrado automático.">
     <meta name="keywords" content="comprimir PDF, reducir tamaño PDF, comprimir PDF online gratis, optimizar PDF, PDF más pequeño">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>Comprimir PDF Gratis Online | PDFRápido</title>
@@ -756,7 +756,7 @@
       "@type": "WebApplication",
       "name": "Comprimir PDF - PDFRápido",
       "url": "https://pdfrapido.eu/comprimir-pdf/",
-      "description": "Comprime PDF gratis y reduce su tamaño hasta un 80% sin perder calidad. Gratuito, sin registro. Tus archivos se eliminan automáticamente en menos de 10 minutos. Prueba ahora.",
+      "description": "Comprime PDF gratis con tres niveles de compresión. Reduce hasta un 80% en PDF con imágenes; el texto y los gráficos vectoriales se mantienen intactos. En servidores europeos, con borrado automático.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Any",
       "offers": {
@@ -771,7 +771,7 @@
       },
       "inLanguage": "es",
       "isAccessibleForFree": true,
-      "featureList": "Compresión con 3 niveles de calidad, Procesamiento en servidores europeos, Reducción de tamaño hasta 80%, Comparación visual de tamaños, Borrado automático en menos de 10 minutos"
+      "featureList": "Compresión con 3 niveles (Ghostscript), Reduce hasta 80% en PDF con imágenes, Texto y gráficos vectoriales intactos, Procesamiento en servidores europeos, Borrado automático en menos de 10 minutos"
     },
     {
       "@type": "BreadcrumbList",
@@ -795,48 +795,82 @@
         }
       ]
     },
-    {
+{
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo comprimir un PDF gratis online?",
+          "name": "¿Se pierde calidad al comprimir un PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDFRápido te permite comprimir archivos PDF sin instalar nada ni crear una cuenta. El archivo se procesa en servidores europeos, se elimina automáticamente en menos de 10 minutos y es gratuito."
+            "text": "El texto y los gráficos vectoriales se mantienen idénticos siempre. Lo que cambia es la resolución de las imágenes, y solo en la medida del nivel que elijas: con Baja o Recomendada apenas se nota; con Máxima sí puede verse pérdida en las fotos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro comprimir PDFs con PDFRápido?",
+          "name": "¿Cuánto se reduce el tamaño de un PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Tu PDF se procesa en servidores europeos mediante una conexión segura y se elimina automáticamente en menos de 10 minutos. No almacenamos ni compartimos tus documentos con terceros."
+            "text": "Depende del contenido. Los PDF con muchas imágenes o escaneados pueden reducirse hasta un 80%. Los de solo texto bajan poco, normalmente entre un 5% y un 20%, porque ya son ligeros."
           }
         },
         {
           "@type": "Question",
-          "name": "¿PDFRápido tiene límite de archivos o tamaño?",
+          "name": "¿Por qué mi PDF no se redujo nada?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDFRápido es gratuito y sin registro. El tamaño máximo por archivo es de 50 MB; puedes comprimir tantos PDFs como necesites repitiendo la operación."
+            "text": "Porque es de texto o vectorial, o ya estaba optimizado: no hay imágenes que comprimir. En ese caso te devolvemos tu archivo original sin modificarlo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Necesito registrarme para usar Comprimir PDF?",
+          "name": "¿Mis archivos se guardan en el servidor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente."
+            "text": "No. El PDF se procesa en nuestros servidores europeos y se elimina automáticamente en cuanto termina la compresión (como mucho, a los 10 minutos). No almacenamos ni compartimos tus documentos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona Comprimir PDF en móvil y tablet?",
+          "name": "¿Puedo comprimir un PDF protegido con contraseña?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación."
+            "text": "No directamente: primero quítale la contraseña en Desbloquear PDF y luego comprímelo."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay límite de tamaño o de páginas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El límite es de 50 MB por archivo. No hay tope de páginas."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo comprimir un PDF",
+      "totalTime": "PT1M",
+      "tool": { "@type": "HowToTool", "name": "PDFRápido Comprimir PDF" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Sube tu PDF",
+          "text": "Arrastra el PDF o selecciónalo (hasta 50 MB). Si está protegido con contraseña, desbloquéalo primero."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Elige el nivel",
+          "text": "Baja, Recomendada o Máxima, según cuánto quieras reducir y cuánta calidad necesites conservar."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Descarga el PDF comprimido",
+          "text": "Verás cuánto has ahorrado antes de descargar el archivo más ligero."
         }
       ]
     }
@@ -846,14 +880,14 @@
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Comprimir PDF Gratis Online | PDFRápido">
-    <meta property="og:description" content="Reduce el tamaño de tu PDF hasta un 80% sin perder calidad visible. Sin registro, sin instalar nada.">
+    <meta property="og:description" content="Reduce el tamaño de tu PDF hasta un 80% en archivos con imágenes; el texto y los vectores se mantienen intactos. Sin registro.">
     <meta property="og:url" content="https://pdfrapido.eu/comprimir-pdf/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/assets/og-comprimir-pdf.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Comprimir PDF Gratis Online | PDFRápido">
-    <meta name="twitter:description" content="Reduce el tamaño de tu PDF hasta un 80% sin perder calidad visible. Sin registro, sin instalar nada.">
+    <meta name="twitter:description" content="Reduce el tamaño de tu PDF hasta un 80% en archivos con imágenes; el texto y los vectores se mantienen intactos. Sin registro.">
     <meta name="twitter:image" content="https://pdfrapido.eu/assets/og-comprimir-pdf.png">
     <script src="/js/webmcp.js" defer></script>
 
@@ -950,14 +984,14 @@
 </div>
 <!-- HEADER -->
     
-    <h1>¿Cómo comprimir un PDF gratis online?</h1>
-    <p class="answer-first">PDFRápido te permite comprimir archivos PDF reduciendo su tamaño hasta un 80% sin pérdida visible de calidad. El archivo se procesa en servidores europeos y se elimina automáticamente en menos de 10 minutos. Es gratuito, no requiere registro y funciona en cualquier dispositivo.</p>
+    <h1>Comprimir PDF: reduce el tamaño eligiendo la calidad</h1>
+    <p class="answer-first">Reduce el peso de un PDF eligiendo cuánta compresión quieres. Subes el archivo, eliges un nivel y lo descargas más ligero. La compresión se hace en nuestros servidores europeos con Ghostscript (no en tu navegador): el archivo se sube, se procesa y se borra automáticamente en cuanto termina. Lo que se reduce son las imágenes del PDF; el texto y los gráficos vectoriales se mantienen intactos.</p>
     <ul class="tldr">
-    <li>✅ Gratuito y sin registro</li>
-    <li>✅ Compresión en servidores europeos con 3 niveles</li>
-    <li>✅ Tus archivos se eliminan automáticamente en menos de 10 minutos</li>
-    <li>✅ Funciona en PC, móvil y tablet</li>
-    <li>✅ Reduce hasta un 80% el tamaño del PDF</li>
+    <li>✅ Tres niveles: tú decides el equilibrio entre peso y calidad</li>
+    <li>✅ Reduce hasta ~80% en PDF con imágenes o escaneados</li>
+    <li>✅ El texto y los gráficos vectoriales no pierden nada</li>
+    <li>✅ Si tu PDF ya está optimizado, te lo decimos y no lo tocamos</li>
+    <li>✅ Hasta 50 MB · servidores europeos · se borra solo (~10 min)</li>
     </ul>
 
     <!-- UPLOAD ZONE -->
@@ -1116,17 +1150,6 @@
 
 
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
-            <li><a href="/unir-pdf/">Unir PDF</a></li>
-            <li><a href="/dividir-pdf/">Dividir PDF</a></li>
-            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
-            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
-        </ul>
-    </div>
-
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
 .content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
@@ -1147,102 +1170,68 @@
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .keep-table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 16px}
+.content-seo .keep-table th,.content-seo .keep-table td{padding:11px 14px;border:1px solid #e5e7eb;color:#4B5563;line-height:1.6;vertical-align:top;text-align:left}
+.content-seo .keep-table th{background:#f9fafb;color:#1B2A4A;font-weight:600}
+.content-seo .keep-table td:first-child{font-weight:600;color:#1B2A4A;white-space:nowrap}
+.content-seo .note{background:#fff8f7;border-left:4px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;color:#374151;line-height:1.7}
 </style>
+  <section class="content-seo" aria-label="Guía para comprimir PDF">
+    <h2>Qué nivel de compresión elegir</h2>
+    <p>La herramienta te ofrece tres niveles. Esto es lo que hace cada uno de verdad: la resolución a la que reescala las imágenes.</p>
+    <table class="keep-table">
+      <thead><tr><th>Nivel</th><th>Reescala imágenes a</th><th>Elígelo si…</th></tr></thead>
+      <tbody>
+        <tr><td>Baja</td><td>~300 dpi</td><td>Quieres calidad casi intacta: documentos para imprimir o con fotos que importan. Reduce poco.</td></tr>
+        <tr><td>Recomendada <span style="font-weight:400;color:#6B7280">(por defecto)</span></td><td>~150 dpi</td><td>Buscas el equilibrio: enviar por email o subir a un portal sin que se note la pérdida. La mejor opción en la mayoría de casos.</td></tr>
+        <tr><td>Máxima</td><td>~72 dpi</td><td>Lo que importa es el mínimo peso y se va a leer en pantalla: aceptas que las imágenes pierdan nitidez.</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Los tres niveles solo afectan a las imágenes. El texto seleccionable y los gráficos vectoriales se ven idénticos elijas el nivel que elijas.</p>
 
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-<div class="aeo-answer" style="background:linear-gradient(135deg,#fff8f7,#ffffff);border-left:4px solid #E8453C;border-radius:0 12px 12px 0;padding:22px 26px;margin:0 0 36px;font-size:15.5px;line-height:1.75;color:#1B2A4A">
-  <p style="font-size:17px;font-weight:700;margin:0 0 8px;color:#1B2A4A">¿Cómo comprimir un PDF gratis?</p>
-  <p style="margin:0;font-size:15.5px;line-height:1.75;color:#374151">PDFRápido reduce el tamaño de cualquier archivo PDF sin registro y sin instalar nada. Eliges entre tres niveles de compresión, mantienes la calidad del texto y los gráficos vectoriales, y descargas el resultado en segundos. Funciona en español y en cualquier dispositivo —Windows, Mac, Linux, Android o iPhone—. Tu archivo se procesa en servidores europeos y se borra automáticamente tras la descarga.</p>
-</div>
-  <h2>¿Cómo funciona Comprimir PDF?</h2>
-  <p>Usar Comprimir PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube tu PDF</h3>
-          <p>Arrastra el archivo o haz clic para seleccionarlo. Acepta archivos de hasta 50 MB sin necesidad de registro.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Elige el nivel de compresión</h3>
-          <p>Selecciona entre compresión fuerte, media o suave según tus necesidades. El modo automático optimiza el balance entre tamaño y calidad.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el resultado</h3>
-          <p>En segundos obtienes el archivo comprimido. Comprueba el ahorro de tamaño y descárgalo directamente a tu dispositivo.</p>
-        </div>
-      </div>
-  </div>
+    <h2>Por qué unos PDF se reducen mucho y otros casi nada</h2>
+    <p>Comprimir un PDF no es magia: lo que pesa en un PDF casi siempre son las imágenes. Nuestro compresor las recomprime y baja su resolución según el nivel que elijas, y además optimiza la estructura interna del archivo. Por eso el resultado varía tanto:</p>
+    <ul>
+      <li><strong>Un PDF escaneado o lleno de fotos</strong> puede adelgazar hasta un 80%.</li>
+      <li><strong>Un PDF de solo texto o con gráficos vectoriales</strong> apenas baja: ese contenido ya es muy ligero y no hay imágenes que reducir. Es normal ver un 5-20%… o un 0%.</li>
+      <li><strong>Un PDF ya optimizado</strong> no se puede encoger más. Cuando detectamos que el resultado no sería más pequeño, te devolvemos tu archivo original sin tocarlo y te avisamos («Este PDF no se puede comprimir más»). Preferimos ser honestos a entregarte el mismo archivo disfrazado de comprimido.</li>
+    </ul>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Comprimir PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Envío por correo electrónico</strong>
-        <span>La mayoría de proveedores de email limitan los adjuntos a 10 o 25 MB. Comprimir el PDF te permite enviarlo sin tener que usar plataformas de transferencia externas.</span>
-      </div>
-      <div class="use-case">
-        <strong>Subida a portales web</strong>
-        <span>Administraciones, universidades y empresas suelen imponer límites de tamaño en sus formularios online. Un PDF comprimido se sube más rápido y evita errores de carga.</span>
-      </div>
-      <div class="use-case">
-        <strong>Almacenamiento en la nube</strong>
-        <span>Reducir el tamaño de tus PDFs ahorra espacio en Google Drive, Dropbox o iCloud, especialmente cuando gestionas cientos de documentos digitalizados.</span>
-      </div>
-      <div class="use-case">
-        <strong>Optimización para web</strong>
-        <span>Si publicas PDFs en tu sitio web, comprimirlos reduce el tiempo de carga para los visitantes y mejora la experiencia de usuario.</span>
-      </div>
-      <div class="use-case">
-        <strong>Documentos para firma electrónica</strong>
-        <span>Plataformas como DocuSign o Signaturit tienen límites de tamaño por documento. Comprimir el PDF antes de subirlo evita rechazos y agiliza el proceso de firma.</span>
-      </div>
-  </div>
-
-  <h2>Preguntas frecuentes sobre Comprimir PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Se pierde calidad visual al comprimir un PDF?</h3>
-        <p>En la mayoría de los casos, el texto y los gráficos vectoriales se conservan perfectamente. Solo las imágenes integradas pueden ver reducida su resolución en compresiones agresivas. Para documentos de texto puro, la calidad es idéntica al original.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Cuánto puede reducirse el tamaño de un PDF?</h3>
-        <p>Depende del contenido. Los PDFs con muchas imágenes pueden reducirse hasta un 80%. Los documentos de texto puro o los ya optimizados presentan mejoras menores, habitualmente entre un 5% y un 20%.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Mis archivos se guardan en el servidor?</h3>
-        <p>No de forma permanente. La compresión se realiza en servidores europeos y el archivo se elimina automáticamente en menos de 10 minutos tras la descarga, garantizando tu privacidad.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo comprimir varios PDFs a la vez?</h3>
-        <p>La herramienta procesa un archivo por operación para garantizar la máxima calidad del resultado. Si tienes varios PDFs, simplemente repite el proceso con cada uno. Cada compresión suele tardar menos de 10 segundos.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué niveles de compresión están disponibles?</h3>
-        <p>Puedes elegir entre compresión suave (mínima pérdida de calidad, reducción del 10–30%), compresión media (balance óptimo para la mayoría de usos) y compresión fuerte (máxima reducción, recomendada cuando el tamaño prima sobre la calidad visual).</p>
-      </div>
-  </div>
-</section>
-</main>
-
-<section style="max-width:1100px;margin:0 auto;padding:32px 24px 0">
-    <div style="background:linear-gradient(135deg,#e8f5e9,#fff);border:1px solid #c8e6c9;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-        <div style="flex:1;min-width:220px">
-            <span style="font-size:11px;font-weight:600;color:#1e7e34;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
-            <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo comprimir un PDF sin perder calidad</h3>
-            <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Descubre qué métodos realmente funcionan, cuánto puedes reducir el tamaño y cuándo usar cada técnica según tu caso de uso.</p>
-        </div>
-        <a href="/blog/como-comprimir-pdf-sin-perder-calidad/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#34a853;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0;transition:all .2s" onmouseover="this.style.background='#1e7e34'" onmouseout="this.style.background='#34a853'">Leer guía →</a>
+    <h2>Comprimir un PDF en 3 pasos</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube tu PDF</h3><p>Arrástralo o selecciónalo (hasta 50 MB). Si está protegido con contraseña, <a href="/desbloquear-pdf/">desbloquéalo primero</a>.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige el nivel</h3><p>Baja, Recomendada o Máxima, según cuánto quieras reducir y cuánta calidad necesites conservar.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF comprimido</h3><p>Verás cuánto has ahorrado antes de descargar el archivo más ligero.</p></div></div>
     </div>
-</section>
 
-<!-- FOOTER -->
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Enviarlo por email</strong><span>Gmail y Outlook limitan los adjuntos a 25 MB; comprime el PDF para que entre sin usar enlaces externos.</span></div>
+      <div class="use-case"><strong>Subirlo a una sede electrónica o portal</strong><span>Administraciones, universidades y oposiciones suelen poner topes de 5-10 MB por documento; un PDF comprimido evita el error de subida.</span></div>
+      <div class="use-case"><strong>Adjuntarlo en formularios web o WhatsApp</strong><span>Donde los límites de tamaño son aún más bajos que en el correo.</span></div>
+      <div class="use-case"><strong>Ahorrar espacio en la nube</strong><span>Reduce el peso de cientos de escaneos en Google Drive, Dropbox o iCloud.</span></div>
+      <div class="use-case"><strong>Publicarlo en una web</strong><span>Un PDF más ligero se descarga antes y mejora la experiencia de quien lo abre.</span></div>
+      <div class="use-case"><strong>Firma electrónica</strong><span>Plataformas como DocuSign o Signaturit limitan el tamaño por documento; comprimir evita rechazos.</span></div>
+    </div>
+
+    <h2>Errores comunes y cómo evitarlos</h2>
+    <ul>
+      <li><strong>«Este PDF está protegido con contraseña».</strong> Quítale la protección antes con <a href="/desbloquear-pdf/">Desbloquear PDF</a> y vuelve a comprimirlo.</li>
+      <li><strong>Salió «0%» o «no se puede comprimir más».</strong> No es un fallo: tu PDF es de texto o vectorial, o ya estaba optimizado, así que no hay imágenes que reducir. Te devolvemos el original intacto.</li>
+      <li><strong>El PDF supera los 50 MB.</strong> Es el límite por archivo. Divídelo en partes con <a href="/dividir-pdf/">Dividir PDF</a> y comprime cada una.</li>
+      <li><strong>La imagen salió borrosa.</strong> Usaste el nivel Máxima (72 dpi). Vuelve a comprimir con Recomendada o Baja para conservar más nitidez.</li>
+      <li><strong>Quiero adelgazarlo aún más sin perder calidad.</strong> Si ya estás en Recomendada y es casi todo texto, no bajará mucho más: ese contenido ya pesa poco.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre comprimir PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Se pierde calidad al comprimir un PDF?</h3><p>El texto y los gráficos vectoriales se mantienen idénticos siempre. Lo que cambia es la resolución de las imágenes, y solo en la medida del nivel que elijas: con Baja o Recomendada apenas se nota; con Máxima sí puede verse pérdida en las fotos.</p></div>
+      <div class="faq-item"><h3>¿Cuánto se reduce el tamaño de un PDF?</h3><p>Depende del contenido. Los PDF con muchas imágenes o escaneados pueden reducirse hasta un 80%. Los de solo texto bajan poco, normalmente entre un 5% y un 20%, porque ya son ligeros.</p></div>
+      <div class="faq-item"><h3>¿Por qué mi PDF no se redujo nada?</h3><p>Porque es de texto o vectorial, o ya estaba optimizado: no hay imágenes que comprimir. En ese caso te devolvemos tu archivo original sin modificarlo.</p></div>
+      <div class="faq-item"><h3>¿Mis archivos se guardan en el servidor?</h3><p>No. El PDF se procesa en nuestros servidores europeos y se elimina automáticamente en cuanto termina la compresión (como mucho, a los 10 minutos). No almacenamos ni compartimos tus documentos.</p></div>
+      <div class="faq-item"><h3>¿Puedo comprimir un PDF protegido con contraseña?</h3><p>No directamente: primero quítale la contraseña en <a href="/desbloquear-pdf/">Desbloquear PDF</a> y luego comprímelo.</p></div>
+      <div class="faq-item"><h3>¿Hay límite de tamaño o de páginas?</h3><p>El límite es de 50 MB por archivo. No hay tope de páginas.</p></div>
+    </div>
 
     <h2>¿Por qué elegir PDFRápido?</h2>
     <table class="comparison">
@@ -1250,16 +1239,30 @@
       <tbody>
         <tr><td>Gratuito</td><td>✅ Sí</td><td>⚠️ Limitado</td><td>⚠️ Limitado</td></tr>
         <tr><td>Sin registro</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
+        <tr><td>Te avisa si no se puede comprimir más</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
         <tr><td>Borrado automático en &lt;10 min</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
         <tr><td>Sin tope de tareas</td><td>✅ Sí</td><td>❌ Tope diario</td><td>❌ 2/día</td></tr>
       </tbody>
     </table>
+
     <h2>Otras herramientas PDF</h2>
     <nav class="related-tools-nav">
-    <a href="/unir-pdf/">Unir PDF</a>
-    <a href="/dividir-pdf/">Dividir PDF</a>
-    <a href="/pdf-a-word/">PDF a Word</a>
+      <a href="/unir-pdf/">Unir PDF</a>
+      <a href="/dividir-pdf/">Dividir PDF</a>
+      <a href="/pdf-a-word/">PDF a Word</a>
+      <a href="/desbloquear-pdf/">Desbloquear PDF</a>
     </nav>
+
+    <div style="background:linear-gradient(135deg,#e8f5e9,#fff);border:1px solid #c8e6c9;border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px">
+      <div style="flex:1;min-width:220px">
+        <span style="font-size:11px;font-weight:600;color:#1e7e34;text-transform:uppercase;letter-spacing:.5px">Guía relacionada</span>
+        <h3 style="font-size:17px;font-weight:600;color:#1b2a4a;margin:6px 0 4px">Cómo comprimir un PDF sin perder calidad</h3>
+        <p style="font-size:14px;color:#4b5563;line-height:1.6;margin:0">Descubre qué métodos realmente funcionan, cuánto puedes reducir el tamaño y cuándo usar cada técnica según tu caso de uso.</p>
+      </div>
+      <a href="/blog/como-comprimir-pdf-sin-perder-calidad/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#34a853;color:#fff;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;flex-shrink:0">Leer guía →</a>
+    </div>
+  </section>
+</main>
     <footer class="author-byline">
       <p>Por <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
     </footer>
