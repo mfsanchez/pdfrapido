@@ -104,7 +104,7 @@
           "@type": "WebApplication",
           "name": "PDF a Audio MP3 Online Gratis",
           "url": "https://pdfrapido.eu/pdf-a-audio/",
-          "description": "Convierte cualquier PDF a audio MP3 con voz natural. Elige idioma y velocidad. Gratis y sin registro.",
+          "description": "Convierte cualquier PDF a audio MP3 con voz neuronal. 8 voces en 7 idiomas, 4 velocidades. Gratis y sin registro.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Web",
           "offers": {
@@ -141,35 +141,59 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "¿Cómo convertir un PDF a audio MP3?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sube tu PDF, elige el idioma y la velocidad de lectura, y pulsa Generar audio. En segundos tendrás un MP3 con voz natural que puedes escuchar o descargar."
-              }
+              "name": "¿Qué idiomas y voces están disponibles?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Hay 8 voces neuronales: español de España (Elvira) y de México (Dalia), inglés de EEUU (Aria) y de Reino Unido (Sonia), francés (Denise), alemán (Katja), italiano (Elsa) y portugués de Brasil (Francisca). Hay una voz por idioma y el idioma se elige manualmente: la herramienta no detecta el idioma del texto." }
             },
             {
               "@type": "Question",
-              "name": "¿Qué idiomas están disponibles?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Español (España y México), inglés (EEUU y Reino Unido), francés, alemán, italiano y portugués brasileño. Todas las voces son neuronales de alta calidad."
-              }
+              "name": "¿Cuánto texto se convierte y cuánto audio genera?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Se convierten hasta 10.000 caracteres, unas 1.600 palabras o 4-7 páginas según la densidad del texto, que equivalen a unos 8-12 minutos de audio a velocidad normal. Si el documento es más largo, se convierte la primera parte y se muestra un aviso." }
             },
             {
               "@type": "Question",
-              "name": "¿Hay límite de tamaño?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El PDF puede pesar hasta 20 MB. Se procesan hasta 10.000 caracteres de texto, lo que equivale a unos 8-12 minutos de audio."
-              }
+              "name": "¿Funciona con PDFs escaneados?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. La herramienta necesita que el PDF tenga texto extraíble; con un escaneo (solo imagen) devuelve un error indicándolo. Pasa primero el documento por OCR a PDF y después conviértelo a audio." }
             },
             {
               "@type": "Question",
-              "name": "¿Es gratis?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, la herramienta es 100% gratuita y no requiere registro."
-              }
+              "name": "¿Se suben mis archivos a un servidor?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí, esta herramienta procesa en el servidor, a diferencia de las herramientas locales del sitio. El PDF se sube, se extrae su texto y el archivo se elimina inmediatamente; el texto se envía al servicio de voz neuronal de Microsoft para generar el MP3, y el audio también se borra del servidor en cuanto se te entrega." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿En qué formato se descarga el audio?",
+              "acceptedAnswer": { "@type": "Answer", "text": "En MP3 (mono, 24 kHz, 48 kbps), con el nombre audio_tudocumento.mp3. Es el único formato disponible; no se genera WAV." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo ajustar la velocidad de lectura?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sí, hay cuatro velocidades: lenta (−20 %), normal, rápida (+20 %) y muy rápida (+40 %). La velocidad elegida cambia la duración del MP3 resultante." }
+            }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "Cómo convertir un PDF a audio MP3",
+          "totalTime": "PT2M",
+          "tool": { "@type": "HowToTool", "name": "PDFRápido PDF a Audio" },
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Sube tu PDF",
+              "text": "Arrastra o selecciona un PDF de hasta 20 MB con texto extraíble (no un escaneo sin OCR)."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Elige voz y velocidad",
+              "text": "Selecciona una de las 8 voces neuronales (7 idiomas) y la velocidad de lectura: lenta, normal, rápida o muy rápida."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Genera, escucha y descarga",
+              "text": "Pulsa Generar audio MP3, escucha la vista previa en el reproductor y descarga el archivo audio_tudocumento.mp3."
             }
           ]
         }
@@ -341,46 +365,7 @@
     </div>
 
 
-    <div class="seo-content">
-        <h2>Cómo convertir PDF a audio MP3 online</h2>
-        <p>Selecciona o arrastra tu documento PDF a la zona de carga. Elige el idioma de la voz y la velocidad de lectura que prefieras. La herramienta extrae el texto del PDF y lo convierte en un archivo MP3 de alta calidad usando voces neuronales de Microsoft Edge.</p>
-        <p>El audio resultante suena natural y fluido, con entonación realista en cada idioma. Puedes escuchar una vista previa directamente en el navegador y descargar el MP3 para llevarlo en el coche, mientras haces ejercicio o en cualquier momento.</p>
-        <p>Se procesan hasta 10.000 caracteres por documento, lo que equivale aproximadamente a 8-12 minutos de audio. Si tu PDF es más largo, se convierte la primera parte automáticamente. La herramienta es gratuita, no requiere registro y funciona con PDFs en cualquier idioma soportado.</p>
-        <p>Ideal para estudiantes que quieren repasar apuntes, profesionales que prefieren escuchar informes en el coche, o cualquier persona que quiera aprovechar el tiempo convirtiendo lectura en audio.</p>
-
-        <div class="faq">
-            <h2>Preguntas frecuentes</h2>
-            <div class="faq-item">
-                <p class="faq-q">¿Cómo convertir un PDF a audio MP3?</p>
-                <p class="faq-a">Sube tu PDF, selecciona el idioma y la velocidad, y pulsa "Generar audio". En segundos obtendrás un MP3 con voz natural que puedes escuchar online o descargar.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">¿Qué idiomas y voces están disponibles?</p>
-                <p class="faq-a">Hay 8 voces neuronales de alta calidad: español (España y México), inglés (EEUU y Reino Unido), francés, alemán, italiano y portugués brasileño. Todas suenan naturales y con buena entonación.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">¿Cuánto texto se puede convertir?</p>
-                <p class="faq-a">Se procesan hasta 10.000 caracteres por documento, lo que equivale a unas 5-8 páginas de texto o 8-12 minutos de audio. Si el documento es más largo, se convierte la primera parte.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">¿Funciona con PDFs escaneados?</p>
-                <p class="faq-a">La herramienta necesita que el PDF tenga texto digital. Si es un PDF escaneado (solo imagen), primero usa la herramienta <a href="/ocr-a-pdf/" style="color:var(--accent)">OCR a PDF</a> para convertirlo en texto seleccionable.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/resumir-pdf/">Resumir PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/traducir-pdf/">Traducir PDF</a></li>
-            <li><a href="/chat-pdf/">Chat con PDF</a></li>
-            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
-        </ul>
-    </div>
-
-<style>
+    <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
 .content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
 .content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
@@ -400,70 +385,143 @@
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo .comparison{width:100%;max-width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 24px}
+.content-seo .comparison th,.content-seo .comparison td{padding:11px 14px;border:1px solid #e5e7eb;text-align:left}
+.content-seo .comparison th{background:#1B2A4A;color:#fff;font-weight:600}
+.content-seo .comparison tr:nth-child(even){background:#f9fafb}
+.content-seo .rtn{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 28px}
+.content-seo .rtn a{display:inline-block;padding:10px 18px;background:#fff;border:1px solid #e5e7eb;border-radius:100px;font-size:14px;font-weight:500;color:#1B2A4A;text-decoration:none}
+.content-seo .rtn a:hover{border-color:#E8453C;color:#E8453C}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona PDF a Audio?</h2>
-  <p>Usar PDF a Audio en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
+<section class="content-seo" aria-label="Guía para convertir PDF a audio">
+  <p>Convierte el texto de tu PDF en un <strong>MP3 con voz neuronal</strong> para escucharlo donde quieras: en el coche, entrenando o cocinando. Eliges la voz entre 8 idiomas y variantes, ajustas la velocidad y descargas el audio en un par de minutos.</p>
+  <ul>
+    <li>✅ 8 voces neuronales en 7 idiomas</li>
+    <li>✅ 4 velocidades de lectura (de −20 % a +40 %)</li>
+    <li>✅ Escucha la vista previa antes de descargar</li>
+    <li>✅ Gratis, sin registro y sin tope de usos</li>
+    <li>✅ Tus archivos se eliminan del servidor al terminar</li>
+  </ul>
+
+  <h2>Voces e idiomas disponibles</h2>
+  <p>La conversión usa las voces neuronales de Microsoft Edge, con entonación natural en cada idioma. Hay una voz por idioma:</p>
+  <table class="comparison">
+    <thead><tr><th>Idioma</th><th>Voz</th></tr></thead>
+    <tbody>
+      <tr><td>🇪🇸 Español (España)</td><td>Elvira</td></tr>
+      <tr><td>🇲🇽 Español (México)</td><td>Dalia</td></tr>
+      <tr><td>🇺🇸 Inglés (EEUU)</td><td>Aria</td></tr>
+      <tr><td>🇬🇧 Inglés (Reino Unido)</td><td>Sonia</td></tr>
+      <tr><td>🇫🇷 Francés</td><td>Denise</td></tr>
+      <tr><td>🇩🇪 Alemán</td><td>Katja</td></tr>
+      <tr><td>🇮🇹 Italiano</td><td>Elsa</td></tr>
+      <tr><td>🇧🇷 Portugués (Brasil)</td><td>Francisca</td></tr>
+    </tbody>
+  </table>
+  <p>El idioma <strong>se elige manualmente</strong> — la herramienta no detecta el idioma del texto. Si tu PDF está en inglés y dejas la voz en español, Elvira leerá el inglés con fonética española, así que asegúrate de que voz y texto coinciden. La velocidad de lectura tiene cuatro niveles: lenta (−20 %), normal, rápida (+20 %) y muy rápida (+40 %).</p>
+
+  <h2>Convertir un PDF a MP3 en 3 pasos</h2>
   <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube el PDF</h3>
-          <p>Carga el PDF cuyo texto quieres escuchar. La herramienta extrae el texto automáticamente para convertirlo en voz.</p>
-        </div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Sube tu PDF</h3>
+        <p>Arrastra o selecciona un PDF de hasta 20 MB. Debe tener texto extraíble: un escaneo sin OCR no funciona.</p>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Selecciona el idioma y la voz</h3>
-          <p>Elige el idioma del texto y el tipo de voz. Disponemos de voces naturales en español y otros idiomas con entonación natural.</p>
-        </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Elige voz y velocidad</h3>
+        <p>Selecciona una de las 8 voces neuronales y la velocidad de lectura que prefieras.</p>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el archivo de audio</h3>
-          <p>Obtén el PDF convertido en un archivo MP3 o WAV listo para escuchar en cualquier dispositivo, reproductor de audio o aplicación de podcast.</p>
-        </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Genera, escucha y descarga</h3>
+        <p>Pulsa «Generar audio MP3», escucha la vista previa en el reproductor y descarga <strong>audio_tudocumento.mp3</strong>.</p>
       </div>
+    </div>
   </div>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de PDF a Audio es útil en múltiples situaciones del día a día personal y profesional:</p>
+  <h2>Para qué sirve: situaciones reales</h2>
   <div class="use-cases">
-      <div class="use-case">
-        <strong>Escuchar documentos durante el desplazamiento</strong>
-        <span>Convierte informes, artículos y libros en PDF a audio para escucharlos mientras conduces, haces ejercicio o realizas tareas que no requieren atención visual.</span>
-      </div>
-      <div class="use-case">
-        <strong>Accesibilidad para personas con dislexia o problemas visuales</strong>
-        <span>El PDF a audio convierte documentos escritos en contenido auditivo, haciendo la información accesible para personas con dislexia, baja visión o ceguera.</span>
-      </div>
-      <div class="use-case">
-        <strong>Estudiar escuchando apuntes</strong>
-        <span>Convierte tus apuntes o manuales en PDF a formato de audio para repasar el contenido de una forma diferente que refuerza la memorización.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear podcasts a partir de artículos</strong>
-        <span>Periodistas, bloggers y creadores de contenido pueden convertir sus artículos escritos en episodios de audio para llegar a nuevas audiencias.</span>
-      </div>
+    <div class="use-case">
+      <strong>Escuchar documentos en desplazamientos</strong>
+      <span>Convierte informes, artículos o apuntes en MP3 y escúchalos mientras conduces, entrenas o haces tareas que no requieren la vista.</span>
+    </div>
+    <div class="use-case">
+      <strong>Accesibilidad</strong>
+      <span>Para personas con dislexia, baja visión o fatiga visual, pasar un documento a voz convierte la lectura en escucha sin depender de un lector de pantalla.</span>
+    </div>
+    <div class="use-case">
+      <strong>Estudiar repasando de oído</strong>
+      <span>Convierte tus apuntes en audio y repásalos como si fueran un podcast: una segunda pasada auditiva refuerza lo leído.</span>
+    </div>
+    <div class="use-case">
+      <strong>Revisar tus propios textos</strong>
+      <span>Escuchar tu documento leído en voz alta ayuda a detectar frases largas, repeticiones y erratas que se escapan al leer en pantalla.</span>
+    </div>
   </div>
 
-  <h2>Preguntas frecuentes sobre PDF a Audio</h2>
+  <h2>Límites y calidad del audio</h2>
+  <p>El PDF puede pesar <strong>hasta 20 MB</strong> y se convierten <strong>hasta 10.000 caracteres</strong> de texto — unas 1.600 palabras o 4-7 páginas según la densidad, que dan aproximadamente <strong>8-12 minutos de audio</strong> a velocidad normal. Si el documento es más largo, se convierte la primera parte y verás un aviso de que el audio está truncado.</p>
+  <p>El resultado es un <strong>MP3 mono a 24 kHz y 48 kbps</strong>: calidad pensada para voz, con archivos ligeros (un audio de 10 minutos ronda los 3,5 MB). El archivo se descarga como <code>audio_tudocumento.mp3</code> y puedes escucharlo antes en el reproductor integrado.</p>
+
+  <h2>Privacidad: qué pasa con tu archivo</h2>
+  <p>A diferencia de la mayoría de herramientas de PDFRápido, que procesan en tu navegador, esta conversión ocurre <strong>en el servidor</strong>. El proceso es transparente: el PDF se sube, se extrae su texto y el archivo <strong>se elimina inmediatamente</strong> del servidor; el texto extraído se envía al servicio de voz neuronal de Microsoft para sintetizar el MP3; y el audio generado también se borra del servidor en cuanto se te entrega. No se guarda copia de tu documento ni del audio.</p>
+
+  <h2>Lo que esta herramienta no hace</h2>
+  <ul>
+    <li><strong>No lee PDFs escaneados.</strong> Si el PDF es solo imagen, devuelve un error. Pásalo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
+    <li><strong>No convierte más de 10.000 caracteres por documento.</strong> Para un documento largo, trocéalo con <a href="/dividir-pdf/">Dividir PDF</a> y convierte cada parte por separado.</li>
+    <li><strong>No detecta el idioma del texto</strong>: la voz se elige a mano y hay una sola voz por idioma, siempre femenina.</li>
+    <li><strong>Solo genera MP3</strong> — no hay salida WAV ni otros formatos de audio.</li>
+    <li><strong>No interpreta tablas, fórmulas ni maquetas complejas.</strong> El texto se extrae en orden de lectura simple; en PDFs a varias columnas o con muchas tablas el resultado puede sonar desordenado.</li>
+  </ul>
+
+  <h2>Errores comunes y cómo evitarlos</h2>
+  <ul>
+    <li><strong>«El PDF no contiene texto extraíble».</strong> Es un escaneo o un PDF de solo imagen: aplícale <a href="/ocr-a-pdf/">OCR a PDF</a> y vuelve a intentarlo.</li>
+    <li><strong>«El archivo supera el límite de 20 MB».</strong> Redúcelo antes con <a href="/comprimir-pdf/">Comprimir PDF</a>; el peso suele venir de imágenes, no del texto.</li>
+    <li><strong>El audio se corta antes del final.</strong> El documento supera los 10.000 caracteres: divídelo con <a href="/dividir-pdf/">Dividir PDF</a> y convierte las partes una a una.</li>
+    <li><strong>La voz lee con un acento extraño.</strong> El idioma seleccionado no coincide con el del texto; elige la voz del idioma correcto.</li>
+    <li><strong>Números, siglas o tablas suenan raros.</strong> Es una limitación normal de cualquier lector de voz; en documentos muy tabulares conviene escuchar la vista previa antes de descargar.</li>
+  </ul>
+
+  <h2>Preguntas frecuentes sobre PDF a audio</h2>
   <div class="faq">
-      <div class="faq-item">
-        <h3>¿Qué idiomas están disponibles para la conversión a audio?</h3>
-        <p>La herramienta soporta español, inglés, francés, alemán, portugués e italiano, entre otros. El idioma se detecta automáticamente del texto del PDF o puedes seleccionarlo manualmente.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué calidad tiene la voz generada?</h3>
-        <p>Las voces son sintéticas de alta calidad basadas en tecnología de inteligencia artificial, con entonación natural y pronunciación correcta. Son perfectamente comprensibles y agradables de escuchar.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con documentos escaneados?</h3>
-        <p>No directamente, ya que los PDFs escaneados son imágenes sin texto. Primero debes aplicar OCR al PDF para extraer el texto y luego convertirlo a audio.</p>
-      </div>
+    <div class="faq-item"><h3>¿Qué idiomas y voces están disponibles?</h3><p>Hay 8 voces neuronales: español de España (Elvira) y de México (Dalia), inglés de EEUU (Aria) y de Reino Unido (Sonia), francés (Denise), alemán (Katja), italiano (Elsa) y portugués de Brasil (Francisca). Hay una voz por idioma y el idioma se elige manualmente: la herramienta no detecta el idioma del texto.</p></div>
+    <div class="faq-item"><h3>¿Cuánto texto se convierte y cuánto audio genera?</h3><p>Se convierten hasta 10.000 caracteres, unas 1.600 palabras o 4-7 páginas según la densidad del texto, que equivalen a unos 8-12 minutos de audio a velocidad normal. Si el documento es más largo, se convierte la primera parte y se muestra un aviso.</p></div>
+    <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No. La herramienta necesita que el PDF tenga texto extraíble; con un escaneo (solo imagen) devuelve un error indicándolo. Pasa primero el documento por <a href="/ocr-a-pdf/">OCR a PDF</a> y después conviértelo a audio.</p></div>
+    <div class="faq-item"><h3>¿Se suben mis archivos a un servidor?</h3><p>Sí, esta herramienta procesa en el servidor, a diferencia de las herramientas locales del sitio. El PDF se sube, se extrae su texto y el archivo se elimina inmediatamente; el texto se envía al servicio de voz neuronal de Microsoft para generar el MP3, y el audio también se borra del servidor en cuanto se te entrega.</p></div>
+    <div class="faq-item"><h3>¿En qué formato se descarga el audio?</h3><p>En MP3 (mono, 24 kHz, 48 kbps), con el nombre <code>audio_tudocumento.mp3</code>. Es el único formato disponible; no se genera WAV.</p></div>
+    <div class="faq-item"><h3>¿Puedo ajustar la velocidad de lectura?</h3><p>Sí, hay cuatro velocidades: lenta (−20 %), normal, rápida (+20 %) y muy rápida (+40 %). La velocidad elegida cambia la duración del MP3 resultante.</p></div>
   </div>
+
+  <h2>¿Por qué elegir PDFRápido?</h2>
+  <table class="comparison">
+    <thead><tr><th>Característica</th><th>PDFRápido</th><th>iLovePDF</th><th>Smallpdf</th></tr></thead>
+    <tbody>
+      <tr><td>Convierte PDF a audio</td><td>✅ Sí</td><td>❌ No ofrece</td><td>❌ No ofrece</td></tr>
+      <tr><td>Gratuito</td><td>✅ Sí</td><td>⚠️ Limitado</td><td>⚠️ Limitado</td></tr>
+      <tr><td>Sin registro</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
+      <tr><td>Sin tope de tareas</td><td>✅ Sí</td><td>❌ Tope diario</td><td>❌ 2/día</td></tr>
+      <tr><td>Archivos borrados al terminar</td><td>✅ Sí</td><td>⚠️ Según plan</td><td>⚠️ Según plan</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Otras herramientas PDF</h2>
+  <nav class="rtn">
+    <a href="/resumir-pdf/">Resumir PDF</a>
+    <a href="/pdf-a-texto/">PDF a Texto</a>
+    <a href="/traducir-pdf/">Traducir PDF</a>
+    <a href="/chat-pdf/">Chat con PDF</a>
+    <a href="/ocr-a-pdf/">OCR a PDF</a>
+    <a href="/dividir-pdf/">Dividir PDF</a>
+  </nav>
+  <p>¿Listo? Sube arriba tu PDF, elige voz y velocidad, y en un par de minutos tendrás tu documento convertido en un MP3 listo para escuchar donde quieras.</p>
 </section>
 </main>
 
