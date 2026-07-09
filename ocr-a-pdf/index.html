@@ -620,78 +620,107 @@
                 .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
 </style>
         <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "OCR a PDF Online Gratis — Texto Seleccionable en Segundos | PDFRápido",
+      "url": "https://pdfrapido.eu/ocr-a-pdf/",
+      "description": "Convierte imágenes y PDFs escaneados a PDF con texto seleccionable gratis. OCR en español, inglés, francés y alemán. Sin registro, resultado instantáneo.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "OCR a PDF Online Gratis — Texto Seleccionable en Segundos | PDFRápido",
-          "url": "https://pdfrapido.eu/ocr-a-pdf/",
-          "description": "Convierte imágenes y PDFs escaneados a PDF con texto seleccionable gratis. OCR en español, inglés, francés y alemán. Sin registro, resultado instantáneo.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          "inLanguage": "es",
-          "publisher": {
-            "@type": "Person",
-            "name": "MF Sanchez",
-            "url": "https://mfsanchez.com"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "OCR a PDF",
+          "item": "https://pdfrapido.eu/ocr-a-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el OCR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OCR (Optical Character Recognition) es una tecnología que extrae texto de imágenes y documentos escaneados, convirtiéndolos en texto editable y seleccionable."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PDFRápido",
-              "item": "https://pdfrapido.eu"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "OCR a PDF",
-              "item": "https://pdfrapido.eu/ocr-a-pdf/"
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Qué idiomas soporta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soporta español, inglés, francés y alemán. Puedes seleccionar el idioma principal de tu documento para obtener mejores resultados."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué es el OCR?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "OCR (Optical Character Recognition) es una tecnología que extrae texto de imágenes y documentos escaneados, convirtiéndolos en texto editable y seleccionable."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué idiomas soporta?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Soporta español, inglés, francés y alemán. Puedes seleccionar el idioma principal de tu documento para obtener mejores resultados."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Es seguro procesar documentos con OCR?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí. El OCR se ejecuta en servidores europeos mediante una conexión segura y el documento se elimina automáticamente en menos de 10 minutos. No almacenamos ni compartimos tus documentos."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Es seguro procesar documentos con OCR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El OCR se ejecuta en servidores europeos mediante una conexión segura y el documento se elimina automáticamente en menos de 10 minutos. No almacenamos ni compartimos tus documentos."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar OCR a PDF",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido OCR a PDF Online Gratis"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Sube el PDF escaneado o imagen",
+          "text": "Carga tu PDF de imagen, fotografía de documento o escaneo. La herramienta detecta automáticamente que el contenido necesita reconocimiento de texto."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Procesamiento OCR",
+          "text": "La tecnología de reconocimiento óptico de caracteres analiza el documento e identifica todos los caracteres de texto visibles, incluso con orientaciones o calidades de imagen variadas."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Descarga el PDF con texto seleccionable",
+          "text": "Obtén un PDF en el que el texto es completamente buscable, copiable y seleccionable, mientras la imagen original se conserva como fondo visual."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="OCR a PDF Online Gratis — Texto Seleccionable en Segundos | PDFRápido">

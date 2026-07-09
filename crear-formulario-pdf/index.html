@@ -144,50 +144,106 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
             .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
 </style>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "Crear Formulario PDF Online Gratis",
+      "url": "https://pdfrapido.eu/crear-formulario-pdf/",
+      "description": "Crea formularios PDF rellenables online gratis. Añade campos de texto, casillas, firmas y listas desplegables. Sin registro, descarga instantánea.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "WebApplication",
-          "name": "Crear Formulario PDF Online Gratis",
-          "url": "https://pdfrapido.eu/crear-formulario-pdf/",
-          "description": "Crea formularios PDF rellenables online gratis. Añade campos de texto, casillas, firmas y listas desplegables. Sin registro, descarga instantánea.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-          "inLanguage": "es",
-          "publisher": { "@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com" }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "PDFRápido", "item": "https://pdfrapido.eu" },
-            { "@type": "ListItem", "position": 2, "name": "Crear Formulario PDF", "item": "https://pdfrapido.eu/crear-formulario-pdf/" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Crear Formulario PDF",
+          "item": "https://pdfrapido.eu/crear-formulario-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Son compatibles los formularios generados con Adobe Reader?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Los formularios usan el estándar AcroForm de PDF (ISO 32000), compatible con Adobe Reader, Adobe Acrobat, Chrome, Firefox, Foxit Reader y la mayoría de visores PDF modernos."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Son compatibles los formularios generados con Adobe Reader?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Los formularios usan el estándar AcroForm de PDF (ISO 32000), compatible con Adobe Reader, Adobe Acrobat, Chrome, Firefox, Foxit Reader y la mayoría de visores PDF modernos." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Se envían los datos del formulario al servidor?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. Todo el procesamiento ocurre en tu navegador usando pdf-lib. El PDF se genera localmente y se descarga directamente a tu dispositivo sin enviar ningún dato a servidores externos." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuántos campos puedo añadir al formulario?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sin límite. Si el formulario supera una página, la herramienta distribuye automáticamente los campos en múltiples páginas." }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Se envían los datos del formulario al servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Todo el procesamiento ocurre en tu navegador usando pdf-lib. El PDF se genera localmente y se descarga directamente a tu dispositivo sin enviar ningún dato a servidores externos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántos campos puedo añadir al formulario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sin límite. Si el formulario supera una página, la herramienta distribuye automáticamente los campos en múltiples páginas."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar el constructor de formularios PDF",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Crear Formulario PDF Online Gratis"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Añade los campos que necesitas",
+          "text": "Haz clic en el tipo de campo (texto corto, casilla, firma, opciones múltiples…) y aparece en el constructor. Edita el nombre del campo y márcalo como obligatorio si es necesario."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Organiza y configura el formulario",
+          "text": "Reordena los campos con las flechas, elimina los que no necesites y define las opciones para campos de selección. Elige el título, el tamaño de página y la orientación."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Genera y descarga el PDF rellenable",
+          "text": "Pulsa \"Generar formulario PDF\". En segundos se crea el formulario con campos interactivos AcroForm y se descarga directamente a tu dispositivo."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Crear Formulario PDF Gratis — Constructor | PDFRápido">

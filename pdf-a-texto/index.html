@@ -90,85 +90,114 @@
 </style>
     <link rel="canonical" href="https://pdfrapido.eu/pdf-a-texto/">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "PDF a Texto Online Gratis",
+      "url": "https://pdfrapido.eu/pdf-a-texto/",
+      "description": "Extrae el texto de cualquier PDF gratis y sin registro. Convierte PDF a texto plano editable y descárgalo como .txt.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "WebApplication",
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "name": "PDF a Texto Online Gratis",
-          "url": "https://pdfrapido.eu/pdf-a-texto/",
-          "description": "Extrae el texto de cualquier PDF gratis y sin registro. Convierte PDF a texto plano editable y descárgalo como .txt.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          "inLanguage": "es",
-          "publisher": {
-            "@type": "Person",
-            "name": "MF Sanchez",
-            "url": "https://mfsanchez.com"
+          "item": "https://pdfrapido.eu/pdf-a-texto/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo extraer el texto de un PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sube o arrastra tu PDF a la herramienta. Se extrae automáticamente el texto de todas las páginas y se muestra en un área editable. Puedes copiarlo al portapapeles o descargarlo como archivo .txt."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PDFRápido",
-              "item": "https://pdfrapido.eu"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "PDF a Texto Online Gratis",
-              "item": "https://pdfrapido.eu/pdf-a-texto/"
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Se sube mi PDF a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La extracción de texto se realiza 100% en tu navegador usando la tecnología PDF.js de Mozilla. Tu archivo nunca sale de tu dispositivo."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Cómo extraer el texto de un PDF?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sube o arrastra tu PDF a la herramienta. Se extrae automáticamente el texto de todas las páginas y se muestra en un área editable. Puedes copiarlo al portapapeles o descargarlo como archivo .txt."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Se sube mi PDF a algún servidor?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. La extracción de texto se realiza 100% en tu navegador usando la tecnología PDF.js de Mozilla. Tu archivo nunca sale de tu dispositivo."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Funciona con PDFs escaneados?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Esta herramienta extrae el texto digital embebido en el PDF. Si el PDF es una imagen escaneada sin capa de texto, no habrá texto que extraer. Para esos casos, usa nuestra herramienta OCR."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Se mantiene el formato del texto?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Se conservan los saltos de párrafo y la separación entre bloques de texto. El formato visual (negritas, columnas, tablas) no se transfiere al texto plano, ya que .txt no soporta estilos."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Funciona con PDFs escaneados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta herramienta extrae el texto digital embebido en el PDF. Si el PDF es una imagen escaneada sin capa de texto, no habrá texto que extraer. Para esos casos, usa nuestra herramienta OCR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se mantiene el formato del texto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se conservan los saltos de párrafo y la separación entre bloques de texto. El formato visual (negritas, columnas, tablas) no se transfiere al texto plano, ya que .txt no soporta estilos."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar PDF a Texto",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido PDF a Texto Online Gratis"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Carga el PDF",
+          "text": "Sube el PDF del que quieres extraer el texto. Funciona con PDFs de texto nativo. Para PDFs escaneados, usa primero la herramienta de OCR."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Extracción del texto",
+          "text": "La herramienta extrae todo el texto del PDF manteniendo la estructura de párrafos y secciones en la medida de lo posible."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Copia o descarga el texto",
+          "text": "Obtén el texto extraído en formato .txt, listo para pegar en cualquier editor, procesador de texto o herramienta de IA."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="PDF a Texto Online Gratis — Extrae el Texto de tu PDF | PDFRápido">

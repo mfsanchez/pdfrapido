@@ -24,78 +24,107 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
         <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "Comparar PDFs — Detecta Diferencias | PDFRápido",
+      "url": "https://pdfrapido.eu/comparar-pdfs/",
+      "description": "Compara dos PDFs y detecta diferencias al instante. Visualiza texto añadido, eliminado y modificado entre dos versiones de un documento. Gratis, sin registro.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Comparar PDFs — Detecta Diferencias | PDFRápido",
-          "url": "https://pdfrapido.eu/comparar-pdfs/",
-          "description": "Compara dos PDFs y detecta diferencias al instante. Visualiza texto añadido, eliminado y modificado entre dos versiones de un documento. Gratis, sin registro.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          "inLanguage": "es",
-          "publisher": {
-            "@type": "Person",
-            "name": "MF Sanchez",
-            "url": "https://mfsanchez.com"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Comparar PDFs",
+          "item": "https://pdfrapido.eu/comparar-pdfs/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué tipo de diferencias detecta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Detecta texto añadido, eliminado y modificado entre las dos versiones del PDF. Las diferencias se resaltan para una fácil visualización."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PDFRápido",
-              "item": "https://pdfrapido.eu"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Comparar PDFs",
-              "item": "https://pdfrapido.eu/comparar-pdfs/"
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Funciona con PDFs escaneados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los PDFs escaneados son imágenes; para compararlos necesitan tener texto seleccionable o haber pasado por OCR primero."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué tipo de diferencias detecta?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Detecta texto añadido, eliminado y modificado entre las dos versiones del PDF. Las diferencias se resaltan para una fácil visualización."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Funciona con PDFs escaneados?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Los PDFs escaneados son imágenes; para compararlos necesitan tener texto seleccionable o haber pasado por OCR primero."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Es seguro comparar documentos confidenciales?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí. La comparación se realiza en servidores europeos mediante una conexión segura y los archivos se eliminan inmediatamente tras calcular las diferencias (máximo 10 minutos)."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Es seguro comparar documentos confidenciales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La comparación se realiza en servidores europeos mediante una conexión segura y los archivos se eliminan inmediatamente tras calcular las diferencias (máximo 10 minutos)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar Comparar PDFs",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Comparar PDFs"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Carga los dos PDF a comparar",
+          "text": "Sube el documento original y la versión revisada. La herramienta analiza ambos en paralelo para identificar las diferencias."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Análisis de diferencias",
+          "text": "El motor de comparación detecta texto añadido, eliminado y modificado, así como cambios en imágenes y formato entre ambas versiones del documento."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Revisa el informe de diferencias",
+          "text": "Obtén un informe visual donde las adiciones aparecen marcadas en verde y las eliminaciones en rojo, similar al modo de control de cambios de Word."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Comparar PDFs — Detecta Diferencias | PDFRápido">

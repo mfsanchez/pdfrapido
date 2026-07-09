@@ -395,78 +395,107 @@
                 .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
 </style>
         <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "Chat con PDF — Pregunta a tu Documento con IA | PDFRápido",
+      "url": "https://pdfrapido.eu/chat-pdf/",
+      "description": "Chatea con cualquier PDF usando IA. Haz preguntas en lenguaje natural y obtén respuestas basadas en el contenido del documento. Gratis, sin registro.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Chat con PDF — Pregunta a tu Documento con IA | PDFRápido",
-          "url": "https://pdfrapido.eu/chat-pdf/",
-          "description": "Chatea con cualquier PDF usando IA. Haz preguntas en lenguaje natural y obtén respuestas basadas en el contenido del documento. Gratis, sin registro.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          "inLanguage": "es",
-          "publisher": {
-            "@type": "Person",
-            "name": "MF Sanchez",
-            "url": "https://mfsanchez.com"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Chat con PDF",
+          "item": "https://pdfrapido.eu/chat-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el chat con PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La herramienta analiza el contenido de tu PDF y utiliza inteligencia artificial para responder tus preguntas basándose únicamente en el texto del documento."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PDFRápido",
-              "item": "https://pdfrapido.eu"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Chat con PDF",
-              "item": "https://pdfrapido.eu/chat-pdf/"
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Mis documentos se guardan en algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, el procesamiento se realiza de forma segura. Tus archivos no se almacenan permanentemente."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Cómo funciona el chat con PDF?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La herramienta analiza el contenido de tu PDF y utiliza inteligencia artificial para responder tus preguntas basándose únicamente en el texto del documento."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Mis documentos se guardan en algún servidor?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No, el procesamiento se realiza de forma segura. Tus archivos no se almacenan permanentemente."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Funciona con PDFs en cualquier idioma?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, el chat con PDF puede entender y responder en múltiples idiomas, incluyendo español, inglés, francés y alemán."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Funciona con PDFs en cualquier idioma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, el chat con PDF puede entender y responder en múltiples idiomas, incluyendo español, inglés, francés y alemán."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar Chat con PDF",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Chat con PDF"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Carga el PDF",
+          "text": "Sube el documento sobre el que quieres hacer preguntas. La IA lee y procesa el contenido completo del documento."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Haz preguntas en lenguaje natural",
+          "text": "Escribe tu pregunta en español tal como la harías a una persona: cuál es el plazo de entrega del contrato, qué dice sobre las garantías, etcétera."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Recibe respuestas basadas en el documento",
+          "text": "La IA responde con información extraída directamente del PDF, citando el contexto relevante. Puedes hacer preguntas de seguimiento para profundizar."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Chat con PDF — Pregunta a tu Documento con IA | PDFRápido">

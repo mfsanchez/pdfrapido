@@ -23,78 +23,107 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
     <link rel="canonical" href="https://pdfrapido.eu/redactar-pdf/">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "Redactar PDF — Censura Datos Sensibles",
+      "url": "https://pdfrapido.eu/redactar-pdf/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "description": "Censura datos sensibles de un PDF con bloques negros permanentes gratis. Oculta nombres, DNI, importes y cualquier información confidencial.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Redactar PDF — Censura Datos Sensibles",
-          "url": "https://pdfrapido.eu/redactar-pdf/",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "description": "Censura datos sensibles de un PDF con bloques negros permanentes gratis. Oculta nombres, DNI, importes y cualquier información confidencial.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          "inLanguage": "es",
-          "publisher": {
-            "@type": "Person",
-            "name": "MF Sanchez",
-            "url": "https://mfsanchez.com"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Redactar PDF",
+          "item": "https://pdfrapido.eu/redactar-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿La redacción es irreversible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, una vez aplicados los bloques negros y guardado el PDF, la información censurada no se puede recuperar. Guarda siempre una copia original."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PDFRápido",
-              "item": "https://pdfrapido.eu"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Redactar PDF",
-              "item": "https://pdfrapido.eu/redactar-pdf/"
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Puedo redactar múltiples áreas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, puedes añadir tantos bloques de redacción como necesites en cualquier página del documento."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿La redacción es irreversible?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, una vez aplicados los bloques negros y guardado el PDF, la información censurada no se puede recuperar. Guarda siempre una copia original."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Puedo redactar múltiples áreas?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, puedes añadir tantos bloques de redacción como necesites en cualquier página del documento."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Es válido legalmente un PDF redactado?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, la redacción permanente con bloques negros es un método aceptado para proteger datos sensibles en documentos legales y administrativos."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Es válido legalmente un PDF redactado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, la redacción permanente con bloques negros es un método aceptado para proteger datos sensibles en documentos legales y administrativos."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar Redactar PDF",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Redactar PDF"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Carga el PDF con información sensible",
+          "text": "Sube el documento que contiene datos personales, información confidencial u otros contenidos que necesitas ocultar permanentemente."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Selecciona las zonas a redactar",
+          "text": "Dibuja rectángulos negros sobre el texto o las imágenes que quieres eliminar. Puedes buscar y censurar texto específico en todo el documento de una vez."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Descarga el PDF redactado",
+          "text": "La información bajo las marcas de redacción se elimina permanentemente del archivo. El PDF resultante no contiene esa información ni en la capa visible ni en los datos internos."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Redactar PDF — Censura Datos Sensibles con Bloques Negros | PDFRápido">

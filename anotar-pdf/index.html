@@ -33,69 +33,110 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="/js/pdf-lib.min.js"></script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "SoftwareApplication",
+      "name": "Anotar PDF Online",
+      "url": "https://pdfrapido.eu/anotar-pdf/",
+      "description": "Herramienta online gratuita para anotar PDFs: subrayar, comentar, añadir flechas, rectángulos y dibujos directamente en el navegador.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "SoftwareApplication",
-          "name": "Anotar PDF Online",
-          "url": "https://pdfrapido.eu/anotar-pdf/",
-          "description": "Herramienta online gratuita para anotar PDFs: subrayar, comentar, añadir flechas, rectángulos y dibujos directamente en el navegador.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Anotar PDF",
+          "item": "https://pdfrapido.eu/anotar-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Puedo anotar un PDF sin instalar nada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La herramienta funciona completamente en el navegador: no requiere instalar software, registrarse ni enviar el archivo a ningún servidor. Compatible con Chrome, Firefox, Safari y Edge en ordenador y móvil."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"PDFRápido","item":"https://pdfrapido.eu/"},
-            {"@type":"ListItem","position":2,"name":"Anotar PDF","item":"https://pdfrapido.eu/anotar-pdf/"}
-          ]
+          "@type": "Question",
+          "name": "¿Las anotaciones quedan guardadas permanentemente en el PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al pulsar «Guardar PDF anotado» se descarga un nuevo PDF con las anotaciones incrustadas. Las marcas son permanentes y visibles en cualquier lector de PDF, incluido Adobe Acrobat, Preview de Mac y los lectores de móvil."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Puedo anotar un PDF sin instalar nada?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí. La herramienta funciona completamente en el navegador: no requiere instalar software, registrarse ni enviar el archivo a ningún servidor. Compatible con Chrome, Firefox, Safari y Edge en ordenador y móvil."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Las anotaciones quedan guardadas permanentemente en el PDF?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Al pulsar «Guardar PDF anotado» se descarga un nuevo PDF con las anotaciones incrustadas. Las marcas son permanentes y visibles en cualquier lector de PDF, incluido Adobe Acrobat, Preview de Mac y los lectores de móvil."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿El PDF anotado es compatible con Adobe Reader?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí. Las anotaciones se guardan como imágenes incrustadas en el PDF, visibles en Adobe Acrobat, Foxit Reader, Preview de macOS o cualquier visor de PDF online."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Hay límite de páginas para el PDF que puedo anotar?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No hay un límite fijo. La mayoría de PDFs de hasta 100 páginas funcionan sin problemas. Para documentos más extensos se recomienda trabajar por secciones."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿El PDF anotado es compatible con Adobe Reader?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Las anotaciones se guardan como imágenes incrustadas en el PDF, visibles en Adobe Acrobat, Foxit Reader, Preview de macOS o cualquier visor de PDF online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay límite de páginas para el PDF que puedo anotar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay un límite fijo. La mayoría de PDFs de hasta 100 páginas funcionan sin problemas. Para documentos más extensos se recomienda trabajar por secciones."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo anotar un PDF online gratis paso a paso",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Anotar PDF Online"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "Sube el PDF que quieres anotar."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "Selecciona la herramienta: subrayar, comentar, flecha o forma."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Haz clic en el documento para añadir tus anotaciones."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Descarga el PDF anotado listo para compartir."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <style>
         nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.logo-text{font-size:20px;font-weight:700;letter-spacing:-.5px}.logo-text span{color:var(--primary)}.nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--gray-500);font-size:14px;font-weight:500;transition:color .2s}.nav-back:hover{color:var(--primary)}
         .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}

@@ -170,16 +170,106 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
             .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
 </style>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[
-      {"@type":"WebApplication","name":"Editar Metadatos PDF Online Gratis","url":"https://pdfrapido.eu/editar-metadatos-pdf/","description":"Edita los metadatos de tu PDF: título, autor, asunto y palabras clave. Gratis, sin registro, 100% en tu navegador.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es","publisher":{"@type":"Person","name":"MF Sanchez","url":"https://mfsanchez.com"}},
-      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PDFRápido","item":"https://pdfrapido.eu"},{"@type":"ListItem","position":2,"name":"Editar Metadatos PDF","item":"https://pdfrapido.eu/editar-metadatos-pdf/"}]},
-      {"@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"¿Qué son los metadatos de un PDF?","acceptedAnswer":{"@type":"Answer","text":"Los metadatos son información interna del archivo PDF que no forma parte del contenido visible: título, autor, asunto, palabras clave, programa que lo creó y fechas de creación y modificación. Esta información puede consultarse en cualquier visor de PDF y puede revelar datos personales o corporativos."}},
-        {"@type":"Question","name":"¿Para qué sirve limpiar los metadatos?","acceptedAnswer":{"@type":"Answer","text":"Al compartir un PDF externamente, los metadatos pueden revelar el nombre del autor original, el software utilizado o la empresa creadora. Limpiar los metadatos antes de enviar el documento protege esa información privada, especialmente importante en contextos legales o corporativos."}},
-        {"@type":"Question","name":"¿El PDF se sube al servidor?","acceptedAnswer":{"@type":"Answer","text":"No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería pdf-lib. Tu archivo nunca abandona tu dispositivo."}}
-      ]}
-    ]}
-    </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Editar Metadatos PDF Online Gratis",
+      "url": "https://pdfrapido.eu/editar-metadatos-pdf/",
+      "description": "Edita los metadatos de tu PDF: título, autor, asunto y palabras clave. Gratis, sin registro, 100% en tu navegador.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Editar Metadatos PDF",
+          "item": "https://pdfrapido.eu/editar-metadatos-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué son los metadatos de un PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los metadatos son información interna del archivo PDF que no forma parte del contenido visible: título, autor, asunto, palabras clave, programa que lo creó y fechas de creación y modificación. Esta información puede consultarse en cualquier visor de PDF y puede revelar datos personales o corporativos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Para qué sirve limpiar los metadatos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al compartir un PDF externamente, los metadatos pueden revelar el nombre del autor original, el software utilizado o la empresa creadora. Limpiar los metadatos antes de enviar el documento protege esa información privada, especialmente importante en contextos legales o corporativos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El PDF se sube al servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería pdf-lib. Tu archivo nunca abandona tu dispositivo."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar Editar Metadatos PDF",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Editar Metadatos PDF Online Gratis"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Sube tu PDF",
+          "text": "Arrastra el archivo o haz clic para seleccionarlo. Los metadatos actuales se cargan y muestran automáticamente en el formulario."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Edita los campos",
+          "text": "Modifica título, autor, asunto, palabras clave y creador. Los campos en gris (productor, fechas) son de solo lectura."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Descarga el PDF actualizado",
+          "text": "Pulsa \"Guardar metadatos\" para descargar el PDF con los nuevos valores, o \"Limpiar metadatos\" para eliminarlos todos."
+        }
+      ]
+    }
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Editar Metadatos PDF Gratis — Título, Autor | PDFRápido">

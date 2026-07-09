@@ -317,50 +317,106 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
             .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
 </style>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "Redimensionar PDF Online Gratis",
+      "url": "https://pdfrapido.eu/redimensionar-pdf/",
+      "description": "Cambia el tamaño de las páginas de tu PDF a A4, A3, A5, Carta, Legal o medidas personalizadas. Gratis, sin registro y sin instalar nada.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "WebApplication",
-          "name": "Redimensionar PDF Online Gratis",
-          "url": "https://pdfrapido.eu/redimensionar-pdf/",
-          "description": "Cambia el tamaño de las páginas de tu PDF a A4, A3, A5, Carta, Legal o medidas personalizadas. Gratis, sin registro y sin instalar nada.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-          "inLanguage": "es",
-          "publisher": { "@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com" }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "PDFRápido", "item": "https://pdfrapido.eu" },
-            { "@type": "ListItem", "position": 2, "name": "Redimensionar PDF", "item": "https://pdfrapido.eu/redimensionar-pdf/" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Redimensionar PDF",
+          "item": "https://pdfrapido.eu/redimensionar-pdf/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiar un PDF de A4 a Carta sin perder contenido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Activa la opción 'Ajustar contenido' para que el texto e imágenes se escalen automáticamente al nuevo tamaño. Si el tamaño destino es mayor, el contenido queda centrado en la página ampliada."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Puedo cambiar un PDF de A4 a Carta sin perder contenido?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí. Activa la opción 'Ajustar contenido' para que el texto e imágenes se escalen automáticamente al nuevo tamaño. Si el tamaño destino es mayor, el contenido queda centrado en la página ampliada." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Se sube el PDF al servidor al redimensionarlo?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería pdf-lib. Tu documento no abandona tu dispositivo en ningún momento." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué formatos de página admite la herramienta?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Puedes elegir entre A4 (210×297 mm), A3 (297×420 mm), A5 (148×210 mm), Carta/Letter (215,9×279,4 mm), Legal (215,9×355,6 mm) y tamaño personalizado en milímetros, con orientación vertical u horizontal." }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Se sube el PDF al servidor al redimensionarlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería pdf-lib. Tu documento no abandona tu dispositivo en ningún momento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué formatos de página admite la herramienta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes elegir entre A4 (210×297 mm), A3 (297×420 mm), A5 (148×210 mm), Carta/Letter (215,9×279,4 mm), Legal (215,9×355,6 mm) y tamaño personalizado en milímetros, con orientación vertical u horizontal."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar Redimensionar PDF",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Redimensionar PDF Online Gratis"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Sube tu PDF",
+          "text": "Arrastra el archivo o haz clic para seleccionarlo. Compatible con cualquier PDF, incluyendo documentos de varias páginas."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Elige el formato y opciones",
+          "text": "Selecciona el tamaño destino (A4, A3, Carta, etc.), la orientación y si deseas escalar el contenido al nuevo tamaño."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Descarga el resultado",
+          "text": "En segundos obtienes el PDF con las nuevas dimensiones de página. Descárgalo directamente a tu dispositivo."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Redimensionar PDF Gratis — Cambia Tamaño | PDFRápido">

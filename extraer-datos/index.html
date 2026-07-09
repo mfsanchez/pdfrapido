@@ -23,78 +23,107 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"></noscript>
     <link rel="canonical" href="https://pdfrapido.eu/extraer-datos/">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "name": "Extraer Datos de PDF con IA Gratis",
+      "url": "https://pdfrapido.eu/extraer-datos/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "description": "Extrae datos de facturas, contratos, formularios e informes PDF con IA gratis. Obtén los campos estructurados en tabla, JSON y CSV sin registro.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "name": "Extraer Datos de PDF con IA Gratis",
-          "url": "https://pdfrapido.eu/extraer-datos/",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Web",
-          "description": "Extrae datos de facturas, contratos, formularios e informes PDF con IA gratis. Obtén los campos estructurados en tabla, JSON y CSV sin registro.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          "inLanguage": "es",
-          "publisher": {
-            "@type": "Person",
-            "name": "MF Sanchez",
-            "url": "https://mfsanchez.com"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Extraer Datos de PDF",
+          "item": "https://pdfrapido.eu/extraer-datos/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué tipo de datos puedo extraer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes extraer campos específicos como nombres, fechas, importes, direcciones, líneas de factura y cualquier dato estructurado del documento."
           }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "PDFRápido",
-              "item": "https://pdfrapido.eu"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Extraer Datos de PDF",
-              "item": "https://pdfrapido.eu/extraer-datos/"
-            }
-          ]
+          "@type": "Question",
+          "name": "¿En qué formatos exporta los datos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los datos extraídos se pueden descargar en formato tabla, JSON o CSV para facilitar su importación en otras aplicaciones."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué tipo de datos puedo extraer?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Puedes extraer campos específicos como nombres, fechas, importes, direcciones, líneas de factura y cualquier dato estructurado del documento."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿En qué formatos exporta los datos?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Los datos extraídos se pueden descargar en formato tabla, JSON o CSV para facilitar su importación en otras aplicaciones."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Funciona con cualquier tipo de PDF?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Funciona mejor con documentos con estructura repetitiva como facturas, albaranes y formularios. PDFs escaneados necesitan OCR previo."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "¿Funciona con cualquier tipo de PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Funciona mejor con documentos con estructura repetitiva como facturas, albaranes y formularios. PDFs escaneados necesitan OCR previo."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo usar Extraer datos de PDF con IA",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Extraer Datos de PDF con IA Gratis"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Carga el PDF con datos",
+          "text": "Sube facturas, contratos, formularios o cualquier documento PDF que contenga información estructurada que quieres extraer automáticamente."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "La IA analiza el documento",
+          "text": "El modelo de inteligencia artificial identifica los campos de datos relevantes: fechas, importes, nombres, números de referencia, direcciones y otros datos clave."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Obtén los datos extraídos",
+          "text": "Descarga los datos en formato JSON, CSV o tabla para importarlos directamente a tu sistema de gestión, hoja de cálculo o base de datos."
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Extraer Datos de PDF con IA Gratis — PDFRápido">
