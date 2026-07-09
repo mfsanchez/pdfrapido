@@ -12,7 +12,7 @@
   <meta name="description" content="Herramientas gratuitas para organizar PDFs online: unir, dividir, extraer páginas, rotar y ordenar. Sin registro, sin instalar nada.">
   <meta name="author" content="MF Sanchez - PDFRápido">
   <title>Organizar PDF - Herramientas Gratuitas | PDFRápido</title>
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pdfrapido.eu/categoria/organizar-pdf/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -43,6 +43,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántos archivos puedo unir a la vez?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No hay un tope fijo de archivos: puedes combinar todos los PDF que necesites y ordenarlos arrastrándolos antes de unir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se pierde calidad al unir o dividir un PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Las páginas se copian tal cual al documento resultante, sin recomprimir ni alterar su contenido, tamaño de hoja u orientación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo deshacer los cambios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tu archivo original nunca se modifica: siempre descargas una copia nueva con el resultado, así que puedes repetir la operación las veces que quieras."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Funciona con PDFs protegidos con contraseña?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los PDF cifrados deben desbloquearse primero. Usa Desbloquear PDF con tu contraseña y después organiza las páginas con normalidad."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -66,6 +106,15 @@
     .breadcrumb{padding:16px 0 8px;font-size:13px;color:var(--gray-400)}
     .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
     .breadcrumb a{color:var(--primary);text-decoration:none}
+    .cluster h3{font-size:17px;font-weight:600;color:var(--gray-700);margin:20px 0 8px}
+    .cluster ul{padding-left:22px;margin-bottom:16px}
+    .cluster ul li{font-size:15px;color:var(--gray-600);line-height:1.8;margin-bottom:6px}
+    .faq details{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;margin-bottom:12px;overflow:hidden}
+    .faq summary{padding:14px 18px;font-size:15px;font-weight:600;color:var(--secondary);cursor:pointer;list-style:none;position:relative}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'+';position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--primary);font-weight:400}
+    .faq details[open] summary::after{content:'−'}
+    .faq details p{padding:0 18px 14px;margin:0}
   </style>
 <style>/* fix-nav-mobile-B */
 @media (max-width: 768px) {
@@ -108,7 +157,7 @@
 
   <h2>¿Por qué organizar un PDF?</h2>
   <p>Trabajar con documentos PDF a menudo implica reorganizar su contenido: combinar varios informes en uno solo, extraer capítulos específicos de un manual, eliminar páginas en blanco o rotar hojas escaneadas en la orientación incorrecta. Estas tareas son especialmente comunes en entornos de oficina, educación y administración pública.</p>
-  <p>Las herramientas de organización PDF te permiten realizar todas estas operaciones directamente desde el navegador, sin necesidad de software costoso ni conocimientos técnicos avanzados. El proceso es visual e intuitivo: arrastras, seleccionas, reordenás y descargás el resultado en segundos.</p>
+  <p>Las herramientas de organización PDF te permiten realizar todas estas operaciones directamente desde el navegador, sin necesidad de software costoso ni conocimientos técnicos avanzados. El proceso es visual e intuitivo: arrastras, seleccionas, reordenas y descargas el resultado en segundos.</p>
 
   <h2>Herramientas para organizar PDFs</h2>
   <div class="tools-grid">
@@ -142,6 +191,37 @@
       <p>Selecciona y elimina páginas específicas de un documento PDF.</p>
       <a href="/eliminar-paginas/">Usar herramienta →</a>
     </div>
+  </div>
+
+
+  <h2>Casos de uso habituales</h2>
+  <p>Organizar las páginas de un PDF es una de las tareas más frecuentes en oficina, educación y administración:</p>
+  <ul>
+    <li><strong>Consolidar informes:</strong> unes los PDF mensuales en un único documento anual con las secciones en orden.</li>
+    <li><strong>Extraer un capítulo:</strong> sacas solo las páginas que necesitas de un manual o expediente extenso.</li>
+    <li><strong>Limpiar escaneos:</strong> eliminas páginas en blanco o duplicadas que dejó el escáner y rotas las hojas apaisadas.</li>
+    <li><strong>Preparar documentación:</strong> reordenas las páginas de una solicitud para que sigan el orden que pide la convocatoria.</li>
+    <li><strong>Dividir para enviar:</strong> partes un PDF grande en bloques más pequeños que sí caben en un correo.</li>
+  </ul>
+
+  <h2>Preguntas frecuentes sobre organización de PDF</h2>
+  <div class="faq">
+    <details>
+      <summary>¿Cuántos archivos puedo unir a la vez?</summary>
+      <p>No hay un tope fijo de archivos: puedes combinar todos los PDF que necesites y ordenarlos arrastrándolos antes de unir.</p>
+    </details>
+    <details>
+      <summary>¿Se pierde calidad al unir o dividir un PDF?</summary>
+      <p>No. Las páginas se copian tal cual al documento resultante, sin recomprimir ni alterar su contenido, tamaño de hoja u orientación.</p>
+    </details>
+    <details>
+      <summary>¿Puedo deshacer los cambios?</summary>
+      <p>Tu archivo original nunca se modifica: siempre descargas una copia nueva con el resultado, así que puedes repetir la operación las veces que quieras.</p>
+    </details>
+    <details>
+      <summary>¿Funciona con PDFs protegidos con contraseña?</summary>
+      <p>Los PDF cifrados deben desbloquearse primero. Usa Desbloquear PDF con tu contraseña y después organiza las páginas con normalidad.</p>
+    </details>
   </div>
 
   <h2>Guía relacionada</h2>

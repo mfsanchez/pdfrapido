@@ -12,7 +12,7 @@
   <meta name="description" content="Protege tus PDFs gratis: cifrado con contraseña, firma digital, desprotección y redacción de datos sensibles. Herramientas online sin registro.">
   <meta name="author" content="MF Sanchez - PDFRápido">
   <title>Seguridad PDF - Herramientas Gratuitas | PDFRápido</title>
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pdfrapido.eu/categoria/seguridad-pdf/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -43,6 +43,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué cifrado usa Proteger PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cifrado AES-256, el estándar actual para proteger documentos. Sin la contraseña, el contenido del PDF no es legible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La firma de Firmar PDF tiene validez legal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es una firma electrónica simple (tu firma manuscrita digitalizada), aceptada en muchos contextos comerciales y privados. Para trámites que exijan firma electrónica cualificada según eIDAS necesitarás un certificado digital reconocido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Redactar PDF elimina la información de verdad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. A diferencia de dibujar un rectángulo negro encima, la redacción elimina el contenido marcado del documento, de forma que no puede recuperarse copiando el texto ni retirando la capa superior."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo desbloquear cualquier PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La herramienta está pensada para tus propios documentos: necesitas conocer la contraseña de apertura para desbloquearlo. Eliminar la protección de documentos ajenos sin autorización puede ser ilegal."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -66,6 +106,15 @@
     .breadcrumb{padding:16px 0 8px;font-size:13px;color:var(--gray-400)}
     .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
     .breadcrumb a{color:var(--primary);text-decoration:none}
+    .cluster h3{font-size:17px;font-weight:600;color:var(--gray-700);margin:20px 0 8px}
+    .cluster ul{padding-left:22px;margin-bottom:16px}
+    .cluster ul li{font-size:15px;color:var(--gray-600);line-height:1.8;margin-bottom:6px}
+    .faq details{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;margin-bottom:12px;overflow:hidden}
+    .faq summary{padding:14px 18px;font-size:15px;font-weight:600;color:var(--secondary);cursor:pointer;list-style:none;position:relative}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'+';position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--primary);font-weight:400}
+    .faq details[open] summary::after{content:'−'}
+    .faq details p{padding:0 18px 14px;margin:0}
   </style>
 <style>/* fix-nav-mobile-B */
 @media (max-width: 768px) {
@@ -132,6 +181,36 @@
       <p>Oculta permanentemente información confidencial cumpliendo el RGPD.</p>
       <a href="/redactar-pdf/">Usar herramienta →</a>
     </div>
+  </div>
+
+
+  <h2>Casos de uso habituales</h2>
+  <p>Las herramientas de seguridad entran en juego siempre que un documento contiene información que no debería circular libremente:</p>
+  <ul>
+    <li><strong>Enviar un contrato con datos personales:</strong> lo proteges con contraseña y compartes la clave por otro canal.</li>
+    <li><strong>Firmar sin imprimir:</strong> añades tu firma a un presupuesto o autorización directamente en el navegador, sin escanear.</li>
+    <li><strong>Anonimizar para el RGPD:</strong> redactas nombres, DNI o importes antes de compartir un documento con terceros.</li>
+    <li><strong>Quitar restricciones a tus documentos:</strong> desbloqueas un PDF tuyo cuya contraseña conoces para poder imprimirlo o editarlo.</li>
+  </ul>
+
+  <h2>Preguntas frecuentes sobre seguridad PDF</h2>
+  <div class="faq">
+    <details>
+      <summary>¿Qué cifrado usa Proteger PDF?</summary>
+      <p>Cifrado AES-256, el estándar actual para proteger documentos. Sin la contraseña, el contenido del PDF no es legible.</p>
+    </details>
+    <details>
+      <summary>¿La firma de Firmar PDF tiene validez legal?</summary>
+      <p>Es una firma electrónica simple (tu firma manuscrita digitalizada), aceptada en muchos contextos comerciales y privados. Para trámites que exijan firma electrónica cualificada según eIDAS necesitarás un certificado digital reconocido.</p>
+    </details>
+    <details>
+      <summary>¿Redactar PDF elimina la información de verdad?</summary>
+      <p>Sí. A diferencia de dibujar un rectángulo negro encima, la redacción elimina el contenido marcado del documento, de forma que no puede recuperarse copiando el texto ni retirando la capa superior.</p>
+    </details>
+    <details>
+      <summary>¿Puedo desbloquear cualquier PDF?</summary>
+      <p>La herramienta está pensada para tus propios documentos: necesitas conocer la contraseña de apertura para desbloquearlo. Eliminar la protección de documentos ajenos sin autorización puede ser ilegal.</p>
+    </details>
   </div>
 
   <h2>Guía relacionada</h2>

@@ -12,7 +12,7 @@
   <meta name="description" content="Edita PDFs online gratis: añade texto, imágenes, anotaciones, marca de agua y modifica metadatos. Sin registro, sin instalar nada.">
   <meta name="author" content="MF Sanchez - PDFRápido">
   <title>Editar PDF - Herramientas Gratuitas | PDFRápido</title>
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pdfrapido.eu/categoria/editar-pdf/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -43,6 +43,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Puedo editar el texto original de un PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, con el Editor PDF puedes modificar texto y añadir contenido nuevo. Si el PDF es un escaneo (el texto es una imagen), pásalo antes por OCR a PDF para reconocer el texto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué diferencia hay entre anotar y editar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anotar añade una capa de comentarios, resaltados y formas sobre el documento sin alterar su contenido; editar modifica el contenido en sí (texto, imágenes, metadatos). Para revisiones usa Anotar PDF; para correcciones, el Editor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito Adobe Acrobat para editar un PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Todas las herramientas de esta categoría funcionan en el navegador, gratis y sin instalar nada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Los cambios modifican mi archivo original?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. El archivo que subes no se toca: siempre descargas una copia nueva con los cambios aplicados."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
@@ -66,6 +106,15 @@
     .breadcrumb{padding:16px 0 8px;font-size:13px;color:var(--gray-400)}
     .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
     .breadcrumb a{color:var(--primary);text-decoration:none}
+    .cluster h3{font-size:17px;font-weight:600;color:var(--gray-700);margin:20px 0 8px}
+    .cluster ul{padding-left:22px;margin-bottom:16px}
+    .cluster ul li{font-size:15px;color:var(--gray-600);line-height:1.8;margin-bottom:6px}
+    .faq details{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:12px;margin-bottom:12px;overflow:hidden}
+    .faq summary{padding:14px 18px;font-size:15px;font-weight:600;color:var(--secondary);cursor:pointer;list-style:none;position:relative}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'+';position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--primary);font-weight:400}
+    .faq details[open] summary::after{content:'−'}
+    .faq details p{padding:0 18px 14px;margin:0}
   </style>
 <style>/* fix-nav-mobile-B */
 @media (max-width: 768px) {
@@ -142,6 +191,37 @@
       <p>Cambia el tamaño de las páginas a A4, A3, Carta u otros formatos.</p>
       <a href="/redimensionar-pdf/">Usar herramienta →</a>
     </div>
+  </div>
+
+
+  <h2>Casos de uso habituales</h2>
+  <p>La edición de PDF resuelve esas pequeñas correcciones que antes obligaban a rehacer el documento original:</p>
+  <ul>
+    <li><strong>Corregir un dato puntual:</strong> una fecha equivocada, un nombre mal escrito o un importe que cambió después de generar el PDF.</li>
+    <li><strong>Añadir tu marca:</strong> insertas el logo o una marca de agua de "BORRADOR" o "CONFIDENCIAL" en presupuestos y propuestas.</li>
+    <li><strong>Preparar una memoria o dossier:</strong> numeras las páginas y ajustas el tamaño de hoja a A4 antes de imprimir.</li>
+    <li><strong>Revisar en equipo:</strong> anotas comentarios, subrayados y flechas sobre un borrador sin tocar el contenido original.</li>
+    <li><strong>Limpiar metadatos:</strong> revisas el título, autor y palabras clave del documento antes de publicarlo.</li>
+  </ul>
+
+  <h2>Preguntas frecuentes sobre edición de PDF</h2>
+  <div class="faq">
+    <details>
+      <summary>¿Puedo editar el texto original de un PDF?</summary>
+      <p>Sí, con el Editor PDF puedes modificar texto y añadir contenido nuevo. Si el PDF es un escaneo (el texto es una imagen), pásalo antes por OCR a PDF para reconocer el texto.</p>
+    </details>
+    <details>
+      <summary>¿Qué diferencia hay entre anotar y editar?</summary>
+      <p>Anotar añade una capa de comentarios, resaltados y formas sobre el documento sin alterar su contenido; editar modifica el contenido en sí (texto, imágenes, metadatos). Para revisiones usa Anotar PDF; para correcciones, el Editor.</p>
+    </details>
+    <details>
+      <summary>¿Necesito Adobe Acrobat para editar un PDF?</summary>
+      <p>No. Todas las herramientas de esta categoría funcionan en el navegador, gratis y sin instalar nada.</p>
+    </details>
+    <details>
+      <summary>¿Los cambios modifican mi archivo original?</summary>
+      <p>No. El archivo que subes no se toca: siempre descargas una copia nueva con los cambios aplicados.</p>
+    </details>
   </div>
 
   <h2>Guía relacionada</h2>
