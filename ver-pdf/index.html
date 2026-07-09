@@ -13,7 +13,7 @@
     <meta name="description" content="Abre y lee cualquier PDF online gratis sin instalar nada. Visor PDF rápido, sin registro, compatible con móvil. Funciona en cualquier navegador.">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>Ver PDF Online Gratis sin Instalar Nada | PDFRápido</title>
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
@@ -103,10 +103,18 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "¿Se sube mi PDF a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El documento se abre localmente en tu navegador con PDF.js y nunca sale de tu dispositivo. Funciona incluso sin conexión una vez cargada la página."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "¿Puedo ver PDFs grandes con este visor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, el visor funciona con PDFs de cualquier tamaño. El rendimiento depende del navegador y el dispositivo."
+            "text": "Sí, el visor funciona con PDFs de cualquier tamaño y número de páginas. El rendimiento depende del navegador y del dispositivo: en documentos muy pesados la carga inicial puede tardar unos segundos."
           }
         },
         {
@@ -114,7 +122,7 @@
           "name": "¿Funciona en móvil?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, el visor PDF es compatible con móvil y tablet, sin necesidad de instalar ninguna app."
+            "text": "Sí, el visor PDF es compatible con móvil y tablet, sin necesidad de instalar ninguna app. Los controles de página y zoom funcionan igual que en ordenador."
           }
         },
         {
@@ -122,8 +130,55 @@
           "name": "¿Es necesario registrarse para ver un PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Puedes abrir y leer cualquier PDF sin crear una cuenta."
+            "text": "No. Puedes abrir y leer cualquier PDF sin crear una cuenta, sin dejar tu email y sin límite de usos."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo abrir un PDF protegido con contraseña?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El visor no abre PDFs cifrados. Si conoces la contraseña, elimina primero la protección con la herramienta Desbloquear PDF y después ábrelo con normalidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo buscar texto dentro del PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todavía no: el visor muestra el documento página a página, sin buscador de texto. Si necesitas localizar un término, convierte el documento con PDF a Texto y busca en el resultado."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo ver un PDF online sin instalar nada",
+      "totalTime": "PT1M",
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Ver PDF"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "Sube el PDF que quieres ver, arrastrándolo o seleccionándolo."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "El visor carga el documento al instante en tu navegador."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Navega por las páginas con los botones, el teclado o escribiendo el número de página."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Descarga el archivo si lo necesitas, o abre otro PDF con un clic."
         }
       ]
     }
@@ -273,40 +328,73 @@
   <section class="seo-content" aria-label="Ver PDF online">
     <h2>Ver PDF online: abre documentos sin instalar nada</h2>
     <p>¿Necesitas abrir un PDF y no tienes ningún programa instalado? El visor PDF de PDFRápido te permite leer cualquier documento directamente en el navegador, gratis y sin registro.</p>
+    <p>No hace falta Adobe Reader ni ninguna app: el visor funciona en Chrome, Firefox, Safari y Edge, tanto en ordenador como en móvil o tablet. Subes el archivo, se abre al instante y lees el documento con los mismos controles de página y zoom que tendrías en un lector de escritorio.</p>
 
-    <h3 style="font-size:18px;font-weight:600;color:var(--gray-700);margin:24px 0 10px">¿Cómo funciona?</h3>
+    <h2>Cómo ver un PDF online en 4 pasos</h2>
     <ol style="padding-left:20px;color:var(--gray-500);line-height:1.8;font-size:15px;margin-bottom:16px">
-      <li>Sube el PDF que quieres ver.</li>
-      <li>El visor carga el documento al instante.</li>
-      <li>Navega por las páginas con los controles.</li>
-      <li>Descarga el archivo si lo necesitas.</li>
+      <li>Sube el PDF que quieres ver, arrastrándolo o seleccionándolo.</li>
+      <li>El visor carga el documento al instante en tu navegador.</li>
+      <li>Navega por las páginas con los botones, el teclado o escribiendo el número de página.</li>
+      <li>Descarga el archivo si lo necesitas, o abre otro PDF con un clic.</li>
     </ol>
 
-    <h3 style="font-size:18px;font-weight:600;color:var(--gray-700);margin:24px 0 10px">¿Para qué sirve el visor PDF online?</h3>
+    <h2>¿Para qué sirve el visor PDF online?</h2>
     <ul style="padding-left:20px;color:var(--gray-500);line-height:1.8;font-size:15px;margin-bottom:16px">
       <li>Abrir PDFs en ordenadores sin Adobe Reader instalado.</li>
       <li>Leer documentos en dispositivos móviles sin apps.</li>
       <li>Previsualizar un PDF antes de imprimirlo o enviarlo.</li>
       <li>Ver PDFs recibidos por email sin descargarlos.</li>
-      <li>Acceder a documentos en ordenadores públicos o del trabajo.</li>
+      <li>Acceder a documentos en ordenadores públicos o del trabajo donde no puedes instalar software.</li>
     </ul>
 
-    <p><strong>Privacidad:</strong> el PDF se abre directamente en tu navegador. Ningún archivo se sube a servidores externos.</p>
+    <h2>Funciones del visor</h2>
+    <ul style="padding-left:20px;color:var(--gray-500);line-height:1.8;font-size:15px;margin-bottom:16px">
+      <li><strong>Navegación completa:</strong> pasa de página con los botones, con las flechas del teclado (← →) o salta directamente a una página escribiendo su número.</li>
+      <li><strong>Zoom del 50% al 300%:</strong> amplía o reduce en pasos del 25% para leer letra pequeña o ver la página completa.</li>
+      <li><strong>Renderizado nítido:</strong> el documento se dibuja a la resolución real de tu pantalla, también en pantallas Retina y de alta densidad.</li>
+      <li><strong>Información del archivo:</strong> nombre, número de páginas y tamaño siempre visibles bajo el documento.</li>
+      <li><strong>Descarga y reinicio:</strong> guarda el archivo original o abre otro PDF sin recargar la página.</li>
+    </ul>
+
+    <h2>Privacidad: tu PDF no sale de tu dispositivo</h2>
+    <p>El visor procesa el documento íntegramente en tu navegador con una librería local (PDF.js): el archivo nunca se sube a ningún servidor. Puedes comprobarlo activando el modo avión después de cargar la página — el visor sigue abriendo y mostrando tu PDF con normalidad.</p>
+    <p>Esto lo hace adecuado también para documentos sensibles: contratos, nóminas o informes médicos se visualizan sin que salgan de tu equipo.</p>
+
+    <h2>Lo que este visor no hace</h2>
+    <p>Ver PDF está pensado solo para leer. Si necesitas algo más, estas herramientas de PDFRápido lo cubren:</p>
+    <ul style="padding-left:20px;color:var(--gray-500);line-height:1.8;font-size:15px;margin-bottom:16px">
+      <li><strong>No edita ni anota:</strong> para modificar el contenido usa el <a href="/editor-pdf/" style="color:var(--primary)">Editor PDF</a>, y para comentarios y subrayados, <a href="/anotar-pdf/" style="color:var(--primary)">Anotar PDF</a>.</li>
+      <li><strong>No convierte:</strong> si quieres el contenido en Word, pásalo por <a href="/pdf-a-word/" style="color:var(--primary)">PDF a Word</a>.</li>
+      <li><strong>No abre PDFs cifrados:</strong> si el documento tiene contraseña de apertura y la conoces, quítala antes con <a href="/desbloquear-pdf/" style="color:var(--primary)">Desbloquear PDF</a>.</li>
+      <li><strong>No une ni divide:</strong> para eso están <a href="/unir-pdf/" style="color:var(--primary)">Unir PDF</a> y <a href="/dividir-pdf/" style="color:var(--primary)">Dividir PDF</a>.</li>
+    </ul>
   </section>
 
     <section class="faq-section">
       <h2>Preguntas frecuentes</h2>
       <details>
+        <summary>¿Se sube mi PDF a algún servidor?</summary>
+        <p>No. El documento se abre localmente en tu navegador con PDF.js y nunca sale de tu dispositivo. Funciona incluso sin conexión una vez cargada la página.</p>
+      </details>
+      <details>
         <summary>¿Puedo ver PDFs grandes con este visor?</summary>
-        <p>Sí, el visor funciona con PDFs de cualquier tamaño. El rendimiento depende del navegador y el dispositivo.</p>
+        <p>Sí, el visor funciona con PDFs de cualquier tamaño y número de páginas. El rendimiento depende del navegador y del dispositivo: en documentos muy pesados la carga inicial puede tardar unos segundos.</p>
       </details>
       <details>
         <summary>¿Funciona en móvil?</summary>
-        <p>Sí, el visor PDF es compatible con móvil y tablet, sin necesidad de instalar ninguna app.</p>
+        <p>Sí, el visor PDF es compatible con móvil y tablet, sin necesidad de instalar ninguna app. Los controles de página y zoom funcionan igual que en ordenador.</p>
       </details>
       <details>
         <summary>¿Es necesario registrarse para ver un PDF?</summary>
-        <p>No. Puedes abrir y leer cualquier PDF sin crear una cuenta.</p>
+        <p>No. Puedes abrir y leer cualquier PDF sin crear una cuenta, sin dejar tu email y sin límite de usos.</p>
+      </details>
+      <details>
+        <summary>¿Puedo abrir un PDF protegido con contraseña?</summary>
+        <p>El visor no abre PDFs cifrados. Si conoces la contraseña, elimina primero la protección con la herramienta Desbloquear PDF y después ábrelo con normalidad.</p>
+      </details>
+      <details>
+        <summary>¿Puedo buscar texto dentro del PDF?</summary>
+        <p>Todavía no: el visor muestra el documento página a página, sin buscador de texto. Si necesitas localizar un término, convierte el documento con PDF a Texto y busca en el resultado.</p>
       </details>
     </section>
 
