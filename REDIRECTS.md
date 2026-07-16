@@ -19,6 +19,11 @@ resueltas mediante redirect 301 en Caddy.
 | `/blog/unir-pdf-online/` | `/blog/como-unir-pdf-online/` | Huérfano, duplicaba "unir PDF online" | ✅ | ✅ | ✅ |
 | `/blog/como-comprimir-pdf-gratis/` | `/blog/como-comprimir-pdf-sin-perder-calidad/` | Huérfano, duplicaba "comprimir PDF" | ✅ | ✅ | ✅ |
 | `/blog/convertir-imagenes-a-pdf-guia-completa/` | `/blog/convertir-jpg-a-pdf/` | **Conflicto jpg-a-pdf RESUELTO** (ver abajo) | ✅ | ✅ | ✅ |
+| `/editar-pdf/` | `/categoria/editar-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
+| `/optimizar-pdf/` | `/categoria/optimizar-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
+| `/convertir-desde-pdf/` | `/categoria/convertir-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
+| `/convertir-a-pdf/` | `/categoria/convertir-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
+| `/seguridad-pdf/` | `/categoria/seguridad-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
 
 Cada entrada usa el patrón doble (sin barra y con barra):
 
@@ -26,6 +31,20 @@ Cada entrada usa el patrón doble (sin barra y con barra):
 redir /blog/<slug>  /blog/<canonico>/ 301
 redir /blog/<slug>/ /blog/<canonico>/ 301
 ```
+
+## Categorías inventadas en breadcrumbs — RESUELTO (2026-07-16)
+
+- **Origen del problema:** el commit `9d889d3` (28-may) inyectó `BreadcrumbList` JSON-LD
+  en 10 fichas usando como migaja intermedia URLs de categoría que **nunca existieron**
+  (`/editar-pdf/`, `/optimizar-pdf/`, `/convertir-desde-pdf/`, `/convertir-a-pdf/`,
+  `/seguridad-pdf/`). Google las descubrió por el schema y las reportó como 404 en GSC
+  (export 16-jul; `/seguridad-pdf/` aún no aparecía pero era el mismo defecto).
+- **Corrección doble (2026-07-16):**
+  1. Breadcrumbs corregidos → `/categoria/…` real en 6 fichas: `rotar-pdf`, `firmar-pdf`,
+     `comprimir-pdf`, `pdf-a-word`, `word-a-pdf`, `proteger-pdf` (commit `0bec468`).
+  2. Los 5 × 2 `redir … 301` de la tabla, aplicados en Oracle y VPS.
+- **Verificado en producción:** las 5 URLs antiguas responden `301` a su categoría y los
+  4 destinos `/categoria/…` responden `200` (2026-07-16).
 
 ## Conflicto jpg-a-pdf — RESUELTO (2026-05-30)
 
