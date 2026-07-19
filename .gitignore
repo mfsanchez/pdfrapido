@@ -37,7 +37,6 @@ api/config.local.php
 .claude/
 
 # --- Docs y herramientas internas ---
-CLAUDE.md
 CHANGELOG.md
 GUIA-SEARCH-CONSOLE.md
 INFORME_SEO_INDEXACION.md
