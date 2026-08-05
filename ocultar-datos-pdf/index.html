@@ -9,8 +9,8 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oculta datos sensibles de un PDF dibujando bloques negros sobre DNI, nombres o direcciones. Censura real y permanente, 100% en tu navegador: el archivo no se sube a ningún servidor. Gratis y sin registro | PDFRápido">
-    <meta name="keywords" content="ocultar datos PDF, tachar DNI PDF, censurar PDF online, ocultar información PDF, anonimizar PDF, censura visual PDF, tachar datos PDF">
+    <meta name="description" content="Detecta y oculta datos sensibles de un PDF: propone bloques sobre DNI, NIE, IBAN, teléfonos, emails y sellos de firma para que los revises. Censura real y permanente, 100% en tu navegador. Gratis y sin registro | PDFRápido">
+    <meta name="keywords" content="ocultar datos PDF, tachar DNI PDF, censurar PDF online, ocultar información PDF, anonimizar PDF, censura visual PDF, tachar datos PDF, detectar datos personales PDF, ocultar sello de firma PDF, tapar IBAN PDF">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>Ocultar Datos en PDF — Censura Visual en tu Navegador | PDFRápido</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -33,7 +33,7 @@
       "url": "https://pdfrapido.eu/ocultar-datos-pdf/",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
-      "description": "Oculta datos sensibles de un PDF dibujando bloques negros sobre DNI, nombres o direcciones. Censura real y permanente, 100% en tu navegador: el archivo no se sube a ningún servidor.",
+      "description": "Detecta y oculta datos sensibles de un PDF. Al cargar el archivo se proponen bloques de censura sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma para que el usuario los revise y confirme. Censura real y permanente, 100% en el navegador: el archivo no se sube a ningún servidor.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -92,6 +92,30 @@
         },
         {
           "@type": "Question",
+          "name": "¿Detecta sola los datos personales o hay que marcarlos a mano?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al cargar el PDF se lee su capa de texto en tu propio navegador y se proponen bloques sobre los patrones españoles habituales: DNI, NIE, CIF/NIF, IBAN, teléfonos móviles y fijos, direcciones de correo y sellos visuales de firma. Las propuestas aparecen con borde punteado y no se aplican hasta que las aceptas: puedes confirmarlas una a una, aceptarlas todas o descartarlas. La detección es una ayuda, no una garantía; también puedes seguir dibujando bloques a mano."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo tapar el sello de firma que aparece en todas las páginas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, de dos formas. Si el sello tiene capa de texto (AutoFirma, ACCV, FNMT, Adobe), se detecta solo en cada página donde aparece. Si el sello es una imagen y no se detecta, dibuja el bloque una vez, selecciónalo y pulsa «Repetir en páginas» para copiarlo a todas las hojas o al rango que indiques. Como el sello puede estar ligeramente desplazado en alguna página, revisa el documento completo antes de descargar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el PDF estaba firmado digitalmente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La firma digital deja de ser válida en el archivo censurado. No es un fallo ni una función de la herramienta: al censurar de verdad hay que rasterizar las páginas y reconstruir el PDF desde cero, y cualquier firma criptográfica queda invalidada porque el documento firmado ya no es el mismo. Si necesitas conservar la validez de la firma, no puedes censurar el documento: pide una copia sin los datos al emisor. El archivo original que tienes en tu equipo no se modifica."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "¿En qué se diferencia de la herramienta Redactar PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -118,14 +142,20 @@
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Dibuja rectángulos sobre los datos sensibles",
-          "text": "Haz clic y arrastra sobre el DNI, nombre, dirección o cualquier dato que quieras censurar. Puedes navegar entre páginas, seleccionar un rectángulo para borrarlo o deshacer el último."
+          "name": "Revisa los datos detectados automáticamente",
+          "text": "La herramienta lee la capa de texto y propone bloques sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma. Aparecen con borde punteado y no se aplican hasta que los aceptas uno a uno o con «Aceptar todas». La detección es una ayuda y no sustituye a revisar el documento completo."
         },
         {
           "@type": "HowToStep",
           "position": 3,
+          "name": "Dibuja o repite los bloques que falten",
+          "text": "Haz clic y arrastra sobre cualquier dato, firma manuscrita o sello que quieras censurar. Si el mismo recuadro se repite en todas las hojas, selecciónalo y usa «Repetir en páginas» para copiarlo al rango de páginas que indiques."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
           "name": "Descarga el PDF censurado",
-          "text": "Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan."
+          "text": "Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan. Si el PDF estaba firmado digitalmente, esa firma dejará de ser válida en el archivo censurado."
         }
       ]
     }
@@ -135,14 +165,14 @@
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Ocultar Datos en PDF — Censura Visual 100% en tu Navegador | PDFRápido">
-    <meta property="og:description" content="Dibuja bloques negros sobre DNI, nombres o direcciones y descarga un PDF con esos datos eliminados de verdad. Sin subir el archivo. Sin registro.">
+    <meta property="og:description" content="Detecta DNI, IBAN, teléfonos y sellos de firma, revísalos y descarga un PDF con esos datos eliminados de verdad. Sin subir el archivo. Sin registro.">
     <meta property="og:url" content="https://pdfrapido.eu/ocultar-datos-pdf/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ocultar Datos en PDF — Censura Visual en tu Navegador | PDFRápido">
-    <meta name="twitter:description" content="Censura real dibujando bloques negros. 100% local, sin subir el archivo. Sin registro.">
+    <meta name="twitter:description" content="Detección automática de datos personales + censura real. 100% local, sin subir el archivo. Sin registro.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <link rel="stylesheet" href="/css/styles.css?v=15">
 <style>
@@ -234,6 +264,46 @@
         .redact-box .box-del { position: absolute; top: -11px; right: -11px; width: 22px; height: 22px; border-radius: 50%; border: none; background: var(--primary); color: #fff; font-size: 13px; font-weight: 700; line-height: 1; cursor: pointer; display: none; align-items: center; justify-content: center; padding: 0; }
         .redact-box.selected .box-del { display: flex; }
         .draw-preview { position: absolute; background: rgba(0,0,0,0.45); border: 1.5px dashed var(--primary); pointer-events: none; display: none; }
+
+        /* Sugerencias de la autodetección — translúcidas a propósito:
+           el usuario tiene que poder leer el dato para decidir si lo censura */
+        .redact-box.suggested { background: rgba(0,0,0,0.16); border: 2px dashed #D97706; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55); }
+        .redact-box.suggested.selected { background: rgba(0,0,0,0.30); outline: 2px solid #D97706; }
+        .redact-box .sug-tag { position: absolute; top: -6px; left: -2px; transform: translateY(-100%); background: #D97706; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.3px; padding: 2px 6px; border-radius: 4px; white-space: nowrap; pointer-events: none; }
+        .redact-box .box-ok { position: absolute; top: -11px; right: 16px; width: 22px; height: 22px; border-radius: 50%; border: none; background: #059669; color: #fff; font-size: 12px; font-weight: 700; line-height: 1; cursor: pointer; display: none; align-items: center; justify-content: center; padding: 0; }
+        .redact-box.suggested.selected .box-ok { display: flex; }
+
+        /* Barra de revisión de la autodetección */
+        .suggest-bar { display: none; flex-wrap: wrap; align-items: center; gap: 10px; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: var(--radius); padding: 13px 16px; margin-bottom: 14px; }
+        .suggest-bar.active { display: flex; }
+        .suggest-bar.pulse { animation: sugPulse 1.1s ease-in-out 2; }
+        @keyframes sugPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(217,119,6,0); } 50% { box-shadow: 0 0 0 5px rgba(217,119,6,0.3); } }
+        @media (prefers-reduced-motion: reduce) { .suggest-bar.pulse { animation: none; outline: 2px solid #D97706; } }
+        .sug-count { flex: 1 1 260px; font-size: 13px; font-weight: 600; color: #92400E; line-height: 1.5; }
+        .sug-count b { font-size: 15px; }
+        .sug-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .sug-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 8px; border: 1px solid #FCD34D; background: #fff; color: #92400E; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .sug-btn:hover:not(:disabled) { background: #FEF3C7; }
+        .sug-btn.primary { background: #D97706; border-color: #D97706; color: #fff; }
+        .sug-btn.primary:hover:not(:disabled) { background: #B45309; }
+        .sug-disclaimer { flex: 1 1 100%; font-size: 12px; color: #92400E; line-height: 1.6; margin: 0; }
+        .scan-note { display: none; align-items: flex-start; gap: 10px; background: var(--accent-light); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 12px 16px; color: var(--gray-600); font-size: 13px; font-weight: 500; margin-bottom: 14px; line-height: 1.5; }
+        .scan-note.active { display: flex; }
+        .scan-note svg { flex-shrink: 0; margin-top: 1px; }
+
+        /* Panel «repetir en varias páginas» */
+        .repeat-panel { display: none; flex-wrap: wrap; align-items: center; gap: 8px; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 11px 14px; margin-bottom: 14px; font-size: 13px; color: var(--gray-600); }
+        .repeat-panel.active { display: flex; }
+        .repeat-panel input { width: 68px; padding: 6px 8px; border: 1px solid var(--gray-200); border-radius: 6px; font-family: inherit; font-size: 13px; color: var(--gray-700); background: #fff; }
+        .repeat-hint { flex: 1 1 100%; font-size: 12px; color: var(--gray-500); line-height: 1.55; }
+
+        html[data-theme="dark"] .suggest-bar { background: #3a2410; border-color: #7C4A11; }
+        html[data-theme="dark"] .sug-count, html[data-theme="dark"] .sug-disclaimer { color: #FCD9A0; }
+        html[data-theme="dark"] .sug-btn { background: var(--bg-hover); border-color: #7C4A11; color: #FCD9A0; }
+        html[data-theme="dark"] .sug-btn:hover:not(:disabled) { background: #4a2f14; }
+        html[data-theme="dark"] .sug-btn.primary { background: #D97706; border-color: #D97706; color: #fff; }
+        html[data-theme="dark"] .repeat-panel input { background: var(--bg-hover); color: var(--text-primary); }
+        html[data-theme="dark"] .redact-box.suggested { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4); }
 
         /* Warning */
         .warning-banner { display: flex; align-items: flex-start; gap: 10px; background: #FEF2F2; border: 1px solid #FECACA; border-radius: var(--radius); padding: 13px 16px; color: #DC2626; font-size: 13px; font-weight: 500; margin: 16px 0; line-height: 1.5; }
@@ -413,7 +483,7 @@
             </svg>
         </div>
         <h1>Ocultar datos de un PDF: dibuja, censura y descarga</h1>
-        <p>Dibuja bloques negros sobre DNI, nombres o direcciones. Censura real, 100% en tu navegador: el archivo no se sube a ningún servidor.</p>
+        <p>Detectamos DNI, IBAN, teléfonos y sellos de firma para que los revises, y tú añades lo que falte. Censura real, 100% en tu navegador: el archivo no se sube a ningún servidor.</p>
     </div>
 
     <div class="error-banner" id="errorBanner" role="alert">
@@ -455,7 +525,21 @@
 
         <div class="hint-banner">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            <span>Haz clic y arrastra sobre la página para dibujar un bloque negro. Toca un bloque para seleccionarlo y borrarlo (× o tecla Supr). Con «Deshacer» eliminas el último bloque dibujado.</span>
+            <span>Al cargar el PDF se buscan automáticamente DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma, y se proponen con borde punteado para que los revises. Puedes dibujar tus propios bloques haciendo clic y arrastrando sobre la página. Toca un bloque para seleccionarlo, aceptarlo (✓), borrarlo (× o tecla Supr) o repetirlo en varias páginas.</span>
+        </div>
+
+        <div class="scan-note" id="scanNote" role="status" aria-live="polite">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span id="scanNoteText">Analizando el texto del documento…</span>
+        </div>
+
+        <div class="suggest-bar" id="suggestBar" role="region" aria-label="Datos detectados automáticamente">
+            <span class="sug-count" id="sugCount"></span>
+            <span class="sug-actions">
+                <button class="sug-btn primary" id="btnAcceptAll">Aceptar todas</button>
+                <button class="sug-btn" id="btnRejectAll">Descartar todas</button>
+            </span>
+            <p class="sug-disclaimer">La detección automática es una <strong>ayuda</strong> y puede no encontrarlo todo —especialmente en documentos escaneados o con texto dentro de imágenes—. Revisa siempre el documento completo antes de descargar.</p>
         </div>
 
         <div class="viewer-toolbar">
@@ -480,8 +564,23 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
                     Borrar selección
                 </button>
+                <button class="toolbar-btn" id="btnRepeat" aria-label="Repetir el bloque seleccionado en varias páginas" disabled>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    Repetir en páginas
+                </button>
             </div>
         </div>
+
+        <div class="repeat-panel" id="repeatPanel">
+            <span>Repetir el bloque seleccionado de la página</span>
+            <input type="number" id="repFrom" min="1" value="1" aria-label="Desde la página">
+            <span>a la</span>
+            <input type="number" id="repTo" min="1" value="1" aria-label="Hasta la página">
+            <button class="sug-btn primary" id="btnRepeatApply">Repetir</button>
+            <button class="sug-btn" id="btnRepeatCancel">Cancelar</button>
+            <span class="repeat-hint">Útil para el sello visual de firma que se repite en cada hoja. Los bloques copiados son bloques normales: puedes borrarlos uno a uno si en alguna página sobran. El sello puede estar desplazado en alguna hoja — revísalas todas antes de descargar.</span>
+        </div>
+
         <div class="viewer-frame">
             <div class="page-wrap" id="pageWrap">
                 <canvas id="pageCanvas"></canvas>
@@ -491,7 +590,8 @@
 
         <div class="warning-banner">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            El PDF descargado queda aplanado a imagen: el texto deja de ser seleccionable en todo el documento. Es intencional — así garantizamos que los datos censurados se eliminan de verdad y no pueden extraerse. Tu archivo original no se modifica.
+            <span>El PDF descargado queda aplanado a imagen: el texto deja de ser seleccionable en todo el documento. Es intencional — así garantizamos que los datos censurados se eliminan de verdad y no pueden extraerse. Tu archivo original no se modifica.<br><br>
+            <strong>Si el PDF estaba firmado digitalmente, la firma dejará de ser válida en el archivo censurado</strong>, porque las páginas se convierten a imagen. Es un efecto inevitable del aplanado.</span>
         </div>
 
         <button class="btn-censurar" id="btnDescargar">
@@ -504,6 +604,7 @@
         <div class="loading-spinner"></div>
         <h3 id="loadingTitle">Generando PDF censurado</h3>
         <p id="loadingDetail">Procesando página 1…</p>
+        <p style="margin-top:10px;font-size:12px;color:var(--gray-500);line-height:1.6;max-width:520px;margin-left:auto;margin-right:auto">Si el PDF estaba firmado digitalmente, la firma dejará de ser válida en el archivo censurado, porque las páginas se convierten a imagen.</p>
     </div>
 
     <div class="result-area" id="resultArea">
@@ -532,7 +633,9 @@
 
         <div class="rgpd-note">
             🔒 Todo el procesamiento se realiza en tu navegador.<br>
-            El documento no se sube a ningún servidor y los metadatos del original no se conservan.
+            El documento no se sube a ningún servidor y los metadatos del original no se conservan.<br><br>
+            ⚠️ Revisa el PDF descargado antes de compartirlo: la detección automática es una ayuda y puede no encontrarlo todo.<br>
+            Si el original estaba firmado digitalmente, esa firma ya no es válida en el archivo censurado, porque las páginas se convierten a imagen.
         </div>
 
         <button class="btn-new" id="btnNew" style="margin-top:16px">Censurar otro PDF</button>
@@ -541,6 +644,8 @@
     <div class="seo-content">
         <h2>Ocultar datos en un PDF: censura visual que elimina la información de verdad</h2>
         <p>Tapar un dato con un rectángulo negro en un editor normal <strong>no elimina el dato</strong>: el texto sigue dentro del archivo y puede seleccionarse, copiarse o extraerse con cualquier lector de PDF. Esta herramienta hace censura real: convierte cada página en una imagen aplanada con las zonas marcadas en negro sólido y reconstruye el PDF solo con esas imágenes. El contenido censurado <strong>desaparece del archivo</strong>, y los metadatos del documento original (autor, título, programa) tampoco se conservan.</p>
+        <h3>Detección automática que tú confirmas</h3>
+        <p>Al cargar el documento se lee su capa de texto y se proponen bloques sobre los datos personales españoles más habituales —DNI, NIE, CIF, IBAN, teléfonos, correos— y sobre los sellos visuales de firma electrónica. <strong>Nada se censura sin tu confirmación</strong>: las propuestas aparecen con borde punteado y las aceptas o descartas una a una. Es una ayuda para no despistarte, no un sustituto de revisar el documento: en PDF escaneados o con datos dentro de imágenes no hay texto que analizar y hay que marcar todo a mano.</p>
         <h3>100% en tu navegador, sin subir el archivo</h3>
         <p>Todo el procesamiento se hace localmente con JavaScript (pdf.js y pdf-lib). El PDF nunca sale de tu dispositivo, lo que la hace ideal para documentos con datos personales, bancarios o médicos: nóminas, contratos, expedientes, justificantes o escrituras.</p>
         <h3>Cuándo usar esta herramienta</h3>
@@ -588,7 +693,7 @@
 </style>
 <section class="content-seo" aria-label="Guía y preguntas frecuentes">
   <h2>¿Cómo funciona Ocultar datos en PDF?</h2>
-  <p>Censurar un documento en PDFRápido no requiere instalación ni registro, y el archivo no sale de tu dispositivo. Sigue estos tres pasos:</p>
+  <p>Censurar un documento en PDFRápido no requiere instalación ni registro, y el archivo no sale de tu dispositivo. Sigue estos cuatro pasos:</p>
   <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -600,18 +705,49 @@
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h3>Dibuja rectángulos sobre los datos sensibles</h3>
-          <p>Haz clic y arrastra sobre el DNI, nombre, dirección o cualquier dato que quieras censurar. Puedes navegar entre páginas, seleccionar un rectángulo para borrarlo o deshacer el último.</p>
+          <h3>Revisa los datos detectados automáticamente</h3>
+          <p>Se proponen bloques sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma. Aparecen con borde punteado y no se aplican hasta que los aceptas, uno a uno o con «Aceptar todas».</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Dibuja o repite los bloques que falten</h3>
+          <p>Haz clic y arrastra sobre cualquier dato, firma manuscrita o sello. Si el mismo recuadro se repite en todas las hojas, selecciónalo y usa «Repetir en páginas».</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
         <div class="step-body">
           <h3>Descarga el PDF censurado</h3>
           <p>Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan.</p>
         </div>
       </div>
   </div>
+
+  <h2>Detección automática de datos personales y sellos de firma</h2>
+  <p>Marcar a mano cada dato de un expediente de cuarenta páginas es lento y, sobre todo, propenso a despistes: basta pasar por alto un teléfono en un pie de página para que la censura pierda sentido. Por eso, al cargar el documento la herramienta lee su <strong>capa de texto</strong> —el texto real que hay dentro del PDF, no una imagen de él— y propone bloques sobre los patrones de datos personales españoles más habituales.</p>
+  <h3>Qué se busca</h3>
+  <ul>
+      <li><strong>DNI</strong> (ocho cifras y una letra) y <strong>NIE</strong> (X, Y o Z seguidas de siete cifras y una letra).</li>
+      <li><strong>CIF y NIF de empresa</strong>, del tipo <em>P0307600G</em>.</li>
+      <li><strong>IBAN español</strong>, escrito seguido o separado en grupos de cuatro cifras.</li>
+      <li><strong>Teléfonos</strong> de nueve dígitos que empiezan por 6, 7, 8 o 9, fijos y móviles.</li>
+      <li><strong>Direcciones de correo electrónico</strong>.</li>
+      <li><strong>Sellos visuales de firma electrónica</strong>: los recuadros de AutoFirma, ACCV, FNMT o Adobe con el texto «Firmado digitalmente por…», que suelen repetirse en todas las hojas.</li>
+  </ul>
+  <p>En los DNI se comprueba además la letra de control (el resto de dividir el número entre 23). Si cuadra, la propuesta se marca con un ✓ de confianza alta. Pero <strong>un DNI con la letra equivocada se propone igual</strong>: un documento mal transcrito o mal escaneado sigue conteniendo un dato personal, y descartarlo sería justo el error que hay que evitar.</p>
+  <h3>Por qué todo se propone y nada se aplica solo</h3>
+  <p>Las cajas detectadas aparecen con <strong>borde punteado y fondo semitransparente</strong>, no en negro sólido: tienes que poder leer lo que hay debajo para decidir. Ninguna se aplica al descargar hasta que la aceptas, y si intentas descargar con propuestas sin revisar, la herramienta te avisa en lugar de exportar. Esa fricción es deliberada: evita a la vez que se tape algo que nunca miraste y que se te escape un dato detectado que diste por censurado.</p>
+  <p>Los patrones son <strong>deliberadamente permisivos</strong>. Es preferible que se proponga de más —un número de factura de nueve cifras que parece un teléfono, por ejemplo— y lo descartes con un clic, a que un dato real pase inadvertido. Por la misma razón, el texto se reconstruye línea a línea antes de aplicar los patrones: en muchos PDF un DNI llega partido en varios fragmentos internos («1234» + «5678Z») y, sin recomponer la línea, no se encontraría.</p>
+  <h3>Qué NO detecta</h3>
+  <p>Conviene tenerlo claro antes de fiarse: la detección solo ve texto. <strong>No encuentra nada en un PDF escaneado</strong> ni en datos que estén dentro de una imagen, un sello gráfico o una firma manuscrita — en esos casos la herramienta te lo dice al cargar el archivo y solo cabe marcar a mano. Tampoco detecta nombres y apellidos, direcciones postales, números de expediente, matrículas, números de la Seguridad Social ni referencias catastrales, porque no siguen un formato fijo reconocible sin ambigüedad. Y por supuesto no interpreta el contexto: no sabe qué parte de tu documento es confidencial. <strong>La detección automática es una ayuda, nunca una garantía de que se haya cubierto todo.</strong></p>
+
+  <h2>Tapar el sello de firma que se repite en todas las páginas</h2>
+  <p>Los documentos firmados con certificado digital suelen llevar en cada hoja un recuadro visible con el nombre, el DNI del firmante y la fecha. Si ese sello tiene capa de texto, la detección lo propone hoja por hoja automáticamente. Si es una imagen —muy frecuente—, no hay patrón que valga, y para eso existe el segundo mecanismo: dibuja el bloque una vez, selecciónalo y pulsa <strong>«Repetir en páginas»</strong>. El bloque se copia con las mismas coordenadas al rango de páginas que indiques (todas, o de la 2 a la 20 si la portada no lo lleva).</p>
+  <p>Las copias son bloques normales y corrientes: si en alguna hoja sobra o el sello está desplazado unos milímetros, la borras individualmente. Precisamente porque la posición puede variar entre páginas —la última hoja suele ser distinta—, <strong>no des por hecho que la repetición cubre el sello en todas partes</strong>: pasa por las páginas antes de descargar.</p>
+  <h3>El sello visual y la firma digital son cosas distintas</h3>
+  <p>Tapar el recuadro solo oculta la información visible del firmante. La firma electrónica en sí es un dato criptográfico incrustado en el archivo, y no se manipula aquí en ningún momento: esta herramienta no tiene —ni tendrá— ninguna función para anular o eliminar firmas. Lo que sí ocurre, inevitablemente, es que <strong>al censurar de verdad las páginas se rasterizan y el PDF se reconstruye desde cero, de modo que cualquier firma digital del original deja de ser válida en el archivo censurado</strong>. Es el precio de que la censura sea real: si el documento siguiera siendo idéntico al firmado, el dato tapado seguiría dentro. Tu archivo original, con su firma intacta, no se toca. Si necesitas un documento censurado <em>y</em> firmado, la vía correcta es pedir al emisor una copia sin esos datos y que la firme de nuevo.</p>
 
   <h2>¿Cuándo usar esta herramienta?</h2>
   <p>La censura visual es la opción adecuada cuando necesitas controlar exactamente qué se oculta, o cuando el dato a tapar no es texto:</p>
@@ -647,6 +783,26 @@
       <div class="faq-item">
         <h3>¿Por qué el PDF descargado no permite seleccionar texto?</h3>
         <p>Es intencional. Al aplanar las páginas a imagen se garantiza que la información censurada desaparece por completo, incluida la capa de texto invisible y los metadatos del documento original. Si necesitas conservar el texto del resto del documento, usa <a href="/redactar-pdf/">Redactar PDF</a>, que censura por términos manteniendo el formato.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Detecta sola los datos personales o hay que marcarlos a mano?</h3>
+        <p>Al cargar el PDF se lee su capa de texto en tu propio navegador y se proponen bloques sobre los patrones españoles habituales: DNI, NIE, CIF/NIF, IBAN, teléfonos, correos electrónicos y sellos visuales de firma. Las propuestas aparecen con borde punteado y <strong>no se aplican hasta que las aceptas</strong>: puedes confirmarlas una a una, aceptarlas todas o descartarlas. Es una ayuda, no una garantía — sigue revisando el documento entero y dibujando a mano lo que falte.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Puedo tapar el sello de firma que aparece en todas las páginas?</h3>
+        <p>Sí, de dos formas. Si el sello tiene capa de texto (AutoFirma, ACCV, FNMT, Adobe), se detecta solo en cada página donde aparece. Si es una imagen y no se detecta, dibuja el bloque una vez, selecciónalo y pulsa <strong>«Repetir en páginas»</strong> para copiarlo a todas las hojas o al rango que indiques. Como el sello puede estar desplazado en alguna página, revisa el documento completo antes de descargar.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué pasa si el PDF estaba firmado digitalmente?</h3>
+        <p>La firma digital <strong>deja de ser válida en el archivo censurado</strong>. No es un fallo ni una función de la herramienta: para censurar de verdad hay que rasterizar las páginas y reconstruir el PDF desde cero, y eso invalida cualquier firma criptográfica, porque el documento ya no es el mismo que se firmó. Tu archivo original no se modifica. Si necesitas conservar la validez de la firma, pide al emisor una copia sin esos datos y firmada de nuevo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué datos NO detecta la herramienta?</h3>
+        <p>Nada que no sea texto: en un PDF escaneado o con los datos dentro de una imagen no encuentra nada (te avisa al cargarlo). Tampoco nombres y apellidos, direcciones postales, números de expediente, matrículas ni números de la Seguridad Social, porque no tienen un formato fijo que se pueda reconocer sin ambigüedad. Para todo eso está el dibujo manual.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿En qué se diferencia de la herramienta Redactar PDF?</h3>
+        <p>En <a href="/redactar-pdf/">Redactar PDF</a> escribes tú los términos a censurar (un nombre, un número) y se buscan en todo el documento, conservando el texto del resto. Aquí las zonas se marcan visualmente —detectadas y confirmadas por ti, o dibujadas a mano—, el resultado queda aplanado a imagen y el procesado es 100% local, sin subir el archivo. Elige esta si el dato a tapar es una firma, un sello o una foto, o si el documento no debe salir de tu equipo.</p>
       </div>
       <div class="faq-item">
         <h3>¿Qué límites tiene?</h3>
@@ -694,20 +850,42 @@ const pageCanvas    = document.getElementById('pageCanvas');
 const overlay       = document.getElementById('overlay');
 const countBadge    = document.getElementById('countBadge');
 const countText     = document.getElementById('countText');
+const scanNote      = document.getElementById('scanNote');
+const scanNoteText  = document.getElementById('scanNoteText');
+const suggestBar    = document.getElementById('suggestBar');
+const sugCount      = document.getElementById('sugCount');
+const btnAcceptAll  = document.getElementById('btnAcceptAll');
+const btnRejectAll  = document.getElementById('btnRejectAll');
+const btnRepeat     = document.getElementById('btnRepeat');
+const repeatPanel   = document.getElementById('repeatPanel');
+const repFrom       = document.getElementById('repFrom');
+const repTo         = document.getElementById('repTo');
+const btnRepeatApply  = document.getElementById('btnRepeatApply');
+const btnRepeatCancel = document.getElementById('btnRepeatCancel');
 
 let currentFile = null;   // File original (nunca se modifica)
 let pdfDoc      = null;   // documento pdf.js
 let numPages    = 0;
 let currentPage = 1;
-let rects       = [];     // {page, x, y, w, h} normalizados 0–1 respecto a la página
+// {page, x, y, w, h} normalizados 0–1 respecto a la página (origen arriba-izquierda).
+// Las cajas propuestas por la autodetección llevan además {sug:true, kind, conf}
+// hasta que el usuario las acepta (se les quita 'sug') o las descarta (se borran).
+let rects       = [];
 let selectedIdx = -1;
 let renderToken = 0;      // invalida renders de página obsoletos
+let scanToken   = 0;      // invalida autodetecciones obsoletas
 
 /* ── Helpers ── */
 function showError(msg) {
     errorMsg.textContent = msg;
     errorBanner.classList.add('active');
     setTimeout(() => errorBanner.classList.remove('active'), 8000);
+}
+
+// Aviso neutro (no es un error): reutiliza la caja informativa del análisis
+function showNote(msg) {
+    scanNoteText.textContent = msg;
+    scanNote.classList.add('active');
 }
 
 function formatBytes(b) {
@@ -718,8 +896,11 @@ function formatBytes(b) {
 
 function reset() {
     currentFile = null; pdfDoc = null; numPages = 0; currentPage = 1;
-    rects = []; selectedIdx = -1; renderToken++;
+    rects = []; selectedIdx = -1; renderToken++; scanToken++;
     fileInput.value = '';
+    scanNote.classList.remove('active');
+    suggestBar.classList.remove('active', 'pulse');
+    repeatPanel.classList.remove('active');
     uploadZone.style.display = '';
     editorArea.classList.remove('active');
     loadingArea.classList.remove('active');
@@ -754,7 +935,10 @@ async function loadFile(file) {
         pdfDoc = doc;
         numPages = doc.numPages;
         currentPage = 1;
-        rects = []; selectedIdx = -1;
+        rects = []; selectedIdx = -1; scanToken++;
+        suggestBar.classList.remove('active', 'pulse');
+        repeatPanel.classList.remove('active');
+        repFrom.max = repTo.max = numPages;
         document.getElementById('fileName').textContent = file.name;
         document.getElementById('fileSize').textContent = formatBytes(file.size) + ' · ' + numPages + (numPages === 1 ? ' página' : ' páginas');
         uploadZone.style.display = 'none';
@@ -762,6 +946,7 @@ async function loadFile(file) {
         editorArea.classList.add('active');
         updateZoneCounter();
         await renderPage(currentPage);
+        scanDocument();   // autodetección: no bloquea la interacción con el visor
     } catch (err) {
         if (err && err.name === 'PasswordException') {
             showError('Este PDF está protegido con contraseña. Desbloquéalo primero con la herramienta Desbloquear PDF.');
@@ -807,10 +992,30 @@ btnPrev.addEventListener('click', () => { if (currentPage > 1) { currentPage--; 
 btnNext.addEventListener('click', () => { if (currentPage < numPages) { currentPage++; selectedIdx = -1; renderPage(currentPage); } });
 
 /* ── Rectángulos de censura (coordenadas normalizadas 0–1) ── */
+const KIND_LABEL = { DNI: 'DNI', NIE: 'NIE', CIF: 'CIF/NIF', IBAN: 'IBAN', TEL: 'Teléfono', EMAIL: 'Email', FIRMA: 'Sello de firma' };
+
+function confirmedRects() { return rects.filter(r => !r.sug); }
+function pendingRects()   { return rects.filter(r => r.sug); }
+
 function updateZoneCounter() {
-    zoneCounter.innerHTML = `<b>${rects.length}</b> ${rects.length === 1 ? 'zona censurada' : 'zonas censuradas'}`;
-    btnUndo.disabled = rects.length === 0;
+    const n = confirmedRects().length;
+    zoneCounter.innerHTML = `<b>${n}</b> ${n === 1 ? 'zona censurada' : 'zonas censuradas'}`;
+    btnUndo.disabled = n === 0;
     btnDelSel.disabled = selectedIdx < 0;
+    btnRepeat.disabled = selectedIdx < 0 || numPages < 2;
+    if (selectedIdx < 0) repeatPanel.classList.remove('active');
+    updateSuggestBar();
+}
+
+function updateSuggestBar() {
+    const pend = pendingRects();
+    if (!pend.length) {
+        suggestBar.classList.remove('active', 'pulse');
+        return;
+    }
+    const pages = new Set(pend.map(r => r.page)).size;
+    sugCount.innerHTML = `<b>${pend.length}</b> ${pend.length === 1 ? 'dato detectado' : 'datos detectados'} en ${pages} ${pages === 1 ? 'página' : 'páginas'} — revísalos antes de descargar`;
+    suggestBar.classList.add('active');
 }
 
 function renderBoxes() {
@@ -818,7 +1023,7 @@ function renderBoxes() {
     rects.forEach((r, i) => {
         if (r.page !== currentPage) return;
         const box = document.createElement('div');
-        box.className = 'redact-box' + (i === selectedIdx ? ' selected' : '');
+        box.className = 'redact-box' + (i === selectedIdx ? ' selected' : '') + (r.sug ? ' suggested' : '');
         box.style.left   = (r.x * 100) + '%';
         box.style.top    = (r.y * 100) + '%';
         box.style.width  = (r.w * 100) + '%';
@@ -826,16 +1031,40 @@ function renderBoxes() {
         box.dataset.idx = i;
         box.tabIndex = 0;
         box.setAttribute('role', 'button');
-        box.setAttribute('aria-label', `Bloque de censura ${i + 1}. Pulsa Supr para borrarlo.`);
+        if (r.sug) {
+            const label = KIND_LABEL[r.kind] || 'Dato';
+            box.setAttribute('aria-label', `Sugerencia de censura: ${label}. Pulsa Intro para aceptarla o Supr para descartarla.`);
+            const tag = document.createElement('span');
+            tag.className = 'sug-tag';
+            tag.textContent = label + (r.conf === 'alta' ? ' ✓' : '');
+            box.appendChild(tag);
+            const ok = document.createElement('button');
+            ok.className = 'box-ok';
+            ok.textContent = '✓';
+            ok.setAttribute('aria-label', 'Aceptar esta sugerencia');
+            ok.addEventListener('click', e => { e.stopPropagation(); acceptRect(i); });
+            box.appendChild(ok);
+        } else {
+            box.setAttribute('aria-label', `Bloque de censura ${i + 1}. Pulsa Supr para borrarlo.`);
+        }
         const del = document.createElement('button');
         del.className = 'box-del';
         del.textContent = '×';
-        del.setAttribute('aria-label', 'Borrar este bloque');
+        del.setAttribute('aria-label', r.sug ? 'Descartar esta sugerencia' : 'Borrar este bloque');
         del.addEventListener('click', e => { e.stopPropagation(); removeRect(i); });
         box.appendChild(del);
         overlay.appendChild(box);
     });
     updateZoneCounter();
+}
+
+// Aceptar = quitar la marca de sugerencia. La caja NO cambia de posición en el
+// array, así que selectedIdx sigue siendo válido.
+function acceptRect(i) {
+    if (!rects[i] || !rects[i].sug) return;
+    delete rects[i].sug;
+    delete rects[i].conf;
+    renderBoxes();
 }
 
 function removeRect(i) {
@@ -846,12 +1075,27 @@ function removeRect(i) {
 }
 
 btnUndo.addEventListener('click', () => {
-    if (!rects.length) return;
-    const last = rects[rects.length - 1];
-    rects.pop();
+    // «Deshacer» solo afecta a bloques confirmados (dibujados, aceptados o repetidos);
+    // las sugerencias sin revisar se descartan desde la barra de revisión.
+    let i = -1;
+    for (let k = rects.length - 1; k >= 0; k--) { if (!rects[k].sug) { i = k; break; } }
+    if (i < 0) return;
+    const last = rects[i];
+    rects.splice(i, 1);
     selectedIdx = -1;
     if (last.page !== currentPage) { currentPage = last.page; renderPage(currentPage); }
     else renderBoxes();
+});
+
+btnAcceptAll.addEventListener('click', () => {
+    rects.forEach(r => { if (r.sug) { delete r.sug; delete r.conf; } });
+    renderBoxes();
+});
+
+btnRejectAll.addEventListener('click', () => {
+    rects = rects.filter(r => !r.sug);
+    selectedIdx = -1;
+    renderBoxes();
 });
 
 btnDelSel.addEventListener('click', () => { if (selectedIdx >= 0) removeRect(selectedIdx); });
@@ -862,7 +1106,12 @@ document.addEventListener('keydown', e => {
         e.preventDefault();
         removeRect(selectedIdx);
     }
-    if (e.key === 'Escape') { selectedIdx = -1; renderBoxes(); }
+    if (e.key === 'Enter' && selectedIdx >= 0 && rects[selectedIdx] && rects[selectedIdx].sug
+        && !/INPUT|TEXTAREA|BUTTON|A/.test(document.activeElement.tagName)) {
+        e.preventDefault();
+        acceptRect(selectedIdx);
+    }
+    if (e.key === 'Escape') { selectedIdx = -1; repeatPanel.classList.remove('active'); renderBoxes(); }
 });
 
 /* ── Dibujo con puntero (ratón y táctil) ── */
@@ -922,9 +1171,315 @@ overlay.addEventListener('pointerup', e => {
 
 overlay.addEventListener('pointercancel', () => { drawing = false; preview.style.display = 'none'; });
 
+/* ══════════════════════════════════════════════════════════════════════════
+   Autodetección de datos sensibles.
+   IMPORTANTE: esto SOLO propone rectángulos en el array `rects`. El borrado
+   real lo sigue haciendo el rasterizado del export, que no se toca.
+   Todo ocurre en el navegador: la capa de texto se lee con pdf.js en local.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+// Patrones permisivos a propósito: preferimos un falso positivo (se quita con
+// un clic) a un falso negativo (una fuga de datos).
+const PATTERNS = [
+    { kind: 'DNI',   re: /\b\d{8}[A-Za-z]\b/g },
+    { kind: 'NIE',   re: /\b[XYZxyz]\d{7}[A-Za-z]\b/g },
+    { kind: 'CIF',   re: /\b[A-Za-z]\d{7}[A-Za-z0-9]\b/g },
+    { kind: 'IBAN',  re: /\bES\d{2}\s?(?:\d{4}\s?){5}\b/gi },
+    { kind: 'TEL',   re: /\b[6-9]\d{8}\b/g },
+    { kind: 'EMAIL', re: /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g }
+];
+
+// Sellos visuales de firma (AutoFirma, ACCV, FNMT, Adobe…). Detectar el sello
+// NO tiene nada que ver con la firma criptográfica: solo tapa el recuadro visible.
+const FIRMA_RE = /firmado\s+(?:digital|electr[oó]nica)mente\s+por|firmado\s+por|autofirma|\bACCV\b|\bFNMT\b|CN\s*=|sello\s+de\s+tiempo|certificado\s+(?:digital|electr[oó]nico)/i;
+const DOC_RE   = /\b(?:\d{8}[A-Za-z]|[XYZxyz]\d{7}[A-Za-z])\b/;
+
+const DNI_LETTERS = 'TRWAGMYFPDXBNJZSQVHLCKE';
+// Solo sirve para marcar confianza alta visualmente. NUNCA descarta un match:
+// un DNI mal escaneado o mal transcrito debe seguir proponiéndose.
+function dniOk(s) {
+    const m = /^(\d{8})([A-Za-z])$/.exec(s);
+    return !!m && DNI_LETTERS[parseInt(m[1], 10) % 23] === m[2].toUpperCase();
+}
+
+// Geometría de un item de texto en coordenadas de viewport (Y hacia abajo:
+// viewport.transform ya hace el flip del espacio PDF, donde Y va hacia arriba).
+function itemGeom(item, vpTransform) {
+    const tx = pdfjsLib.Util.transform(vpTransform, item.transform);
+    if (!isFinite(tx[4]) || !isFinite(tx[5])) return null;
+    const fontH = Math.hypot(tx[2], tx[3]) || Math.abs(tx[3]) || 8;
+    const adv   = Math.hypot(tx[0], tx[1]) || 1;
+    return {
+        x: tx[4], y: tx[5],            // origen de la línea base
+        fontH,
+        wx: tx[0] / adv, wy: tx[1] / adv,   // dirección de avance del texto
+        ux: tx[2] / fontH, uy: tx[3] / fontH, // dirección ascendente (hacia arriba en pantalla)
+        width: item.width || 0
+    };
+}
+
+// Caja envolvente de un tramo [t0,t1] (fracciones del ancho) de un item.
+// s recorre de -0.24 (descendentes) a 1.06 (acentos/mayúsculas) del alto de fuente.
+function spanBox(g, t0, t1) {
+    if (!g || !g.width) return null;
+    const xs = [], ys = [];
+    [[t0, -0.24], [t1, -0.24], [t1, 1.06], [t0, 1.06]].forEach(([t, s]) => {
+        xs.push(g.x + g.wx * g.width * t + g.ux * g.fontH * s);
+        ys.push(g.y + g.wy * g.width * t + g.uy * g.fontH * s);
+    });
+    return { x0: Math.min(...xs), y0: Math.min(...ys), x1: Math.max(...xs), y1: Math.max(...ys) };
+}
+
+function unionBox(a, b) {
+    if (!a) return b;
+    if (!b) return a;
+    return { x0: Math.min(a.x0, b.x0), y0: Math.min(a.y0, b.y0), x1: Math.max(a.x1, b.x1), y1: Math.max(a.y1, b.y1) };
+}
+
+// Caja de un rango de caracteres [from,to) de la cadena reconstruida de la línea.
+// Dentro de cada item se interpola proporcionalmente (los caracteres se asumen
+// de ancho uniforme: es una aproximación, por eso luego añadimos padding).
+function rangeBox(built, from, to) {
+    let box = null;
+    for (const seg of built.map) {
+        if (seg.to <= from || seg.from >= to) continue;
+        const len = seg.to - seg.from;
+        if (len <= 0) continue;
+        const t0 = Math.max(0, (from - seg.from) / len);
+        const t1 = Math.min(1, (to   - seg.from) / len);
+        if (t1 <= t0) continue;
+        box = unionBox(box, spanBox(seg.g, t0, t1));
+    }
+    return box;
+}
+
+// Normaliza a 0–1 y añade padding para no dejar bordes de glifo asomando.
+function boxToRect(box, W, H, page, extra) {
+    if (!box) return null;
+    // primero a 0–1, y solo después el padding (también en unidades 0–1)
+    let w = (box.x1 - box.x0) / W, h = (box.y1 - box.y0) / H;
+    const padX = Math.max(0.0035, w * 0.03) + (extra || 0);
+    const padY = Math.max(0.004,  h * 0.10) + (extra || 0);
+    const x = (box.x0 / W) - padX, y = (box.y0 / H) - padY;
+    w += padX * 2;
+    h += padY * 2;
+    if (!isFinite(x) || !isFinite(y) || w <= 0 || h <= 0) return null;
+    if (w > 1.4 || h > 0.5) return null;   // descarta cajas absurdas
+    const cx = Math.max(0, Math.min(1, x)), cy = Math.max(0, Math.min(1, y));
+    return { page, x: cx, y: cy, w: Math.min(1 - cx, w), h: Math.min(1 - cy, h) };
+}
+
+// Construye la cadena de una línea. withGaps=false pega los items sin espacio
+// (recupera un DNI partido en dos fragmentos: "1234" + "5678Z"); withGaps=true
+// mete un espacio entre items (recupera el caso contrario, "Juan" + "12345678Z",
+// donde pegarlos rompería el \b del regex). Escaneamos ambas variantes.
+function buildLine(items, withGaps) {
+    let s = '';
+    const map = [];
+    items.forEach((it, i) => {
+        if (i > 0 && withGaps) s += ' ';
+        map.push({ g: it.g, from: s.length, to: s.length + it.str.length });
+        s += it.str;
+    });
+    return { s, map };
+}
+
+function scanLine(built, page, W, H, out) {
+    PATTERNS.forEach(p => {
+        p.re.lastIndex = 0;
+        let m;
+        while ((m = p.re.exec(built.s)) !== null) {
+            if (!m[0].length) { p.re.lastIndex++; continue; }
+            const rect = boxToRect(rangeBox(built, m.index, m.index + m[0].length), W, H, page);
+            if (rect) {
+                rect.sug  = true;
+                rect.kind = p.kind;
+                rect.conf = (p.kind === 'DNI' && dniOk(m[0])) ? 'alta' : 'normal';
+                out.push(rect);
+            }
+        }
+    });
+}
+
+// Solapamiento relativo al menor de los dos rectángulos.
+function overlapRatio(a, b) {
+    if (a.page !== b.page) return 0;
+    const ix = Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x));
+    const iy = Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
+    const inter = ix * iy;
+    const min = Math.min(a.w * a.h, b.w * b.h);
+    return min > 0 ? inter / min : 0;
+}
+
+async function scanPage(page, n, out) {
+    const vp = page.getViewport({ scale: 1 });
+    const W = vp.width, H = vp.height;
+    const tc = await page.getTextContent();
+
+    const items = [];
+    for (const it of tc.items) {
+        if (!it.str || !it.str.length) continue;
+        const g = itemGeom(it, vp.transform);
+        if (!g) continue;
+        items.push({ str: it.str.replace(/ /g, ' '), g, eol: !!it.hasEOL });
+    }
+    if (!items.length) return 0;
+
+    // Agrupación en líneas por proximidad de línea base
+    items.sort((a, b) => (a.g.y - b.g.y) || (a.g.x - b.g.x));
+    const lines = [];
+    let cur = [];
+    for (const it of items) {
+        if (!cur.length) { cur.push(it); continue; }
+        const prev = cur[cur.length - 1];
+        const tol = Math.max(1.5, prev.g.fontH * 0.6);
+        if (Math.abs(it.g.y - prev.g.y) > tol || prev.eol) { lines.push(cur); cur = [it]; }
+        else cur.push(it);
+    }
+    if (cur.length) lines.push(cur);
+    lines.forEach(l => l.sort((a, b) => a.g.x - b.g.x));
+
+    // 1) Datos personales, en las dos variantes de reconstrucción de la línea
+    lines.forEach(l => {
+        const tight = buildLine(l, false);
+        scanLine(tight, n, W, H, out);
+        if (l.length > 1) scanLine(buildLine(l, true), n, W, H, out);
+    });
+
+    // 2) Sellos visuales de firma: la línea que casa arrastra las contiguas del
+    //    mismo bloque (un sello suele ocupar entre 2 y 5 líneas).
+    const lineInfo = lines.map(l => {
+        const spaced = buildLine(l, true);
+        let box = null;
+        l.forEach(it => { box = unionBox(box, spanBox(it.g, 0, 1)); });
+        return { text: spaced.s, box, fontH: l[0].g.fontH };
+    });
+    lineInfo.forEach((li, i) => {
+        if (!li.box || !FIRMA_RE.test(li.text)) return;
+        let box = li.box, text = li.text;
+        const grow = dir => {
+            for (let k = 1; k <= 4; k++) {
+                const nb = lineInfo[i + dir * k];
+                if (!nb || !nb.box) break;
+                const gap = dir > 0 ? nb.box.y0 - box.y1 : box.y0 - nb.box.y1;
+                if (gap > li.fontH * 1.6 || gap < -li.fontH) break;
+                const ox = Math.min(box.x1, nb.box.x1) - Math.max(box.x0, nb.box.x0);
+                if (ox <= 0) break;
+                box = unionBox(box, nb.box);
+                text += ' ' + nb.text;
+            }
+        };
+        grow(-1); grow(1);
+        const rect = boxToRect(box, W, H, n, 0.004);
+        if (rect && rect.h <= 0.28) {   // un sello no ocupa un cuarto de página
+            rect.sug  = true;
+            rect.kind = 'FIRMA';
+            rect.conf = DOC_RE.test(text) ? 'alta' : 'normal';
+            out.push(rect);
+        }
+    });
+    return items.length;
+}
+
+async function scanDocument() {
+    if (!pdfDoc) return;
+    const token = ++scanToken;
+    const doc = pdfDoc, total = numPages;
+    scanNoteText.textContent = 'Analizando el texto del documento…';
+    scanNote.classList.add('active');
+
+    const found = [];
+    let textItems = 0;
+    try {
+        for (let n = 1; n <= total; n++) {
+            if (token !== scanToken) return;
+            if (total > 4) scanNoteText.textContent = `Analizando el texto del documento… (página ${n} de ${total})`;
+            const page = await doc.getPage(n);
+            textItems += await scanPage(page, n, found);
+            page.cleanup();
+            await new Promise(r => setTimeout(r, 0));   // cede el hilo: la UI sigue viva
+        }
+    } catch (err) {
+        if (token !== scanToken) return;
+        scanNoteText.textContent = 'No se ha podido analizar el texto de este PDF. Dibuja los bloques a mano sobre las páginas.';
+        return;
+    }
+    if (token !== scanToken) return;
+
+    if (!textItems) {
+        scanNoteText.textContent = 'No se ha detectado texto — este PDF parece escaneado; dibuja los bloques a mano.';
+        return;
+    }
+
+    // Dedupe: los patrones se solapan entre sí (un NIE también casa como CIF)
+    const kept = [];
+    found.forEach(r => {
+        if (!kept.some(k => overlapRatio(k, r) > 0.6)) kept.push(r);
+    });
+
+    if (!kept.length) {
+        scanNoteText.textContent = 'No se han encontrado DNI, NIE, CIF, IBAN, teléfonos, emails ni sellos de firma en el texto. Revisa el documento y dibuja a mano lo que quieras ocultar.';
+        return;
+    }
+
+    scanNote.classList.remove('active');
+    kept.forEach(r => rects.push(r));
+    renderBoxes();
+}
+
+/* ── Repetir un bloque en varias páginas (sello de firma por hoja) ── */
+btnRepeat.addEventListener('click', () => {
+    if (selectedIdx < 0) return;
+    const on = repeatPanel.classList.toggle('active');
+    if (on) { repFrom.value = 1; repTo.value = numPages; repFrom.focus(); }
+});
+
+btnRepeatCancel.addEventListener('click', () => repeatPanel.classList.remove('active'));
+
+btnRepeatApply.addEventListener('click', () => {
+    const src = rects[selectedIdx];
+    if (!src) return;
+    let from = parseInt(repFrom.value, 10) || 1;
+    let to   = parseInt(repTo.value, 10) || numPages;
+    from = Math.max(1, Math.min(numPages, from));
+    to   = Math.max(1, Math.min(numPages, to));
+    if (from > to) { const t = from; from = to; to = t; }
+
+    // Si el origen era una sugerencia, repetirla equivale a aceptarla.
+    if (src.sug) { delete src.sug; delete src.conf; }
+
+    let added = 0;
+    for (let n = from; n <= to; n++) {
+        if (n === src.page) continue;
+        const cand = { page: n, x: src.x, y: src.y, w: src.w, h: src.h };
+        if (rects.some(r => overlapRatio(r, cand) > 0.9)) continue;   // ya estaba
+        rects.push(cand);
+        added++;
+    }
+    repeatPanel.classList.remove('active');
+    renderBoxes();
+    if (added) {
+        showNote(`Se han añadido ${added} ${added === 1 ? 'bloque' : 'bloques'} (páginas ${from}–${to}). El sello puede estar desplazado en alguna hoja: revisa todas las páginas antes de descargar.`);
+    } else {
+        showNote('No se ha añadido ningún bloque: esas páginas ya tenían uno en la misma posición.');
+    }
+});
+
 /* ── Exportación: rasterizar + censurar + reconstruir ── */
 btnDescargar.addEventListener('click', async () => {
     if (!pdfDoc || !currentFile) return;
+    // Nada se aplana sin que haya pasado por los ojos del usuario: si quedan
+    // sugerencias sin revisar no exportamos, para que no se cuele un dato sin
+    // censurar ni se tape algo que nunca se miró.
+    const pend = pendingRects();
+    if (pend.length) {
+        showError(`Tienes ${pend.length} ${pend.length === 1 ? 'sugerencia sin revisar' : 'sugerencias sin revisar'}: acéptalas o descártalas antes de descargar.`);
+        suggestBar.classList.remove('pulse');
+        void suggestBar.offsetWidth;   // reinicia la animación
+        suggestBar.classList.add('pulse');
+        suggestBar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+    }
     if (!rects.length) {
         showError('Dibuja al menos un bloque de censura antes de descargar.');
         return;
@@ -957,7 +1512,8 @@ btnDescargar.addEventListener('click', async () => {
             await page.render({ canvasContext: offCtx, viewport: vp }).promise;
 
             offCtx.fillStyle = '#000000';
-            rects.filter(r => r.page === n).forEach(r => {
+            // solo bloques confirmados: una sugerencia sin revisar nunca se aplana
+            rects.filter(r => r.page === n && !r.sug).forEach(r => {
                 // 1px extra por lado: evita que el antialiasing deje un borde legible
                 offCtx.fillRect(
                     Math.floor(r.x * off.width) - 1,
