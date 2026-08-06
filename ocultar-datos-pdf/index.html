@@ -806,7 +806,7 @@
       </div>
       <div class="faq-item">
         <h3>¿Qué límites tiene?</h3>
-        <p>Archivos de hasta 100 MB y 400 páginas, pensado para expedientes completos con sello de firma en cada hoja. En documentos de más de 150 páginas las hojas se rasterizan a 150 ppp en lugar de 200, para que la pestaña no se quede sin memoria: el texto no censurado se sigue leyendo perfectamente. Si tu documento es aún mayor, puedes <a href="/dividir-pdf/">dividirlo</a> primero y censurar las partes por separado.</p>
+        <p>Archivos de hasta 100 MB y 400 páginas, pensado para expedientes completos con sello de firma en cada hoja. En documentos largos las hojas se rasterizan a menos resolución para que la pestaña no se quede sin memoria: 200 ppp hasta 150 páginas, 150 ppp hasta 300 y 120 ppp por encima. El texto no censurado se sigue leyendo con comodidad en pantalla. Si tu documento es aún mayor, puedes <a href="/dividir-pdf/">dividirlo</a> primero y censurar las partes por separado.</p>
       </div>
   </div>
 </section>
@@ -828,11 +828,13 @@ const MAX_MB    = 100;
 const MAX_PAGES = 400;
 // El aplanado no acumula imágenes (un solo canvas, blob liberado por página), pero
 // los JPEG embebidos sí viven dentro del documento de salida hasta el save(), y ahí
-// se duplican. Por encima de LONG_DOC páginas bajamos a 150 ppp: el pico de memoria
-// de la pestaña cae casi a la mitad y el texto no censurado se sigue leyendo bien.
-const DPI_FULL  = 200;
-const DPI_LONG  = 150;
+// se duplican: ese es el pico real. Bajamos los ppp por tramos según lo largo que
+// sea el documento, para que la pestaña no se quede sin memoria a mitad de camino.
+const DPI_FULL  = 200;   // hasta 150 páginas: calidad de siempre
+const DPI_LONG  = 150;   // 151-300 páginas
+const DPI_XLONG = 120;   // más de 300 páginas
 const LONG_DOC  = 150;
+const XLONG_DOC = 300;
 
 const uploadZone    = document.getElementById('uploadZone');
 const fileInput     = document.getElementById('fileInput');
@@ -1510,7 +1512,9 @@ btnDescargar.addEventListener('click', async () => {
         outDoc.setProducer('pdfrapido.eu');
         outDoc.setCreator('PDFRápido — Ocultar datos en PDF');
 
-        const dpi = numPages > LONG_DOC ? DPI_LONG : DPI_FULL;
+        const dpi = numPages > XLONG_DOC ? DPI_XLONG
+                  : numPages > LONG_DOC  ? DPI_LONG
+                  : DPI_FULL;
         if (numPages > LONG_DOC) {
             loadingTitle.textContent = `Generando PDF censurado (${numPages} páginas)`;
         }
