@@ -501,7 +501,7 @@
             </svg>
         </div>
         <h3><span>Elige un PDF</span> o arrástralo aquí</h3>
-        <p>PDF · máx. 40 MB · hasta 100 páginas · se procesa en tu navegador</p>
+        <p>PDF · máx. 100 MB · hasta 400 páginas · se procesa en tu navegador</p>
     </div>
 
     <div class="editor-area" id="editorArea">
@@ -806,7 +806,7 @@
       </div>
       <div class="faq-item">
         <h3>¿Qué límites tiene?</h3>
-        <p>Archivos de hasta 40 MB y 100 páginas, para garantizar un procesado fluido en el navegador. Si tu documento es mayor, puedes <a href="/dividir-pdf/">dividirlo</a> primero y censurar las partes por separado.</p>
+        <p>Archivos de hasta 100 MB y 400 páginas, pensado para expedientes completos con sello de firma en cada hoja. En documentos de más de 150 páginas las hojas se rasterizan a 150 ppp en lugar de 200, para que la pestaña no se quede sin memoria: el texto no censurado se sigue leyendo perfectamente. Si tu documento es aún mayor, puedes <a href="/dividir-pdf/">dividirlo</a> primero y censurar las partes por separado.</p>
       </div>
   </div>
 </section>
@@ -824,13 +824,21 @@
 <script>
 pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdf-3.11.worker.min.js';
 
-const MAX_MB    = 40;
-const MAX_PAGES = 100;
+const MAX_MB    = 100;
+const MAX_PAGES = 400;
+// El aplanado no acumula imágenes (un solo canvas, blob liberado por página), pero
+// los JPEG embebidos sí viven dentro del documento de salida hasta el save(), y ahí
+// se duplican. Por encima de LONG_DOC páginas bajamos a 150 ppp: el pico de memoria
+// de la pestaña cae casi a la mitad y el texto no censurado se sigue leyendo bien.
+const DPI_FULL  = 200;
+const DPI_LONG  = 150;
+const LONG_DOC  = 150;
 
 const uploadZone    = document.getElementById('uploadZone');
 const fileInput     = document.getElementById('fileInput');
 const editorArea    = document.getElementById('editorArea');
 const loadingArea   = document.getElementById('loadingArea');
+const loadingTitle  = document.getElementById('loadingTitle');
 const loadingDetail = document.getElementById('loadingDetail');
 const resultArea    = document.getElementById('resultArea');
 const errorBanner   = document.getElementById('errorBanner');
@@ -1444,6 +1452,10 @@ btnRepeatApply.addEventListener('click', () => {
     from = Math.max(1, Math.min(numPages, from));
     to   = Math.max(1, Math.min(numPages, to));
     if (from > to) { const t = from; from = to; to = t; }
+    // Con expedientes de cientos de hojas el rango por defecto es el documento entero:
+    // confirmamos antes de sembrar cientos de bloques que luego habría que borrar a mano.
+    const span = to - from + 1;
+    if (span > 100 && !confirm(`Vas a copiar el bloque a ${span} páginas (de la ${from} a la ${to}). ¿Continuar?`)) return;
 
     // Si el origen era una sugerencia, repetirla equivale a aceptarla.
     if (src.sug) { delete src.sug; delete src.conf; }
@@ -1498,12 +1510,18 @@ btnDescargar.addEventListener('click', async () => {
         outDoc.setProducer('pdfrapido.eu');
         outDoc.setCreator('PDFRápido — Ocultar datos en PDF');
 
+        const dpi = numPages > LONG_DOC ? DPI_LONG : DPI_FULL;
+        if (numPages > LONG_DOC) {
+            loadingTitle.textContent = `Generando PDF censurado (${numPages} páginas)`;
+        }
+
         for (let n = 1; n <= numPages; n++) {
-            loadingDetail.textContent = `Procesando página ${n} de ${numPages}…`;
+            loadingDetail.textContent =
+                `Procesando página ${n} de ${numPages} (${Math.round(n / numPages * 100)} %)…`;
             const page = await pdfDoc.getPage(n);
             const base = page.getViewport({ scale: 1 });
-            // ~200 ppp con tope de lado para controlar memoria y peso
-            const scale = Math.min(200 / 72, 2600 / Math.max(base.width, base.height));
+            // ppp adaptativo, con tope de lado para controlar memoria y peso
+            const scale = Math.min(dpi / 72, 2600 / Math.max(base.width, base.height));
             const vp = page.getViewport({ scale: Math.max(1, scale) });
             off.width = Math.floor(vp.width);
             off.height = Math.floor(vp.height);
@@ -1524,6 +1542,8 @@ btnDescargar.addEventListener('click', async () => {
             });
 
             const blob = await new Promise(res => off.toBlob(res, 'image/jpeg', 0.85));
+            // toBlob devuelve null cuando el navegador no consigue reservar el bitmap
+            if (!blob) throw new Error('OOM_CANVAS');
             const jpg = await outDoc.embedJpg(await blob.arrayBuffer());
             const outPage = outDoc.addPage([base.width, base.height]);
             outPage.drawImage(jpg, { x: 0, y: 0, width: base.width, height: base.height });
@@ -1532,6 +1552,10 @@ btnDescargar.addEventListener('click', async () => {
         }
 
         off.width = off.height = 0;
+        // El save() es el otro pico de memoria (duplica los JPEG embebidos): avisamos
+        // y cedemos el hilo para que el mensaje llegue a pintarse antes de bloquear.
+        loadingDetail.textContent = 'Ensamblando el PDF final…';
+        await new Promise(r => setTimeout(r, 0));
         const outBytes = await outDoc.save();
         const url = URL.createObjectURL(new Blob([outBytes], { type: 'application/pdf' }));
         const baseName = currentFile.name.replace(/\.pdf$/i, '');
@@ -1543,14 +1567,23 @@ btnDescargar.addEventListener('click', async () => {
         countText.textContent = (rects.length === 1 ? 'zona censurada' : 'zonas censuradas') + ` en ${numPages} ${numPages === 1 ? 'página' : 'páginas'}`;
 
         loadingArea.classList.remove('active');
+        loadingTitle.textContent = 'Generando PDF censurado';
         resultArea.classList.add('active');
         btnDescargar.disabled = false;
     } catch (err) {
         off.width = off.height = 0;
         loadingArea.classList.remove('active');
+        loadingTitle.textContent = 'Generando PDF censurado';
         editorArea.classList.add('active');
         btnDescargar.disabled = false;
-        showError('No se pudo generar el PDF. Si el documento es muy grande, prueba a dividirlo primero.');
+        // Distinguimos quedarse sin memoria de un error cualquiera: con 400 páginas
+        // es el fallo probable, y el usuario necesita saber qué hacer, no un genérico.
+        const msg = (err && err.message) || '';
+        const oom = err instanceof RangeError || msg === 'OOM_CANVAS' ||
+                    /alloc|out of memory|string length/i.test(msg);
+        showError(oom
+            ? `Tu navegador se ha quedado sin memoria al generar el PDF (${numPages} páginas). El documento es demasiado grande para procesarlo entero en la pestaña: divídelo en partes con la herramienta Dividir PDF y censura cada parte por separado. Cerrar otras pestañas antes de reintentarlo también ayuda.`
+            : 'No se pudo generar el PDF. Si el documento es muy grande, prueba a dividirlo primero.');
     }
 });
 
