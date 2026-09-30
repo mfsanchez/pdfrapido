@@ -361,26 +361,34 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Puedo cambiar un PDF de A4 a Carta sin perder contenido?",
+          "name": "¿Puedo pasar de A4 a Carta sin perder contenido?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Activa la opción 'Ajustar contenido' para que el texto e imágenes se escalen automáticamente al nuevo tamaño. Si el tamaño destino es mayor, el contenido queda centrado en la página ampliada."
+            "text": "Sí, con «Ajustar contenido» activado: el contenido se escala de forma uniforme y se centra, sin recortar nada."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se sube el PDF al servidor al redimensionarlo?",
+          "name": "¿Qué pasa si el PDF tiene páginas de distintos tamaños?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería pdf-lib. Tu documento no abandona tu dispositivo en ningún momento."
+            "text": "Todas pasan al formato elegido; con «Ajustar contenido», cada una se escala según su tamaño original."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué formatos de página admite la herramienta?",
+          "name": "¿Puedo usar un tamaño personalizado?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puedes elegir entre A4 (210×297 mm), A3 (297×420 mm), A5 (148×210 mm), Carta/Letter (215,9×279,4 mm), Legal (215,9×355,6 mm) y tamaño personalizado en milímetros, con orientación vertical u horizontal."
+            "text": "Sí, indicando ancho y alto en milímetros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se sube el PDF a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Todo ocurre en tu navegador con pdf-lib."
           }
         }
       ]
@@ -398,24 +406,25 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
           "@type": "HowToStep",
           "position": 1,
           "name": "Sube tu PDF",
-          "text": "Arrastra el archivo o haz clic para seleccionarlo. Compatible con cualquier PDF, incluyendo documentos de varias páginas."
+          "text": "Verás el tamaño de página actual."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Elige el formato y opciones",
-          "text": "Selecciona el tamaño destino (A4, A3, Carta, etc.), la orientación y si deseas escalar el contenido al nuevo tamaño."
+          "name": "Elige formato, orientación y modo",
+          "text": "A4, A3, A5, Carta, Legal o un tamaño personalizado en milímetros; vertical u horizontal; y si quieres ajustar el contenido al nuevo tamaño."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el resultado",
-          "text": "En segundos obtienes el PDF con las nuevas dimensiones de página. Descárgalo directamente a tu dispositivo."
+          "text": "Todas las páginas pasan al formato elegido."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -443,6 +452,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -461,6 +471,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -682,101 +693,50 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
 
 
 <!-- SEO CONTENT (inline, tool-specific) -->
-<div class="seo-content">
-    <h2>Cómo redimensionar las páginas de un PDF</h2>
-    <p>Con esta herramienta puedes cambiar el formato de página de cualquier PDF en segundos. Tanto si necesitas convertir un documento de tamaño Carta a A4 para imprimirlo en Europa, como si quieres pasar de A4 a A3 para una presentación, el proceso es completamente automático y gratuito.</p>
 
-    <h3>Diferencia entre formatos de papel</h3>
-    <p>El formato A4 (210 × 297 mm) es el estándar en España y Europa. El formato Carta (Letter, 215,9 × 279,4 mm) es el habitual en Estados Unidos y América Latina. Aunque son parecidos, las diferencias hacen que un documento pensado para uno no encaje bien en el otro al imprimir. Redimensionar el PDF soluciona este problema sin tener que editar el documento original.</p>
 
-    <h3>Opciones disponibles</h3>
+  <section class="content-seo" aria-label="Guía para redimensionar un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube tu PDF</h3><p>Verás el tamaño de página actual.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige formato, orientación y modo</h3><p>A4, A3, A5, Carta, Legal o un tamaño personalizado en milímetros; vertical u horizontal; y si quieres ajustar el contenido al nuevo tamaño.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el resultado</h3><p>Todas las páginas pasan al formato elegido.</p></div></div>
+    </div>
+    <p>El cambio se hace en tu navegador con pdf-lib; el archivo no se sube a ningún servidor. Con «Ajustar contenido», cada página se escala de forma uniforme (sin deformarse) hasta caber en el nuevo tamaño y se centra. Sin esa opción, solo cambia el tamaño de la hoja y el contenido se queda en su posición, por lo que puede quedar cortado o con márgenes vacíos.</p>
+    <p>A4 (210 × 297 mm) es el formato habitual en España y Europa; Carta (215,9 × 279,4 mm) el de EE. UU. y parte de América Latina; Legal (215,9 × 355,6 mm) se usa en documentos jurídicos norteamericanos.</p>
+
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Imprimir en A4 un PDF en formato Carta</strong><span>Evita márgenes descompensados o texto cortado al imprimir documentos recibidos de EE. UU.</span></div>
+      <div class="use-case"><strong>Pasar un A4 a A3</strong><span>Imprimir un cartel o un plano a mayor tamaño con el contenido escalado.</span></div>
+      <div class="use-case"><strong>Unificar formatos antes de unir</strong><span>Dejar todos los documentos de un expediente en A4 antes de <a href="/unir-pdf/">unirlos</a>.</span></div>
+    </div>
+
+    <h2>Limitaciones</h2>
     <ul>
-        <li><strong>A4, A3, A5:</strong> estándares ISO usados en Europa, Asia y la mayoría del mundo.</li>
-        <li><strong>Carta (Letter):</strong> 215,9 × 279,4 mm, formato habitual en EE.UU. y México.</li>
-        <li><strong>Legal:</strong> 215,9 × 355,6 mm, para documentos legales norteamericanos.</li>
-        <li><strong>Personalizado:</strong> introduce cualquier dimensión en milímetros.</li>
+      <li>Se aplica el mismo formato a todas las páginas; no se puede redimensionar solo una parte.</li>
+      <li>Escalar no añade resolución: una imagen de baja calidad ampliada a A3 se verá igual de pixelada.</li>
+      <li>Si el formato de destino tiene otra proporción, con «Ajustar contenido» quedarán márgenes en blanco a los lados o arriba y abajo.</li>
     </ul>
+    <!-- TODO(contenido): comprobar si los enlaces y los campos de formulario siguen en su sitio tras «Ajustar contenido» (pdf-lib escala el contenido, no las anotaciones) y documentarlo. -->
 
-    <h3>¿Ajustar contenido o solo cambiar tamaño?</h3>
-    <p>Si activas <em>Ajustar contenido</em>, el texto y los elementos gráficos se escalan proporcionalmente para llenar la nueva página. Si solo cambias el tamaño de la página sin ajustar, el contenido permanece en las mismas coordenadas: esto es útil para añadir márgenes a un PDF demasiado justo o para recortar un área específica.</p>
-</div>
+    <h2>Preguntas frecuentes sobre redimensionar PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Puedo pasar de A4 a Carta sin perder contenido?</h3><p>Sí, con «Ajustar contenido» activado: el contenido se escala de forma uniforme y se centra, sin recortar nada.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa si el PDF tiene páginas de distintos tamaños?</h3><p>Todas pasan al formato elegido; con «Ajustar contenido», cada una se escala según su tamaño original.</p></div>
+      <div class="faq-item"><h3>¿Puedo usar un tamaño personalizado?</h3><p>Sí, indicando ancho y alto en milímetros.</p></div>
+      <div class="faq-item"><h3>¿Se sube el PDF a algún servidor?</h3><p>No. Todo ocurre en tu navegador con pdf-lib.</p></div>
+    </div>
 
-<div class="related-tools">
-    <h3>Herramientas relacionadas</h3>
-    <ul>
-        <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        <li><a href="/recortar-pdf/">Recortar PDF</a></li>
-        <li><a href="/rotar-pdf/">Rotar PDF</a></li>
-        <li><a href="/organizar-pdf/">Organizar páginas</a></li>
-        <li><a href="/dividir-pdf/">Dividir PDF</a></li>
-        <li><a href="/numerar-paginas/">Numerar páginas</a></li>
-    </ul>
-</div>
-
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Redimensionar PDF?</h2>
-  <p>El proceso de redimensionado de páginas PDF se realiza íntegramente en tu navegador. No se envía ningún archivo a servidores externos, lo que garantiza la privacidad de tus documentos.</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube tu PDF</h3>
-          <p>Arrastra el archivo o haz clic para seleccionarlo. Compatible con cualquier PDF, incluyendo documentos de varias páginas.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Elige el formato y opciones</h3>
-          <p>Selecciona el tamaño destino (A4, A3, Carta, etc.), la orientación y si deseas escalar el contenido al nuevo tamaño.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el resultado</h3>
-          <p>En segundos obtienes el PDF con las nuevas dimensiones de página. Descárgalo directamente a tu dispositivo.</p>
-        </div>
-      </div>
-  </div>
-
-  <h2>¿Cuándo necesitas redimensionar un PDF?</h2>
-  <p>Cambiar el tamaño de página de un PDF es necesario en múltiples situaciones del trabajo diario:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Impresión en papel estándar</strong>
-        <span>Un PDF recibido desde EE.UU. en formato Carta no imprime bien en papel A4 europeo. Redimensionarlo a A4 evita márgenes incorrectos y contenido cortado.</span>
-      </div>
-      <div class="use-case">
-        <strong>Presentaciones y carteles</strong>
-        <span>Convertir un informe A4 a A3 para imprimirlo como cartel o mural, manteniendo todo el contenido escalado y centrado en el formato mayor.</span>
-      </div>
-      <div class="use-case">
-        <strong>Documentos para móvil o tablet</strong>
-        <span>Reducir un PDF A4 a A5 lo hace más cómodo de leer en pantallas pequeñas o en lectores de ebooks.</span>
-      </div>
-      <div class="use-case">
-        <strong>Normalización de documentos</strong>
-        <span>Estandarizar todos los documentos de una empresa al mismo formato antes de unirlos o archivarlos.</span>
-      </div>
-  </div>
-
-  <h2>Preguntas frecuentes sobre Redimensionar PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Puedo cambiar un PDF de A4 a Carta sin perder contenido?</h3>
-        <p>Sí. Activa la opción "Ajustar contenido" para que el texto e imágenes se escalen automáticamente al nuevo tamaño de página. La herramienta aplica escala uniforme y centra el contenido, por lo que no se pierde ningún elemento del documento original.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Se sube el PDF al servidor al redimensionarlo?</h3>
-        <p>No. Todo el procesamiento ocurre directamente en tu navegador mediante la librería open-source pdf-lib. Tu documento no abandona tu dispositivo en ningún momento, lo que garantiza total privacidad y funciona incluso sin conexión a internet una vez cargada la página.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué ocurre si el PDF tiene varias páginas?</h3>
-        <p>La herramienta redimensiona todas las páginas del PDF simultáneamente, aplicando el mismo formato y opciones a cada una. Si tu documento tiene páginas de distintos tamaños originales, el resultado unificará todas al formato elegido.</p>
-      </div>
-  </div>
-</section>
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/recortar-pdf/">Recortar PDF</a>
+      <a href="/rotar-pdf/">Rotar PDF</a>
+      <a href="/unir-pdf/">Unir PDF</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/como-redimensionar-pdf/">cómo redimensionar un PDF</a>.</p>
+  </section>
 </main>
 
 <footer>

@@ -257,26 +257,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Funciona con cualquier formulario PDF?",
+          "name": "¿Puedo rellenar un PDF sin campos de formulario?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Funciona con formularios que contengan campos de formulario (form fields). Si el formulario es una imagen plana, usa el Editor PDF para añadir texto encima."
+            "text": "Sí. Usa la barra de herramientas para añadir cajas de texto, casillas o fechas en cualquier punto de la página."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo guardar el progreso parcial?",
+          "name": "¿Puedo guardarlo a medias y seguir después?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes descargar el PDF en cualquier momento y continuar editándolo posteriormente."
+            "text": "No en formularios con campos: al descargar, el formulario se aplana y deja de ser editable. Complétalo del todo antes de descargarlo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Los datos que introduzco son privados?",
+          "name": "¿Funciona con los formularios de la Administración?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, toda la información se procesa localmente en tu navegador. Tus datos personales nunca se transmiten por Internet."
+            "text": "Con los que son PDF rellenables estándar, sí. Los formularios XFA y los trámites que solo existen como formulario web no."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo añadir mi firma?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, después de rellenarlo, con Firmar PDF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se envían mis datos a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El formulario se rellena y se genera en tu navegador."
           }
         }
       ]
@@ -293,25 +309,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Abre el formulario PDF",
-          "text": "Carga el PDF con los campos de formulario que quieres completar. La herramienta detecta automáticamente los campos editables."
+          "name": "Sube el formulario",
+          "text": "Si el PDF tiene campos de formulario, aparecen resaltados listos para escribir."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Completa los campos",
-          "text": "Haz clic en cada campo y escribe la información requerida. Los campos de selección, casillas de verificación y listas desplegables también son totalmente interactivos."
+          "name": "Rellena o añade campos",
+          "text": "Escribe en los campos de texto, marca casillas y elige opciones en listas y botones de opción. Si el PDF no tiene campos, usa la barra para colocar cajas de texto, casillas o fechas donde las necesites."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Descarga el formulario completado",
-          "text": "Guarda el PDF con todos los datos introducidos. El formulario queda rellenado con la información que has introducido, listo para enviarse o archivarse."
+          "name": "Descarga el PDF",
+          "text": "Los datos quedan guardados dentro del archivo."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -339,6 +356,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -357,6 +375,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -461,64 +480,10 @@
     </div>
 
 
-    <div class="seo">
-        <h2>Cómo rellenar un formulario PDF online gratis</h2>
-        <p>Sube tu PDF y la herramienta detecta automáticamente si tiene campos de formulario (AcroForm). Si los tiene, aparecen resaltados en azul listos para escribir. Si el PDF es estático (escaneado o sin campos), usa la barra de herramientas para añadir texto, casillas o fechas haciendo clic en cualquier parte del documento.</p>
-        <p>Todo el procesamiento ocurre en tu navegador: el archivo nunca se envía a ningún servidor. Al descargar, el contenido queda integrado en el PDF (aplanado) con total compatibilidad con cualquier lector PDF.</p>
-        <p>Ideal para contratos, solicitudes, formularios administrativos o cualquier documento que necesites completar sin imprimir ni instalar nada.</p>
-    </div>
 
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
-            <li><a href="/redactar-pdf/">Redactar PDF</a></li>
-            <li><a href="/extraer-datos/">Extraer datos</a></li>
-        </ul>
-    </div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo rellenar un formulario PDF online gratis</h2>
-        <p>Completa formularios PDF directamente en tu navegador. Escribe en campos de texto, marca casillas de verificación y selecciona opciones de listas desplegables. Sin instalar nada.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube el formulario PDF que necesitas completar.</li>
-            <li>Haz clic en los campos editables y escribe la información requerida.</li>
-            <li>Marca las casillas de verificación que correspondan.</li>
-            <li>Guarda y descarga el formulario completado.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Rellenar formularios PDF online es ideal para completar solicitudes, contratos, encuestas y documentos oficiales sin necesidad de imprimir, escribir a mano y escanear.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>Toda la información que introduces se procesa localmente. Tus datos personales nunca se transmiten por Internet.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Funciona con cualquier formulario PDF?</summary>
-            <p>Funciona con formularios que tengan campos editables (form fields). Si el formulario es una imagen plana, usa el Editor PDF para añadir texto encima.</p>
-        </details>
-        <details>
-            <summary>¿Puedo guardar el formulario parcialmente completado?</summary>
-            <p>Sí, puedes descargar el PDF en cualquier momento y continuar editándolo después.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-            <li><a href="/editor-pdf/">Editor PDF</a></li>
-            <li><a href="/pdf-a-word/">PDF a Word</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -541,89 +506,49 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Rellenar formulario PDF?</h2>
-  <p>Usar Rellenar formulario PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Abre el formulario PDF</h3>
-          <p>Carga el PDF con los campos de formulario que quieres completar. La herramienta detecta automáticamente los campos editables.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Completa los campos</h3>
-          <p>Haz clic en cada campo y escribe la información requerida. Los campos de selección, casillas de verificación y listas desplegables también son totalmente interactivos.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el formulario completado</h3>
-          <p>Guarda el PDF con todos los datos introducidos. El formulario queda rellenado con la información que has introducido, listo para enviarse o archivarse.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para rellenar un formulario PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el formulario</h3><p>Si el PDF tiene campos de formulario, aparecen resaltados listos para escribir.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Rellena o añade campos</h3><p>Escribe en los campos de texto, marca casillas y elige opciones en listas y botones de opción. Si el PDF no tiene campos, usa la barra para colocar cajas de texto, casillas o fechas donde las necesites.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>Los datos quedan guardados dentro del archivo.</p></div></div>
+    </div>
+    <p>Todo ocurre en tu navegador con pdf-lib; el documento no se sube a ningún servidor. En un formulario con campos, al descargar las respuestas se integran en la página (el formulario se «aplana»), así que se ven igual en cualquier visor pero ya no se pueden cambiar. En un PDF sin campos, las cajas que añades se guardan como campos rellenables.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Rellenar formulario PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Rellenar formularios de administraciones públicas</strong>
-        <span>Agencia Tributaria, Seguridad Social, ayuntamientos y otras administraciones distribuyen sus formularios en PDF. Rellénalos directamente sin imprimirlos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Completar solicitudes de empleo y becas</strong>
-        <span>Muchas empresas e instituciones académicas distribuyen sus formularios de solicitud en PDF. Rellena todos los campos digitalmente para una presentación más limpia.</span>
-      </div>
-      <div class="use-case">
-        <strong>Firmar y completar contratos</strong>
-        <span>Los contratos con campos de formulario pueden completarse con los datos de las partes directamente en el PDF, sin necesidad de imprimir, rellenar a mano y escanear.</span>
-      </div>
-      <div class="use-case">
-        <strong>Cumplimentar formularios de seguros y finanzas</strong>
-        <span>Pólizas de seguros, declaraciones financieras y otros documentos del sector financiero se distribuyen habitualmente como PDF con campos editables.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Solicitudes y formularios en PDF</strong><span>Instancias, solicitudes de becas o de empleo que se distribuyen como PDF rellenable.</span></div>
+      <div class="use-case"><strong>Contratos con huecos</strong><span>Completar nombre, DNI y fecha en un contrato antes de <a href="/firmar-pdf/">firmarlo</a>.</span></div>
+      <div class="use-case"><strong>Documentos escaneados</strong><span>Escribir encima de un impreso escaneado sin imprimirlo y volverlo a escanear.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Rellenar formulario PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Puedo rellenar un PDF que no tiene campos de formulario definidos?</h3>
-        <p>Sí. Puedes añadir texto libre sobre cualquier zona del PDF, aunque no tenga campos de formulario predefinidos. Usa el modo de anotación de texto libre para colocar texto en cualquier posición del documento.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Los datos del formulario quedan guardados permanentemente en el PDF?</h3>
-        <p>Sí. El PDF descargado incluye los datos del formulario como parte permanente del documento. A diferencia de rellenarlo en el navegador, los datos no se pierden al cerrar el archivo.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con formularios PDF protegidos?</h3>
-        <p>Los formularios con protección de edición general no permiten modificaciones. Sin embargo, muchos PDFs con campos de formulario permiten rellenarlos incluso con restricciones de edición del cuerpo del documento.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No se puede guardar a medias.</strong> En formularios con campos, el PDF descargado queda aplanado y no se puede seguir editando: rellénalo entero antes de descargar y guarda el original.</li>
+      <li><strong>Formularios XFA</strong> (algunos de la Administración creados con Adobe LiveCycle) pueden no mostrar sus campos. Muchos modelos tributarios, además, no son PDF sino formularios web.</li>
+      <li>En PDF sin campos, las cajas añadidas se colocan donde las pongas; ajusta bien la posición antes de descargar.</li>
+    </ul>
+    <!-- TODO(contenido): probar con formularios reales de la Administración (Seguridad Social, ayuntamientos) e indicar cuáles funcionan y cuáles son XFA. -->
+
+    <h2>Preguntas frecuentes sobre rellenar formularios PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Puedo rellenar un PDF sin campos de formulario?</h3><p>Sí. Usa la barra de herramientas para añadir cajas de texto, casillas o fechas en cualquier punto de la página.</p></div>
+      <div class="faq-item"><h3>¿Puedo guardarlo a medias y seguir después?</h3><p>No en formularios con campos: al descargar, el formulario se aplana y deja de ser editable. Complétalo del todo antes de descargarlo.</p></div>
+      <div class="faq-item"><h3>¿Funciona con los formularios de la Administración?</h3><p>Con los que son PDF rellenables estándar, sí. Los formularios XFA y los trámites que solo existen como formulario web no.</p></div>
+      <div class="faq-item"><h3>¿Puedo añadir mi firma?</h3><p>Sí, después de rellenarlo, con Firmar PDF.</p></div>
+      <div class="faq-item"><h3>¿Se envían mis datos a algún servidor?</h3><p>No. El formulario se rellena y se genera en tu navegador.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/firmar-pdf/">Firmar PDF</a>
+      <a href="/crear-formulario-pdf/">Crear formulario PDF</a>
+      <a href="/pdf-a-formulario/">PDF a formulario</a>
+      <a href="/proteger-pdf/">Proteger PDF</a>
+    </nav>
+  </section>
 </main>
 
-    <section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
-    <div style="font-size:14px;color:#6B7280;line-height:1.75">
-        <p>Rellena formularios PDF directamente en el navegador. Compatible con formularios interactivos (campos, casillas, desplegables) y con PDFs estáticos donde necesitas escribir encima del texto.</p>
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Formularios habituales que puedes rellenar</h2>
-        <ul style="padding-left:20px;margin-bottom:16px">
-            <li>Formularios de la Agencia Tributaria (IRPF, IVA, modelos 100, 303...)</li>
-            <li>Solicitudes de la Seguridad Social</li>
-            <li>Contratos de alquiler y compraventa</li>
-            <li>Formularios de inscripción y solicitudes de empleo</li>
-            <li>Partes de accidente e informes de siniestro</li>
-        </ul>
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
-        <p><strong>¿Funciona con formularios de la administración española?</strong><br>Sí. Los formularios oficiales son PDFs interactivos estándar totalmente compatibles con nuestra herramienta.</p>
-        <p><strong>¿Puedo guardar el formulario a medias?</strong><br>Sí. Descarga el PDF con los campos rellenos hasta ese momento y continúa más tarde.</p>
-        <p><strong>¿Puedo añadir la firma al formulario?</strong><br>Sí. Tras rellenar los campos usa <a href="/firmar-pdf/" style="color:#E8453C">firmar PDF</a> para añadir tu firma.</p>
-    </div>
-</section>
 <footer>
     <p>&copy; 2026 PDFRápido &mdash; dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> &nbsp;&middot;&nbsp; <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> &nbsp;&middot;&nbsp; <a href="/cookies/">Cookies</a> &nbsp;&middot;&nbsp; <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p>
 </footer>
