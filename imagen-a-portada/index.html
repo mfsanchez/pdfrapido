@@ -46,15 +46,33 @@
       "description": "Añade una imagen de portada a tu PDF online y gratis. Inserta una nueva página con tu imagen o superpónla sobre la primera página existente.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
       "inLanguage": "es",
-      "publisher": { "@type": "Person", "name": "MF Sanchez", "url": "https://mfsanchez.com" }
+      "publisher": {
+        "@type": "Person",
+        "name": "MF Sanchez",
+        "url": "https://mfsanchez.com"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "PDFRápido", "item": "https://pdfrapido.eu" },
-        { "@type": "ListItem", "position": 2, "name": "Imagen a Portada PDF", "item": "https://pdfrapido.eu/imagen-a-portada/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PDFRápido",
+          "item": "https://pdfrapido.eu"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Imagen a Portada PDF",
+          "item": "https://pdfrapido.eu/imagen-a-portada/"
+        }
       ]
     },
     {
@@ -63,32 +81,50 @@
         {
           "@type": "Question",
           "name": "¿La imagen sustituye a la primera página del PDF?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. En modo «nueva página de portada» la imagen se añade como página nueva al inicio y el contenido original empieza en la página 2. En modo «superponer» la imagen se dibuja encima de la primera página, pero el contenido original sigue existiendo debajo. Si quieres reemplazar una portada antigua, añade la nueva y elimina después la página sobrante con Eliminar páginas." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. En modo «nueva página de portada» la imagen se añade como página nueva al inicio y el contenido original empieza en la página 2. En modo «superponer» la imagen se dibuja encima de la primera página, pero el contenido original sigue existiendo debajo. Si quieres reemplazar una portada antigua, añade la nueva y elimina después la página sobrante con Eliminar páginas."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Puedo añadir la portada al final o en otra posición del PDF?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No, esta herramienta solo trabaja sobre la primera página. Para una contraportada o una imagen en una posición intermedia, convierte la imagen a PDF con JPG a PDF y colócala donde quieras con Unir PDF u Organizar páginas." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, esta herramienta solo trabaja sobre la primera página. Para una contraportada o una imagen en una posición intermedia, convierte la imagen a PDF con JPG a PDF y colócala donde quieras con Unir PDF u Organizar páginas."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Qué formatos de imagen admite?",
-          "acceptedAnswer": { "@type": "Answer", "text": "JPG, PNG y WebP. Las imágenes JPG y PNG se incrustan con sus datos originales; las WebP se convierten a PNG en tu navegador antes de incrustarse, sin alterar los píxeles." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JPG, PNG y WebP. Las imágenes JPG y PNG se incrustan con sus datos originales; las WebP se convierten a PNG en tu navegador antes de incrustarse, sin alterar los píxeles."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Pierde calidad la imagen de portada?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Los JPG y PNG se incrustan sin recomprimir y a su resolución original. Las WebP se recodifican a PNG, un formato sin pérdida, así que los píxeles tampoco cambian." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los JPG y PNG se incrustan sin recomprimir y a su resolución original. Las WebP se recodifican a PNG, un formato sin pérdida, así que los píxeles tampoco cambian."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Se suben mis archivos a algún servidor?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Todo el procesamiento ocurre en tu navegador con pdf-lib. Ni el PDF ni la imagen salen de tu dispositivo en ningún momento." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Todo el procesamiento ocurre en tu navegador. Ni el PDF ni la imagen salen de tu dispositivo en ningún momento."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Funciona con PDFs protegidos con contraseña?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Si el PDF está protegido, la herramienta muestra un error. Quita antes la contraseña con Desbloquear PDF y vuelve a intentarlo." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Si el PDF está protegido, la herramienta muestra un error. Quita antes la contraseña con Desbloquear PDF y vuelve a intentarlo."
+          }
         }
       ]
     },
@@ -96,7 +132,10 @@
       "@type": "HowTo",
       "name": "Cómo añadir una imagen de portada a un PDF",
       "totalTime": "PT1M",
-      "tool": { "@type": "HowToTool", "name": "PDFRápido Imagen a Portada" },
+      "tool": {
+        "@type": "HowToTool",
+        "name": "PDFRápido Imagen a Portada"
+      },
       "step": [
         {
           "@type": "HowToStep",

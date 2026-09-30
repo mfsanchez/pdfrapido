@@ -35,9 +35,11 @@ const EXCLUDE = new Set([
 ]);
 
 // ─── TOOLS ───
-const allDirs = getDirs(ROOT);
-const toolDirs = allDirs
-  .filter(d => !EXCLUDE.has(d) && !d.startsWith('.'))
+// Las herramientas son las del sitemap de herramientas (fuente única de la cifra pública)
+const sitemapTools = fs.readFileSync(path.join(ROOT, 'sitemap-tools.xml'), 'utf8');
+const toolDirs = [...sitemapTools.matchAll(/<loc>https:\/\/pdfrapido\.eu\/([a-z0-9-]+)\/<\/loc>/g)]
+  .map(m => m[1])
+  .filter(d => !EXCLUDE.has(d) && fs.existsSync(path.join(ROOT, d, 'index.html')))
   .sort();
 
 let toolSchemaCount = 0;
@@ -91,6 +93,7 @@ const pageDirs = ['sobre-pdfrapido','sobre-mf-sanchez','privacidad','terminos','
 
 let pageSchemaCount = 0;
 let pageBreadcrumbCount = 0;
+let pageTotal = 0;
 
 for (const dir of pageDirs) {
   const file = path.join(ROOT, dir, 'index.html');
@@ -99,12 +102,14 @@ for (const dir of pageDirs) {
     for (const sub of subdirs) {
       const subfile = path.join(ROOT, dir, sub, 'index.html');
       const html = readHtml(subfile);
+      pageTotal++;
       if (html.includes('schema.org')) pageSchemaCount++;
       if (html.includes('BreadcrumbList')) pageBreadcrumbCount++;
     }
     continue;
   }
   const html = readHtml(file);
+  pageTotal++;
   if (html.includes('schema.org')) pageSchemaCount++;
   if (html.includes('BreadcrumbList')) pageBreadcrumbCount++;
 }
@@ -165,15 +170,15 @@ for (const dir of pageDirs) scanLinks(dir);
 const report = {
   fecha: TODAY,
   urls_indexadas: {
-    total: toolDirs.length + blogDirs.length + pageDirs.length,
+    total: toolDirs.length + blogDirs.length + pageTotal,
     herramientas: toolDirs.length,
     blog: blogDirs.length,
-    paginas: pageDirs.length,
+    paginas: pageTotal,
   },
   schema_validacion: {
     herramientas: { con_schema: toolSchemaCount, total: toolDirs.length },
     blog: { con_schema: blogSchemaCount, total: blogDirs.length },
-    paginas: { con_schema: pageSchemaCount, total: pageDirs.length },
+    paginas: { con_schema: pageSchemaCount, total: pageTotal },
     breadcrumbs: {
       herramientas: toolBreadcrumbCount,
       blog: blogBreadcrumbCount,
@@ -366,16 +371,16 @@ footer {
     <div class="card-sub">${report.urls_indexadas.herramientas} herramientas · ${report.urls_indexadas.blog} blog · ${report.urls_indexadas.paginas} páginas</div>
   </div>
   <div class="card">
-    <div class="card-header">Schema.org <span class="dot" style="background:${statusColor(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageDirs.length)}"></span></div>
-    <div class="card-value">${pct(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageDirs.length)}%</div>
-    <div class="card-sub">${toolSchemaCount + blogSchemaCount + pageSchemaCount} de ${toolDirs.length + blogDirs.length + pageDirs.length} páginas con schema</div>
-    <div class="bar"><div class="bar-fill" style="width:${pct(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageDirs.length)}%;background:${statusColor(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageDirs.length)}"></div></div>
+    <div class="card-header">Schema.org <span class="dot" style="background:${statusColor(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageTotal)}"></span></div>
+    <div class="card-value">${pct(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageTotal)}%</div>
+    <div class="card-sub">${toolSchemaCount + blogSchemaCount + pageSchemaCount} de ${toolDirs.length + blogDirs.length + pageTotal} páginas con schema</div>
+    <div class="bar"><div class="bar-fill" style="width:${pct(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageTotal)}%;background:${statusColor(toolSchemaCount + blogSchemaCount + pageSchemaCount, toolDirs.length + blogDirs.length + pageTotal)}"></div></div>
   </div>
   <div class="card">
-    <div class="card-header">Breadcrumbs <span class="dot" style="background:${statusColor(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageDirs.length)}"></span></div>
-    <div class="card-value">${pct(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageDirs.length)}%</div>
-    <div class="card-sub">${toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount} de ${toolDirs.length + blogDirs.length + pageDirs.length} páginas con breadcrumb</div>
-    <div class="bar"><div class="bar-fill" style="width:${pct(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageDirs.length)}%;background:${statusColor(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageDirs.length)}"></div></div>
+    <div class="card-header">Breadcrumbs <span class="dot" style="background:${statusColor(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageTotal)}"></span></div>
+    <div class="card-value">${pct(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageTotal)}%</div>
+    <div class="card-sub">${toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount} de ${toolDirs.length + blogDirs.length + pageTotal} páginas con breadcrumb</div>
+    <div class="bar"><div class="bar-fill" style="width:${pct(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageTotal)}%;background:${statusColor(toolBreadcrumbCount + blogBreadcrumbCount + pageBreadcrumbCount, toolDirs.length + blogDirs.length + pageTotal)}"></div></div>
   </div>
   <div class="card">
     <div class="card-header">Enlaces Rotos <span class="dot" style="background:${brokenLinks.length === 0 ? 'var(--accent-green)' : 'var(--primary)'}"></span></div>
@@ -423,9 +428,9 @@ footer {
         </tr>
         <tr>
           <td><strong>Páginas</strong></td>
-          <td>${pageDirs.length}</td>
-          <td class="${pageSchemaCount >= pageDirs.length ? 'ok' : 'warn'}">${pageSchemaCount}/${pageDirs.length}</td>
-          <td class="${pageBreadcrumbCount >= pageDirs.length ? 'ok' : 'warn'}">${pageBreadcrumbCount}/${pageDirs.length}</td>
+          <td>${pageTotal}</td>
+          <td class="${pageSchemaCount >= pageTotal ? 'ok' : 'warn'}">${pageSchemaCount}/${pageTotal}</td>
+          <td class="${pageBreadcrumbCount >= pageTotal ? 'ok' : 'warn'}">${pageBreadcrumbCount}/${pageTotal}</td>
           <td>—</td><td>—</td><td>—</td>
         </tr>
       </tbody>

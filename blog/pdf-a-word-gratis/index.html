@@ -77,18 +77,53 @@
     <script src="/js/webmcp.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"¿Por qué el Word resultante no tiene exactamente el mismo diseño que el PDF?","acceptedAnswer":{"@type":"Answer","text":"El formato PDF y Word tienen filosofías diferentes. PDF es un formato de presentación mientras que Word es un formato de edición que refluja el texto según el tamaño de página y los estilos."}},
-        {"@type":"Question","name":"¿Puedo convertir un PDF escaneado a Word?","acceptedAnswer":{"@type":"Answer","text":"Sí, pero primero necesitas aplicar OCR al PDF. Una vez que el PDF tiene texto digital, puedes convertirlo a Word con total precisión."}},
-        {"@type":"Question","name":"¿Se conservan los comentarios y anotaciones del PDF?","acceptedAnswer":{"@type":"Answer","text":"PDFRápido convierte el contenido principal del documento. Los comentarios y marcas de revisión se convierten como texto estático."}},
-        {"@type":"Question","name":"¿Funciona con PDFs protegidos?","acceptedAnswer":{"@type":"Answer","text":"No. Para convertir un PDF protegido contra edición, necesitas primero eliminar la contraseña. Los PDFs de solo lectura sí se pueden convertir directamente."}},
-        {"@type":"Question","name":"¿Cuánto tarda la conversión?","acceptedAnswer":{"@type":"Answer","text":"Un PDF de 10 páginas tarda entre 5 y 30 segundos dependiendo de la complejidad del documento y la conexión a internet."}}
-      ]
+      "@type": "Question",
+      "name": "¿Por qué el Word resultante no tiene exactamente el mismo diseño que el PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El formato PDF y el formato Word tienen filosofías diferentes. PDF es un formato de presentación (lo que ves es lo que se imprime), mientras que Word es un formato de edición que refluja el texto según el tamaño de página y los estilos. Por eso, algunos elementos visuales como posiciones exactas de objetos pueden variar ligeramente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo convertir un PDF escaneado a Word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. PDF a Word detecta cuándo un PDF es un escaneado y le aplica OCR automáticamente (español e inglés). El resultado depende de la calidad del escaneado: repasa el texto, porque puede haber erratas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se conservan los comentarios y anotaciones del PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la herramienta. PDFRápido convierte el contenido principal del documento. Los comentarios, marcas de revisión y formularios interactivos se convierten como texto estático."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona con PDFs protegidos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Para convertir un PDF protegido contra edición, necesitas primero eliminar la contraseña. Los PDFs de solo lectura (sin contraseña de edición) sí se pueden convertir directamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda la conversión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un PDF de 10 páginas tarda entre 5 y 30 segundos dependiendo de la complejidad del documento y la conexión a internet. PDFs con muchas imágenes o tablas pueden tardar algo más."
+      }
     }
-    </script>
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -212,7 +247,7 @@
     <p>El formato PDF y el formato Word tienen filosofías diferentes. PDF es un formato de presentación (lo que ves es lo que se imprime), mientras que Word es un formato de edición que refluja el texto según el tamaño de página y los estilos. Por eso, algunos elementos visuales como posiciones exactas de objetos pueden variar ligeramente.</p>
 
     <h3>¿Puedo convertir un PDF escaneado a Word?</h3>
-    <p>Sí, pero primero necesitas aplicar OCR al PDF con nuestra herramienta de <a href="/ocr-a-pdf/">OCR a PDF</a>. Una vez que el PDF tiene texto digital, puedes convertirlo a Word con total precisión.</p>
+    <p>Sí. <a href="/pdf-a-word/">PDF a Word</a> detecta cuándo un PDF es un escaneado y le aplica OCR automáticamente (español e inglés). El resultado depende de la calidad del escaneado: repasa el texto, porque puede haber erratas.</p>
 
     <h3>¿Se conservan los comentarios y anotaciones del PDF?</h3>
     <p>Depende de la herramienta. PDFRápido convierte el contenido principal del documento. Los comentarios, marcas de revisión y formularios interactivos se convierten como texto estático.</p>

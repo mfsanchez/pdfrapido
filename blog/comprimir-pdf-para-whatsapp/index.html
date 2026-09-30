@@ -40,33 +40,45 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cuál es el límite de tamaño de PDF en WhatsApp?",
-        "acceptedAnswer": {"@type": "Answer", "text": "El límite oficial de WhatsApp para documentos es de 100 MB. Sin embargo, en la práctica el envío puede fallar con archivos más pequeños dependiendo de la conexión, el dispositivo o la versión de la app. Para envíos fiables, se recomienda no superar los 30-40 MB."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Por qué WhatsApp no me deja enviar un PDF aunque pese menos de 100 MB?",
-        "acceptedAnswer": {"@type": "Answer", "text": "WhatsApp impone el límite de 100 MB en condiciones ideales, pero puede rechazar archivos menores en conexiones lentas, en dispositivos con memoria limitada o cuando el servidor está congestionado. Comprimir el PDF a menos de 30 MB prácticamente elimina este problema."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Comprimir un PDF empeora la calidad del texto?",
-        "acceptedAnswer": {"@type": "Answer", "text": "No. La compresión de PDF actúa principalmente sobre las imágenes incrustadas, no sobre el texto. El texto en un PDF es información vectorial que no se degrada al comprimir. Solo notarás una pérdida de calidad si hay imágenes muy comprimidas y amplías mucho la vista."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Puedo comprimir el PDF directamente desde el móvil?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Sí. PDFRápido funciona desde el navegador del móvil sin necesidad de instalar apps. Abre Chrome o Safari, ve a pdfrapido.eu/comprimir-pdf/, sube el PDF desde el almacenamiento de tu móvil y descarga la versión comprimida en segundos."}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el límite de tamaño de PDF en WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El límite oficial de WhatsApp para documentos es de 100 MB. Sin embargo, en la práctica el envío puede fallar con archivos más pequeños dependiendo de la conexión, el dispositivo o la versión de la app. Para envíos fiables, se recomienda no superar los 30-40 MB."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué WhatsApp no me deja enviar un PDF aunque pese menos de 100 MB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WhatsApp puede rechazar archivos en conexiones lentas, en dispositivos con memoria limitada o cuando el servidor está congestionado. Comprimir el PDF a menos de 30 MB prácticamente elimina este problema independientemente de las condiciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Comprimir un PDF empeora la calidad del texto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La compresión de PDF actúa principalmente sobre las imágenes incrustadas, no sobre el texto. El texto es información vectorial que no se degrada al comprimir. Solo notarás diferencia de calidad en las imágenes si las amplías mucho, no en la lectura normal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo comprimir el PDF directamente desde el móvil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. PDFRápido funciona desde el navegador del móvil sin necesidad de instalar apps. Abre Chrome o Safari, ve a pdfrapido.eu/comprimir-pdf/, sube el PDF desde el almacenamiento de tu móvil y descarga la versión comprimida en segundos."
+      }
+    }
+  ]
+}
+</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -174,7 +186,7 @@
     <li>
       <div>
         <strong>Sube el PDF que quieres enviar</strong><br>
-        <span style="font-size:14px;color:var(--gray-500)">Arrastra el archivo o selecciónalo desde tu dispositivo. Acepta archivos de hasta 100 MB.</span>
+        <span style="font-size:14px;color:var(--gray-500)">Arrastra el archivo o selecciónalo desde tu dispositivo. Acepta archivos de hasta 50 MB.</span>
       </div>
     </li>
     <li>

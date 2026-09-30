@@ -98,18 +98,53 @@
     <script src="/js/webmcp.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"¿Se conservan los marcadores y los enlaces al unir PDFs?","acceptedAnswer":{"@type":"Answer","text":"Sí. PDFRápido preserva los marcadores internos, hipervínculos y la estructura de los documentos originales al combinarlos."}},
-        {"@type":"Question","name":"¿Puedo unir un PDF protegido con contraseña?","acceptedAnswer":{"@type":"Answer","text":"No directamente. Necesitas desbloquear el PDF primero y luego unirlo."}},
-        {"@type":"Question","name":"¿En qué orden se unen los archivos?","acceptedAnswer":{"@type":"Answer","text":"En el orden en que los añades o los arrastras en la interfaz. Puedes reordenarlos antes de pulsar 'Unir' simplemente arrastrando cada archivo a la posición deseada."}},
-        {"@type":"Question","name":"¿Hay límite de archivos para unir?","acceptedAnswer":{"@type":"Answer","text":"Puedes unir tantos PDFs como necesites siempre que el tamaño total no supere los 100 MB."}},
-        {"@type":"Question","name":"¿El PDF final es más pesado que los originales?","acceptedAnswer":{"@type":"Answer","text":"El PDF resultante tendrá aproximadamente el mismo tamaño que la suma de los originales. Puedes comprimirlo después si necesitas reducir el tamaño."}}
-      ]
+      "@type": "Question",
+      "name": "¿Se conservan los marcadores y los enlaces al unir PDFs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los enlaces que están dentro de las páginas sí se mantienen, pero el panel de marcadores (el índice lateral) de los originales no se conserva en el PDF unido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo unir un PDF protegido con contraseña?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No directamente. Necesitas desbloquear el PDF primero y luego unirlo. Si la contraseña impide la edición (pero no la visualización), el archivo tampoco se podrá unir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué orden se unen los archivos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En el orden en que los añades o los arrastras en la interfaz. Puedes reordenarlos antes de pulsar \"Unir\" simplemente arrastrando cada archivo a la posición deseada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay límite de archivos para unir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No hay un límite fijo de archivos ni de tamaño: todo se procesa en tu navegador y el límite práctico lo pone la memoria de tu dispositivo. Con archivos muy pesados, únelos por grupos y luego combina los resultados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El PDF final es más pesado que los originales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El PDF resultante tendrá aproximadamente el mismo tamaño que la suma de los originales. Si quieres reducir el tamaño total, puedes comprimir el PDF después de unirlos."
+      }
     }
-    </script>
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -193,7 +228,7 @@
 
     <p>Con nuestra herramienta puedes unir tantos archivos como necesites. Al procesarse en tu navegador, el único límite es la memoria de tu dispositivo. Para la mayoría de casos (unir 5-20 documentos de tamaño normal), el proceso es instantáneo.</p>
 
-    <p>Si necesitas unir PDFs muy grandes (más de 100 MB cada uno), te recomendamos hacerlo por lotes: primero une grupos de 5-10 archivos, y después une los resultados.</p>
+    <p>La unión se hace en la memoria de tu dispositivo, así que no hay un límite fijo de tamaño. Si unes archivos muy pesados (cientos de MB) en un móvil con poca RAM, hazlo por lotes: primero une grupos de 5-10 archivos y después une los resultados.</p>
 
     <div class="cta-box">
         <h3>¿Listo para combinar tus PDFs?</h3>
@@ -233,7 +268,7 @@
     <h2>Preguntas frecuentes sobre unir PDFs</h2>
 
     <h3>¿Se conservan los marcadores y los enlaces al unir PDFs?</h3>
-    <p>Sí. PDFRápido preserva los marcadores internos, hipervínculos y la estructura de los documentos originales al combinarlos. El PDF resultante mantiene toda la navegabilidad de los archivos originales.</p>
+    <p>Los enlaces que están dentro de las páginas sí se mantienen, pero el panel de marcadores (el índice lateral) de los originales no se conserva en el PDF unido.</p>
 
     <h3>¿Puedo unir un PDF protegido con contraseña?</h3>
     <p>No directamente. Necesitas <a href="/desbloquear-pdf/">desbloquear el PDF</a> primero y luego unirlo. Si la contraseña impide la edición (pero no la visualización), el archivo tampoco se podrá unir.</p>
@@ -242,7 +277,7 @@
     <p>En el orden en que los añades o los arrastras en la interfaz. Puedes reordenarlos antes de pulsar "Unir" simplemente arrastrando cada archivo a la posición deseada.</p>
 
     <h3>¿Hay límite de archivos para unir?</h3>
-    <p>Puedes unir tantos PDFs como necesites siempre que el tamaño total no supere los 100 MB. Para documentos más grandes, recomendamos unirlos en grupos y luego combinar los resultados.</p>
+    <p>No hay un límite fijo de archivos ni de tamaño: todo se procesa en tu navegador y el límite práctico lo pone la memoria de tu dispositivo. Con archivos muy pesados, únelos por grupos y luego combina los resultados.</p>
 
     <h3>¿El PDF final es más pesado que los originales?</h3>
     <p>El PDF resultante tendrá aproximadamente el mismo tamaño que la suma de los originales. Si quieres reducir el tamaño total, puedes <a href="/comprimir-pdf/">comprimir el PDF</a> después de unirlos.</p>

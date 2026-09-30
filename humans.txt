@@ -7,7 +7,7 @@
 
 /* SITE */
     Last update: 2026-05-28
-    Standards: HTML5, CSS3, JavaScript, WebAssembly, JSON-LD
+    Standards: HTML5, CSS3, JavaScript, JSON-LD
     Components: Node.js, Python, LibreOffice, PDF.js
     Software: PDFRápido
     Language: Spanish (es)

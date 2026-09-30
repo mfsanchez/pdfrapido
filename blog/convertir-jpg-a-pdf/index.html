@@ -77,18 +77,53 @@
     <script src="/js/webmcp.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"¿Qué formatos de imagen se pueden convertir a PDF además de JPG?","acceptedAnswer":{"@type":"Answer","text":"PDFRápido acepta JPG, JPEG, PNG, WEBP, BMP y GIF. Para imágenes HEIC (formato iPhone), conviértelas primero a JPG."}},
-        {"@type":"Question","name":"¿Se puede hacer el proceso inverso, de PDF a JPG?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes convertir cada página de un PDF en una imagen JPG o PNG con la herramienta de PDF a JPG de PDFRápido."}},
-        {"@type":"Question","name":"¿La calidad de la imagen se degrada al convertir a PDF?","acceptedAnswer":{"@type":"Answer","text":"No. PDFRápido incrusta la imagen original en el PDF sin modificar su calidad. El PDF resultante tiene exactamente la misma resolución que la imagen original."}},
-        {"@type":"Question","name":"¿Puedo añadir texto o anotaciones al PDF después de convertir?","acceptedAnswer":{"@type":"Answer","text":"Sí. Una vez que tienes el PDF puedes abrirlo en Anotar PDF para añadir texto, notas o marcas, o en Firmar PDF para firmarlo."}},
-        {"@type":"Question","name":"¿Cuántas imágenes puedo convertir a la vez?","acceptedAnswer":{"@type":"Answer","text":"Puedes subir tantas imágenes como necesites siempre que el tamaño total no supere los 100 MB."}}
-      ]
+      "@type": "Question",
+      "name": "¿Qué formatos de imagen se pueden convertir a PDF además de JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JPG/JPEG y PNG funcionan directamente. WebP, BMP, GIF o HEIC (el formato por defecto del iPhone) hay que convertirlos antes a JPG o PNG, desde los ajustes del móvil o con una app específica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede hacer el proceso inverso, de PDF a JPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Puedes convertir cada página de un PDF en una imagen JPG o PNG con nuestra herramienta de PDF a JPG. Es útil cuando necesitas insertar páginas de un PDF en una presentación o en un documento de Word."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La calidad de la imagen se degrada al convertir a PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PDFRápido incrusta la imagen original en el PDF sin modificar su calidad. El PDF resultante tiene exactamente la misma resolución que la imagen original."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo añadir texto o anotaciones al PDF después de convertir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Una vez que tienes el PDF, puedes abrirlo en Anotar PDF para añadir texto, notas o marcas, o en Firmar PDF para firmarlo antes de compartirlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas imágenes puedo convertir a la vez?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes añadir tantas imágenes como necesites en una sola operación: la conversión se hace en tu navegador y no hay un límite fijo, aunque con muchas fotos grandes en un móvil con poca memoria conviene hacerlo por tandas. Un PDF de 50 páginas con fotos estándar suele ocupar entre 10 y 30 MB."
+      }
     }
-    </script>
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -219,7 +254,7 @@
     <h2>Preguntas frecuentes sobre convertir imágenes a PDF</h2>
 
     <h3>¿Qué formatos de imagen se pueden convertir a PDF además de JPG?</h3>
-    <p>PDFRápido acepta JPG, JPEG, PNG, WEBP, BMP y GIF. Para imágenes en formato HEIC (el formato por defecto de iPhone), te recomendamos convertirlas primero a JPG desde los ajustes del móvil o usando una app específica.</p>
+    <p>JPG/JPEG y PNG funcionan directamente. WebP, BMP, GIF o HEIC (el formato por defecto del iPhone) hay que convertirlos antes a JPG o PNG, desde los ajustes del móvil o con una app específica.</p>
 
     <h3>¿Se puede hacer el proceso inverso, de PDF a JPG?</h3>
     <p>Sí. Puedes convertir cada página de un PDF en una imagen JPG o PNG con nuestra herramienta de <a href="/pdf-a-jpg/">PDF a JPG</a>. Es útil cuando necesitas insertar páginas de un PDF en una presentación o en un documento de Word.</p>
@@ -231,7 +266,7 @@
     <p>Sí. Una vez que tienes el PDF, puedes abrirlo en <a href="/anotar-pdf/">Anotar PDF</a> para añadir texto, notas o marcas, o en <a href="/firmar-pdf/">Firmar PDF</a> para firmarlo antes de compartirlo.</p>
 
     <h3>¿Cuántas imágenes puedo convertir a la vez?</h3>
-    <p>Puedes subir tantas imágenes como necesites en una sola operación, siempre que el tamaño total no supere los 100 MB. Un PDF de 50 páginas con imágenes fotográficas estándar suele ocupar entre 10 y 30 MB.</p>
+    <p>Puedes añadir tantas imágenes como necesites en una sola operación: la conversión se hace en tu navegador y no hay un límite fijo, aunque con muchas fotos grandes en un móvil con poca memoria conviene hacerlo por tandas. Un PDF de 50 páginas con fotos estándar suele ocupar entre 10 y 30 MB.</p>
 
     <div class="article-nav">
         <a href="/blog/como-unir-pdf-online/">← Anterior: Unir PDFs</a>

@@ -40,33 +40,45 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿En qué se diferencia PDF/A de un PDF normal?",
-        "acceptedAnswer": {"@type": "Answer", "text": "El PDF/A es una versión del formato PDF estandarizada para el archivado a largo plazo (ISO 19005). A diferencia de un PDF normal, el PDF/A no puede contener elementos que dependan de software externo: no permite JavaScript, audio, vídeo, fuentes no incrustadas ni DRM (gestión de derechos digitales). Toda la información necesaria para mostrar el documento correctamente debe estar contenida en el propio archivo."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Es obligatorio usar PDF/A para trámites con la administración española?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Depende del trámite. La Ley 39/2015 de Procedimiento Administrativo Común establece que los documentos electrónicos en la administración deben garantizar su preservación a largo plazo. Muchas administraciones (AEAT, registros notariales, juzgados, universidades) exigen o recomiendan PDF/A para documentos que deben conservarse. Consulta los requisitos específicos del organismo al que vayas a presentar la documentación."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Puedo convertir cualquier PDF a PDF/A?",
-        "acceptedAnswer": {"@type": "Answer", "text": "En general sí, aunque hay casos donde la conversión requiere ajustes. Si el PDF contiene JavaScript, audio, vídeo o fuentes no incrustadas, estos elementos se eliminarán durante la conversión a PDF/A. El resultado visual del documento se mantiene, pero los elementos interactivos dejan de funcionar. PDFRápido realiza la conversión automáticamente."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿PDF/A ocupa más espacio que un PDF normal?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Normalmente sí, un poco más. Esto se debe a que el PDF/A requiere incrustar todas las fuentes tipográficas y otros recursos necesarios para garantizar que el documento se visualice correctamente en el futuro, incluso sin acceso a software externo. La diferencia de tamaño suele ser pequeña, entre un 10% y un 30% más que el PDF original."}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia PDF/A de un PDF normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El PDF/A es una versión del formato PDF estandarizada para el archivado a largo plazo (ISO 19005). No puede contener JavaScript, audio, vídeo, fuentes no incrustadas ni DRM. Toda la información necesaria para mostrar el documento correctamente debe estar contenida en el propio archivo, sin depender de recursos externos."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es obligatorio usar PDF/A para trámites con la administración española?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del trámite. Muchas administraciones (AEAT, registros notariales, juzgados, universidades) exigen o recomiendan PDF/A para documentos que deben conservarse. Consulta los requisitos específicos del organismo al que vayas a presentar la documentación antes de convertir el archivo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo convertir cualquier PDF a PDF/A?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En general sí, aunque si el PDF contiene JavaScript, audio, vídeo o fuentes no incrustadas, estos elementos se eliminarán durante la conversión. El resultado visual del documento se mantiene. PDFRápido realiza la conversión automáticamente y garantiza el cumplimiento del estándar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿PDF/A ocupa más espacio que un PDF normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Normalmente sí, un poco más. Esto se debe a que el PDF/A requiere incrustar todas las fuentes tipográficas y otros recursos para garantizar que el documento se visualice correctamente en el futuro. La diferencia de tamaño suele ser pequeña, entre un 10% y un 30% más que el PDF original."
+      }
+    }
+  ]
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">

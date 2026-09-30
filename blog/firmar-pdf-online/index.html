@@ -77,18 +77,53 @@
     <script src="/js/webmcp.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"¿Puedo firmar un PDF desde el móvil?","acceptedAnswer":{"@type":"Answer","text":"Sí. La herramienta de PDFRápido funciona perfectamente en smartphones y tablets. En dispositivos táctiles, dibujar la firma con el dedo es incluso más natural que en el ordenador."}},
-        {"@type":"Question","name":"¿Puede firmar varias personas el mismo PDF?","acceptedAnswer":{"@type":"Answer","text":"Sí. El proceso es secuencial: la primera persona firma y descarga el PDF, la segunda abre ese PDF ya firmado y añade su firma, y así sucesivamente."}},
-        {"@type":"Question","name":"¿Puedo añadir la fecha a mi firma?","acceptedAnswer":{"@type":"Answer","text":"Sí. Al firmar un PDF puedes añadir texto adicional junto a la firma, incluyendo la fecha, tu nombre completo o tu cargo."}},
-        {"@type":"Question","name":"¿Se puede eliminar una firma de un PDF?","acceptedAnswer":{"@type":"Answer","text":"Una firma dibujada se puede eliminar si el PDF no está protegido. Una firma criptográfica cualificada es inmutable."}},
-        {"@type":"Question","name":"¿Qué pasa si firmo un PDF protegido con contraseña?","acceptedAnswer":{"@type":"Answer","text":"Si el PDF está protegido contra modificaciones, no podrás añadir una firma. Tendrás que desbloquearlo primero."}}
-      ]
+      "@type": "Question",
+      "name": "¿Puedo firmar un PDF desde el móvil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La herramienta de PDFRápido funciona perfectamente en smartphones y tablets. En dispositivos táctiles, dibujar la firma con el dedo o con un stylus es incluso más natural que en el ordenador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede firmar varias personas el mismo PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El proceso es secuencial: la primera persona firma y descarga el PDF, la segunda persona abre ese PDF ya firmado y añade su propia firma, y así sucesivamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo añadir la fecha a mi firma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No directamente: Firmar PDF solo añade la firma dibujada. Para poner la fecha, tu nombre o tu cargo, escríbelos con la herramienta Texto de Anotar PDF antes o después de firmar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede eliminar una firma de un PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una firma dibujada se puede eliminar si el PDF no está protegido. Sin embargo, una firma criptográfica cualificada es inmutable: si el documento se modifica después de firmar, la firma queda invalidada automáticamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si firmo un PDF protegido con contraseña?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si el PDF está protegido contra modificaciones, no podrás añadir una firma. Tendrás que desbloquear el PDF primero y luego firmarlo."
+      }
     }
-    </script>
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -217,10 +252,10 @@
     <p>Sí. La herramienta de PDFRápido funciona perfectamente en smartphones y tablets. En dispositivos táctiles, dibujar la firma con el dedo o con un stylus es incluso más natural que en el ordenador.</p>
 
     <h3>¿Puede firmar varias personas el mismo PDF?</h3>
-    <p>Sí. El proceso es secuencial: la primera persona firma y descarga el PDF, la segunda persona abre ese PDF ya firmado y añade su propia firma, y así sucesivamente. Cada firma queda registrada en el documento.</p>
+    <p>Sí. El proceso es secuencial: la primera persona firma y descarga el PDF, la segunda persona abre ese PDF ya firmado y añade su propia firma, y así sucesivamente.</p>
 
     <h3>¿Puedo añadir la fecha a mi firma?</h3>
-    <p>Sí. Al firmar un PDF con PDFRápido puedes añadir texto adicional junto a la firma, incluyendo la fecha, tu nombre completo, tu cargo o cualquier otro dato relevante.</p>
+    <p>No directamente: Firmar PDF solo añade la firma dibujada. Para poner la fecha, tu nombre o tu cargo, escríbelos con la herramienta Texto de <a href="/anotar-pdf/">Anotar PDF</a> antes o después de firmar.</p>
 
     <h3>¿Se puede eliminar una firma de un PDF?</h3>
     <p>Una firma dibujada se puede eliminar si el PDF no está protegido. Sin embargo, una firma criptográfica cualificada es inmutable: si el documento se modifica después de firmar, la firma queda invalidada automáticamente.</p>

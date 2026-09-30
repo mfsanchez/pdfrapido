@@ -41,33 +41,45 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿PDF/A es mejor que PDF?",
-        "acceptedAnswer": {"@type": "Answer", "text": "PDF/A no es mejor en general, es distinto. Está pensado para archivado a largo plazo y prioriza la conservación sobre la flexibilidad. Para uso cotidiano (enviar un contrato, compartir un informe) el PDF normal es más práctico. Para archivar documentos durante décadas o entregarlos a la Administración, PDF/A es la opción correcta."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué versiones de PDF/A existen?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Existen cuatro familias principales: PDF/A-1 (2005, más restrictivo, sin transparencia), PDF/A-2 (2011, admite capas y compresión JPEG2000), PDF/A-3 (2012, permite adjuntar archivos externos como facturas electrónicas) y PDF/A-4 (2020, basado en PDF 2.0). Cada versión tiene niveles de conformidad (B, A, U) según el grado de accesibilidad."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Puedo editar un PDF/A?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Técnicamente sí, pero al editar puedes romper la conformidad PDF/A. Cualquier modificación que añada elementos no permitidos (transparencia, fuentes no incrustadas, contenido externo) hace que el archivo deje de cumplir el estándar. Para editar conviene convertir a PDF normal, modificar, y volver a convertir a PDF/A."}
-      },
-      {
-        "@type": "Question",
-        "name": "¿Mi PDF se queda en el servidor al convertirlo a PDF/A?",
-        "acceptedAnswer": {"@type": "Answer", "text": "En PDFRápido el archivo se procesa en un servidor europeo porque la conversión a PDF/A requiere validación técnica que no se puede hacer enteramente en el navegador. El archivo original y el resultado se eliminan automáticamente en un máximo de 10 minutos tras la descarga, sin que ningún humano los lea."}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿PDF/A es mejor que PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PDF/A no es mejor en general, es distinto. Está pensado para archivado a largo plazo y prioriza la conservación sobre la flexibilidad. Para uso cotidiano (enviar un contrato, compartir un informe) el PDF normal es más práctico. Para archivar documentos durante décadas o entregarlos a la Administración, PDF/A es la opción correcta."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué versiones de PDF/A existen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Existen cuatro familias principales: PDF/A-1 (2005, más restrictivo, sin transparencia), PDF/A-2 (2011, admite capas y compresión JPEG2000), PDF/A-3 (2012, permite adjuntar archivos externos como facturas electrónicas) y PDF/A-4 (2020, basado en PDF 2.0). Cada versión tiene niveles de conformidad (B, A, U) según el grado de accesibilidad del contenido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo editar un PDF/A?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Técnicamente sí, pero al editar puedes romper la conformidad PDF/A. Cualquier modificación que añada elementos no permitidos (transparencia, fuentes no incrustadas, contenido externo) hace que el archivo deje de cumplir el estándar. Para editar conviene convertir a PDF normal, modificar, y volver a convertir a PDF/A."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Mi PDF se queda en el servidor al convertirlo a PDF/A?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En PDFRápido el archivo se procesa en un servidor europeo porque la conversión a PDF/A requiere validación técnica que no se puede hacer enteramente en el navegador. El archivo original y el resultado se eliminan automáticamente en un máximo de 10 minutos tras la descarga, sin que ningún humano los lea."
+      }
+    }
+  ]
+}
+</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

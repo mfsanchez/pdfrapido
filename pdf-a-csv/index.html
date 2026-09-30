@@ -108,38 +108,53 @@
 }
 </script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué tipos de tablas extrae correctamente?",
-          "acceptedAnswer": { "@type": "Answer", "text": "La herramienta funciona mejor con tablas que tienen líneas visibles (bordes) y con texto alineado en columnas. Facturas, listados de datos, balances e informes financieros suelen extraerse con gran precisión. Las tablas con celdas fusionadas complejas pueden requerir ajuste manual." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo abrir directamente el CSV en Excel?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Si usas Excel en Windows, selecciona la codificación UTF-8 con BOM para que los caracteres como ñ, á o é se muestren correctamente. Para Google Sheets o importaciones programáticas, usa UTF-8 estándar sin BOM." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Se pueden extraer varias tablas del mismo PDF?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Si el PDF tiene varias tablas en distintas páginas, la herramienta las extrae todas y las concatena en el mismo archivo CSV. También puedes especificar qué páginas procesar si solo te interesa una parte del documento." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Funciona con PDFs escaneados?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Los PDFs escaneados son imágenes sin texto digital, por lo que no es posible extraer sus tablas directamente. Primero aplica OCR con la herramienta de OCR a PDF de PDFRápido para convertir el escaneado en texto, y luego usa el PDF resultante para extraer a CSV." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Se conservan bien los números y los decimales?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Los números se extraen tal como aparecen en el PDF, incluyendo el separador decimal del documento (punto o coma). Si necesitas un formato numérico concreto, puedes ajustarlo fácilmente en Excel o en tu herramienta de hojas de cálculo una vez importado el CSV." }
-        }
-      ]
+      "@type": "Question",
+      "name": "¿Qué tipos de tablas extrae correctamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La herramienta funciona mejor con tablas que tienen líneas visibles (bordes) y con texto alineado en columnas. Facturas, listados de datos, balances e informes financieros suelen extraerse con gran precisión. Las tablas formadas solo por espacios o con celdas fusionadas complejas pueden requerir ajuste manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo abrir directamente el CSV en Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Si usas Excel en Windows, selecciona la codificación \"UTF-8 con BOM\" para que los caracteres como ñ, á o é se muestren correctamente al abrir el archivo. Para Google Sheets o para importaciones programáticas, usa UTF-8 estándar sin BOM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pueden extraer varias tablas del mismo PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Si el PDF tiene varias tablas en distintas páginas, la herramienta las extrae todas y las concatena en el mismo archivo CSV. Puedes también especificar qué páginas procesar si solo te interesa una parte del documento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona con PDFs escaneados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los PDFs escaneados son imágenes sin texto digital, por lo que no es posible extraer sus tablas directamente. Primero aplica OCR con nuestra herramienta de OCR a PDF para convertir el escaneado en texto, y luego usa el PDF resultante para extraer a CSV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se conservan bien los números y los decimales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los números se extraen tal como aparecen en el PDF, incluyendo el separador decimal que use el documento (punto o coma). Si necesitas un formato numérico concreto para tu sistema, puedes ajustarlo fácilmente en Excel o en tu herramienta de hojas de cálculo una vez importado el CSV."
+      }
     }
-    </script>
+  ]
+}
+</script>
         <link rel="stylesheet" href="/css/styles.css?v=15">
 <style>
 :root {
