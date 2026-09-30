@@ -1,4 +1,4 @@
-# PDFRápido — 48 Herramientas PDF Online Gratis
+# PDFRápido — 50 Herramientas PDF Online Gratis
 
 [![Website](https://img.shields.io/badge/website-pdfrapido.eu-4F46E5?style=flat-square)](https://pdfrapido.eu)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
@@ -6,7 +6,7 @@
 [![Language](https://img.shields.io/badge/language-español-red?style=flat-square)](https://pdfrapido.eu)
 [![WebAssembly](https://img.shields.io/badge/WebAssembly-supported-blue?style=flat-square)](https://pdfrapido.eu)
 
-**PDFRápido** es la plataforma de herramientas PDF online más completa en español: **48 herramientas gratuitas**, sin registro, sin instalación y con procesamiento local vía WebAssembly para máxima privacidad.
+**PDFRápido** es la plataforma de herramientas PDF online más completa en español: **50 herramientas gratuitas**, sin registro, sin instalación y con procesamiento local vía WebAssembly para máxima privacidad.
 
 🚀 **[Usar PDFRápido ahora](https://pdfrapido.eu)** · 📖 **[Guía Completa](https://pdfrapido.eu/guia-completa-pdf/)** · 📝 **[Blog](https://pdfrapido.eu/blog/)**
 
@@ -101,7 +101,7 @@ La mayoría de nuestras herramientas procesan los archivos **directamente en tu 
 PDFRápido implementa las mejores prácticas de SEO técnico y AEO (Answer Engine Optimization):
 
 - ✅ **Schema.org completo:** WebApplication, Article, FAQPage, BreadcrumbList, Organization, Person, Dataset
-- ✅ **Sitemap indexado:** 48 herramientas + 43 artículos de blog + 19 páginas estructurales
+- ✅ **Sitemap indexado:** 50 herramientas + 43 artículos de blog + 19 páginas estructurales
 - ✅ **Pillar page:** [/guia-completa-pdf/](https://pdfrapido.eu/guia-completa-pdf/)
 - ✅ **Content clusters:** 5 categorías temáticas interconectadas
 - ✅ **robots.txt optimizado:** Bloquea crawlers de entrenamiento IA, permite buscadores y AEO

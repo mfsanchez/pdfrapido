@@ -1,6 +1,6 @@
 # PDFRápido — Herramientas PDF Online Gratis
 
-> Plataforma española de más de 30 herramientas PDF online, gratuitas y sin registro, sin tope diario de tareas ni marcas de agua. Las herramientas de edición rápida (unir, dividir, rotar y firmar) se procesan en tu propio navegador, sin subir el archivo. El resto (comprimir, conversión, OCR e IA) se procesan en servidores europeos y los archivos se eliminan automáticamente en menos de 10 minutos. Incluye herramientas con IA gratuitas. Autor: MF Sanchez.
+> Plataforma española de 50 herramientas PDF online, gratuitas y sin registro, sin tope diario de tareas ni marcas de agua. Las herramientas de edición rápida (unir, dividir, rotar y firmar) se procesan en tu propio navegador, sin subir el archivo. El resto (comprimir, conversión, OCR e IA) se procesan en servidores europeos y los archivos se eliminan automáticamente en menos de 10 minutos. Incluye herramientas con IA gratuitas. Autor: MF Sanchez.
 
 ## Herramientas principales
 - [Comprimir PDF](https://pdfrapido.eu/comprimir-pdf/): reduce el tamaño de un PDF (hasta ~80%); procesado en servidor europeo, hasta 50 MB por archivo.

@@ -2,8 +2,8 @@
 
 ## Descripción del proyecto
 PDFRápido (https://pdfrapido.eu/) es una plataforma web de herramientas PDF online,
-gratuita, sin registro, en español. Tiene 28+ herramientas organizadas en categorías:
-organizar, optimizar, convertir, editar y seguridad PDF. También incluye herramientas con IA.
+gratuita, sin registro, en español. Tiene 50 herramientas organizadas en seis categorías:
+organizar, optimizar, convertir, editar, seguridad e inteligencia artificial.
 
 ## Stack técnico
 - **Frontend**: HTML estático puro + CSS + JS vanilla (sin frameworks)
