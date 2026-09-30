@@ -240,26 +240,34 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Se sube el texto al servidor?",
+          "name": "¿Se sube el texto a algún servidor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. La conversión se realiza íntegramente en tu navegador con la librería pdf-lib. Tu texto nunca abandona tu dispositivo."
+            "text": "No. El PDF se genera en tu navegador y el texto no sale de tu dispositivo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué fuentes admite la herramienta?",
+          "name": "¿Funciona con acentos, ñ y signos en español?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puedes elegir entre Helvetica (similar a Arial), Times Roman (similar a Times New Roman) y Courier New (monoespaciada). Los tres son fuentes estándar PDF con soporte completo de caracteres en español."
+            "text": "Sí. Helvetica, Times Roman y Courier cubren á, é, í, ó, ú, ñ, ü, ¿, ¡ y las mayúsculas acentuadas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Hay límite de longitud de texto?",
+          "name": "¿Puedo usar emojis u otros alfabetos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No hay límite fijo. El texto se pagina automáticamente: cuando se llena una página se crea una nueva. Textos muy largos generarán PDFs de varias páginas."
+            "text": "No. Las fuentes estándar de PDF no incluyen emojis ni alfabetos como el cirílico, el árabe o el chino."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay límite de longitud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay un límite fijo: el texto se reparte en tantas páginas como haga falta."
           }
         }
       ]
@@ -277,24 +285,25 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
           "@type": "HowToStep",
           "position": 1,
           "name": "Escribe o pega tu texto",
-          "text": "Introduce el contenido en el editor. Puedes escribir directamente o pegar desde el portapapeles. Los saltos de línea y párrafos se conservan."
+          "text": "Los saltos de línea y los párrafos se conservan. Un contador muestra cuánto has escrito."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Elige las opciones de formato",
-          "text": "Selecciona fuente, tamaño de letra, tamaño de página, orientación y márgenes. El contador de caracteres te muestra en tiempo real cuánto texto has escrito."
+          "name": "Elige el formato",
+          "text": "Fuente (Helvetica, Times Roman o Courier), tamaño de 10 a 18 pt, página A4 o Carta, orientación vertical u horizontal y márgenes estrechos (1,27 cm), normales (2,5 cm) o amplios (3,81 cm)."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF",
-          "text": "Pulsa \"Convertir a PDF\" y en segundos se descarga el archivo documento.pdf con todas las páginas necesarias para tu texto."
+          "text": "Se descarga «documento.pdf» con todas las páginas que necesite el texto."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -322,6 +331,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -340,6 +350,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -493,100 +504,48 @@ El texto se ajustará automáticamente al tamaño de página elegido." spellchec
 
 
 <!-- SEO CONTENT -->
-<div class="seo-content">
-    <h2>Convierte texto plano en un PDF profesional</h2>
-    <p>Esta herramienta te permite crear un archivo PDF a partir de cualquier texto sin necesidad de instalar ningún programa. Escribe directamente en el editor o pega texto copiado desde cualquier fuente: documentos, correos, notas, apuntes o código fuente.</p>
 
-    <h3>¿Cuándo necesitas convertir texto a PDF?</h3>
+
+  <section class="content-seo" aria-label="Guía para convertir texto a PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Escribe o pega tu texto</h3><p>Los saltos de línea y los párrafos se conservan. Un contador muestra cuánto has escrito.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige el formato</h3><p>Fuente (Helvetica, Times Roman o Courier), tamaño de 10 a 18 pt, página A4 o Carta, orientación vertical u horizontal y márgenes estrechos (1,27 cm), normales (2,5 cm) o amplios (3,81 cm).</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>Se descarga «documento.pdf» con todas las páginas que necesite el texto.</p></div></div>
+    </div>
+    <p>El PDF se genera en tu navegador con pdf-lib: el texto no se envía a ningún servidor. Cuando una página se llena, se añade otra automáticamente.</p>
+
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Un escrito rápido sin procesador de textos</strong><span>Una carta, una reclamación o un acuerdo sencillo en PDF desde el móvil o un ordenador sin Word.</span></div>
+      <div class="use-case"><strong>Código, logs y configuración</strong><span>Con Courier, el texto monoespaciado conserva la alineación de columnas y sangrías.</span></div>
+      <div class="use-case"><strong>Apuntes para imprimir</strong><span>Pasar notas a PDF con el tamaño de letra y los márgenes que prefieras.</span></div>
+    </div>
+
+    <h2>Limitaciones</h2>
     <ul>
-        <li><strong>Contratos o acuerdos simples:</strong> redacta el texto directamente y genera un PDF listo para firmar o enviar.</li>
-        <li><strong>Apuntes y notas de estudio:</strong> convierte tus notas de texto en un PDF bien formateado para imprimir o compartir.</li>
-        <li><strong>Código fuente:</strong> usa la fuente Courier New para preservar el formato monoespaciado del código.</li>
-        <li><strong>Borradores rápidos:</strong> cuando no tienes acceso a Word o Google Docs y necesitas un PDF urgente.</li>
+      <li><strong>Solo texto plano.</strong> No hay negritas, títulos, listas con formato, imágenes ni tablas. Para eso, escribe en un procesador de textos y usa <a href="/word-a-pdf/">Word a PDF</a>.</li>
+      <li><strong>Juego de caracteres limitado.</strong> Las fuentes estándar cubren el español y la mayoría de idiomas europeos occidentales, pero no emojis, alfabetos no latinos ni muchos símbolos especiales.</li>
     </ul>
+    <!-- TODO(contenido): comprobar qué ocurre exactamente al pegar un emoji o caracteres no latinos (error o sustitución) y explicarlo al usuario; valorar filtrarlos en el código. -->
 
-    <h3>Opciones de formato disponibles</h3>
-    <p>Puedes personalizar el aspecto del PDF eligiendo entre tres fuentes (Helvetica, Times Roman y Courier), seis tamaños de letra (10 a 18 pt), dos tamaños de página (A4 y Carta), orientación vertical u horizontal, y tres niveles de margen. El texto se pagina automáticamente: cuando se llena una página, el contenido continúa en la siguiente.</p>
+    <h2>Preguntas frecuentes sobre texto a PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Se sube el texto a algún servidor?</h3><p>No. El PDF se genera en tu navegador y el texto no sale de tu dispositivo.</p></div>
+      <div class="faq-item"><h3>¿Funciona con acentos, ñ y signos en español?</h3><p>Sí. Helvetica, Times Roman y Courier cubren á, é, í, ó, ú, ñ, ü, ¿, ¡ y las mayúsculas acentuadas.</p></div>
+      <div class="faq-item"><h3>¿Puedo usar emojis u otros alfabetos?</h3><p>No. Las fuentes estándar de PDF no incluyen emojis ni alfabetos como el cirílico, el árabe o el chino.</p></div>
+      <div class="faq-item"><h3>¿Hay límite de longitud?</h3><p>No hay un límite fijo: el texto se reparte en tantas páginas como haga falta.</p></div>
+    </div>
 
-    <h3>Privacidad garantizada</h3>
-    <p>La conversión se realiza íntegramente en tu navegador mediante la librería open-source <em>pdf-lib</em>. Tu texto nunca se envía a ningún servidor. Puedes usar esta herramienta con total confianza incluso para contenido confidencial.</p>
-</div>
-
-<div class="related-tools">
-    <h3>Herramientas relacionadas</h3>
-    <ul>
-        <li><a href="/html-a-pdf/">HTML a PDF</a></li>
-        <li><a href="/word-a-pdf/">Word a PDF</a></li>
-        <li><a href="/jpg-a-pdf/">JPG a PDF</a></li>
-        <li><a href="/redimensionar-pdf/">Redimensionar PDF</a></li>
-        <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-    </ul>
-</div>
-
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Texto a PDF?</h2>
-  <p>La herramienta procesa tu texto directamente en el navegador, sin enviar ningún dato a servidores externos. El proceso es rápido incluso para textos largos.</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Escribe o pega tu texto</h3>
-          <p>Introduce el contenido en el editor. Puedes escribir directamente o pegar desde el portapapeles. Los saltos de línea y párrafos se conservan.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Elige las opciones de formato</h3>
-          <p>Selecciona fuente, tamaño de letra, tamaño de página, orientación y márgenes. El contador de caracteres te muestra en tiempo real cuánto texto has escrito.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF</h3>
-          <p>Pulsa "Convertir a PDF" y en segundos se descarga el archivo <strong>documento.pdf</strong> con todas las páginas necesarias para tu texto.</p>
-        </div>
-      </div>
-  </div>
-
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Contratos y documentos simples</strong>
-        <span>Redacta acuerdos, presupuestos o comunicaciones en texto plano y genera un PDF con aspecto profesional en segundos, listo para firmar o enviar.</span>
-      </div>
-      <div class="use-case">
-        <strong>Apuntes y notas de estudio</strong>
-        <span>Convierte tus notas de texto en un documento PDF bien maquetado para imprimir o compartir con compañeros, con el tamaño de letra y los márgenes que prefieras.</span>
-      </div>
-      <div class="use-case">
-        <strong>Código fuente y logs</strong>
-        <span>Usa la fuente Courier New para preservar el formato monoespaciado. Ideal para compartir fragmentos de código, logs o archivos de configuración en PDF.</span>
-      </div>
-      <div class="use-case">
-        <strong>Borradores y textos rápidos</strong>
-        <span>Cuando no tienes acceso a Word o Google Docs, esta herramienta te da un PDF limpio en segundos sin instalar nada ni crear ninguna cuenta.</span>
-      </div>
-  </div>
-
-  <h2>Preguntas frecuentes sobre Texto a PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Se sube el texto al servidor?</h3>
-        <p>No. La conversión se realiza íntegramente en tu navegador con la librería open-source pdf-lib. Tu texto nunca abandona tu dispositivo, lo que garantiza total privacidad incluso para contenido confidencial o empresarial.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con caracteres en español (acentos, ñ, ¿)?</h3>
-        <p>Sí. Las fuentes estándar PDF utilizadas (Helvetica, Times Roman y Courier) incluyen codificación WinAnsi que cubre todos los caracteres del español: á, é, í, ó, ú, ñ, ü, ¿, ¡ y mayúsculas acentuadas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Hay límite de longitud de texto?</h3>
-        <p>No hay ningún límite fijo. El texto se pagina automáticamente: cuando el contenido llena una página se crea una nueva de forma transparente. Textos muy largos generarán PDFs de varias páginas sin ningún problema.</p>
-      </div>
-  </div>
-</section>
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/word-a-pdf/">Word a PDF</a>
+      <a href="/generar-pdf/">Generar PDF con IA</a>
+      <a href="/jpg-a-pdf/">JPG a PDF</a>
+      <a href="/pdf-a-texto/">PDF a Texto</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/convertir-texto-a-pdf/">cómo convertir texto a PDF</a>.</p>
+  </section>
 </main>
 
 <footer>
