@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML a PDF, página web a PDF, URL a PDF online, convertir web a PDF gratis, captura web PDF">
-    <meta name="description" content="Convierte páginas web y HTML a PDF gratis y sin registro. Introduce una URL o pega código HTML y obtén un PDF fiel. Sin instalar nada, en segundos | PDFRápido">
+    <meta name="description" content="Convierte páginas web y HTML a PDF gratis y sin registro. Introduce la URL de una página pública y conviértela a PDF. Sin instalar nada, en segundos | PDFRápido">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>HTML a PDF Online Gratis — Convierte Páginas Web | PDFRápido</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -190,34 +190,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo convertir una página web a PDF?",
+          "name": "¿Funciona con cualquier página web?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puedes pegar la URL de la página web o subir un archivo HTML directamente. PDFRápido renderiza la página y genera un PDF fiel al diseño original."
+            "text": "Solo con páginas públicas cuyo contenido esté en el HTML. Las que necesitan JavaScript, inicio de sesión o bloquean robots pueden salir vacías o incompletas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se incluyen las imágenes y estilos CSS?",
+          "name": "¿Se conservan los estilos y las imágenes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, la conversión incluye imágenes, fuentes web y estilos CSS. Las páginas con muchos recursos externos pueden tardar más en procesarse."
+            "text": "Parcialmente. La conversión con LibreOffice no interpreta todo el CSS, y las imágenes con rutas relativas pueden perderse."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con páginas que requieren login?",
+          "name": "¿Puedo pegar mi propio código HTML?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, la herramienta solo puede convertir páginas de acceso público. Para páginas privadas, deberías descargar el HTML primero y luego subirlo."
+            "text": "No. La herramienta solo convierte URL públicas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo convertir un archivo HTML local?",
+          "name": "¿Cómo obtengo una copia idéntica a lo que veo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes subir directamente archivos .html desde tu ordenador. Los recursos externos (imágenes, CSS) que estén en rutas absolutas se incluirán; los relativos puede que no."
+            "text": "Usa la función «Imprimir → Guardar como PDF» de tu navegador, que conserva el diseño tal como lo ves."
           }
         }
       ]
@@ -234,37 +234,38 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Pega el código HTML o la URL",
-          "text": "Introduce el código HTML directamente en el editor o escribe la URL de la página web que quieres convertir. La herramienta renderiza el contenido tal como lo haría un navegador."
+          "name": "Pega la URL",
+          "text": "La dirección completa de una página pública, empezando por http:// o https://."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Configuración de página",
-          "text": "Ajusta el tamaño del papel, los márgenes y la orientación vertical u horizontal según tus necesidades."
+          "name": "Pulsa «Convertir a PDF»",
+          "text": "Nuestro servidor descarga la página (espera hasta 15 segundos) y la convierte."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Genera y descarga el PDF",
-          "text": "En pocos segundos obtienes un PDF fiel al diseño HTML original, con estilos CSS, imágenes y tipografías correctamente renderizados."
+          "name": "Descarga el PDF",
+          "text": "El archivo se llama como el dominio de la página."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="HTML a PDF Online Gratis — Convierte Páginas Web | PDFRápido">
-    <meta property="og:description" content="Convierte páginas web y HTML a PDF gratis y sin registro. Introduce una URL o pega código HTML y obtén un PDF fiel. Sin instalar nada, en segundos.">
+    <meta property="og:description" content="Convierte páginas web y HTML a PDF gratis y sin registro. Introduce la URL de una página pública y conviértela a PDF. Sin instalar nada, en segundos.">
     <meta property="og:url" content="https://pdfrapido.eu/html-a-pdf/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="HTML a PDF Online Gratis — Convierte Páginas Web | PDFRápido">
-    <meta name="twitter:description" content="Convierte páginas web y HTML a PDF gratis y sin registro. Introduce una URL o pega código HTML y obtén un PDF fiel. Sin instalar nada, en segundos.">
+    <meta name="twitter:description" content="Convierte páginas web y HTML a PDF gratis y sin registro. Introduce la URL de una página pública y conviértela a PDF. Sin instalar nada, en segundos.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <script src="/js/webmcp.js" defer></script>
 
@@ -280,6 +281,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -298,6 +300,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -329,100 +332,9 @@
     <div class="error-msg" id="errorMsg"></div>
     <div class="progress-area" id="progressArea"><div class="spinner" style="border-top-color:var(--primary)"></div><p class="progress-label">Descargando y convirtiendo la página web...</p></div>
     <div class="result-area" id="resultArea"><div class="result-card"><div class="result-success-icon" style="background:var(--primary-light)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Página web convertida a PDF</h3><p class="result-desc" id="resultDesc"></p><div class="result-actions"><button class="btn-download" style="background:var(--primary)" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button><button class="btn-secondary" onclick="resetTool()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otra</button></div></div></div>
-    <div class="seo-content"><h2>Cómo convertir una página web a PDF</h2><p>Introduce la URL de cualquier página web pública y conviértela a PDF. Se capturará el contenido completo incluyendo texto, imágenes y formato.</p></div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/word-a-pdf/">Word a PDF</a></li>
-            <li><a href="/jpg-a-pdf/">JPG a PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/unir-pdf/">Unir PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-        </ul>
-    
-        <h3>¿Para qué sirve convertir HTML a PDF?</h3>
-        <p>Convertir una página web o un archivo HTML a PDF es útil para guardar el contenido de una web como documento estático, generar facturas y presupuestos a partir de plantillas HTML, crear informes automatizados desde sistemas web, o archivar contenido online antes de que desaparezca.</p>
-
-        <h3>¿Qué se incluye en la conversión?</h3>
-        <ul>
-            <li>El texto y la estructura HTML completa</li>
-            <li>Estilos CSS aplicados al documento</li>
-            <li>Imágenes referenciadas en el HTML</li>
-            <li>Tablas y listas con su formato</li>
-        </ul>
-        <p>Los elementos dinámicos como JavaScript, vídeos incrustados y animaciones CSS no se incluyen en el PDF estático.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <p><strong>¿Puedo convertir una URL de internet directamente?</strong><br>Sí. Puedes pegar la URL de cualquier página web pública y la herramienta la cargará y convertirá a PDF automáticamente.</p>
-        <p><strong>¿Qué pasa con las páginas que requieren login?</strong><br>La herramienta accede a la URL sin credenciales, por lo que no funciona con páginas que requieren inicio de sesión. Para esos casos, sube directamente el archivo HTML.</p>
-        <p><strong>¿El PDF resultante tiene los enlaces activos?</strong><br>Sí. Los hipervínculos del HTML se convierten en enlaces activos en el PDF resultante.</p>
-
-        <h3>¿Qué elementos HTML se incluyen en el PDF?</h3>
-        <ul>
-            <li>Todo el texto visible con su formato CSS (fuentes, colores, tamaños)</li>
-            <li>Imágenes referenciadas en el HTML (locales o externas)</li>
-            <li>Tablas con su estructura y estilos</li>
-            <li>Listas ordenadas y desordenadas</li>
-            <li>Hipervínculos convertidos en enlaces activos en el PDF</li>
-        </ul>
-        <p>Los elementos dinámicos como vídeos, animaciones CSS y formularios interactivos no se incluyen en el PDF estático resultante.</p>
-
-        <h3>¿Puedo convertir una URL de internet directamente?</h3>
-        <p>Sí. Introduce la URL de cualquier página web pública y la herramienta la cargará y convertirá automáticamente. Para páginas que requieren inicio de sesión, descarga primero el HTML y súbelo directamente.</p>
-
-        <h3>Casos de uso habituales</h3>
-        <ul>
-            <li>Archivar páginas web antes de que desaparezcan o cambien</li>
-            <li>Generar facturas y recibos a partir de plantillas HTML</li>
-            <li>Convertir artículos online en documentos para leer sin conexión</li>
-            <li>Crear informes automatizados desde sistemas que generan HTML</li>
-            <li>Guardar confirmaciones de reserva o pedido online en PDF</li>
-        </ul>
-
-        <h3>¿El PDF resultante tiene los enlaces activos?</h3>
-        <p>Sí. Los hipervínculos del HTML se convierten en enlaces activos en el PDF. Al hacer clic sobre ellos en un lector de PDF compatible, abrirán la URL correspondiente en el navegador.</p>
-</div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo convertir HTML a PDF online gratis</h2>
-        <p>Convierte cualquier página web o código HTML a PDF de alta calidad. Introduce una URL pública o pega tu código HTML para obtener un documento PDF fiel al original.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Introduce la URL de la página web o pega tu código HTML.</li>
-            <li>Configura las opciones de página si es necesario.</li>
-            <li>Espera a que se genere el PDF.</li>
-            <li>Descarga tu PDF listo para archivar o compartir.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Convertir HTML a PDF es útil para guardar artículos de web, crear facturas desde plantillas HTML, generar reportes o archivar páginas web para consulta offline.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>La conversión se realiza en nuestros servidores de forma segura. No almacenamos el contenido de las URLs una vez generado el PDF.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Funciona con cualquier página web?</summary>
-            <p>Funciona con páginas web públicas. Las páginas que requieren inicio de sesión o tienen protección contra bots pueden no convertirse correctamente.</p>
-        </details>
-        <details>
-            <summary>¿Se ven las imágenes en el PDF?</summary>
-            <p>Sí, las imágenes externas se descargan e integran en el PDF si son accesibles públicamente.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/word-a-pdf/">Word a PDF</a></li>
-            <li><a href="/excel-a-pdf/">Excel a PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/jpg-a-pdf/">JPG a PDF</a></li>
-            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -445,70 +357,48 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona HTML a PDF?</h2>
-  <p>Usar HTML a PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Pega el código HTML o la URL</h3>
-          <p>Introduce el código HTML directamente en el editor o escribe la URL de la página web que quieres convertir. La herramienta renderiza el contenido tal como lo haría un navegador.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Configuración de página</h3>
-          <p>Ajusta el tamaño del papel, los márgenes y la orientación vertical u horizontal según tus necesidades.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Genera y descarga el PDF</h3>
-          <p>En pocos segundos obtienes un PDF fiel al diseño HTML original, con estilos CSS, imágenes y tipografías correctamente renderizados.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para convertir una página web a PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Pega la URL</h3><p>La dirección completa de una página pública, empezando por http:// o https://.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Pulsa «Convertir a PDF»</h3><p>Nuestro servidor descarga la página (espera hasta 15 segundos) y la convierte.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>El archivo se llama como el dominio de la página.</p></div></div>
+    </div>
+    <p>Nuestro servidor en España descarga el código HTML de la URL y lo convierte a PDF con LibreOffice. No es una captura de pantalla de un navegador: se convierte el HTML tal como lo entrega el servidor, sin ejecutar JavaScript. Los archivos temporales se eliminan en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de HTML a PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Generar facturas y albaranes desde sistemas web</strong>
-        <span>Muchos sistemas ERP y de facturación generan documentos en HTML. Convertirlos a PDF es el paso final para crear un documento listo para enviar o archivar.</span>
-      </div>
-      <div class="use-case">
-        <strong>Archivar páginas web</strong>
-        <span>Guarda el contenido de una página web en PDF para consultarlo sin conexión, para evidencia legal o para preservar información que podría cambiar o eliminarse.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear informes desde plantillas HTML</strong>
-        <span>Diseña tus informes en HTML y CSS, mucho más flexible que Word, y conviértelos a PDF para distribuirlos con el formato exacto que diseñaste.</span>
-      </div>
-      <div class="use-case">
-        <strong>Exportar contenido de plataformas online</strong>
-        <span>Convierte artículos, dashboards y páginas de aplicaciones web a PDF para presentarlos en reuniones, archivarlos o compartirlos offline.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Guardar el texto de un artículo</strong><span>Conservar el contenido de una noticia o un post de blog sencillo para leerlo sin conexión.</span></div>
+      <div class="use-case"><strong>Páginas con mucho texto y poco diseño</strong><span>Documentación, normativas publicadas en web o páginas de condiciones.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre HTML a PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Se conservan los estilos CSS y las imágenes externas?</h3>
-        <p>Sí. La herramienta renderiza el HTML con soporte completo de CSS3, incluyendo fuentes web, imágenes externas y variables CSS. Las animaciones CSS se muestran en su estado inicial.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con páginas web que requieren JavaScript?</h3>
-        <p>La herramienta ejecuta JavaScript básico. Páginas muy dinámicas que dependen de interacciones del usuario para mostrar contenido pueden no renderizarse completamente.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Cuál es el tamaño máximo de HTML que puedo convertir?</h3>
-        <p>No hay un límite de caracteres. Sin embargo, páginas muy largas con muchas imágenes pueden tardar más en procesarse. Para documentos muy extensos, conviene dividirlos en secciones.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No ejecuta JavaScript.</strong> Las webs que cargan su contenido con JavaScript (muchas tiendas, redes sociales y aplicaciones web) saldrán vacías o incompletas.</li>
+      <li><strong>El diseño no se conserva fielmente.</strong> LibreOffice interpreta solo parte del CSS; la maquetación, las fuentes web y los menús pueden verse muy distintos al navegador.</li>
+      <li><strong>Imágenes y estilos con rutas relativas</strong> pueden no aparecer.</li>
+      <li>Solo páginas públicas: no funciona con páginas que requieren iniciar sesión ni con webs que bloquean robots.</li>
+      <li>Solo admite URL: no se puede pegar código HTML ni subir un archivo .html, ni elegir tamaño de papel o márgenes.</li>
+    </ul>
+    <p>Si necesitas una copia fiel de cómo se ve la página, usa la opción «Imprimir → Guardar como PDF» de tu navegador.</p>
+    <!-- TODO(contenido): probar con 5-10 webs reales (periódico, blog, tienda, web de la Administración) y documentar qué se conserva y qué no. -->
+
+    <h2>Preguntas frecuentes sobre HTML a PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Funciona con cualquier página web?</h3><p>Solo con páginas públicas cuyo contenido esté en el HTML. Las que necesitan JavaScript, inicio de sesión o bloquean robots pueden salir vacías o incompletas.</p></div>
+      <div class="faq-item"><h3>¿Se conservan los estilos y las imágenes?</h3><p>Parcialmente. La conversión con LibreOffice no interpreta todo el CSS, y las imágenes con rutas relativas pueden perderse.</p></div>
+      <div class="faq-item"><h3>¿Puedo pegar mi propio código HTML?</h3><p>No. La herramienta solo convierte URL públicas.</p></div>
+      <div class="faq-item"><h3>¿Cómo obtengo una copia idéntica a lo que veo?</h3><p>Usa la función «Imprimir → Guardar como PDF» de tu navegador, que conserva el diseño tal como lo ves.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/word-a-pdf/">Word a PDF</a>
+      <a href="/texto-a-pdf/">Texto a PDF</a>
+      <a href="/jpg-a-pdf/">JPG a PDF</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+    </nav>
+  </section>
 </main>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 <script src="/js/main.js" defer></script>

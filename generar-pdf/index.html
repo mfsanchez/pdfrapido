@@ -69,26 +69,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué tipo de documentos puedo crear?",
+          "name": "¿El documento generado tiene validez legal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puedes generar cartas, contratos, informes, currículums, instancias, reclamaciones y cualquier documento profesional describiendo lo que necesitas."
+            "text": "Es un texto de base; no sustituye el asesoramiento de un profesional. Para documentos con consecuencias legales importantes, revísalo con un abogado."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Los documentos generados son editables?",
+          "name": "¿Puedo editar el documento después?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, los PDFs generados contienen texto seleccionable y se pueden convertir a Word para editarlos posteriormente."
+            "text": "La herramienta solo genera el PDF. Si necesitas cambiarlo, conviértelo con PDF a Word, edítalo y vuelve a generar el PDF."
           }
         },
         {
           "@type": "Question",
-          "name": "¿En qué idioma genera los documentos?",
+          "name": "¿Qué documentos no puede generar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La herramienta genera documentos en español principalmente, pero también puede crear contenido en inglés, francés y alemán."
+            "text": "Los que requieren datos verificados de fuentes oficiales, como certificados, documentos notariales o declaraciones fiscales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con lo que escribo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La descripción se envía a Groq (EE. UU.) para redactar el documento. No la guardamos, así que evita incluir datos sensibles que no sean imprescindibles."
           }
         }
       ]
@@ -105,25 +113,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Describe el documento que necesitas",
-          "text": "Explica qué tipo de documento quieres crear: un contrato de arrendamiento, una carta de presentación, un informe de proyecto, una factura proforma, etcétera."
+          "name": "Elige el tipo de documento",
+          "text": "Carta, contrato, informe, currículum, instancia, reclamación, presupuesto u otro."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "La IA redacta el documento",
-          "text": "El modelo de inteligencia artificial genera el contenido del documento según tus especificaciones, con la estructura, el tono y el nivel de detalle adecuados."
+          "name": "Describe lo que necesitas",
+          "text": "Hasta 2.000 caracteres con los datos clave (nombres, fechas, importes, a quién va dirigido). Ajusta el tono (formal, neutro o cercano), la longitud (unas 200, 500 o 1.000 palabras) y el idioma (español o inglés)."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Descarga el PDF generado",
-          "text": "Obtén el documento en formato PDF, listo para usar, personalizar o firmar. También puedes pedirle a la IA que realice ajustes antes de descargarlo."
+          "name": "Revisa y descarga el PDF",
+          "text": "Verás una vista previa del texto y podrás descargar el documento en PDF."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -272,6 +281,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -290,6 +300,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -459,34 +470,7 @@
     </div>
 
     <!-- SEO -->
-    <div class="seo-content">
-        <h2>Crea documentos profesionales con Inteligencia Artificial</h2>
-        <p>Con esta herramienta, cualquier persona puede redactar documentos formales de calidad sin necesidad de conocimientos jurídicos ni de redacción. Describe en lenguaje natural lo que necesitas y el modelo <strong>Llama 3.3 70B</strong> de Meta, ejecutado en Groq, redactará el documento completo en segundos.</p>
 
-        <h3>Casos de uso reales</h3>
-        <ul>
-            <li><strong>Cartas formales:</strong> agradecimientos, presentaciones, solicitudes de empleo, cartas de motivación o comunicados a empresas.</li>
-            <li><strong>Instancias para el ayuntamiento:</strong> solicitudes de licencias, recursos de multas, peticiones a organismos públicos con el formato oficial EXPONE / SOLICITA.</li>
-            <li><strong>Contratos básicos:</strong> arrendamiento de habitación, prestación de servicios freelance, acuerdos de confidencialidad entre partes.</li>
-            <li><strong>Currículums:</strong> genera un CV estructurado a partir de tu experiencia describiendo tu perfil profesional.</li>
-            <li><strong>Reclamaciones:</strong> a empresas de telecomunicaciones, aerolíneas, seguros o comercios, con fundamentos legales básicos incluidos.</li>
-            <li><strong>Presupuestos para autónomos:</strong> presupuestos profesionales con conceptos, precios unitarios e IVA, listos para enviar al cliente.</li>
-        </ul>
-
-        <h3>Privacidad</h3>
-        <p>Tu descripción se envía a la IA para generar el documento y no se almacena. El PDF resultante se crea al momento y se descarga directamente en tu dispositivo.</p>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/resumir-pdf/">Resumir PDF con IA</a></li>
-            <li><a href="/traducir-pdf/">Traducir PDF</a></li>
-            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
-            <li><a href="/extraer-datos/">Extraer datos de PDF</a></li>
-            <li><a href="/chat-pdf/">Chat con PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -509,70 +493,47 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Generar PDF con IA?</h2>
-  <p>Usar Generar PDF con IA en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Describe el documento que necesitas</h3>
-          <p>Explica qué tipo de documento quieres crear: un contrato de arrendamiento, una carta de presentación, un informe de proyecto, una factura proforma, etcétera.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>La IA redacta el documento</h3>
-          <p>El modelo de inteligencia artificial genera el contenido del documento según tus especificaciones, con la estructura, el tono y el nivel de detalle adecuados.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF generado</h3>
-          <p>Obtén el documento en formato PDF, listo para usar, personalizar o firmar. También puedes pedirle a la IA que realice ajustes antes de descargarlo.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para generar un PDF con IA">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Elige el tipo de documento</h3><p>Carta, contrato, informe, currículum, instancia, reclamación, presupuesto u otro.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Describe lo que necesitas</h3><p>Hasta 2.000 caracteres con los datos clave (nombres, fechas, importes, a quién va dirigido). Ajusta el tono (formal, neutro o cercano), la longitud (unas 200, 500 o 1.000 palabras) y el idioma (español o inglés).</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Revisa y descarga el PDF</h3><p>Verás una vista previa del texto y podrás descargar el documento en PDF.</p></div></div>
+    </div>
+    <p>Tu descripción se envía desde nuestro servidor en España a Groq (EE. UU.), donde el modelo Llama 3.3 70B redacta el texto; con él se genera el PDF. No guardamos ni la descripción ni el documento.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Generar PDF con IA es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Crear contratos y acuerdos básicos</strong>
-        <span>Genera rápidamente contratos de servicio, acuerdos de confidencialidad, contratos de arrendamiento u otros documentos estándar adaptados a tus condiciones específicas.</span>
-      </div>
-      <div class="use-case">
-        <strong>Redactar cartas y comunicaciones formales</strong>
-        <span>Cartas de reclamación, solicitudes de información, comunicaciones a administraciones u otros documentos formales que requieren un tono y estructura específicos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Generar informes y resúmenes ejecutivos</strong>
-        <span>A partir de los datos y puntos clave que proporciones, la IA estructura un informe o resumen ejecutivo profesional con el formato adecuado.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear plantillas personalizadas</strong>
-        <span>Genera plantillas reutilizables de documentos habituales en tu actividad profesional con los apartados, el formato y el lenguaje que necesitas.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Instancias con formato EXPONE / SOLICITA</strong><span>Un primer borrador de una solicitud al ayuntamiento o un recurso de multa, que luego completas con tus datos.</span></div>
+      <div class="use-case"><strong>Reclamaciones</strong><span>A una operadora, una aerolínea o un comercio, con una estructura clara de hechos y petición.</span></div>
+      <div class="use-case"><strong>Cartas formales</strong><span>Cartas de presentación, de agradecimiento o comunicados a una empresa.</span></div>
+      <div class="use-case"><strong>Presupuestos de autónomo</strong><span>Una base con conceptos, precios e IVA para adaptar y enviar.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Generar PDF con IA</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿El documento generado tiene validez legal?</h3>
-        <p>Los documentos generados por IA proporcionan una base estructural correcta, pero no sustituyen el asesoramiento legal profesional. Para documentos con implicaciones legales importantes, siempre es recomendable revisarlos con un abogado.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo personalizar el documento después de generarlo?</h3>
-        <p>Sí. El documento se puede descargar también en formato Word para editarlo con libertad antes de convertirlo al PDF final.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué tipo de documentos no puede generar la herramienta?</h3>
-        <p>La herramienta no genera documentos que requieran información específica y verificada como certificados oficiales, documentos notariales o declaraciones fiscales, ya que esos documentos requieren datos reales de fuentes autorizadas.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Es un borrador.</strong> La IA puede inventar datos que no le has dado o citar normas de forma imprecisa: revisa cada dato y cada referencia legal.</li>
+      <li><strong>Solo PDF.</strong> No se descarga en Word ni se puede pedir a la IA que corrija el resultado; si no te convence, cambia la descripción y genera otro.</li>
+      <li>No sirve para documentos que exigen datos oficiales o fe pública: certificados, escrituras, declaraciones fiscales.</li>
+    </ul>
+    <!-- TODO(contenido): añadir un ejemplo real de descripción y del documento generado (por ejemplo, una instancia) y señalar los fallos típicos que conviene revisar. -->
+
+    <h2>Preguntas frecuentes sobre Generar PDF con IA</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿El documento generado tiene validez legal?</h3><p>Es un texto de base; no sustituye el asesoramiento de un profesional. Para documentos con consecuencias legales importantes, revísalo con un abogado.</p></div>
+      <div class="faq-item"><h3>¿Puedo editar el documento después?</h3><p>La herramienta solo genera el PDF. Si necesitas cambiarlo, conviértelo con <a href="/pdf-a-word/">PDF a Word</a>, edítalo y vuelve a generar el PDF.</p></div>
+      <div class="faq-item"><h3>¿Qué documentos no puede generar?</h3><p>Los que requieren datos verificados de fuentes oficiales, como certificados, documentos notariales o declaraciones fiscales.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con lo que escribo?</h3><p>La descripción se envía a Groq (EE. UU.) para redactar el documento. No la guardamos, así que evita incluir datos sensibles que no sean imprescindibles.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/texto-a-pdf/">Texto a PDF</a>
+      <a href="/corregir-pdf/">Corregir PDF</a>
+      <a href="/firmar-pdf/">Firmar PDF</a>
+      <a href="/cv-a-carta/">CV a carta</a>
+    </nav>
+  </section>
 </main>
 
 <footer>
