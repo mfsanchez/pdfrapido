@@ -68,26 +68,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué tipo de datos puedo extraer?",
+          "name": "¿Qué datos extrae?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puedes extraer campos específicos como nombres, fechas, importes, direcciones, líneas de factura y cualquier dato estructurado del documento."
+            "text": "Depende del tipo elegido: en facturas, emisor, receptor, fecha, número, conceptos, base, IVA y total; en contratos, partes, fecha, objeto, duración, importe y cláusulas; en formularios, cada campo con su valor."
           }
         },
         {
           "@type": "Question",
-          "name": "¿En qué formatos exporta los datos?",
+          "name": "¿Funciona con facturas de cualquier diseño?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Los datos extraídos se pueden descargar en formato tabla, JSON o CSV para facilitar su importación en otras aplicaciones."
+            "text": "No depende de plantillas, así que suele funcionar con diseños distintos, pero el resultado varía con documentos poco claros o muy irregulares. Revisa los datos antes de usarlos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con cualquier tipo de PDF?",
+          "name": "¿En qué formatos puedo exportar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Funciona mejor con documentos con estructura repetitiva como facturas, albaranes y formularios. PDFs escaneados necesitan OCR previo."
+            "text": "Puedes copiarlos como JSON o descargarlos en CSV."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona con PDFs escaneados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo después de pasarlos por OCR a PDF, que les añade texto seleccionable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿A dónde se envía mi documento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El PDF se sube a nuestro servidor en España y el texto extraído se envía a Groq (EE. UU.) para la extracción con IA. El archivo se borra de nuestro servidor en un máximo de 10 minutos."
           }
         }
       ]
@@ -104,25 +120,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga el PDF con datos",
-          "text": "Sube facturas, contratos, formularios o cualquier documento PDF que contenga información estructurada que quieres extraer automáticamente."
+          "name": "Sube el PDF",
+          "text": "Hasta 20 MB, con texto seleccionable."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "La IA analiza el documento",
-          "text": "El modelo de inteligencia artificial identifica los campos de datos relevantes: fechas, importes, nombres, números de referencia, direcciones y otros datos clave."
+          "name": "Elige el tipo de documento",
+          "text": "Factura, contrato, formulario, informe o general. El tipo decide qué campos busca la IA."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Obtén los datos extraídos",
-          "text": "Descarga los datos en formato JSON, CSV o tabla para importarlos directamente a tu sistema de gestión, hoja de cálculo o base de datos."
+          "name": "Revisa y exporta",
+          "text": "Los datos aparecen en una tabla. Puedes copiarlos como JSON o descargarlos en CSV para abrirlos en Excel o Google Sheets."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -352,6 +369,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -370,6 +388,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -525,48 +544,7 @@
         <button class="btn-new" id="btnNew">Analizar otro PDF</button>
     </div>
 
-    <div class="seo-content">
-        <h2>Extraer datos de PDF con IA: facturas, contratos y formularios</h2>
-        <p>Esta herramienta analiza el contenido de tu PDF con inteligencia artificial y extrae automáticamente los campos más relevantes según el tipo de documento. El resultado se muestra en una tabla limpia y se puede exportar como JSON o CSV para usarlo en Excel, bases de datos o cualquier sistema de gestión.</p>
-        <h3>Tipos de documentos soportados</h3>
-        <ul>
-            <li><strong>Facturas</strong>: emisor, receptor, fecha, número, conceptos, IVA y total.</li>
-            <li><strong>Contratos</strong>: partes, objeto, duración, importe y cláusulas importantes.</li>
-            <li><strong>Formularios</strong>: todos los campos y valores detectados.</li>
-            <li><strong>Informes</strong>: título, autor, fecha y conclusiones principales.</li>
-        </ul>
-        <h3>Exportar a CSV y JSON</h3>
-        <p>Los datos extraídos se pueden copiar como JSON estructurado para integraciones técnicas, o descargar como archivo CSV compatible con Excel, Google Sheets y cualquier herramienta de análisis de datos.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-excel/">PDF a Excel</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
-            <li><a href="/resumir-pdf/">Resumir PDF</a></li>
-            <li><a href="/chat-pdf/">Chat con PDF</a></li>
-        </ul>
-    
-        <h3>¿Qué tipo de datos puede extraer?</h3>
-        <p>La herramienta con IA identifica y extrae automáticamente datos estructurados como: tablas de cualquier formato, listas de precios, inventarios, datos de facturas (número, fecha, importe, IVA, proveedor), datos de formularios y cualquier información repetitiva con estructura reconocible.</p>
-
-        <h3>¿En qué formato se devuelven los datos?</h3>
-        <p>Los datos extraídos se entregan en formato JSON estructurado, que puedes importar directamente en Excel, Google Sheets, bases de datos o cualquier sistema de gestión. También puedes descargarlos como CSV para abrirlos directamente en una hoja de cálculo.</p>
-
-        <h3>Casos de uso habituales</h3>
-        <ul>
-            <li>Procesar facturas de proveedores de forma automatizada</li>
-            <li>Extraer datos de extractos bancarios en PDF</li>
-            <li>Digitalizar inventarios y listas de productos de catálogos en PDF</li>
-            <li>Procesar formularios y encuestas escaneadas</li>
-            <li>Extraer datos de informes periódicos para alimentar dashboards</li>
-        </ul>
-
-        <h3>¿Funciona con PDFs escaneados?</h3>
-        <p>Necesitan un paso previo: un PDF escaneado es una imagen, así que primero pásalo por <a href="/ocr-a-pdf/">OCR a PDF</a> para añadirle texto seleccionable. Después, la extracción de datos funcionará sobre ese texto.</p>
-</div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -589,76 +567,55 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Extraer datos de PDF con IA?</h2>
-  <p>Usar Extraer datos de PDF con IA en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF con datos</h3>
-          <p>Sube facturas, contratos, formularios o cualquier documento PDF que contenga información estructurada que quieres extraer automáticamente.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>La IA analiza el documento</h3>
-          <p>El modelo de inteligencia artificial identifica los campos de datos relevantes: fechas, importes, nombres, números de referencia, direcciones y otros datos clave.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Obtén los datos extraídos</h3>
-          <p>Descarga los datos en formato JSON, CSV o tabla para importarlos directamente a tu sistema de gestión, hoja de cálculo o base de datos.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para extraer datos de un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Hasta 20 MB, con texto seleccionable.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige el tipo de documento</h3><p>Factura, contrato, formulario, informe o general. El tipo decide qué campos busca la IA.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Revisa y exporta</h3><p>Los datos aparecen en una tabla. Puedes copiarlos como JSON o descargarlos en CSV para abrirlos en Excel o Google Sheets.</p></div></div>
+    </div>
+    <p>El PDF se sube a nuestro servidor en España, que extrae el texto y envía <strong>hasta unas 3.500 palabras</strong> (14.000 caracteres) a Groq (EE. UU.), donde el modelo Llama 3.3 70B devuelve los campos en formato estructurado. El archivo se borra de nuestro servidor en un máximo de 10 minutos.</p>
+    <ul>
+      <li><strong>Factura:</strong> emisor, receptor, fecha, número, conceptos, base imponible, IVA y total.</li>
+      <li><strong>Contrato:</strong> las dos partes, fecha de firma, objeto, duración, importe y cláusulas importantes.</li>
+      <li><strong>Formulario:</strong> cada campo con el valor que tiene rellenado.</li>
+      <li><strong>Informe y general:</strong> los datos principales que la IA identifica en el texto.</li>
+    </ul>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Extraer datos de PDF con IA es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Automatizar la contabilización de facturas</strong>
-        <span>Extrae automáticamente número de factura, fecha, proveedor, importe total, IVA y partidas de gasto de facturas en PDF para contabilizarlas sin introducción manual de datos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Procesar contratos en masa</strong>
-        <span>Extrae las cláusulas clave, fechas de vigencia, partes firmantes e importes de una colección de contratos PDF para crear una base de datos de acuerdos gestionable.</span>
-      </div>
-      <div class="use-case">
-        <strong>Digitalizar formularios en papel escaneados</strong>
-        <span>Los formularios rellenados a mano y escaneados pueden digitalizarse automáticamente extrayendo los datos de cada campo sin necesidad de introducirlos manualmente.</span>
-      </div>
-      <div class="use-case">
-        <strong>Importar datos de informes a sistemas ERP</strong>
-        <span>Los informes periódicos que llegan en PDF pueden procesarse automáticamente para extraer los KPIs, métricas y datos numéricos que deben registrarse en el sistema empresarial.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Facturas de proveedores</strong><span>Pasar número, fecha, base, IVA y total a una hoja de cálculo sin teclearlos.</span></div>
+      <div class="use-case"><strong>Ficha de un contrato</strong><span>Sacar partes, duración e importe para un registro de contratos.</span></div>
+      <div class="use-case"><strong>Formularios digitales</strong><span>Convertir en tabla las respuestas de un formulario PDF ya rellenado.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Extraer datos de PDF con IA</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Qué tipo de datos puede extraer la herramienta?</h3>
-        <p>Puede extraer texto estructurado y no estructurado: fechas, importes, nombres, direcciones, números de referencia, tablas de datos, listas de productos y prácticamente cualquier información que un humano pueda leer en el documento.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con facturas de cualquier formato?</h3>
-        <p>Sí. A diferencia de los extractores tradicionales basados en plantillas, el motor de IA comprende la semántica del documento y puede extraer datos de facturas, contratos e informes de cualquier diseño.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Los datos extraídos son precisos al 100%?</h3>
-        <p>La precisión es muy alta para documentos bien estructurados, pero puede variar con documentos escaneados de baja calidad o formatos muy irregulares. Siempre se recomienda una revisión humana de los datos críticos.</p>
-      </div>
-  </div>
-</section>
-<section style="margin:2rem 1rem;padding:1rem 1.25rem;border-left:3px solid #0EA5E9;background:#0EA5E912;">
-  <p style="margin:0 0 4px;font-size:13px;color:#888;">Guía relacionada</p>
-  <a href="/blog/extraer-datos-facturas-pdf-ia/" style="font-size:15px;font-weight:500;color:#0EA5E9;text-decoration:none;">
-    Cómo extraer datos de facturas PDF automáticamente con IA — guía completa →
-  </a>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Un documento cada vez.</strong> No procesa lotes de archivos.</li>
+      <li><strong>Documentos largos:</strong> solo se leen las primeras ~3.500 palabras; datos que estén más adelante no aparecerán.</li>
+      <li><strong>PDF escaneados:</strong> aplica antes <a href="/ocr-a-pdf/">OCR a PDF</a>. Los formularios rellenados a mano dependen mucho de la calidad del OCR.</li>
+      <li><strong>Revisa siempre los importes.</strong> La IA puede equivocarse o dejar campos vacíos si el dato no está claro.</li>
+    </ul>
+    <!-- TODO(contenido): añadir un ejemplo real de factura con el JSON/CSV obtenido y una tasa de acierto medida con facturas de prueba. -->
+
+    <h2>Preguntas frecuentes sobre extraer datos de PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Qué datos extrae?</h3><p>Depende del tipo elegido: en facturas, emisor, receptor, fecha, número, conceptos, base, IVA y total; en contratos, partes, fecha, objeto, duración, importe y cláusulas; en formularios, cada campo con su valor.</p></div>
+      <div class="faq-item"><h3>¿Funciona con facturas de cualquier diseño?</h3><p>No depende de plantillas, así que suele funcionar con diseños distintos, pero el resultado varía con documentos poco claros o muy irregulares. Revisa los datos antes de usarlos.</p></div>
+      <div class="faq-item"><h3>¿En qué formatos puedo exportar?</h3><p>Puedes copiarlos como JSON o descargarlos en CSV.</p></div>
+      <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>Solo después de pasarlos por <a href="/ocr-a-pdf/">OCR a PDF</a>, que les añade texto seleccionable.</p></div>
+      <div class="faq-item"><h3>¿A dónde se envía mi documento?</h3><p>El PDF se sube a nuestro servidor en España y el texto extraído se envía a Groq (EE. UU.) para la extracción con IA. El archivo se borra de nuestro servidor en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/pdf-a-excel/">PDF a Excel</a>
+      <a href="/pdf-a-csv/">PDF a CSV</a>
+      <a href="/ocr-a-pdf/">OCR a PDF</a>
+      <a href="/chat-pdf/">Chat con PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/extraer-datos-facturas-pdf-ia/">cómo extraer datos de facturas PDF con IA</a>.</p>
+  </section>
 </main>
 
 <footer>

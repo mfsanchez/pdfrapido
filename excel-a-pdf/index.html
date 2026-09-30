@@ -202,34 +202,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo convertir Excel a PDF gratis?",
+          "name": "¿Se convierten todas las hojas del libro?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sube tu archivo .xlsx o .xls, pulsa 'Convertir a PDF' y descarga el resultado. La conversión preserva el formato de celdas, colores y datos numéricos."
+            "text": "Sí, todas las hojas visibles. Cada una ocupa una o varias páginas según su tamaño y el área de impresión configurada."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se convierten todas las hojas del Excel?",
+          "name": "¿Se ven las fórmulas en el PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Por defecto se convierten todas las hojas del libro de Excel. Si quieres convertir solo algunas, deberías eliminar las demás antes de subir el archivo."
+            "text": "No. El PDF muestra los valores calculados de las celdas, no las fórmulas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se mantienen los gráficos al convertir Excel a PDF?",
+          "name": "¿Funciona con archivos .xls antiguos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, los gráficos, tablas y elementos visuales del Excel se incluyen en el PDF resultante tal como aparecen en la hoja de cálculo."
+            "text": "Sí. Acepta tanto .xls (Excel 97-2003) como .xlsx."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con archivos de Google Sheets?",
+          "name": "¿Los gráficos se convierten bien?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Debes descargar el archivo como .xlsx desde Google Sheets primero. Una vez en formato Excel, puedes convertirlo a PDF con PDFRápido sin problemas."
+            "text": "Los gráficos habituales (barras, líneas, sectores) se convierten con LibreOffice y suelen verse bien; algunos tipos o estilos muy recientes de Excel pueden cambiar ligeramente de aspecto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mi archivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se convierte en nuestro servidor en España y se elimina en un máximo de 10 minutos."
           }
         }
       ]
@@ -246,25 +254,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga tu hoja de cálculo",
-          "text": "Selecciona el archivo .xlsx o .xls desde tu ordenador. La herramienta es compatible con todos los formatos de Microsoft Excel y LibreOffice Calc."
+          "name": "Sube tu hoja de cálculo",
+          "text": "Archivos .xlsx o .xls de hasta 50 MB."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Conversión con ajuste de página",
-          "text": "El procesador convierte las hojas de cálculo respetando los saltos de página configurados, los encabezados de columna y el área de impresión definida en Excel."
+          "name": "Espera la conversión",
+          "text": "Suele tardar unos segundos; los libros grandes o con muchos gráficos tardan más."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Descarga el PDF resultante",
-          "text": "Obtén un PDF con todas las hojas del libro convertidas, listas para distribuirse o archivarse sin necesidad de que el destinatario tenga Excel instalado."
+          "name": "Descarga el PDF",
+          "text": "Incluye las hojas visibles del libro, cada una en una o varias páginas según su tamaño."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -292,6 +301,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -310,6 +320,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -353,57 +364,9 @@
     </div>
     <div class="error-msg" id="errorMsg"></div>
     <div class="ra" id="resultArea"><div class="rc"><div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Hoja de cálculo convertida a PDF</h3><p class="desc" id="resultDesc"></p><div class="rac"><button class="bd" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button><button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button></div></div></div>
-    <div class="seo"><h2>Cómo convertir Excel a PDF online gratis</h2><p>Sube tu archivo XLS o XLSX y conviértelo a PDF con las columnas perfectamente ajustadas. Ideal para imprimir tablas y gráficos.</p></div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-excel/">PDF a Excel</a></li>
-            <li><a href="/word-a-pdf/">Word a PDF</a></li>
-            <li><a href="/pptx-a-pdf/">PowerPoint a PDF</a></li>
-            <li><a href="/unir-pdf/">Unir PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        </ul>
-    </div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo convertir Excel a PDF online gratis</h2>
-        <p>Convierte hojas de cálculo Excel (XLS, XLSX) a PDF con máxima fidelidad. Conserva el formato, las fórmulas visuales, los gráficos y el diseño de tus tablas.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube tu archivo Excel (.xls o .xlsx).</li>
-            <li>La herramienta procesa la conversión manteniendo el formato original.</li>
-            <li>Descarga tu PDF listo para compartir o imprimir.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Convertir Excel a PDF es ideal para compartir informes sin que nadie pueda modificar los datos, enviar facturas profesionales o archivar hojas de cálculo de forma segura.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>La conversión se realiza en servidores europeos mediante una conexión segura. Tus datos se eliminan automáticamente en menos de 10 minutos y no se almacenan ni comparten.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Se ven las fórmulas en el PDF?</summary>
-            <p>El PDF muestra los valores resultantes de las fórmulas, no las fórmulas en sí. Las celdas se ven exactamente como en Excel.</p>
-        </details>
-        <details>
-            <summary>¿Puedo convertir varias hojas a la vez?</summary>
-            <p>Sí, todas las hojas visibles del libro de Excel se incluyen en el PDF resultante.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-excel/">PDF a Excel</a></li>
-            <li><a href="/word-a-pdf/">Word a PDF</a></li>
-            <li><a href="/pptx-a-pdf/">PowerPoint a PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -426,96 +389,51 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Excel a PDF?</h2>
-  <p>Usar Excel a PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga tu hoja de cálculo</h3>
-          <p>Selecciona el archivo .xlsx o .xls desde tu ordenador. La herramienta es compatible con todos los formatos de Microsoft Excel y LibreOffice Calc.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Conversión con ajuste de página</h3>
-          <p>El procesador convierte las hojas de cálculo respetando los saltos de página configurados, los encabezados de columna y el área de impresión definida en Excel.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF resultante</h3>
-          <p>Obtén un PDF con todas las hojas del libro convertidas, listas para distribuirse o archivarse sin necesidad de que el destinatario tenga Excel instalado.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para convertir Excel a PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube tu hoja de cálculo</h3><p>Archivos .xlsx o .xls de hasta 50 MB.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Espera la conversión</h3><p>Suele tardar unos segundos; los libros grandes o con muchos gráficos tardan más.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>Incluye las hojas visibles del libro, cada una en una o varias páginas según su tamaño.</p></div></div>
+    </div>
+    <p>El archivo se sube a nuestro servidor en España y se convierte con LibreOffice, que imprime el libro a PDF respetando el área de impresión, los saltos de página y el formato de las celdas. El archivo se elimina en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Excel a PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Distribuir informes financieros</strong>
-        <span>Comparte balances, cuentas de resultados y presupuestos en PDF para evitar que los datos sean modificados accidentalmente y garantizar que el formato se ve igual en todos los dispositivos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Presentar datos a clientes</strong>
-        <span>Convierte tablas de datos, gráficos y análisis a PDF para presentaciones limpias sin exponer las fórmulas ni la estructura interna del libro de Excel.</span>
-      </div>
-      <div class="use-case">
-        <strong>Archivar registros contables</strong>
-        <span>Las facturas, albaranes y hojas de cierre mensual creadas en Excel deben archivarse en un formato no editable. El PDF garantiza la integridad del documento.</span>
-      </div>
-      <div class="use-case">
-        <strong>Preparar documentos para firma o sello</strong>
-        <span>Presupuestos y propuestas creadas en Excel se convierten a PDF antes de añadir una firma digital o el sello de la empresa.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Presupuestos y facturas hechos en Excel</strong><span>Enviarlos en un formato que el cliente no pueda modificar por error y que se vea igual en cualquier dispositivo.</span></div>
+      <div class="use-case"><strong>Informes para quien no tiene Excel</strong><span>Tablas y gráficos listos para leer en el móvil o imprimir.</span></div>
+      <div class="use-case"><strong>Archivo contable</strong><span>Guardar cierres mensuales o albaranes en un formato que no cambia al abrirlo con otra versión de Excel.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Excel a PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Se convierten todas las hojas del libro de Excel?</h3>
-        <p>Sí. Por defecto se convierten todas las hojas visibles del libro. Cada hoja ocupa una o más páginas del PDF resultante, dependiendo de su tamaño y el área de impresión configurada.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Los gráficos e imágenes se convierten correctamente?</h3>
-        <p>Sí, los gráficos de Excel de barras, líneas, circulares y otros tipos, así como las imágenes incrustadas, se renderizan correctamente en el PDF resultante.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué ocurre con las fórmulas de Excel en el PDF?</h3>
-        <p>Las fórmulas no se exportan: en el PDF aparecen los valores calculados, es decir, el resultado de las fórmulas. Esto es el comportamiento esperado al generar un PDF.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No se puede elegir qué hojas convertir</strong>: se incluyen todas las hojas visibles. Oculta en Excel las que no quieras antes de subir el archivo.</li>
+      <li><strong>Hojas anchas.</strong> Si no has configurado el área de impresión o el ajuste a página, una tabla ancha puede partirse en varias páginas.</li>
+      <li><strong>Fuentes.</strong> Si el libro usa fuentes que no están instaladas en el servidor, se sustituyen por otras parecidas y puede variar el ancho de las columnas.</li>
+      <li>Las macros no se ejecutan; en el PDF aparecen los valores de las celdas, no las fórmulas.</li>
+    </ul>
+    <!-- TODO(contenido): comprobar el resultado con gráficos dinámicos, segmentaciones y formato condicional en LibreOffice y documentar diferencias reales frente a Excel. -->
+
+    <h2>Preguntas frecuentes sobre Excel a PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Se convierten todas las hojas del libro?</h3><p>Sí, todas las hojas visibles. Cada una ocupa una o varias páginas según su tamaño y el área de impresión configurada.</p></div>
+      <div class="faq-item"><h3>¿Se ven las fórmulas en el PDF?</h3><p>No. El PDF muestra los valores calculados de las celdas, no las fórmulas.</p></div>
+      <div class="faq-item"><h3>¿Funciona con archivos .xls antiguos?</h3><p>Sí. Acepta tanto .xls (Excel 97-2003) como .xlsx.</p></div>
+      <div class="faq-item"><h3>¿Los gráficos se convierten bien?</h3><p>Los gráficos habituales (barras, líneas, sectores) se convierten con LibreOffice y suelen verse bien; algunos tipos o estilos muy recientes de Excel pueden cambiar ligeramente de aspecto.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con mi archivo?</h3><p>Se convierte en nuestro servidor en España y se elimina en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/pdf-a-excel/">PDF a Excel</a>
+      <a href="/word-a-pdf/">Word a PDF</a>
+      <a href="/pptx-a-pdf/">PowerPoint a PDF</a>
+      <a href="/unir-pdf/">Unir PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/convertir-excel-a-pdf/">cómo convertir Excel a PDF</a>.</p>
+  </section>
 </main>
 
-<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
-    <div style="font-size:14px;color:#6B7280;line-height:1.75">
-        <p>Convierte hojas de cálculo Excel a PDF manteniendo el formato, las celdas, fórmulas calculadas y los gráficos. Compatible con archivos .xls y .xlsx.</p>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Por qué convertir Excel a PDF?</h2>
-        <p>Compartir un archivo Excel directamente tiene riesgos: el destinatario puede modificar los datos, puede que no tenga Excel instalado, o el formato puede verse diferente según la versión del programa. Convertirlo a PDF garantiza que los datos se presenten exactamente como tú quieres, en cualquier dispositivo.</p>
-        <p>Es especialmente útil para facturas, presupuestos, informes financieros y cualquier documento donde los datos no deban modificarse.</p>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Qué se incluye en la conversión?</h2>
-        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
-            <li>Todas las hojas del libro o solo las seleccionadas</li>
-            <li>Gráficos y diagramas incrustados</li>
-            <li>Formato de celdas: colores, bordes, fuentes</li>
-            <li>Los resultados de las fórmulas (no las fórmulas en sí)</li>
-            <li>Imágenes insertadas en la hoja</li>
-        </ul>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
-        <p><strong>¿Se convierten todas las hojas del libro?</strong><br>Por defecto se convierten todas las hojas visibles. Cada hoja aparece como una página diferente en el PDF resultante.</p>
-        <p><strong>¿Las celdas con fórmulas muestran el resultado o la fórmula?</strong><br>El PDF muestra los valores calculados de las fórmulas, no la fórmula en sí. Así el documento es legible para cualquier persona.</p>
-        <p><strong>¿Funciona con archivos .xls (Excel antiguo)?</strong><br>Sí. La herramienta acepta tanto .xls (Excel 97-2003) como el moderno .xlsx.</p>
-
-    </div>
-    </section>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 <script src="/js/convert.js" defer></script>
 <script>
