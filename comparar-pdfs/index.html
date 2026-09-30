@@ -69,26 +69,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué tipo de diferencias detecta?",
+          "name": "¿Detecta cambios en imágenes y gráficos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Detecta texto añadido, eliminado y modificado entre las dos versiones del PDF. Las diferencias se resaltan para una fácil visualización."
+            "text": "No. Solo compara el texto de los dos documentos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con PDFs escaneados?",
+          "name": "¿Funciona con PDFs a varias columnas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Los PDFs escaneados son imágenes; para compararlos necesitan tener texto seleccionable o haber pasado por OCR primero."
+            "text": "Funciona, pero el texto se compara en el orden en que se extrae de la página; en diseños a varias columnas ese orden puede no ser el de lectura y el resultado será más difícil de interpretar."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro comparar documentos confidenciales?",
+          "name": "¿Puedo comparar PDFs escaneados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. La comparación se realiza en servidores europeos mediante una conexión segura y los archivos se eliminan inmediatamente tras calcular las diferencias (máximo 10 minutos)."
+            "text": "Solo si antes les aplicas OCR a los dos. Un escaneo sin capa de texto no tiene nada que comparar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se guardan mis documentos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Se procesan en nuestro servidor en España y se eliminan en un máximo de 10 minutos."
           }
         }
       ]
@@ -105,25 +113,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga los dos PDF a comparar",
-          "text": "Sube el documento original y la versión revisada. La herramienta analiza ambos en paralelo para identificar las diferencias."
+          "name": "Sube las dos versiones",
+          "text": "El documento original y el modificado, hasta 20 MB cada uno."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Análisis de diferencias",
-          "text": "El motor de comparación detecta texto añadido, eliminado y modificado, así como cambios en imágenes y formato entre ambas versiones del documento."
+          "name": "Elige cómo ver el resultado",
+          "text": "En pantalla, como una tabla de dos columnas con las líneas añadidas, eliminadas y modificadas resaltadas, o como un informe en PDF para descargar."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Revisa el informe de diferencias",
-          "text": "Obtén un informe visual donde las adiciones aparecen marcadas en verde y las eliminaciones en rojo, similar al modo de control de cambios de Word."
+          "name": "Revisa los cambios",
+          "text": "Verás el recuento de líneas añadidas, eliminadas y modificadas. En pantalla puedes ocultar las líneas sin cambios para ir directo a las diferencias."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -277,6 +286,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -295,6 +305,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -421,26 +432,7 @@
         <button class="btn-new" onclick="resetTool()">&#8592; Comparar otros documentos</button>
     </div>
 
-    <div class="seo-content">
-        <h2>Compara dos PDFs y detecta cada cambio</h2>
-        <p>Nuestra herramienta extrae el texto de ambos documentos con <strong>pdfplumber</strong> y aplica un algoritmo de diferencias línea por línea para identificar exactamente qué ha cambiado entre las dos versiones.</p>
-        <h3>Casos de uso</h3>
-        <p>La comparación de PDFs es especialmente útil en contextos donde la trazabilidad importa. En la <strong>revisión de contratos</strong>, permite detectar cláusulas nuevas o modificadas entre versiones de un acuerdo antes de firmarlo, sin leer el documento entero. Para el <strong>control de versiones de documentos</strong> técnicos —manuales, especificaciones o informes—, identifica exactamente qué secciones han cambiado entre borradores. En la <strong>auditoría de documentos</strong>, verifica que la versión entregada coincide con la aprobada, garantizando integridad documental. Y al <strong>comparar borradores</strong> en procesos de revisión académica o editorial, localiza los cambios del revisor sin perder el hilo del original. En todos estos escenarios, ahorras horas de revisión manual y reduces el riesgo de pasar por alto cambios críticos.</p>
-        <h3>Privacidad</h3>
-        <p>Los PDFs se procesan en nuestros servidores y se eliminan inmediatamente tras calcular las diferencias. No almacenamos ni los archivos ni su contenido.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/extraer-datos/">Extraer datos de PDF</a></li>
-            <li><a href="/resumir-pdf/">Resumir PDF con IA</a></li>
-            <li><a href="/chat-pdf/">Chat con PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
-            <li><a href="/unir-pdf/">Unir PDFs</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -463,70 +455,46 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Comparar PDFs?</h2>
-  <p>Usar Comparar PDFs en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga los dos PDF a comparar</h3>
-          <p>Sube el documento original y la versión revisada. La herramienta analiza ambos en paralelo para identificar las diferencias.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Análisis de diferencias</h3>
-          <p>El motor de comparación detecta texto añadido, eliminado y modificado, así como cambios en imágenes y formato entre ambas versiones del documento.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Revisa el informe de diferencias</h3>
-          <p>Obtén un informe visual donde las adiciones aparecen marcadas en verde y las eliminaciones en rojo, similar al modo de control de cambios de Word.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para comparar PDFs">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube las dos versiones</h3><p>El documento original y el modificado, hasta 20 MB cada uno.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige cómo ver el resultado</h3><p>En pantalla, como una tabla de dos columnas con las líneas añadidas, eliminadas y modificadas resaltadas, o como un informe en PDF para descargar.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Revisa los cambios</h3><p>Verás el recuento de líneas añadidas, eliminadas y modificadas. En pantalla puedes ocultar las líneas sin cambios para ir directo a las diferencias.</p></div></div>
+    </div>
+    <p>Los dos PDF se suben a nuestro servidor en España, donde se extrae su texto con pdfplumber y se comparan línea a línea. Los archivos se eliminan en un máximo de 10 minutos. Es una comparación <strong>de texto</strong>: no compara imágenes, colores ni maquetación.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Comparar PDFs es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Revisar contratos modificados</strong>
-        <span>Cuando recibes una versión revisada de un contrato, comparar los dos PDFs te muestra exactamente qué cláusulas se han modificado, añadido o eliminado sin tener que leer el documento completo.</span>
-      </div>
-      <div class="use-case">
-        <strong>Control de calidad de documentos impresos</strong>
-        <span>Compara el PDF enviado a imprenta con el resultado escaneado para verificar que no hay diferencias entre el diseño original y el impreso.</span>
-      </div>
-      <div class="use-case">
-        <strong>Verificar traducciones y versiones lingüísticas</strong>
-        <span>Compara el documento original con la traducción para verificar que la estructura y extensión del contenido es coherente entre ambas versiones.</span>
-      </div>
-      <div class="use-case">
-        <strong>Detectar cambios entre versiones de informes</strong>
-        <span>Compara el borrador con la versión final de un informe para generar automáticamente un registro de los cambios realizados durante el proceso de revisión.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Contratos revisados</strong><span>Ver qué cláusulas han cambiado entre la versión que enviaste y la que te devuelven antes de firmar.</span></div>
+      <div class="use-case"><strong>Borradores de informes</strong><span>Obtener un registro de los cambios entre el borrador y la versión final.</span></div>
+      <div class="use-case"><strong>Auditoría documental</strong><span>Comprobar que el documento entregado coincide con el aprobado.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Comparar PDFs</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿La herramienta detecta cambios en imágenes y gráficos?</h3>
-        <p>Sí. La comparación detecta tanto cambios en el texto como diferencias en las imágenes y elementos gráficos entre las dos versiones del documento.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con PDFs que tienen diseños de varias columnas?</h3>
-        <p>Sí. El motor de comparación analiza el contenido textual independientemente de su disposición visual, por lo que funciona bien con documentos de una y varias columnas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo comparar PDFs escaneados?</h3>
-        <p>La comparación de PDFs escaneados que son imágenes es menos precisa que con PDFs de texto. Para mejores resultados con documentos escaneados, aplica primero OCR a ambos documentos.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Solo texto.</strong> Cambios en imágenes, gráficos, colores o formato no se detectan.</li>
+      <li><strong>Línea a línea.</strong> Si una maquetación distinta parte los párrafos en otras líneas, aparecerán como modificados aunque el texto sea el mismo. Los diseños a varias columnas pueden dar resultados confusos.</li>
+      <li><strong>PDF escaneados:</strong> sin capa de texto no hay nada que comparar. Aplica antes <a href="/ocr-a-pdf/">OCR</a> a ambos documentos.</li>
+    </ul>
+    <!-- TODO(contenido): añadir un ejemplo real (captura o descripción) de una comparación de contrato y cómo leer la tabla de resultados. -->
+
+    <h2>Preguntas frecuentes sobre Comparar PDFs</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Detecta cambios en imágenes y gráficos?</h3><p>No. Solo compara el texto de los dos documentos.</p></div>
+      <div class="faq-item"><h3>¿Funciona con PDFs a varias columnas?</h3><p>Funciona, pero el texto se compara en el orden en que se extrae de la página; en diseños a varias columnas ese orden puede no ser el de lectura y el resultado será más difícil de interpretar.</p></div>
+      <div class="faq-item"><h3>¿Puedo comparar PDFs escaneados?</h3><p>Solo si antes les aplicas OCR a los dos. Un escaneo sin capa de texto no tiene nada que comparar.</p></div>
+      <div class="faq-item"><h3>¿Se guardan mis documentos?</h3><p>No. Se procesan en nuestro servidor en España y se eliminan en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/pdf-a-texto/">PDF a Texto</a>
+      <a href="/ocr-a-pdf/">OCR a PDF</a>
+      <a href="/resumir-pdf/">Resumir PDF</a>
+      <a href="/unir-pdf/">Unir PDF</a>
+    </nav>
+  </section>
 </main>
 
 <footer>

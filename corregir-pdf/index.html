@@ -68,18 +68,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué errores detecta la herramienta?",
+          "name": "¿En qué idiomas funciona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Detecta errores ortográficos, gramaticales, de puntuación y mejora la redacción utilizando inteligencia artificial."
+            "text": "Español, inglés, francés y alemán. El idioma se elige en el desplegable antes de corregir; no se detecta automáticamente."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Mantiene el formato original del PDF?",
+          "name": "¿Se mantiene el formato del documento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, el texto corregido se integra manteniendo el diseño, fuentes y estructura del documento original."
+            "text": "No. El texto corregido se entrega en texto plano, en páginas nuevas añadidas detrás de las originales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo aceptar o rechazar cada corrección?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La herramienta devuelve el texto ya corregido. Para ver qué ha cambiado, compáralo con las páginas originales que incluye el mismo PDF."
           }
         },
         {
@@ -87,7 +95,15 @@
           "name": "¿Funciona con PDFs escaneados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Los PDFs escaneados necesitan OCR primero para extraer el texto editable antes de poder corregirlo."
+            "text": "No directamente. Aplica antes OCR a PDF para obtener el texto y corrige el resultado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿A dónde se envía mi documento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El PDF se sube a nuestro servidor en España y el texto extraído se envía a Groq (EE. UU.) para la corrección. El archivo se borra de nuestro servidor en un máximo de 10 minutos."
           }
         }
       ]
@@ -105,24 +121,25 @@
           "@type": "HowToStep",
           "position": 1,
           "name": "Sube el PDF",
-          "text": "Carga el documento cuyo texto quieres revisar. La herramienta extrae el texto del PDF para analizarlo ortográfica y gramaticalmente."
+          "text": "Hasta 20 MB. Tiene que tener texto seleccionable."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Revisión con IA",
-          "text": "El motor de corrección identifica errores de ortografía, gramática y estilo en el texto del documento, sugiriendo las correcciones apropiadas."
+          "name": "Elige idioma y nivel",
+          "text": "Idioma del documento: español, inglés, francés o alemán. Nivel: solo ortografía (más rápido) u ortografía, gramática y estilo."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF corregido",
-          "text": "Aplica las correcciones que consideres apropiadas y descarga el PDF con el texto revisado y corregido."
+          "text": "Recibes un PDF con dos partes: primero las páginas originales (como imagen, para comparar) y después el texto corregido en limpio."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -340,6 +357,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -358,6 +376,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -508,46 +527,7 @@
         <button class="btn-new" id="btnNew">Corregir otro PDF</button>
     </div>
 
-    <div class="seo-content">
-        <h2>Corregir PDF online: ortografía y gramática con IA</h2>
-        <p>Sube tu PDF y obtén una versión corregida en segundos gracias al modelo de lenguaje Llama 3.3. La herramienta detecta y corrige errores ortográficos, gramaticales y de estilo manteniendo el significado original y la estructura de párrafos del documento.</p>
-        <h3>Niveles de corrección</h3>
-        <ul>
-            <li><strong>Solo ortografía</strong>: corrección rápida de faltas de ortografía y tildes, sin modificar la redacción.</li>
-            <li><strong>Completo</strong>: corrección ortográfica más mejoras gramaticales y de estilo para textos más formales.</li>
-        </ul>
-        <h3>Idiomas disponibles</h3>
-        <p>Puedes corregir documentos en <strong>español, inglés, francés y alemán</strong>. Selecciona el idioma del documento antes de procesar para que la IA aplique las reglas gramaticales correctas. El PDF resultante incluye el documento original para comparar junto al texto corregido.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/resumir-pdf/">Resumir PDF</a></li>
-            <li><a href="/traducir-pdf/">Traducir PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/rellenar-formulario/">Rellenar formulario</a></li>
-            <li><a href="/redactar-pdf/">Redactar PDF</a></li>
-        </ul>
-    
-        <h3>¿Qué tipo de errores corrige?</h3>
-        <p>La herramienta, basada en inteligencia artificial, detecta y corrige: faltas de ortografía, errores gramaticales (concordancia, tiempos verbales, uso de preposiciones), problemas de puntuación, errores tipográficos y uso incorrecto de mayúsculas.</p>
-        <p>La corrección se adapta al contexto del documento: no es lo mismo corregir un correo informal que un contrato legal o un artículo científico.</p>
-
-        <h3>¿Se modifica el formato del documento?</h3>
-        <p>No. La herramienta corrige únicamente el texto, manteniendo intacto el formato visual del documento: fuentes, tamaños, colores, imágenes y estructura de páginas.</p>
-
-        <h3>Casos de uso habituales</h3>
-        <ul>
-            <li>Revisar informes y presentaciones antes de enviarlos a clientes</li>
-            <li>Corregir documentos escritos en un segundo idioma</li>
-            <li>Revisar tesis y trabajos académicos</li>
-            <li>Revisar contratos y documentos legales para eliminar errores tipográficos</li>
-        </ul>
-
-        <h3>¿Funciona en español e inglés?</h3>
-        <p>Sí. La herramienta detecta automáticamente el idioma del documento y aplica las reglas gramaticales correspondientes. Soporta español, inglés, francés, alemán, italiano y portugués, entre otros idiomas europeos.</p>
-</div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -570,70 +550,49 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Corregir PDF?</h2>
-  <p>Usar Corregir PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube el PDF</h3>
-          <p>Carga el documento cuyo texto quieres revisar. La herramienta extrae el texto del PDF para analizarlo ortográfica y gramaticalmente.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Revisión con IA</h3>
-          <p>El motor de corrección identifica errores de ortografía, gramática y estilo en el texto del documento, sugiriendo las correcciones apropiadas.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF corregido</h3>
-          <p>Aplica las correcciones que consideres apropiadas y descarga el PDF con el texto revisado y corregido.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para corregir un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Hasta 20 MB. Tiene que tener texto seleccionable.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige idioma y nivel</h3><p>Idioma del documento: español, inglés, francés o alemán. Nivel: solo ortografía (más rápido) u ortografía, gramática y estilo.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF corregido</h3><p>Recibes un PDF con dos partes: primero las páginas originales (como imagen, para comparar) y después el texto corregido en limpio.</p></div></div>
+    </div>
+    <p>El PDF se sube a nuestro servidor en España, que extrae el texto y envía <strong>hasta unas 3.500 palabras</strong> (14.000 caracteres) a Groq (EE. UU.), donde el modelo Llama 3.3 70B devuelve la versión corregida. Con ella se genera el PDF de resultado. El archivo se borra de nuestro servidor en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Corregir PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Revisar documentos antes de su envío oficial</strong>
-        <span>Contratos, informes y propuestas deben estar libres de errores ortográficos y gramaticales. Una revisión rápida con esta herramienta garantiza la calidad del texto antes de enviarlo.</span>
-      </div>
-      <div class="use-case">
-        <strong>Corregir documentos traducidos</strong>
-        <span>Los textos traducidos automáticamente o por traductores no nativos pueden contener errores gramaticales que esta herramienta ayuda a detectar y corregir.</span>
-      </div>
-      <div class="use-case">
-        <strong>Revisar contenido generado por IA</strong>
-        <span>Los textos generados por inteligencia artificial pueden contener errores sutiles de concordancia o expresiones poco naturales que conviene corregir antes de usarlos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Preparar publicaciones y materiales educativos</strong>
-        <span>Documentos de formación, manuales y publicaciones deben presentar un texto impecable. La revisión ortográfica automatizada es la primera línea de control de calidad.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Antes de enviar un informe o una propuesta</strong><span>Una última pasada para cazar faltas, tildes y erratas.</span></div>
+      <div class="use-case"><strong>Textos escritos en un segundo idioma</strong><span>Detectar errores de concordancia o de preposiciones en un documento en inglés, francés o alemán.</span></div>
+      <div class="use-case"><strong>Textos traducidos o generados con IA</strong><span>Revisar expresiones poco naturales antes de publicarlos.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Corregir PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿En qué idiomas funciona la corrección ortográfica?</h3>
-        <p>La herramienta soporta español, inglés, francés, alemán y otros idiomas europeos principales. El idioma se detecta automáticamente del texto del documento.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿La corrección puede modificar el significado del texto?</h3>
-        <p>La herramienta sugiere correcciones pero no las aplica automáticamente sin tu supervisión. Puedes revisar cada sugerencia antes de aceptarla para asegurarte de que el significado del texto es el que deseas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con PDFs escaneados?</h3>
-        <p>Los PDFs escaneados son imágenes, no texto editable. Primero debes aplicar <a href="/ocr-a-pdf/">OCR a PDF</a> para extraer el texto y luego utilizar la herramienta de corrección sobre el resultado.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No corrige dentro de tu PDF.</strong> El texto corregido se entrega como texto plano en páginas nuevas: se pierden fuentes, columnas, tablas e imágenes del original.</li>
+      <li><strong>No hay revisión cambio a cambio.</strong> Recibes el texto ya corregido; compáralo con el original (incluido al principio del PDF) antes de usarlo.</li>
+      <li><strong>Documentos largos:</strong> solo se corrigen las primeras ~3.500 palabras.</li>
+      <li><strong>PDF escaneados:</strong> aplica antes <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
+      <li>La IA puede cambiar alguna expresión que no era un error. Revisa el resultado, sobre todo en textos legales o técnicos.</li>
+    </ul>
+    <!-- TODO(contenido): añadir un ejemplo real de corrección (antes/después) y la diferencia práctica entre los dos niveles. -->
+
+    <h2>Preguntas frecuentes sobre Corregir PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿En qué idiomas funciona?</h3><p>Español, inglés, francés y alemán. El idioma se elige en el desplegable antes de corregir; no se detecta automáticamente.</p></div>
+      <div class="faq-item"><h3>¿Se mantiene el formato del documento?</h3><p>No. El texto corregido se entrega en texto plano, en páginas nuevas añadidas detrás de las originales.</p></div>
+      <div class="faq-item"><h3>¿Puedo aceptar o rechazar cada corrección?</h3><p>No. La herramienta devuelve el texto ya corregido. Para ver qué ha cambiado, compáralo con las páginas originales que incluye el mismo PDF.</p></div>
+      <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No directamente. Aplica antes <a href="/ocr-a-pdf/">OCR a PDF</a> para obtener el texto y corrige el resultado.</p></div>
+      <div class="faq-item"><h3>¿A dónde se envía mi documento?</h3><p>El PDF se sube a nuestro servidor en España y el texto extraído se envía a Groq (EE. UU.) para la corrección. El archivo se borra de nuestro servidor en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/resumir-pdf/">Resumir PDF</a>
+      <a href="/traducir-pdf/">Traducir PDF</a>
+      <a href="/pdf-a-texto/">PDF a Texto</a>
+      <a href="/pdf-a-word/">PDF a Word</a>
+    </nav>
+  </section>
 </main>
 
 <footer>

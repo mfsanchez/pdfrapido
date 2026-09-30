@@ -188,26 +188,34 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Son compatibles los formularios generados con Adobe Reader?",
+          "name": "¿Los formularios funcionan en Adobe Reader y otros visores?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Los formularios usan el estándar AcroForm de PDF (ISO 32000), compatible con Adobe Reader, Adobe Acrobat, Chrome, Firefox, Foxit Reader y la mayoría de visores PDF modernos."
+            "text": "Sí. Usan campos AcroForm estándar, compatibles con Adobe Reader y Acrobat, los visores de Chrome y Firefox, Foxit y Vista Previa de macOS e iOS, entre otros."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se envían los datos del formulario al servidor?",
+          "name": "¿Se envían datos al servidor al generar el formulario?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Todo el procesamiento ocurre en tu navegador usando pdf-lib. El PDF se genera localmente y se descarga directamente a tu dispositivo sin enviar ningún dato a servidores externos."
+            "text": "No. El PDF se genera en tu navegador con pdf-lib y se descarga directamente; ningún dato del formulario sale de tu dispositivo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Cuántos campos puedo añadir al formulario?",
+          "name": "¿Cuántos campos puedo añadir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sin límite. Si el formulario supera una página, la herramienta distribuye automáticamente los campos en múltiples páginas."
+            "text": "No hay un límite fijo. Si no caben en una página, la herramienta añade páginas y reparte los campos en el orden que definiste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El campo de firma sirve como firma electrónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Es un recuadro para firmar; no aplica un certificado digital."
           }
         }
       ]
@@ -224,25 +232,26 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Añade los campos que necesitas",
-          "text": "Haz clic en el tipo de campo (texto corto, casilla, firma, opciones múltiples…) y aparece en el constructor. Edita el nombre del campo y márcalo como obligatorio si es necesario."
+          "name": "Añade los campos",
+          "text": "Hay ocho tipos: texto corto, texto largo, casilla, opción única, lista desplegable, fecha, número y recuadro de firma. Cambia el nombre de cada campo y márcalo como obligatorio si hace falta."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Organiza y configura el formulario",
-          "text": "Reordena los campos con las flechas, elimina los que no necesites y define las opciones para campos de selección. Elige el título, el tamaño de página y la orientación."
+          "name": "Ordena y configura",
+          "text": "Reordena los campos con las flechas, borra los que sobren y escribe las opciones de las listas y las preguntas de opción única. Elige título, tamaño de página (A4 o Carta) y orientación."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Genera y descarga el PDF rellenable",
-          "text": "Pulsa \"Generar formulario PDF\". En segundos se crea el formulario con campos interactivos AcroForm y se descarga directamente a tu dispositivo."
+          "name": "Genera y descarga",
+          "text": "Pulsa «Generar formulario PDF». Si los campos no caben en una página, se reparten en varias manteniendo el orden."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -270,6 +279,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -288,6 +298,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -398,48 +409,50 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
 </div>
 
 
-<div class="seo-content">
-    <h2>Constructor de formularios PDF rellenables</h2>
-    <p>Crea formularios PDF interactivos desde cero sin necesidad de Adobe Acrobat ni ningún programa de escritorio. Con esta herramienta puedes diseñar tu propio formulario añadiendo los campos que necesites: texto corto o largo, casillas de verificación, opciones múltiples, listas desplegables, fechas, números o espacios para firma digital.</p>
-    <p>Los formularios generados usan el estándar AcroForm de PDF (ISO 32000), lo que garantiza que los campos sean completamente rellenables en cualquier visor PDF moderno: Adobe Reader, el visor de Chrome, Firefox, Safari, Preview en macOS e iOS y prácticamente cualquier dispositivo. Una vez generado, el formulario se puede rellenar directamente en el ordenador, firmar y devolver por email sin necesidad de imprimirlo.</p>
-</div>
 
-<div class="related-tools">
-    <h3>Herramientas relacionadas</h3>
-    <ul>
-        <li><a href="/rellenar-formulario/">Rellenar formulario PDF</a></li>
-        <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-        <li><a href="/editor-pdf/">Editor PDF</a></li>
-        <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-        <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        <li><a href="/unir-pdf/">Unir PDFs</a></li>
-    </ul>
-</div>
 
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-    <h2>¿Cómo funciona el constructor de formularios PDF?</h2>
-    <p>Todo el proceso ocurre directamente en tu navegador gracias a la librería open-source pdf-lib. No se envía ningún dato a servidores externos, lo que garantiza la privacidad total de tu formulario.</p>
+  <section class="content-seo" aria-label="Guía para crear un formulario PDF">
+    <h2>Cómo funciona</h2>
     <div class="steps">
-        <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Añade los campos que necesitas</h3><p>Haz clic en el tipo de campo (texto corto, casilla, firma, opciones múltiples…) y aparece en el constructor. Edita el nombre del campo y márcalo como obligatorio si es necesario.</p></div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Organiza y configura el formulario</h3><p>Reordena los campos con las flechas, elimina los que no necesites y define las opciones para campos de selección. Elige el título, el tamaño de página y la orientación.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Genera y descarga el PDF rellenable</h3><p>Pulsa "Generar formulario PDF". En segundos se crea el formulario con campos interactivos AcroForm y se descarga directamente a tu dispositivo.</p></div></div>
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Añade los campos</h3><p>Hay ocho tipos: texto corto, texto largo, casilla, opción única, lista desplegable, fecha, número y recuadro de firma. Cambia el nombre de cada campo y márcalo como obligatorio si hace falta.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Ordena y configura</h3><p>Reordena los campos con las flechas, borra los que sobren y escribe las opciones de las listas y las preguntas de opción única. Elige título, tamaño de página (A4 o Carta) y orientación.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Genera y descarga</h3><p>Pulsa «Generar formulario PDF». Si los campos no caben en una página, se reparten en varias manteniendo el orden.</p></div></div>
     </div>
-    <h2>¿Para qué se usan los formularios PDF rellenables?</h2>
-    <p>Los formularios PDF con campos interactivos son ideales para recoger información de forma estructurada sin depender de papel ni plataformas de terceros:</p>
+    <p>El formulario se crea en tu navegador con la librería pdf-lib; nada se envía a ningún servidor. Los campos son AcroForm, el tipo de formulario estándar de PDF, así que se pueden rellenar en Adobe Reader, en el visor de Chrome o Firefox, en Vista Previa de macOS y en la mayoría de visores.</p>
+
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Recursos humanos</strong><span>Solicitudes de vacaciones, fichas de empleado o evaluaciones que se rellenan en el ordenador y se devuelven por email.</span></div>
+      <div class="use-case"><strong>Encuestas y cuestionarios</strong><span>Casillas y opciones para recoger respuestas ordenadas sin imprimir nada.</span></div>
+      <div class="use-case"><strong>Inscripciones y pedidos</strong><span>Un formulario sencillo que el cliente rellena y envía de vuelta.</span></div>
+      <div class="use-case"><strong>Colegios y asociaciones</strong><span>Autorizaciones y fichas de inscripción rellenables.</span></div>
+    </div>
+
+    <h2>Limitaciones</h2>
     <ul>
-        <li><strong>Contratos y acuerdos:</strong> Campos para nombre, NIF, fecha y firma. El destinatario rellena y devuelve firmado digitalmente.</li>
-        <li><strong>Formularios de RRHH:</strong> Solicitudes de vacaciones, fichas de empleado, evaluaciones y comunicados internos.</li>
-        <li><strong>Encuestas y cuestionarios:</strong> Casillas y opciones múltiples para recoger respuestas ordenadas.</li>
-        <li><strong>Solicitudes de servicio:</strong> Formularios de inscripción o pedidos que el cliente rellena en PDF y envía por email.</li>
-        <li><strong>Documentos educativos:</strong> Autorizaciones, comunicados escolares y formularios de matrícula interactivos.</li>
+      <li><strong>El recuadro de firma no es una firma digital certificada.</strong> Es un espacio para firmar a mano o con una imagen, por ejemplo con <a href="/firmar-pdf/">Firmar PDF</a>.</li>
+      <li><strong>Diseño fijo.</strong> Los campos se colocan uno debajo de otro; no puedes situarlos libremente ni cambiar fuentes o colores.</li>
+      <li>Crea formularios desde cero. Para añadir campos a un PDF que ya tienes, usa <a href="/pdf-a-formulario/">PDF a formulario</a>.</li>
     </ul>
-    <h2>Preguntas frecuentes</h2>
+    <!-- TODO(contenido): comprobar y documentar cómo se comportan los campos obligatorios y la fecha en visores móviles (iOS/Android). -->
+
+    <h2>Preguntas frecuentes sobre crear formularios PDF</h2>
     <div class="faq">
-        <div class="faq-item"><h3>¿Son los formularios compatibles con Adobe Reader y otros visores?</h3><p>Sí. Los formularios generados usan el estándar AcroForm (ISO 32000), compatible con Adobe Reader, Adobe Acrobat, los visores integrados de Chrome y Firefox, Foxit Reader, Preview de macOS e iOS y la gran mayoría de aplicaciones PDF modernas.</p></div>
-        <div class="faq-item"><h3>¿Se envían datos al servidor al generar el formulario?</h3><p>No. Todo el procesamiento ocurre directamente en tu navegador usando la librería open-source pdf-lib. El PDF se genera localmente y se descarga directamente a tu dispositivo. Ningún dato de tu formulario sale de tu ordenador en ningún momento.</p></div>
-        <div class="faq-item"><h3>¿Cuántos campos puedo añadir al formulario?</h3><p>Sin límite. Puedes añadir tantos campos como necesites. Si el formulario no cabe en una sola página, la herramienta distribuye automáticamente los campos en múltiples páginas del PDF manteniendo el orden definido.</p></div>
+      <div class="faq-item"><h3>¿Los formularios funcionan en Adobe Reader y otros visores?</h3><p>Sí. Usan campos AcroForm estándar, compatibles con Adobe Reader y Acrobat, los visores de Chrome y Firefox, Foxit y Vista Previa de macOS e iOS, entre otros.</p></div>
+      <div class="faq-item"><h3>¿Se envían datos al servidor al generar el formulario?</h3><p>No. El PDF se genera en tu navegador con pdf-lib y se descarga directamente; ningún dato del formulario sale de tu dispositivo.</p></div>
+      <div class="faq-item"><h3>¿Cuántos campos puedo añadir?</h3><p>No hay un límite fijo. Si no caben en una página, la herramienta añade páginas y reparte los campos en el orden que definiste.</p></div>
+      <div class="faq-item"><h3>¿El campo de firma sirve como firma electrónica?</h3><p>No. Es un recuadro para firmar; no aplica un certificado digital.</p></div>
     </div>
-</section>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/rellenar-formulario/">Rellenar formulario</a>
+      <a href="/pdf-a-formulario/">PDF a formulario</a>
+      <a href="/firmar-pdf/">Firmar PDF</a>
+      <a href="/proteger-pdf/">Proteger PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/crear-formulario-pdf-rellenable/">cómo crear un formulario PDF rellenable</a>.</p>
+  </section>
 
 </main>
 

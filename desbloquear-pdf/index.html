@@ -188,10 +188,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo eliminar la contraseña de un PDF?",
+          "name": "¿Puedo desbloquear un PDF sin conocer la contraseña?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sube el PDF protegido, introduce la contraseña si es necesaria y pulsa desbloquear. El PDF resultante no tendrá restricciones de apertura ni edición."
+            "text": "Depende del tipo de protección. Si el PDF se abre sin contraseña y solo tiene restricciones (imprimir, copiar, editar), normalmente puedes quitarlas dejando el campo vacío. Si pide contraseña para abrirse, necesitas conocerla: la herramienta no descifra contraseñas."
           }
         },
         {
@@ -199,23 +199,23 @@
           "name": "¿Es legal desbloquear un PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es legal si eres el propietario del documento o tienes permiso para hacerlo. No se debe usar para acceder a documentos de terceros sin autorización."
+            "text": "Sí, si eres el propietario del documento o tienes autorización de quien lo protegió. No lo es desbloquear documentos ajenos para eludir sus restricciones."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con PDFs con contraseña de edición?",
+          "name": "¿El contenido cambia al desbloquearlo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, PDFRápido puede eliminar tanto la contraseña de apertura (si la conoces) como las restricciones de permisos de tu propio documento."
+            "text": "No. Solo se elimina el cifrado; el texto, las imágenes y el formato quedan igual."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué pasa si no recuerdo la contraseña del PDF?",
+          "name": "¿Qué pasa con mi archivo y mi contraseña?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Si no conoces la contraseña, no podemos ayudarte a desbloquear el PDF por razones legales y de privacidad. Esta herramienta requiere que conozcas la contraseña original."
+            "text": "Se procesan en nuestro servidor en España solo para esta operación y se eliminan en un máximo de 10 minutos."
           }
         }
       ]
@@ -232,25 +232,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga el PDF protegido",
-          "text": "Sube el PDF que tiene contraseña o restricciones que quieres eliminar. La herramienta funciona con PDFs de apertura con contraseña o con restricciones de edición."
+          "name": "Sube el PDF protegido",
+          "text": "Hasta 50 MB."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Introduce la contraseña si es necesario",
-          "text": "Para PDFs con contraseña de apertura, necesitas introducirla para demostrar que tienes acceso legítimo al documento."
+          "name": "Escribe la contraseña",
+          "text": "Si el PDF pide contraseña para abrirse, escríbela. Si se abre sin contraseña pero no deja imprimir o copiar, puedes dejar el campo vacío."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF desbloqueado",
-          "text": "Obtén el PDF sin las restricciones originales, listo para editar, imprimir o convertir libremente."
+          "text": "Obtienes una copia sin cifrado ni restricciones, con el mismo contenido."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -278,6 +279,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -296,6 +298,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -332,91 +335,9 @@
     <div class="error-msg" id="errorMsg"></div>
     <div class="progress-area" id="progressArea"><div class="spinner" style="border-top-color:var(--accent-teal)"></div><p class="progress-label">Desbloqueando PDF...</p></div>
     <div class="result-area" id="resultArea"><div class="result-card" style="--accent:var(--accent-teal)"><div class="result-success-icon" style="background:var(--accent-teal-light)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00897B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>PDF desbloqueado</h3><p class="result-desc">Tu PDF ya no tiene contraseña</p><div class="result-actions"><button class="btn-download" style="background:var(--accent-teal)" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button><button class="btn-secondary" onclick="resetTool()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Otro archivo</button></div></div></div>
-    <div class="seo-content"><h2>Cómo desbloquear un PDF online</h2><p>Si conoces la contraseña de tu PDF protegido, puedes eliminarla y obtener un documento sin restricciones. Sube el archivo, introduce la contraseña y descarga el PDF desbloqueado.</p></div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
-        </ul>
-    
-        <h3>¿Qué tipos de contraseña se pueden eliminar?</h3>
-        <p>La herramienta puede eliminar la contraseña de permisos (que restringe impresión, copia y edición) si conoces la contraseña. Para PDFs con contraseña de apertura, necesitas introducir la contraseña correcta para poder eliminarla.</p>
-
-        <h3>¿Es legal desbloquear un PDF?</h3>
-        <p>Sí, siempre que seas el propietario del documento o tengas permiso del autor. Desbloquear un PDF propio para editarlo o imprimirlo es perfectamente legal. No está permitido desbloquear PDFs de terceros sin autorización.</p>
-
-        <h3>Casos habituales de uso</h3>
-        <ul>
-            <li>Olvidaste la contraseña de un PDF que creaste tú mismo</li>
-            <li>El proveedor te envió un PDF con restricciones de impresión que necesitas imprimir</li>
-            <li>Necesitas editar un contrato o formulario PDF que tiene permisos restringidos</li>
-            <li>Quieres comprimir un PDF protegido (la compresión requiere acceso completo)</li>
-        </ul>
-
-        <h3>¿Qué pasa si el PDF está cifrado con contraseña de apertura?</h3>
-        <p>Necesitas conocer la contraseña original para eliminarla. La herramienta no puede romper contraseñas de apertura sin conocerla. Si has olvidado la contraseña de apertura de un documento importante, existen servicios especializados de recuperación de contraseñas.</p>
-
-        <h3>Tipos de protección que se pueden eliminar</h3>
-        <ul>
-            <li><strong>Contraseña de permisos:</strong> Restringe imprimir, copiar texto o editar. Se puede eliminar si conoces la contraseña de permisos.</li>
-            <li><strong>Contraseña de apertura:</strong> Requiere contraseña para ver el documento. Se puede eliminar introduciendo la contraseña correcta.</li>
-            <li><strong>Restricciones de DRM básico:</strong> Algunas protecciones de edición y copia se pueden levantar si tienes los permisos necesarios.</li>
-        </ul>
-
-        <h3>¿Es legal desbloquear un PDF?</h3>
-        <p>Sí, siempre que seas el propietario del documento o tengas autorización del autor. Desbloquear un PDF propio para poder editarlo, imprimirlo o compartirlo es completamente legal. Nunca está permitido desbloquear PDFs de terceros sin su autorización.</p>
-
-        <h3>¿Qué pasa si no recuerdo la contraseña?</h3>
-        <p>Si no recuerdas la contraseña de apertura de tu propio documento, existen servicios especializados en recuperación de contraseñas PDF. Para contraseñas de permisos débiles, algunos programas pueden recuperarlas por fuerza bruta, aunque esto puede llevar tiempo dependiendo de la longitud de la contraseña.</p>
-
-        <h3>¿El contenido del PDF cambia al desbloquearlo?</h3>
-        <p>No. Eliminar la protección no modifica el contenido del documento. El texto, las imágenes y el formato quedan exactamente igual. Solo se elimina la capa de seguridad que restricciones el acceso o las acciones sobre el archivo.</p>
-</div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo desbloquear un PDF online gratis</h2>
-        <p>Elimina la contraseña de un PDF protegido si conoces la contraseña actual. Obtén un PDF sin restricciones que puedas editar, imprimir y copiar libremente.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube tu archivo PDF protegido con contraseña.</li>
-            <li>Introduce la contraseña actual del documento.</li>
-            <li>La herramienta elimina la protección automáticamente.</li>
-            <li>Descarga el PDF desbloqueado sin restricciones.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Desbloquear un PDF es necesario cuando necesitas eliminar restricciones de impresión, copia o edición de un documento del cual eres el legítimo propietario.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>El desbloqueo se realiza en servidores europeos mediante una conexión segura. La contraseña y el documento se utilizan solo para esta operación y el archivo se elimina automáticamente en menos de 10 minutos.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Puedo desbloquear un PDF sin conocer la contraseña?</summary>
-            <p>No, esta herramienta requiere que conozcas la contraseña actual. No realiza cracking de contraseñas.</p>
-        </details>
-        <details>
-            <summary>¿Es legal desbloquear un PDF?</summary>
-            <p>Solo es legal si eres el propietario del documento o tienes permiso explícito para eliminar la protección.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/pdf-a-word/">PDF a Word</a></li>
-            <li><a href="/editor-pdf/">Editor PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -439,70 +360,45 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Desbloquear PDF?</h2>
-  <p>Usar Desbloquear PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF protegido</h3>
-          <p>Sube el PDF que tiene contraseña o restricciones que quieres eliminar. La herramienta funciona con PDFs de apertura con contraseña o con restricciones de edición.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Introduce la contraseña si es necesario</h3>
-          <p>Para PDFs con contraseña de apertura, necesitas introducirla para demostrar que tienes acceso legítimo al documento.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF desbloqueado</h3>
-          <p>Obtén el PDF sin las restricciones originales, listo para editar, imprimir o convertir libremente.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para desbloquear un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF protegido</h3><p>Hasta 50 MB.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Escribe la contraseña</h3><p>Si el PDF pide contraseña para abrirse, escríbela. Si se abre sin contraseña pero no deja imprimir o copiar, puedes dejar el campo vacío.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF desbloqueado</h3><p>Obtienes una copia sin cifrado ni restricciones, con el mismo contenido.</p></div></div>
+    </div>
+    <p>El archivo se sube a nuestro servidor en España, donde qpdf descifra el documento con la contraseña que has escrito. Si la contraseña no es correcta, la operación falla y no se genera nada. El archivo y la contraseña se usan solo para esta operación y se eliminan en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Desbloquear PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Editar documentos de los que eres autor</strong>
-        <span>Si protegiste un PDF tuyo hace tiempo y quieres eliminar las restricciones de un documento propio para editarlo, esta herramienta te ayuda.</span>
-      </div>
-      <div class="use-case">
-        <strong>Imprimir un PDF con restricción de impresión</strong>
-        <span>Algunos PDFs permiten leerse pero no imprimirse. Si tienes un documento del que eres destinatario legítimo y necesitas una copia impresa, puedes desbloquear esa restricción.</span>
-      </div>
-      <div class="use-case">
-        <strong>Convertir un PDF protegido a otro formato</strong>
-        <span>Las herramientas de conversión no pueden procesar PDFs con ciertas protecciones. Eliminar las restricciones del PDF es el paso previo para poder convertirlo a Word o Excel.</span>
-      </div>
-      <div class="use-case">
-        <strong>Extraer texto de un PDF con protección de copia</strong>
-        <span>Algunos PDFs tienen bloqueada la selección y copia de texto. Desbloquearlos permite extraer el contenido para análisis, traducción o referencia.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Documentos propios</strong><span>Quitar la contraseña a un PDF que protegiste tú y que ahora necesitas compartir o archivar sin ella.</span></div>
+      <div class="use-case"><strong>Imprimir un PDF con restricciones</strong><span>Un documento del que eres destinatario legítimo se abre pero no deja imprimirlo.</span></div>
+      <div class="use-case"><strong>Paso previo a otras herramientas</strong><span>Unir, comprimir o convertir a Word no funciona con PDF cifrados: desbloquéalo antes.</span></div>
+      <div class="use-case"><strong>Copiar texto</strong><span>Levantar la restricción de copia de un documento tuyo para reutilizar su contenido.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Desbloquear PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Puedo desbloquear un PDF sin conocer la contraseña?</h3>
-        <p>Solo si el PDF tiene restricciones de edición o impresión. Los PDFs con contraseña de apertura requieren la contraseña para procesarlos, ya que sin ella el documento es inaccesible.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Es legal desbloquear un PDF?</h3>
-        <p>Sí, es completamente legal desbloquear PDFs de los que eres el autor o el propietario legítimo. No es legal desbloquear documentos protegidos sin autorización del autor para eludir derechos de propiedad intelectual.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El PDF desbloqueado mantiene su contenido y calidad?</h3>
-        <p>Sí. El proceso de desbloqueo solo elimina las restricciones y el cifrado, sin modificar el contenido, las imágenes ni la calidad del documento.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No recupera contraseñas.</strong> Si el PDF pide contraseña para abrirse y no la conoces, esta herramienta no puede ayudarte.</li>
+      <li>Úsala solo con documentos tuyos o para los que tengas autorización. Quitar la protección de documentos ajenos puede vulnerar derechos de terceros.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre Desbloquear PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Puedo desbloquear un PDF sin conocer la contraseña?</h3><p>Depende del tipo de protección. Si el PDF se abre sin contraseña y solo tiene restricciones (imprimir, copiar, editar), normalmente puedes quitarlas dejando el campo vacío. Si pide contraseña para abrirse, necesitas conocerla: la herramienta no descifra contraseñas.</p></div>
+      <div class="faq-item"><h3>¿Es legal desbloquear un PDF?</h3><p>Sí, si eres el propietario del documento o tienes autorización de quien lo protegió. No lo es desbloquear documentos ajenos para eludir sus restricciones.</p></div>
+      <div class="faq-item"><h3>¿El contenido cambia al desbloquearlo?</h3><p>No. Solo se elimina el cifrado; el texto, las imágenes y el formato quedan igual.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con mi archivo y mi contraseña?</h3><p>Se procesan en nuestro servidor en España solo para esta operación y se eliminan en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/proteger-pdf/">Proteger PDF</a>
+      <a href="/pdf-a-word/">PDF a Word</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+      <a href="/reparar-pdf/">Reparar PDF</a>
+    </nav>
+  </section>
 </main>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 <script src="/js/main.js" defer></script>
