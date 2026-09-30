@@ -665,26 +665,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué es el OCR?",
+          "name": "¿En qué idiomas funciona?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "OCR (Optical Character Recognition) es una tecnología que extrae texto de imágenes y documentos escaneados, convirtiéndolos en texto editable y seleccionable."
+            "text": "Español, inglés, francés y alemán, en cinco combinaciones que eliges en el desplegable: español e inglés, solo español, solo inglés, francés e inglés, y alemán e inglés."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué idiomas soporta?",
+          "name": "¿Qué calidad de imagen necesito?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Soporta español, inglés, francés y alemán. Puedes seleccionar el idioma principal de tu documento para obtener mejores resultados."
+            "text": "Al menos 150 ppp y una imagen nítida, bien iluminada y sin texto cortado. Para letra pequeña, elige la resolución de 300 ppp."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro procesar documentos con OCR?",
+          "name": "¿Funciona con texto manuscrito?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. El OCR se ejecuta en servidores europeos mediante una conexión segura y el documento se elimina automáticamente en menos de 10 minutos. No almacenamos ni compartimos tus documentos."
+            "text": "Muy poco. Está pensado para texto impreso; la escritura a mano se reconoce de forma parcial o nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo procesar varios archivos a la vez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, hasta 10. Cada uno genera su propio PDF y se descargan juntos en un ZIP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mis archivos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se procesan en nuestro servidor en España y se eliminan en un máximo de 10 minutos."
           }
         }
       ]
@@ -701,25 +717,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Sube el PDF escaneado o imagen",
-          "text": "Carga tu PDF de imagen, fotografía de documento o escaneo. La herramienta detecta automáticamente que el contenido necesita reconocimiento de texto."
+          "name": "Sube los archivos",
+          "text": "PDF escaneados o imágenes JPG, PNG o WEBP: hasta 10 archivos de 30 MB como máximo cada uno."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Procesamiento OCR",
-          "text": "La tecnología de reconocimiento óptico de caracteres analiza el documento e identifica todos los caracteres de texto visibles, incluso con orientaciones o calidades de imagen variadas."
+          "name": "Elige idioma y resolución",
+          "text": "Idioma: español e inglés, solo español, solo inglés, francés e inglés o alemán e inglés. Resolución de análisis: 150, 200 o 300 ppp (más resolución, más precisión y más tiempo)."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Descarga el PDF con texto seleccionable",
-          "text": "Obtén un PDF en el que el texto es completamente buscable, copiable y seleccionable, mientras la imagen original se conserva como fondo visual."
+          "name": "Descarga el resultado",
+          "text": "Un PDF con texto seleccionable y buscable por cada archivo; si subes varios, se descargan juntos en un ZIP."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -748,6 +765,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -766,6 +784,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -894,42 +913,7 @@
     </div>
 
     <!-- SEO content -->
-    <div class="seo-content">
-        <h2>¿Qué es el OCR y para qué sirve?</h2>
-        <p>El OCR (Reconocimiento Óptico de Caracteres) es una tecnología que analiza imágenes y documentos escaneados para extraer el texto contenido en ellos. Con nuestra herramienta puedes convertir cualquier imagen o PDF escaneado en un documento PDF con texto seleccionable, copiable y buscable.</p>
 
-        <h3>Formatos admitidos</h3>
-        <ul>
-            <li><strong>Imágenes:</strong> JPG, JPEG, PNG, WEBP</li>
-            <li><strong>PDFs escaneados:</strong> PDFs que contienen imágenes en lugar de texto real</li>
-        </ul>
-
-        <h3>¿Cómo funciona?</h3>
-        <p>Nuestra herramienta usa <strong>Tesseract OCR</strong>, el motor de reconocimiento de texto de código abierto más utilizado del mundo. El proceso es:</p>
-        <ul>
-            <li>Sube tu imagen o PDF escaneado</li>
-            <li>Selecciona el idioma del documento para mejorar la precisión</li>
-            <li>El OCR analiza cada píxel y reconoce los caracteres</li>
-            <li>Obtienes un PDF con el texto invisible superpuesto sobre la imagen original</li>
-        </ul>
-
-        <h3>Idiomas soportados</h3>
-        <p>Puedes elegir entre Español, Inglés, Francés y Alemán, o combinarlos para documentos multilingües. Seleccionar el idioma correcto mejora significativamente la precisión del reconocimiento.</p>
-
-        <h3>Privacidad y seguridad</h3>
-        <p>Tus archivos se procesan en nuestros servidores de forma segura y se eliminan automáticamente tras la conversión. No almacenamos ni compartimos tus documentos con terceros.</p>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/pdf-a-word/">PDF a Word</a></li>
-            <li><a href="/extraer-datos/">Extraer datos</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -952,77 +936,51 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona OCR a PDF?</h2>
-  <p>Usar OCR a PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube el PDF escaneado o imagen</h3>
-          <p>Carga tu PDF de imagen, fotografía de documento o escaneo. La herramienta detecta automáticamente que el contenido necesita reconocimiento de texto.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Procesamiento OCR</h3>
-          <p>La tecnología de reconocimiento óptico de caracteres analiza el documento e identifica todos los caracteres de texto visibles, incluso con orientaciones o calidades de imagen variadas.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF con texto seleccionable</h3>
-          <p>Obtén un PDF en el que el texto es completamente buscable, copiable y seleccionable, mientras la imagen original se conserva como fondo visual.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para aplicar OCR a un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube los archivos</h3><p>PDF escaneados o imágenes JPG, PNG o WEBP: hasta 10 archivos de 30 MB como máximo cada uno.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige idioma y resolución</h3><p>Idioma: español e inglés, solo español, solo inglés, francés e inglés o alemán e inglés. Resolución de análisis: 150, 200 o 300 ppp (más resolución, más precisión y más tiempo).</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el resultado</h3><p>Un PDF con texto seleccionable y buscable por cada archivo; si subes varios, se descargan juntos en un ZIP.</p></div></div>
+    </div>
+    <p>Los archivos se suben a nuestro servidor en España. Cada página se convierte en imagen a la resolución elegida, Tesseract reconoce el texto y se genera un PDF con la imagen original y el texto invisible encima, de modo que puedes buscarlo y copiarlo. Los archivos se eliminan en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de OCR a PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Digitalizar documentos en papel</strong>
-        <span>Convierte tus contratos, facturas, recibos y documentos administrativos escaneados en archivos digitales en los que puedes buscar palabras clave y copiar texto.</span>
-      </div>
-      <div class="use-case">
-        <strong>Hacer buscable un libro o manual digitalizado</strong>
-        <span>Los libros escaneados son inútiles para buscar contenido. Con OCR, el texto se vuelve completamente indexable y navegable, como si fuera un ebook real.</span>
-      </div>
-      <div class="use-case">
-        <strong>Procesar facturas para contabilidad</strong>
-        <span>El OCR permite extraer automáticamente datos como importes, fechas y números de factura de documentos escaneados para integrarlos en sistemas contables.</span>
-      </div>
-      <div class="use-case">
-        <strong>Archivar expedientes administrativos</strong>
-        <span>Los expedientes en papel digitalizados con OCR se vuelven completamente consultables en el archivo digital, ahorrando horas de búsqueda manual.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Documentos en papel escaneados</strong><span>Poder buscar una palabra en un contrato o una escritura escaneados y copiar un párrafo.</span></div>
+      <div class="use-case"><strong>Fotos de documentos hechas con el móvil</strong><span>Convertir la foto de un recibo o una carta en un PDF con texto.</span></div>
+      <div class="use-case"><strong>Paso previo para otras herramientas</strong><span>Resumir, traducir, extraer datos o chatear con un escaneo solo funciona después de aplicarle OCR.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre OCR a PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿En qué idiomas funciona el reconocimiento de texto?</h3>
-        <p>La herramienta soporta múltiples idiomas incluyendo español, inglés, francés, alemán, portugués e italiano, entre otros. El idioma se detecta automáticamente o puedes seleccionarlo manualmente.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué calidad de imagen necesito para un buen resultado OCR?</h3>
-        <p>Para obtener resultados óptimos, la resolución del escaneo debería ser de al menos 150 ppp. Una imagen nítida y bien iluminada, sin sombras ni texto cortado, garantiza un reconocimiento más preciso.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El OCR funciona con textos manuscritos?</h3>
-        <p>La herramienta está optimizada para texto impreso. Los textos manuscritos pueden reconocerse parcialmente dependiendo de la claridad de la escritura, pero los resultados son significativamente menos precisos.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Solo cinco combinaciones de idioma</strong> (español, inglés, francés y alemán) y se eligen a mano; no se detecta el idioma automáticamente.</li>
+      <li><strong>Texto manuscrito:</strong> Tesseract está pensado para texto impreso; la letra a mano se reconoce mal o nada.</li>
+      <li><strong>Las páginas pasan a ser imágenes.</strong> Si subes un PDF que ya tenía texto o gráficos vectoriales, el resultado los sustituye por una imagen a la resolución elegida, y el archivo puede pesar más.</li>
+      <li>La calidad depende del escaneo: con menos de 150 ppp, sombras o texto torcido, habrá errores.</li>
+    </ul>
+    <!-- TODO(contenido): añadir tiempos reales de proceso por página a cada resolución y un ejemplo de precisión con un escaneo típico. -->
+
+    <h2>Preguntas frecuentes sobre OCR a PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿En qué idiomas funciona?</h3><p>Español, inglés, francés y alemán, en cinco combinaciones que eliges en el desplegable: español e inglés, solo español, solo inglés, francés e inglés, y alemán e inglés.</p></div>
+      <div class="faq-item"><h3>¿Qué calidad de imagen necesito?</h3><p>Al menos 150 ppp y una imagen nítida, bien iluminada y sin texto cortado. Para letra pequeña, elige la resolución de 300 ppp.</p></div>
+      <div class="faq-item"><h3>¿Funciona con texto manuscrito?</h3><p>Muy poco. Está pensado para texto impreso; la escritura a mano se reconoce de forma parcial o nada.</p></div>
+      <div class="faq-item"><h3>¿Puedo procesar varios archivos a la vez?</h3><p>Sí, hasta 10. Cada uno genera su propio PDF y se descargan juntos en un ZIP.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con mis archivos?</h3><p>Se procesan en nuestro servidor en España y se eliminan en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/pdf-a-texto/">PDF a Texto</a>
+      <a href="/pdf-a-word/">PDF a Word</a>
+      <a href="/extraer-datos/">Extraer datos</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/ocr-pdf-escaneado/">cómo aplicar OCR a un PDF escaneado</a>.</p>
+  </section>
 </main>
 
-<section style="max-width:1100px;margin:0 auto;padding:32px 24px 0">
-    <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:20px 24px;text-align:center">
-        <p style="font-size:14px;color:#4b5563;margin:0">Trabajas con PDFs escaneados frecuentemente? Aprende <a href="/blog/como-comprimir-pdf-sin-perder-calidad/" style="color:#34a853;font-weight:600;text-decoration:none">cómo comprimir PDFs escaneados sin perder calidad</a> aplicando OCR primero.</p>
-    </div>
-</section>
 
 <footer>
     <p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> &nbsp;|&nbsp; <a href="/">Inicio</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p>

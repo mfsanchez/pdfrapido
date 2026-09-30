@@ -71,7 +71,7 @@
           "name": "¿Los datos ocultos se eliminan de verdad o solo se tapan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se eliminan de verdad. La herramienta no dibuja un rectángulo negro encima del texto: convierte cada página en una imagen aplanada con las zonas censuradas en negro sólido y reconstruye el PDF solo con esas imágenes. El texto original desaparece del archivo y no puede seleccionarse, copiarse ni extraerse."
+            "text": "Se eliminan de verdad. La herramienta no dibuja una caja negra encima del texto: rasteriza cada página (la convierte en imagen) con las zonas censuradas en negro sólido y reconstruye el PDF solo con esas imágenes. El contenido original desaparece del archivo y no puede seleccionarse, copiarse ni extraerse."
           }
         },
         {
@@ -79,7 +79,7 @@
           "name": "¿Mi PDF se sube a algún servidor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Todo el procesamiento se hace en tu propio navegador con JavaScript. El documento nunca sale de tu dispositivo, por lo que es ideal para documentos con datos personales, bancarios o médicos."
+            "text": "No. Todo el procesamiento ocurre en tu navegador con JavaScript. El documento nunca sale de tu dispositivo — puedes comprobarlo desconectando la red después de cargar la página: la herramienta sigue funcionando."
           }
         },
         {
@@ -87,7 +87,7 @@
           "name": "¿Por qué el PDF descargado no permite seleccionar texto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es intencional. Para garantizar que la información censurada desaparece por completo, las páginas se aplanan a imagen. El resultado se ve igual, pero ya no contiene capa de texto ni los metadatos del documento original."
+            "text": "Es intencional. Al aplanar las páginas a imagen se garantiza que la información censurada desaparece por completo, incluida la capa de texto invisible y los metadatos del documento original. Si necesitas conservar el texto del resto del documento, usa Redactar PDF, que censura por términos manteniendo el formato."
           }
         },
         {
@@ -95,7 +95,7 @@
           "name": "¿Detecta sola los datos personales o hay que marcarlos a mano?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Al cargar el PDF se lee su capa de texto en tu propio navegador y se proponen bloques sobre los patrones españoles habituales: DNI, NIE, CIF/NIF, IBAN, teléfonos móviles y fijos, direcciones de correo y sellos visuales de firma. Las propuestas aparecen con borde punteado y no se aplican hasta que las aceptas: puedes confirmarlas una a una, aceptarlas todas o descartarlas. La detección es una ayuda, no una garantía; también puedes seguir dibujando bloques a mano."
+            "text": "Al cargar el PDF se lee su capa de texto en tu propio navegador y se proponen bloques sobre los patrones españoles habituales: DNI, NIE, CIF/NIF, IBAN, teléfonos, correos electrónicos y sellos visuales de firma. Las propuestas aparecen con borde punteado y no se aplican hasta que las aceptas: puedes confirmarlas una a una, aceptarlas todas o descartarlas. Es una ayuda, no una garantía — sigue revisando el documento entero y dibujando a mano lo que falte."
           }
         },
         {
@@ -103,7 +103,7 @@
           "name": "¿Puedo tapar el sello de firma que aparece en todas las páginas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, de dos formas. Si el sello tiene capa de texto (AutoFirma, ACCV, FNMT, Adobe), se detecta solo en cada página donde aparece. Si el sello es una imagen y no se detecta, dibuja el bloque una vez, selecciónalo y pulsa «Repetir en páginas» para copiarlo a todas las hojas o al rango que indiques. Como el sello puede estar ligeramente desplazado en alguna página, revisa el documento completo antes de descargar."
+            "text": "Sí, de dos formas. Si el sello tiene capa de texto (AutoFirma, ACCV, FNMT, Adobe), se detecta solo en cada página donde aparece. Si es una imagen y no se detecta, dibuja el bloque una vez, selecciónalo y pulsa «Repetir en páginas» para copiarlo a todas las hojas o al rango que indiques. Como el sello puede estar desplazado en alguna página, revisa el documento completo antes de descargar."
           }
         },
         {
@@ -111,7 +111,15 @@
           "name": "¿Qué pasa si el PDF estaba firmado digitalmente?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La firma digital deja de ser válida en el archivo censurado. No es un fallo ni una función de la herramienta: al censurar de verdad hay que rasterizar las páginas y reconstruir el PDF desde cero, y cualquier firma criptográfica queda invalidada porque el documento firmado ya no es el mismo. Si necesitas conservar la validez de la firma, no puedes censurar el documento: pide una copia sin los datos al emisor. El archivo original que tienes en tu equipo no se modifica."
+            "text": "La firma digital deja de ser válida en el archivo censurado. No es un fallo ni una función de la herramienta: para censurar de verdad hay que rasterizar las páginas y reconstruir el PDF desde cero, y eso invalida cualquier firma criptográfica, porque el documento ya no es el mismo que se firmó. Tu archivo original no se modifica. Si necesitas conservar la validez de la firma, pide al emisor una copia sin esos datos y firmada de nuevo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué datos NO detecta la herramienta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nada que no sea texto: en un PDF escaneado o con los datos dentro de una imagen no encuentra nada (te avisa al cargarlo). Tampoco nombres y apellidos, direcciones postales, números de expediente, matrículas ni números de la Seguridad Social, porque no tienen un formato fijo que se pueda reconocer sin ambigüedad. Para todo eso está el dibujo manual."
           }
         },
         {
@@ -119,7 +127,15 @@
           "name": "¿En qué se diferencia de la herramienta Redactar PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "En Redactar PDF escribes los términos a censurar (un nombre, un DNI) y se buscan automáticamente en todo el documento. En Ocultar datos dibujas tú mismo las zonas a tapar con el ratón o el dedo, y el procesado es 100% local, sin subir el archivo."
+            "text": "En Redactar PDF escribes tú los términos a censurar (un nombre, un número) y se buscan en todo el documento, conservando el texto del resto. Aquí las zonas se marcan visualmente —detectadas y confirmadas por ti, o dibujadas a mano—, el resultado queda aplanado a imagen y el procesado es 100% local, sin subir el archivo. Elige esta si el dato a tapar es una firma, un sello o una foto, o si el documento no debe salir de tu equipo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué límites tiene?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Archivos de hasta 100 MB y 400 páginas, pensado para expedientes completos con sello de firma en cada hoja. En documentos largos las hojas se rasterizan a menos resolución para que la pestaña no se quede sin memoria: 200 ppp hasta 150 páginas, 150 ppp hasta 300 y 120 ppp por encima. El texto no censurado se sigue leyendo con comodidad en pantalla. Si tu documento es aún mayor, puedes dividirlo primero y censurar las partes por separado."
           }
         }
       ]
@@ -143,24 +159,25 @@
           "@type": "HowToStep",
           "position": 2,
           "name": "Revisa los datos detectados automáticamente",
-          "text": "La herramienta lee la capa de texto y propone bloques sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma. Aparecen con borde punteado y no se aplican hasta que los aceptas uno a uno o con «Aceptar todas». La detección es una ayuda y no sustituye a revisar el documento completo."
+          "text": "Se proponen bloques sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma. Aparecen con borde punteado y no se aplican hasta que los aceptas, uno a uno o con «Aceptar todas»."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Dibuja o repite los bloques que falten",
-          "text": "Haz clic y arrastra sobre cualquier dato, firma manuscrita o sello que quieras censurar. Si el mismo recuadro se repite en todas las hojas, selecciónalo y usa «Repetir en páginas» para copiarlo al rango de páginas que indiques."
+          "text": "Haz clic y arrastra sobre cualquier dato, firma manuscrita o sello. Si el mismo recuadro se repite en todas las hojas, selecciónalo y usa «Repetir en páginas»."
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Descarga el PDF censurado",
-          "text": "Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan. Si el PDF estaba firmado digitalmente, esa firma dejará de ser válida en el archivo censurado."
+          "text": "Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -427,6 +444,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -445,6 +463,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -641,34 +660,7 @@
         <button class="btn-new" id="btnNew" style="margin-top:16px">Censurar otro PDF</button>
     </div>
 
-    <div class="seo-content">
-        <h2>Ocultar datos en un PDF: censura visual que elimina la información de verdad</h2>
-        <p>Tapar un dato con un rectángulo negro en un editor normal <strong>no elimina el dato</strong>: el texto sigue dentro del archivo y puede seleccionarse, copiarse o extraerse con cualquier lector de PDF. Esta herramienta hace censura real: convierte cada página en una imagen aplanada con las zonas marcadas en negro sólido y reconstruye el PDF solo con esas imágenes. El contenido censurado <strong>desaparece del archivo</strong>, y los metadatos del documento original (autor, título, programa) tampoco se conservan.</p>
-        <h3>Detección automática que tú confirmas</h3>
-        <p>Al cargar el documento se lee su capa de texto y se proponen bloques sobre los datos personales españoles más habituales —DNI, NIE, CIF, IBAN, teléfonos, correos— y sobre los sellos visuales de firma electrónica. <strong>Nada se censura sin tu confirmación</strong>: las propuestas aparecen con borde punteado y las aceptas o descartas una a una. Es una ayuda para no despistarte, no un sustituto de revisar el documento: en PDF escaneados o con datos dentro de imágenes no hay texto que analizar y hay que marcar todo a mano.</p>
-        <h3>100% en tu navegador, sin subir el archivo</h3>
-        <p>Todo el procesamiento se hace localmente con JavaScript (pdf.js y pdf-lib). El PDF nunca sale de tu dispositivo, lo que la hace ideal para documentos con datos personales, bancarios o médicos: nóminas, contratos, expedientes, justificantes o escrituras.</p>
-        <h3>Cuándo usar esta herramienta</h3>
-        <ul>
-            <li><strong>Tachar el DNI o NIE</strong> antes de enviar una copia de un documento de identidad o un contrato.</li>
-            <li><strong>Anonimizar nóminas o justificantes bancarios</strong> ocultando importes, IBAN y datos del titular.</li>
-            <li><strong>Cumplir el RGPD</strong> al compartir expedientes o informes que contienen datos personales de terceros.</li>
-            <li><strong>Censurar direcciones y teléfonos</strong> en documentos que se van a publicar o difundir.</li>
-        </ul>
-        <h3>¿Censura visual o censura por términos?</h3>
-        <p>Si prefieres escribir los términos a censurar (un nombre, un número de DNI) y que se busquen automáticamente en todo el documento, usa nuestra herramienta <a href="/redactar-pdf/">Redactar PDF</a>. Esta página, en cambio, te deja <em>marcar a mano</em> las zonas exactas — útil para firmas, fotos, sellos o datos que el buscador no detectaría.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/redactar-pdf/">Redactar PDF (por términos)</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/editar-metadatos-pdf/">Editar metadatos</a></li>
-            <li><a href="/eliminar-paginas/">Eliminar páginas</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-        </ul>
-</div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -691,38 +683,14 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Ocultar datos en PDF?</h2>
+  <section class="content-seo" aria-label="Guía para ocultar datos en PDF">
+  <h2>Cómo funciona</h2>
   <p>Censurar un documento en PDFRápido no requiere instalación ni registro, y el archivo no sale de tu dispositivo. Sigue estos cuatro pasos:</p>
   <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF en tu navegador</h3>
-          <p>Arrastra el documento o selecciónalo. El archivo se abre localmente: no se sube a ningún servidor.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Revisa los datos detectados automáticamente</h3>
-          <p>Se proponen bloques sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma. Aparecen con borde punteado y no se aplican hasta que los aceptas, uno a uno o con «Aceptar todas».</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Dibuja o repite los bloques que falten</h3>
-          <p>Haz clic y arrastra sobre cualquier dato, firma manuscrita o sello. Si el mismo recuadro se repite en todas las hojas, selecciónalo y usa «Repetir en páginas».</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-body">
-          <h3>Descarga el PDF censurado</h3>
-          <p>Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan.</p>
-        </div>
-      </div>
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Carga el PDF en tu navegador</h3><p>Arrastra el documento o selecciónalo. El archivo se abre localmente: no se sube a ningún servidor.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Revisa los datos detectados automáticamente</h3><p>Se proponen bloques sobre DNI, NIE, CIF, IBAN, teléfonos, emails y sellos de firma. Aparecen con borde punteado y no se aplican hasta que los aceptas, uno a uno o con «Aceptar todas».</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Dibuja o repite los bloques que falten</h3><p>Haz clic y arrastra sobre cualquier dato, firma manuscrita o sello. Si el mismo recuadro se repite en todas las hojas, selecciónalo y usa «Repetir en páginas».</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body"><h3>Descarga el PDF censurado</h3><p>Cada página se convierte en una imagen aplanada con las zonas en negro sólido. El texto censurado se elimina del archivo de forma permanente y los metadatos del original no se conservan.</p></div></div>
   </div>
 
   <h2>Detección automática de datos personales y sellos de firma</h2>
@@ -749,7 +717,7 @@
   <h3>El sello visual y la firma digital son cosas distintas</h3>
   <p>Tapar el recuadro solo oculta la información visible del firmante. La firma electrónica en sí es un dato criptográfico incrustado en el archivo, y no se manipula aquí en ningún momento: esta herramienta no tiene —ni tendrá— ninguna función para anular o eliminar firmas. Lo que sí ocurre, inevitablemente, es que <strong>al censurar de verdad las páginas se rasterizan y el PDF se reconstruye desde cero, de modo que cualquier firma digital del original deja de ser válida en el archivo censurado</strong>. Es el precio de que la censura sea real: si el documento siguiera siendo idéntico al firmado, el dato tapado seguiría dentro. Tu archivo original, con su firma intacta, no se toca. Si necesitas un documento censurado <em>y</em> firmado, la vía correcta es pedir al emisor una copia sin esos datos y que la firme de nuevo.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
+  <h2>Para qué sirve: situaciones reales</h2>
   <p>La censura visual es la opción adecuada cuando necesitas controlar exactamente qué se oculta, o cuando el dato a tapar no es texto:</p>
   <div class="use-cases">
       <div class="use-case">
@@ -770,46 +738,27 @@
       </div>
   </div>
 
-  <h2>Preguntas frecuentes sobre Ocultar datos en PDF</h2>
+  <h2>Preguntas frecuentes sobre ocultar datos en PDF</h2>
   <div class="faq">
-      <div class="faq-item">
-        <h3>¿Los datos ocultos se eliminan de verdad o solo se tapan?</h3>
-        <p>Se eliminan de verdad. La herramienta no dibuja una caja negra encima del texto: rasteriza cada página (la convierte en imagen) con las zonas censuradas en negro sólido y reconstruye el PDF solo con esas imágenes. El contenido original desaparece del archivo y no puede seleccionarse, copiarse ni extraerse.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Mi PDF se sube a algún servidor?</h3>
-        <p>No. Todo el procesamiento ocurre en tu navegador con JavaScript. El documento nunca sale de tu dispositivo — puedes comprobarlo desconectando la red después de cargar la página: la herramienta sigue funcionando.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Por qué el PDF descargado no permite seleccionar texto?</h3>
-        <p>Es intencional. Al aplanar las páginas a imagen se garantiza que la información censurada desaparece por completo, incluida la capa de texto invisible y los metadatos del documento original. Si necesitas conservar el texto del resto del documento, usa <a href="/redactar-pdf/">Redactar PDF</a>, que censura por términos manteniendo el formato.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Detecta sola los datos personales o hay que marcarlos a mano?</h3>
-        <p>Al cargar el PDF se lee su capa de texto en tu propio navegador y se proponen bloques sobre los patrones españoles habituales: DNI, NIE, CIF/NIF, IBAN, teléfonos, correos electrónicos y sellos visuales de firma. Las propuestas aparecen con borde punteado y <strong>no se aplican hasta que las aceptas</strong>: puedes confirmarlas una a una, aceptarlas todas o descartarlas. Es una ayuda, no una garantía — sigue revisando el documento entero y dibujando a mano lo que falte.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo tapar el sello de firma que aparece en todas las páginas?</h3>
-        <p>Sí, de dos formas. Si el sello tiene capa de texto (AutoFirma, ACCV, FNMT, Adobe), se detecta solo en cada página donde aparece. Si es una imagen y no se detecta, dibuja el bloque una vez, selecciónalo y pulsa <strong>«Repetir en páginas»</strong> para copiarlo a todas las hojas o al rango que indiques. Como el sello puede estar desplazado en alguna página, revisa el documento completo antes de descargar.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué pasa si el PDF estaba firmado digitalmente?</h3>
-        <p>La firma digital <strong>deja de ser válida en el archivo censurado</strong>. No es un fallo ni una función de la herramienta: para censurar de verdad hay que rasterizar las páginas y reconstruir el PDF desde cero, y eso invalida cualquier firma criptográfica, porque el documento ya no es el mismo que se firmó. Tu archivo original no se modifica. Si necesitas conservar la validez de la firma, pide al emisor una copia sin esos datos y firmada de nuevo.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué datos NO detecta la herramienta?</h3>
-        <p>Nada que no sea texto: en un PDF escaneado o con los datos dentro de una imagen no encuentra nada (te avisa al cargarlo). Tampoco nombres y apellidos, direcciones postales, números de expediente, matrículas ni números de la Seguridad Social, porque no tienen un formato fijo que se pueda reconocer sin ambigüedad. Para todo eso está el dibujo manual.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿En qué se diferencia de la herramienta Redactar PDF?</h3>
-        <p>En <a href="/redactar-pdf/">Redactar PDF</a> escribes tú los términos a censurar (un nombre, un número) y se buscan en todo el documento, conservando el texto del resto. Aquí las zonas se marcan visualmente —detectadas y confirmadas por ti, o dibujadas a mano—, el resultado queda aplanado a imagen y el procesado es 100% local, sin subir el archivo. Elige esta si el dato a tapar es una firma, un sello o una foto, o si el documento no debe salir de tu equipo.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué límites tiene?</h3>
-        <p>Archivos de hasta 100 MB y 400 páginas, pensado para expedientes completos con sello de firma en cada hoja. En documentos largos las hojas se rasterizan a menos resolución para que la pestaña no se quede sin memoria: 200 ppp hasta 150 páginas, 150 ppp hasta 300 y 120 ppp por encima. El texto no censurado se sigue leyendo con comodidad en pantalla. Si tu documento es aún mayor, puedes <a href="/dividir-pdf/">dividirlo</a> primero y censurar las partes por separado.</p>
-      </div>
+      <div class="faq-item"><h3>¿Los datos ocultos se eliminan de verdad o solo se tapan?</h3><p>Se eliminan de verdad. La herramienta no dibuja una caja negra encima del texto: rasteriza cada página (la convierte en imagen) con las zonas censuradas en negro sólido y reconstruye el PDF solo con esas imágenes. El contenido original desaparece del archivo y no puede seleccionarse, copiarse ni extraerse.</p></div>
+      <div class="faq-item"><h3>¿Mi PDF se sube a algún servidor?</h3><p>No. Todo el procesamiento ocurre en tu navegador con JavaScript. El documento nunca sale de tu dispositivo — puedes comprobarlo desconectando la red después de cargar la página: la herramienta sigue funcionando.</p></div>
+      <div class="faq-item"><h3>¿Por qué el PDF descargado no permite seleccionar texto?</h3><p>Es intencional. Al aplanar las páginas a imagen se garantiza que la información censurada desaparece por completo, incluida la capa de texto invisible y los metadatos del documento original. Si necesitas conservar el texto del resto del documento, usa <a href="/redactar-pdf/">Redactar PDF</a>, que censura por términos manteniendo el formato.</p></div>
+      <div class="faq-item"><h3>¿Detecta sola los datos personales o hay que marcarlos a mano?</h3><p>Al cargar el PDF se lee su capa de texto en tu propio navegador y se proponen bloques sobre los patrones españoles habituales: DNI, NIE, CIF/NIF, IBAN, teléfonos, correos electrónicos y sellos visuales de firma. Las propuestas aparecen con borde punteado y <strong>no se aplican hasta que las aceptas</strong>: puedes confirmarlas una a una, aceptarlas todas o descartarlas. Es una ayuda, no una garantía — sigue revisando el documento entero y dibujando a mano lo que falte.</p></div>
+      <div class="faq-item"><h3>¿Puedo tapar el sello de firma que aparece en todas las páginas?</h3><p>Sí, de dos formas. Si el sello tiene capa de texto (AutoFirma, ACCV, FNMT, Adobe), se detecta solo en cada página donde aparece. Si es una imagen y no se detecta, dibuja el bloque una vez, selecciónalo y pulsa <strong>«Repetir en páginas»</strong> para copiarlo a todas las hojas o al rango que indiques. Como el sello puede estar desplazado en alguna página, revisa el documento completo antes de descargar.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa si el PDF estaba firmado digitalmente?</h3><p>La firma digital <strong>deja de ser válida en el archivo censurado</strong>. No es un fallo ni una función de la herramienta: para censurar de verdad hay que rasterizar las páginas y reconstruir el PDF desde cero, y eso invalida cualquier firma criptográfica, porque el documento ya no es el mismo que se firmó. Tu archivo original no se modifica. Si necesitas conservar la validez de la firma, pide al emisor una copia sin esos datos y firmada de nuevo.</p></div>
+      <div class="faq-item"><h3>¿Qué datos NO detecta la herramienta?</h3><p>Nada que no sea texto: en un PDF escaneado o con los datos dentro de una imagen no encuentra nada (te avisa al cargarlo). Tampoco nombres y apellidos, direcciones postales, números de expediente, matrículas ni números de la Seguridad Social, porque no tienen un formato fijo que se pueda reconocer sin ambigüedad. Para todo eso está el dibujo manual.</p></div>
+      <div class="faq-item"><h3>¿En qué se diferencia de la herramienta Redactar PDF?</h3><p>En <a href="/redactar-pdf/">Redactar PDF</a> escribes tú los términos a censurar (un nombre, un número) y se buscan en todo el documento, conservando el texto del resto. Aquí las zonas se marcan visualmente —detectadas y confirmadas por ti, o dibujadas a mano—, el resultado queda aplanado a imagen y el procesado es 100% local, sin subir el archivo. Elige esta si el dato a tapar es una firma, un sello o una foto, o si el documento no debe salir de tu equipo.</p></div>
+      <div class="faq-item"><h3>¿Qué límites tiene?</h3><p>Archivos de hasta 100 MB y 400 páginas, pensado para expedientes completos con sello de firma en cada hoja. En documentos largos las hojas se rasterizan a menos resolución para que la pestaña no se quede sin memoria: 200 ppp hasta 150 páginas, 150 ppp hasta 300 y 120 ppp por encima. El texto no censurado se sigue leyendo con comodidad en pantalla. Si tu documento es aún mayor, puedes <a href="/dividir-pdf/">dividirlo</a> primero y censurar las partes por separado.</p></div>
   </div>
-</section>
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/redactar-pdf/">Redactar PDF</a>
+      <a href="/editar-metadatos-pdf/">Editar metadatos</a>
+      <a href="/eliminar-paginas/">Eliminar páginas</a>
+      <a href="/proteger-pdf/">Proteger PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/redactar-pdf-rgpd-datos-sensibles/">cómo censurar datos sensibles en un PDF (RGPD)</a>.</p>
+  </section>
 </main>
 
 <footer>

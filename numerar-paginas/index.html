@@ -204,34 +204,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo añadir números de página a un PDF?",
+          "name": "¿Puedo empezar la numeración desde un número distinto de 1?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sube el PDF, elige la posición de los números (arriba/abajo, izquierda/centro/derecha), el formato (1, i, a...) y desde qué página empezar. PDFRápido añade los números y genera el PDF actualizado."
+            "text": "Sí. Indica el número inicial; es útil cuando el PDF continúa otro documento."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo empezar a numerar desde una página concreta?",
+          "name": "¿Puedo dejar la portada sin numerar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes elegir que la numeración empiece desde cualquier página y también elegir el número de inicio (por ejemplo, empezar desde el número 5 en la página 1)."
+            "text": "No directamente: se numeran todas las páginas. Separa la portada con Dividir PDF, numera el resto empezando en 2 y únelos de nuevo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué formatos de numeración hay disponibles?",
+          "name": "¿Puedo usar números romanos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Puedes elegir entre números arábigos (1, 2, 3...), números romanos en minúscula (i, ii, iii...) o mayúscula (I, II, III...) y letras (a, b, c...)."
+            "text": "No. Los formatos disponibles son «1», «- 1 -», «Página 1» y «1 de N»."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se puede personalizar el estilo visual de los números?",
+          "name": "¿Puedo elegir la fuente?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes configurar el tamaño de fuente, el color del texto y el margen desde los bordes de la página para que encaje con el diseño de tu documento."
+            "text": "Puedes elegir tamaño y color; la fuente es siempre Helvetica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se sube el PDF a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La numeración se hace en tu navegador."
           }
         }
       ]
@@ -248,25 +256,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga el PDF",
-          "text": "Sube el documento al que quieres añadir números de página. La herramienta es compatible con PDFs de cualquier extensión."
+          "name": "Sube el PDF",
+          "text": "Arrástralo o selecciónalo; verás cuántas páginas tiene."
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Configura la numeración",
-          "text": "Elige la posición de los números, el formato como 1 2 3 o i ii iii, el punto de inicio y si quieres excluir la primera página."
+          "text": "Posición (arriba o abajo; a la izquierda, al centro o a la derecha), formato («1», «- 1 -», «Página 1» o «1 de N»), número inicial, tamaño (10, 12 o 14 pt) y color (gris, negro o rojo)."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF numerado",
-          "text": "En segundos obtienes el documento con la numeración aplicada de forma consistente en todas las páginas seleccionadas."
+          "text": "Todas las páginas llevan su número con el estilo elegido."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -294,6 +303,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -312,6 +322,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -364,58 +375,9 @@
         <button class="ab" onclick="addNumbers()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Numerar páginas</button>
     </div>
     <div class="ra" id="resultArea"><div class="rc"><div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Páginas numeradas</h3><p class="desc" id="resultDesc"></p><div class="rac"><button class="bd" onclick="dlPDF()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button><button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Otro archivo</button></div></div></div>
-    <div class="seo"><h2>Cómo numerar las páginas de un PDF</h2><p>Añade números de página a tu documento PDF de forma gratuita. Elige la posición, formato y estilo del número. Ideal para documentos académicos, informes y presentaciones.</p></div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/rotar-pdf/">Rotar PDF</a></li>
-            <li><a href="/organizar-pdf/">Organizar páginas</a></li>
-            <li><a href="/marca-agua/">Marca de agua</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        </ul>
-    </div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo numerar páginas de un PDF online gratis</h2>
-        <p>Añade números de página profesionales a cualquier PDF. Elige la posición, tamaño, formato y página inicial. Perfecto para informes, tesis, manuales y documentos formales.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube tu archivo PDF.</li>
-            <li>Configura las opciones de numeración: posición, tamaño y formato.</li>
-            <li>Elige desde qué página comenzar la numeración.</li>
-            <li>Descarga el PDF con los números de página aplicados.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Numerar páginas de un PDF es esencial para documentos formales, informes empresariales, trabajos académicos y cualquier archivo que vaya a imprimirse o compartirse profesionalmente.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>El procesamiento se realiza en tu navegador. No almacenamos ni accedemos a tus documentos.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Puedo empezar la numeración desde un número diferente?</summary>
-            <p>Sí, puedes elegir el número inicial, por ejemplo, empezar desde la página 3 o desde el número 10.</p>
-        </details>
-        <details>
-            <summary>¿Puedo numerar solo algunas páginas?</summary>
-            <p>Actualmente la numeración se aplica a todas las páginas del documento. Puedes dividir el PDF primero si necesitas numerar solo una sección.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/organizar-pdf/">Organizar PDF</a></li>
-            <li><a href="/editor-pdf/">Editor PDF</a></li>
-            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -438,91 +400,51 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Numerar páginas de PDF?</h2>
-  <p>Usar Numerar páginas de PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF</h3>
-          <p>Sube el documento al que quieres añadir números de página. La herramienta es compatible con PDFs de cualquier extensión.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Configura la numeración</h3>
-          <p>Elige la posición de los números, el formato como 1 2 3 o i ii iii, el punto de inicio y si quieres excluir la primera página.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF numerado</h3>
-          <p>En segundos obtienes el documento con la numeración aplicada de forma consistente en todas las páginas seleccionadas.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para numerar las páginas de un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Arrástralo o selecciónalo; verás cuántas páginas tiene.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Configura la numeración</h3><p>Posición (arriba o abajo; a la izquierda, al centro o a la derecha), formato («1», «- 1 -», «Página 1» o «1 de N»), número inicial, tamaño (10, 12 o 14 pt) y color (gris, negro o rojo).</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF numerado</h3><p>Todas las páginas llevan su número con el estilo elegido.</p></div></div>
+    </div>
+    <p>Los números se escriben en tu navegador con pdf-lib, con la fuente Helvetica y a 30 puntos del borde de la página. El PDF no se sube a ningún servidor.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Numerar páginas de PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Preparar documentos para presentar en juzgados o notarías</strong>
-        <span>Los procedimientos judiciales y notariales en España exigen con frecuencia que los documentos estén foliados para que cada página pueda identificarse y referenciarse de forma unívoca.</span>
-      </div>
-      <div class="use-case">
-        <strong>Organizar informes y dossieres profesionales</strong>
-        <span>Un informe con páginas numeradas es más profesional y permite referencias cruzadas precisas que facilitan la lectura y la discusión del contenido.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear manuales de instrucciones y guías</strong>
-        <span>Los manuales técnicos y guías de usuario deben tener páginas numeradas para que el índice de contenidos y las referencias internas funcionen correctamente.</span>
-      </div>
-      <div class="use-case">
-        <strong>Numerar trabajos académicos y tesis</strong>
-        <span>Las universidades exigen numeración de páginas en tesis y trabajos de fin de grado siguiendo un formato específico. Esta herramienta permite aplicarla en segundos.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Documentación para un juzgado o una notaría</strong><span>Muchos escritos y anexos se presentan foliados para poder citar cada página sin ambigüedad.</span></div>
+      <div class="use-case"><strong>Documentos escaneados</strong><span>Un PDF que sale del escáner no lleva números; añadirlos facilita decir «ver página 12».</span></div>
+      <div class="use-case"><strong>Continuar una numeración</strong><span>Si el PDF es la segunda parte de un documento, empieza en el número que corresponda.</span></div>
+      <div class="use-case"><strong>Trabajos académicos</strong><span>Numerar un TFG o una memoria antes de entregarla.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Numerar páginas de PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Puedo comenzar la numeración desde un número distinto de 1?</h3>
-        <p>Sí. Puedes establecer cualquier número inicial para la numeración. Esto es útil cuando el PDF es una sección de un documento mayor y necesitas que la numeración sea continua con el resto.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo excluir la portada de la numeración?</h3>
-        <p>Sí. Puedes indicar que la numeración comience desde la segunda página, dejando la portada sin número. También puedes definir el número de páginas iniciales que quieres excluir.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo elegir el formato de fuente de los números?</h3>
-        <p>Puedes personalizar el tamaño, el color y la fuente básica de los números de página para que se adapten al estilo visual del documento.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Se numeran todas las páginas.</strong> No se puede dejar la portada sin número ni numerar solo una parte. Para eso, <a href="/dividir-pdf/">divide el PDF</a>, numera la parte que quieras y vuelve a <a href="/unir-pdf/">unirlo</a>.</li>
+      <li>Solo números arábigos; no hay numeración romana.</li>
+      <li>Si el número inicial no es 1, el formato «1 de N» sigue usando como N el total de páginas del archivo.</li>
+      <li>El número se escribe encima del contenido: si la página ya tiene texto en esa esquina, pueden solaparse.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre numerar páginas</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Puedo empezar la numeración desde un número distinto de 1?</h3><p>Sí. Indica el número inicial; es útil cuando el PDF continúa otro documento.</p></div>
+      <div class="faq-item"><h3>¿Puedo dejar la portada sin numerar?</h3><p>No directamente: se numeran todas las páginas. Separa la portada con Dividir PDF, numera el resto empezando en 2 y únelos de nuevo.</p></div>
+      <div class="faq-item"><h3>¿Puedo usar números romanos?</h3><p>No. Los formatos disponibles son «1», «- 1 -», «Página 1» y «1 de N».</p></div>
+      <div class="faq-item"><h3>¿Puedo elegir la fuente?</h3><p>Puedes elegir tamaño y color; la fuente es siempre Helvetica.</p></div>
+      <div class="faq-item"><h3>¿Se sube el PDF a algún servidor?</h3><p>No. La numeración se hace en tu navegador.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/organizar-pdf/">Organizar PDF</a>
+      <a href="/marca-agua/">Marca de agua</a>
+      <a href="/dividir-pdf/">Dividir PDF</a>
+      <a href="/unir-pdf/">Unir PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/numerar-paginas-pdf/">cómo numerar las páginas de un PDF</a>.</p>
+  </section>
 </main>
 
-<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
-    <div style="font-size:14px;color:#6B7280;line-height:1.75">
-        <p>Añade números de página a un PDF de forma automática. Elige la posición (pie, encabezado), el formato (1, 2, 3 o I, II, III) y el estilo tipográfico.</p>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Cuándo añadir números de página a un PDF?</h2>
-        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
-            <li><strong>Documentos formales:</strong> Informes, contratos y tesis suelen requerir numeración de páginas.</li>
-            <li><strong>Presentaciones impresas:</strong> Facilita la referencia durante reuniones ("ver página 5").</li>
-            <li><strong>Documentos escaneados:</strong> Los PDFs de documentos escaneados raramente tienen numeración; añadirla mejora la usabilidad.</li>
-            <li><strong>Manuales y guías:</strong> Imprescindible para documentos de más de 10 páginas que se van a imprimir.</li>
-        </ul>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
-        <p><strong>¿Puedo empezar la numeración desde un número distinto de 1?</strong><br>Sí. Puedes configurar el número de inicio, útil cuando el PDF es parte de un documento mayor y quieres continuar la numeración desde donde dejó el anterior.</p>
-        <p><strong>¿Puedo excluir la primera página de la numeración?</strong><br>Sí. Es habitual no numerar la portada. Puedes configurar desde qué página empieza a aparecer el número.</p>
-        <p><strong>¿Se pueden añadir números en formato romano?</strong><br>Sí. Puedes elegir entre numeración arábiga (1, 2, 3) y romana (I, II, III), habitual en prólogos e índices.</p>
-
-    </div>
-    </section>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 <script src="/js/pdf-lib.min.js"></script>
 <script>
