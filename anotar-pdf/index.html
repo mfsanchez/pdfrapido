@@ -40,7 +40,7 @@
       "@type": "SoftwareApplication",
       "name": "Anotar PDF Online",
       "url": "https://pdfrapido.eu/anotar-pdf/",
-      "description": "Anota PDF en el navegador: resaltado, subrayado, texto, dibujo libre, flechas, rectángulos y elipses. El archivo no se sube a ningún servidor.",
+      "description": "Anota PDF en el navegador: resaltado, subrayado, comentarios, texto, dibujo libre, flechas, rectángulos y elipses. El archivo no se sube a ningún servidor.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
       "offers": {
@@ -95,10 +95,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Por qué no aparece el texto de mis comentarios en el PDF?",
+          "name": "¿Qué diferencia hay entre Comentario y Texto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Porque la herramienta Comentario solo guarda el icono en la página. Para que el texto quede visible en el PDF, escríbelo con la herramienta Texto."
+            "text": "Comentario coloca un icono con una nota amarilla al lado, útil para observaciones que deben destacar del documento. Texto escribe directamente sobre la página, sin recuadro. Ambos quedan visibles en el PDF descargado."
           }
         }
       ]
@@ -122,7 +122,7 @@
           "@type": "HowToStep",
           "position": 2,
           "name": "Anota",
-          "text": "Resaltado, subrayado, texto, dibujo libre, flechas, rectángulos y elipses, con ocho colores, tres grosores y opacidad ajustable."
+          "text": "Resaltado, subrayado, comentarios con nota, texto, dibujo libre, flechas, rectángulos y elipses, con ocho colores, tres grosores y opacidad ajustable."
         },
         {
           "@type": "HowToStep",
@@ -635,7 +635,7 @@
   <h2>Cómo funciona</h2>
   <div class="steps">
     <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Abre el PDF</h3><p>Arrástralo o selecciónalo. Se abre en el navegador; no se sube a ningún servidor.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Anota</h3><p>Resaltado, subrayado, texto, dibujo libre, flechas, rectángulos y elipses. Ocho colores, tres grosores y opacidad ajustable. Puedes mover, borrar, deshacer y rehacer.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Anota</h3><p>Resaltado, subrayado, comentarios con nota, texto, dibujo libre, flechas, rectángulos y elipses. Ocho colores, tres grosores y opacidad ajustable. Puedes mover, borrar, deshacer y rehacer.</p></div></div>
     <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga</h3><p>«Guardar PDF anotado» genera un PDF nuevo con las marcas incorporadas.</p></div></div>
   </div>
   <p>Todo ocurre en tu navegador con PDF.js (para mostrar las páginas) y pdf-lib (para generar el archivo). Al guardar, cada página que tiene anotaciones se dibuja como imagen, con las marcas encima, y se coloca sobre la página original. Las páginas sin anotaciones no se tocan.</p>
@@ -653,18 +653,17 @@
   <ul>
     <li><strong>Las páginas anotadas pasan a ser imagen.</strong> Se ven igual en cualquier lector, pero en esas páginas el texto deja de poder seleccionarse o buscarse con normalidad, la nitidez depende del zoom con el que trabajaste y el archivo pesa más.</li>
     <li><strong>Las anotaciones no se pueden editar después.</strong> No son anotaciones nativas de PDF: quedan dibujadas en la página y ni Acrobat ni esta herramienta pueden modificarlas o borrarlas luego. Guarda una copia del original.</li>
-    <li><strong>Los comentarios (💬) solo guardan el icono.</strong> El texto que escribes en un comentario no aparece en el PDF descargado. Si quieres que se lea, usa la herramienta <strong>Texto</strong>.</li>
     <li>El resaltado y el subrayado se dibujan arrastrando sobre la zona; no detectan el texto, así que en líneas inclinadas o columnas estrechas conviene hacer zoom.</li>
     <li>No hay límite fijo de páginas: depende de la memoria de tu dispositivo. Con documentos largos y muchas páginas anotadas, el guardado tarda más.</li>
   </ul>
-  <!-- TODO(producto): guardar el texto de los comentarios en el PDF (hoy solo se dibuja el icono) o usar anotaciones nativas de pdf-lib en lugar de rasterizar la página. -->
+  <!-- TODO(producto): usar anotaciones nativas de pdf-lib en lugar de rasterizar las páginas anotadas. -->
 
   <h2>Preguntas frecuentes sobre anotar PDF</h2>
   <div class="faq">
     <div class="faq-item"><h3>¿Se sube mi PDF a algún servidor?</h3><p>No. El archivo se abre y se procesa en tu navegador; el PDF anotado se genera en tu dispositivo.</p></div>
     <div class="faq-item"><h3>¿Las anotaciones se ven en Adobe Reader y en el móvil?</h3><p>Sí. Como quedan dibujadas en la página, se ven igual en Adobe Acrobat, Vista Previa de macOS, el navegador o cualquier lector de PDF.</p></div>
     <div class="faq-item"><h3>¿Puedo editar o quitar las anotaciones después de descargar?</h3><p>No. Mientras el PDF sigue abierto en la herramienta puedes moverlas, borrarlas y deshacer; una vez descargado, quedan fijas. Conserva el original si crees que tendrás que cambiarlas.</p></div>
-    <div class="faq-item"><h3>¿Por qué no aparece el texto de mis comentarios en el PDF?</h3><p>Porque la herramienta Comentario solo guarda el icono 💬 en la página. Para que el texto quede visible en el PDF, escríbelo con la herramienta Texto.</p></div>
+    <div class="faq-item"><h3>¿Qué diferencia hay entre Comentario y Texto?</h3><p>Comentario coloca un icono 💬 con una nota amarilla al lado, útil para observaciones que deben destacar del documento. Texto escribe directamente sobre la página, sin recuadro. Ambos quedan visibles en el PDF descargado.</p></div>
   </div>
 
   <h2>Otras herramientas PDF</h2>
@@ -697,7 +696,6 @@
 import * as pdfjsLib from '/js/pdf-4.0.min.mjs';
 pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdf-4.0.worker.min.mjs';
 
-console.log('[anotar] módulo cargado — build diagnóstico ' + new Date().toISOString());
 
 // ── State ──
 let pdfDoc = null, totalPages = 0, curPage = 1;
@@ -847,13 +845,33 @@ function da(ctx, ann, S) {
         ctx.fillStyle = '#fff';
         ctx.font = '14px sans-serif';
         ctx.fillText('💬', ann.x*S+4, ann.y*S+18);
-        // Tooltip on hover is shown via title attr — just draw icon
+        // Nota junto al icono: se ve en pantalla y queda en el PDF exportado
         if (ann.text) {
-            // Draw small dot indicator
-            ctx.fillStyle = '#ef4444';
+            const fs = 12*S, lh = fs*1.35, pad = 6*S, mw = 170*S;
+            ctx.globalAlpha = 1;
+            ctx.font = `${fs}px 'DM Sans', sans-serif`;
+            const lines = [];
+            let line = '';
+            for (const w of ann.text.split(/\s+/)) {
+                const test = line ? line + ' ' + w : w;
+                if (ctx.measureText(test).width > mw && line) { lines.push(line); line = w; }
+                else line = test;
+            }
+            if (line) lines.push(line);
+            const bw = Math.min(mw, Math.max(...lines.map(l => ctx.measureText(l).width))) + pad*2;
+            const bh = lines.length*lh + pad*2;
+            let bx = ann.x*S + 30;
+            if (bx + bw > ctx.canvas.width) bx = Math.max(0, ann.x*S - bw - 4);
+            const by = ann.y*S;
+            ctx.fillStyle = '#FEF9C3';
+            ctx.strokeStyle = col;
+            ctx.lineWidth = 1;
             ctx.beginPath();
-            ctx.arc(ann.x*S+22, ann.y*S+4, 4, 0, Math.PI*2);
+            ctx.roundRect(bx, by, bw, bh, 4);
             ctx.fill();
+            ctx.stroke();
+            ctx.fillStyle = '#1e293b';
+            lines.forEach((l, i) => ctx.fillText(l, bx + pad, by + pad + fs + i*lh));
         }
 
     } else if (ann.type === 'text') {
@@ -1251,7 +1269,6 @@ async function render(pn) {
 
 // ── Open PDF ──
 async function openPDF(file) {
-    console.log('[anotar] openPDF | archivo:', file && file.name, '| size:', file && file.size, '| type:', file && file.type);
     if (file.type !== 'application/pdf') { toast('Por favor sube un archivo PDF válido'); return; }
     fileName = file.name;
     fileNameEl.textContent = file.name;
@@ -1274,8 +1291,6 @@ async function openPDF(file) {
 
 // ── Save annotated PDF ──
 btnSave.addEventListener('click', async () => {
-    console.log('[anotar] SAVE click | pdfDoc:', !!pdfDoc, '| PDFLib:', !!window.PDFLib,
-                '| anns:', anns.length, '| fileInput.files:', fileInput.files.length);
     if (!pdfDoc || !window.PDFLib) { toast('Error: no hay PDF cargado'); return; }
     const hasAnns = anns.length > 0;
     if (!hasAnns) { toast('Añade al menos una anotación antes de guardar'); return; }
@@ -1288,15 +1303,13 @@ btnSave.addEventListener('click', async () => {
             // Re-read original file from fileInput
             return new Promise(res => {
                 const src = fileInput.files[0] || null;
-                console.log('[anotar] leyendo original | fileInput.files[0]:', src && src.name, '| size:', src && src.size);
                 if (!src) { res(null); return; }
                 const reader = new FileReader();
-                reader.onload  = e => { console.log('[anotar] FileReader OK | bytes:', e.target.result && e.target.result.byteLength); res(e.target.result); };
+                reader.onload  = e => res(e.target.result);
                 reader.onerror = () => { console.error('[anotar] FileReader ERROR:', reader.error); res(null); };
                 reader.readAsArrayBuffer(src);
             });
         })();
-        console.log('[anotar] origBuf | bytes:', origBuf && origBuf.byteLength);
         if (!origBuf) { toast('Error al leer el archivo original'); return; }
 
         const pdfDocLib = await PDFLib.PDFDocument.load(origBuf);
@@ -1362,7 +1375,6 @@ function rst() {
 
 // ── File input / drag ──
 fileInput.addEventListener('change', e => {
-    console.log('[anotar] FILE-INPUT change | archivo:', e.target.files[0] && e.target.files[0].name, '| fileInput.files:', fileInput.files.length);
     if (e.target.files[0]) openPDF(e.target.files[0]);
 });
 
@@ -1371,7 +1383,6 @@ dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-ove
 dropZone.addEventListener('drop', e => {
     e.preventDefault(); dropZone.classList.remove('drag-over');
     const f = e.dataTransfer.files[0];
-    console.log('[anotar] DROP | archivo:', f && f.name, '| size:', f && f.size, '| fileInput.files:', fileInput.files.length);
     if (f) openPDF(f);
 });
 dropZone.addEventListener('click', () => fileInput.click());
