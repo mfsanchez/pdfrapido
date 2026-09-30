@@ -9,7 +9,7 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Traduce cualquier PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis. Sin registro, sin instalar nada | PDFRápido">
+    <meta name="description" content="Traduce tus PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis. Sin registro, sin instalar nada | PDFRápido">
     <meta name="keywords" content="traducir PDF, traducción PDF IA, traducir documento PDF online, PDF a inglés, PDF a francés, traducir PDF gratis">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>Traducir PDF Online con IA Gratis — PDFRápido</title>
@@ -33,7 +33,7 @@
       "url": "https://pdfrapido.eu/traducir-pdf/",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
-      "description": "Traduce cualquier PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis. Sin registro, sin instalar nada.",
+      "description": "Traduce tus PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis. Sin registro, sin instalar nada.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -68,34 +68,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿La calidad de la traducción es profesional?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Alta calidad y muy comprensible; para textos legales o técnicos críticos, conviene revisión de un traductor profesional."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿El formato del PDF se mantiene tras la traducción?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Se preserva la estructura y los párrafos, aunque el texto traducido puede ser más largo o corto y afectar ligeramente al diseño."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "¿A qué idiomas puedo traducir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A inglés, francés, alemán, italiano, portugués, chino, árabe o japonés."
+            "text": "A inglés, francés, alemán, italiano, portugués, chino, árabe o japonés. El idioma de origen se detecta solo."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo traducir un PDF escaneado o una foto?",
+          "name": "¿Traduce el documento completo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Son imágenes sin texto seleccionable: pásalos primero por OCR a PDF para extraer el texto y luego tradúcelos."
+            "text": "Solo si tiene menos de unas 3.500 palabras. En documentos más largos se traduce la primera parte y la herramienta te avisa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se mantiene el formato del PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El resultado es texto corrido; tablas, columnas y la posición de cada párrafo no se conservan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo traducir un PDF escaneado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Primero pásalo por OCR a PDF para que tenga texto seleccionable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿A dónde se envía mi documento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El PDF se sube a nuestro servidor en España y el texto extraído se envía a Groq (EE. UU.) para traducirlo. El archivo se borra de nuestro servidor en un máximo de 10 minutos."
           }
         }
       ]
@@ -112,37 +120,38 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Sube el PDF a traducir",
-          "text": "Carga el documento PDF en el idioma original. La herramienta detecta automáticamente el idioma de origen o puedes especificarlo manualmente."
+          "name": "Sube el PDF",
+          "text": "Hasta 20 MB, con texto seleccionable. No hace falta indicar el idioma de origen."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Elige el idioma de destino",
-          "text": "Selecciona el idioma al que quieres traducir: español, inglés, francés, alemán, portugués, italiano y otros idiomas europeos principales."
+          "name": "Elige idioma de destino y formato",
+          "text": "Inglés, francés, alemán, italiano, portugués, chino, árabe o japonés. Formato «traducido» (el texto traducido sobre las páginas) o «bilingüe» (original y traducción en dos columnas)."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF traducido",
-          "text": "Obtén el documento con el texto traducido manteniendo el diseño y la estructura del original en la medida de lo posible."
+          "text": "Si el documento es largo, se te avisará de que solo se ha traducido su primera parte."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Traducir PDF Online con IA Gratis — PDFRápido">
-    <meta property="og:description" content="Traduce cualquier PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis. Sin registro.">
+    <meta property="og:description" content="Traduce tus PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis. Sin registro.">
     <meta property="og:url" content="https://pdfrapido.eu/traducir-pdf/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Traducir PDF Online con IA Gratis — PDFRápido">
-    <meta name="twitter:description" content="Traduce cualquier PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis.">
+    <meta name="twitter:description" content="Traduce tus PDF a inglés, francés, alemán, italiano, portugués, chino, árabe o japonés con IA gratis.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
         <link rel="stylesheet" href="/css/styles.css?v=15">
 <style>
@@ -484,6 +493,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -502,6 +512,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -541,7 +552,7 @@
             </svg>
         </div>
         <h1>Traducir PDF — PDFRápido</h1>
-        <p>Traduce tu documento a cualquier idioma con Inteligencia Artificial</p>
+        <p>Traduce tu documento a 8 idiomas con Inteligencia Artificial</p>
         <span class="badge-ia">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             Powered by Llama 3.3 · Groq
@@ -679,25 +690,7 @@
         <button class="btn-new" id="btnNew">Traducir otro PDF</button>
     </div>
 
-    <div class="seo-content">
-        <h2>Traducir PDF online con IA: más de 8 idiomas disponibles</h2>
-        <p>Sube tu PDF y recibe una traducción completa generada por el modelo Llama 3.3 de Groq, uno de los sistemas de IA más rápidos disponibles. La herramienta extrae el texto, lo traduce manteniendo la estructura de párrafos y genera un nuevo PDF listo para descargar.</p>
-        <h3>Idiomas disponibles</h3>
-        <p>Puedes traducir tu PDF al <strong>inglés, francés, alemán, italiano, portugués, chino, árabe y japonés</strong>. El modelo detecta automáticamente el idioma de origen, por lo que no es necesario especificarlo.</p>
-        <h3>Modo bilingüe</h3>
-        <p>Activa el modo <em>bilingüe</em> para obtener un PDF con dos columnas en paralelo: el texto original a la izquierda y la traducción a la derecha. Perfecto para aprender idiomas, revisar la fidelidad de la traducción o compartir documentos con lectores de distintas lenguas.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/resumir-pdf/">Resumir PDF</a></li>
-            <li><a href="/chat-pdf/">Chat con PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
-            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -720,104 +713,50 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-  <section class="content-seo" aria-label="Traducir un PDF gratis a cualquier idioma">
-    <h2>Traducir un PDF al español (o a cualquier idioma) gratis</h2>
-    <p>Traduce cualquier PDF a español, inglés, francés, alemán o más de 8 idiomas en segundos. La herramienta de traducir PDF de PDFRápido mantiene el formato original del documento mientras traduce el texto con IA.</p>
 
-    <h3>¿Cómo funciona?</h3>
-    <ol>
-      <li>Sube el PDF en el idioma original.</li>
-      <li>Selecciona el idioma de destino.</li>
-      <li>La IA traduce el contenido conservando la estructura.</li>
-      <li>Descarga el PDF traducido listo para usar.</li>
-    </ol>
+  <section class="content-seo" aria-label="Guía para traducir un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Hasta 20 MB, con texto seleccionable. No hace falta indicar el idioma de origen.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige idioma de destino y formato</h3><p>Inglés, francés, alemán, italiano, portugués, chino, árabe o japonés. Formato «traducido» (el texto traducido sobre las páginas) o «bilingüe» (original y traducción en dos columnas).</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF traducido</h3><p>Si el documento es largo, se te avisará de que solo se ha traducido su primera parte.</p></div></div>
+    </div>
+    <p>El PDF se sube a nuestro servidor en España, que extrae el texto y envía <strong>hasta unas 3.500 palabras</strong> (14.000 caracteres) a Groq (EE. UU.), donde el modelo Llama 3.3 70B lo traduce. Con la traducción se genera un PDF nuevo. El archivo se borra de nuestro servidor en un máximo de 10 minutos.</p>
 
-    <h3>¿Para qué sirve traducir un PDF con IA?</h3>
+    <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
-      <div class="use-case"><strong>Documentos de trabajo en inglés</strong><span>Entiéndelos al instante en español.</span></div>
-      <div class="use-case"><strong>Contratos internacionales</strong><span>Traduce antes de firmar.</span></div>
-      <div class="use-case"><strong>Artículos científicos</strong><span>Accede a investigaciones en cualquier idioma.</span></div>
-      <div class="use-case"><strong>Manuales de producto</strong><span>Traduce instrucciones de dispositivos importados.</span></div>
-      <div class="use-case"><strong>CV en otro idioma</strong><span>Prepara tu currículum para mercados internacionales.</span></div>
+      <div class="use-case"><strong>Entender un documento antes de responder</strong><span>Una carta, unas condiciones o un informe breve que te llega en otro idioma.</span></div>
+      <div class="use-case"><strong>Aprender o repasar un idioma</strong><span>El modo bilingüe pone el original y la traducción uno al lado del otro.</span></div>
+      <div class="use-case"><strong>Primer borrador de una traducción</strong><span>Una base para que después la revise una persona que domine el idioma.</span></div>
     </div>
 
-    <p>Alternativa gratuita a servicios de pago: sin suscripción, sin límites, en español.</p>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No traduce al español.</strong> Los idiomas de destino son inglés, francés, alemán, italiano, portugués, chino, árabe y japonés.</li>
+      <li><strong>Solo la primera parte de documentos largos</strong> (unas 3.500 palabras, unas 7-10 páginas de texto). Para más, <a href="/dividir-pdf/">divide el PDF</a> y tradúcelo por partes.</li>
+      <li><strong>No conserva el diseño.</strong> El texto traducido se escribe como texto corrido sobre una imagen de cada página original, no en el lugar de cada párrafo; tablas y columnas no se reproducen.</li>
+      <li>Para textos legales, médicos o técnicos, la traducción automática necesita revisión profesional.</li>
+    </ul>
+    <!-- TODO(contenido/backend): comprobar que chino, árabe y japonés se ven bien en el PDF (el backend usa la fuente «helv» de PyMuPDF, que no incluye esos alfabetos) y, si no, corregir la fuente o retirar esos idiomas. Añadir español como idioma de destino si se quiere mantener el título orientado a «traducir al español». -->
+
+    <h2>Preguntas frecuentes sobre traducir PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿A qué idiomas puedo traducir?</h3><p>A inglés, francés, alemán, italiano, portugués, chino, árabe o japonés. El idioma de origen se detecta solo.</p></div>
+      <div class="faq-item"><h3>¿Traduce el documento completo?</h3><p>Solo si tiene menos de unas 3.500 palabras. En documentos más largos se traduce la primera parte y la herramienta te avisa.</p></div>
+      <div class="faq-item"><h3>¿Se mantiene el formato del PDF?</h3><p>No. El resultado es texto corrido; tablas, columnas y la posición de cada párrafo no se conservan.</p></div>
+      <div class="faq-item"><h3>¿Puedo traducir un PDF escaneado?</h3><p>Primero pásalo por <a href="/ocr-a-pdf/">OCR a PDF</a> para que tenga texto seleccionable.</p></div>
+      <div class="faq-item"><h3>¿A dónde se envía mi documento?</h3><p>El PDF se sube a nuestro servidor en España y el texto extraído se envía a Groq (EE. UU.) para traducirlo. El archivo se borra de nuestro servidor en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/resumir-pdf/">Resumir PDF</a>
+      <a href="/chat-pdf/">Chat con PDF</a>
+      <a href="/ocr-a-pdf/">OCR a PDF</a>
+      <a href="/dividir-pdf/">Dividir PDF</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/traducir-pdf-gratis/">cómo traducir un PDF gratis</a>.</p>
   </section>
-
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Traducir PDF?</h2>
-  <p>Usar Traducir PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube el PDF a traducir</h3>
-          <p>Carga el documento PDF en el idioma original. La herramienta detecta automáticamente el idioma de origen o puedes especificarlo manualmente.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Elige el idioma de destino</h3>
-          <p>Selecciona el idioma al que quieres traducir: español, inglés, francés, alemán, portugués, italiano y otros idiomas europeos principales.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF traducido</h3>
-          <p>Obtén el documento con el texto traducido manteniendo el diseño y la estructura del original en la medida de lo posible.</p>
-        </div>
-      </div>
-  </div>
-
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Traducir PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Traducir contratos y documentos legales internacionales</strong>
-        <span>Cuando recibes documentos en otro idioma que debes revisar o firmar, tener una traducción rápida te permite entender el contenido antes de consultar con un abogado.</span>
-      </div>
-      <div class="use-case">
-        <strong>Acceder a informes y estudios en otros idiomas</strong>
-        <span>Mucha investigación relevante se publica en inglés u otros idiomas. Traducirla al español facilita su comprensión y uso por equipos que no dominan ese idioma.</span>
-      </div>
-      <div class="use-case">
-        <strong>Localizar manuales técnicos</strong>
-        <span>Los manuales de productos y software importados suelen estar en inglés o en el idioma del fabricante. Traducirlos al español facilita su uso por el personal técnico.</span>
-      </div>
-      <div class="use-case">
-        <strong>Preparar comunicaciones multilingües</strong>
-        <span>Empresas con actividad internacional necesitan documentación en varios idiomas. Esta herramienta proporciona una primera traducción que luego puede revisarse por un profesional.</span>
-      </div>
-  </div>
-
-  <h2>Preguntas frecuentes sobre Traducir PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿La calidad de la traducción es profesional?</h3>
-        <p>Alta calidad y muy comprensible; para textos legales o técnicos críticos, conviene revisión de un traductor profesional.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El formato del PDF se mantiene tras la traducción?</h3>
-        <p>Se preserva la estructura y los párrafos, aunque el texto traducido puede ser más largo o corto y afectar ligeramente al diseño.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿A qué idiomas puedo traducir?</h3>
-        <p>A inglés, francés, alemán, italiano, portugués, chino, árabe o japonés.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo traducir un PDF escaneado o una foto?</h3>
-        <p>Son imágenes sin texto seleccionable: pásalos primero por <a href="/ocr-a-pdf/">OCR a PDF</a> para extraer el texto y luego tradúcelos.</p>
-      </div>
-  </div>
-</section>
-<section style="margin:2rem 1rem;padding:1rem 1.25rem;border-left:3px solid #2563EB;background:#2563EB12;">
-  <p style="margin:0 0 4px;font-size:13px;color:#888;">Guía relacionada</p>
-  <a href="/blog/traducir-pdf-gratis/" style="font-size:15px;font-weight:500;color:#2563EB;text-decoration:none;">
-    Cómo traducir un PDF gratis a cualquier idioma — guía completa →
-  </a>
-</section>
 </main>
 
 <!-- FOOTER -->
