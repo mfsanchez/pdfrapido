@@ -68,26 +68,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿La redacción es irreversible?",
+          "name": "¿La redacción es permanente?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, una vez aplicados los bloques negros y guardado el PDF, la información censurada no se puede recuperar. Guarda siempre una copia original."
+            "text": "Sí. El texto bajo cada bloque se elimina del archivo; no se puede recuperar quitando el recuadro negro."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo redactar múltiples áreas?",
+          "name": "¿Puedo censurar una palabra en todo el documento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes añadir tantos bloques de redacción como necesites en cualquier página del documento."
+            "text": "Sí. Cada término se busca en todas las páginas y se tapan todas sus apariciones de una vez."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es válido legalmente un PDF redactado?",
+          "name": "¿Se mantiene el formato del resto del documento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, la redacción permanente con bloques negros es un método aceptado para proteger datos sensibles en documentos legales y administrativos."
+            "text": "Sí. Solo cambian las zonas censuradas; el resto del texto sigue siendo seleccionable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo tapar firmas, fotos o sellos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No con esta herramienta, que solo busca texto. Usa Ocultar datos en PDF para marcar zonas a mano."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mi archivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se procesa en nuestro servidor en España y se elimina en un máximo de 10 minutos."
           }
         }
       ]
@@ -104,25 +120,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga el PDF con información sensible",
-          "text": "Sube el documento que contiene datos personales, información confidencial u otros contenidos que necesitas ocultar permanentemente."
+          "name": "Sube el PDF",
+          "text": "Hasta 30 MB, con texto seleccionable."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Selecciona las zonas a redactar",
-          "text": "Dibuja rectángulos negros sobre el texto o las imágenes que quieres eliminar. Puedes buscar y censurar texto específico en todo el documento de una vez."
+          "name": "Escribe los términos a censurar",
+          "text": "Uno por línea o separados por comas: un nombre, un DNI, un IBAN, una dirección."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF redactado",
-          "text": "La información bajo las marcas de redacción se elimina permanentemente del archivo. El PDF resultante no contiene esa información ni en la capa visible ni en los datos internos."
+          "text": "Cada aparición queda tapada con un bloque negro y el texto que había debajo desaparece del archivo."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -352,6 +369,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -370,6 +388,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -527,33 +546,7 @@
         <button class="btn-new" id="btnNew" style="margin-top:16px">Redactar otro PDF</button>
     </div>
 
-    <div class="seo-content">
-        <h2>Redactar PDF: censura datos personales y contenido sensible</h2>
-        <p>La redacción de documentos consiste en <strong>ocultar permanentemente</strong> información sensible mediante bloques negros que no pueden eliminarse ni revertirse. A diferencia de editar el texto o cambiar el color de la fuente a blanco, la redacción elimina el contenido subyacente del PDF de forma definitiva.</p>
-        <h3>Usos legales y administrativos</h3>
-        <ul>
-            <li>Eliminar datos personales (nombre, DNI, dirección) antes de compartir documentos.</li>
-            <li>Cumplir con el <strong>RGPD</strong> al publicar contratos o expedientes.</li>
-            <li>Censurar información confidencial en informes antes de su difusión.</li>
-            <li>Proteger datos bancarios o médicos en documentos administrativos.</li>
-        </ul>
-        <h3>Coincidencia exacta y parcial</h3>
-        <p>El modo <em>exacto</em> censura únicamente la cadena de texto introducida tal cual. El modo <em>parcial</em> censura cualquier fragmento que contenga el término, útil para ocultar todas las variantes de un nombre o referencia.</p>
-        <h3>¿Prefieres marcar las zonas a mano?</h3>
-        <p>Si quieres dibujar tú mismo los bloques negros sobre el documento (por ejemplo, para tapar firmas, fotos o sellos que la búsqueda de texto no detecta), usa <a href="/ocultar-datos-pdf/">Ocultar datos en PDF</a>: censura visual procesada 100% en tu navegador, sin subir el archivo.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/ocultar-datos-pdf/">Ocultar datos (censura visual)</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/marca-agua/">Marca de agua</a></li>
-            <li><a href="/extraer-datos/">Extraer datos</a></li>
-            <li><a href="/corregir-pdf/">Corregir PDF</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-        </ul>
-</div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -576,70 +569,49 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Redactar PDF?</h2>
-  <p>Usar Redactar PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF con información sensible</h3>
-          <p>Sube el documento que contiene datos personales, información confidencial u otros contenidos que necesitas ocultar permanentemente.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Selecciona las zonas a redactar</h3>
-          <p>Dibuja rectángulos negros sobre el texto o las imágenes que quieres eliminar. Puedes buscar y censurar texto específico en todo el documento de una vez.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF redactado</h3>
-          <p>La información bajo las marcas de redacción se elimina permanentemente del archivo. El PDF resultante no contiene esa información ni en la capa visible ni en los datos internos.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para redactar un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Hasta 30 MB, con texto seleccionable.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Escribe los términos a censurar</h3><p>Uno por línea o separados por comas: un nombre, un DNI, un IBAN, una dirección.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF redactado</h3><p>Cada aparición queda tapada con un bloque negro y el texto que había debajo desaparece del archivo.</p></div></div>
+    </div>
+    <p>El archivo se sube a nuestro servidor en España, donde PyMuPDF busca cada término en todas las páginas, marca las coincidencias y aplica una redacción real: el texto bajo el bloque se elimina del PDF, no solo se tapa. El resto del documento conserva su texto y su formato. El archivo se elimina en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Redactar PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Proteger datos personales antes de compartir documentos</strong>
-        <span>El RGPD exige proteger los datos personales. Antes de compartir contratos, informes o expedientes con terceros, oculta los datos personales que no les corresponde conocer.</span>
-      </div>
-      <div class="use-case">
-        <strong>Preparar documentos para transparencia y acceso a información</strong>
-        <span>Las administraciones públicas y empresas que responden a solicitudes de acceso a la información deben censurar los datos personales de terceros antes de entregar los documentos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Ocultar información financiera confidencial</strong>
-        <span>Antes de compartir un contrato o acuerdo que contiene información financiera sensible, oculta los importes, condiciones de pago u otros datos que no deben ser conocidos por todos los destinatarios.</span>
-      </div>
-      <div class="use-case">
-        <strong>Cumplir con requisitos legales de publicación</strong>
-        <span>Resoluciones judiciales, actas de reunión y otros documentos públicos deben publicarse con los datos personales redactados conforme a la legislación de protección de datos.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Compartir un contrato sin datos personales</strong><span>Quitar nombres, DNI y direcciones antes de enviarlo a alguien que no necesita conocerlos.</span></div>
+      <div class="use-case"><strong>Publicar documentos con datos de terceros</strong><span>Actas, resoluciones o respuestas a solicitudes de acceso que deben difundirse sin datos personales.</span></div>
+      <div class="use-case"><strong>Ocultar importes o condiciones</strong><span>Enviar un acuerdo tapando las cifras que no deben ver todos los destinatarios.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Redactar PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿La redacción es permanente? ¿Se puede revertir?</h3>
-        <p>Sí. La redacción aplicada con esta herramienta es permanente e irreversible. A diferencia de añadir una caja negra encima del texto, la redacción real elimina definitivamente el contenido subyacente del archivo PDF.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo buscar y redactar una palabra específica en todo el documento?</h3>
-        <p>Sí. La función de búsqueda y redacción permite encontrar todas las ocurrencias de una palabra, nombre o número en el documento y redactarlas automáticamente en un solo paso.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El PDF redactado mantiene el formato del resto del documento?</h3>
-        <p>Sí. La redacción solo afecta a las zonas seleccionadas. El resto del documento, incluyendo el texto, las imágenes y el formato, permanece intacto y sin modificaciones.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Busca cualquier aparición del texto</strong>, también dentro de palabras más largas y sin distinguir mayúsculas: «Ana» tapará también «Mariana». Revisa el resultado. Ahora mismo los modos «exacto» y «parcial» se comportan igual.</li>
+      <li><strong>Solo texto.</strong> No censura imágenes, firmas manuscritas, sellos ni escaneos. Para eso usa <a href="/ocultar-datos-pdf/">Ocultar datos en PDF</a>, que además funciona en tu navegador sin subir el archivo.</li>
+      <li>Un término escrito de otra forma en el documento (con otro formato de espacios o guiones, por ejemplo) no se encontrará.</li>
+      <li>No limpia los metadatos del archivo; si pueden contener datos personales, usa <a href="/editar-metadatos-pdf/">Editar metadatos</a>.</li>
+    </ul>
+    <!-- TODO(backend): el selector exacto/parcial no cambia la búsqueda (ambos usan page.search_for). Implementar la coincidencia exacta por palabra o quitar el selector; después actualizar este texto. -->
+
+    <h2>Preguntas frecuentes sobre redactar PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿La redacción es permanente?</h3><p>Sí. El texto bajo cada bloque se elimina del archivo; no se puede recuperar quitando el recuadro negro.</p></div>
+      <div class="faq-item"><h3>¿Puedo censurar una palabra en todo el documento?</h3><p>Sí. Cada término se busca en todas las páginas y se tapan todas sus apariciones de una vez.</p></div>
+      <div class="faq-item"><h3>¿Se mantiene el formato del resto del documento?</h3><p>Sí. Solo cambian las zonas censuradas; el resto del texto sigue siendo seleccionable.</p></div>
+      <div class="faq-item"><h3>¿Puedo tapar firmas, fotos o sellos?</h3><p>No con esta herramienta, que solo busca texto. Usa Ocultar datos en PDF para marcar zonas a mano.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con mi archivo?</h3><p>Se procesa en nuestro servidor en España y se elimina en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/ocultar-datos-pdf/">Ocultar datos</a>
+      <a href="/editar-metadatos-pdf/">Editar metadatos</a>
+      <a href="/proteger-pdf/">Proteger PDF</a>
+      <a href="/marca-agua/">Marca de agua</a>
+    </nav>
+    <p>Guía relacionada: <a href="/blog/redactar-pdf-rgpd-datos-sensibles/">cómo censurar datos sensibles en un PDF (RGPD)</a>.</p>
+  </section>
 </main>
 
 <footer>

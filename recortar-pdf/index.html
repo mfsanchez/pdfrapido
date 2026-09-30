@@ -80,26 +80,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Para qué sirve recortar un PDF?",
+          "name": "¿El recorte elimina definitivamente el contenido?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Recortar un PDF elimina márgenes innecesarios, bordes negros de escáneres y áreas en blanco. Es ideal para optimizar documentos antes de imprimir o compartir."
+            "text": "No. Solo cambia el área visible de la página; lo que queda fuera sigue en el archivo. Para eliminar información, usa Redactar PDF u Ocultar datos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo recortar páginas específicas?",
+          "name": "¿Puedo recortar solo algunas páginas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes seleccionar qué páginas recortar y aplicar el recorte automático de márgenes blancos o definir un área personalizada."
+            "text": "Sí: solo la primera o un rango de páginas. El resto queda como estaba."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro recortar PDFs online?",
+          "name": "¿Cambia el tamaño de página?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. El recorte se realiza en servidores europeos mediante una conexión segura y el archivo se elimina automáticamente en menos de 10 minutos, garantizando tu privacidad."
+            "text": "Sí. La página visible pasa a medir lo que queda tras el recorte, así que un A4 dejará de ser un A4 exacto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pierde calidad el PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El contenido no se vuelve a comprimir; solo cambia qué parte de la página se muestra."
           }
         }
       ]
@@ -117,24 +125,25 @@
           "@type": "HowToStep",
           "position": 1,
           "name": "Sube el PDF",
-          "text": "Carga el documento cuyas páginas quieres recortar. Verás una previsualización para ajustar el área de recorte con precisión."
+          "text": "Hasta 30 MB."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Define el área de recorte",
-          "text": "Arrastra los bordes de la selección para eliminar los márgenes excesivos, los bordes blancos o las zonas que no necesitas del documento."
+          "name": "Elige el modo",
+          "text": "Automático: detecta dónde acaba el contenido de la primera página y recorta el margen sobrante. Manual: indica con los deslizadores qué porcentaje quitar de cada lado (hasta un 30 %)."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Descarga el PDF recortado",
-          "text": "El PDF con las páginas recortadas al tamaño que definiste está listo para descargar. El contenido visible no se modifica, solo los márgenes."
+          "name": "Elige las páginas y descarga",
+          "text": "Todas, solo la primera o un rango (por ejemplo 2-5). Descarga el PDF recortado."
         }
       ]
     }
   ]
 }
+
 </script>
         <link rel="stylesheet" href="/css/styles.css?v=15">
 <style>
@@ -366,6 +375,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -384,6 +394,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -562,53 +573,8 @@
     </div>
 
     <!-- SEO SECTION -->
-    <div class="seo-section">
-        <h2>¿Para qué sirve recortar un PDF?</h2>
-        <p>Recortar un PDF elimina los márgenes innecesarios y adapta el tamaño de página al contenido real del documento. Esta operación es especialmente útil en varios escenarios cotidianos.</p>
-        <p>Los <strong>PDFs generados desde escáneres</strong> suelen incluir bordes negros o grises que aparecen cuando el documento físico es más pequeño que la superficie del escáner. Recortarlos mejora la legibilidad y reduce el tamaño del archivo. Lo mismo ocurre con <strong>digitalizaciones de libros antiguos</strong>: las páginas escaneadas con amplio margen blanco o borde oscuro se ven mucho mejor una vez recortadas.</p>
-        <p>En el ámbito profesional, recortar PDFs es habitual antes de <strong>imprimir documentos técnicos</strong> como planos, presentaciones o informes: eliminar el espacio muerto aprovecha mejor el papel y mejora la presentación. También resulta práctico cuando se quiere <strong>adaptar un PDF para leerlo en una pantalla pequeña</strong>, como un e-reader o una tableta, donde los márgenes generosos consumen espacio visual.</p>
-        <p>Con el modo automático, PDFRápido analiza el contenido de la primera página y detecta los límites reales del texto e imágenes, aplicando el recorte óptimo sin configuración manual. El modo manual ofrece control total con sliders de precisión para cada margen.</p>
-    </div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo recortar un PDF online gratis</h2>
-        <p>Elimina márgenes blancos, bordes negros de escáneres y áreas innecesarias de tus PDFs. Puedes recortar automáticamente todos los márgenes o definir un área personalizada para cada página.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube tu archivo PDF con márgenes o bordes que quieras eliminar.</li>
-            <li>Elige el modo automático (elimina márgenes blancos) o manual (define el área).</li>
-            <li>Ajusta los márgenes si es necesario usando los controles deslizantes.</li>
-            <li>Descarga tu PDF recortado y optimizado.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Recortar PDFs es esencial para eliminar bordes negros de escáneres antiguos, márgenes excesivos de presentaciones o áreas en blanco que ocupan espacio innecesario. Ideal para preparar documentos para impresión o publicación.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>El procesamiento se realiza en servidores europeos mediante una conexión segura y el archivo se elimina automáticamente en menos de 10 minutos, garantizando la máxima confidencialidad.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Puedo recortar solo algunas páginas?</summary>
-            <p>Sí, puedes seleccionar qué páginas recortar y aplicar diferentes ajustes a cada una si lo necesitas.</p>
-        </details>
-        <details>
-            <summary>¿El recorte afecta la calidad del PDF?</summary>
-            <p>No, el recorte solo elimina áreas visuales. El contenido restante mantiene su calidad original.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/organizar-pdf/">Organizar PDF</a></li>
-            <li><a href="/eliminar-paginas/">Eliminar Páginas</a></li>
-            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
-            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -631,70 +597,46 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Recortar PDF?</h2>
-  <p>Usar Recortar PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube el PDF</h3>
-          <p>Carga el documento cuyas páginas quieres recortar. Verás una previsualización para ajustar el área de recorte con precisión.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Define el área de recorte</h3>
-          <p>Arrastra los bordes de la selección para eliminar los márgenes excesivos, los bordes blancos o las zonas que no necesitas del documento.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF recortado</h3>
-          <p>El PDF con las páginas recortadas al tamaño que definiste está listo para descargar. El contenido visible no se modifica, solo los márgenes.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para recortar un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Hasta 30 MB.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige el modo</h3><p>Automático: detecta dónde acaba el contenido de la primera página y recorta el margen sobrante. Manual: indica con los deslizadores qué porcentaje quitar de cada lado (hasta un 30 %).</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Elige las páginas y descarga</h3><p>Todas, solo la primera o un rango (por ejemplo 2-5). Descarga el PDF recortado.</p></div></div>
+    </div>
+    <p>El archivo se sube a nuestro servidor en España, donde PyMuPDF cambia el «área visible» (CropBox) de cada página. El contenido no se vuelve a generar, así que no pierde calidad. El archivo se elimina en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Recortar PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Eliminar márgenes excesivos de PDFs escaneados</strong>
-        <span>Los escáneres añaden con frecuencia bordes blancos grandes alrededor del contenido. Recortar esos márgenes hace que el texto ocupe más espacio en pantalla y sea más cómodo de leer.</span>
-      </div>
-      <div class="use-case">
-        <strong>Optimizar PDFs para lectura en e-reader</strong>
-        <span>Los libros PDF con márgenes grandes se ven incómodos en Kindle y otros lectores de tinta electrónica. Recortarlos maximiza el área de texto visible en la pantalla del dispositivo.</span>
-      </div>
-      <div class="use-case">
-        <strong>Preparar PDF para presentación en pantalla</strong>
-        <span>Elimina los márgenes de una presentación o informe para que ocupe toda la pantalla al proyectarlo, sin bordes blancos que desperdicien espacio visual.</span>
-      </div>
-      <div class="use-case">
-        <strong>Recortar páginas con contenido innecesario en los bordes</strong>
-        <span>Logos, números de versión o marcas de agua en los bordes pueden eliminarse recortando esa área del documento antes de distribuirlo.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Márgenes enormes en escaneos</strong><span>Quitar el borde blanco o gris que deja el escáner alrededor de una hoja más pequeña que el cristal.</span></div>
+      <div class="use-case"><strong>Leer en un e-reader o en el móvil</strong><span>Recortar los márgenes de un libro o un artículo para que el texto ocupe más pantalla.</span></div>
+      <div class="use-case"><strong>Proyectar un documento</strong><span>Aprovechar toda la pantalla al mostrar un informe o un plano.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Recortar PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿El recorte elimina definitivamente el contenido de esa área?</h3>
-        <p>El recorte en PDF modifica el área visible del documento, pero el contenido fuera del área puede seguir existiendo en los datos internos del archivo. Para eliminar definitivamente información sensible, usa la herramienta de redacción de PDF.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo aplicar el mismo recorte a todas las páginas?</h3>
-        <p>Sí. Por defecto el recorte que defines se aplica a todas las páginas. También puedes configurar recortes diferentes para páginas pares e impares, útil para documentos encuadernados.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El recorte cambia el tamaño de página del PDF?</h3>
-        <p>Sí. Al recortar, el tamaño de página del PDF se reduce proporcionalmente al área recortada. Si el documento original era A4, el resultado puede ser una página de tamaño diferente.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>No borra lo recortado.</strong> El contenido fuera del área visible sigue dentro del archivo y se puede recuperar. Para eliminar datos sensibles, usa <a href="/redactar-pdf/">Redactar PDF</a> u <a href="/ocultar-datos-pdf/">Ocultar datos</a>.</li>
+      <li><strong>El modo automático se basa en la primera página</strong> y aplica esa proporción al resto; si las páginas tienen márgenes distintos, usa el modo manual o un rango.</li>
+      <li>El mismo recorte se aplica a todas las páginas elegidas; no hay ajustes distintos para páginas pares e impares.</li>
+      <li>Los márgenes manuales van en porcentaje del tamaño de la página, no en milímetros.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre recortar PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿El recorte elimina definitivamente el contenido?</h3><p>No. Solo cambia el área visible de la página; lo que queda fuera sigue en el archivo. Para eliminar información, usa Redactar PDF u Ocultar datos.</p></div>
+      <div class="faq-item"><h3>¿Puedo recortar solo algunas páginas?</h3><p>Sí: solo la primera o un rango de páginas. El resto queda como estaba.</p></div>
+      <div class="faq-item"><h3>¿Cambia el tamaño de página?</h3><p>Sí. La página visible pasa a medir lo que queda tras el recorte, así que un A4 dejará de ser un A4 exacto.</p></div>
+      <div class="faq-item"><h3>¿Pierde calidad el PDF?</h3><p>No. El contenido no se vuelve a comprimir; solo cambia qué parte de la página se muestra.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/redimensionar-pdf/">Redimensionar PDF</a>
+      <a href="/ocultar-datos-pdf/">Ocultar datos</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+      <a href="/organizar-pdf/">Organizar PDF</a>
+    </nav>
+  </section>
 </main>
 
 <footer>
