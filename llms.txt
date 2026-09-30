@@ -16,7 +16,6 @@
 - [Firmar PDF](https://pdfrapido.eu/firmar-pdf/): firma documentos PDF; procesado en el navegador.
 - [Ocultar datos en PDF](https://pdfrapido.eu/ocultar-datos-pdf/): censura visual dibujando bloques negros (DNI, nombres, direcciones); el contenido se elimina de verdad al aplanar las páginas a imagen; procesado en el navegador.
 - [OCR a PDF](https://pdfrapido.eu/ocr-a-pdf/): reconoce el texto de PDF escaneados (OCR); procesado en servidor europeo.
-- [Editor PDF](https://pdfrapido.eu/editor-pdf/): edita, anota y resalta PDF online.
 
 ## Herramientas con Inteligencia Artificial (gratis)
 Se procesan en servidores europeos; los archivos se eliminan automáticamente en menos de 10 minutos.

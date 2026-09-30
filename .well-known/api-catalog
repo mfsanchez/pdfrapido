@@ -44,11 +44,6 @@
       "anchor": "https://pdfrapido.eu/api/pdf-a-audio",
       "service-doc": [{"href": "https://pdfrapido.eu/pdf-a-audio", "type": "text/html"}],
       "type": [{"value": "PDF a Audio — Convierte PDFs en audio con IA"}]
-    },
-    {
-      "anchor": "https://pdfrapido.eu/api/upload",
-      "service-doc": [{"href": "https://pdfrapido.eu/editor-pdf", "type": "text/html"}],
-      "type": [{"value": "Upload — Sube un PDF al editor online"}]
     }
   ]
 }
