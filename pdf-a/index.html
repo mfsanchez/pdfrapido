@@ -9,7 +9,7 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="PDF a PDF/A, convertir PDF/A, PDF archivable, ISO 19005, PDF/A-1b online gratis">
+    <meta name="keywords" content="PDF a PDF/A, convertir PDF/A, PDF archivable, ISO 19005, PDF/A-2b online gratis">
     <meta name="description" content="Convierte PDF a PDF/A gratis y sin registro. Crea documentos archivables según la norma ISO 19005, compatibles con sistemas de gestión documental | PDFRápido">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>PDF a PDF/A Online Gratis — Formato ISO | PDFRápido</title>
@@ -204,26 +204,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué es el formato PDF/A?",
+          "name": "¿Qué diferencia hay entre PDF y PDF/A?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDF/A es una variante del PDF estandarizada por ISO (ISO 19005) diseñada para el archivado a largo plazo de documentos electrónicos. Garantiza que el documento se pueda reproducir exactamente igual en el futuro, independientemente del software utilizado."
+            "text": "PDF/A es un subconjunto de PDF para archivo a largo plazo: incrusta las fuentes y prohíbe el cifrado, el JavaScript y el contenido que dependa de recursos externos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Cuándo necesito un PDF/A?",
+          "name": "¿Qué versión de PDF/A genera la herramienta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El PDF/A es obligatorio o recomendado en administraciones públicas, archivos oficiales, despachos jurídicos y cualquier contexto donde se requiera conservar documentos de forma permanente y verificable."
+            "text": "PDF/A-2b. No se puede elegir otra variante."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué diferencia hay entre PDF/A-1 y PDF/A-2?",
+          "name": "¿El PDF/A ocupa más que el original?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDF/A-1 (basado en PDF 1.4) es el más compatible y ampliamente aceptado. PDF/A-2 (basado en PDF 1.7) permite capas, transparencias y compresión JPEG2000. PDFRápido genera PDF/A-2b, que ofrece la mejor compatibilidad moderna."
+            "text": "Suele ocupar algo más, porque incrusta las fuentes; cuánto depende de las fuentes que use el documento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo convertir PDF protegidos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. PDF/A no admite cifrado: quita antes la contraseña con Desbloquear PDF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo convertir un PDF escaneado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, pero seguirá siendo una imagen. Si necesitas texto seleccionable, aplica OCR antes de convertirlo."
           }
         }
       ]
@@ -241,24 +257,25 @@
           "@type": "HowToStep",
           "position": 1,
           "name": "Sube tu PDF",
-          "text": "Carga el documento PDF que necesitas convertir al estándar de archivo PDF/A. La herramienta es compatible con cualquier versión de PDF."
+          "text": "Hasta 50 MB. Si tiene contraseña, desbloquéalo antes."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Selecciona la variante PDF/A",
-          "text": "Elige entre PDF/A-1b para máxima compatibilidad, PDF/A-2b para mejor compresión o PDF/A-3b que permite adjuntar cualquier tipo de archivo."
+          "name": "Espera la conversión",
+          "text": "El documento se convierte a PDF/A-2b; no hace falta elegir nada."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Convierte y descarga",
-          "text": "Obtén el PDF/A listo para archivo a largo plazo, cumplimiento normativo o presentación ante organismos oficiales."
+          "name": "Descarga el PDF/A",
+          "text": "El archivo se descarga con el sufijo «_pdfa»."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -286,6 +303,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -304,6 +322,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -366,61 +385,9 @@
     </div>
 
 
-    <div class="seo">
-        <h2>¿Qué es el PDF/A y para qué sirve?</h2>
-        <p>PDF/A (ISO 19005) es el estándar internacional para el archivado permanente de documentos electrónicos. A diferencia del PDF convencional, el PDF/A embebe todas las fuentes, perfiles de color e información necesaria para garantizar que el documento se verá exactamente igual dentro de 20 o 50 años.</p>
-        <p>Es obligatorio en muchas administraciones públicas europeas, juzgados, notarías y archivos oficiales. Si necesitas presentar documentación oficial o archivar contratos a largo plazo, el PDF/A es el formato correcto.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/unir-pdf/">Unir PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-        </ul>
-    </div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo convertir PDF a PDF/A online gratis</h2>
-        <p>Convierte tus PDFs normales al formato PDF/A, el estándar ISO para archivado a largo plazo. Los PDF/A garantizan que tu documento se verá igual dentro de 20 años que hoy.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube tu archivo PDF estándar.</li>
-            <li>La herramienta convierte automáticamente el documento a formato PDF/A.</li>
-            <li>Descarga el PDF/A archivable listo para guardar en tu sistema documental.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>El formato PDF/A es obligatorio en muchas administraciones públicas, sistemas de gestión documental y archivos digitales porque garantiza la conservación fiel del documento en el tiempo.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>La conversión se realiza en servidores europeos (UE) mediante una conexión segura, y el archivo se elimina automáticamente tras generar el PDF/A. No almacenamos ni compartimos tus documentos.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Qué diferencia hay entre PDF y PDF/A?</summary>
-            <p>El PDF/A elimina elementos que podrían no mostrarse correctamente en el futuro, como fuentes no embebidas, contenido multimedia y cifrado.</p>
-        </details>
-        <details>
-            <summary>¿Puedo convertir PDFs protegidos a PDF/A?</summary>
-            <p>No, primero debes eliminar la protección con la contraseña usando nuestra herramienta de desbloqueo.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/reparar-pdf/">Reparar PDF</a></li>
-            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
-            <li><a href="/proteger-pdf/">Proteger PDF</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -443,96 +410,52 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Convertir PDF a PDF/A?</h2>
-  <p>Usar Convertir PDF a PDF/A en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube tu PDF</h3>
-          <p>Carga el documento PDF que necesitas convertir al estándar de archivo PDF/A. La herramienta es compatible con cualquier versión de PDF.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Selecciona la variante PDF/A</h3>
-          <p>Elige entre PDF/A-1b para máxima compatibilidad, PDF/A-2b para mejor compresión o PDF/A-3b que permite adjuntar cualquier tipo de archivo.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Convierte y descarga</h3>
-          <p>Obtén el PDF/A listo para archivo a largo plazo, cumplimiento normativo o presentación ante organismos oficiales.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para convertir PDF a PDF/A">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube tu PDF</h3><p>Hasta 50 MB. Si tiene contraseña, <a href="/desbloquear-pdf/">desbloquéalo</a> antes.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Espera la conversión</h3><p>El documento se convierte a PDF/A-2b; no hace falta elegir nada.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF/A</h3><p>El archivo se descarga con el sufijo «_pdfa».</p></div></div>
+    </div>
+    <p>PDF/A (ISO 19005) es la versión de PDF pensada para conservar documentos a largo plazo: obliga a incrustar las fuentes y prohíbe el cifrado, el JavaScript y el contenido que dependa de recursos externos. El archivo se sube a nuestro servidor en España, donde Ghostscript lo reescribe como PDF/A-2b; si algo del original no es compatible con el estándar, se elimina. El archivo se borra en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Convertir PDF a PDF/A es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Archivo documental en empresas</strong>
-        <span>El estándar PDF/A garantiza que los documentos serán legibles en el futuro, independientemente del software o versión del lector PDF utilizado. Es el formato preferido para los archivos corporativos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Presentación ante administraciones públicas</strong>
-        <span>Muchos organismos públicos en España y la UE exigen el formato PDF/A para la presentación de documentación en sede electrónica, contratos y expedientes administrativos.</span>
-      </div>
-      <div class="use-case">
-        <strong>Cumplimiento RGPD y normativas legales</strong>
-        <span>La conservación de documentos legales, contratos y datos personales en PDF/A facilita el cumplimiento de los plazos de conservación definidos por el RGPD y otras normativas.</span>
-      </div>
-      <div class="use-case">
-        <strong>Bibliotecas y archivos digitales</strong>
-        <span>Las bibliotecas nacionales, universidades y archivos históricos utilizan PDF/A para preservar documentos digitalizados y garantizar su acceso a las generaciones futuras.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Sedes electrónicas y archivos oficiales</strong><span>Algunos organismos, juzgados y archivos piden o recomiendan PDF/A para la documentación que se presenta o se conserva. Comprueba qué variante exige cada uno.</span></div>
+      <div class="use-case"><strong>Archivo documental de la empresa</strong><span>Contratos, facturas o actas que tienen que poder abrirse igual dentro de muchos años.</span></div>
+      <div class="use-case"><strong>Trabajos académicos</strong><span>Algunos repositorios universitarios exigen depositar tesis y TFG en PDF/A.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Convertir PDF a PDF/A</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Qué diferencia hay entre PDF normal y PDF/A?</h3>
-        <p>El PDF/A es un subconjunto del estándar PDF diseñado específicamente para el archivo a largo plazo. Prohíbe elementos que podrían impedir la reproducción fiel en el futuro, como el cifrado, las fuentes no incrustadas o el JavaScript.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El PDF/A ocupa más espacio que el PDF original?</h3>
-        <p>Generalmente sí, porque debe incrustar todas las fuentes tipográficas y no puede usar ciertos métodos de compresión. El aumento de tamaño suele estar entre un 10% y un 30%.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo convertir un PDF escaneado a PDF/A?</h3>
-        <p>Sí. Los PDFs escaneados también pueden convertirse a PDF/A. Si necesitas que el texto sea seleccionable, primero aplica OCR al documento antes de convertirlo.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Solo genera PDF/A-2b.</strong> No se puede elegir PDF/A-1b, PDF/A-3 ni la conformidad «a» (accesible).</li>
+      <li><strong>El resultado no se valida.</strong> No comprobamos la conformidad con un validador; si el organismo es estricto, revísalo con una herramienta como veraPDF antes de presentarlo.</li>
+      <li>Los elementos no permitidos en PDF/A (JavaScript, cifrado, adjuntos, algunos efectos de transparencia) se eliminan o se aplanan.</li>
+      <li>No añade texto a un escaneo: si necesitas que se pueda buscar, aplica antes <a href="/ocr-a-pdf/">OCR</a>.</li>
+    </ul>
+    <!-- TODO(contenido): validar varios PDF de salida con veraPDF y documentar el resultado real (¿cumple 2b sin perfil ICC explícito?). Si falla, ajustar el comando de Ghostscript (PDFA_def.ps + OutputIntent) antes de prometer conformidad. -->
+
+    <h2>Preguntas frecuentes sobre PDF/A</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Qué diferencia hay entre PDF y PDF/A?</h3><p>PDF/A es un subconjunto de PDF para archivo a largo plazo: incrusta las fuentes y prohíbe el cifrado, el JavaScript y el contenido que dependa de recursos externos.</p></div>
+      <div class="faq-item"><h3>¿Qué versión de PDF/A genera la herramienta?</h3><p>PDF/A-2b. No se puede elegir otra variante.</p></div>
+      <div class="faq-item"><h3>¿El PDF/A ocupa más que el original?</h3><p>Suele ocupar algo más, porque incrusta las fuentes; cuánto depende de las fuentes que use el documento.</p></div>
+      <div class="faq-item"><h3>¿Puedo convertir PDF protegidos?</h3><p>No. PDF/A no admite cifrado: quita antes la contraseña con Desbloquear PDF.</p></div>
+      <div class="faq-item"><h3>¿Puedo convertir un PDF escaneado?</h3><p>Sí, pero seguirá siendo una imagen. Si necesitas texto seleccionable, aplica OCR antes de convertirlo.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/ocr-a-pdf/">OCR a PDF</a>
+      <a href="/desbloquear-pdf/">Desbloquear PDF</a>
+      <a href="/reparar-pdf/">Reparar PDF</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+    </nav>
+    <p>Guías relacionadas: <a href="/blog/que-es-pdf-a-archivo/">qué es PDF/A</a> y <a href="/blog/diferencia-pdf-y-pdfa/">diferencias entre PDF y PDF/A</a>.</p>
+  </section>
 </main>
 
 
-<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
-    <div style="font-size:14px;color:#6B7280;line-height:1.75">
-        <p>Convierte cualquier PDF al formato PDF/A, el estándar ISO para la conservación y el archivo a largo plazo de documentos electrónicos.</p>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">¿Qué es PDF/A y para qué sirve?</h2>
-        <p>PDF/A es una versión del formato PDF diseñada específicamente para el archivo y la conservación de documentos a largo plazo. A diferencia de un PDF normal, PDF/A incluye todos los recursos necesarios para reproducir el documento exactamente igual en el futuro, independientemente del software o hardware disponible.</p>
-        <p>Es el formato exigido por muchas administraciones públicas, archivos históricos, tribunales y empresas para el almacenamiento oficial de documentos electrónicos.</p>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Diferencias entre PDF y PDF/A</h2>
-        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
-            <li>PDF/A incrusta siempre todas las fuentes tipográficas</li>
-            <li>No permite contenido cifrado ni DRM</li>
-            <li>No permite JavaScript ni contenido multimedia incrustado</li>
-            <li>Garantiza reproducibilidad a largo plazo sin dependencia de software externo</li>
-        </ul>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
-        <p><strong>¿Qué versión de PDF/A genera la herramienta?</strong><br>La herramienta genera PDF/A-1b, la versión más ampliamente aceptada y compatible con la mayoría de sistemas de archivo institucional.</p>
-        <p><strong>¿El tamaño del archivo aumenta al convertir a PDF/A?</strong><br>Ligeramente sí, porque se incrustan todas las fuentes completas. El aumento suele ser pequeño a menos que el PDF original usara muchas fuentes externas.</p>
-        <p><strong>¿Es obligatorio usar PDF/A para la administración pública española?</strong><br>Sí. La Ley 39/2015 y el Esquema Nacional de Interoperabilidad exigen PDF/A para la conservación de documentos electrónicos en la administración española.</p>
-
-    </div>
-    </section>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 
 <script src="/js/convert.js" defer></script>
