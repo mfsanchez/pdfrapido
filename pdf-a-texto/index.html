@@ -134,18 +134,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo extraer el texto de un PDF?",
+          "name": "¿Se mantiene el formato del texto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sube o arrastra tu PDF a la herramienta. Se extrae automáticamente el texto de todas las páginas y se muestra en un área editable. Puedes copiarlo al portapapeles o descargarlo como archivo .txt."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Se sube mi PDF a algún servidor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. La extracción de texto se realiza 100% en tu navegador usando la tecnología PDF.js de Mozilla. Tu archivo nunca sale de tu dispositivo."
+            "text": "Se conservan los saltos entre bloques y páginas, pero no negritas, tamaños, columnas ni tablas: el formato .txt no admite estilos."
           }
         },
         {
@@ -153,15 +145,23 @@
           "name": "¿Funciona con PDFs escaneados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Esta herramienta extrae el texto digital embebido en el PDF. Si el PDF es una imagen escaneada sin capa de texto, no habrá texto que extraer. Para esos casos, usa nuestra herramienta OCR."
+            "text": "No directamente. Un escaneo es una imagen sin texto digital; pásalo antes por OCR a PDF."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se mantiene el formato del texto?",
+          "name": "¿Se extraen encabezados, pies de página y notas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Se conservan los saltos de párrafo y la separación entre bloques de texto. El formato visual (negritas, columnas, tablas) no se transfiere al texto plano, ya que .txt no soporta estilos."
+            "text": "Sí, todo el texto que tenga la capa de texto de la página, aunque el orden puede variar en diseños complejos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mi archivo se sube a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La extracción se hace en tu navegador y el archivo no sale de tu dispositivo."
           }
         }
       ]
@@ -178,25 +178,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga el PDF",
-          "text": "Sube el PDF del que quieres extraer el texto. Funciona con PDFs de texto nativo. Para PDFs escaneados, usa primero la herramienta de OCR."
+          "name": "Sube el PDF",
+          "text": "Arrástralo o selecciónalo. Tiene que tener texto digital, no ser solo una imagen escaneada."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Extracción del texto",
-          "text": "La herramienta extrae todo el texto del PDF manteniendo la estructura de párrafos y secciones en la medida de lo posible."
+          "name": "Revisa el texto",
+          "text": "El texto de todas las páginas aparece en un cuadro editable, separado por páginas, donde puedes corregirlo o recortarlo."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Copia o descarga el texto",
-          "text": "Obtén el texto extraído en formato .txt, listo para pegar en cualquier editor, procesador de texto o herramienta de IA."
+          "name": "Cópialo o descárgalo",
+          "text": "Cópialo al portapapeles o descárgalo como archivo .txt."
         }
       ]
     }
   ]
 }
+
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -224,6 +225,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -242,6 +244,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -336,43 +339,7 @@
     </div>
 
 
-    <div class="seo-content">
-        <h2>Cómo extraer texto de un PDF online</h2>
-        <p>Arrastra tu PDF a la zona de carga o haz clic para seleccionarlo. La herramienta analiza todas las páginas del documento y extrae el texto manteniendo la estructura de párrafos.</p>
-        <p>El resultado aparece en un área editable donde puedes revisar y modificar el texto antes de copiarlo o descargarlo. Todo el procesamiento ocurre en tu navegador gracias a PDF.js de Mozilla: tu archivo nunca llega a ningún servidor.</p>
-        <p>Ideal para copiar contenido de informes, contratos, artículos o cualquier documento en formato PDF que tenga una capa de texto digital.</p>
 
-        <div class="faq">
-            <h2>Preguntas frecuentes</h2>
-            <div class="faq-item">
-                <p class="faq-q">¿Cómo extraer el texto de un PDF?</p>
-                <p class="faq-a">Sube o arrastra tu PDF. El texto de todas las páginas se extrae automáticamente y aparece en un editor. Desde ahí puedes copiarlo al portapapeles o descargarlo como .txt con un solo clic.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">¿Mi archivo se sube a algún servidor?</p>
-                <p class="faq-a">No. La extracción se hace 100% en tu navegador con PDF.js (Mozilla). Tu archivo nunca sale de tu dispositivo, lo que garantiza total privacidad.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">¿Funciona con PDFs escaneados?</p>
-                <p class="faq-a">Esta herramienta extrae el texto digital ya embebido en el PDF. Si el documento es una imagen escaneada sin capa de texto, no habrá texto que extraer. Para esos casos, usa nuestra herramienta <a href="/ocr-a-pdf/" style="color:var(--accent)">OCR a PDF</a>.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">¿Se mantiene el formato del texto?</p>
-                <p class="faq-a">Se preservan los saltos de párrafo y la separación entre bloques de texto. El formato visual (negritas, columnas, tablas) no puede transferirse a texto plano, ya que el formato .txt no admite estilos.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
-            <li><a href="/pdf-a-word/">PDF a Word</a></li>
-            <li><a href="/extraer-datos/">Extraer datos</a></li>
-            <li><a href="/resumir-pdf/">Resumir PDF</a></li>
-            <li><a href="/traducir-pdf/">Traducir PDF</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -395,70 +362,46 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona PDF a Texto?</h2>
-  <p>Usar PDF a Texto en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF</h3>
-          <p>Sube el PDF del que quieres extraer el texto. Funciona con PDFs de texto nativo. Para PDFs escaneados, usa primero la herramienta de OCR.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Extracción del texto</h3>
-          <p>La herramienta extrae todo el texto del PDF manteniendo la estructura de párrafos y secciones en la medida de lo posible.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Copia o descarga el texto</h3>
-          <p>Obtén el texto extraído en formato .txt, listo para pegar en cualquier editor, procesador de texto o herramienta de IA.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para extraer el texto de un PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Arrástralo o selecciónalo. Tiene que tener texto digital, no ser solo una imagen escaneada.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Revisa el texto</h3><p>El texto de todas las páginas aparece en un cuadro editable, separado por páginas, donde puedes corregirlo o recortarlo.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Cópialo o descárgalo</h3><p>Cópialo al portapapeles o descárgalo como archivo .txt.</p></div></div>
+    </div>
+    <p>La extracción ocurre en tu navegador con pdf.js, que lee la capa de texto de cada página. El archivo no se sube a ningún servidor.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de PDF a Texto es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Extraer texto para análisis con IA</strong>
-        <span>Cuando quieres analizar, resumir o procesar el contenido de un PDF con herramientas de inteligencia artificial, necesitas primero extraer el texto en formato plano.</span>
-      </div>
-      <div class="use-case">
-        <strong>Importar contenido a sistemas de gestión</strong>
-        <span>Extrae el contenido de contratos, informes o documentos PDF para importarlo a bases de datos, wikis corporativas o sistemas de gestión documental.</span>
-      </div>
-      <div class="use-case">
-        <strong>Comparar contenido de dos documentos</strong>
-        <span>Extrae el texto de dos PDFs a formato .txt y usa cualquier herramienta de comparación de texto para detectar diferencias entre versiones del documento.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear índices y búsquedas</strong>
-        <span>Para sistemas de búsqueda documental, es necesario extraer el texto de los PDFs para indexarlo. Esta herramienta automatiza ese primer paso.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Reutilizar un párrafo o una cláusula</strong><span>Copiar el texto de un contrato o un informe sin volver a teclearlo.</span></div>
+      <div class="use-case"><strong>Pegar el contenido en otra herramienta</strong><span>Llevar el texto a un editor, una wiki o un asistente de IA que no acepta PDF.</span></div>
+      <div class="use-case"><strong>Comparar versiones</strong><span>Extraer el texto de dos versiones para compararlas; o usa directamente <a href="/comparar-pdfs/">Comparar PDFs</a>.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre PDF a Texto</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿El texto extraído mantiene el formato original?</h3>
-        <p>Se mantiene la estructura de párrafos básica, pero el formato visual como negritas, cursivas y tamaños de fuente se pierde al convertir a texto plano. Para preservar el formato, usa la conversión a Word en su lugar.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Funciona con PDFs protegidos contra copia?</h3>
-        <p>Los PDFs con restricción de copia de texto no permiten la extracción directa. Primero deberías desbloquear el PDF con nuestra herramienta de desbloqueo y luego extraer el texto.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Se extraen los textos de las notas al pie y los encabezados?</h3>
-        <p>Sí, se extrae todo el texto del PDF, incluyendo encabezados, pies de página, notas al pie, tablas y cuadros de texto. El orden puede variar con diseños de página complejos.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>PDF escaneados:</strong> si la página es una imagen, no hay texto que extraer. Aplica antes <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
+      <li><strong>Se pierde el formato:</strong> negritas, tamaños, columnas y tablas no existen en un .txt. Para conservarlos, usa <a href="/pdf-a-word/">PDF a Word</a>.</li>
+      <li>En diseños a varias columnas o con cuadros de texto, el orden del texto extraído puede no coincidir con el de lectura.</li>
+    </ul>
+    <!-- TODO(contenido): comprobar el comportamiento con PDF que piden contraseña para abrirse y con PDF con restricción de copia, y documentarlo. -->
+
+    <h2>Preguntas frecuentes sobre PDF a Texto</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Se mantiene el formato del texto?</h3><p>Se conservan los saltos entre bloques y páginas, pero no negritas, tamaños, columnas ni tablas: el formato .txt no admite estilos.</p></div>
+      <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No directamente. Un escaneo es una imagen sin texto digital; pásalo antes por OCR a PDF.</p></div>
+      <div class="faq-item"><h3>¿Se extraen encabezados, pies de página y notas?</h3><p>Sí, todo el texto que tenga la capa de texto de la página, aunque el orden puede variar en diseños complejos.</p></div>
+      <div class="faq-item"><h3>¿Mi archivo se sube a algún servidor?</h3><p>No. La extracción se hace en tu navegador y el archivo no sale de tu dispositivo.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/ocr-a-pdf/">OCR a PDF</a>
+      <a href="/pdf-a-word/">PDF a Word</a>
+      <a href="/comparar-pdfs/">Comparar PDFs</a>
+      <a href="/resumir-pdf/">Resumir PDF</a>
+    </nav>
+  </section>
 </main>
 
 <footer>

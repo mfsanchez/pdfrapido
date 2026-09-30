@@ -145,34 +145,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo convertir un PDF a imagen JPG?",
+          "name": "¿A qué resolución se convierten las páginas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sube el PDF, elige la calidad de la imagen y pulsa convertir. Obtendrás una imagen JPG por cada página del PDF, descargables individualmente o en un ZIP."
+            "text": "A 150 ppp por defecto. Puedes elegir 200 o 300 ppp si vas a imprimir las imágenes."
           }
         },
         {
           "@type": "Question",
-          "name": "¿A qué resolución se generan las imágenes?",
+          "name": "¿Puedo convertir solo algunas páginas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Por defecto se generan a 150 DPI (adecuado para pantalla). Puedes seleccionar hasta 300 DPI para uso en imprenta o documentación de alta calidad."
+            "text": "No: se convierten todas, pero puedes descargar solo las que quieras desde su miniatura."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo convertir solo algunas páginas a JPG?",
+          "name": "¿Qué diferencia hay con PDF a PNG?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, puedes seleccionar qué páginas convertir especificando el rango (por ejemplo, páginas 1-3 o solo la página 5)."
+            "text": "JPG pesa menos y va bien para fotos; PNG no pierde calidad y se ve más nítido en texto y gráficos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es mejor JPG o PNG para las páginas del PDF?",
+          "name": "¿Se sube mi PDF a algún servidor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "JPG es ideal para documentos con muchas imágenes y fotografías (menor tamaño de archivo). PNG es mejor para documentos con texto y gráficos de líneas (mayor nitidez)."
+            "text": "No. Las imágenes se generan en tu navegador."
           }
         }
       ]
@@ -189,25 +189,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga el PDF",
-          "text": "Selecciona el archivo PDF del que quieres extraer imágenes. Puedes subir PDFs de cualquier número de páginas."
+          "name": "Sube el PDF",
+          "text": "Arrástralo o selecciónalo."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Elige la resolución y calidad",
-          "text": "Selecciona la calidad de las imágenes resultantes: alta resolución para uso profesional o resolución estándar para web y comunicaciones."
+          "name": "Elige la resolución",
+          "text": "150 ppp (pantalla y web), 200 ppp o 300 ppp (impresión). A más resolución, más nitidez y más peso."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga las imágenes",
-          "text": "Cada página del PDF se convierte en una imagen JPG independiente. Puedes descargarlas todas de una vez en un archivo ZIP o individualmente."
+          "text": "Cada página se convierte en un JPG. Puedes descargarlas una a una desde su miniatura o todas seguidas con «Descargar todas»."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -235,6 +236,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -253,6 +255,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -321,40 +324,7 @@
         <div class="images-grid" id="imagesGrid"></div>
     </div>
 
-    <div class="seo-content">
-        <h2>Cómo convertir PDF a JPG online gratis</h2>
-        <p>Transforma cada página de tu documento PDF en una imagen JPG independiente con alta calidad. Ideal para presentaciones, redes sociales, o cuando necesitas las páginas como imágenes.</p>
-        <p>El procesamiento se realiza completamente en tu navegador gracias a la tecnología PDF.js de Mozilla. Tus archivos nunca se suben a ningún servidor.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-png/">PDF a PNG</a></li>
-            <li><a href="/jpg-a-pdf/">JPG a PDF</a></li>
-            <li><a href="/pdf-a-texto/">PDF a Texto</a></li>
-            <li><a href="/ocr-a-pdf/">OCR a PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-        </ul>
-    
-        <h3>¿Cómo se convierte cada página del PDF?</h3>
-        <p>Cada página del PDF se convierte en una imagen JPG independiente. Si el PDF tiene 5 páginas, obtendrás 5 imágenes. Las imágenes se descargan comprimidas en un archivo ZIP para facilitar la descarga de múltiples páginas.</p>
-
-        <h3>¿A qué resolución se generan las imágenes?</h3>
-        <p>Por defecto a 150 DPI, suficiente para visualización en pantalla y web. Si necesitas imágenes para impresión de alta calidad, selecciona 300 DPI. A mayor resolución, mayor calidad y mayor tamaño del archivo resultante.</p>
-
-        <h3>Diferencia entre PDF a JPG y PDF a PNG</h3>
-        <p>JPG usa compresión con pérdida y genera archivos más pequeños, ideal para fotografías y documentos con gradientes de color. PNG usa compresión sin pérdida y es mejor para documentos con texto, gráficos y áreas de color sólido. Para la mayoría de documentos de texto, PNG ofrece mejor nitidez.</p>
-
-        <h3>Casos de uso habituales</h3>
-        <ul>
-            <li>Insertar páginas de un PDF en una presentación de PowerPoint</li>
-            <li>Subir páginas de un PDF a una web o plataforma que no acepta PDFs</li>
-            <li>Compartir una página concreta de un informe como imagen en redes sociales</li>
-            <li>Crear miniaturas de vista previa para un catálogo online</li>
-            <li>Extraer imágenes o gráficos específicos de un PDF</li>
-        </ul>
-</div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -377,70 +347,47 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona PDF a JPG?</h2>
-  <p>Usar PDF a JPG en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga el PDF</h3>
-          <p>Selecciona el archivo PDF del que quieres extraer imágenes. Puedes subir PDFs de cualquier número de páginas.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Elige la resolución y calidad</h3>
-          <p>Selecciona la calidad de las imágenes resultantes: alta resolución para uso profesional o resolución estándar para web y comunicaciones.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga las imágenes</h3>
-          <p>Cada página del PDF se convierte en una imagen JPG independiente. Puedes descargarlas todas de una vez en un archivo ZIP o individualmente.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para convertir PDF a JPG">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Arrástralo o selecciónalo.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige la resolución</h3><p>150 ppp (pantalla y web), 200 ppp o 300 ppp (impresión). A más resolución, más nitidez y más peso.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga las imágenes</h3><p>Cada página se convierte en un JPG. Puedes descargarlas una a una desde su miniatura o todas seguidas con «Descargar todas».</p></div></div>
+    </div>
+    <p>La conversión ocurre en tu navegador: pdf.js dibuja cada página a la resolución elegida y la guarda como JPG con calidad alta. El PDF no se sube a ningún servidor.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de PDF a JPG es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Publicar páginas de PDF en redes sociales</strong>
-        <span>Las redes sociales no permiten compartir directamente PDFs. Convierte las páginas más relevantes a JPG para publicarlas como imágenes en Instagram, LinkedIn o Twitter.</span>
-      </div>
-      <div class="use-case">
-        <strong>Incrustar páginas de PDF en presentaciones</strong>
-        <span>PowerPoint y Google Slides trabajan mejor con imágenes que con PDFs. Convierte las páginas del PDF a JPG para insertarlas en tus diapositivas sin problemas de compatibilidad.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear miniaturas y vistas previas</strong>
-        <span>Para webs, tiendas online o portfolios, convierte la primera página de un catálogo o folleto a JPG para usarla como imagen de portada o miniatura.</span>
-      </div>
-      <div class="use-case">
-        <strong>Extraer infografías y gráficos de informes</strong>
-        <span>Los informes en PDF suelen contener gráficos e infografías valiosas. Conviértelos a JPG para reutilizarlos en presentaciones o materiales de marketing.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Webs y formularios que no aceptan PDF</strong><span>Subir una página como imagen donde solo se admiten JPG.</span></div>
+      <div class="use-case"><strong>Presentaciones</strong><span>Insertar una página de un informe en PowerPoint o Google Slides como imagen.</span></div>
+      <div class="use-case"><strong>Redes sociales y mensajería</strong><span>Compartir una página concreta de un folleto o un cartel.</span></div>
+      <div class="use-case"><strong>Miniaturas</strong><span>Usar la portada de un catálogo como imagen de vista previa.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre PDF a JPG</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿A qué resolución se convierten las páginas del PDF?</h3>
-        <p>Por defecto se genera a 150 ppp para uso web, suficiente para pantallas de alta resolución. Si necesitas imágenes para imprimir, selecciona la opción de alta resolución a 300 ppp o más.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo convertir solo algunas páginas del PDF?</h3>
-        <p>Sí. Puedes seleccionar qué páginas convertir: todas, solo la primera o un rango específico. Esto ahorra tiempo cuando el PDF tiene muchas páginas pero solo necesitas las imágenes de algunas.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿El texto del PDF sigue siendo legible en el JPG?</h3>
-        <p>El texto se renderiza como parte de la imagen. Si la resolución elegida es suficientemente alta, el texto será perfectamente legible. Sin embargo, ya no será un texto seleccionable o buscable.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Se convierten todas las páginas</strong>; no se puede elegir un rango. Para una sola página, <a href="/extraer-paginas/">extráela</a> antes.</li>
+      <li><strong>No hay ZIP.</strong> «Descargar todas» lanza una descarga por página; el navegador puede pedirte permiso para descargas múltiples.</li>
+      <li>El texto queda como parte de la imagen: ya no se puede seleccionar ni buscar.</li>
+      <li>JPG comprime con pérdida. Para páginas con mucho texto o gráficos de líneas finas, <a href="/pdf-a-png/">PDF a PNG</a> da bordes más nítidos.</li>
+    </ul>
+
+    <h2>Preguntas frecuentes sobre PDF a JPG</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿A qué resolución se convierten las páginas?</h3><p>A 150 ppp por defecto. Puedes elegir 200 o 300 ppp si vas a imprimir las imágenes.</p></div>
+      <div class="faq-item"><h3>¿Puedo convertir solo algunas páginas?</h3><p>No: se convierten todas, pero puedes descargar solo las que quieras desde su miniatura.</p></div>
+      <div class="faq-item"><h3>¿Qué diferencia hay con PDF a PNG?</h3><p>JPG pesa menos y va bien para fotos; PNG no pierde calidad y se ve más nítido en texto y gráficos.</p></div>
+      <div class="faq-item"><h3>¿Se sube mi PDF a algún servidor?</h3><p>No. Las imágenes se generan en tu navegador.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/pdf-a-png/">PDF a PNG</a>
+      <a href="/jpg-a-pdf/">JPG a PDF</a>
+      <a href="/extraer-paginas/">Extraer páginas</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+    </nav>
+  </section>
 </main>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 
