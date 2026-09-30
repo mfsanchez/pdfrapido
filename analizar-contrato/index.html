@@ -191,7 +191,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"¿Es seguro subir mi contrato?","acceptedAnswer":{"@type":"Answer","text":"Sí. El contrato se procesa en memoria y no se almacena una vez finalizado el análisis. No guardamos copias de tus documentos ni los compartimos con terceros."}},
+    {"@type":"Question","name":"¿Es seguro subir mi contrato?","acceptedAnswer":{"@type":"Answer","text":"El PDF se sube a nuestro servidor en España, que extrae el texto y lo envía a Groq (EE. UU.) para el análisis con IA. El archivo se borra de nuestro servidor en un máximo de 10 minutos y no guardamos el resultado."}},
     {"@type":"Question","name":"¿Puede analizar contratos escaneados?","acceptedAnswer":{"@type":"Answer","text":"No directamente. Si el contrato es un escaneado sin texto digital, pásalo primero por la herramienta OCR a PDF para extraer el texto; después podrás analizarlo."}},
     {"@type":"Question","name":"¿Este análisis tiene validez legal?","acceptedAnswer":{"@type":"Answer","text":"No. El análisis es orientativo e informativo. No constituye asesoramiento jurídico profesional. Para decisiones legales, consulta siempre con un abogado colegiado."}},
     {"@type":"Question","name":"¿Qué significa la puntuación de riesgo?","acceptedAnswer":{"@type":"Answer","text":"Va de 0 a 100. De 0 a 30, contrato equilibrado; de 31 a 60, riesgo moderado; de 61 a 100, cláusulas problemáticas que requieren atención profesional."}},
@@ -218,7 +218,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
     {
       "@type": "HowToStep",
       "position": 2,
-      "text": "La IA lee el documento completo."
+      "text": "La IA lee el contrato (hasta unas 4.000 palabras; en contratos más largos, la primera parte)."
     },
     {
       "@type": "HowToStep",
@@ -414,7 +414,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
             <li><strong>Contratos de compraventa:</strong> analiza condiciones de entrega, garantías, responsabilidad por vicios ocultos y cláusulas penales.</li>
         </ul>
         <h2>Preguntas frecuentes</h2>
-        <div class="faq-item"><div class="faq-q">¿Es seguro subir mi contrato?</div><div class="faq-a">Sí. El contrato se procesa en memoria y no se almacena una vez finalizado el análisis. No guardamos copias de tus documentos ni los compartimos con terceros.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Es seguro subir mi contrato?</div><div class="faq-a">El PDF se sube a nuestro servidor en España, que extrae el texto y lo envía a Groq (EE. UU.) para el análisis con IA. El archivo se borra de nuestro servidor en un máximo de 10 minutos y no guardamos el resultado.</div></div>
         <div class="faq-item"><div class="faq-q">¿Puede analizar contratos escaneados?</div><div class="faq-a">No directamente. Si el contrato es un escaneado sin texto digital, pásalo primero por <a href="/ocr-a-pdf/">OCR a PDF</a> para extraer el texto; después podrás analizarlo.</div></div>
         <div class="faq-item"><div class="faq-q">¿Este análisis tiene validez legal?</div><div class="faq-a">No. El análisis es orientativo e informativo. No constituye asesoramiento jurídico profesional. Para decisiones legales importantes, consulta siempre con un abogado colegiado.</div></div>
         <div class="faq-item"><div class="faq-q">¿Qué significa la puntuación de riesgo?</div><div class="faq-a">Va de 0 a 100. De 0 a 30, contrato relativamente equilibrado; de 31 a 60, riesgo moderado que conviene revisar; de 61 a 100, cláusulas problemáticas que requieren atención profesional antes de firmar.</div></div>
@@ -449,7 +449,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
   <h2>¿Cómo funciona?</h2>
   <div class="steps">
     <div class="step"><div class="step-num">1</div><div class="step-body"><p>Sube el contrato en PDF.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-body"><p>La IA lee el documento completo.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-body"><p>La IA lee el contrato (hasta unas 4.000 palabras; en contratos más largos, la primera parte).</p></div></div>
     <div class="step"><div class="step-num">3</div><div class="step-body"><p>Identifica cláusulas relevantes, plazos y condiciones.</p></div></div>
     <div class="step"><div class="step-num">4</div><div class="step-body"><p>Genera un informe claro con los puntos más importantes.</p></div></div>
   </div>
@@ -464,7 +464,7 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
   </div>
 
   <p><strong>Nota importante:</strong> esta herramienta es una ayuda para entender contratos, no asesoramiento legal profesional. Para contratos con implicaciones económicas importantes, consulta con un abogado.</p>
-  <p><strong>Privacidad:</strong> el contrato se procesa de forma segura y no se almacena una vez generado el análisis.</p>
+  <p><strong>Privacidad:</strong> el texto del contrato se envía a Groq (EE. UU.) para el análisis y el archivo se borra de nuestro servidor en un máximo de 10 minutos.</p>
 </section>
 </main>
 <footer>
