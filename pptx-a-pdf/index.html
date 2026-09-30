@@ -198,34 +198,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo convertir una presentación PowerPoint a PDF?",
+          "name": "¿Se mantienen las animaciones?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sube el archivo .pptx o .ppt, pulsa 'Convertir a PDF' y descarga el resultado. Cada diapositiva se convierte en una página del PDF."
+            "text": "No. El PDF es estático: cada diapositiva aparece como queda al terminar sus animaciones."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Se mantienen las animaciones y transiciones en el PDF?",
+          "name": "¿Se conservan las fuentes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, el PDF es un formato estático por lo que las animaciones y transiciones no se incluyen. Cada diapositiva aparece en su estado final."
+            "text": "Sí, si están incrustadas en el archivo o instaladas en el servidor. Si no, se sustituyen por una fuente similar."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con archivos de Google Slides?",
+          "name": "¿Se incluyen las notas del presentador?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, descarga la presentación de Google Slides como .pptx y luego conviértela con PDFRápido. También puedes exportar directamente como PDF desde Google Slides."
+            "text": "No. Solo se convierten las diapositivas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo convertir solo algunas diapositivas?",
+          "name": "¿Funciona con archivos .ppt antiguos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Para convertir diapositivas específicas, elimina las que no necesites del archivo antes de subirlo, o usa nuestra herramienta de eliminar páginas en el PDF resultante."
+            "text": "Sí. Acepta .ppt y .pptx."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mi presentación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se convierte en nuestro servidor en España y se elimina en un máximo de 10 minutos."
           }
         }
       ]
@@ -242,25 +250,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Carga la presentación",
-          "text": "Sube tu archivo .pptx o .ppt de Microsoft PowerPoint o el .odp de LibreOffice Impress. La herramienta acepta presentaciones de cualquier tamaño."
+          "name": "Sube la presentación",
+          "text": "Archivos .pptx o .ppt de hasta 50 MB."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Conversión de diapositivas",
-          "text": "Cada diapositiva de la presentación se convierte en una página del PDF, manteniendo el diseño, las fuentes, los elementos estáticos y los gráficos."
+          "name": "Espera la conversión",
+          "text": "Suele tardar unos segundos; las presentaciones con muchas imágenes o vídeos tardan más."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Descarga y comparte",
-          "text": "El PDF resultante es perfecto para distribuir como material de referencia, publicar en la web o enviar a participantes que no tienen PowerPoint."
+          "name": "Descarga el PDF",
+          "text": "Cada diapositiva es una página del PDF, con sus proporciones originales."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -288,6 +297,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -306,6 +316,7 @@
     "url": "https://mfsanchez.com"
   }
 }
+
 </script>
 </head>
 <body>
@@ -345,57 +356,9 @@
     </div>
     <div class="error-msg" id="errorMsg"></div>
     <div class="ra" id="resultArea"><div class="rc"><div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8453C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Presentación convertida a PDF</h3><p class="desc" id="resultDesc"></p><div class="rac"><button class="bd" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar PDF</button><button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button></div></div></div>
-    <div class="seo"><h2>Cómo convertir PowerPoint a PDF online gratis</h2><p>Sube tu archivo PPT o PPTX y conviértelo a PDF manteniendo las diapositivas, animaciones y el diseño original.</p></div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-pptx/">PDF a PowerPoint</a></li>
-            <li><a href="/word-a-pdf/">Word a PDF</a></li>
-            <li><a href="/excel-a-pdf/">Excel a PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/unir-pdf/">Unir PDF</a></li>
-        </ul>
-    </div>
     <!-- SEO CONTENT -->
-    <div class="seo-content">
-        <h2>Cómo convertir PowerPoint a PDF online gratis</h2>
-        <p>Transforma presentaciones PowerPoint (PPT, PPTX) a PDF conservando el diseño, las transiciones visuales y el formato de cada diapositiva. Ideal para compartir presentaciones de forma universal.</p>
 
-        <h3>¿Cómo funciona?</h3>
-        <ul>
-            <li>Sube tu archivo PowerPoint (.ppt o .pptx).</li>
-            <li>La herramienta convierte cada diapositiva a una página del PDF.</li>
-            <li>Descarga tu presentación en formato PDF.</li>
-        </ul>
-
-        <h3>¿Por qué usar esta herramienta?</h3>
-        <p>Convertir PowerPoint a PDF garantiza que tu presentación se verá exactamente igual en cualquier dispositivo, sin problemas de fuentes, compatibilidad ni versiones de software.</p>
-
-        <h3>Seguridad y privacidad</h3>
-        <p>La conversión se realiza en servidores europeos mediante una conexión segura. Tus presentaciones se eliminan automáticamente en menos de 10 minutos y no se comparten con terceros.</p>
-
-        <h3>Preguntas frecuentes</h3>
-        <details>
-            <summary>¿Se conservan las animaciones?</summary>
-            <p>Las animaciones no se transfieren al PDF, pero cada diapositiva se convierte en una página estática con todo el contenido visible.</p>
-        </details>
-        <details>
-            <summary>¿Puedo convertir presentaciones con notas del presentador?</summary>
-            <p>Actualmente se convierten solo las diapositivas visibles. Las notas del presentador no se incluyen.</p>
-        </details>
-    </div>
-
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/pdf-a-pptx/">PDF a PowerPoint</a></li>
-            <li><a href="/word-a-pdf/">Word a PDF</a></li>
-            <li><a href="/excel-a-pdf/">Excel a PDF</a></li>
-            <li><a href="/comprimir-pdf/">Comprimir PDF</a></li>
-            <li><a href="/pdf-a-jpg/">PDF a JPG</a></li>
-        </ul>
-    </div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -418,107 +381,51 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona PowerPoint a PDF?</h2>
-  <p>Usar PowerPoint a PDF en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Carga la presentación</h3>
-          <p>Sube tu archivo .pptx o .ppt de Microsoft PowerPoint o el .odp de LibreOffice Impress. La herramienta acepta presentaciones de cualquier tamaño.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Conversión de diapositivas</h3>
-          <p>Cada diapositiva de la presentación se convierte en una página del PDF, manteniendo el diseño, las fuentes, los elementos estáticos y los gráficos.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga y comparte</h3>
-          <p>El PDF resultante es perfecto para distribuir como material de referencia, publicar en la web o enviar a participantes que no tienen PowerPoint.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para convertir PowerPoint a PDF">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube la presentación</h3><p>Archivos .pptx o .ppt de hasta 50 MB.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Espera la conversión</h3><p>Suele tardar unos segundos; las presentaciones con muchas imágenes o vídeos tardan más.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>Cada diapositiva es una página del PDF, con sus proporciones originales.</p></div></div>
+    </div>
+    <p>La presentación se sube a nuestro servidor en España y se convierte con LibreOffice Impress. El archivo se elimina en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de PowerPoint a PDF es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Distribuir material de ponencias y conferencias</strong>
-        <span>Comparte las diapositivas con los asistentes en PDF. Podrán leerlas, anotarlas e imprimirlas sin necesitar PowerPoint y el diseño se mantendrá intacto.</span>
-      </div>
-      <div class="use-case">
-        <strong>Publicar presentaciones en la web</strong>
-        <span>Un PDF es mucho más fácil de incrustar en un sitio web o compartir por email que un archivo PPTX. El tamaño también suele ser considerablemente menor.</span>
-      </div>
-      <div class="use-case">
-        <strong>Archivar presentaciones corporativas</strong>
-        <span>Las presentaciones de empresa deben archivarse en un formato duradero. El PDF garantiza que podrán verse correctamente en el futuro.</span>
-      </div>
-      <div class="use-case">
-        <strong>Crear documentos de lectura a partir de presentaciones</strong>
-        <span>Convierte presentaciones con notas del ponente a PDF para que sirvan como documento de referencia o guía de estudio.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Material de una ponencia o una clase</strong><span>Repartir las diapositivas a los asistentes para que las lean o las impriman sin PowerPoint.</span></div>
+      <div class="use-case"><strong>Enviar una propuesta comercial</strong><span>Mandar la presentación de forma que el cliente no pueda modificarla por error y la vea igual en el móvil.</span></div>
+      <div class="use-case"><strong>Archivar la versión definitiva</strong><span>Guardar cómo quedó la presentación que se expuso.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre PowerPoint a PDF</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Se pierden las animaciones al convertir a PDF?</h3>
-        <p>El PDF es un formato estático, por lo que las animaciones y transiciones entre diapositivas no se mantienen. Cada diapositiva aparece en su estado final, tal como se vería al finalizar la animación.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Las fuentes personalizadas se conservan?</h3>
-        <p>Las fuentes se conservan si están instaladas en el sistema o incrustadas en el archivo PPTX. Si la presentación usa una fuente poco común no instalada en el servidor, se sustituye por una fuente similar.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo convertir solo algunas diapositivas?</h3>
-        <p>De momento la conversión incluye todas las diapositivas del archivo. Si necesitas solo algunas, primero elimina las diapositivas no deseadas en PowerPoint o usa la herramienta de eliminar páginas del PDF resultante.</p>
-      </div>
-  </div>
-</section>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Animaciones y transiciones:</strong> no existen en un PDF; cada diapositiva aparece en su estado final.</li>
+      <li><strong>Vídeo y audio incrustados</strong> no se reproducen en el PDF.</li>
+      <li><strong>Fuentes:</strong> si la presentación usa fuentes que no están instaladas en el servidor y no van incrustadas en el archivo, se sustituyen por otras parecidas y algún texto puede moverse.</li>
+      <li>No incluye las notas del presentador y convierte todas las diapositivas; para quitar alguna, usa después <a href="/eliminar-paginas/">Eliminar páginas</a>.</li>
+      <li>Algunos efectos recientes de PowerPoint (ciertos degradados, SmartArt o gráficos 3D) pueden verse ligeramente distintos al convertirse con LibreOffice.</li>
+    </ul>
+    <!-- TODO(contenido): probar con presentaciones reales (plantillas corporativas, SmartArt, fuentes de Google) y documentar diferencias concretas. -->
+
+    <h2>Preguntas frecuentes sobre PowerPoint a PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Se mantienen las animaciones?</h3><p>No. El PDF es estático: cada diapositiva aparece como queda al terminar sus animaciones.</p></div>
+      <div class="faq-item"><h3>¿Se conservan las fuentes?</h3><p>Sí, si están incrustadas en el archivo o instaladas en el servidor. Si no, se sustituyen por una fuente similar.</p></div>
+      <div class="faq-item"><h3>¿Se incluyen las notas del presentador?</h3><p>No. Solo se convierten las diapositivas.</p></div>
+      <div class="faq-item"><h3>¿Funciona con archivos .ppt antiguos?</h3><p>Sí. Acepta .ppt y .pptx.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con mi presentación?</h3><p>Se convierte en nuestro servidor en España y se elimina en un máximo de 10 minutos.</p></div>
+    </div>
+
+    <h2>Otras herramientas PDF</h2>
+    <nav class="related-tools-nav">
+      <a href="/word-a-pdf/">Word a PDF</a>
+      <a href="/excel-a-pdf/">Excel a PDF</a>
+      <a href="/comprimir-pdf/">Comprimir PDF</a>
+      <a href="/pdf-a-jpg/">PDF a JPG</a>
+    </nav>
+  </section>
 </main>
 
-<section class="seo-text" style="max-width:800px;margin:48px auto 0;padding:40px 24px 0;border-top:1px solid #E5E7EB">
-    <div style="font-size:14px;color:#6B7280;line-height:1.75">
-        <p>Convierte presentaciones PowerPoint (PPTX, PPT) a PDF manteniendo el diseño, las animaciones estáticas, las imágenes y el texto de cada diapositiva.</p>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Ventajas de convertir PowerPoint a PDF</h2>
-        <p>Compartir una presentación como PDF tiene varias ventajas importantes sobre el archivo .pptx original:</p>
-        <ul style="font-size:14px;color:#6B7280;line-height:1.75;padding-left:20px;margin-bottom:16px">
-            <li><strong>Compatibilidad universal:</strong> Cualquier dispositivo puede abrir un PDF sin necesitar PowerPoint.</li>
-            <li><strong>Tamaño reducido:</strong> Los PDFs suelen ser más pequeños que los archivos PPTX originales.</li>
-            <li><strong>Protección del diseño:</strong> El receptor no puede modificar el contenido accidentalmente.</li>
-            <li><strong>Impresión fácil:</strong> Los PDFs se imprimen con fidelidad exacta al diseño original.</li>
-        </ul>
-
-        <h2 style="font-size:18px;font-weight:600;color:#374151;margin:28px 0 12px">Preguntas frecuentes</h2>
-        <p><strong>¿Las animaciones se mantienen?</strong><br>No. Las animaciones y transiciones son interactivas y no se pueden representar en un PDF estático. Cada diapositiva aparece en su estado final.</p>
-        <p><strong>¿Funciona con archivos .ppt (PowerPoint antiguo)?</strong><br>Sí. La herramienta acepta tanto .ppt como .pptx.</p>
-        <p><strong>¿Cada diapositiva ocupa una página del PDF?</strong><br>Sí. Cada diapositiva se convierte en una página del PDF resultante, manteniendo las proporciones originales.</p>
-
-    
-        <h3>¿Qué se incluye en la conversión?</h3>
-        <p>La conversión incluye el diseño completo de cada diapositiva: texto con su formato, imágenes, gráficos, tablas y el fondo o plantilla de diseño. Cada diapositiva genera una página del PDF con las mismas proporciones que la presentación original (habitualmente 16:9 o 4:3).</p>
-
-        <h3>¿Las animaciones y transiciones se mantienen?</h3>
-        <p>No. Las animaciones y transiciones son elementos interactivos que no tienen representación en un documento PDF estático. Cada diapositiva aparece en su estado final, como se vería después de que todas las animaciones han terminado.</p>
-
-        <h3>Casos de uso habituales</h3>
-        <ul>
-            <li>Compartir presentaciones con personas que no tienen PowerPoint</li>
-            <li>Proteger el diseño de una presentación para que no sea modificada</li>
-            <li>Adjuntar presentaciones en emails con límite de tamaño</li>
-            <li>Imprimir presentaciones en papel con formato fiel al diseño</li>
-            <li>Archivar versiones definitivas de presentaciones corporativas</li>
-        </ul>
-</div>
-    </section>
 <footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
 <script src="/js/convert.js" defer></script>
 <script>

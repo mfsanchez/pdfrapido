@@ -148,42 +148,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Cómo proteger un PDF gratis online?",
+          "name": "¿Qué cifrado se aplica?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDFRápido te permite proteger archivos PDF con contraseña sin instalar nada ni crear una cuenta. El cifrado se aplica en servidores europeos y el archivo se elimina automáticamente en menos de 10 minutos."
+            "text": "AES de 256 bits, mediante qpdf."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Es seguro proteger PDFs con PDFRápido?",
+          "name": "¿Puedo permitir que lo lean pero no lo impriman?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. El cifrado AES-256 se aplica con qpdf en servidores europeos mediante conexión segura y el archivo se elimina automáticamente en menos de 10 minutos. No almacenamos ni compartimos tus documentos."
+            "text": "No. La herramienta pone una única contraseña para abrir el documento; no configura permisos de impresión, copia o edición."
           }
         },
         {
           "@type": "Question",
-          "name": "¿PDFRápido tiene límite de archivos o tamaño?",
+          "name": "¿Se modifica el contenido del PDF?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PDFRápido es gratuito y sin tope de tareas: puedes procesar tantos archivos como necesites, sin registro ni marcas de agua. El único límite es el tamaño de cada archivo, hasta 50 MB."
+            "text": "No. Solo se añade el cifrado; texto, imágenes y formato quedan igual."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Necesito registrarme para usar Proteger PDF?",
+          "name": "¿Qué ocurre si olvido la contraseña?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente."
+            "text": "No hay forma de recuperarla desde PDFRápido. Guárdala en un lugar seguro antes de borrar el original."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Funciona Proteger PDF en móvil y tablet?",
+          "name": "¿Qué pasa con mi archivo y mi contraseña?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación."
+            "text": "Se procesan en nuestro servidor en España solo para cifrar el PDF y se eliminan en un máximo de 10 minutos."
           }
         }
       ]
@@ -200,25 +200,26 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Sube el PDF que quieres proteger",
-          "text": "Carga el documento que necesitas asegurar. La herramienta acepta PDFs de cualquier tamaño y sin necesidad de registro."
+          "name": "Sube el PDF",
+          "text": "Hasta 50 MB."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Establece la contraseña",
-          "text": "Introduce la contraseña de apertura que quieres asignar. Puedes añadir también una contraseña de propietario para restringir la impresión, copia de texto o edición del documento."
+          "name": "Escribe la contraseña dos veces",
+          "text": "Mínimo 4 caracteres, aunque conviene usar 12 o más. La repetición evita erratas."
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Descarga el PDF protegido",
-          "text": "Obtén el PDF cifrado con encriptación de 128 o 256 bits. Solo quien conozca la contraseña podrá abrirlo."
+          "text": "A partir de ahora, pedirá la contraseña para abrirse."
         }
       ]
     }
   ]
 }
+
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -247,6 +248,7 @@
     "query-input": "required name=search_term_string"
   }
 }
+
 </script>
 <script type="application/ld+json">
 {
@@ -265,6 +267,7 @@
     "url": "/sobre-mf-sanchez/"
   }
 }
+
 </script>
 <style>
 .answer-first{font-size:17px;line-height:1.7;color:var(--gray-700);margin:16px 0 20px;max-width:700px;margin-left:auto;margin-right:auto}
@@ -378,39 +381,7 @@
         </div>
     </div>
 
-    <div class="seo-content">
-        <h2>Cómo proteger un PDF con contraseña online</h2>
-        <p>Añade una contraseña de seguridad a cualquier archivo PDF de forma gratuita. Una vez protegido, el documento solo se podrá abrir introduciendo la contraseña correcta.</p>
-        <p>El cifrado AES-256 se aplica mediante qpdf en el servidor. El archivo se elimina automáticamente tras la descarga.</p>
-    </div>
 
-    <div class="related-tools">
-        <h3>Herramientas relacionadas</h3>
-        <ul>
-            <li><a href="/desbloquear-pdf/">Desbloquear PDF</a></li>
-            <li><a href="/firmar-pdf/">Firmar PDF</a></li>
-            <li><a href="/marca-agua/">Marca de agua</a></li>
-            <li><a href="/redactar-pdf/">Redactar PDF</a></li>
-            <li><a href="/pdf-a/">PDF a PDF/A</a></li>
-        </ul>
-    
-        <h3>Tipos de protección disponibles</h3>
-        <p>Existen dos tipos de contraseña en un PDF: la contraseña de apertura (el destinatario necesita introducirla para ver el documento) y la contraseña de permisos (restringe acciones como imprimir, copiar texto o editar sin contraseña, aunque el documento puede abrirse sin ella).</p>
-
-        <h3>¿Qué tan segura es la protección de un PDF?</h3>
-        <p>PDFRápido usa cifrado AES de 256 bits, el mismo estándar que usan los bancos y gobiernos. Con una contraseña robusta (más de 12 caracteres combinando letras, números y símbolos), un PDF protegido es prácticamente imposible de forzar.</p>
-
-        <h3>Consejos para elegir una buena contraseña</h3>
-        <ul>
-            <li>Usa al menos 12 caracteres</li>
-            <li>Combina mayúsculas, minúsculas, números y símbolos</li>
-            <li>Evita palabras del diccionario, fechas de nacimiento o nombres</li>
-            <li>Guarda la contraseña en un gestor de contraseñas — si la olvidas, no hay forma de recuperar el acceso al PDF</li>
-        </ul>
-
-        <h3>¿Se puede proteger un PDF ya existente sin modificar el contenido?</h3>
-        <p>Sí. La herramienta añade la protección al PDF existente sin modificar su contenido, formato ni estructura. El resultado es idéntico al original pero con la contraseña añadida.</p>
-</div>
 
 <style>
 .content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
@@ -433,117 +404,48 @@
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
 </style>
-<section class="content-seo" aria-label="Guía y preguntas frecuentes">
-  <h2>¿Cómo funciona Proteger PDF con contraseña?</h2>
-  <p>Usar Proteger PDF con contraseña en PDFRápido es un proceso sencillo que no requiere instalación ni registro. Sigue estos tres pasos:</p>
-  <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Sube el PDF que quieres proteger</h3>
-          <p>Carga el documento que necesitas asegurar. La herramienta acepta PDFs de cualquier tamaño y sin necesidad de registro.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Establece la contraseña</h3>
-          <p>Introduce la contraseña de apertura que quieres asignar. Puedes añadir también una contraseña de propietario para restringir la impresión, copia de texto o edición del documento.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Descarga el PDF protegido</h3>
-          <p>Obtén el PDF cifrado con encriptación de 128 o 256 bits. Solo quien conozca la contraseña podrá abrirlo.</p>
-        </div>
-      </div>
-  </div>
+  <section class="content-seo" aria-label="Guía para proteger un PDF con contraseña">
+    <h2>Cómo funciona</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Hasta 50 MB.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Escribe la contraseña dos veces</h3><p>Mínimo 4 caracteres, aunque conviene usar 12 o más. La repetición evita erratas.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF protegido</h3><p>A partir de ahora, pedirá la contraseña para abrirse.</p></div></div>
+    </div>
+    <p>El archivo se sube a nuestro servidor en España, donde qpdf lo cifra con AES de 256 bits sin tocar su contenido. La contraseña y el archivo se usan solo para esta operación y se eliminan en un máximo de 10 minutos.</p>
 
-  <h2>¿Cuándo usar esta herramienta?</h2>
-  <p>La herramienta de Proteger PDF con contraseña es útil en múltiples situaciones del día a día personal y profesional:</p>
-  <div class="use-cases">
-      <div class="use-case">
-        <strong>Proteger contratos y documentos legales confidenciales</strong>
-        <span>Antes de enviar un contrato por correo electrónico, protégelo con contraseña y comunica la clave al destinatario por otro canal para garantizar que solo él pueda acceder.</span>
-      </div>
-      <div class="use-case">
-        <strong>Asegurar información personal sensible</strong>
-        <span>Documentos con datos médicos, financieros o personales deben protegerse antes de almacenarse en la nube o enviarse a terceros para evitar accesos no autorizados.</span>
-      </div>
-      <div class="use-case">
-        <strong>Controlar quién puede imprimir o copiar el PDF</strong>
-        <span>La contraseña de propietario permite enviar un PDF que el destinatario puede leer pero no imprimir ni copiar, protegiendo la propiedad intelectual y el contenido exclusivo.</span>
-      </div>
-      <div class="use-case">
-        <strong>Cumplir con normativas de protección de datos</strong>
-        <span>El RGPD exige proteger adecuadamente los datos personales en tránsito. Cifrar los PDFs que contienen datos personales es una medida de seguridad recomendada.</span>
-      </div>
-  </div>
+    <h2>Para qué sirve: situaciones reales</h2>
+    <div class="use-cases">
+      <div class="use-case"><strong>Enviar un contrato o una nómina por email</strong><span>Cifra el PDF y comunica la contraseña por otro canal (una llamada, un mensaje), para que solo el destinatario pueda abrirlo.</span></div>
+      <div class="use-case"><strong>Guardar documentos personales en la nube</strong><span>Informes médicos, declaraciones o escrituras que no quieres que se lean si alguien accede a tu cuenta.</span></div>
+      <div class="use-case"><strong>Datos personales de terceros</strong><span>Cifrar los PDF con datos de clientes o empleados es una medida de seguridad razonable al enviarlos.</span></div>
+    </div>
 
-  <h2>Preguntas frecuentes sobre Proteger PDF con contraseña</h2>
-  <div class="faq">
-      <div class="faq-item">
-        <h3>¿Qué nivel de cifrado se aplica a la contraseña?</h3>
-        <p>La herramienta aplica cifrado AES de 128 o 256 bits, el estándar de la industria para la protección de documentos PDF. Es el mismo nivel de seguridad que usan bancos y empresas para proteger información sensible.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Puedo establecer permisos diferentes para distintos usuarios?</h3>
-        <p>El estándar PDF permite dos contraseñas: una de apertura para leer el documento y una de propietario para modificar los permisos. Con dos contraseñas puedes controlar el acceso de lectura y el de edición por separado.</p>
-      </div>
-      <div class="faq-item">
-        <h3>¿Qué ocurre si olvido la contraseña?</h3>
-        <p>Por razones de seguridad, es imposible recuperar la contraseña una vez establecida sin herramientas especializadas de recuperación. Guarda siempre la contraseña en un gestor de contraseñas seguro.</p>
-      </div>
-  </div>
-</section>
-</main>
+    <h2>Limitaciones</h2>
+    <ul>
+      <li><strong>Una sola contraseña.</strong> Se usa para abrir el documento y como contraseña de propietario; no se pueden definir permisos por separado (por ejemplo, permitir leer pero no imprimir).</li>
+      <li><strong>No hay recuperación.</strong> Si olvidas la contraseña, ni nosotros ni la herramienta podemos abrir el PDF. Guárdala en un gestor de contraseñas.</li>
+      <li>La protección depende de la contraseña: una clave corta o de diccionario se puede adivinar.</li>
+    </ul>
 
-    <h2>¿Cómo funciona?</h2>
-    <ol>
-      <li><strong>Sube tu archivo</strong> - Arrastra o selecciona el PDF que quieres proteger.</li>
-      <li><strong>Añade contraseña</strong> - Introduce la contraseña que deseas usar para proteger el archivo.</li>
-      <li><strong>Descarga</strong> - Guarda tu PDF cifrado. Ahora requerirá la contraseña para abrirse.</li>
-    </ol>
-    <h2>¿Por qué elegir PDFRápido?</h2>
-    <table class="comparison">
-      <thead><tr><th>Característica</th><th>PDFRápido</th><th>iLovePDF</th><th>Smallpdf</th></tr></thead>
-      <tbody>
-        <tr><td>Gratuito</td><td>✅ Sí</td><td>⚠️ Limitado</td><td>⚠️ Limitado</td></tr>
-        <tr><td>Sin registro</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
-        <tr><td>Cifrado AES-256 + borrado &lt;10 min</td><td>✅ Sí</td><td>❌ No</td><td>❌ No</td></tr>
-        <tr><td>Sin tope de tareas</td><td>✅ Sí</td><td>❌ Tope diario</td><td>❌ 2/día</td></tr>
-      </tbody>
-    </table>
-    <section class="faq-section">
-      <h2>Preguntas frecuentes</h2>
-    <details>
-      <summary>¿Cómo proteger un PDF gratis online?</summary>
-      <p>PDFRápido te permite proteger archivos PDF con contraseña sin instalar nada ni crear una cuenta. El cifrado se aplica en servidores europeos y el archivo se elimina automáticamente en menos de 10 minutos.</p>
-    </details>
-    <details>
-      <summary>¿Es seguro proteger PDFs con PDFRápido?</summary>
-      <p>Sí. El cifrado AES-256 se aplica con qpdf en servidores europeos mediante conexión segura y el archivo se elimina automáticamente en menos de 10 minutos. No almacenamos ni compartimos tus documentos.</p>
-    </details>
-    <details>
-      <summary>¿PDFRápido tiene límite de archivos o tamaño?</summary>
-      <p>PDFRápido es gratuito y sin tope de tareas: puedes procesar tantos archivos como necesites, sin registro ni marcas de agua. El único límite es el tamaño de cada archivo, hasta 50 MB.</p>
-    </details>
-    <details>
-      <summary>¿Necesito registrarme para usar Proteger PDF?</summary>
-      <p>No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.</p>
-    </details>
-    <details>
-      <summary>¿Funciona Proteger PDF en móvil y tablet?</summary>
-      <p>Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.</p>
-    </details>
-    </section>
+    <h2>Preguntas frecuentes sobre proteger PDF</h2>
+    <div class="faq">
+      <div class="faq-item"><h3>¿Qué cifrado se aplica?</h3><p>AES de 256 bits, mediante qpdf.</p></div>
+      <div class="faq-item"><h3>¿Puedo permitir que lo lean pero no lo impriman?</h3><p>No. La herramienta pone una única contraseña para abrir el documento; no configura permisos de impresión, copia o edición.</p></div>
+      <div class="faq-item"><h3>¿Se modifica el contenido del PDF?</h3><p>No. Solo se añade el cifrado; texto, imágenes y formato quedan igual.</p></div>
+      <div class="faq-item"><h3>¿Qué ocurre si olvido la contraseña?</h3><p>No hay forma de recuperarla desde PDFRápido. Guárdala en un lugar seguro antes de borrar el original.</p></div>
+      <div class="faq-item"><h3>¿Qué pasa con mi archivo y mi contraseña?</h3><p>Se procesan en nuestro servidor en España solo para cifrar el PDF y se eliminan en un máximo de 10 minutos.</p></div>
+    </div>
+
     <h2>Otras herramientas PDF</h2>
     <nav class="related-tools-nav">
-    <a href="/desbloquear-pdf/">Desbloquear PDF</a>
-    <a href="/firmar-pdf/">Firmar PDF</a>
-    <a href="/comprimir-pdf/">Comprimir PDF</a>
+      <a href="/desbloquear-pdf/">Desbloquear PDF</a>
+      <a href="/redactar-pdf/">Redactar PDF</a>
+      <a href="/marca-agua/">Marca de agua</a>
+      <a href="/firmar-pdf/">Firmar PDF</a>
     </nav>
+    <p>Guía relacionada: <a href="/blog/como-proteger-pdf-con-contrasena/">cómo proteger un PDF con contraseña</a>.</p>
+  </section>
+</main>
     <footer class="author-byline">
       <p>Por <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
     </footer>
