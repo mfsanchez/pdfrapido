@@ -141,7 +141,7 @@ const TOOLS = [
       { q: '¿Necesito registrarme para usar PDF a Word?', a: 'No. PDFRápido no requiere registro ni cuenta de usuario. Abres la herramienta, subes tu archivo y descargas el resultado inmediatamente.' },
       { q: '¿Funciona PDF a Word en móvil y tablet?', a: 'Sí, PDFRápido funciona en cualquier dispositivo con navegador moderno: PC, Mac, tablet y móvil. No necesitas instalar ninguna aplicación.' }
     ],
-    related: [{name:'Word a PDF',slug:'word-a-pdf'},{name:'PDF a Excel',slug:'pdf-a-excel'},{name:'PDF a PowerPoint',slug:'pdf-a-pptx'}]
+    related: [{name:'Word a PDF',slug:'word-a-pdf'},{name:'PDF a CSV',slug:'pdf-a-csv'},{name:'PDF a PNG',slug:'pdf-a-png'}]
   },
   {
     slug: 'proteger-pdf',

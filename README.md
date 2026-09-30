@@ -1,11 +1,11 @@
-# PDFRápido — 50 Herramientas PDF Online Gratis
+# PDFRápido — 48 Herramientas PDF Online Gratis
 
 [![Website](https://img.shields.io/badge/website-pdfrapido.eu-4F46E5?style=flat-square)](https://pdfrapido.eu)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
-[![Tools](https://img.shields.io/badge/tools-50-orange?style=flat-square)](https://pdfrapido.eu)
+[![Tools](https://img.shields.io/badge/tools-48-orange?style=flat-square)](https://pdfrapido.eu)
 [![Language](https://img.shields.io/badge/language-español-red?style=flat-square)](https://pdfrapido.eu)
 
-**PDFRápido** es la plataforma de herramientas PDF online más completa en español: **50 herramientas gratuitas**, sin registro, sin instalación y, en 23 de ellas, con procesamiento en tu propio navegador.
+**PDFRápido** es la plataforma de herramientas PDF online más completa en español: **48 herramientas gratuitas**, sin registro, sin instalación y, en 23 de ellas, con procesamiento en tu propio navegador.
 
 🚀 **[Usar PDFRápido ahora](https://pdfrapido.eu)** · 📖 **[Guía Completa](https://pdfrapido.eu/guia-completa-pdf/)** · 📝 **[Blog](https://pdfrapido.eu/blog/)**
 
@@ -19,7 +19,7 @@ Hoy es una plataforma completa que permite **comprimir, unir, dividir, convertir
 
 ### Diferencia clave: Privacidad por diseño
 
-23 de las 50 herramientas procesan los archivos **directamente en tu navegador** (JavaScript con pdf-lib y PDF.js). Las demás usan nuestro servidor:
+23 de las 48 herramientas procesan los archivos **directamente en tu navegador** (JavaScript con pdf-lib y PDF.js). Las demás usan nuestro servidor:
 
 - ✅ En las herramientas locales, tus PDFs **no salen de tu dispositivo**
 - ✅ Cuando usamos servidor, los archivos se **eliminan automáticamente en un máximo de 10 minutos**; las herramientas de IA envían el texto a Groq (EE. UU.)
@@ -35,7 +35,7 @@ Hoy es una plataforma completa que permite **comprimir, unir, dividir, convertir
 | Gratuito | ✅ Sin límite de usos | ⚠️ Limitado | ⚠️ Limitado | ⚠️ Limitado |
 | Sin registro | ✅ Sí | ❌ No | ❌ No | ❌ No |
 | Procesamiento local | ✅ 23 herramientas | ❌ Servidor | ❌ Servidor | ❌ Servidor |
-| Herramientas | **50** | 20+ | 20+ | 15+ |
+| Herramientas | **48** | 20+ | 20+ | 15+ |
 | Idioma español | ✅ Nativo | ⚠️ Parcial | ⚠️ Parcial | ✅ Sí |
 
 ---
@@ -58,8 +58,8 @@ Hoy es una plataforma completa que permite **comprimir, unir, dividir, convertir
 
 ### 🔄 Convertir PDF
 - [Word ↔ PDF](https://pdfrapido.eu/word-a-pdf/) · [PDF ↔ Word](https://pdfrapido.eu/pdf-a-word/)
-- [Excel ↔ PDF](https://pdfrapido.eu/excel-a-pdf/) · [PDF ↔ Excel](https://pdfrapido.eu/pdf-a-excel/)
-- [PPT ↔ PDF](https://pdfrapido.eu/pptx-a-pdf/) · [PDF ↔ PPT](https://pdfrapido.eu/pdf-a-pptx/)
+- [Excel a PDF](https://pdfrapido.eu/excel-a-pdf/) · [PDF a CSV](https://pdfrapido.eu/pdf-a-csv/)
+- [PowerPoint a PDF](https://pdfrapido.eu/pptx-a-pdf/)
 - [Imagen ↔ PDF](https://pdfrapido.eu/jpg-a-pdf/) · [PDF ↔ Imagen](https://pdfrapido.eu/pdf-a-jpg/)
 - [Texto ↔ PDF](https://pdfrapido.eu/texto-a-pdf/) · [HTML → PDF](https://pdfrapido.eu/html-a-pdf/)
 
@@ -99,7 +99,7 @@ Hoy es una plataforma completa que permite **comprimir, unir, dividir, convertir
 PDFRápido implementa las mejores prácticas de SEO técnico y AEO (Answer Engine Optimization):
 
 - ✅ **Schema.org completo:** WebApplication, Article, FAQPage, BreadcrumbList, Organization, Person, Dataset
-- ✅ **Sitemap indexado:** 50 herramientas + 43 artículos de blog + 19 páginas estructurales
+- ✅ **Sitemap indexado:** 48 herramientas + 43 artículos de blog + 19 páginas estructurales
 - ✅ **Pillar page:** [/guia-completa-pdf/](https://pdfrapido.eu/guia-completa-pdf/)
 - ✅ **Content clusters:** 6 categorías temáticas interconectadas
 - ✅ **robots.txt optimizado:** Bloquea crawlers de entrenamiento IA, permite buscadores y AEO

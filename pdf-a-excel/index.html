@@ -3,476 +3,295 @@
 <head>
     <!-- Google Consent Mode v2 — por defecto denegado (RGPD); /js/cookies-consent.js actualiza el consentimiento al aceptar -->
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});</script>
-    <!-- Google AdSense (código base — sin unidades de anuncio todavía) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7923775430516782" crossorigin="anonymous"></script>
 
-    <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="PDF a Excel, convertir PDF a Excel, extraer tablas PDF, PDF a XLSX online gratis, PDF a hoja de cálculo">
-    <meta name="description" content="Convierte PDF a Excel gratis y sin registro. Extrae tablas y datos de tu PDF a una hoja de cálculo XLSX editable. Sin instalar nada, resultado en segundos | PDFRápido">
-    <meta name="author" content="MF Sanchez - PDFRápido">
-    <title>PDF a Excel Online Gratis — Extrae Tablas a XLSX | PDFRápido</title>
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"></noscript>    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>        <link rel="stylesheet" href="/css/styles.css?v=15">
-<style>
-:root{--primary:#E8453C;--primary-light:#FFF0EF;--secondary:#1B2A4A;--accent:#F5913E;--accent-light:#FFF3E0;--accent-dark:#D97A2B;--g50:#F9FAFB;--g200:#E5E7EB;--g300:#D1D5DB;--g400:#9CA3AF;--g500:#6B7280;--g700:#374151;--g800:#1F2937;--r:12px;--rl:16px;--rxl:24px;--sl:0 10px 25px -3px rgba(0,0,0,.08)}
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--g800);background:#fff;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
-        nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--g200)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--secondary)}.logo-icon{width:36px;height:36px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center}.logo-text{font-size:20px;font-weight:700;letter-spacing:-.5px}.logo-text span{color:var(--primary)}.nav-back{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--g500);font-size:14px;font-weight:500}.nav-back:hover{color:var(--primary)}
-        main{flex:1;padding:80px 24px 60px;max-width:700px;margin:0 auto;width:100%}
-        .th{text-align:center;margin-bottom:36px}.th .ib{width:64px;height:64px;border-radius:16px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}.th h1{font-size:32px;font-weight:700;color:var(--secondary);letter-spacing:-.8px;margin-bottom:8px}.th p{font-size:16px;color:var(--g500)}
-        .uz{border:2px dashed var(--g300);border-radius:var(--rxl);padding:60px 40px;text-align:center;cursor:pointer;transition:all .3s;position:relative;background:var(--g50)}.uz:hover,.uz.dragover{border-color:var(--accent)}.ui{width:72px;height:72px;border-radius:20px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:transform .3s}.uz:hover .ui{transform:translateY(-4px)}.uz h3{font-size:18px;font-weight:600;color:var(--secondary);margin-bottom:8px}.uz h3 span{color:var(--accent)}.uz p{font-size:14px;color:var(--g400)}.uz input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
-        .step{display:none;animation:fadeInUp .4s ease-out}.step.active{display:block}
-        .spinner-wrap{text-align:center;padding:50px 0}.spinner{width:48px;height:48px;border:4px solid var(--g200);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 20px}@keyframes spin{to{transform:rotate(360deg)}}.spinner-wrap p{font-size:15px;color:var(--g500);font-weight:500}.spinner-wrap .sub{font-size:13px;color:var(--g400);margin-top:6px}.pbw{width:100%;max-width:300px;height:6px;background:var(--g200);border-radius:3px;margin:14px auto 0;overflow:hidden}.pbf{height:100%;background:var(--accent);border-radius:3px;width:0%;transition:width .6s ease}
-        .ra{display:none;animation:fadeInUp .5s ease-out}.ra.active{display:block}.rc{background:#fff;border:1px solid var(--g200);border-radius:var(--rxl);padding:36px;text-align:center;box-shadow:var(--sl);position:relative;overflow:hidden}.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),#FFAB40)}.rsi{width:64px;height:64px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;animation:si .4s cubic-bezier(.34,1.56,.64,1)}@keyframes si{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}.rc h3{font-size:22px;font-weight:700;color:var(--secondary);margin-bottom:8px}.rc .desc{font-size:14px;color:var(--g400);margin-bottom:24px}.rac{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-        .bd{padding:14px 32px;border:none;border-radius:var(--r);background:var(--accent);color:#fff;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s}.bd:hover{background:var(--accent-dark);transform:translateY(-1px)}.br{padding:14px 24px;border:1px solid var(--g200);border-radius:var(--r);background:#fff;color:var(--g500);font-family:inherit;font-size:15px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .2s}.br:hover{background:var(--g50)}
-        .error-msg{background:#FFF0EF;border:1px solid #E8453C;border-radius:var(--r);padding:16px;text-align:center;color:#C73830;font-size:14px;margin-bottom:20px;display:none}.error-msg.show{display:block}
-        
-        .seo{max-width:700px;margin:60px auto 0}.seo h2{font-size:24px;font-weight:700;color:var(--secondary);margin-bottom:16px}.seo p{font-size:15px;color:var(--g500);line-height:1.7;margin-bottom:12px}
-        footer{background:var(--secondary);color:#fff;padding:30px 24px;text-align:center;margin-top:auto}footer p{font-size:13px;color:rgba(255,255,255,.4)}footer a{color:rgba(255,255,255,.6);text-decoration:none}
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-        @media(max-width:640px){main{padding:76px 16px 40px}.uz{padding:40px 24px}}
-    
-        /* ── RELATED TOOLS ── */
-        .related-tools {
-            max-width: 700px;
-            margin: 40px auto 0;
-            padding: 28px;
-            background: var(--gray-50);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--gray-200);
-        }
-        .related-tools h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 16px;
-        }
-        .related-tools ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .related-tools ul li a {
-            display: inline-block;
-            padding: 7px 16px;
-            background: #fff;
-            border: 1px solid var(--gray-200);
-            border-radius: 100px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--secondary);
-            text-decoration: none;
-            transition: border-color 0.15s, color 0.15s;
-        }
-        .related-tools ul li a:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-                .seo-content {
-            max-width: 700px;
-            margin: 60px auto 0;
-            padding: 0 4px;
-        }
-        .seo-content h2 {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-        .seo-content h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--gray-700);
-            margin: 28px 0 10px;
-        }
-        .seo-content p {
-            font-size: 15px;
-            color: var(--gray-500);
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .seo-content ul {
-            padding-left: 20px;
-            margin-bottom: 12px;
-        }
-        .seo-content li {
-            font-size: 15px;
-            color: var(--gray-500);
-            line-height: 1.7;
-            margin-bottom: 4px;
-        }
-        .related-tools {
-            max-width: 700px;
-            margin: 40px auto 0;
-            padding: 28px;
-            background: var(--gray-50);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--gray-200);
-        }
-        .related-tools h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 16px;
-        }
-        .related-tools ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .related-tools ul li a {
-            display: inline-block;
-            padding: 7px 16px;
-            background: #fff;
-            border: 1px solid var(--gray-200);
-            border-radius: 100px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--secondary);
-            text-decoration: none;
-            transition: border-color 0.15s, color 0.15s;
-        }
-        .related-tools ul li a:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-                .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
-</style>
+    <title>PDF a Excel (temporalmente no disponible) - PDFRápido</title>
+    <meta name="description" content="La herramienta PDF a Excel de PDFRápido está temporalmente no disponible. Te indicamos qué herramientas usar mientras tanto.">
     <link rel="canonical" href="https://pdfrapido.eu/pdf-a-excel/">
+    <meta name="robots" content="noindex, follow">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "Convertir PDF a Excel Online Gratis",
-      "url": "https://pdfrapido.eu/pdf-a-excel/",
-      "description": "Convierte tablas de PDF a Excel XLSX editable. Extrae datos numéricos y tablas. Gratis.",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
-      "inLanguage": "es",
-      "publisher": {
-        "@type": "Person",
-        "name": "MF Sanchez",
-        "url": "https://mfsanchez.com"
-      }
-    },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "PDFRápido",
+          "name": "Inicio",
           "item": "https://pdfrapido.eu"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Convertir PDF a Excel Online Gratis",
-          "item": "https://pdfrapido.eu/pdf-a-excel/"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Detecta las tablas automáticamente?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Intenta reconstruirlas a partir de la posición del texto; revisa siempre el resultado, sobre todo en tablas complejas."
-          }
+          "name": "Convertir PDF",
+          "item": "https://pdfrapido.eu/categoria/convertir-pdf/"
         },
         {
-          "@type": "Question",
-          "name": "¿Se recuperan las fórmulas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Un PDF solo contiene los valores finales."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Funciona con PDF escaneados?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No directamente: aplica antes OCR a PDF para que tengan texto."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué pasa con mi archivo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Se convierte en nuestro servidor en España y se elimina en un máximo de 10 minutos."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "name": "Cómo usar PDF a Excel",
-      "totalTime": "PT1M",
-      "tool": {
-        "@type": "HowToTool",
-        "name": "PDFRápido Convertir PDF a Excel Online Gratis"
-      },
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Sube el PDF",
-          "text": "Un PDF con tablas y texto seleccionable, de hasta 50 MB."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Espera la conversión",
-          "text": "El documento se convierte en nuestro servidor."
-        },
-        {
-          "@type": "HowToStep",
+          "@type": "ListItem",
           "position": 3,
-          "name": "Descarga el .xlsx",
-          "text": "Ábrelo en Excel, LibreOffice Calc o Google Sheets y revisa las tablas antes de trabajar con ellas."
+          "name": "PDF a Excel (no disponible)"
         }
       ]
     }
   ]
 }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-</script>
-        <meta name="twitter:site" content="@pdfrapido">
-    <meta name="twitter:creator" content="@mfsanchez">
-    <meta property="og:title" content="PDF a Excel Online Gratis — Extrae Tablas a XLSX | PDFRápido">
-    <meta property="og:description" content="Convierte PDF a Excel gratis y sin registro. Extrae tablas y datos de tu PDF a una hoja de cálculo XLSX editable. Sin instalar nada, resultado en segundos.">
-    <meta property="og:url" content="https://pdfrapido.eu/pdf-a-excel/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
-    <meta property="og:site_name" content="PDFRápido">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PDF a Excel Online Gratis — Extrae Tablas a XLSX | PDFRápido">
-    <meta name="twitter:description" content="Convierte PDF a Excel gratis y sin registro. Extrae tablas y datos de tu PDF a una hoja de cálculo XLSX editable. Sin instalar nada, resultado en segundos.">
-    <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
-    <script src="/js/webmcp.js" defer></script>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(150deg, #1a1a1a 0%, #3a0000 60%, #8b0000 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #222;
+        }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "PDFRápido",
-  "url": "https://pdfrapido.eu/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://pdfrapido.eu/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
+        .header {
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding: 20px 24px;
+            text-align: center;
+            color: white;
+        }
+        .header h1 { font-size: clamp(1.3rem, 4vw, 1.8rem); font-weight: 700; margin-bottom: 4px; }
+        .header p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 18px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white; text-decoration: none;
+            border-radius: 50px; font-size: 0.82rem; font-weight: 600;
+        }
 
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "PDFRápido",
-  "url": "https://pdfrapido.eu",
-  "logo": "https://pdfrapido.eu/favicon.svg",
-  "sameAs": [
-    "https://github.com/mfsanchez/pdfrapido",
-    "https://twitter.com/pdfrapido"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "MF Sanchez",
-    "url": "https://mfsanchez.com"
-  }
-}
+        .container {
+            flex: 1; max-width: 1000px; width: 100%;
+            margin: 28px auto; padding: 28px;
+            background: #fff; border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
 
-</script>
+        /* ── ZONA UPLOAD ── */
+        #drop-zone {
+            border: 3px dashed #ddd;
+            border-radius: 12px;
+            padding: 60px 32px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            position: relative;
+        }
+        #drop-zone:hover, #drop-zone.drag-over {
+            border-color: #cc0000;
+            background: #fff5f5;
+        }
+        #drop-zone.drag-over { border-style: solid; }
+
+        #drop-zone .icon { font-size: 3rem; margin-bottom: 14px; display: block; }
+        #drop-zone h2 { font-size: 1.3rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+        #drop-zone p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+
+        #file-input { display: none; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 30px;
+            background: linear-gradient(135deg, #cc0000 0%, #8b0000 100%);
+            color: white; border: none; border-radius: 50px;
+            font-size: 0.95rem; font-weight: 600; cursor: pointer;
+            box-shadow: 0 4px 16px rgba(139,0,0,0.3);
+            text-decoration: none;
+        }
+        .btn:hover { filter: brightness(1.1); }
+        .btn.secondary {
+            background: #f0f0f0; color: #333;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .btn.secondary:hover { background: #e5e5e5; }
+
+        /* ── PROGRESO ── */
+        #progress-section {
+            display: none;
+            text-align: center; padding: 48px 20px;
+        }
+        .spinner {
+            width: 48px; height: 48px;
+            border: 4px solid #eee;
+            border-top-color: #cc0000;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        #progress-label { font-size: 1.1rem; font-weight: 600; color: #111; margin-bottom: 6px; }
+        #progress-sub { font-size: 0.85rem; color: #888; margin-bottom: 20px; }
+
+        .bar-outer {
+            background: #eee; border-radius: 99px;
+            height: 8px; overflow: hidden; max-width: 400px; margin: 0 auto;
+        }
+        .bar-inner {
+            height: 100%; background: linear-gradient(90deg, #cc0000, #8b0000);
+            border-radius: 99px; transition: width 0.3s;
+            width: 0%;
+        }
+
+        /* ── ERROR ── */
+        #error-section {
+            display: none;
+            background: #fff0f0; border: 1.5px solid #fcc;
+            border-radius: 10px; padding: 24px;
+            text-align: center; margin-top: 12px;
+        }
+        #error-section h3 { color: #c00; margin-bottom: 8px; }
+        #error-section p { color: #666; font-size: 0.9rem; margin-bottom: 16px; }
+
+        /* ── EDITOR ── */
+        #editor-section { display: none; }
+
+        #editor-frame {
+            width: 100%; height: 80vh;
+            border: none; border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            display: block;
+        }
+
+        .editor-actions {
+            display: flex; gap: 12px; justify-content: center;
+            flex-wrap: wrap; margin-top: 16px;
+        }
+
+        /* ── HERRAMIENTAS RELACIONADAS ── */
+        .related {
+            max-width: 1000px; width: 100%;
+            margin: 0 auto 28px; padding: 0 28px;
+            color: white;
+        }
+        .related h2 {
+            font-size: 1.05rem; font-weight: 700;
+            margin-bottom: 14px; text-align: center;
+            color: rgba(255,255,255,0.92);
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+        .related-card {
+            display: block;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 10px;
+            padding: 16px 18px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .related-card:hover {
+            background: rgba(255,255,255,0.14);
+            border-color: rgba(255,255,255,0.3);
+        }
+        .related-card strong { display: block; font-size: 0.95rem; margin-bottom: 4px; }
+        .related-card span { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+
+        /* ── CONTENIDO EDITORIAL ── */
+        .editorial {
+            max-width: 1000px; width: 100%;
+            margin: 0 auto 28px; padding: 32px;
+            background: #fff; border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
+        .editorial h2 {
+            font-size: 1.25rem; font-weight: 700; color: #1a1a1a;
+            margin: 32px 0 12px; padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .editorial h2:first-child { margin-top: 0; }
+        .editorial p { font-size: 0.95rem; color: #4b5563; line-height: 1.8; margin-bottom: 12px; }
+        .editorial ul { padding-left: 22px; margin-bottom: 14px; }
+        .editorial li { font-size: 0.95rem; color: #4b5563; line-height: 1.75; margin-bottom: 6px; }
+        .editorial a { color: #cc0000; text-decoration: none; }
+        .editorial a:hover { text-decoration: underline; }
+        .editorial .steps { display: grid; gap: 14px; margin: 18px 0 24px; }
+        .editorial .step { display: flex; gap: 14px; align-items: flex-start; background: #f9fafb; border-radius: 12px; padding: 16px 18px; }
+        .editorial .step-num { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #cc0000; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
+        .editorial .step-body h3 { margin: 0 0 4px; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; }
+        .editorial .step-body p { margin: 0; font-size: 0.88rem; color: #6b7280; line-height: 1.6; }
+        .editorial .faq { display: grid; gap: 12px; margin: 18px 0; }
+        .editorial .faq-item { border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px 18px; }
+        .editorial .faq-item h3 { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin: 0 0 8px; }
+        .editorial .faq-item p { font-size: 0.88rem; color: #6b7280; line-height: 1.7; margin: 0; }
+        @media (max-width: 600px) { .editorial { margin: 0 12px 20px; width: auto; padding: 20px; } }
+
+        footer {
+            text-align: center; padding: 24px;
+            color: rgba(255,255,255,0.4); font-size: 0.8rem;
+        }
+        footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .container { margin: 12px; padding: 18px; }
+            #drop-zone { padding: 40px 16px; }
+            #editor-frame { height: 65vh; }
+            .related { padding: 0 12px; }
+        }
+    </style>
 </head>
 <body>
-<nav id="nav">
-    <div class="nav-inner">
-        <a href="/" class="logo">
-            <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-            <div class="logo-text">PDF<span>Rápido</span></div>
-        </a>
-        <button class="hamburger" aria-label="Menú" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-        <ul class="nav-links">
-            <li><a href="/#herramientas">Herramientas</a></li>
-            <li><a href="/#caracteristicas">Características</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
-        <button class="theme-toggle" aria-label="Activar modo oscuro" aria-pressed="false"><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
-    </div>
-</nav>
-<main>
-<div role="navigation" aria-label="breadcrumb" style="max-width:1140px;margin:0 auto;padding:20px 24px 16px;font-size:13px;color:var(--gray-400)">
-    <ol style="list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-        <li><a href="/" style="color:var(--gray-400);text-decoration:none">Inicio</a></li>
-        <li aria-hidden="true" style="color:var(--gray-300)">›</li>
-        <li style="color:var(--gray-600);font-weight:500">PDF a Excel</li>
-    </ol>
+
+<div class="header">
+    <h1>📄 PDF a Excel</h1>
+    <p>Temporalmente no disponible</p>
+    <a href="/" class="back-btn">← Volver al inicio</a>
 </div>
-<div class="th"><div class="ib"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h1>PDF a Excel — PDFRápido</h1><p>Extrae tablas de tu PDF y conviértelas en una hoja de cálculo Excel.</p></div>
-    <div class="uz" id="uploadZone">
-        <input type="file" accept=".pdf,application/pdf" id="fileInput">
-        <div class="ui"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
-        <h3>Arrastra tu archivo aquí o <span>selecciónalo</span></h3>
-        <p>Archivos PDF con tablas</p>
-    </div>
-    
-    <div class="step" id="stepProgress">
-        <div class="spinner-wrap"><div class="spinner"></div><p id="progressLabel">Convirtiendo archivo...</p><div class="pbw"><div class="pbf" id="progressBar"></div></div><p class="sub">Esto puede tardar unos segundos</p></div>
-    </div>
-    <div class="error-msg" id="errorMsg"></div>
-    <div class="ra" id="resultArea"><div class="rc"><div class="rsi"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>PDF convertido a Excel</h3><p class="desc" id="resultDesc"></p><div class="rac"><button class="bd" id="dlBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar XLSX</button><button class="br" onclick="reset()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button></div></div></div>
 
-    <!-- SEO CONTENT -->
+<div class="container">
 
-
-<style>
-.content-seo{max-width:800px;margin:48px auto 0;padding:0 24px 64px}
-.content-seo h2{font-size:22px;font-weight:700;color:#1B2A4A;margin:40px 0 14px;letter-spacing:-.3px;border-bottom:2px solid #f3f4f6;padding-bottom:10px}
-.content-seo h3{font-size:17px;font-weight:600;color:#374151;margin:20px 0 8px}
-.content-seo p{font-size:15px;color:#4B5563;line-height:1.85;margin-bottom:14px}
-.content-seo ul,.content-seo ol{padding-left:22px;margin-bottom:16px}
-.content-seo li{font-size:15px;color:#4B5563;line-height:1.8;margin-bottom:6px}
-.content-seo .steps{display:grid;gap:16px;margin:20px 0 28px}
-.content-seo .step{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border-radius:12px;padding:18px 20px}
-.content-seo .step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#E8453C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
-.content-seo .step-body h3{margin:0 0 4px;font-size:15px;font-weight:600;color:#1B2A4A}
-.content-seo .step-body p{margin:0;font-size:14px;color:#6B7280;line-height:1.6}
-.content-seo .faq{display:grid;gap:12px;margin:20px 0}
-.content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
-.content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
-.content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
-.content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
-.content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
-.content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
-.content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
-</style>
-  <section class="content-seo" aria-label="Guía para convertir PDF a Excel">
-    <!-- TODO(backend): a 2026-09-30 la conversión PDF→xlsx falla siempre (422): LibreOffice con writer_pdf_import no tiene filtro de exportación a xlsx. Arreglar (p. ej. con pdfplumber/camelot + openpyxl) antes de desplegar este texto. -->
-    <h2>Cómo funciona</h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube el PDF</h3><p>Un PDF con tablas y texto seleccionable, de hasta 50 MB.</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Espera la conversión</h3><p>El documento se convierte en nuestro servidor.</p></div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el .xlsx</h3><p>Ábrelo en Excel, LibreOffice Calc o Google Sheets y revisa las tablas antes de trabajar con ellas.</p></div></div>
-    </div>
-    <p>El archivo se sube a nuestro servidor en España y se convierte con LibreOffice. El archivo se elimina en un máximo de 10 minutos.</p>
-
-    <h2>Para qué sirve: situaciones reales</h2>
-    <div class="use-cases">
-      <div class="use-case"><strong>Extractos y listados</strong><span>Pasar a una hoja de cálculo un listado de movimientos o de productos para filtrarlo y sumarlo.</span></div>
-      <div class="use-case"><strong>Tablas de informes</strong><span>Recuperar los datos de una tabla publicada en PDF para hacer tus propios gráficos.</span></div>
+    <!-- Herramienta desactivada temporalmente (2026-09-30): la conversión fallaba siempre (LibreOffice sin filtro de exportación). La versión anterior está en git: ver historial de pdf-a-excel/index.html -->
+    <div id="drop-zone" role="status">
+        <span class="icon">🛠️</span>
+        <h2>PDF a Excel está temporalmente no disponible</h2>
+        <p>Estamos revisando esta herramienta y ahora mismo no acepta archivos. Mientras tanto, estas herramientas cubren los usos más habituales:</p>
+        <ul style="text-align:left;max-width:520px;margin:16px auto 0;line-height:1.8">
+            <li><a href="/pdf-a-csv/">PDF a CSV</a>: extrae las tablas del PDF a un CSV que se abre directamente en Excel o Google Sheets.</li>
+            <li><a href="/extraer-datos/">Extraer datos con IA</a>: para facturas, formularios o tablas irregulares; descarga el resultado en CSV.</li>
+            <li><a href="/pdf-a-texto/">PDF a Texto</a>: si solo necesitas el contenido, sin estructura de tabla.</li>
+        </ul>
     </div>
 
-    <h2>Limitaciones</h2>
-    <ul>
-      <li><strong>Un PDF no guarda tablas como tales</strong>, solo texto colocado en posiciones. Las tablas sencillas se reconstruyen mejor; las que tienen celdas combinadas, varias líneas por celda o sin bordes necesitarán retoques.</li>
-      <li>No hay fórmulas: el PDF solo contiene los valores.</li>
-      <li><strong>PDF escaneados:</strong> aplica antes <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
-      <li>Si solo necesitas los datos de una tabla simple, <a href="/pdf-a-csv/">PDF a CSV</a> o <a href="/extraer-datos/">Extraer datos</a> pueden darte un resultado más limpio.</li>
-    </ul>
-    <!-- TODO(contenido): cuando el backend funcione, documentar con ejemplos reales cómo se reparten las tablas y el texto en las hojas. -->
+</div>
 
-    <h2>Preguntas frecuentes sobre PDF a Excel</h2>
-    <div class="faq">
-      <div class="faq-item"><h3>¿Detecta las tablas automáticamente?</h3><p>Intenta reconstruirlas a partir de la posición del texto; revisa siempre el resultado, sobre todo en tablas complejas.</p></div>
-      <div class="faq-item"><h3>¿Se recuperan las fórmulas?</h3><p>No. Un PDF solo contiene los valores finales.</p></div>
-      <div class="faq-item"><h3>¿Funciona con PDF escaneados?</h3><p>No directamente: aplica antes OCR a PDF para que tengan texto.</p></div>
-      <div class="faq-item"><h3>¿Qué pasa con mi archivo?</h3><p>Se convierte en nuestro servidor en España y se elimina en un máximo de 10 minutos.</p></div>
+<!-- HERRAMIENTAS RELACIONADAS -->
+<section class="related">
+    <h2>Herramientas relacionadas</h2>
+    <div class="related-grid">
+        <a href="/pdf-a-csv/" class="related-card">
+            <strong>📊 PDF a CSV</strong>
+            <span>Tablas del PDF a CSV, listo para Excel.</span>
+        </a>
+        <a href="/extraer-datos/" class="related-card">
+            <strong>🤖 Extraer datos</strong>
+            <span>Campos de facturas y formularios con IA.</span>
+        </a>
+        <a href="/pdf-a-texto/" class="related-card">
+            <strong>📝 PDF a Texto</strong>
+            <span>Extrae el texto del PDF como .txt.</span>
+        </a>
     </div>
+</section>
 
-    <h2>Otras herramientas PDF</h2>
-    <nav class="related-tools-nav">
-      <a href="/pdf-a-csv/">PDF a CSV</a>
-      <a href="/extraer-datos/">Extraer datos</a>
-      <a href="/excel-a-pdf/">Excel a PDF</a>
-      <a href="/ocr-a-pdf/">OCR a PDF</a>
-    </nav>
-  </section>
-</main>
 
-<footer><p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p></footer>
-<script src="/js/convert.js" defer></script>
-<script>
-const ACTION = 'pdf-to-office';
-const EXTRA_DATA = {"format":"xlsx"};
-let resultBlob = null, resultFilename = '';
+<footer>
+    &copy; 2026 PDFRápido &mdash; <a href="/privacidad/">Privacidad</a> &mdash; <a href="/aviso-legal/">Aviso legal</a> &mdash; <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> &mdash; <a href="/cookies/">Cookies</a> &mdash; <a href="/contacto/">Contacto</a>
+</footer>
 
-const uploadZone = document.getElementById('uploadZone');
-const fileInput = document.getElementById('fileInput');
-
-uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('dragover'); });
-uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('dragover'));
-uploadZone.addEventListener('drop', e => {
-    e.preventDefault(); uploadZone.classList.remove('dragover');
-    if (e.dataTransfer.files[0]) processFile(e.dataTransfer.files[0]);
-});
-fileInput.addEventListener('change', e => { if (e.target.files[0]) processFile(e.target.files[0]); });
-document.getElementById('dlBtn').addEventListener('click', () => {
-    if (resultBlob) downloadBlob(resultBlob, resultFilename);
-});
-
-async function processFile(file) {
-    uploadZone.style.display = 'none';
-    document.getElementById('errorMsg').classList.remove('show');
-    document.getElementById('stepProgress').classList.add('active');
-    document.getElementById('progressLabel').textContent = 'Subiendo y convirtiendo...';
-    document.getElementById('progressBar').style.width = '0%';
-
-    try {
-        const result = await convertFile(file, ACTION, EXTRA_DATA, (pct, label) => {
-            document.getElementById('progressLabel').textContent = label;
-            document.getElementById('progressBar').style.width = pct + '%';
-        });
-        resultBlob = result.blob;
-        resultFilename = result.filename;
-        document.getElementById('resultDesc').textContent = `${result.filename} · ${formatSize(result.size)}`;
-        document.getElementById('stepProgress').classList.remove('active');
-        document.getElementById('resultArea').classList.add('active');
-    } catch (err) {
-        document.getElementById('stepProgress').classList.remove('active');
-        document.getElementById('errorMsg').textContent = err.message;
-        document.getElementById('errorMsg').classList.add('show');
-        uploadZone.style.display = '';
-    }
-}
-
-function reset() {
-    resultBlob = null; resultFilename = '';
-    fileInput.value = '';
-    uploadZone.style.display = '';
-    document.getElementById('errorMsg').classList.remove('show');
-    ['stepProgress', 'resultArea'].forEach(id => document.getElementById(id).classList.remove('active'));
-}
-</script>
-<script src="/js/cookies-consent.js?v=3" defer></script>
-<script src="/js/error-modal.js"></script>
-<script>(function(){var h=document.querySelector(".hamburger"),m=document.querySelector(".nav-links");if(h&&m){h.addEventListener("click",function(){var o=m.classList.toggle("open");h.setAttribute("aria-expanded",o);});document.addEventListener("click",function(e){if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove("open");h.setAttribute("aria-expanded","false");}});}})()</script>
-<script src="/js/theme-toggle.js?v=14" defer></script>
+    <script src="/js/cookies-consent.js?v=3" defer></script>
 </body>
 </html>
