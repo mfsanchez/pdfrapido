@@ -428,6 +428,17 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <div class="use-case"><strong>Colegios y asociaciones</strong><span>Autorizaciones y fichas de inscripción rellenables.</span></div>
     </div>
 
+    <h2>Qué tipo de campo usar para cada dato</h2>
+    <ul>
+      <li><strong>Texto corto:</strong> nombre, DNI, teléfono, email o ciudad; una sola línea.</li>
+      <li><strong>Texto largo:</strong> observaciones, motivo de la solicitud o cualquier respuesta de varias líneas.</li>
+      <li><strong>Número y fecha:</strong> en el PDF son campos de texto normales. No comprueban que se escriba un número ni muestran un calendario, así que indica el formato en el nombre del campo, por ejemplo «Fecha de nacimiento (dd/mm/aaaa)» o «Importe en euros».</li>
+      <li><strong>Casilla:</strong> respuestas de sí o no, como «Acepto las condiciones» o «Autorizo el uso de imágenes». Una casilla por cada cosa que se acepta.</li>
+      <li><strong>Opción múltiple:</strong> cuando hay que elegir una sola alternativa entre pocas y conviene verlas todas (turno de mañana o de tarde, talla, sí/no/no sabe). Solo se puede marcar una.</li>
+      <li><strong>Lista desplegable:</strong> la misma idea con muchas opciones (provincia, departamento, producto) sin ocupar espacio en la página.</li>
+      <li><strong>Firma:</strong> reserva un recuadro al final del documento para firmar.</li>
+    </ul>
+
     <h2>Limitaciones</h2>
     <ul>
       <li><strong>El recuadro de firma no es una firma digital certificada.</strong> Es un espacio para firmar a mano o con una imagen, por ejemplo con <a href="/firmar-pdf/">Firmar PDF</a>.</li>
@@ -451,7 +462,6 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <a href="/firmar-pdf/">Firmar PDF</a>
       <a href="/proteger-pdf/">Proteger PDF</a>
     </nav>
-    <p>Guía relacionada: <a href="/blog/crear-formulario-pdf-rellenable/">cómo crear un formulario PDF rellenable</a>.</p>
   </section>
 
 </main>

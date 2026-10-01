@@ -472,13 +472,32 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
     </div>
     <p>El PDF se sube a nuestro servidor en España, que extrae el texto y envía <strong>hasta unas 4.000 palabras</strong> (16.000 caracteres) a Groq (EE. UU.), donde el modelo Llama 3.3 70B genera el análisis. Si el contrato es más largo, solo se analiza la primera parte y la herramienta lo avisa. El archivo se borra de nuestro servidor en un máximo de 10 minutos y no guardamos el resultado.</p>
 
-    <h2>Para qué sirve: situaciones reales</h2>
-    <div class="use-cases">
-      <div class="use-case"><strong>Contrato de alquiler</strong><span>Localizar fianza, duración, penalizaciones y condiciones poco habituales antes de firmar.</span></div>
-      <div class="use-case"><strong>Contrato laboral</strong><span>Detectar cláusulas de confidencialidad, no competencia o retribución variable que conviene preguntar.</span></div>
-      <div class="use-case"><strong>Contratos de servicios y NDA</strong><span>Tener claras las obligaciones de cada parte, la exclusividad y cómo se rescinde.</span></div>
-      <div class="use-case"><strong>Preparar una negociación</strong><span>Llevar identificados los puntos con más riesgo para discutirlos.</span></div>
-    </div>
+    <h2>Qué revisar según el tipo de contrato</h2>
+    <p>El informe señala las cláusulas que la IA considera de riesgo, pero conviene saber qué buscar en cada tipo de contrato para leerlo con criterio y comprobar que no se le ha escapado nada. Estos son los puntos que más problemas dan en España:</p>
+    <h3>Contrato de alquiler de vivienda</h3>
+    <p>Fianza (por ley, una mensualidad), garantías adicionales (la LAU las limita a dos mensualidades más), duración y prórrogas, quién paga cada reparación, penalización por salir antes de tiempo y cómo se actualiza la renta. Lo tienes desarrollado, con un ejemplo de informe, en la guía para <a href="/blog/analizar-contrato-alquiler-ia/">analizar un contrato de alquiler con IA</a>.</p>
+    <h3>Contrato laboral</h3>
+    <ul>
+      <li><strong>Pacto de no competencia tras el contrato.</strong> Según el artículo 21 del Estatuto de los Trabajadores, solo es válido si la empresa tiene un interés real y te paga una compensación económica adecuada, y no puede durar más de dos años (técnicos) o seis meses (resto). Sin compensación, el pacto es nulo.</li>
+      <li><strong>Periodo de prueba.</strong> Salvo que el convenio diga otra cosa, el máximo es de seis meses para técnicos titulados y de dos meses para el resto (tres en empresas de menos de 25 trabajadores).</li>
+      <li><strong>Jornada y horas extra.</strong> Desconfía de la «disponibilidad» sin horario ni retribución: las horas extraordinarias se pagan o se compensan con descanso.</li>
+      <li><strong>Confidencialidad y propiedad intelectual.</strong> Revisa cuánto dura la obligación de confidencialidad y qué trabajos pasan a ser de la empresa.</li>
+    </ul>
+    <h3>Contrato de servicios (agencias, software, mantenimiento)</h3>
+    <ul>
+      <li><strong>Renovación automática:</strong> con qué antelación hay que avisar para no renovar.</li>
+      <li><strong>Nivel de servicio (SLA):</strong> qué se garantiza y qué pasa si no se cumple.</li>
+      <li><strong>Limitación de responsabilidad:</strong> si el proveedor limita lo que responde ante un fallo grave a una cantidad simbólica.</li>
+      <li><strong>Datos y salida:</strong> de quién son los datos que se generan y cómo los recuperas al cancelar.</li>
+      <li><strong>Exclusividad y penalizaciones</strong> por rescindir antes de plazo.</li>
+    </ul>
+    <h3>Contrato de compraventa</h3>
+    <ul>
+      <li><strong>Vicios ocultos.</strong> El Código Civil obliga al vendedor a responder de los defectos ocultos (artículos 1484 y siguientes; la acción caduca a los seis meses de la entrega). Fíjate en si el contrato intenta excluir esa responsabilidad. Si compras a una empresa como consumidor, la garantía legal de los bienes es de tres años y no se puede rebajar.</li>
+      <li><strong>Reserva de dominio:</strong> el vendedor sigue siendo propietario hasta el último pago.</li>
+      <li><strong>Cláusula penal y arras:</strong> qué pierdes si no sigues adelante y si la penalización es proporcionada.</li>
+      <li><strong>Entrega:</strong> plazo, lugar, estado en que se entrega el bien y quién asume el riesgo hasta entonces.</li>
+    </ul>
 
     <h2>Limitaciones</h2>
     <ul>
@@ -505,7 +524,6 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <a href="/ocultar-datos-pdf/">Ocultar datos</a>
       <a href="/firmar-pdf/">Firmar PDF</a>
     </nav>
-    <p>Guías relacionadas: <a href="/blog/como-analizar-contrato-con-ia/">cómo analizar un contrato con IA</a> y <a href="/blog/analizar-contrato-alquiler-ia/">analizar un contrato de alquiler con IA</a>.</p>
   </section>
 </main>
 <footer>

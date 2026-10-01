@@ -405,6 +405,16 @@
       <div class="use-case"><strong>Archivo contable</strong><span>Guardar cierres mensuales o albaranes en un formato que no cambia al abrirlo con otra versión de Excel.</span></div>
     </div>
 
+    <h2>Cómo preparar el Excel para que el PDF salga bien</h2>
+    <p>El conversor respeta la configuración de página que guardes en el archivo, así que la mayoría de problemas (columnas cortadas, decenas de páginas, hojas que no querías) se arreglan en Excel en un par de minutos antes de subirlo:</p>
+    <ul>
+      <li><strong>Columnas cortadas a la derecha.</strong> Es el fallo más habitual: la tabla no cabe a lo ancho. En <em>Diseño de página → Ajustar área de impresión</em>, pon <em>Ancho: 1 página</em>, y si hay muchas columnas cambia a <em>Orientación → Horizontal</em>.</li>
+      <li><strong>Demasiadas páginas.</strong> Un listado largo puede generar muchas más de las que necesitas. Limita lo que se imprime con <em>Área de impresión → Establecer área de impresión</em> sobre el rango que te interesa.</li>
+      <li><strong>Encabezados solo en la primera página.</strong> Para que la fila de títulos se repita en todas, usa <em>Diseño de página → Imprimir títulos → Repetir filas en extremo superior</em>. Inmovilizar paneles no sirve para esto: solo afecta a la pantalla.</li>
+      <li><strong>Hojas que no quieres en el PDF.</strong> Se convierten todas las hojas visibles: oculta las demás (clic derecho en la pestaña → <em>Ocultar</em>) o copia la hoja que quieras a un libro nuevo.</li>
+      <li><strong>Datos sin calcular.</strong> El PDF muestra los valores guardados en el archivo. Si dependen de macros o de vínculos externos, actualízalos en Excel y guarda antes de subirlo.</li>
+      <li><strong>Comprueba antes con la vista previa</strong> (<em>Archivo → Imprimir</em>): lo que ves ahí es, salvo diferencias de fuentes, lo que vas a obtener.</li>
+    </ul>
     <h2>Limitaciones</h2>
     <ul>
       <li><strong>No se puede elegir qué hojas convertir</strong>: se incluyen todas las hojas visibles. Oculta en Excel las que no quieras antes de subir el archivo.</li>
@@ -430,7 +440,6 @@
       <a href="/pptx-a-pdf/">PowerPoint a PDF</a>
       <a href="/unir-pdf/">Unir PDF</a>
     </nav>
-    <p>Guía relacionada: <a href="/blog/convertir-excel-a-pdf/">cómo convertir Excel a PDF</a>.</p>
   </section>
 </main>
 

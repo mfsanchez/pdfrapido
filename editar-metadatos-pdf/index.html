@@ -510,6 +510,20 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <div class="use-case"><strong>Documentos que se publican en la web</strong><span>Un título correcto es el que muestran los navegadores en la pestaña y el que pueden usar los buscadores para el documento.</span></div>
     </div>
 
+    <h2>Metadatos y protección de datos (RGPD)</h2>
+    <p>El campo autor suele contener un nombre y apellidos, y eso es un dato personal. Si una empresa o una administración publica un PDF en su web o lo envía fuera con el nombre de quien lo redactó en los metadatos, está difundiendo un dato personal que no hacía falta. El principio de minimización de datos del RGPD (artículo 5) pide justo lo contrario: compartir solo lo necesario. Por eso limpiar los metadatos es un paso habitual antes de publicar o enviar documentos fuera de la organización.</p>
+    <p>Para que la limpieza sea completa, ten en cuenta que los metadatos son solo una parte. Revisa también:</p>
+    <ul>
+      <li><strong>El contenido visible:</strong> nombres, DNI o direcciones en el texto. Para eliminarlos de verdad usa <a href="/redactar-pdf/">Redactar PDF</a>; tapar con un rectángulo negro no los borra.</li>
+      <li><strong>Comentarios y anotaciones</strong>, que suelen llevar el nombre de quien los hizo.</li>
+      <li><strong>El nombre del archivo</strong>, que a veces incluye el del autor o el del cliente.</li>
+    </ul>
+    <h2>Qué datos no cambia esta herramienta</h2>
+    <ul>
+      <li><strong>Fechas de creación y modificación.</strong> La de creación se conserva tal cual y la de modificación pasa a ser la del momento en que guardas. No se pueden editar a mano.</li>
+      <li><strong>Productor.</strong> Se muestra como consulta; solo se vacía con «Limpiar metadatos».</li>
+      <li><strong>Metadatos XMP.</strong> Algunos programas guardan una segunda copia de los metadatos en otro formato (XMP) que esta herramienta no modifica. Lo explicamos en las limitaciones.</li>
+    </ul>
     <h2>Limitaciones</h2>
     <ul>
       <li><strong>Solo el diccionario de información del PDF.</strong> Si el archivo lleva además metadatos XMP (un bloque aparte que añaden algunos programas, como Acrobat), esta herramienta no los modifica y algunos visores pueden seguir mostrando los valores antiguos.</li>
@@ -532,7 +546,6 @@ footer a{color:rgba(255,255,255,.6);text-decoration:none}
       <a href="/proteger-pdf/">Proteger PDF</a>
       <a href="/pdf-a-texto/">PDF a Texto</a>
     </nav>
-    <p>Guía relacionada: <a href="/blog/editar-metadatos-pdf/">cómo editar los metadatos de un PDF</a>.</p>
   </section>
 </main>
 
@@ -577,7 +590,7 @@ async function handleFile(file) {
 
     try {
         const bytes = await file.arrayBuffer();
-        pdfDoc = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true });
+        pdfDoc = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false });
         loadMetadataFields();
         progressArea.classList.remove('active');
         processArea.classList.add('active');
@@ -634,7 +647,7 @@ async function processPDF(clearAll) {
     try {
         // Re-load fresh copy to avoid modifying cached doc
         const bytes = await originalFile.arrayBuffer();
-        const freshDoc = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true });
+        const freshDoc = await PDFLib.PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false });
 
         if (clearAll) {
             freshDoc.setTitle('');

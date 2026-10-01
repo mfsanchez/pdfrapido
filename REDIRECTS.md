@@ -16,14 +16,34 @@ resueltas mediante redirect 301 en Caddy.
 
 | Origen (deprecado) | → Destino (canónico) | Motivo | Oracle | VPS | Fuera de sitemap |
 |---|---|---|---|---|---|
-| `/blog/unir-pdf-online/` | `/blog/como-unir-pdf-online/` | Huérfano, duplicaba "unir PDF online" | ✅ | ✅ | ✅ |
+| `/blog/unir-pdf-online/` | `/unir-pdf/` | Huérfano, duplicaba "unir PDF online" (destino final desde 2026-10, antes `/blog/como-unir-pdf-online/`) | ⏳ | ⏳ | ✅ |
 | `/blog/como-comprimir-pdf-gratis/` | `/blog/como-comprimir-pdf-sin-perder-calidad/` | Huérfano, duplicaba "comprimir PDF" | ✅ | ✅ | ✅ |
-| `/blog/convertir-imagenes-a-pdf-guia-completa/` | `/blog/convertir-jpg-a-pdf/` | **Conflicto jpg-a-pdf RESUELTO** (ver abajo) | ✅ | ✅ | ✅ |
+| `/blog/convertir-imagenes-a-pdf-guia-completa/` | `/jpg-a-pdf/` | **Conflicto jpg-a-pdf RESUELTO** (ver abajo); destino final desde 2026-10 | ⏳ | ⏳ | ✅ |
 | `/editar-pdf/` | `/categoria/editar-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
 | `/optimizar-pdf/` | `/categoria/optimizar-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
 | `/convertir-desde-pdf/` | `/categoria/convertir-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
 | `/convertir-a-pdf/` | `/categoria/convertir-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
 | `/seguridad-pdf/` | `/categoria/seguridad-pdf/` | Categoría inventada en breadcrumbs JSON-LD (nunca existió) | ✅ | ✅ | ✅ (nunca estuvo) |
+| `/blog/como-unir-pdf-online/` | `/unir-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/unir-pdf-en-el-movil/` | `/unir-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/como-resumir-pdf-gratis-ia/` | `/resumir-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/chat-pdf-preguntar-documentos-ia/` | `/chat-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/traducir-pdf-gratis/` | `/traducir-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/convertir-jpg-a-pdf/` | `/jpg-a-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/como-analizar-contrato-con-ia/` | `/analizar-contrato/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/crear-formulario-pdf-rellenable/` | `/crear-formulario-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/marca-de-agua-pdf/` | `/marca-agua/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/como-anotar-pdf-online/` | `/anotar-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/como-dividir-pdf-online/` | `/dividir-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/numerar-paginas-pdf/` | `/numerar-paginas/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/convertir-excel-a-pdf/` | `/excel-a-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/editar-metadatos-pdf/` | `/editar-metadatos-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/convertir-pdf-a-csv/` | `/pdf-a-csv/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/firmar-pdf-online/` | `/firmar-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/como-analizar-un-contrato-con-ia/` | `/analizar-contrato/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |
+| `/blog/como-resumir-pdf-con-ia/` | `/resumir-pdf/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |
+| `/blog/como-chatear-con-un-pdf/` | `/chat-pdf/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |
+| `/blog/como-traducir-un-pdf-gratis/` | `/traducir-pdf/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |
 
 Cada entrada usa el patrón doble (sin barra y con barra):
 
@@ -56,6 +76,15 @@ redir /blog/<slug>/ /blog/<canonico>/ 301
   `convertir-imagenes-a-pdf-guia-completa` ahora redirige 301 → `convertir-jpg-a-pdf`.
 - **Verificado en producción:** `301 → /blog/convertir-jpg-a-pdf/`; canónico responde `200`.
 - `convertir-imagenes-a-pdf-guia-completa` eliminado de `sitemap-blog.xml`.
+
+## Consolidación GSC — 2026-10-01 (rama `gsc-consolidacion`)
+
+Search Console marcaba 24 posts como «Rastreada: actualmente sin indexar». Seis ya eran 301.
+De los 18 restantes se mantienen 2 (`foto-a-pdf-desde-el-movil` y `redactar-pdf-rgpd-datos-sensibles`)
+y 16 se fusionan en su herramienta: el contenido útil pasa a la ficha y el post se borra del repo.
+Las 6 redirecciones antiguas que apuntaban a posts fusionados se reapuntan al destino final, sin cadenas.
+⏳ = pendiente de aplicar en el Caddyfile (las reglas están en `pdfrapido-redirects-gsc.caddy`,
+que se importa dentro del bloque `pdfrapido.eu {`).
 
 ## Pendientes / seguimiento
 

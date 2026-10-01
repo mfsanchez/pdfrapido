@@ -78,7 +78,7 @@
       "url": "https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/",
       "mainEntityOfPage": {"@type": "WebPage", "@id": "https://pdfrapido.eu/blog/redactar-pdf-rgpd-datos-sensibles/"},
       "datePublished": "2026-04-25",
-      "dateModified": "2026-04-29",
+      "dateModified": "2026-10-01",
       "author": {"@type": "Person","name": "MF Sanchez"},
       "publisher": {"@type": "Organization","name": "PDFRápido","url": "https://pdfrapido.eu"},
       "inLanguage": "es",
@@ -140,10 +140,6 @@
     <h3>Tachar (incorrecto y peligroso)</h3>
     <p>Consiste en añadir una capa visual opaca sobre el texto: un rectángulo negro, un resaltado oscuro, una imagen encima. El problema es que el texto original sigue existiendo en el PDF por debajo de esa capa. Cualquiera puede copiar y pegar el texto aunque esté "tachado", o abrirlo con un editor y eliminar la capa de color.</p>
 
-    <div class="warning-box">
-        <strong>Caso real:</strong> En 2019, la NSA publicó un informe desclasificado en PDF con datos "redactados" mediante rectángulos negros superpuestos. Los periodistas recuperaron el texto original en minutos usando Acrobat. Este error se repite en administraciones públicas de todo el mundo.
-    </div>
-
     <h3>Redactar (correcto e irreversible)</h3>
     <p>La redacción verdadera elimina el texto del propio PDF a nivel de estructura del archivo. El texto no existe en ninguna capa, no se puede recuperar con ninguna herramienta. Lo que ves es exactamente lo que hay: un espacio vacío o un bloque negro, pero sin datos subyacentes.</p>
 
@@ -166,10 +162,18 @@
     <ol>
         <li>Accede a <a href="/redactar-pdf/">la herramienta de redactar PDF</a>.</li>
         <li>Sube el documento PDF que contiene los datos a proteger.</li>
-        <li>Selecciona con el ratón los fragmentos de texto que quieres redactar.</li>
-        <li>Confirma la redacción: el sistema eliminará el texto de la estructura del archivo, no solo visualmente.</li>
-        <li>Descarga el PDF redactado. Los datos ya no existen en el archivo.</li>
+        <li>Escribe los datos que quieres eliminar, uno por línea o separados por comas: el nombre, el DNI, el IBAN, la dirección. La herramienta no funciona seleccionando con el ratón, sino buscando esos términos en todas las páginas.</li>
+        <li>Pulsa el botón de redactar: cada aparición se tapa con un bloque negro y el texto que había debajo se elimina del archivo, no solo se oculta.</li>
+        <li>Descarga el PDF redactado y revísalo antes de enviarlo.</li>
     </ol>
+
+    <p>Para redactar, el archivo se sube a nuestro servidor en España y se elimina en un máximo de 10 minutos. Antes de usarla, ten en cuenta cómo busca:</p>
+    <ul>
+        <li><strong>Escribe cada dato tal como aparece en el documento.</strong> Si el DNI figura a veces como «12345678Z» y otras como «12.345.678-Z», añade las dos formas: una variante con otros espacios o guiones no se encuentra.</li>
+        <li><strong>Busca también dentro de palabras más largas</strong> y sin distinguir mayúsculas: «Ana» tapará también «Mariana». Usa términos completos (nombre y apellidos) y revisa el resultado.</li>
+        <li><strong>Solo elimina texto.</strong> No toca imágenes, firmas manuscritas, sellos ni páginas escaneadas sin texto. Para tapar esas zonas usa <a href="/ocultar-datos-pdf/">Ocultar datos en PDF</a>, que convierte las páginas en imagen para que no quede nada debajo.</li>
+        <li><strong>No limpia los metadatos.</strong> El autor u otros campos internos del archivo pueden contener nombres: vacíalos con <a href="/editar-metadatos-pdf/">Editar metadatos</a>.</li>
+    </ul>
 
     <div class="tip-box">
         <strong>Protege también el resultado:</strong> una vez redactado el documento, considera <a href="/proteger-pdf/">añadir una contraseña de apertura</a> para controlar quién puede acceder al archivo antes de compartirlo.
@@ -177,7 +181,7 @@
 
     <div class="cta-box">
         <h3>Redacta tus PDFs correctamente</h3>
-        <p>Elimina datos sensibles de forma irreversible. Sin registro, cumpliendo el RGPD.</p>
+        <p>Elimina datos sensibles del archivo, no solo de la vista. Gratis y sin registro.</p>
         <a href="/redactar-pdf/">Redactar PDF ahora →</a>
     </div>
 
@@ -187,7 +191,7 @@
 
     <ol>
         <li><strong>Buscar todos los datos antes de redactar:</strong> usa la función de búsqueda del PDF para localizar el DNI, el nombre completo o la dirección en todas sus apariciones. Un solo olvido puede comprometer la anonimización.</li>
-        <li><strong>Revisar metadatos:</strong> los PDFs almacenan metadatos (autor, empresa, historial de versiones) que pueden contener datos personales aunque el documento esté redactado.</li>
+        <li><strong>Revisar metadatos:</strong> los PDFs almacenan metadatos (autor, título, programa con que se creó) que pueden contener datos personales aunque el documento esté redactado. Compruébalos y vacíalos con <a href="/editar-metadatos-pdf/">Editar metadatos</a>.</li>
         <li><strong>No confiar en el OCR posterior:</strong> si el PDF permanece digital, asegúrate de que la redacción es real y no solo visual.</li>
         <li><strong>Documentar el proceso:</strong> para cumplir con el principio de responsabilidad proactiva del RGPD, conviene registrar qué datos se redactaron, quién lo hizo y con qué herramienta.</li>
     </ol>
@@ -197,7 +201,7 @@
     <ul>
         <li><strong>Caja negra en Word antes de exportar a PDF:</strong> la caja es un objeto visual superpuesto al texto. Al exportar, el texto sigue en el PDF debajo de la caja.</li>
         <li><strong>Resaltar en negro con el marcador de PDF:</strong> el marcado es una anotación, no una eliminación del texto.</li>
-        <li><strong>Imprimir a papel y escanear:</strong> funciona si el escáner no aplica OCR automático, pero genera documentos de mucha peor calidad.</li>
+        <li><strong>Imprimir a papel y escanear:</strong> si tachas sobre el papel, lo tapado desaparece de verdad, pero el resultado es una imagen de peor calidad, sin texto seleccionable y más pesada.</li>
         <li><strong>Cambiar el color del texto a blanco:</strong> el texto sigue estando en el archivo. Un simple cambio de color vuelve a hacerlo visible.</li>
     </ul>
 
@@ -211,7 +215,7 @@
 
     <p>Proteger datos sensibles en documentos PDF no es opcional bajo el RGPD: es una obligación legal. Y hacerlo correctamente no requiere herramientas costosas ni conocimientos técnicos avanzados.</p>
 
-    <p>La diferencia entre tachar (incorrecto) y redactar (correcto) es fundamental. La primera da una falsa sensación de seguridad; la segunda elimina realmente los datos. PDFRápido te permite hacer esto gratis, sin registro y de forma que cumple con los estándares técnicos que exige la normativa.</p>
+    <p>La diferencia entre tachar (incorrecto) y redactar (correcto) es fundamental. La primera da una falsa sensación de seguridad; la segunda elimina realmente los datos. PDFRápido te permite hacerlo gratis y sin registro; combinado con una revisión final del documento y de sus metadatos, es una medida técnica adecuada para compartir documentos sin exponer datos personales.</p>
 
     <div class="cta-box">
         <h3>¿Necesitas redactar datos de un PDF?</h3>
