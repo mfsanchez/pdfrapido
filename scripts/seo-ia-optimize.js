@@ -415,9 +415,9 @@ ${howItems}
 ${faqDetails}
     </section>
     <h2>Otras herramientas PDF</h2>
-    <nav class="related-tools-nav">
+    <div class="related-tools-nav">
 ${relatedLinks}
-    </nav>
+    </div>
     <footer class="author-byline">
       <p>Por <a href="/sobre-mf-sanchez/" rel="author">MF Sanchez</a>, desarrollador de herramientas PDF desde 2023. <a href="https://github.com/mfsanchez/pdfrapido">Ver código en GitHub</a></p>
     </footer>`;
