@@ -148,7 +148,7 @@
           "name": "¿A qué resolución se convierten las páginas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A 150 ppp por defecto. Puedes elegir 200 o 300 ppp si vas a imprimir las imágenes."
+            "text": "A 200 ppp por defecto. Puedes bajar a 150 ppp para pantalla o subir a 300 ppp si vas a imprimir las imágenes."
           }
         },
         {
@@ -300,9 +300,9 @@
         <div class="quality-row">
             <label>Calidad de imagen:</label>
             <select id="quality">
-                <option value="1">Alta (150 DPI)</option>
-                <option value="2" selected>Muy alta (200 DPI)</option>
-                <option value="3">Máxima (300 DPI)</option>
+                <option value="150">Alta (150 DPI)</option>
+                <option value="200" selected>Muy alta (200 DPI)</option>
+                <option value="300">Máxima (300 DPI)</option>
             </select>
         </div>
         <button class="action-btn" onclick="convertPDF()">
@@ -321,6 +321,7 @@
             <button class="btn-download" onclick="downloadAll()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar todas las imágenes</button>
             <button class="btn-reset" onclick="resetTool()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button>
         </div>
+        <p class="png-note" id="pngNote" hidden style="margin:0 0 16px;font-size:13px;color:var(--gray-500)"></p>
         <div class="images-grid" id="imagesGrid"></div>
     </div>
 
@@ -374,7 +375,7 @@
 
     <h2>Preguntas frecuentes sobre PDF a JPG</h2>
     <div class="faq">
-      <div class="faq-item"><h3>¿A qué resolución se convierten las páginas?</h3><p>A 150 ppp por defecto. Puedes elegir 200 o 300 ppp si vas a imprimir las imágenes.</p></div>
+      <div class="faq-item"><h3>¿A qué resolución se convierten las páginas?</h3><p>A 200 ppp por defecto. Puedes bajar a 150 ppp para pantalla o subir a 300 ppp si vas a imprimir las imágenes.</p></div>
       <div class="faq-item"><h3>¿Puedo convertir solo algunas páginas?</h3><p>No: se convierten todas, pero puedes descargar solo las que quieras desde su miniatura.</p></div>
       <div class="faq-item"><h3>¿Qué diferencia hay con PDF a PNG?</h3><p>JPG pesa menos y va bien para fotos; PNG no pierde calidad y se ve más nítido en texto y gráficos.</p></div>
       <div class="faq-item"><h3>¿Se sube mi PDF a algún servidor?</h3><p>No. Las imágenes se generan en tu navegador.</p></div>
@@ -412,7 +413,10 @@ async function convertPDF() {
     document.getElementById('stepConvert').classList.remove('active');
     document.getElementById('stepProgress').classList.add('active');
 
-    const scale = parseInt(document.getElementById('quality').value);
+    const dpi = parseInt(document.getElementById('quality').value);
+    // Safari (iOS) no crea lienzos de más de ~16,7 Mpx: por encima se baja la resolución de esa página.
+    const MAX_PIXELS = 16000000;
+    let minDpi = dpi;
     const bytes = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: bytes }).promise;
     const total = pdf.numPages;
@@ -422,10 +426,16 @@ async function convertPDF() {
         document.getElementById('progressBar').style.width = ((i / total) * 100) + '%';
 
         const page = await pdf.getPage(i);
-        const viewport = page.getViewport({ scale });
+        let scale = dpi / 72;  // pdf.js: escala 1 = 72 ppp
+        let viewport = page.getViewport({ scale });
+        if (viewport.width * viewport.height > MAX_PIXELS) {
+            scale *= Math.sqrt(MAX_PIXELS / (viewport.width * viewport.height));
+            viewport = page.getViewport({ scale });
+            minDpi = Math.min(minDpi, Math.floor(scale * 72));
+        }
         const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
         const ctx = canvas.getContext('2d');
         ctx.fillStyle = '#FFFFFF';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -437,6 +447,9 @@ async function convertPDF() {
 
     document.getElementById('stepProgress').classList.remove('active');
     document.getElementById('stepResult').classList.add('active');
+    const note = document.getElementById('pngNote');
+    note.hidden = minDpi >= dpi;
+    note.textContent = minDpi < dpi ? `Alguna página era muy grande: se ha convertido a ${minDpi} ppp para que el navegador pueda generarla.` : '';
 
     const grid = document.getElementById('imagesGrid');
     grid.innerHTML = '';
