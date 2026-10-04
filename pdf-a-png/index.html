@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="PDF a PNG, convertir PDF a PNG, PDF a imagen sin pérdida, páginas PDF a PNG online gratis">
-    <meta name="description" content="Convierte PDF a PNG gratis y sin registro. Transforma cada página en imagen PNG sin pérdida. Ideal para texto, gráficos y capturas. Sin instalar nada | PDFRápido">
+    <meta name="description" content="Convierte PDF a PNG gratis y sin registro: cada página en una imagen sin pérdida, a 150, 200 o 300 ppp y con fondo transparente opcional. Sin subir el archivo.">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>PDF a PNG Online Gratis — Sin Pérdida | PDFRápido</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -44,6 +44,11 @@
         .img-thumb{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;transition:all .2s}
         .img-thumb:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
         .img-thumb img{width:100%;display:block}
+        .img-thumb.transp img{background:repeating-conic-gradient(#e5e7eb 0 25%,#fff 0 50%) 0 0/16px 16px}
+        .transp-row{display:flex;align-items:center;gap:10px;margin:-12px 0 24px;padding:0 4px;font-size:14px;color:var(--gray-600);cursor:pointer}
+        .transp-row input{width:18px;height:18px;accent-color:var(--accent)}
+        .transp-row span{color:var(--gray-400);font-size:13px}
+        .png-note{margin:0 0 16px;font-size:13px;color:var(--gray-500)}
         .img-thumb-label{position:absolute;bottom:0;left:0;right:0;padding:8px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:12px;font-weight:500;text-align:center}
         .img-thumb-dl{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.9);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
         .img-thumb:hover .img-thumb-dl{opacity:1}
@@ -156,7 +161,7 @@
           "name": "¿El PNG tiene fondo transparente?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Las páginas se dibujan siempre sobre fondo blanco."
+            "text": "Si marcas «Fondo transparente», sí en las zonas que el PDF no pinta. Si el PDF trae un fondo blanco dibujado, como muchos escaneos, ese blanco se mantiene."
           }
         },
         {
@@ -213,14 +218,14 @@
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="PDF a PNG Online Gratis — Imágenes sin Pérdida de Calidad | PDFRápido">
-    <meta property="og:description" content="Convierte PDF a PNG gratis y sin registro. Transforma cada página en imagen PNG sin pérdida. Ideal para texto, gráficos y capturas. Sin instalar nada.">
+    <meta property="og:description" content="Convierte PDF a PNG gratis y sin registro: cada página en una imagen sin pérdida, a 150, 200 o 300 ppp y con fondo transparente opcional. Sin subir el archivo.">
     <meta property="og:url" content="https://pdfrapido.eu/pdf-a-png/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PDF a PNG Online Gratis — Imágenes sin Pérdida de Calidad | PDFRápido">
-    <meta name="twitter:description" content="Convierte PDF a PNG gratis y sin registro. Transforma cada página en imagen PNG sin pérdida. Ideal para texto, gráficos y capturas. Sin instalar nada.">
+    <meta name="twitter:description" content="Convierte PDF a PNG gratis y sin registro: cada página en una imagen sin pérdida, a 150, 200 o 300 ppp y con fondo transparente opcional. Sin subir el archivo.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <script src="/js/webmcp.js" defer></script>
 
@@ -300,11 +305,12 @@
         <div class="quality-row">
             <label>Calidad de imagen:</label>
             <select id="quality">
-                <option value="1">Alta (150 DPI)</option>
-                <option value="2" selected>Muy alta (200 DPI)</option>
-                <option value="3">Máxima (300 DPI)</option>
+                <option value="150">Alta (150 DPI)</option>
+                <option value="200" selected>Muy alta (200 DPI)</option>
+                <option value="300">Máxima (300 DPI)</option>
             </select>
         </div>
+        <label class="transp-row"><input type="checkbox" id="transparent"> Fondo transparente <span>(solo donde el PDF no pinta nada)</span></label>
         <button class="action-btn" onclick="convertPDF()">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
             Convertir a PNG
@@ -321,6 +327,7 @@
             <button class="btn-download" onclick="downloadAll()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar todas las imágenes</button>
             <button class="btn-reset" onclick="resetTool()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>Convertir otro</button>
         </div>
+        <p class="png-note" id="pngNote" hidden></p>
         <div class="images-grid" id="imagesGrid"></div>
     </div>
 
@@ -354,7 +361,7 @@
       <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige la resolución</h3><p>150 ppp (pantalla), 200 ppp o 300 ppp (impresión).</p></div></div>
       <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga las imágenes</h3><p>Cada página se convierte en un PNG. Descárgalas una a una desde su miniatura o todas seguidas con «Descargar todas».</p></div></div>
     </div>
-    <p>La conversión ocurre en tu navegador: pdf.js dibuja cada página sobre fondo blanco a la resolución elegida y la guarda como PNG, un formato sin pérdida. El PDF no se sube a ningún servidor.</p>
+    <p>La conversión ocurre en tu navegador: pdf.js dibuja cada página a la resolución elegida, sobre fondo blanco o transparente y la guarda como PNG, un formato sin pérdida. El PDF no se sube a ningún servidor.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
@@ -365,7 +372,7 @@
 
     <h2>Limitaciones</h2>
     <ul>
-      <li><strong>Sin transparencia:</strong> las páginas se dibujan siempre sobre fondo blanco.</li>
+      <li><strong>Transparencia parcial:</strong> con «Fondo transparente» solo queda transparente lo que el PDF no pinta. Si el PDF lleva un fondo blanco dibujado (habitual en escaneos y en muchos PDF exportados desde Word), seguirá saliendo blanco.</li>
       <li><strong>Se convierten todas las páginas</strong>; para una sola, <a href="/extraer-paginas/">extráela</a> antes.</li>
       <li><strong>No hay ZIP:</strong> «Descargar todas» lanza una descarga por página.</li>
       <li>Los PNG pesan bastante más que los JPG, sobre todo a 300 ppp y en páginas con fotos.</li>
@@ -374,7 +381,7 @@
     <h2>Preguntas frecuentes sobre PDF a PNG</h2>
     <div class="faq">
       <div class="faq-item"><h3>¿Qué diferencia hay entre JPG y PNG?</h3><p>PNG no pierde calidad y se ve más nítido en texto y gráficos, pero ocupa más. JPG pesa menos y va mejor para fotos.</p></div>
-      <div class="faq-item"><h3>¿El PNG tiene fondo transparente?</h3><p>No. Las páginas se dibujan siempre sobre fondo blanco.</p></div>
+      <div class="faq-item"><h3>¿El PNG tiene fondo transparente?</h3><p>Si marcas «Fondo transparente», sí en las zonas que el PDF no pinta. Si el PDF trae un fondo blanco dibujado, como muchos escaneos, ese blanco se mantiene.</p></div>
       <div class="faq-item"><h3>¿Puedo convertir PDF de varias páginas?</h3><p>Sí. Cada página genera un PNG independiente, que puedes descargar por separado o todos seguidos.</p></div>
       <div class="faq-item"><h3>¿Se sube mi PDF a algún servidor?</h3><p>No. Las imágenes se generan en tu navegador.</p></div>
     </div>
@@ -427,7 +434,11 @@ async function convertPDF() {
     document.getElementById('stepConvert').classList.remove('active');
     document.getElementById('stepProgress').classList.add('active');
 
-    const scale = parseInt(document.getElementById('quality').value);
+    const dpi = parseInt(document.getElementById('quality').value);
+    const transparent = document.getElementById('transparent').checked;
+    // Safari (iOS) no crea lienzos de más de ~16,7 Mpx: por encima se baja la resolución de esa página.
+    const MAX_PIXELS = 16000000;
+    let minDpi = dpi;
     const bytes = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: bytes }).promise;
     const total = pdf.numPages;
@@ -437,14 +448,19 @@ async function convertPDF() {
         document.getElementById('progressBar').style.width = ((i / total) * 100) + '%';
 
         const page = await pdf.getPage(i);
-        const viewport = page.getViewport({ scale });
+        let scale = dpi / 72;  // pdf.js: escala 1 = 72 ppp
+        let viewport = page.getViewport({ scale });
+        if (viewport.width * viewport.height > MAX_PIXELS) {
+            scale *= Math.sqrt(MAX_PIXELS / (viewport.width * viewport.height));
+            viewport = page.getViewport({ scale });
+            minDpi = Math.min(minDpi, Math.floor(scale * 72));
+        }
         const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
         const ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        await page.render({ canvasContext: ctx, viewport }).promise;
+        // Sin background, pdf.js rellena de blanco; con uno transparente, el fondo queda vacío.
+        await page.render({ canvasContext: ctx, viewport, background: transparent ? 'rgba(0,0,0,0)' : '#FFFFFF' }).promise;
 
         const dataUrl = canvas.toDataURL('image/png');
         images.push({ dataUrl, name: `${originalName}_pagina_${i}.png` });
@@ -453,11 +469,14 @@ async function convertPDF() {
     document.getElementById('stepProgress').classList.remove('active');
     document.getElementById('stepResult').classList.add('active');
 
+    const note = document.getElementById('pngNote');
+    note.hidden = minDpi >= dpi;
+    note.textContent = minDpi < dpi ? `Alguna página era muy grande: se ha convertido a ${minDpi} ppp para que el navegador pueda generarla.` : '';
     const grid = document.getElementById('imagesGrid');
     grid.innerHTML = '';
     images.forEach((img, i) => {
         const div = document.createElement('div');
-        div.className = 'img-thumb';
+        div.className = transparent ? 'img-thumb transp' : 'img-thumb';
         div.innerHTML = `<img src="${img.dataUrl}" alt="Página ${i + 1}"><div class="img-thumb-label">Página ${i + 1}</div><button class="img-thumb-dl" onclick="dlOne(${i})" title="Descargar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button>`;
         grid.appendChild(div);
     });
