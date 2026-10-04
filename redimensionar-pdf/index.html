@@ -9,7 +9,7 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta o tamaño personalizado. Gratis, sin registro y sin instalar nada | PDFRápido">
+    <meta name="description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta, Oficio o un tamaño personalizado. Gratis, sin registro y sin subir el archivo.">
     <meta name="keywords" content="redimensionar PDF, cambiar tamaño PDF, PDF a A4, PDF a A3, cambiar formato PDF online">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>Redimensionar PDF Gratis — Cambia Tamaño | PDFRápido</title>
@@ -329,7 +329,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
       "@type": "WebApplication",
       "name": "Redimensionar PDF Online Gratis",
       "url": "https://pdfrapido.eu/redimensionar-pdf/",
-      "description": "Cambia el tamaño de las páginas de tu PDF a A4, A3, A5, Carta, Legal o medidas personalizadas. Gratis, sin registro y sin instalar nada.",
+      "description": "Cambia el tamaño de las páginas de tu PDF a A4, A3, A5, Carta, Legal, Oficio o medidas personalizadas. Gratis, sin registro y sin instalar nada.",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "Web",
       "offers": {
@@ -382,6 +382,14 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
         },
         {
           "@type": "Question",
+          "name": "¿Puedo pasar un PDF de Oficio a Carta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Elige Carta como destino y deja activado «Ajustar contenido»: la página Oficio se reduce de forma uniforme hasta caber en Carta y queda centrada, con algo de margen arriba y abajo."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "¿Puedo usar un tamaño personalizado?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -425,7 +433,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
           "@type": "HowToStep",
           "position": 2,
           "name": "Elige formato, orientación y modo",
-          "text": "A4, A3, A5, Carta, Legal o un tamaño personalizado en milímetros; vertical u horizontal; y si quieres ajustar el contenido al nuevo tamaño."
+          "text": "A4, A3, A5, Carta, Legal, Oficio o un tamaño personalizado en milímetros; vertical u horizontal; y si quieres ajustar el contenido al nuevo tamaño."
         },
         {
           "@type": "HowToStep",
@@ -442,14 +450,14 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="Redimensionar PDF Gratis — Cambia Tamaño | PDFRápido">
-    <meta property="og:description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta o tamaño personalizado. Gratis, sin registro y sin instalar nada.">
+    <meta property="og:description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta, Oficio o un tamaño personalizado. Gratis, sin registro y sin subir el archivo.">
     <meta property="og:url" content="https://pdfrapido.eu/redimensionar-pdf/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Redimensionar PDF Online Gratis | PDFRápido">
-    <meta name="twitter:description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta o tamaño personalizado. Gratis y sin registro.">
+    <meta name="twitter:description" content="Cambia el tamaño de las páginas de tu PDF a A4, A3, Carta, Oficio o un tamaño personalizado. Gratis, sin registro y sin subir el archivo.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <script src="/js/webmcp.js" defer></script>
 
@@ -584,6 +592,14 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
                 <h5>Legal</h5>
                 <span>215,9 × 355,6 mm</span>
             </div>
+            <div class="format-btn" data-format="oficio-mx" onclick="selectFormat(this)">
+                <h5>Oficio (México)</h5>
+                <span>216 × 340 mm</span>
+            </div>
+            <div class="format-btn" data-format="oficio" onclick="selectFormat(this)">
+                <h5>Oficio 8,5 × 13"</h5>
+                <span>215,9 × 330,2 mm</span>
+            </div>
             <div class="format-btn" data-format="custom" onclick="selectFormat(this)">
                 <h5>Personalizado</h5>
                 <span>Ancho × Alto en mm</span>
@@ -712,7 +728,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     <h2>Cómo funciona</h2>
     <div class="steps">
       <div class="step"><div class="step-num">1</div><div class="step-body"><h3>Sube tu PDF</h3><p>Verás el tamaño de página actual.</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige formato, orientación y modo</h3><p>A4, A3, A5, Carta, Legal o un tamaño personalizado en milímetros; vertical u horizontal; y si quieres ajustar el contenido al nuevo tamaño.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>Elige formato, orientación y modo</h3><p>A4, A3, A5, Carta, Legal, Oficio o un tamaño personalizado en milímetros; vertical u horizontal; y si quieres ajustar el contenido al nuevo tamaño.</p></div></div>
       <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el resultado</h3><p>Todas las páginas pasan al formato elegido.</p></div></div>
     </div>
     <p>El cambio se hace en tu navegador con pdf-lib; el archivo no se sube a ningún servidor. Con «Ajustar contenido», cada página se escala de forma uniforme (sin deformarse) hasta caber en el nuevo tamaño y se centra. Sin esa opción, solo cambia el tamaño de la hoja y el contenido se queda en su posición, por lo que puede quedar cortado o con márgenes vacíos.</p>
@@ -725,8 +741,11 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
         <tr><td>A5</td><td>148 × 210</td><td>5,83 × 8,27</td><td>Folletos y versiones compactas de un documento</td></tr>
         <tr><td>Carta (Letter)</td><td>215,9 × 279,4</td><td>8,5 × 11</td><td>EE. UU., México y parte de América Latina</td></tr>
         <tr><td>Legal</td><td>215,9 × 355,6</td><td>8,5 × 14</td><td>Documentos jurídicos norteamericanos</td></tr>
+        <tr><td>Oficio (México)</td><td>216 × 340</td><td>8,5 × 13,4</td><td>Trámites y documentos oficiales en México</td></tr>
+        <tr><td>Oficio 8,5 × 13"</td><td>215,9 × 330,2</td><td>8,5 × 13</td><td>Oficio o «folio» en otros países de América Latina</td></tr>
       </tbody>
     </table></div>
+    <p>El Oficio no mide lo mismo en todos los países: en México son 216 × 340 mm; en otros, 8,5 × 13 pulgadas, y en algunos se llama «oficio» a un tamaño casi igual al Legal. Si te piden una medida concreta, compruébala y, si no coincide, usa «Personalizado».</p>
     <p>A4 y Carta se parecen, pero no son iguales: Carta es 5,9 mm más ancho y 17,6 mm más corto. Por eso un documento en Carta impreso en A4 sin ajustar sale con los márgenes descompensados o con el pie cortado.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
@@ -749,6 +768,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     <div class="faq">
       <div class="faq-item"><h3>¿Puedo pasar de A4 a Carta sin perder contenido?</h3><p>Sí, con «Ajustar contenido» activado: el contenido se escala de forma uniforme y se centra, sin recortar nada.</p></div>
       <div class="faq-item"><h3>¿Qué pasa si el PDF tiene páginas de distintos tamaños?</h3><p>Todas pasan al formato elegido; con «Ajustar contenido», cada una se escala según su tamaño original.</p></div>
+      <div class="faq-item"><h3>¿Puedo pasar un PDF de Oficio a Carta?</h3><p>Sí. Elige Carta como destino y deja activado «Ajustar contenido»: la página Oficio se reduce de forma uniforme hasta caber en Carta y queda centrada, con algo de margen arriba y abajo.</p></div>
       <div class="faq-item"><h3>¿Puedo usar un tamaño personalizado?</h3><p>Sí, indicando ancho y alto en milímetros.</p></div>
       <div class="faq-item"><h3>¿Redimensionar reduce el peso del archivo?</h3><p>No es lo mismo: redimensionar cambia las medidas de la página, no los MB. Para que el archivo pese menos, usa <a href="/comprimir-pdf/">Comprimir PDF</a>.</p></div>
       <div class="faq-item"><h3>¿Se sube el PDF a algún servidor?</h3><p>No. Todo ocurre en tu navegador con pdf-lib.</p></div>
@@ -783,7 +803,9 @@ const PAGE_SIZES = {
     a3:     { w: 841.89,  h: 1190.55 },
     a5:     { w: 419.53,  h: 595.28  },
     letter: { w: 612.00,  h: 792.00  },
-    legal:  { w: 612.00,  h: 1008.00 }
+    legal:  { w: 612.00,  h: 1008.00 },
+    'oficio-mx': { w: 612.28, h: 963.78 },  // 216 × 340 mm
+    oficio: { w: 612.00,  h: 936.00  }       // 8,5 × 13 in
 };
 
 function mmToPoints(mm) { return mm * 72 / 25.4; }
@@ -932,7 +954,7 @@ async function resizePDF() {
         resultArea.classList.add('active');
 
         const formatLabel = selectedFormat === 'custom' ? 'Personalizado' :
-            { a4: 'A4', a3: 'A3', a5: 'A5', letter: 'Carta', legal: 'Legal' }[selectedFormat];
+            { a4: 'A4', a3: 'A3', a5: 'A5', letter: 'Carta', legal: 'Legal', 'oficio-mx': 'Oficio (México)', oficio: 'Oficio 8,5 × 13"' }[selectedFormat];
         const orientLabel = selectedOrientation === 'portrait' ? 'Vertical' : 'Horizontal';
 
         document.getElementById('origDims').textContent = `${ptsToMm(firstOrigW)} × ${ptsToMm(firstOrigH)} mm`;
