@@ -40,6 +40,7 @@ resueltas mediante redirect 301 en Caddy.
 | `/blog/editar-metadatos-pdf/` | `/editar-metadatos-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
 | `/blog/convertir-pdf-a-csv/` | `/pdf-a-csv/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
 | `/blog/firmar-pdf-online/` | `/firmar-pdf/` | Consolidación GSC 2026-10: post fusionado en su herramienta | ⏳ | ⏳ | ✅ |
+| `/blog/como-redimensionar-pdf/` | `/redimensionar-pdf/` | Crecimiento 2026-10: canibalizaba a la herramienta en GSC; post fusionado | ⏳ | ⏳ | ✅ |
 | `/blog/como-analizar-un-contrato-con-ia/` | `/analizar-contrato/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |
 | `/blog/como-resumir-pdf-con-ia/` | `/resumir-pdf/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |
 | `/blog/como-chatear-con-un-pdf/` | `/chat-pdf/` | Tanda 1 (2026-07-07); reapuntada en 2026-10 al destino final | ⏳ | ⏳ | ✅ |

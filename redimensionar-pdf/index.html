@@ -310,6 +310,11 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
 .content-seo .faq-item{border:1px solid #e5e7eb;border-radius:10px;padding:18px 20px}
 .content-seo .faq-item h3{font-size:15px;font-weight:600;color:#1B2A4A;margin:0 0 8px}
 .content-seo .faq-item p{font-size:14px;color:#6B7280;line-height:1.7;margin:0}
+.content-seo .table-wrap{overflow-x:auto}
+.content-seo .comparison{width:100%;max-width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 24px}
+.content-seo .comparison th,.content-seo .comparison td{padding:11px 14px;border:1px solid #e5e7eb;text-align:left}
+.content-seo .comparison th{background:#1B2A4A;color:#fff;font-weight:600}
+.content-seo .comparison tr:nth-child(even){background:#f9fafb}
 .content-seo .use-cases{display:grid;gap:12px;margin:16px 0 24px}
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #4285F4;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
@@ -381,6 +386,14 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sí, indicando ancho y alto en milímetros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Redimensionar reduce el peso del archivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No es lo mismo: redimensionar cambia las medidas de la página, no los MB. Para que el archivo pese menos, usa Comprimir PDF."
           }
         },
         {
@@ -703,12 +716,24 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
       <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el resultado</h3><p>Todas las páginas pasan al formato elegido.</p></div></div>
     </div>
     <p>El cambio se hace en tu navegador con pdf-lib; el archivo no se sube a ningún servidor. Con «Ajustar contenido», cada página se escala de forma uniforme (sin deformarse) hasta caber en el nuevo tamaño y se centra. Sin esa opción, solo cambia el tamaño de la hoja y el contenido se queda en su posición, por lo que puede quedar cortado o con márgenes vacíos.</p>
-    <p>A4 (210 × 297 mm) es el formato habitual en España y Europa; Carta (215,9 × 279,4 mm) el de EE. UU. y parte de América Latina; Legal (215,9 × 355,6 mm) se usa en documentos jurídicos norteamericanos.</p>
+    <h2>Formatos de página disponibles</h2>
+    <div class="table-wrap"><table class="comparison">
+      <thead><tr><th>Formato</th><th>Medidas (mm)</th><th>Medidas (pulgadas)</th><th>Uso habitual</th></tr></thead>
+      <tbody>
+        <tr><td>A4</td><td>210 × 297</td><td>8,27 × 11,69</td><td>Documentos de oficina en España y Europa</td></tr>
+        <tr><td>A3</td><td>297 × 420</td><td>11,69 × 16,54</td><td>Planos, carteles, presentaciones ampliadas</td></tr>
+        <tr><td>A5</td><td>148 × 210</td><td>5,83 × 8,27</td><td>Folletos y versiones compactas de un documento</td></tr>
+        <tr><td>Carta (Letter)</td><td>215,9 × 279,4</td><td>8,5 × 11</td><td>EE. UU., México y parte de América Latina</td></tr>
+        <tr><td>Legal</td><td>215,9 × 355,6</td><td>8,5 × 14</td><td>Documentos jurídicos norteamericanos</td></tr>
+      </tbody>
+    </table></div>
+    <p>A4 y Carta se parecen, pero no son iguales: Carta es 5,9 mm más ancho y 17,6 mm más corto. Por eso un documento en Carta impreso en A4 sin ajustar sale con los márgenes descompensados o con el pie cortado.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
       <div class="use-case"><strong>Imprimir en A4 un PDF en formato Carta</strong><span>Evita márgenes descompensados o texto cortado al imprimir documentos recibidos de EE. UU.</span></div>
       <div class="use-case"><strong>Pasar un A4 a A3</strong><span>Imprimir un cartel o un plano a mayor tamaño con el contenido escalado.</span></div>
+      <div class="use-case"><strong>Reducir de A4 a A5</strong><span>Una versión compacta para imprimir como folleto o leer en una tablet.</span></div>
       <div class="use-case"><strong>Unificar formatos antes de unir</strong><span>Dejar todos los documentos de un expediente en A4 antes de <a href="/unir-pdf/">unirlos</a>.</span></div>
     </div>
 
@@ -725,6 +750,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
       <div class="faq-item"><h3>¿Puedo pasar de A4 a Carta sin perder contenido?</h3><p>Sí, con «Ajustar contenido» activado: el contenido se escala de forma uniforme y se centra, sin recortar nada.</p></div>
       <div class="faq-item"><h3>¿Qué pasa si el PDF tiene páginas de distintos tamaños?</h3><p>Todas pasan al formato elegido; con «Ajustar contenido», cada una se escala según su tamaño original.</p></div>
       <div class="faq-item"><h3>¿Puedo usar un tamaño personalizado?</h3><p>Sí, indicando ancho y alto en milímetros.</p></div>
+      <div class="faq-item"><h3>¿Redimensionar reduce el peso del archivo?</h3><p>No es lo mismo: redimensionar cambia las medidas de la página, no los MB. Para que el archivo pese menos, usa <a href="/comprimir-pdf/">Comprimir PDF</a>.</p></div>
       <div class="faq-item"><h3>¿Se sube el PDF a algún servidor?</h3><p>No. Todo ocurre en tu navegador con pdf-lib.</p></div>
     </div>
 
@@ -735,7 +761,6 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
       <a href="/unir-pdf/">Unir PDF</a>
       <a href="/comprimir-pdf/">Comprimir PDF</a>
     </div>
-    <p>Guía relacionada: <a href="/blog/como-redimensionar-pdf/">cómo redimensionar un PDF</a>.</p>
   </section>
 </main>
 
