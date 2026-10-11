@@ -30,7 +30,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 <url><loc>https://pdfrapido.eu/firmar-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 <url><loc>https://pdfrapido.eu/rellenar-formulario/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 <url><loc>https://pdfrapido.eu/proteger-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-<url><loc>https://pdfrapido.eu/desbloquear-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 <url><loc>https://pdfrapido.eu/resumir-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 <url><loc>https://pdfrapido.eu/chat-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 <url><loc>https://pdfrapido.eu/corregir-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -46,7 +45,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 <url><loc>https://pdfrapido.eu/generar-pdf/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 <url><loc>https://pdfrapido.eu/contacto/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://pdfrapido.eu/privacidad/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-<url><loc>https://pdfrapido.eu/cookies/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://pdfrapido.eu/blog/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://pdfrapido.eu/blog/como-comprimir-pdf-gratis/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://pdfrapido.eu/blog/como-unir-pdf-online/</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
