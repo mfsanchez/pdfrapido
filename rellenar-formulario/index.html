@@ -67,7 +67,7 @@
         .fo:not(.added) .fo-input{width:100%;height:100%;border:1.5px solid rgba(66,133,244,.65);background:rgba(219,234,254,.75);border-radius:3px;padding:2px 5px;font-family:'DM Sans',sans-serif;font-size:11px;color:#000;outline:none;box-sizing:border-box;line-height:1.4}
         .fo:not(.added) .fo-input:focus{border-color:#4285F4;background:rgba(219,234,254,.9)}
         .fo:not(.added) .fo-input[type="date"]{font-size:10px;padding:1px 3px}
-        .fo:not(.added)>input[type="checkbox"]{width:100%;height:100%;cursor:pointer;accent-color:var(--accent);display:block}
+        .fo:not(.added)>input[type="checkbox"],.fo:not(.added)>input[type="radio"]{width:100%;height:100%;cursor:pointer;accent-color:var(--accent);display:block;margin:0}
         .fo:not(.added)>select.fo-input{cursor:pointer;width:100%;height:100%}
         /* Campos añadidos manualmente */
         .fo.added{border:1.5px solid rgba(66,133,244,.75);border-radius:3px;background:rgba(219,234,254,.55);display:flex;flex-direction:column;overflow:visible;min-width:24px;min-height:20px}
@@ -701,7 +701,7 @@
             var widgets;
             try { widgets = field.acroField.getWidgets(); } catch (e) { return; }
 
-            widgets.forEach(function (widget) {
+            widgets.forEach(function (widget, wi) {
                 var pi = findWidgetPage(widget, pages);
                 if (pi >= wraps.length) return;
 
@@ -714,7 +714,7 @@
                 var w    = Math.max(Math.round(rect.width  * RS), 20);
                 var h    = Math.max(Math.round(rect.height * RS), 14);
                 var ft   = getFieldType(field);
-                var ov   = buildOverlayEl(ft, field);
+                var ov   = buildOverlayEl(ft, field, wi);
 
                 ov.style.left   = left + 'px';
                 ov.style.top    = top  + 'px';
@@ -744,19 +744,30 @@
         return 0;
     }
 
+    // instanceof y no constructor.name: en pdf-lib.min.js las clases se llaman «e», «r»…
+    // y con el nombre todos los campos salían como texto (casillas sin marcar al guardar).
     function getFieldType(field) {
-        var n = field.constructor.name;
-        if (n === 'PDFCheckBox')   return 'checkbox';
-        if (n === 'PDFRadioGroup') return 'radio';
-        if (n === 'PDFDropdown')   return 'dropdown';
+        if (field instanceof PDFLib.PDFCheckBox)   return 'checkbox';
+        if (field instanceof PDFLib.PDFRadioGroup) return 'radio';
+        if (field instanceof PDFLib.PDFDropdown)   return 'dropdown';
         return 'text';
     }
 
-    function buildOverlayEl(type, field) {
+    function buildOverlayEl(type, field, wi) {
         var div = document.createElement('div');
         div.className = 'fo';
 
-        if (type === 'checkbox') {
+        if (type === 'radio') {
+            // Un widget por opción: getOptions() va en el mismo orden que los widgets.
+            var rb = document.createElement('input');
+            rb.type = 'radio';
+            rb.name = 'fo-radio-' + field.getName();
+            try {
+                rb.value = field.getOptions()[wi] || '';
+                if (rb.value && field.getSelected() === rb.value) rb.checked = true;
+            } catch (e) {}
+            div.appendChild(rb);
+        } else if (type === 'checkbox') {
             var cb = document.createElement('input');
             cb.type = 'checkbox';
             try { if (field.isChecked()) cb.checked = true; } catch (e) {}
@@ -1002,6 +1013,8 @@
                     try {
                         if (item.fieldType === 'checkbox') {
                             item.input.checked ? f.check() : f.uncheck();
+                        } else if (item.fieldType === 'radio') {
+                            if (item.input.checked && item.input.value) f.select(item.input.value);
                         } else if (item.fieldType === 'dropdown') {
                             if (item.input.value) f.select(item.input.value);
                         } else {
