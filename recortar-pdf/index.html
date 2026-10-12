@@ -596,6 +596,7 @@
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo figure{margin:20px 0 24px}.content-seo figure img{display:block;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px}.content-seo figcaption{font-size:13px;color:#6B7280;line-height:1.6;margin-top:8px}
 </style>
   <section class="content-seo" aria-label="Guía para recortar un PDF">
     <h2>Cómo funciona</h2>
@@ -605,6 +606,23 @@
       <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Elige las páginas y descarga</h3><p>Todas, solo la primera o un rango (por ejemplo 2-5). Descarga el PDF recortado.</p></div></div>
     </div>
     <p>El archivo se sube a nuestro servidor en España, donde PyMuPDF cambia el «área visible» (CropBox) de cada página. El contenido no se vuelve a generar, así que no pierde calidad. El archivo se elimina en un máximo de 10 minutos.</p>
+
+    <h2>Ejemplo real: una ficha pequeña impresa en un A4</h2>
+    <p>El caso típico: un documento de 2 páginas A4 (43,9 KB) en el que cada página solo tiene una ficha enmarcada en el centro, con 5,5 cm de blanco a cada lado y 7 cm arriba y abajo. Lo subimos con las opciones por defecto: modo automático y todas las páginas.</p>
+    <figure>
+      <img src="/img/capturas/recortar-pdf-opciones.webp" width="844" height="451" loading="lazy" decoding="async" alt="Opciones de Recortar PDF: modo de recorte Automático seleccionado, explicación de la detección automática, páginas a recortar Todas las páginas y botón Recortar PDF">
+      <figcaption>Opciones usadas: detección automática y todas las páginas.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Resultado:</strong> las 2 páginas pasan a medir 10,7 × 16,4 cm. El recorte deja unos 3,5 mm de aire alrededor del marco de la ficha, así que no se come el borde del contenido.</li>
+      <li><strong>Tamaño del archivo:</strong> 43,6 KB, prácticamente igual que el original, porque no se vuelve a generar nada: solo cambia la zona visible de cada página.</li>
+      <li><strong>Tiempo:</strong> 1,22 segundos de mediana en tres pruebas (entre 0,91 y 1,65 s) desde el clic en «Recortar PDF» hasta que aparece el botón de descarga, incluida la subida al servidor.</li>
+    </ul>
+    <figure>
+      <img src="/img/capturas/recortar-pdf-antes-despues.webp" width="759" height="704" loading="lazy" decoding="async" alt="Comparación a la misma escala: a la izquierda la página A4 original con la ficha en el centro y mucho margen blanco; a la derecha la página recortada de 10,7 por 16,4 centímetros que solo contiene la ficha">
+      <figcaption>Antes y después a la misma escala: la página recortada solo conserva la ficha.</figcaption>
+    </figure>
+    <p>Al preparar esta prueba vimos un detalle útil: en una primera versión del archivo, el texto se salía del marco por abajo hasta el borde de la hoja, y el modo automático, correctamente, no recortó nada por abajo. La detección busca dónde termina cualquier contenido, no dónde está el marco. Si tu documento tiene un pie de página, un número de página o una marca del escáner cerca del borde, el recorte automático lo respetará; para quitarlo, usa el modo manual.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
