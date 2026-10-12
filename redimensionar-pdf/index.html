@@ -319,6 +319,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #4285F4;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo figure{margin:20px 0 24px}.content-seo figure img{display:block;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px}.content-seo figcaption{font-size:13px;color:#6B7280;line-height:1.6;margin-top:8px}
             .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
 </style>
     <script type="application/ld+json">
@@ -747,6 +748,24 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     </table></div>
     <p>El Oficio no mide lo mismo en todos los países: en México son 216 × 340 mm; en otros, 8,5 × 13 pulgadas, y en algunos se llama «oficio» a un tamaño casi igual al Legal. Si te piden una medida concreta, compruébala y, si no coincide, usa «Personalizado».</p>
     <p>A4 y Carta se parecen, pero no son iguales: Carta es 5,9 mm más ancho y 17,6 mm más corto. Por eso un documento en Carta impreso en A4 sin ajustar sale con los márgenes descompensados o con el pie cortado.</p>
+
+    <h2>Ejemplo real: de Carta a A4 con «Ajustar contenido»</h2>
+    <p>Es la conversión que más se pide: un documento hecho en Estados Unidos o México que hay que entregar o imprimir en A4. Probamos con un PDF de 3 páginas en tamaño Carta (45,4 KB) que tiene texto hasta cerca del pie de página.</p>
+    <figure>
+      <img src="/img/capturas/redimensionar-pdf-opciones.webp" width="784" height="843" loading="lazy" decoding="async" alt="Opciones de Redimensionar PDF con el archivo documento-carta-ejemplo.pdf cargado, formato A4 seleccionado, orientación vertical y el modo Ajustar contenido al nuevo tamaño">
+      <figcaption>Ajustes usados: A4, vertical y «Ajustar contenido al nuevo tamaño».</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Resultado:</strong> 3 páginas A4 exactas (210 × 297 mm) y 43,9 KB. El mensaje final confirma «A4 · Vertical · 3 páginas».</li>
+      <li><strong>Qué le pasa al contenido:</strong> como Carta es más ancho que A4, todo se reduce al 97,3 % para que quepa a lo ancho. Una letra de 11 puntos pasa a medir unos 10,7: la diferencia no se nota al leer.</li>
+      <li><strong>Dónde queda el espacio sobrante:</strong> como A4 es más alto, sobran 25 mm de alto, que se reparten en una franja blanca de 12,6 mm arriba y otra igual abajo. El pie de página ya no queda cortado al imprimir.</li>
+      <li><strong>Tiempo:</strong> 1,11 segundos de mediana en tres pruebas (entre 0,69 y 1,15 s), sin subir el archivo a ningún servidor.</li>
+    </ul>
+    <figure>
+      <img src="/img/capturas/redimensionar-pdf-antes-despues.webp" width="749" height="536" loading="lazy" decoding="async" alt="Comparación a la misma escala de la primera página: a la izquierda en tamaño Carta, a la derecha en A4 con el mismo contenido ligeramente reducido y centrado, con más blanco arriba y abajo">
+      <figcaption>La misma página antes y después, a la misma escala: el contenido no se deforma, solo se reduce un poco y se centra.</figcaption>
+    </figure>
+    <p>Con «Solo cambiar el tamaño de la página», en cambio, el contenido no se mueve de la esquina inferior izquierda: la hoja A4 pierde 5,9 mm por la derecha y gana 17,6 mm de blanco arriba. En este documento no se habría cortado texto, porque tiene margen derecho de sobra, pero sí quedaría descentrado. Para cambiar de formato un documento ya maquetado, «Ajustar contenido» es casi siempre la opción correcta.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
