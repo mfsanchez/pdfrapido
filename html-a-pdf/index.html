@@ -201,7 +201,7 @@
           "name": "¿Se conservan los estilos y las imágenes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Parcialmente. La conversión con LibreOffice no interpreta todo el CSS, y las imágenes con rutas relativas pueden perderse."
+            "text": "Poco. Se conservan el texto, los títulos, las negritas, las listas y los enlaces, pero LibreOffice no interpreta todo el CSS y las imágenes suelen perderse: en un artículo de Wikipedia no apareció ninguna."
           }
         },
         {
@@ -253,7 +253,6 @@
     }
   ]
 }
-
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -356,6 +355,7 @@
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo figure{margin:20px 0 24px}.content-seo figure img{display:block;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px}.content-seo figcaption{font-size:13px;color:#6B7280;line-height:1.6;margin-top:8px}
 </style>
   <section class="content-seo" aria-label="Guía para convertir una página web a PDF">
     <h2>Cómo funciona</h2>
@@ -365,6 +365,34 @@
       <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>El archivo se llama como el dominio de la página.</p></div></div>
     </div>
     <p>Nuestro servidor en la UE (Países Bajos) descarga el código HTML de la URL y lo convierte a PDF con LibreOffice. No es una captura de pantalla de un navegador: se convierte el HTML tal como lo entrega el servidor, sin ejecutar JavaScript. Los archivos temporales se eliminan en un máximo de 10 minutos.</p>
+
+    <h2>Ejemplo real: un artículo de nuestro blog</h2>
+    <p>Para ver qué produce exactamente la conversión, pegamos la dirección de nuestra guía <a href="/blog/diferencia-pdf-y-pdfa/">Diferencia entre PDF y PDF/A</a>, una página de texto con títulos, negritas, listas y un recuadro destacado.</p>
+    <figure>
+      <img src="/img/capturas/html-a-pdf-url.webp" width="684" height="192" loading="lazy" decoding="async" alt="Campo de URL de la herramienta HTML a PDF con la dirección https://pdfrapido.eu/blog/diferencia-pdf-y-pdfa/ y el botón Convertir a PDF">
+      <figcaption>Basta con la URL completa; no hay más ajustes.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Resultado:</strong> «pdfrapido.eu.pdf», 4 páginas A4 y 74,5 KB, con 21 enlaces que siguen siendo clicables.</li>
+      <li><strong>Tiempo:</strong> 2,5 segundos de mediana en tres conversiones. La primera tardó 7,3 s y las otras dos, 2,5 s. Con páginas más largas tarda más: ver abajo los casos de Wikipedia y del BOE.</li>
+      <li><strong>Qué se conserva:</strong> el texto completo, los títulos con su jerarquía, las negritas, las listas y los enlaces.</li>
+      <li><strong>Qué cambia:</strong> el menú y las migas de pan aparecen arriba como texto y listas numeradas, la tipografía pasa a una fuente con remates y el recuadro destacado se convierte en líneas con una barra verde a la izquierda.</li>
+    </ul>
+    <figure>
+      <img src="/img/capturas/html-a-pdf-salida.webp" width="760" height="1075" loading="lazy" decoding="async" alt="Primera página del PDF generado: enlaces del menú arriba, migas de pan como lista numerada, el título del artículo y el texto en una fuente con remates">
+      <figcaption>Primera página del PDF descargado: el contenido está completo, pero con aspecto de documento, no de web.</figcaption>
+    </figure>
+
+    <h2>Qué pasó con seis webs reales</h2>
+    <p>Probamos la herramienta el 12 de octubre de 2026 con sitios de distinto tipo. Es una foto de ese día: cada web puede cambiar su forma de responder.</p>
+    <ul>
+      <li><strong>Wikipedia</strong> (artículo «Formato de documento portátil»): 13 páginas en 9,8 s, con todo el texto y los enlaces. Ninguna imagen del artículo llegó al PDF, y las primeras páginas son el menú lateral convertido en listas.</li>
+      <li><strong>BOE</strong> (texto consolidado de la Ley Orgánica 3/2018 de protección de datos): 92 páginas en 6,1 s y 555 KB. Es el caso ideal: texto largo con poco diseño, y el resultado se lee bien de principio a fin.</li>
+      <li><strong>Nuestro blog:</strong> 4 páginas en 2,5 s, como en el ejemplo de arriba.</li>
+      <li><strong>X (Twitter):</strong> 1 página con unas 50 palabras, solo el aviso para iniciar sesión, en inglés. El contenido se carga con JavaScript y no llega a convertirse.</li>
+      <li><strong>Portada de El País</strong> y <strong>web de la Agencia Tributaria:</strong> error «No se pudo acceder a la URL». El País rechaza las peticiones que llegan desde servidores, aunque se identifiquen como navegador, y la sede de la Agencia Tributaria tampoco aceptó la conexión de nuestro servidor.</li>
+    </ul>
+    <p>La conclusión práctica: funciona bien con páginas de texto públicas (normativa, documentación, artículos) y mal con portadas, tiendas y redes sociales.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
@@ -376,17 +404,16 @@
     <ul>
       <li><strong>No ejecuta JavaScript.</strong> Las webs que cargan su contenido con JavaScript (muchas tiendas, redes sociales y aplicaciones web) saldrán vacías o incompletas.</li>
       <li><strong>El diseño no se conserva fielmente.</strong> LibreOffice interpreta solo parte del CSS; la maquetación, las fuentes web y los menús pueden verse muy distintos al navegador.</li>
-      <li><strong>Imágenes y estilos con rutas relativas</strong> pueden no aparecer.</li>
+      <li><strong>Las imágenes casi nunca aparecen.</strong> En nuestras pruebas, el PDF de Wikipedia no incluyó ninguna de las del artículo. Los estilos también se pierden en buena parte.</li>
       <li>Solo páginas públicas: no funciona con páginas que requieren iniciar sesión ni con webs que bloquean robots.</li>
       <li>Solo admite URL: no se puede pegar código HTML ni subir un archivo .html, ni elegir tamaño de papel o márgenes.</li>
     </ul>
     <p>Si necesitas una copia fiel de cómo se ve la página, usa la opción «Imprimir → Guardar como PDF» de tu navegador.</p>
-    <!-- TODO(contenido): probar con 5-10 webs reales (periódico, blog, tienda, web de la Administración) y documentar qué se conserva y qué no. -->
 
     <h2>Preguntas frecuentes sobre HTML a PDF</h2>
     <div class="faq">
       <div class="faq-item"><h3>¿Funciona con cualquier página web?</h3><p>Solo con páginas públicas cuyo contenido esté en el HTML. Las que necesitan JavaScript, inicio de sesión o bloquean robots pueden salir vacías o incompletas.</p></div>
-      <div class="faq-item"><h3>¿Se conservan los estilos y las imágenes?</h3><p>Parcialmente. La conversión con LibreOffice no interpreta todo el CSS, y las imágenes con rutas relativas pueden perderse.</p></div>
+      <div class="faq-item"><h3>¿Se conservan los estilos y las imágenes?</h3><p>Poco. Se conservan el texto, los títulos, las negritas, las listas y los enlaces, pero LibreOffice no interpreta todo el CSS y las imágenes suelen perderse: en un artículo de Wikipedia no apareció ninguna.</p></div>
       <div class="faq-item"><h3>¿Puedo pegar mi propio código HTML?</h3><p>No. La herramienta solo convierte URL públicas.</p></div>
       <div class="faq-item"><h3>¿Cómo obtengo una copia idéntica a lo que veo?</h3><p>Usa la función «Imprimir → Guardar como PDF» de tu navegador, que conserva el diseño tal como lo ves.</p></div>
     </div>
