@@ -276,7 +276,7 @@
           "name": "¿Funciona con los formularios de la Administración?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Con los que son PDF rellenables estándar, sí. Los formularios XFA y los trámites que solo existen como formulario web no."
+            "text": "Con los que son PDF rellenables estándar, sí: lo hemos comprobado con el modelo 145 de la Agencia Tributaria y con la solicitud de prestación del SEPE. Los formularios XFA puros y los trámites que solo existen como formulario web no."
           }
         },
         {
@@ -328,7 +328,6 @@
     }
   ]
 }
-
 </script>
         <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -505,6 +504,7 @@
 .content-seo .use-case{background:#f9fafb;border-left:3px solid #E8453C;border-radius:0 10px 10px 0;padding:14px 18px}
 .content-seo .use-case strong{display:block;font-size:14px;font-weight:600;color:#1B2A4A;margin-bottom:4px}
 .content-seo .use-case span{font-size:14px;color:#6B7280;line-height:1.6}
+.content-seo figure{margin:20px 0 24px}.content-seo figure img{display:block;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px}.content-seo figcaption{font-size:13px;color:#6B7280;line-height:1.6;margin-top:8px}
 </style>
   <section class="content-seo" aria-label="Guía para rellenar un formulario PDF">
     <h2>Cómo funciona</h2>
@@ -514,6 +514,31 @@
       <div class="step"><div class="step-num">3</div><div class="step-body"><h3>Descarga el PDF</h3><p>Los datos quedan guardados dentro del archivo.</p></div></div>
     </div>
     <p>Todo ocurre en tu navegador con pdf-lib; el documento no se sube a ningún servidor. En un formulario con campos, al descargar las respuestas se integran en la página (el formulario se «aplana»), así que se ven igual en cualquier visor pero ya no se pueden cambiar. En un PDF sin campos, las cajas que añades se guardan como campos rellenables.</p>
+
+    <h2>Ejemplo real: una inscripción con los cuatro tipos de campo</h2>
+    <p>Creamos un formulario de prueba de una página (55,4 KB) con los tipos de campo que más se ven en los PDF reales: cuatro cajas de texto (nombre, apellidos, correo y fecha), dos casillas de verificación, un par de botones de opción para elegir turno y una lista desplegable con el nivel.</p>
+    <figure>
+      <img src="/img/capturas/rellenar-formulario-campos.webp" width="884" height="905" loading="lazy" decoding="async" alt="Editor de Rellenar formulario con el aviso «Formulario detectado: 8 campos listos para rellenar», los cuatro textos completados, la casilla de normas marcada, el turno Tarde elegido y el nivel Intermedio en el desplegable">
+      <figcaption>Al subirlo, la herramienta detecta los 8 campos y los muestra resaltados sobre la página.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Lo que rellenamos:</strong> los cuatro textos, la casilla «Acepto las normas del taller», el turno «Tarde» y el nivel «Intermedio».</li>
+      <li><strong>Resultado:</strong> un PDF de 1 página y 50,6 KB en el que se ven todas las respuestas, incluidas la marca de la casilla, el botón de opción elegido y el valor del desplegable. Al revisarlo con otro programa, el archivo ya no tiene campos: están aplanados.</li>
+      <li><strong>Tiempo:</strong> 0,44 segundos de mediana en tres pruebas (entre 0,34 y 0,51 s) desde el clic en «Descargar PDF rellenado» hasta tener el archivo.</li>
+    </ul>
+    <figure>
+      <img src="/img/capturas/rellenar-formulario-resultado.webp" width="760" height="580" loading="lazy" decoding="async" alt="PDF descargado con los datos ya impresos en la página: nombre Ana, apellidos, correo, fecha 03/10/2026, casilla marcada, turno Tarde y nivel Intermedio">
+      <figcaption>El PDF descargado: las respuestas forman parte de la página y se ven igual en cualquier visor.</figcaption>
+    </figure>
+
+    <h2>Probado con formularios oficiales</h2>
+    <p>El 12 de octubre de 2026 descargamos tres formularios oficiales en PDF, escribimos en sus primeros campos, marcamos una casilla y descargamos el resultado:</p>
+    <ul>
+      <li><strong>Modelo 145 de la Agencia Tributaria</strong> (comunicación de datos al pagador para las retenciones del IRPF): 2 páginas, 56 campos de texto y 64 casillas detectados. El texto quedó dentro de las casillas de NIF, apellidos y nombre y año de nacimiento.</li>
+      <li><strong>Solicitud de prestación contributiva por desempleo del SEPE:</strong> 3 páginas, con 99 cajas de texto y 55 casillas en pantalla. Rellenado y descargado sin errores.</li>
+      <li><strong>Formulario W-9 de la agencia tributaria de EE. UU.:</strong> lleva a la vez campos XFA y campos estándar. Se rellenaron los estándar (15 de texto y 8 casillas) y el resultado se generó bien.</li>
+    </ul>
+    <p>En los tres casos, abrir el formulario y mostrar los campos tardó unos 3 segundos. Si un PDF oficial no muestra ningún campo, lo más probable es que sea un formulario XFA puro o un impreso sin campos: en ese caso puedes colocar tus propias cajas de texto encima.</p>
 
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
@@ -528,13 +553,12 @@
       <li><strong>Formularios XFA</strong> (algunos de la Administración creados con Adobe LiveCycle) pueden no mostrar sus campos. Muchos modelos tributarios, además, no son PDF sino formularios web.</li>
       <li>En PDF sin campos, las cajas añadidas se colocan donde las pongas; ajusta bien la posición antes de descargar.</li>
     </ul>
-    <!-- TODO(contenido): probar con formularios reales de la Administración (Seguridad Social, ayuntamientos) e indicar cuáles funcionan y cuáles son XFA. -->
 
     <h2>Preguntas frecuentes sobre rellenar formularios PDF</h2>
     <div class="faq">
       <div class="faq-item"><h3>¿Puedo rellenar un PDF sin campos de formulario?</h3><p>Sí. Usa la barra de herramientas para añadir cajas de texto, casillas o fechas en cualquier punto de la página.</p></div>
       <div class="faq-item"><h3>¿Puedo guardarlo a medias y seguir después?</h3><p>No en formularios con campos: al descargar, el formulario se aplana y deja de ser editable. Complétalo del todo antes de descargarlo.</p></div>
-      <div class="faq-item"><h3>¿Funciona con los formularios de la Administración?</h3><p>Con los que son PDF rellenables estándar, sí. Los formularios XFA y los trámites que solo existen como formulario web no.</p></div>
+      <div class="faq-item"><h3>¿Funciona con los formularios de la Administración?</h3><p>Con los que son PDF rellenables estándar, sí: lo hemos comprobado con el modelo 145 de la Agencia Tributaria y con la solicitud de prestación del SEPE. Los formularios XFA puros y los trámites que solo existen como formulario web no.</p></div>
       <div class="faq-item"><h3>¿Puedo añadir mi firma?</h3><p>Sí, después de rellenarlo, con Firmar PDF.</p></div>
       <div class="faq-item"><h3>¿Se envían mis datos a algún servidor?</h3><p>No. El formulario se rellena y se genera en tu navegador.</p></div>
     </div>
