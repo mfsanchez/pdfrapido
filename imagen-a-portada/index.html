@@ -488,6 +488,8 @@
 .content-seo .rtn{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 28px}
 .content-seo .rtn a{display:inline-block;padding:10px 18px;background:#fff;border:1px solid #e5e7eb;border-radius:100px;font-size:14px;font-weight:500;color:#1B2A4A;text-decoration:none}
 .content-seo .rtn a:hover{border-color:#E8453C;color:#E8453C}
+.content-seo .table-wrap{overflow-x:auto}
+.content-seo figure{margin:20px 0 24px}.content-seo figure img{display:block;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:12px}.content-seo figcaption{font-size:13px;color:#6B7280;line-height:1.6;margin-top:8px}
 </style>
 <section class="content-seo" aria-label="Guía para añadir una portada a un PDF">
   <p>Añade una portada a cualquier PDF usando una imagen <strong>JPG, PNG o WebP</strong>. Todo ocurre <strong>en tu navegador</strong>: ni el PDF ni la imagen se suben a ningún servidor.</p>
@@ -527,6 +529,24 @@
       </div>
     </div>
   </div>
+
+  <h2>Ejemplo real: portada para un informe trimestral</h2>
+  <p>Probamos el modo por defecto con un informe de ejemplo de 4 páginas A4 (46,2 KB) y una imagen de portada en JPG de 1240 × 1754 píxeles (79,9 KB), que es la proporción de un A4 a 150 ppp.</p>
+  <figure>
+    <img src="/img/capturas/imagen-a-portada-opciones.webp" width="884" height="345" loading="lazy" decoding="async" alt="Imagen a portada con el PDF informe-trimestral-ejemplo.pdf y la imagen portada-ejemplo.jpg cargados, el modo Nueva página de portada seleccionado y el botón Generar vista previa">
+    <figcaption>Los dos archivos cargados y el modo «Nueva página de portada».</figcaption>
+  </figure>
+  <ul>
+    <li><strong>Resultado:</strong> un PDF de 5 páginas y 123,2 KB. La portada ocupa la página 1 y el informe empieza, sin cambios, en la página 2.</li>
+    <li><strong>Calidad de la imagen:</strong> extrajimos la imagen del PDF descargado y es idéntica byte a byte al JPG original (81.835 bytes). No se recomprime, así que no pierde nitidez.</li>
+    <li><strong>Encaje:</strong> como la imagen tiene la misma proporción que un A4, llena la página entera, sin franjas blancas. Con una imagen apaisada o cuadrada quedarían márgenes arriba y abajo.</li>
+    <li><strong>Tiempo:</strong> 0,54 segundos de mediana en tres pruebas (entre 0,39 y 0,74 s) desde el clic en «Generar vista previa» hasta ver la portada.</li>
+  </ul>
+  <figure>
+    <img src="/img/capturas/imagen-a-portada-resultado.webp" width="884" height="888" loading="lazy" decoding="async" alt="Vista previa de la página 1 con la portada azul «Informe trimestral, Biblioteca de Villaejemplo, 3.er trimestre», el recuento de 5 páginas y 123,2 KB y el botón Descargar PDF">
+    <figcaption>Vista previa antes de descargar: la portada ocupa la página 1 y el documento pasa a tener 5 páginas.</figcaption>
+  </figure>
+  <p>El tamaño final es casi la suma de los dos archivos (46,2 + 79,9 KB), lo que confirma que no se ha añadido ni quitado calidad. Si quieres un archivo más ligero, reduce antes la resolución de la imagen: para una portada que solo se va a ver en pantalla, 1240 px de ancho son más que suficientes.</p>
 
   <h2>Para qué sirve: situaciones reales</h2>
   <div class="use-cases">
@@ -580,7 +600,7 @@
   </div>
 
   <h2>¿Por qué elegir PDFRápido?</h2>
-  <table class="comparison">
+  <div class="table-wrap"><table class="comparison">
     <thead><tr><th>Característica</th><th>PDFRápido</th><th>iLovePDF</th><th>Smallpdf</th></tr></thead>
     <tbody>
       <tr><td>Gratuito</td><td>✅ Sí</td><td>⚠️ Limitado</td><td>⚠️ Limitado</td></tr>
@@ -589,7 +609,7 @@
       <tr><td>Vista previa antes de descargar</td><td>✅ Sí</td><td>⚠️ Variable</td><td>⚠️ Variable</td></tr>
       <tr><td>Sin tope de tareas</td><td>✅ Sí</td><td>❌ Tope diario</td><td>❌ 2/día</td></tr>
     </tbody>
-  </table>
+  </table></div>
 
   <h2>Otras herramientas PDF</h2>
   <div class="rtn">
