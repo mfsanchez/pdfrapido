@@ -355,55 +355,51 @@ function handle_pdf_to_office() {
 }
 
 function handle_html_to_pdf() {
-    $url = $_POST['url'] ?? '';
-    
-    if (empty($url) || !filter_var($url, FILTER_VALIDATE_URL)) {
-        json_error('URL no válida', 400);
-    }
+    $url = trim($_POST['url'] ?? '');
+    if ($url === '') json_error('URL no válida', 400);
 
-    // Verificar que sea HTTP/HTTPS
-    $scheme = parse_url($url, PHP_URL_SCHEME);
-    if (!in_array($scheme, ['http', 'https'])) {
-        json_error('Solo se permiten URLs HTTP/HTTPS', 400);
+    // Descarga validando cada salto (sin SSRF) y HTML sin recursos externos
+    try {
+        [$html_content, $tipo] = urlseg_descargar($url);
+        $html_content = urlseg_limpiar_html($html_content, $tipo);
+    } catch (RuntimeException $e) {
+        json_error($e->getMessage(), 422);
     }
 
     $id = uniqid('html_');
     $workdir = UPLOAD_DIR . $id . '/';
     mkdir($workdir, 0755, true);
-
-    // Descargar HTML
-    $html_content = @file_get_contents($url, false, stream_context_create([
-        'http' => ['timeout' => 15, 'user_agent' => 'PDFRápido Bot/1.0']
-    ]));
-
-    if ($html_content === false) {
-        cleanup_dir($workdir);
-        json_error('No se pudo acceder a la URL', 422);
-    }
+    // send_file() y json_error() hacen exit; rm -r también borra lo_profile/
+    register_shutdown_function(function () use ($workdir) { exec('rm -rf ' . escapeshellarg($workdir)); });
 
     $html_path = $workdir . 'page.html';
     file_put_contents($html_path, $html_content);
 
     $lo_profile = 'file://' . $workdir . 'lo_profile';
-    $cmd = sprintf(
-        'HOME=/tmp DCONF_PROFILE=/dev/null %s --headless --norestore -env:UserInstallation=%s --convert-to pdf --outdir %s %s 2>&1',
-        escapeshellarg(LIBREOFFICE_BIN),
-        escapeshellarg($lo_profile),
-        escapeshellarg($workdir),
-        escapeshellarg($html_path)
-    );
-
-    exec($cmd, $output, $return_code);
-
     $pdf_path = $workdir . 'page.pdf';
+    // Sin red (unshare -rn) si se puede; si así no sale el PDF, se reintenta con red:
+    // el HTML ya no tiene referencias externas
+    foreach (array_unique([urlseg_sin_red(), '']) as $prefijo) {
+        $cmd = sprintf(
+            'HOME=/tmp DCONF_PROFILE=/dev/null timeout 60 %s%s --headless --norestore -env:UserInstallation=%s --convert-to pdf --outdir %s %s 2>&1',
+            $prefijo,
+            escapeshellarg(LIBREOFFICE_BIN),
+            escapeshellarg($lo_profile),
+            escapeshellarg($workdir),
+            escapeshellarg($html_path)
+        );
+        exec($cmd, $output, $return_code);
+        if (file_exists($pdf_path)) break;
+        if ($prefijo !== '') error_log('html-to-pdf: LibreOffice sin red no generó PDF (rc=' . $return_code . '); reintento con red');
+    }
+
     if (!file_exists($pdf_path)) {
-        cleanup_dir($workdir);
         json_error('Error al convertir la página web', 422);
     }
 
     $domain = parse_url($url, PHP_URL_HOST) ?? 'pagina';
+    $domain = preg_replace('/[^A-Za-z0-9.-]/', '', $domain) ?: 'pagina';
     send_file($pdf_path, $domain . '.pdf', 'application/pdf');
-    cleanup_dir($workdir);
 }
 
 function handle_unlock_pdf() {
@@ -706,3 +702,281 @@ function cleanup_old_files(): void {
         }
     }
 }
+
+// --- url_segura: inicio (html-to-pdf sin SSRF; se prueba con test-url-segura.php) ---
+/**
+ * Descarga de URLs de usuario sin SSRF (html-to-pdf).
+ *
+ * - Solo http/https, puertos 80/443, sin usuario:contraseña en la URL.
+ * - Se resuelve el DNS y se rechaza la URL si CUALQUIER IP no es pública
+ *   (privadas, loopback, link-local/metadatos, CGNAT/Tailscale, multicast,
+ *   reservadas, documentación e IPv6 equivalentes, incluidas las IPv4
+ *   embebidas en IPv6).
+ * - curl se conecta solo a las IP ya validadas (CURLOPT_RESOLVE), así que un
+ *   DNS que cambie entre la comprobación y la conexión no sirve de nada.
+ * - Las redirecciones no las sigue curl: se revalida cada salto (máx. 3).
+ * - Tiempo y tamaño máximos.
+ * - El HTML se limpia de todo lo que LibreOffice descargaría por su cuenta
+ *   (<link>, <img>, <iframe>, url() en CSS...), y LibreOffice se ejecuta sin
+ *   red cuando el sistema lo permite (unshare -rn).
+ */
+
+// define() y no const: el enrutado de arriba hace exit antes de llegar aquí, y las
+// funciones se declaran al compilar pero las constantes solo al ejecutarse.
+function urlseg_conf(string $k) {
+    static $c = ['MAX_BYTES' => 5 * 1024 * 1024, 'MAX_SALTOS' => 3, 'TIMEOUT_TOTAL' => 15,
+                 'TIMEOUT_CONEX' => 5, 'PUERTOS' => [80, 443]];
+    return $c[$k];
+}
+
+/** IPv4 o IPv6 que no son Internet pública. */
+function urlseg_ip_bloqueada(string $ip): bool {
+    $bin = @inet_pton($ip);
+    if ($bin === false) return true;
+
+    if (strlen($bin) === 4) {
+        static $v4 = [
+            '0.0.0.0/8', '10.0.0.0/8', '100.64.0.0/10', '127.0.0.0/8', '169.254.0.0/16',
+            '172.16.0.0/12', '192.0.0.0/24', '192.0.2.0/24', '192.88.99.0/24', '192.168.0.0/16',
+            '198.18.0.0/15', '198.51.100.0/24', '203.0.113.0/24', '224.0.0.0/4', '240.0.0.0/4',
+        ];
+        foreach ($v4 as $cidr) if (urlseg_en_red($bin, $cidr)) return true;
+        return false;
+    }
+
+    // IPv6 con una IPv4 dentro: se juzga por la IPv4
+    $v4map = [
+        '::ffff:0:0/96',    // IPv4 mapeada
+        '::/96',            // IPv4 compatible (obsoleta)
+        '64:ff9b::/96',     // NAT64
+        '64:ff9b:1::/48',   // NAT64 local
+    ];
+    foreach ($v4map as $cidr) {
+        if (urlseg_en_red($bin, $cidr)) {
+            if ($cidr === '::/96' && substr($bin, 12) === "\0\0\0\0") return true; // ::
+            return urlseg_ip_bloqueada(inet_ntop(substr($bin, 12)));
+        }
+    }
+    static $v6 = [
+        '::1/128', '100::/64', '2001::/23', '2001:db8::/32', '2002::/16',
+        'fc00::/7',   // ULA (incluida la de Tailscale, fd7a:115c:a1e0::/48)
+        'fe80::/10', 'fec0::/10', 'ff00::/8',
+    ];
+    foreach ($v6 as $cidr) if (urlseg_en_red($bin, $cidr)) return true;
+    // Fuera de 2000::/3 no hay unicast global
+    return (ord($bin[0]) & 0xE0) !== 0x20;
+}
+
+function urlseg_en_red(string $bin, string $cidr): bool {
+    [$red, $bits] = explode('/', $cidr);
+    $rbin = inet_pton($red);
+    if (strlen($rbin) !== strlen($bin)) return false;
+    $bits = (int)$bits;
+    $bytes = intdiv($bits, 8);
+    if (substr($bin, 0, $bytes) !== substr($rbin, 0, $bytes)) return false;
+    $resto = $bits % 8;
+    if ($resto === 0) return true;
+    $mask = (0xFF << (8 - $resto)) & 0xFF;
+    return (ord($bin[$bytes]) & $mask) === (ord($rbin[$bytes]) & $mask);
+}
+
+/** IPs a las que apunta $host (A y AAAA). Vacío si no resuelve. */
+function urlseg_resolver(string $host): array {
+    $h = trim($host, '[]');
+    if (filter_var($h, FILTER_VALIDATE_IP)) return [$h];
+    $ips = [];
+    foreach ([DNS_A, DNS_AAAA] as $tipo) {
+        $r = @dns_get_record($h, $tipo);
+        if (!$r) continue;
+        foreach ($r as $rr) {
+            if (isset($rr['ip'])) $ips[] = $rr['ip'];
+            if (isset($rr['ipv6'])) $ips[] = $rr['ipv6'];
+        }
+    }
+    return array_values(array_unique($ips));
+}
+
+/**
+ * Comprueba una URL. Devuelve [host, puerto, ips] o lanza RuntimeException
+ * con un mensaje apto para el usuario.
+ */
+function urlseg_validar(string $url): array {
+    if (strlen($url) > 2048 || !filter_var($url, FILTER_VALIDATE_URL)) {
+        throw new RuntimeException('URL no válida');
+    }
+    $p = parse_url($url);
+    $scheme = strtolower($p['scheme'] ?? '');
+    if (!in_array($scheme, ['http', 'https'], true)) {
+        throw new RuntimeException('Solo se permiten URLs HTTP/HTTPS');
+    }
+    if (isset($p['user']) || isset($p['pass'])) {
+        throw new RuntimeException('La URL no puede incluir usuario ni contraseña');
+    }
+    $host = $p['host'] ?? '';
+    if ($host === '') throw new RuntimeException('URL no válida');
+    $puerto = $p['port'] ?? ($scheme === 'https' ? 443 : 80);
+    if (!in_array($puerto, urlseg_conf('PUERTOS'), true)) {
+        throw new RuntimeException('Solo se admiten URLs en los puertos habituales (80 y 443)');
+    }
+    $ips = urlseg_resolver($host);
+    if (!$ips) throw new RuntimeException('No se pudo acceder a la URL');
+    foreach ($ips as $ip) {
+        if (urlseg_ip_bloqueada($ip)) {
+            throw new RuntimeException('Esa dirección no es una web pública');
+        }
+    }
+    return [trim($host, '[]'), $puerto, $ips];
+}
+
+/** Resuelve un Location relativo respecto a la URL actual. */
+function urlseg_absoluta(string $base, string $loc): string {
+    if (preg_match('#^[a-z][a-z0-9+.-]*:#i', $loc)) return $loc;
+    $b = parse_url($base);
+    $origen = $b['scheme'] . '://' . (strpos($b['host'], ':') !== false ? '[' . $b['host'] . ']' : $b['host'])
+            . (isset($b['port']) ? ':' . $b['port'] : '');
+    if (strpos($loc, '//') === 0) return $b['scheme'] . ':' . $loc;
+    if (strpos($loc, '/') === 0) return $origen . $loc;
+    $dir = preg_replace('#/[^/]*$#', '/', $b['path'] ?? '/');
+    return $origen . $dir . $loc;
+}
+
+/**
+ * Descarga el HTML de una URL pública. Devuelve [html, content_type].
+ * Lanza RuntimeException con un mensaje para el usuario.
+ */
+function urlseg_descargar(string $url): array {
+    $inicio = microtime(true);
+    for ($salto = 0; $salto <= urlseg_conf('MAX_SALTOS'); $salto++) {
+        [$host, $puerto, $ips] = urlseg_validar($url);
+        $restante = urlseg_conf('TIMEOUT_TOTAL') - (microtime(true) - $inicio);
+        if ($restante <= 1) throw new RuntimeException('La página tardó demasiado en responder');
+
+        $fijar = array_map(fn($ip) => strpos($ip, ':') !== false ? "[$ip]" : $ip, $ips);
+        $cuerpo = '';
+        $demasiado = false;
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RESOLVE         => ["$host:$puerto:" . implode(',', $fijar)],
+            CURLOPT_FOLLOWLOCATION  => false,
+            CURLOPT_PROTOCOLS       => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+            CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTP | CURLPROTO_HTTPS,
+            CURLOPT_NOPROXY         => '*',
+            CURLOPT_CONNECTTIMEOUT  => urlseg_conf('TIMEOUT_CONEX'),
+            CURLOPT_TIMEOUT         => (int)ceil($restante),
+            CURLOPT_USERAGENT       => 'PDFRápido Bot/1.0',
+            CURLOPT_HTTPHEADER      => ['Accept: text/html,application/xhtml+xml'],
+            CURLOPT_ENCODING        => '',
+            CURLOPT_HEADER          => false,
+            CURLOPT_WRITEFUNCTION   => function ($ch, $trozo) use (&$cuerpo, &$demasiado) {
+                if (strlen($cuerpo) + strlen($trozo) > urlseg_conf('MAX_BYTES')) { $demasiado = true; return 0; }
+                $cuerpo .= $trozo;
+                return strlen($trozo);
+            },
+        ]);
+        $ok = curl_exec($ch);
+        $codigo = (int)curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+        $tipo = (string)curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+        $destino = (string)curl_getinfo($ch, CURLINFO_REDIRECT_URL);
+        curl_close($ch);
+
+        if ($demasiado) throw new RuntimeException('La página es demasiado grande (máximo 5 MB de HTML)');
+        if ($ok === false) throw new RuntimeException('No se pudo acceder a la URL');
+        if ($codigo >= 300 && $codigo < 400 && $destino !== '') {
+            $url = urlseg_absoluta($url, $destino);
+            continue;
+        }
+        if ($codigo < 200 || $codigo >= 300) throw new RuntimeException('No se pudo acceder a la URL');
+        if ($tipo !== '' && !preg_match('#^\s*(text/html|application/xhtml\+xml)#i', $tipo)) {
+            throw new RuntimeException('La URL no es una página web (HTML)');
+        }
+        return [$cuerpo, $tipo];
+    }
+    throw new RuntimeException('Demasiadas redirecciones');
+}
+
+/**
+ * Quita del HTML todo lo que LibreOffice podría descargar por su cuenta.
+ * Los enlaces <a href> se conservan (no se descargan al convertir).
+ */
+function urlseg_limpiar_html(string $html, string $tipo): string {
+    $charset = '';
+    if (preg_match('/charset=["\']?([\w-]+)/i', $tipo, $m)) $charset = $m[1];
+    elseif (preg_match('/<meta[^>]+charset=["\']?([\w-]+)/i', substr($html, 0, 4096), $m)) $charset = $m[1];
+    if ($charset !== '' && strcasecmp($charset, 'utf-8') !== 0 && strcasecmp($charset, 'utf8') !== 0) {
+        $conv = @mb_convert_encoding($html, 'UTF-8', $charset);
+        if ($conv !== false && $conv !== '') $html = $conv;
+    }
+
+    // Todo lo no ASCII como entidades: así el charset que declare la página ya no importa
+    if (!mb_check_encoding($html, 'UTF-8')) $html = mb_convert_encoding($html, 'UTF-8', 'Windows-1252');
+    $html = mb_encode_numericentity($html, [0x80, 0x10FFFF, 0, 0x1FFFFF], 'UTF-8');
+
+    $doc = new DOMDocument();
+    $prev = libxml_use_internal_errors(true);
+    $doc->loadHTML($html, LIBXML_NONET | LIBXML_COMPACT | LIBXML_PARSEHUGE);
+    libxml_clear_errors();
+    libxml_use_internal_errors($prev);
+    $xp = new DOMXPath($doc);
+
+    // Fuera del todo: no tienen contenido que leer
+    $fuera = '//script|//link|//base|//meta[@http-equiv]|//meta[@charset]';
+    foreach (iterator_to_array($xp->query($fuera)) as $n) $n->parentNode->removeChild($n);
+    // Se desenvuelven: libxml (HTML4) no siempre los cierra bien y pueden contener el resto
+    // de la página; se quita la etiqueta y se conservan los hijos (sus URL se limpian abajo)
+    // (embed, source, track y frame son vacíos en HTML5, pero libxml les mete dentro lo que sigue)
+    $envoltorios = '//iframe|//object|//applet|//noscript|//frameset|//frame|//audio|//video|//embed|//source|//track'
+                 . '|//*[local-name()="image"]|//*[local-name()="use"]|//*[local-name()="feImage"]';
+    foreach (array_reverse(iterator_to_array($xp->query($envoltorios))) as $n) {
+        while ($n->firstChild) $n->parentNode->insertBefore($n->firstChild, $n);
+        $n->parentNode->removeChild($n);
+    }
+
+    // Imágenes externas: se sustituyen por su texto alternativo
+    foreach (iterator_to_array($xp->query('//img|//input[@type="image"]')) as $img) {
+        $src = trim($img->getAttribute('src'));
+        if (stripos($src, 'data:image/') === 0) { $img->removeAttribute('srcset'); continue; }
+        $alt = trim($img->getAttribute('alt'));
+        if ($alt !== '') $img->parentNode->replaceChild($doc->createTextNode("[$alt]"), $img);
+        else $img->parentNode->removeChild($img);
+    }
+
+    $attrsUrl = ['src', 'srcset', 'background', 'poster', 'data', 'lowsrc', 'dynsrc', 'longdesc',
+                 'action', 'formaction', 'xlink:href', 'cite', 'codebase', 'archive', 'manifest', 'ping'];
+    foreach ($xp->query('//*') as $el) {
+        foreach ($attrsUrl as $a) {
+            if (!$el->hasAttribute($a)) continue;
+            if ($a === 'src' && $el->nodeName === 'img' && stripos(trim($el->getAttribute('src')), 'data:image/') === 0) continue;
+            $el->removeAttribute($a);
+        }
+        if ($el->nodeName !== 'a' && $el->nodeName !== 'area' && $el->hasAttribute('href')) $el->removeAttribute('href');
+        if ($el->hasAttribute('style') && preg_match('/url\s*\(|@import|expression\s*\(|image-set|-webkit-image/i', $el->getAttribute('style'))) {
+            $el->removeAttribute('style');
+        }
+        if ($el->nodeName === 'a' && preg_match('#^\s*(javascript|file|data|vbscript):#i', $el->getAttribute('href'))) {
+            $el->removeAttribute('href');
+        }
+    }
+    foreach (iterator_to_array($xp->query('//style')) as $st) {
+        $css = preg_replace('/@import[^;]*;?/i', '', $st->textContent);
+        $css = preg_replace('/url\s*\([^)]*\)/i', 'none', $css);
+        $css = preg_replace('/(image-set|-webkit-image-set)\s*\([^)]*\)/i', 'none', $css);
+        $st->textContent = $css;
+    }
+
+    $out = $doc->saveHTML();
+    $meta = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
+    if (stripos($out, '<head>') !== false) return preg_replace('/<head>/i', '<head>' . $meta, $out, 1);
+    return $meta . $out;
+}
+
+/** Prefijo para ejecutar un comando sin red, si el sistema lo permite. */
+function urlseg_sin_red(): string {
+    static $pref = null;
+    if ($pref === null) {
+        exec('unshare -rn true 2>/dev/null', $o, $rc);
+        $pref = $rc === 0 ? 'unshare -rn ' : '';
+        if ($pref === '') error_log('html-to-pdf: unshare -rn no disponible; LibreOffice se ejecuta con red (HTML ya limpiado)');
+    }
+    return $pref;
+}
+// --- url_segura: fin ---
