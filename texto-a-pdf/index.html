@@ -186,6 +186,9 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
 .content-seo .use-case { background: #f9fafb; border-left: 3px solid #8B5CF6; border-radius: 0 10px 10px 0; padding: 14px 18px; }
 .content-seo .use-case strong { display: block; font-size: 14px; font-weight: 600; color: #1B2A4A; margin-bottom: 4px; }
 .content-seo .use-case span { font-size: 14px; color: #6B7280; line-height: 1.6; }
+.content-seo figure { margin: 20px 0 24px; }
+.content-seo figure img { display: block; max-width: 100%; height: auto; border: 1px solid #e5e7eb; border-radius: 12px; }
+.content-seo figcaption { font-size: 13px; color: #6B7280; line-height: 1.6; margin-top: 8px; }
 
 @media (max-width: 640px) {
     main { padding: 76px 16px 40px; }
@@ -259,7 +262,7 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
           "name": "¿Puedo usar emojis u otros alfabetos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Las fuentes estándar de PDF no incluyen emojis ni alfabetos como el cirílico, el árabe o el chino."
+            "text": "No. Las fuentes estándar de PDF no incluyen emojis ni alfabetos como el cirílico, el árabe o el chino. Si tu texto los tiene, el PDF se genera igualmente con un «?» en su lugar y se te avisa de cuántos caracteres se han cambiado."
           }
         },
         {
@@ -303,7 +306,6 @@ footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     }
   ]
 }
-
 </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
@@ -515,6 +517,23 @@ El texto se ajustará automáticamente al tamaño de página elegido." spellchec
     </div>
     <p>El PDF se genera en tu navegador con pdf-lib: el texto no se envía a ningún servidor. Cuando una página se llena, se añade otra automáticamente.</p>
 
+    <h2>Ejemplo real: el comienzo del Quijote en PDF</h2>
+    <p>Para comprobar cómo se comporta la herramienta con un texto de verdad, pegamos el principio del capítulo I de <em>Don Quijote de la Mancha</em> (dominio público): cuatro párrafos, 631 palabras y 3.543 caracteres, con tildes, eñes y la puntuación propia del español.</p>
+    <figure>
+      <img src="/img/capturas/texto-a-pdf-opciones.webp" width="784" height="875" loading="lazy" decoding="async" alt="Editor de Texto a PDF con el comienzo del Quijote pegado (3543 caracteres) y seleccionados Times Roman, 12 pt, A4, vertical y márgenes normales de 2,5 cm">
+      <figcaption>El texto pegado y los ajustes elegidos: Times Roman, 12 pt, A4 vertical y márgenes normales.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Resultado:</strong> un PDF A4 de 2 páginas que ocupa 4,2 KB. La primera página admite 35 líneas, unas 550 palabras con estos ajustes; las 75 palabras restantes pasan a la segunda.</li>
+      <li><strong>Tiempo:</strong> 0,46 segundos de mediana en tres conversiones (entre 0,37 y 0,74 s), medido desde el clic en «Convertir a PDF» hasta que aparece el botón de descarga. Al no subir nada, el tiempo no depende de tu conexión.</li>
+      <li><strong>Lo que se conserva:</strong> la separación entre párrafos, las tildes, la ñ y las comillas. Las líneas largas se cortan entre palabras, nunca en mitad de una.</li>
+    </ul>
+    <figure>
+      <img src="/img/capturas/texto-a-pdf-resultado.webp" width="760" height="1075" loading="lazy" decoding="async" alt="Primera página del PDF generado: el texto del Quijote en Times Roman de 12 puntos con márgenes de 2,5 cm en una hoja A4">
+      <figcaption>Primera página del PDF descargado, tal como lo genera la herramienta.</figcaption>
+    </figure>
+    <p>Si necesitas que quepa en una sola hoja, hay dos palancas: bajar a 10 u 11 pt o elegir márgenes estrechos (1,27 cm), que ganan casi 2,5 cm de ancho y de alto útil. Con letra grande (16 o 18 pt) el mismo texto ocupará más páginas, algo útil si el documento lo va a leer alguien con la vista cansada.</p>
+
     <h2>Para qué sirve: situaciones reales</h2>
     <div class="use-cases">
       <div class="use-case"><strong>Un escrito rápido sin procesador de textos</strong><span>Una carta, una reclamación o un acuerdo sencillo en PDF desde el móvil o un ordenador sin Word.</span></div>
@@ -525,15 +544,15 @@ El texto se ajustará automáticamente al tamaño de página elegido." spellchec
     <h2>Limitaciones</h2>
     <ul>
       <li><strong>Solo texto plano.</strong> No hay negritas, títulos, listas con formato, imágenes ni tablas. Para eso, escribe en un procesador de textos y usa <a href="/word-a-pdf/">Word a PDF</a>.</li>
-      <li><strong>Juego de caracteres limitado.</strong> Las fuentes estándar cubren el español y la mayoría de idiomas europeos occidentales, pero no emojis, alfabetos no latinos ni muchos símbolos especiales.</li>
+      <li><strong>Juego de caracteres limitado.</strong> Las fuentes estándar cubren el español y la mayoría de idiomas europeos occidentales (incluidos €, «», “” y …), pero no emojis, alfabetos no latinos ni símbolos como → o ✓. Esos caracteres se cambian por «?» y el resultado indica cuántos ha habido; el resto del texto se convierte igual.</li>
+      <li><strong>Tabuladores.</strong> Cada tabulador se convierte en cuatro espacios. Con Courier las columnas siguen alineadas; con Helvetica o Times, que no son monoespaciadas, pueden desalinearse.</li>
     </ul>
-    <!-- TODO(contenido): comprobar qué ocurre exactamente al pegar un emoji o caracteres no latinos (error o sustitución) y explicarlo al usuario; valorar filtrarlos en el código. -->
 
     <h2>Preguntas frecuentes sobre texto a PDF</h2>
     <div class="faq">
       <div class="faq-item"><h3>¿Se sube el texto a algún servidor?</h3><p>No. El PDF se genera en tu navegador y el texto no sale de tu dispositivo.</p></div>
       <div class="faq-item"><h3>¿Funciona con acentos, ñ y signos en español?</h3><p>Sí. Helvetica, Times Roman y Courier cubren á, é, í, ó, ú, ñ, ü, ¿, ¡ y las mayúsculas acentuadas.</p></div>
-      <div class="faq-item"><h3>¿Puedo usar emojis u otros alfabetos?</h3><p>No. Las fuentes estándar de PDF no incluyen emojis ni alfabetos como el cirílico, el árabe o el chino.</p></div>
+      <div class="faq-item"><h3>¿Puedo usar emojis u otros alfabetos?</h3><p>No. Las fuentes estándar de PDF no incluyen emojis ni alfabetos como el cirílico, el árabe o el chino. Si tu texto los tiene, el PDF se genera igualmente con un «?» en su lugar y se te avisa de cuántos caracteres se han cambiado.</p></div>
       <div class="faq-item"><h3>¿Hay límite de longitud?</h3><p>No hay un límite fijo: el texto se reparte en tantas páginas como haga falta.</p></div>
     </div>
 
@@ -647,7 +666,19 @@ async function convertToPDF() {
         document.getElementById('progressLabel').textContent = 'Distribuyendo texto en páginas...';
         await new Promise(r => setTimeout(r, 10));
 
-        const lines = wrapLines(rawText, font, fontSize, textWidth);
+        // Las fuentes estándar solo codifican WinAnsi: un emoji, una flecha o una letra
+        // cirílica harían fallar todo el PDF. Se sustituyen por «?» y se avisa.
+        const charset = new Set(font.getCharacterSet());
+        let replaced = 0;
+        const safeText = Array.from(rawText.replace(/\t/g, '    ')).map(ch => {
+            const cp = ch.codePointAt(0);
+            if (ch === '\n' || ch === '\r' || charset.has(cp)) return ch;
+            if (cp === 0x200D || (cp >= 0xFE00 && cp <= 0xFE0F)) return ''; // unión y variantes de emoji
+            replaced++;
+            return '?';
+        }).join('');
+
+        const lines = wrapLines(safeText, font, fontSize, textWidth);
 
         // Paginate
         let page = pdfDoc.addPage([pageW, pageH]);
@@ -684,7 +715,8 @@ async function convertToPDF() {
         const orientLabel  = opts.orient === 'portrait' ? 'Vertical' : 'Horizontal';
         const chars        = rawText.length;
         document.getElementById('resultMeta').textContent =
-            `${pageCount} página${pageCount !== 1 ? 's' : ''} · ${chars.toLocaleString('es')} caracteres · ${fontLabel} ${fontSize}pt · ${pageLabel} ${orientLabel}`;
+            `${pageCount} página${pageCount !== 1 ? 's' : ''} · ${chars.toLocaleString('es')} caracteres · ${fontLabel} ${fontSize}pt · ${pageLabel} ${orientLabel}` +
+            (replaced ? ` · ${replaced === 1 ? '1 carácter no compatible cambiado' : replaced + ' caracteres no compatibles cambiados'} por «?» (emojis, otros alfabetos)` : '');
 
     } catch (err) {
         console.error(err);
