@@ -51,11 +51,6 @@
         "endpoint": "https://pdfrapido.eu/api/corregir-pdf"
       },
       {
-        "name": "pdf-a-audio",
-        "description": "Convierte PDFs en audio MP3 con text-to-speech",
-        "endpoint": "https://pdfrapido.eu/api/pdf-a-audio"
-      },
-      {
         "name": "pdf-a-png",
         "description": "Convierte páginas de PDF a imágenes PNG",
         "endpoint": "https://pdfrapido.eu/api/pdf-a-png"

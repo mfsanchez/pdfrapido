@@ -51,13 +51,6 @@
       "sha256": "38d2b869ef9cd071dca6d5803ad72efcf4c35332e7bb08f055c16cee51b150c2"
     },
     {
-      "name": "pdf-a-audio",
-      "type": "api",
-      "description": "Convierte PDFs en audio MP3 con text-to-speech",
-      "url": "https://pdfrapido.eu/.well-known/agent-skills/pdf-a-audio/SKILL.md",
-      "sha256": "112cab6ce62afd13b227995b45ab98236e9ca4026c4ec1d6e3acb4e9c995a4d4"
-    },
-    {
       "name": "pdf-a-imagen",
       "type": "api",
       "description": "Convierte páginas de PDF a imágenes PNG",
@@ -76,7 +69,7 @@
       "type": "browser",
       "description": "Expone herramientas PDFRápido a agentes de IA vía WebMCP en el navegador",
       "url": "https://pdfrapido.eu/.well-known/agent-skills/webmcp/SKILL.md",
-      "sha256": "72d64836e8577ae99af90d261d9e92a165cd0c47283112994bfad0347a5b9f5b"
+      "sha256": "6b62d232bc798b9a71652f4a839c47bf3ab0d6a92e8134104fe3fe0941bcb565"
     }
   ]
 }

@@ -39,11 +39,6 @@
       "anchor": "https://pdfrapido.eu/api/corregir-pdf",
       "service-doc": [{"href": "https://pdfrapido.eu/corregir-pdf", "type": "text/html"}],
       "type": [{"value": "Corregir PDF — Corrige gramática y ortografía en PDFs"}]
-    },
-    {
-      "anchor": "https://pdfrapido.eu/api/pdf-a-audio",
-      "service-doc": [{"href": "https://pdfrapido.eu/pdf-a-audio", "type": "text/html"}],
-      "type": [{"value": "PDF a Audio — Convierte PDFs en audio con IA"}]
     }
   ]
 }

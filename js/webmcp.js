@@ -120,18 +120,6 @@
         }
       },
       {
-        name: 'pdfrapido_pdf_a_audio',
-        description: 'Convierte el texto de un PDF en audio MP3 con text-to-speech.',
-        inputSchema: {
-          type: 'object',
-          properties: {
-            pdf_url: { type: 'string', description: 'URL del PDF a convertir en audio' }
-          },
-          required: ['pdf_url']
-        },
-        execute: async ({ pdf_url }) => callApi('/api/pdf-a-audio', await fetchBlob(pdf_url))
-      },
-      {
         name: 'pdfrapido_pdf_a_imagen',
         description: 'Convierte páginas de un PDF a imágenes PNG.',
         inputSchema: {

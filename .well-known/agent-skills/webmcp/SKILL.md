@@ -13,7 +13,6 @@ WebMCP (navigator.modelContext.provideContext) — disponible en navegadores com
 - `pdfrapido_extraer_datos` — Extrae datos estructurados
 - `pdfrapido_corregir` — Corrige gramática y ortografía
 - `pdfrapido_redactar` — Genera PDFs desde texto
-- `pdfrapido_pdf_a_audio` — Convierte PDF en audio MP3
 - `pdfrapido_pdf_a_imagen` — Convierte PDF en imágenes PNG
 - `pdfrapido_comprimir` — Comprime PDFs en el navegador
 

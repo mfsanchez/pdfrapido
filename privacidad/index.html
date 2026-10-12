@@ -64,7 +64,7 @@
         .breadcrumb ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
         .breadcrumb a{color:var(--primary);text-decoration:none}
     </style>
-    <script src="/js/webmcp.js" defer></script>
+    <script src="/js/webmcp.js?v=2" defer></script>
 
 <script type="application/ld+json">
 {
@@ -123,11 +123,11 @@
     </div>
 
     <h1>Política de Privacidad</h1>
-    <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+    <p class="updated">Última actualización: 12 de octubre de 2026</p>
 
     <div class="privacy-highlight">
         <h3>🛡️ Resumen de privacidad en una frase</h3>
-        <p><strong>Tus archivos PDF no se almacenan de forma permanente.</strong> Muchas herramientas procesan todo en tu propio navegador (el archivo no se sube). Las que requieren servidor lo procesan en nuestros servidores en la UE (España y Países Bajos) y lo eliminan automáticamente en un máximo de 10 minutos. Las herramientas de IA envían además el texto extraído a Groq (EE. UU.), y PDF a audio lo envía al servicio de voz de Microsoft.</p>
+        <p><strong>Tus archivos PDF no se almacenan de forma permanente.</strong> Muchas herramientas procesan todo en tu propio navegador (el archivo no se sube). Las que requieren servidor lo procesan en nuestros servidores en la UE (España y Países Bajos) y lo eliminan automáticamente en un máximo de 10 minutos. Las herramientas de IA envían además el texto extraído a Groq (EE. UU.). PDF a audio lee el documento en tu navegador, sin subirlo.</p>
         <p>No vendemos tus datos. Tus documentos solo salen hacia los proveedores imprescindibles para cada herramienta, que se detallan en el apartado 6. Nadie lee el contenido de tus archivos.</p>
     </div>
 
@@ -138,9 +138,9 @@
     <p>PDFRápido ha sido diseñado desde su origen con la privacidad como prioridad. Estos son los principios que guían el tratamiento de datos en nuestra plataforma:</p>
     <ul>
         <li><strong>Mínima recopilación de datos:</strong> Solo recopilamos los datos estrictamente necesarios para prestar el servicio y analizar el uso del sitio de forma agregada.</li>
-        <li><strong>Procesamiento en tu navegador (sin subir el archivo):</strong> Muchas herramientas —unir, dividir, rotar, firmar, extraer páginas, numerar u organizar, entre otras— procesan el PDF directamente en tu dispositivo. En estos casos el archivo no se sube a ningún servidor.</li>
-        <li><strong>Procesamiento en nuestros servidores de la UE:</strong> Las herramientas de conversión (PDF a Word, PDF/A, Office, comprimir, proteger y desbloquear) se procesan en un VPS de Nominalia, con servidor en la UE (Países Bajos). El OCR, recortar, redactar, comparar, PDF a CSV, detectar formularios y la parte de servidor de las herramientas de inteligencia artificial y de PDF a audio se procesan en Oracle Cloud (Madrid). La conexión siempre es cifrada.</li>
-        <li><strong>Proveedores externos, solo cuando la herramienta lo necesita:</strong> las herramientas de inteligencia artificial envían el texto extraído del documento a Groq (EE. UU.) y PDF a audio envía el texto al servicio de voz de Microsoft. Todo el tráfico del sitio pasa además por Cloudflare (CDN y proxy). Los detalles están en el apartado 6.</li>
+        <li><strong>Procesamiento en tu navegador (sin subir el archivo):</strong> Muchas herramientas —unir, dividir, rotar, firmar, extraer páginas, numerar, organizar o leer en voz alta, entre otras— procesan el PDF directamente en tu dispositivo. En estos casos el archivo no se sube a ningún servidor.</li>
+        <li><strong>Procesamiento en nuestros servidores de la UE:</strong> Las herramientas de conversión (PDF a Word, PDF/A, Office, comprimir, proteger y desbloquear) se procesan en un VPS de Nominalia, con servidor en la UE (Países Bajos). El OCR, recortar, redactar, comparar, PDF a CSV, detectar formularios y la parte de servidor de las herramientas de inteligencia artificial se procesan en Oracle Cloud (Madrid). La conexión siempre es cifrada.</li>
+        <li><strong>Proveedores externos, solo cuando la herramienta lo necesita:</strong> las herramientas de inteligencia artificial envían el texto extraído del documento a Groq (EE. UU.). Todo el tráfico del sitio pasa además por Cloudflare (CDN y proxy). Los detalles están en el apartado 6.</li>
         <li><strong>Eliminación automática:</strong> Los archivos que sí requieren procesamiento en servidor se eliminan automáticamente en un máximo de 10 minutos tras completar la operación.</li>
         <li><strong>Sin lectura humana:</strong> El procesamiento es automático y ningún ser humano lee tus archivos.</li>
         <li><strong>Transparencia:</strong> Esta política de privacidad describe de forma clara y comprensible qué datos recopilamos y para qué los utilizamos.</li>
@@ -152,9 +152,10 @@
     <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:20px 0 8px">3.1 Archivos y documentos</h3>
     <p>Los archivos que procesas con nuestras herramientas se manejan de dos formas distintas según la herramienta:</p>
     <ul>
-        <li><strong>Procesamiento en el navegador (lado cliente):</strong> Herramientas como unir PDF, dividir PDF, rotar PDF, organizar páginas, eliminar/extraer páginas, añadir marca de agua, numerar páginas, firmar PDF, rellenar formularios, editar metadatos, redimensionar y JPG a PDF, entre otras, procesan los archivos completamente en tu dispositivo. En estas herramientas, tus archivos <strong>no se suben a ningún servidor</strong>.</li>
-        <li><strong>Procesamiento en nuestros servidores:</strong> Algunas herramientas transfieren el archivo a nuestros servidores para procesarlo. En el VPS de Nominalia, con servidor en la UE (Países Bajos): comprimir PDF, proteger PDF, desbloquear PDF, reparar PDF, convertir a PDF/A, HTML a PDF y las conversiones de formatos Office (Word, Excel y PowerPoint a PDF y viceversa). En Oracle Cloud (Madrid): OCR, recortar PDF, comparar PDFs, redactar PDF, PDF a CSV, detectar formularios, PDF a audio y las herramientas de inteligencia artificial. En todos los casos el archivo se transmite mediante conexión cifrada HTTPS y se elimina automáticamente de nuestros servidores en un máximo de 10 minutos.</li>
-        <li><strong>Envío a proveedores externos:</strong> Las herramientas de inteligencia artificial (resumir PDF, chat con PDF, traducir PDF, extraer datos, corregir PDF, generar PDF, analizar contrato y CV a carta) extraen el texto en nuestro servidor y envían ese texto —no el archivo— a Groq (EE. UU.) para generar el resultado. PDF a audio envía el texto extraído al servicio de voz neuronal de Microsoft para sintetizar el audio.</li>
+        <li><strong>Procesamiento en el navegador (lado cliente):</strong> Herramientas como unir PDF, dividir PDF, rotar PDF, organizar páginas, eliminar/extraer páginas, añadir marca de agua, numerar páginas, firmar PDF, rellenar formularios, editar metadatos, redimensionar, JPG a PDF y PDF a audio, entre otras, procesan los archivos completamente en tu dispositivo. En estas herramientas, tus archivos <strong>no se suben a ningún servidor</strong>.</li>
+        <li><strong>Procesamiento en nuestros servidores:</strong> Algunas herramientas transfieren el archivo a nuestros servidores para procesarlo. En el VPS de Nominalia, con servidor en la UE (Países Bajos): comprimir PDF, proteger PDF, desbloquear PDF, reparar PDF, convertir a PDF/A, HTML a PDF y las conversiones de formatos Office (Word, Excel y PowerPoint a PDF y viceversa). En Oracle Cloud (Madrid): OCR, recortar PDF, comparar PDFs, redactar PDF, PDF a CSV, detectar formularios y las herramientas de inteligencia artificial. En todos los casos el archivo se transmite mediante conexión cifrada HTTPS y se elimina automáticamente de nuestros servidores en un máximo de 10 minutos.</li>
+        <li><strong>Envío a proveedores externos:</strong> Las herramientas de inteligencia artificial (resumir PDF, chat con PDF, traducir PDF, extraer datos, corregir PDF, generar PDF, analizar contrato y CV a carta) extraen el texto en nuestro servidor y envían ese texto —no el archivo— a Groq (EE. UU.) para generar el resultado.</li>
+        <li><strong>PDF a audio:</strong> No envía nada a nuestros servidores: lee el PDF en tu navegador y lo pronuncia con las voces de tu dispositivo. Si eliges una voz marcada como «en línea», es tu navegador quien envía el texto al servicio de voz de su fabricante (por ejemplo, Google en Chrome o Microsoft en Edge), según las condiciones de ese fabricante.</li>
     </ul>
 
     <h3 style="font-size:16px;font-weight:600;color:var(--gray-700);margin:20px 0 8px">3.2 Datos de navegación</h3>
@@ -186,7 +187,6 @@
         <li><strong>Google Analytics:</strong> Recibe datos de navegación anónimos y agregados para el análisis de tráfico web. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de privacidad de Google</a>.</li>
         <li><strong>Google AdSense:</strong> Muestra anuncios publicitarios. Google puede utilizar cookies (incluida la cookie DART de DoubleClick) para personalizar los anuncios según el contexto de la página y los intereses del usuario. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Más información sobre publicidad de Google</a>. Puedes desactivar la personalización de anuncios en <a href="https://adssettings.google.com" target="_blank" rel="noopener">Configuración de anuncios de Google</a>.</li>
         <li><strong>Groq (procesamiento de IA):</strong> Las herramientas de inteligencia artificial envían el texto extraído del documento a la API de Groq (Groq, Inc., Estados Unidos) únicamente para generar el resultado solicitado. El tratamiento que Groq hace de esos datos se rige por su <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">política de privacidad</a>.</li>
-        <li><strong>Microsoft (voz sintética):</strong> PDF a audio envía el texto extraído del documento (hasta 10.000 caracteres) al servicio de voz neuronal de Microsoft para generar el MP3. <a href="https://privacy.microsoft.com/es-es/privacystatement" target="_blank" rel="noopener">Declaración de privacidad de Microsoft</a>.</li>
         <li><strong>Cloudflare (CDN y proxy):</strong> Todo el tráfico entre tu navegador y pdfrapido.eu, incluidos los archivos que subes a las herramientas de servidor, pasa por la red de Cloudflare, Inc. (EE. UU.), que actúa como intermediario para servir el sitio y protegerlo. <a href="https://www.cloudflare.com/es-es/privacypolicy/" target="_blank" rel="noopener">Política de privacidad de Cloudflare</a>.</li>
     </ul>
     <p>No cedemos ni vendemos datos personales a terceros fuera de los anteriores para sus propios fines comerciales.</p>
@@ -245,8 +245,8 @@
     <h2>11. Transferencias internacionales de datos</h2>
     <p>Google Analytics y Google AdSense son servicios de Google LLC, empresa establecida en los Estados Unidos. Google cumple con el Marco de Privacidad de Datos UE-EE.UU. (DPF) y ofrece garantías adecuadas para las transferencias internacionales de datos conforme al RGPD.</p>
     <p>Las herramientas de inteligencia artificial implican una transferencia internacional de datos a Groq, Inc. (Estados Unidos), limitada al texto necesario para generar la respuesta. Esta transferencia se ampara en las Cláusulas Contractuales Tipo (SCCs) de la Comisión Europea (Módulo 2, responsable a encargado) incorporadas en el Acuerdo de Tratamiento de Datos (DPA) de Groq, que constituyen garantías adecuadas conforme al artículo 46 del RGPD.</p>
-    <p>PDF a audio implica una transferencia internacional a Microsoft Corporation (Estados Unidos), limitada al texto que se convierte en voz. Cloudflare, Inc. (Estados Unidos) interviene como intermediario en todo el tráfico del sitio.</p>
-    <!-- TODO(titular): indicar la base legal de las transferencias a Microsoft (PDF a audio) y a Cloudflare (p. ej. adhesión al DPF UE-EE. UU. o SCC del DPA correspondiente). No se ha rellenado porque depende de los contratos que tengas firmados. -->
+    <p>Cloudflare, Inc. (Estados Unidos) interviene como intermediario en todo el tráfico del sitio.</p>
+    <!-- TODO(titular): indicar la base legal de la transferencia a Cloudflare (p. ej. adhesión al DPF UE-EE. UU. o SCC del DPA correspondiente). No se ha rellenado porque depende de los contratos que tengas firmados. -->
 
     <h2>12. Cambios en esta política</h2>
     <p>Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento para adaptarla a cambios legislativos, novedades jurisprudenciales o modificaciones en nuestros servicios. Los cambios se publicarán en esta misma página con la fecha de actualización. Si los cambios son significativos, lo notificaremos de forma destacada en el sitio web.</p>
