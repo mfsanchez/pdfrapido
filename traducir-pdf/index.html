@@ -620,16 +620,16 @@
             <div style="margin-top:16px">
                 <label style="display:block;font-size:13px;font-weight:500;color:var(--gray-600);margin-bottom:8px">Modo de salida</label>
                 <div class="modo-row" id="modoRow">
-                    <button class="modo-btn" data-modo="traducido">
+                    <button class="modo-btn active" data-modo="traducido">
                         <span class="modo-label">Solo traducción</span>
                         <span class="modo-desc">PDF con el texto traducido manteniendo el diseño original</span>
                     </button>
-                    <button class="modo-btn active" data-modo="bilingue">
+                    <button class="modo-btn" data-modo="bilingue">
                         <span class="modo-label">Bilingüe</span>
                         <span class="modo-desc">Original y traducción en columnas paralelas</span>
                     </button>
                 </div>
-                <div class="bilingual-hint active" id="bilingualHint">
+                <div class="bilingual-hint" id="bilingualHint">
                     El PDF incluirá el texto original y la traducción en paralelo, ideal para aprender idiomas o revisar la traducción.
                 </div>
             </div>
@@ -784,7 +784,7 @@ const resultStats  = document.getElementById('resultStats');
 const idiomaSelect    = document.getElementById('idiomaSelect');
 const modoRow         = document.getElementById('modoRow');
 const bilingualHint   = document.getElementById('bilingualHint');
-let currentModo = 'bilingue';
+let currentModo = 'traducido';
 const loadingMsg   = document.getElementById('loadingMsg');
 
 const LOADING_MSGS = [
