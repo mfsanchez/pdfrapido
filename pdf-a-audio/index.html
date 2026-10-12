@@ -9,10 +9,10 @@
     <script>(function(){try{var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="pdf a mp3, pdf a audio, escuchar pdf, convertir pdf a voz, leer pdf en voz alta, pdf a audio online gratis">
-    <meta name="description" content="Pasa un PDF a audio MP3 gratis y online, con voz natural en español de España o de México y otros 5 idiomas. 4 velocidades y sin registro.">
+    <meta name="keywords" content="pdf a audio, escuchar pdf, leer pdf en voz alta, pdf a voz, convertir pdf a voz, pdf a mp3">
+    <meta name="description" content="Escucha cualquier PDF en voz alta, gratis y sin subirlo: se lee en tu navegador, sin límite de páginas y con la frase resaltada. La descarga en MP3 vuelve pronto.">
     <meta name="author" content="MF Sanchez - PDFRápido">
-    <title>Convertir PDF a audio MP3 gratis, voz en español | PDFRápido</title>
+    <title>PDF a audio gratis: escucha tu PDF en voz alta | PDFRápido</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -94,6 +94,35 @@
         }
 
                 .nav-links{display:flex;list-style:none;gap:24px;align-items:center}.nav-links li a{text-decoration:none;color:#4B5563;font-size:14px;font-weight:500;transition:color .2s}.nav-links li a:hover{color:var(--primary)}.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#374151;line-height:0}@media(max-width:768px){.hamburger{display:flex;align-items:center}.nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:8px 0;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:99;gap:0}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid #f3f4f6}.nav-links li:last-child{border-bottom:none}.nav-links li a{padding:12px 24px;font-size:15px;display:block;color:#374151}}
+
+        /* ── Lectura en el navegador ── */
+        .aviso-mp3{display:flex;gap:10px;align-items:flex-start;background:var(--accent-light);border:1px solid #FDE2C8;color:#92400E;border-radius:var(--radius);padding:12px 16px;margin:0 0 20px;font-size:14px;line-height:1.55}.aviso-mp3 svg{flex-shrink:0;margin-top:2px}.aviso-mp3 p{margin:0}
+        .aviso-error{display:none;background:#FEF2F2;border:1px solid #FECACA;color:#991B1B;border-radius:var(--radius);padding:12px 16px;margin-top:16px;font-size:14px;line-height:1.55}.aviso-error.active{display:block}.aviso-error a{color:inherit;font-weight:600}
+        .btn-link{background:none;border:none;color:var(--accent-dark);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;padding:6px;white-space:nowrap}
+        .opt-num{width:100%;padding:10px 14px;border:1px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:14px;color:var(--gray-700);background:#fff;outline:none}.opt-num:focus{border-color:var(--accent)}
+        .texto-previo{width:100%;min-height:160px;padding:12px 14px;border:1px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:14px;line-height:1.6;color:var(--gray-700);background:#fff;resize:vertical;outline:none}.texto-previo:focus{border-color:var(--accent)}
+        .contador{font-size:12px;color:var(--gray-400);margin-top:6px}
+        .nota-voz{font-size:13px;color:var(--gray-500);margin:-4px 0 16px;line-height:1.5}
+        .sin-voces{display:none;background:#FFFBEB;border:1px solid #FEF3C7;color:#78350F;border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;font-size:14px;line-height:1.6}.sin-voces.active{display:block}.sin-voces ul{margin:8px 0 0 18px}
+        .acciones{margin-top:8px}.acciones .btn-convert{width:auto;flex:2;min-width:220px}.btn-mp3{flex:1;justify-content:center;min-width:180px}.btn-mp3:disabled{opacity:.55;cursor:not-allowed}.btn-mp3:disabled:hover{border-color:var(--gray-200);color:var(--gray-700)}
+        .lector{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:20px}
+        .lector-texto{max-height:320px;overflow-y:auto;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px 18px;font-size:16px;line-height:1.75;color:var(--gray-700)}
+        .lector-texto p{margin:0 0 12px}.lector-texto p:last-child{margin-bottom:0}
+        .frase{cursor:pointer;border-radius:4px;transition:background .15s}.frase:hover{background:var(--gray-100)}
+        .frase.actual{background:#FFE7CC;color:#1B2A4A;box-shadow:0 0 0 2px #FFE7CC}
+        .lector-controles{display:flex;justify-content:center;align-items:center;gap:14px;margin:18px 0 10px}
+        .ctl{width:46px;height:46px;border-radius:50%;border:1px solid var(--gray-200);background:#fff;color:var(--gray-700);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}.ctl:hover{border-color:var(--accent);color:var(--accent)}
+        .ctl-main{width:60px;height:60px;background:var(--accent);border-color:var(--accent);color:#fff}.ctl-main:hover{background:var(--accent-dark);color:#fff}
+        .ctl-main .ico-play{display:none}.ctl-main.en-pausa .ico-play{display:block}.ctl-main.en-pausa .ico-pausa{display:none}
+        .lector-opciones{display:flex;justify-content:center;align-items:center;gap:8px;font-size:13px;color:var(--gray-500)}.lector-opciones select{padding:6px 10px;border:1px solid var(--gray-200);border-radius:8px;font-family:inherit;font-size:13px;background:#fff;color:var(--gray-700)}
+        .lector-estado{text-align:center;font-size:13px;color:var(--gray-500);margin-top:8px}
+        html[data-theme="dark"] .opt-num,html[data-theme="dark"] .texto-previo,html[data-theme="dark"] .lector-texto,html[data-theme="dark"] .ctl,html[data-theme="dark"] .lector-opciones select,html[data-theme="dark"] .opt-group select,html[data-theme="dark"] .file-info{background:var(--bg-hover);color:var(--text-primary)}
+        html[data-theme="dark"] .ctl-main{background:var(--accent);color:#fff}
+        html[data-theme="dark"] .frase.actual{background:#5A3410;color:#FFF4EB;box-shadow:0 0 0 2px #5A3410}
+        html[data-theme="dark"] .aviso-mp3{background:#3a2410;border-color:#5A3410;color:#FCD9B6}
+        html[data-theme="dark"] .aviso-error{background:#3B1517;border-color:#7F1D1D;color:#FECACA}
+        html[data-theme="dark"] .sin-voces{background:#3a2a10;border-color:#5A3F10;color:#FDE68A}
+        @media(max-width:640px){.acciones .btn-convert,.btn-mp3{min-width:0;width:100%}.lector{padding:14px}.lector-texto{max-height:260px;font-size:15px}}
 </style>
     <link rel="canonical" href="https://pdfrapido.eu/pdf-a-audio/">
     <script type="application/ld+json">
@@ -102,9 +131,9 @@
       "@graph": [
         {
           "@type": "WebApplication",
-          "name": "PDF a Audio MP3 Online Gratis",
+          "name": "PDF a Audio online gratis",
           "url": "https://pdfrapido.eu/pdf-a-audio/",
-          "description": "Convierte cualquier PDF a audio MP3 con voz neuronal. 8 voces en 6 idiomas, 4 velocidades. Gratis y sin registro.",
+          "description": "Escucha cualquier PDF en voz alta en tu navegador, sin subirlo y sin límite de páginas, con la frase que se lee resaltada. Gratis y sin registro.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Web",
           "offers": {
@@ -131,7 +160,7 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "PDF a Audio MP3 Online Gratis",
+              "name": "PDF a Audio",
               "item": "https://pdfrapido.eu/pdf-a-audio/"
             }
           ]
@@ -141,59 +170,80 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "¿Qué idiomas y voces están disponibles?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Hay 8 voces neuronales: español de España (Elvira) y de México (Dalia), inglés de EEUU (Aria) y de Reino Unido (Sonia), francés (Denise), alemán (Katja), italiano (Elsa) y portugués de Brasil (Francisca). Hay una voz por idioma y el idioma se elige manualmente: la herramienta no detecta el idioma del texto." }
+              "name": "¿Puedo descargar el audio en MP3?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ahora mismo no: la descarga en MP3 está en pausa porque el servicio de voz que la generaba ha dejado de funcionar, y vuelve pronto. Mientras tanto, puedes escuchar el PDF entero en tu navegador con «Escuchar ahora», sin límite de páginas."
+              }
             },
             {
               "@type": "Question",
-              "name": "¿Cuánto texto se convierte y cuánto audio genera?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Se convierten hasta 10.000 caracteres, unas 1.600 palabras o 4-7 páginas según la densidad del texto, que equivalen a unos 8-12 minutos de audio a velocidad normal. Si el documento es más largo, se convierte la primera parte y se muestra un aviso." }
+              "name": "¿Se envía mi PDF a algún servidor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con las voces marcadas «en tu dispositivo», el texto tampoco sale de él; con una voz «en línea», tu navegador envía el texto a su fabricante para generar la voz."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hay límite de páginas o de texto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Puedes escuchar el documento entero o elegir un rango de páginas. La lectura avanza frase a frase y puedes saltar adelante o atrás, o pulsar cualquier frase para ir a ella."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué voces hay?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro. La página elige una voz en español si la hay y puedes cambiarla; si no hay ninguna, te explica cómo instalarla."
+              }
             },
             {
               "@type": "Question",
               "name": "¿Funciona con PDFs escaneados?",
-              "acceptedAnswer": { "@type": "Answer", "text": "No. La herramienta necesita que el PDF tenga texto extraíble; con un escaneo (solo imagen) devuelve un error indicándolo. Pasa primero el documento por OCR a PDF y después conviértelo a audio." }
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, porque un escaneo es una imagen sin texto. La página lo detecta al abrir el archivo y te propone pasarlo antes por OCR a PDF."
+              }
             },
             {
               "@type": "Question",
-              "name": "¿Se suben mis archivos a un servidor?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí, esta herramienta procesa en el servidor, a diferencia de las herramientas locales del sitio. El PDF se sube, se extrae su texto y el archivo se elimina inmediatamente; el texto se envía al servicio de voz neuronal de Microsoft para generar el MP3, y el audio también se borra del servidor en cuanto se te entrega." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿En qué formato se descarga el audio?",
-              "acceptedAnswer": { "@type": "Answer", "text": "En MP3 (mono, 24 kHz, 48 kbps), con el nombre audio_tudocumento.mp3. Es el único formato disponible; no se genera WAV." }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Puedo ajustar la velocidad de lectura?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Sí, hay cuatro velocidades: lenta (−20 %), normal, rápida (+20 %) y muy rápida (+40 %). La velocidad elegida cambia la duración del MP3 resultante." }
+              "name": "¿Puedo cambiar la velocidad de lectura?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas: el cambio se aplica al momento, desde la frase que se está leyendo."
+              }
             }
           ]
         },
         {
           "@type": "HowTo",
-          "name": "Cómo convertir un PDF a audio MP3",
-          "totalTime": "PT2M",
-          "tool": { "@type": "HowToTool", "name": "PDFRápido PDF a Audio" },
+          "name": "Cómo escuchar un PDF en voz alta",
+          "totalTime": "PT1M",
+          "tool": {
+            "@type": "HowToTool",
+            "name": "PDFRápido PDF a Audio"
+          },
           "step": [
             {
               "@type": "HowToStep",
               "position": 1,
-              "name": "Sube tu PDF",
-              "text": "Arrastra o selecciona un PDF de hasta 20 MB con texto extraíble (no un escaneo sin OCR)."
+              "name": "Abre tu PDF",
+              "text": "Arrastra o selecciona un PDF con texto (no un escaneo sin OCR). Se lee en tu navegador, sin subirlo."
             },
             {
               "@type": "HowToStep",
               "position": 2,
-              "name": "Elige voz y velocidad",
-              "text": "Selecciona una de las 8 voces neuronales (6 idiomas) y la velocidad de lectura: lenta, normal, rápida o muy rápida."
+              "name": "Elige páginas, voz y velocidad",
+              "text": "Indica el rango de páginas, revisa el texto y elige una voz de tu dispositivo y la velocidad, de 0,75× a 2×."
             },
             {
               "@type": "HowToStep",
               "position": 3,
-              "name": "Genera, escucha y descarga",
-              "text": "Pulsa Generar audio MP3, escucha la vista previa en el reproductor y descarga el archivo audio_tudocumento.mp3."
+              "name": "Pulsa Escuchar ahora",
+              "text": "La lectura empieza al momento, con la frase resaltada; puedes pausar, saltar de frase y cambiar la velocidad."
             }
           ]
         }
@@ -202,15 +252,15 @@
     </script>
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
-    <meta property="og:title" content="Convertir PDF a audio MP3 gratis, voz en español | PDFRápido">
-    <meta property="og:description" content="Pasa un PDF a audio MP3 gratis y online, con voz natural en español de España o de México y otros 5 idiomas. 4 velocidades y sin registro.">
+    <meta property="og:title" content="PDF a audio gratis: escucha tu PDF en voz alta | PDFRápido">
+    <meta property="og:description" content="Escucha cualquier PDF en voz alta, gratis y sin subirlo: se lee en tu navegador, sin límite de páginas y con la frase resaltada. La descarga en MP3 vuelve pronto.">
     <meta property="og:url" content="https://pdfrapido.eu/pdf-a-audio/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Convertir PDF a audio MP3 gratis, voz en español | PDFRápido">
-    <meta name="twitter:description" content="Pasa un PDF a audio MP3 gratis y online, con voz natural en español de España o de México y otros 5 idiomas. 4 velocidades y sin registro.">
+    <meta name="twitter:title" content="PDF a audio gratis: escucha tu PDF en voz alta | PDFRápido">
+    <meta name="twitter:description" content="Escucha cualquier PDF en voz alta, gratis y sin subirlo: se lee en tu navegador, sin límite de páginas y con la frase resaltada. La descarga en MP3 vuelve pronto.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <script src="/js/webmcp.js" defer></script>
 
@@ -281,86 +331,134 @@
             </svg>
         </div>
         <h1>PDF a Audio — PDFRápido</h1>
-        <p>Convierte tu PDF en MP3 con voz natural. Perfecto para escuchar documentos mientras conduces, haces deporte o cocinas.</p>
+        <p>Escucha tu PDF en voz alta en el navegador, sin subirlo y sin límite de páginas.</p>
     </div>
 
-    <!-- Step 0: Upload -->
+    <div class="aviso-mp3" role="note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>La descarga en MP3 vuelve pronto.</strong> Mientras tanto, puedes escuchar cualquier PDF aquí mismo, en tu navegador, sin subirlo y sin límite de páginas.</p>
+    </div>
+
+    <!-- Paso 1: abrir el PDF (se lee en el navegador) -->
     <div id="stepUpload">
         <div class="upload-zone" id="uploadZone">
-            <input type="file" accept=".pdf" id="fileInput" aria-label="Seleccionar archivo PDF">
+            <input type="file" accept=".pdf,application/pdf" id="fileInput" aria-label="Seleccionar archivo PDF">
             <div class="upload-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
             </div>
             <h3>Arrastra tu PDF aquí o <span>selecciónalo</span></h3>
-            <p>Máximo 20 MB &middot; Se procesan hasta 10.000 caracteres (~8-12 min de audio)</p>
+            <p>Se abre en tu navegador: no sale de tu dispositivo</p>
         </div>
-
-        <div class="options-panel" id="optionsPanel">
-            <div class="file-info" id="fileInfo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <div>
-                    <div class="file-name" id="fileName"></div>
-                    <div class="file-size" id="fileSize"></div>
-                </div>
-            </div>
-            <div class="opt-row">
-                <div class="opt-group">
-                    <label for="selIdioma">Idioma / Voz</label>
-                    <select id="selIdioma">
-                        <option value="es-ES">🇪🇸 Español (España) — Elvira</option>
-                        <option value="es-MX">🇲🇽 Español (México) — Dalia</option>
-                        <option value="en-US">🇺🇸 Inglés (EEUU) — Aria</option>
-                        <option value="en-GB">🇬🇧 Inglés (Reino Unido) — Sonia</option>
-                        <option value="fr-FR">🇫🇷 Francés — Denise</option>
-                        <option value="de-DE">🇩🇪 Alemán — Katja</option>
-                        <option value="it-IT">🇮🇹 Italiano — Elsa</option>
-                        <option value="pt-BR">🇧🇷 Portugués (Brasil) — Francisca</option>
-                    </select>
-                </div>
-                <div class="opt-group">
-                    <label for="selVelocidad">Velocidad</label>
-                    <select id="selVelocidad">
-                        <option value="-20%">🐢 Lenta</option>
-                        <option value="0%" selected>▶ Normal</option>
-                        <option value="+20%">⏩ Rápida</option>
-                        <option value="+40%">⚡ Muy rápida</option>
-                    </select>
-                </div>
-            </div>
-            <button class="btn-convert" id="btnConvert" onclick="startConversion()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                Generar audio MP3
-            </button>
-            <p class="info-note">Se procesan hasta 10.000 caracteres (~8-12 minutos de audio)</p>
-        </div>
+        <p class="aviso-error" id="uploadError" role="alert"></p>
     </div>
 
-    <!-- Step 1: Progress -->
+    <!-- Lectura del PDF -->
     <div class="step" id="stepProgress">
-        <p class="progress-label" id="progressLabel">Subiendo PDF...</p>
+        <p class="progress-label" id="progressLabel">Abriendo el PDF…</p>
         <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
     </div>
 
-    <!-- Step 2: Result -->
-    <div class="step" id="stepResult">
-        <div class="result-card">
-            <div class="success-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <!-- Paso 2: páginas, texto, voz y velocidad -->
+    <div class="options-panel" id="optionsPanel">
+        <div class="file-info">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5913E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <div style="min-width:0;flex:1">
+                <div class="file-name" id="fileName"></div>
+                <div class="file-size" id="fileMeta"></div>
             </div>
-            <h3>Audio generado</h3>
-            <p class="desc" id="resultDesc"></p>
-            <div class="truncated-notice" id="truncNotice">El documento es largo. Se ha convertido a audio la primera parte (10.000 caracteres).</div>
-            <audio class="audio-player" id="audioPlayer" controls></audio>
-            <div class="action-row">
-                <button class="btn-primary" id="btnDownload" onclick="downloadAudio()">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Descargar MP3
+            <button type="button" class="btn-link" id="btnOtro">Cambiar PDF</button>
+        </div>
+
+        <div class="opt-row" id="rangoRow">
+            <div class="opt-group">
+                <label for="pagDesde">Desde la página</label>
+                <input type="number" class="opt-num" id="pagDesde" min="1" value="1" inputmode="numeric">
+            </div>
+            <div class="opt-group">
+                <label for="pagHasta">Hasta la página</label>
+                <input type="number" class="opt-num" id="pagHasta" min="1" value="1" inputmode="numeric">
+            </div>
+        </div>
+
+        <div class="opt-group" style="margin-bottom:16px">
+            <label for="texto">Texto que se va a leer (puedes corregirlo o recortarlo)</label>
+            <textarea id="texto" class="texto-previo" rows="8" spellcheck="false"></textarea>
+            <div class="contador" id="contador"></div>
+        </div>
+
+        <div class="opt-row">
+            <div class="opt-group">
+                <label for="selVoz">Voz</label>
+                <select id="selVoz"></select>
+            </div>
+            <div class="opt-group">
+                <label for="selVelocidad">Velocidad</label>
+                <select id="selVelocidad">
+                    <option value="0.75">0,75× (lenta)</option>
+                    <option value="1" selected>1× (normal)</option>
+                    <option value="1.25">1,25×</option>
+                    <option value="1.5">1,5×</option>
+                    <option value="2">2× (muy rápida)</option>
+                </select>
+            </div>
+        </div>
+        <p class="nota-voz" id="notaVoz"></p>
+        <div class="sin-voces" id="sinVoces">
+            <p><strong>Tu dispositivo no tiene ninguna voz en español.</strong> Puedes instalar una gratis y volver a esta página:</p>
+            <ul>
+                <li><strong>Windows:</strong> Configuración › Hora e idioma › Voz › Agregar voces.</li>
+                <li><strong>Android:</strong> Ajustes › Texto a voz (o Accesibilidad › Salida de texto a voz) › instala los datos de voz en español.</li>
+                <li><strong>iPhone y iPad:</strong> Ajustes › Accesibilidad › Contenido leído › Voces › Español.</li>
+                <li><strong>Mac:</strong> Ajustes del Sistema › Accesibilidad › Contenido leído › Voz del sistema › Gestionar voces.</li>
+                <li><strong>Linux con Firefox:</strong> instala <code>speech-dispatcher</code> con una voz en español (por ejemplo, de espeak-ng).</li>
+            </ul>
+        </div>
+        <p class="aviso-error" id="sinSpeech" role="alert"></p>
+
+        <div class="action-row acciones">
+            <button type="button" class="btn-convert" id="btnEscuchar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" stroke="none" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+                Escuchar ahora
+            </button>
+            <button type="button" class="btn-secondary btn-mp3" id="btnMp3" disabled aria-describedby="mp3Nota">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Descargar MP3
+            </button>
+        </div>
+        <p class="info-note" id="mp3Nota">La descarga en MP3 está en pausa y vuelve pronto. «Escuchar ahora» no tiene límite de páginas y no envía el PDF a ningún servidor.</p>
+    </div>
+
+    <!-- Paso 3: reproductor -->
+    <div class="step" id="stepLector">
+        <div class="lector">
+            <div class="lector-texto" id="lectorTexto" aria-label="Texto del documento; la frase que se lee está resaltada"></div>
+            <div class="lector-controles">
+                <button type="button" class="ctl" id="btnAnterior" aria-label="Frase anterior" title="Frase anterior">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="19 20 9 12 19 4 19 20"/><rect x="5" y="4" width="2.5" height="16"/></svg>
                 </button>
-                <button class="btn-secondary" onclick="resetTool()">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-                    Convertir otro
+                <button type="button" class="ctl ctl-main" id="btnPausa" aria-label="Pausa">
+                    <svg class="ico-pausa" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                    <svg class="ico-play" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+                </button>
+                <button type="button" class="ctl" id="btnSiguiente" aria-label="Frase siguiente" title="Frase siguiente">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 4 15 12 5 20 5 4"/><rect x="16.5" y="4" width="2.5" height="16"/></svg>
+                </button>
+                <button type="button" class="ctl" id="btnParar" aria-label="Parar y volver al texto" title="Parar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="1"/></svg>
                 </button>
             </div>
+            <div class="lector-opciones">
+                <label for="selVelocidad2">Velocidad</label>
+                <select id="selVelocidad2">
+                    <option value="0.75">0,75×</option>
+                    <option value="1">1×</option>
+                    <option value="1.25">1,25×</option>
+                    <option value="1.5">1,5×</option>
+                    <option value="2">2×</option>
+                </select>
+            </div>
+            <p class="lector-estado" id="lectorEstado" aria-live="polite"></p>
+            <p class="info-note">Mantén esta pestaña abierta mientras escuchas. Pulsa cualquier frase para saltar a ella.</p>
         </div>
     </div>
 
@@ -393,54 +491,42 @@
 .content-seo .rtn a{display:inline-block;padding:10px 18px;background:#fff;border:1px solid #e5e7eb;border-radius:100px;font-size:14px;font-weight:500;color:#1B2A4A;text-decoration:none}
 .content-seo .rtn a:hover{border-color:#E8453C;color:#E8453C}
 </style>
-<section class="content-seo" aria-label="Guía para convertir PDF a audio">
-  <p>Convierte el texto de tu PDF en un <strong>MP3 con voz neuronal</strong> para escucharlo donde quieras: en el coche, entrenando o cocinando. Eliges la voz entre 8 idiomas y variantes, ajustas la velocidad y descargas el audio en un par de minutos.</p>
+<section class="content-seo" aria-label="Guía para escuchar un PDF en voz alta">
+  <p>Escucha el texto de tu PDF <strong>leído en voz alta</strong>, aquí mismo. El documento se abre en tu navegador, no sale de tu dispositivo y no hay límite de páginas ni de caracteres. La descarga en MP3 está en pausa y vuelve pronto.</p>
   <ul>
-    <li>✅ 8 voces neuronales en 6 idiomas</li>
-    <li>✅ 4 velocidades de lectura (de −20 % a +40 %)</li>
-    <li>✅ Escucha la vista previa antes de descargar</li>
-    <li>✅ Gratis, sin registro y sin tope de usos</li>
-    <li>✅ Tus archivos se eliminan del servidor al terminar</li>
+    <li>✅ El PDF no sale de tu dispositivo: se lee en tu navegador</li>
+    <li>✅ Sin límite de páginas ni de caracteres</li>
+    <li>✅ Eliges las páginas y puedes corregir el texto antes de escucharlo</li>
+    <li>✅ Resalta la frase que se está leyendo y puedes saltar a cualquier otra</li>
+    <li>✅ Cinco velocidades, de 0,75× a 2×</li>
+    <li>✅ Gratis y sin registro</li>
   </ul>
 
-  <h2>Voces e idiomas disponibles</h2>
-  <p>La conversión usa las voces neuronales de Microsoft Edge, con entonación natural en cada idioma. Hay una voz por idioma:</p>
-  <table class="comparison">
-    <thead><tr><th>Idioma</th><th>Voz</th></tr></thead>
-    <tbody>
-      <tr><td>🇪🇸 Español (España)</td><td>Elvira</td></tr>
-      <tr><td>🇲🇽 Español (México)</td><td>Dalia</td></tr>
-      <tr><td>🇺🇸 Inglés (EEUU)</td><td>Aria</td></tr>
-      <tr><td>🇬🇧 Inglés (Reino Unido)</td><td>Sonia</td></tr>
-      <tr><td>🇫🇷 Francés</td><td>Denise</td></tr>
-      <tr><td>🇩🇪 Alemán</td><td>Katja</td></tr>
-      <tr><td>🇮🇹 Italiano</td><td>Elsa</td></tr>
-      <tr><td>🇧🇷 Portugués (Brasil)</td><td>Francisca</td></tr>
-    </tbody>
-  </table>
-  <p>El idioma <strong>se elige manualmente</strong> — la herramienta no detecta el idioma del texto. Si tu PDF está en inglés y dejas la voz en español, Elvira leerá el inglés con fonética española, así que asegúrate de que voz y texto coinciden. La velocidad de lectura tiene cuatro niveles: lenta (−20 %), normal, rápida (+20 %) y muy rápida (+40 %).</p>
+  <h2>Qué voces se usan</h2>
+  <p>La lectura usa las <strong>voces sintéticas de tu dispositivo</strong> y de tu navegador, así que cambian de un sistema a otro: Windows, macOS, Android, iPhone y iPad traen voces en español, y algunos navegadores añaden más. La página elige una voz en español de tu dispositivo y puedes cambiarla en el desplegable, donde cada voz indica si funciona «en tu dispositivo» o «en línea».</p>
+  <p>Con una voz <strong>«en línea»</strong>, tu navegador envía el texto a los servidores de su fabricante para generar el audio. Si prefieres que el texto no salga de tu dispositivo, elige una voz marcada como «en tu dispositivo». Si no tienes ninguna voz en español, la página te explica cómo instalar una en tu sistema.</p>
 
-  <h2>Convertir un PDF a MP3 en 3 pasos</h2>
+  <h2>Escuchar un PDF en 3 pasos</h2>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
       <div class="step-body">
-        <h3>Sube tu PDF</h3>
-        <p>Arrastra o selecciona un PDF de hasta 20 MB. Debe tener texto extraíble: un escaneo sin OCR no funciona.</p>
+        <h3>Abre tu PDF</h3>
+        <p>Arrástralo o selecciónalo. Se lee en tu navegador en unos segundos; si es un escaneo sin texto, la página te lo indica y te lleva a OCR.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h3>Elige voz y velocidad</h3>
-        <p>Selecciona una de las 8 voces neuronales y la velocidad de lectura que prefieras.</p>
+        <h3>Elige páginas, voz y velocidad</h3>
+        <p>Indica desde qué página hasta cuál quieres escuchar y revisa el texto: puedes borrar lo que no quieras oír, como notas al pie o índices.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3>Genera, escucha y descarga</h3>
-        <p>Pulsa «Generar audio MP3», escucha la vista previa en el reproductor y descarga <strong>audio_tudocumento.mp3</strong>.</p>
+        <h3>Pulsa «Escuchar ahora»</h3>
+        <p>La lectura empieza al momento. Puedes pausar, ir a la frase anterior o a la siguiente, cambiar la velocidad o pulsar cualquier frase para saltar a ella.</p>
       </div>
     </div>
   </div>
@@ -448,16 +534,16 @@
   <h2>Para qué sirve: situaciones reales</h2>
   <div class="use-cases">
     <div class="use-case">
-      <strong>Escuchar documentos en desplazamientos</strong>
-      <span>Convierte informes, artículos o apuntes en MP3 y escúchalos mientras conduces, entrenas o haces tareas que no requieren la vista.</span>
+      <strong>Escuchar documentos mientras haces otra cosa</strong>
+      <span>Abre informes, artículos o apuntes en el móvil o el ordenador y escúchalos mientras cocinas, ordenas o haces tareas que no requieren la vista.</span>
     </div>
     <div class="use-case">
       <strong>Accesibilidad</strong>
-      <span>Para personas con dislexia, baja visión o fatiga visual, pasar un documento a voz convierte la lectura en escucha sin depender de un lector de pantalla.</span>
+      <span>Para personas con dislexia, baja visión o fatiga visual, oír el documento mientras se resalta cada frase convierte la lectura en escucha sin depender de un lector de pantalla.</span>
     </div>
     <div class="use-case">
       <strong>Estudiar repasando de oído</strong>
-      <span>Convierte tus apuntes en audio y repásalos como si fueran un podcast: una segunda pasada auditiva refuerza lo leído.</span>
+      <span>Elige las páginas del tema que toca y escúchalas como si fueran un podcast: una segunda pasada auditiva refuerza lo leído.</span>
     </div>
     <div class="use-case">
       <strong>Revisar tus propios textos</strong>
@@ -465,39 +551,39 @@
     </div>
   </div>
 
-  <h2>Límites y calidad del audio</h2>
-  <p>El PDF puede pesar <strong>hasta 20 MB</strong> y se convierten <strong>hasta 10.000 caracteres</strong> de texto — unas 1.600 palabras o 4-7 páginas según la densidad, que dan aproximadamente <strong>8-12 minutos de audio</strong> a velocidad normal. Si el documento es más largo, se convierte la primera parte y verás un aviso de que el audio está truncado.</p>
-  <p>El resultado es un <strong>MP3 mono a 24 kHz y 48 kbps</strong>: calidad pensada para voz, con archivos ligeros (un audio de 10 minutos ronda los 3,5 MB). El archivo se descarga como <code>audio_tudocumento.mp3</code> y puedes escucharlo antes en el reproductor integrado.</p>
+  <h2>Límites</h2>
+  <p>No hay límite de páginas ni de caracteres: la lectura avanza frase a frase y puedes saltar adelante o atrás. Lo que sí necesitas es <strong>mantener la pestaña abierta</strong> mientras escuchas; en algunos móviles la voz se detiene al bloquear la pantalla, así que la página intenta mantenerla encendida mientras lee.</p>
+  <p>La página quita al abrir el PDF las cabeceras y los pies que se repiten en todas las páginas y los números de página sueltos, para que no se lean una y otra vez. Esta lectura no genera un archivo: la descarga en MP3 vuelve pronto.</p>
 
   <h2>Privacidad: qué pasa con tu archivo</h2>
-  <p>A diferencia de las herramientas de PDFRápido que funcionan en tu navegador, esta conversión ocurre <strong>en el servidor</strong>. El proceso es transparente: el PDF se sube, se extrae su texto y el archivo <strong>se elimina inmediatamente</strong> del servidor; el texto extraído se envía al servicio de voz neuronal de Microsoft para sintetizar el MP3; y el audio generado también se borra del servidor en cuanto se te entrega. No se guarda copia de tu documento ni del audio.</p>
+  <p>El PDF se abre y se lee en tu navegador: <strong>no sale de tu dispositivo</strong>, no llega a nuestros servidores y no guardamos nada. Con las voces «en tu dispositivo», el texto tampoco sale de él. Con una voz «en línea», tu navegador envía el texto a su fabricante para generar la voz, según las condiciones de ese navegador.</p>
 
   <h2>Lo que esta herramienta no hace</h2>
   <ul>
-    <li><strong>No lee PDFs escaneados.</strong> Si el PDF es solo imagen, devuelve un error. Pásalo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
-    <li><strong>No convierte más de 10.000 caracteres por documento.</strong> Para un documento largo, trocéalo con <a href="/dividir-pdf/">Dividir PDF</a> y convierte cada parte por separado.</li>
-    <li><strong>No detecta el idioma del texto</strong>: la voz se elige a mano y hay una sola voz por idioma, siempre femenina.</li>
-    <li><strong>Solo genera MP3</strong> — no hay salida WAV ni otros formatos de audio.</li>
-    <li><strong>No interpreta tablas, fórmulas ni maquetas complejas.</strong> El texto se extrae en orden de lectura simple; en PDFs a varias columnas o con muchas tablas el resultado puede sonar desordenado.</li>
+    <li><strong>No lee PDFs escaneados.</strong> Un escaneo es una imagen sin texto: pásalo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
+    <li><strong>De momento no genera MP3.</strong> La descarga vuelve pronto; mientras tanto, la lectura en el navegador no tiene límite.</li>
+    <li><strong>No detecta el idioma del texto.</strong> Elige una voz del mismo idioma que el documento.</li>
+    <li><strong>No interpreta tablas, fórmulas ni maquetas complejas.</strong> El texto se lee en orden de lectura simple; en PDFs a varias columnas o con muchas tablas puede sonar desordenado.</li>
+    <li><strong>No elige la calidad de la voz.</strong> Depende de las voces de tu dispositivo y de tu navegador.</li>
   </ul>
 
   <h2>Errores comunes y cómo evitarlos</h2>
   <ul>
-    <li><strong>«El PDF no contiene texto extraíble».</strong> Es un escaneo o un PDF de solo imagen: aplícale <a href="/ocr-a-pdf/">OCR a PDF</a> y vuelve a intentarlo.</li>
-    <li><strong>«El archivo supera el límite de 20 MB».</strong> Redúcelo antes con <a href="/comprimir-pdf/">Comprimir PDF</a>; el peso suele venir de imágenes, no del texto.</li>
-    <li><strong>El audio se corta antes del final.</strong> El documento supera los 10.000 caracteres: divídelo con <a href="/dividir-pdf/">Dividir PDF</a> y convierte las partes una a una.</li>
-    <li><strong>La voz lee con un acento extraño.</strong> El idioma seleccionado no coincide con el del texto; elige la voz del idioma correcto.</li>
-    <li><strong>Números, siglas o tablas suenan raros.</strong> Es una limitación normal de cualquier lector de voz; en documentos muy tabulares conviene escuchar la vista previa antes de descargar.</li>
+    <li><strong>«Este PDF no tiene texto que se pueda leer».</strong> Es un escaneo o un PDF de solo imagen: aplícale <a href="/ocr-a-pdf/">OCR a PDF</a> y vuelve a intentarlo.</li>
+    <li><strong>«Tu dispositivo no tiene ninguna voz en español».</strong> Instala una con las instrucciones que aparecen en la propia herramienta y recarga la página.</li>
+    <li><strong>La voz se para al bloquear el móvil.</strong> Mantén la pantalla encendida y la pestaña en primer plano mientras escuchas.</li>
+    <li><strong>Se leen notas al pie, índices o pies de página.</strong> Bórralos del texto antes de pulsar «Escuchar ahora»: el cuadro de texto se puede editar.</li>
+    <li><strong>La voz lee con un acento extraño.</strong> La voz elegida no es del idioma del texto; cambia de voz en el desplegable.</li>
   </ul>
 
   <h2>Preguntas frecuentes sobre PDF a audio</h2>
   <div class="faq">
-    <div class="faq-item"><h3>¿Qué idiomas y voces están disponibles?</h3><p>Hay 8 voces neuronales: español de España (Elvira) y de México (Dalia), inglés de EEUU (Aria) y de Reino Unido (Sonia), francés (Denise), alemán (Katja), italiano (Elsa) y portugués de Brasil (Francisca). Hay una voz por idioma y el idioma se elige manualmente: la herramienta no detecta el idioma del texto.</p></div>
-    <div class="faq-item"><h3>¿Cuánto texto se convierte y cuánto audio genera?</h3><p>Se convierten hasta 10.000 caracteres, unas 1.600 palabras o 4-7 páginas según la densidad del texto, que equivalen a unos 8-12 minutos de audio a velocidad normal. Si el documento es más largo, se convierte la primera parte y se muestra un aviso.</p></div>
-    <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No. La herramienta necesita que el PDF tenga texto extraíble; con un escaneo (solo imagen) devuelve un error indicándolo. Pasa primero el documento por <a href="/ocr-a-pdf/">OCR a PDF</a> y después conviértelo a audio.</p></div>
-    <div class="faq-item"><h3>¿Se suben mis archivos a un servidor?</h3><p>Sí, esta herramienta procesa en el servidor, a diferencia de las herramientas locales del sitio. El PDF se sube, se extrae su texto y el archivo se elimina inmediatamente; el texto se envía al servicio de voz neuronal de Microsoft para generar el MP3, y el audio también se borra del servidor en cuanto se te entrega.</p></div>
-    <div class="faq-item"><h3>¿En qué formato se descarga el audio?</h3><p>En MP3 (mono, 24 kHz, 48 kbps), con el nombre <code>audio_tudocumento.mp3</code>. Es el único formato disponible; no se genera WAV.</p></div>
-    <div class="faq-item"><h3>¿Puedo ajustar la velocidad de lectura?</h3><p>Sí, hay cuatro velocidades: lenta (−20 %), normal, rápida (+20 %) y muy rápida (+40 %). La velocidad elegida cambia la duración del MP3 resultante.</p></div>
+    <div class="faq-item"><h3>¿Puedo descargar el audio en MP3?</h3><p>Ahora mismo no: la descarga en MP3 está en pausa porque el servicio de voz que la generaba ha dejado de funcionar, y vuelve pronto. Mientras tanto, puedes escuchar el PDF entero en tu navegador con «Escuchar ahora», sin límite de páginas.</p></div>
+    <div class="faq-item"><h3>¿Se envía mi PDF a algún servidor?</h3><p>No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con las voces marcadas «en tu dispositivo», el texto tampoco sale de él; con una voz «en línea», tu navegador envía el texto a su fabricante para generar la voz.</p></div>
+    <div class="faq-item"><h3>¿Hay límite de páginas o de texto?</h3><p>No. Puedes escuchar el documento entero o elegir un rango de páginas. La lectura avanza frase a frase y puedes saltar adelante o atrás, o pulsar cualquier frase para ir a ella.</p></div>
+    <div class="faq-item"><h3>¿Qué voces hay?</h3><p>Las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro. La página elige una voz en español si la hay y puedes cambiarla; si no hay ninguna, te explica cómo instalarla.</p></div>
+    <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No, porque un escaneo es una imagen sin texto. La página lo detecta al abrir el archivo y te propone pasarlo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</p></div>
+    <div class="faq-item"><h3>¿Puedo cambiar la velocidad de lectura?</h3><p>Sí, hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas: el cambio se aplica al momento, desde la frase que se está leyendo.</p></div>
   </div>
 
   <h2>Otras herramientas PDF</h2>
@@ -509,7 +595,7 @@
     <a href="/ocr-a-pdf/">OCR a PDF</a>
     <a href="/dividir-pdf/">Dividir PDF</a>
   </div>
-  <p>¿Listo? Sube arriba tu PDF, elige voz y velocidad, y en un par de minutos tendrás tu documento convertido en un MP3 listo para escuchar donde quieras.</p>
+  <p>¿Listo? Abre arriba tu PDF, elige las páginas y la voz, y pulsa «Escuchar ahora».</p>
 </section>
 </main>
 
@@ -517,147 +603,451 @@
     <p>&copy; 2026 PDFRápido — dev: <a href="https://mfsanchez.com" target="_blank" rel="noopener">MF Sanchez</a> · <a href="/privacidad/">Privacidad</a> · <a href="/aviso-legal/">Aviso legal</a> · <a href="/terminos/">Términos</a> · <a href="/alternativas/">Alternativas</a> · <a href="/cookies/">Cookies</a> · <a href="/contacto/">Contacto</a> &nbsp;|&nbsp;  <a href="/">Todas las herramientas</a> · <a href="/sitemap.html">Mapa del sitio</a> · <a href="https://github.com/mfsanchez/pdfrapido" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Código fuente de PDFRápido"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;position:relative;top:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></p>
 </footer>
 
+<script src="/js/pdf-3.11.min.js"></script>
 <script>
-let selectedFile = null;
-let audioBlob = null;
-let audioFilename = '';
+pdfjsLib.GlobalWorkerOptions.workerSrc = '/js/pdf-3.11.worker.min.js';
 
-const fileInput    = document.getElementById('fileInput');
-const uploadZone   = document.getElementById('uploadZone');
-const optionsPanel = document.getElementById('optionsPanel');
+const $ = id => document.getElementById(id);
+const synth = ('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window) ? window.speechSynthesis : null;
 
-fileInput.addEventListener('change', e => {
-    const f = e.target.files[0];
-    if (f) selectFile(f);
-});
+let paginas = [];          // texto limpio de cada página
+let textoEditado = false;  // el usuario ha tocado el textarea
+let frases = [];           // frases que se leen, en orden
+let idx = 0;               // frase actual
+let leyendo = false;
+let utter = null;          // referencia viva: Chrome pierde el evento «end» si se recoge la utterance
+let voces = [];
+let erroresSeguidos = 0;
+let wakeLock = null;
 
+// ── 1. Abrir el PDF ──────────────────────────────────────────────────────────
+const fileInput = $('fileInput'), uploadZone = $('uploadZone');
+fileInput.addEventListener('change', e => { if (e.target.files[0]) abrirPdf(e.target.files[0]); });
 uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
 uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
 uploadZone.addEventListener('drop', e => {
     e.preventDefault();
     uploadZone.classList.remove('drag-over');
     const f = e.dataTransfer.files[0];
-    if (f && f.type === 'application/pdf') selectFile(f);
+    if (f) abrirPdf(f);
 });
 
-function selectFile(file) {
-    selectedFile = file;
-    document.getElementById('fileName').textContent = file.name;
-    document.getElementById('fileSize').textContent = formatSize(file.size);
-    optionsPanel.classList.add('active');
+function avisoUpload(html) {
+    const el = $('uploadError');
+    el.innerHTML = html;
+    el.classList.toggle('active', !!html);
 }
 
-function formatSize(bytes) {
-    if (bytes < 1024) return bytes + ' B';
-    if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
-    return (bytes / 1048576).toFixed(1) + ' MB';
+function progreso(pct, texto) {
+    $('progressFill').style.width = pct + '%';
+    $('progressLabel').textContent = texto;
 }
 
-async function startConversion() {
-    if (!selectedFile) return;
-
-    const btn = document.getElementById('btnConvert');
-    btn.disabled = true;
-    btn.innerHTML = '<span class="spinner"></span> Generando audio...';
-
-    document.getElementById('stepUpload').style.display = 'none';
-    showStep('stepProgress');
-
-    const stages = [
-        { pct: 10, label: 'Subiendo PDF...' },
-        { pct: 30, label: 'Extrayendo texto...' },
-        { pct: 55, label: 'Generando voz...' },
-        { pct: 80, label: 'Procesando audio...' },
-        { pct: 92, label: 'Casi listo...' },
-    ];
-    let stageIdx = 0;
-    setProgress(stages[0].pct, stages[0].label);
-    const timer = setInterval(() => {
-        stageIdx = Math.min(stageIdx + 1, stages.length - 1);
-        setProgress(stages[stageIdx].pct, stages[stageIdx].label);
-    }, 3000);
-
-    const formData = new FormData();
-    formData.append('file', selectedFile);
-    formData.append('idioma', document.getElementById('selIdioma').value);
-    formData.append('velocidad', document.getElementById('selVelocidad').value);
-
+async function abrirPdf(file) {
+    avisoUpload('');
+    if (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf') {
+        avisoUpload('Ese archivo no es un PDF. Elige un archivo con la extensión .pdf.');
+        return;
+    }
+    $('stepUpload').style.display = 'none';
+    $('stepProgress').classList.add('active');
+    progreso(3, 'Abriendo el PDF en tu navegador…');
+    let pdf;
     try {
-        const resp = await fetch('/api/pdf-a-audio', { method: 'POST', body: formData });
-        clearInterval(timer);
-
-        if (!resp.ok) {
-            const errData = await resp.json().catch(() => ({}));
-            throw new Error(errData.detail || 'Error en la conversión');
-        }
-
-        setProgress(96, 'Descargando audio...');
-
-        const truncado = resp.headers.get('X-Truncado') === 'true';
-        const disposition = resp.headers.get('Content-Disposition') || '';
-        const fnMatch = disposition.match(/filename="?([^"]+)"?/);
-        audioFilename = fnMatch ? fnMatch[1] : 'audio_documento.mp3';
-
-        audioBlob = await resp.blob();
-        setProgress(100, '¡Listo!');
-
-        const audioURL = URL.createObjectURL(audioBlob);
-        document.getElementById('audioPlayer').src = audioURL;
-
-        const sizeMB = (audioBlob.size / 1048576).toFixed(1);
-        document.getElementById('resultDesc').textContent = `${audioFilename} — ${sizeMB} MB`;
-
-        if (truncado) {
-            document.getElementById('truncNotice').style.display = 'block';
-        }
-
-        showStep('stepResult');
-
+        pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
     } catch (err) {
-        clearInterval(timer);
-        document.getElementById('progressLabel').textContent = err.message || 'Error al generar el audio.';
-        document.getElementById('progressFill').style.background = '#EF4444';
-        setTimeout(() => resetTool(), 4000);
+        volverAlInicio();
+        if (err && err.name === 'PasswordException') {
+            avisoUpload('Este PDF está protegido con contraseña y no se puede leer. Si es tuyo, quítale la protección con <a href="/desbloquear-pdf/">Desbloquear PDF</a> y vuelve aquí.');
+        } else {
+            avisoUpload('No se ha podido abrir el archivo. Puede que esté dañado: prueba con <a href="/reparar-pdf/">Reparar PDF</a>.');
+        }
+        return;
+    }
+    const total = pdf.numPages;
+    const lineasPorPagina = [];
+    for (let i = 1; i <= total; i++) {
+        progreso(3 + Math.round(i / total * 95), `Leyendo el PDF: página ${i} de ${total}`);
+        const page = await pdf.getPage(i);
+        lineasPorPagina.push(lineasDePagina(await page.getTextContent()));
+    }
+    paginas = limpiarPaginas(lineasPorPagina);
+    $('stepProgress').classList.remove('active');
+
+    const totalLetras = paginas.reduce((n, t) => n + t.replace(/\s/g, '').length, 0);
+    if (totalLetras < 20) {
+        volverAlInicio();
+        avisoUpload('Este PDF no tiene texto que se pueda leer: seguramente es un escaneo (una imagen de cada página). Pásalo antes por <a href="/ocr-a-pdf/">OCR a PDF</a> y vuelve aquí con el resultado.');
+        return;
+    }
+
+    $('fileName').textContent = file.name;
+    $('fileMeta').textContent = `${total} ${total === 1 ? 'página' : 'páginas'}`;
+    $('rangoRow').style.display = total > 1 ? '' : 'none';
+    $('pagDesde').max = $('pagHasta').max = total;
+    $('pagDesde').value = 1;
+    $('pagHasta').value = total;
+    textoEditado = false;
+    ponerTextoDeRango();
+    $('optionsPanel').classList.add('active');
+    prepararVoces();
+    $('btnEscuchar').focus();
+}
+
+// Agrupa los fragmentos de pdf.js en líneas (con su posición vertical)
+function lineasDePagina(content) {
+    const lineas = [];
+    let actual = null;
+    for (const it of content.items) {
+        if (typeof it.str !== 'string') continue;
+        const y = it.transform[5], h = Math.abs(it.transform[3]) || it.height || 10;
+        if (actual && Math.abs(actual.y - y) > h * 0.5 && actual.texto.trim()) {
+            lineas.push(actual);
+            actual = null;
+        }
+        if (!actual) actual = { texto: '', y, h, finX: null };
+        // pdf.js parte a veces una palabra en varios fragmentos: solo se añade espacio si hay hueco real
+        const hueco = actual.finX === null ? 0 : it.transform[4] - actual.finX;
+        const espacio = actual.texto && !/\s$/.test(actual.texto) && !/^\s/.test(it.str) && hueco > h * 0.15;
+        actual.texto += (espacio ? ' ' : '') + it.str;
+        actual.finX = it.transform[4] + (it.width || 0);
+        if (it.hasEOL && actual.texto.trim()) { lineas.push(actual); actual = null; }
+    }
+    if (actual && actual.texto.trim()) lineas.push(actual);
+    return lineas.map(l => ({ texto: l.texto.replace(/\s+/g, ' ').trim(), y: l.y, h: l.h })).filter(l => l.texto);
+}
+
+const RE_NUM_PAGINA = /^(p[áa]g(ina)?\.?\s*)?[-–—]?\s*\d{1,4}\s*[-–—]?(\s*(de|\/)\s*\d{1,4})?$|^[ivxlc]{1,6}$/i;
+
+// Quita cabeceras y pies repetidos y números de página; une líneas en párrafos
+function limpiarPaginas(lineasPorPagina) {
+    const n = lineasPorPagina.length;
+    const clave = t => t.toLowerCase().replace(/\d+/g, '#').replace(/\s+/g, ' ');
+    // Cabeceras y pies: solo pueden serlo las 2 primeras y las 2 últimas líneas de cada página
+    const bordes = lineas => lineas.length <= 4 ? lineas : lineas.slice(0, 2).concat(lineas.slice(-2));
+    const repetidas = new Set();
+    if (n >= 3) {
+        const cuenta = new Map();
+        lineasPorPagina.forEach(lineas => {
+            new Set(bordes(lineas).map(l => clave(l.texto))).forEach(k => cuenta.set(k, (cuenta.get(k) || 0) + 1));
+        });
+        cuenta.forEach((c, k) => { if (c > n / 2 && k.length < 140) repetidas.add(k); });
+    }
+    return lineasPorPagina.map(lineas => {
+        const enBorde = new Set(bordes(lineas));
+        const utiles = lineas.filter(l => !(enBorde.has(l) && (repetidas.has(clave(l.texto)) || RE_NUM_PAGINA.test(l.texto))));
+        const huecos = [];
+        for (let i = 1; i < utiles.length; i++) huecos.push(Math.abs(utiles[i - 1].y - utiles[i].y));
+        const normal = huecos.length ? huecos.slice().sort((a, b) => a - b)[Math.floor(huecos.length / 2)] : 0;
+        const largo = Math.max(...utiles.map(l => l.texto.length), 1);
+        const parrafos = [];
+        let p = '';
+        utiles.forEach((l, i) => {
+            if (!p) { p = l.texto; return; }
+            const hueco = huecos[i - 1];
+            const prev = utiles[i - 1].texto;
+            const nuevo = (normal && hueco > normal * 1.5) || hueco < 0 ||
+                (/[.:!?…»”"]$/.test(prev) && prev.length < largo * 0.7) ||
+                /^([-•▪●◦·*]|\d{1,2}[.)])\s/.test(l.texto);
+            if (nuevo) { parrafos.push(p); p = l.texto; return; }
+            if (/[A-Za-zÁÉÍÓÚÑáéíóúñü]-$/.test(p) && /^[a-záéíóúñü]/.test(l.texto)) p = p.slice(0, -1) + l.texto;
+            else p += ' ' + l.texto;
+        });
+        if (p) parrafos.push(p);
+        return parrafos.join('\n\n');
+    });
+}
+
+// ── 2. Páginas y texto ──────────────────────────────────────────────────────
+function rango() {
+    const total = paginas.length;
+    let d = Math.min(Math.max(parseInt($('pagDesde').value, 10) || 1, 1), total);
+    let h = Math.min(Math.max(parseInt($('pagHasta').value, 10) || total, 1), total);
+    if (h < d) [d, h] = [h, d];
+    return [d, h];
+}
+
+function ponerTextoDeRango() {
+    const [d, h] = rango();
+    $('texto').value = paginas.slice(d - 1, h).filter(t => t.trim()).join('\n\n');
+    actualizarContador();
+}
+
+['pagDesde', 'pagHasta'].forEach(id => $(id).addEventListener('change', () => {
+    if (textoEditado && !confirm('Al cambiar las páginas se sustituye el texto, y se pierden los cambios que hayas hecho. ¿Continuar?')) return;
+    textoEditado = false;
+    ponerTextoDeRango();
+}));
+$('texto').addEventListener('input', () => { textoEditado = true; actualizarContador(); });
+
+function actualizarContador() {
+    const t = $('texto').value.trim();
+    const letras = t.length;
+    const vel = parseFloat($('selVelocidad').value) || 1;
+    const min = Math.max(1, Math.round(letras / 14 / vel / 60));  // ~14 caracteres por segundo a 1×
+    $('contador').textContent = letras
+        ? `${letras.toLocaleString('es')} caracteres · unos ${min.toLocaleString('es')} min de escucha a esta velocidad`
+        : 'No hay texto que leer en estas páginas.';
+}
+
+$('btnOtro').addEventListener('click', () => { parar(); volverAlInicio(); });
+
+function volverAlInicio() {
+    $('stepProgress').classList.remove('active');
+    $('stepLector').classList.remove('active');
+    $('optionsPanel').classList.remove('active');
+    $('stepUpload').style.display = '';
+    fileInput.value = '';
+    progreso(0, '');
+}
+
+// ── 3. Voces del dispositivo ────────────────────────────────────────────────
+function puntuacion(v) {
+    const es = /^es/i.test(v.lang), esES = /^es[-_]ES/i.test(v.lang);
+    return (es ? 0 : 4) + (esES ? 0 : 1) + (v.localService ? 0 : 2);
+}
+
+function rellenarVoces() {
+    voces = synth.getVoices().slice().sort((a, b) => puntuacion(a) - puntuacion(b) || a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name));
+    const sel = $('selVoz');
+    const previa = sel.value || leerPreferencia();
+    sel.innerHTML = '';
+    const grupos = [['Español', voces.filter(v => /^es/i.test(v.lang))], ['Otros idiomas', voces.filter(v => !/^es/i.test(v.lang))]];
+    for (const [nombre, lista] of grupos) {
+        if (!lista.length) continue;
+        const og = document.createElement('optgroup');
+        og.label = nombre;
+        for (const v of lista) {
+            const o = document.createElement('option');
+            o.value = v.voiceURI;
+            o.textContent = `${v.name} (${v.lang}) · ${v.localService ? 'en tu dispositivo' : 'en línea'}`;
+            og.appendChild(o);
+        }
+        sel.appendChild(og);
+    }
+    if (previa && voces.some(v => v.voiceURI === previa)) sel.value = previa;
+    else if (voces.length) sel.value = voces[0].voiceURI;
+    $('sinVoces').classList.toggle('active', voces.length > 0 && !voces.some(v => /^es/i.test(v.lang)));
+    notaVoz();
+}
+
+function vozActual() { return voces.find(v => v.voiceURI === $('selVoz').value) || null; }
+
+function notaVoz() {
+    const v = vozActual();
+    $('notaVoz').textContent = !v ? '' : v.localService
+        ? 'Esta voz funciona en tu dispositivo: el texto no sale de él.'
+        : 'Esta voz es «en línea»: tu navegador envía el texto a su fabricante para generar la voz. Si prefieres que no salga de tu dispositivo, elige una voz «en tu dispositivo».';
+}
+
+function leerPreferencia() { try { return localStorage.getItem('pdfaudio-voz') || ''; } catch (e) { return ''; } }
+function guardarPreferencia(uri) { try { localStorage.setItem('pdfaudio-voz', uri); } catch (e) {} }
+
+let vocesPreparadas = false;
+function prepararVoces() {
+    if (!synth) {
+        $('sinSpeech').textContent = 'Tu navegador no puede leer texto en voz alta. Prueba con una versión actual de Chrome, Safari, Firefox o el navegador de tu móvil.';
+        $('sinSpeech').classList.add('active');
+        $('btnEscuchar').disabled = true;
+        return;
+    }
+    if (vocesPreparadas) { rellenarVoces(); return; }
+    vocesPreparadas = true;
+    rellenarVoces();
+    synth.addEventListener ? synth.addEventListener('voiceschanged', rellenarVoces) : (synth.onvoiceschanged = rellenarVoces);
+    // Algunos navegadores cargan las voces con retraso y sin avisar
+    setTimeout(() => {
+        if (!voces.length) rellenarVoces();
+        if (!voces.length) {
+            $('sinVoces').classList.add('active');
+            $('sinVoces').querySelector('strong').textContent = 'Tu dispositivo no tiene voces instaladas para leer en voz alta.';
+        }
+    }, 1000);
+}
+
+$('selVoz').addEventListener('change', () => {
+    guardarPreferencia($('selVoz').value);
+    notaVoz();
+    if (leyendo) hablar(idx);
+});
+
+function velocidad(v) {
+    $('selVelocidad').value = $('selVelocidad2').value = v;
+    actualizarContador();
+    if (leyendo) hablar(idx);
+}
+$('selVelocidad').addEventListener('change', e => velocidad(e.target.value));
+$('selVelocidad2').addEventListener('change', e => velocidad(e.target.value));
+
+// ── 4. Frases ───────────────────────────────────────────────────────────────
+const ABREV = /(?:^|\s)(sr|sra|srta|dr|dra|d|dña|art|arts|núm|num|pág|págs|etc|ej|vol|cap|aprox|av|avda|ud|uds|vd|vds|fig|tel|ref|p\. ej|ee\. uu|s\.a|s\.l|[a-záéíóúñ])\.$/i;
+
+function partirFrases(parrafo) {
+    let trozos;
+    if (window.Intl && Intl.Segmenter) {
+        trozos = Array.from(new Intl.Segmenter('es', { granularity: 'sentence' }).segment(parrafo), s => s.segment);
+    } else {
+        trozos = parrafo.match(/[^.!?…]+(?:[.!?…]+["»”')\]]*\s*|$)/g) || [parrafo];
+    }
+    // une abreviaturas («art. 14», «Sr. García») que el separador ha cortado
+    const unidas = [];
+    for (const t of trozos) {
+        if (unidas.length && ABREV.test(unidas[unidas.length - 1].trim())) unidas[unidas.length - 1] += t;
+        else unidas.push(t);
+    }
+    // frases muy largas: se parten por comas o espacios (Chrome corta las utterances largas)
+    const out = [];
+    for (let f of unidas.map(s => s.trim()).filter(Boolean)) {
+        while (f.length > 240) {
+            let corte = Math.max(f.lastIndexOf(', ', 220), f.lastIndexOf('; ', 220), f.lastIndexOf(': ', 220));
+            if (corte < 80) corte = f.lastIndexOf(' ', 220);
+            if (corte < 40) corte = 220;
+            out.push(f.slice(0, corte + 1).trim());
+            f = f.slice(corte + 1).trim();
+        }
+        if (f) out.push(f);
+    }
+    return out;
+}
+
+function montarLector() {
+    const cont = $('lectorTexto');
+    cont.innerHTML = '';
+    frases = [];
+    $('texto').value.split(/\n\s*\n/).map(p => p.replace(/\s+/g, ' ').trim()).filter(Boolean).forEach(p => {
+        const el = document.createElement('p');
+        partirFrases(p).forEach(f => {
+            const s = document.createElement('span');
+            s.className = 'frase';
+            s.dataset.i = frases.length;
+            s.textContent = f + ' ';
+            el.appendChild(s);
+            frases.push(f);
+        });
+        cont.appendChild(el);
+    });
+}
+
+$('lectorTexto').addEventListener('click', e => {
+    const s = e.target.closest('.frase');
+    if (s) hablar(+s.dataset.i);
+});
+
+// ── 5. Lectura ──────────────────────────────────────────────────────────────
+$('btnEscuchar').addEventListener('click', () => {
+    if (!synth) return;
+    if (!$('texto').value.trim()) { $('contador').textContent = 'No hay texto que leer: elige otras páginas o escribe el texto.'; return; }
+    montarLector();
+    $('optionsPanel').classList.remove('active');
+    $('stepLector').classList.add('active');
+    $('selVelocidad2').value = $('selVelocidad').value;
+    erroresSeguidos = 0;
+    hablar(0);
+    $('btnPausa').focus();
+});
+
+function marcar(i) {
+    document.querySelectorAll('.frase.actual').forEach(s => s.classList.remove('actual'));
+    const s = document.querySelector(`.frase[data-i="${i}"]`);
+    if (s) {
+        s.classList.add('actual');
+        const cont = $('lectorTexto');
+        const top = s.offsetTop - cont.offsetTop;
+        if (top < cont.scrollTop || top > cont.scrollTop + cont.clientHeight - 40) cont.scrollTo({ top: Math.max(0, top - 60), behavior: 'smooth' });
     }
 }
 
-function downloadAudio() {
-    if (!audioBlob) return;
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(audioBlob);
-    a.download = audioFilename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(a.href);
+function estado() {
+    const v = vozActual();
+    $('lectorEstado').textContent = frases.length
+        ? `Frase ${Math.min(idx + 1, frases.length)} de ${frases.length}${v ? ` · ${v.name}` : ''}${leyendo ? '' : ' · en pausa'}`
+        : '';
+    $('btnPausa').classList.toggle('en-pausa', !leyendo);
+    $('btnPausa').setAttribute('aria-label', leyendo ? 'Pausa' : 'Seguir leyendo');
 }
 
-function resetTool() {
-    selectedFile = null;
-    audioBlob = null;
-    audioFilename = '';
-    fileInput.value = '';
-    optionsPanel.classList.remove('active');
-    document.getElementById('stepUpload').style.display = '';
-    ['stepProgress', 'stepResult'].forEach(id => document.getElementById(id).classList.remove('active'));
-    document.getElementById('progressFill').style.width = '0';
-    document.getElementById('progressFill').style.background = '';
-    document.getElementById('truncNotice').style.display = 'none';
-    document.getElementById('audioPlayer').src = '';
-    const btn = document.getElementById('btnConvert');
-    btn.disabled = false;
-    btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> Generar audio MP3';
+function hablar(i) {
+    if (!frases.length) return;
+    idx = Math.min(Math.max(i, 0), frases.length - 1);
+    leyendo = true;
+    utter = null;          // antes de cancel(): así el «end» de la frase anterior no avanza la lectura
+    synth.cancel();
+    const u = new SpeechSynthesisUtterance(frases[idx]);
+    const v = vozActual();
+    if (v) { u.voice = v; u.lang = v.lang; } else u.lang = 'es-ES';
+    u.rate = parseFloat($('selVelocidad').value) || 1;
+    u.onend = () => {
+        if (utter !== u) return;
+        erroresSeguidos = 0;
+        if (idx + 1 < frases.length) hablar(idx + 1);
+        else terminar();
+    };
+    u.onerror = e => {
+        if (utter !== u || e.error === 'interrupted' || e.error === 'canceled') return;
+        if (++erroresSeguidos >= 3) {
+            pausar();
+            $('lectorEstado').textContent = 'El navegador no está pudiendo leer el texto con esta voz. Para, elige otra voz y vuelve a intentarlo.';
+            return;
+        }
+        if (idx + 1 < frases.length) hablar(idx + 1); else terminar();
+    };
+    utter = u;
+    marcar(idx);
+    estado();
+    pedirPantallaEncendida();
+    synth.speak(u);
 }
 
-function setProgress(pct, label) {
-    document.getElementById('progressFill').style.width = pct + '%';
-    document.getElementById('progressLabel').textContent = label;
+// pause()/resume() no funcionan en Android: pausar = cancelar y retomar desde la frase actual
+function pausar() {
+    leyendo = false;
+    utter = null;
+    if (synth) synth.cancel();
+    soltarPantalla();
+    estado();
 }
 
-function showStep(id) {
-    ['stepProgress', 'stepResult'].forEach(s => document.getElementById(s).classList.remove('active'));
-    document.getElementById(id).classList.add('active');
+function parar() {
+    pausar();
+    idx = 0;
 }
+
+function terminar() {
+    pausar();
+    idx = 0;
+    marcar(-1);
+    $('lectorEstado').textContent = 'Lectura terminada. Pulsa ▶ para escucharlo desde el principio o pulsa cualquier frase.';
+}
+
+$('btnPausa').addEventListener('click', () => {
+    if (leyendo) pausar();
+    else hablar(idx);
+});
+$('btnAnterior').addEventListener('click', () => hablar(idx - 1));
+$('btnSiguiente').addEventListener('click', () => hablar(idx + 1));
+$('btnParar').addEventListener('click', () => {
+    parar();
+    $('stepLector').classList.remove('active');
+    $('optionsPanel').classList.add('active');
+    $('btnEscuchar').focus();
+});
+
+document.addEventListener('keydown', e => {
+    if (!$('stepLector').classList.contains('active') || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+    if (e.key === ' ' || e.key === 'k') { e.preventDefault(); $('btnPausa').click(); }
+    else if (e.key === 'ArrowLeft') hablar(idx - 1);
+    else if (e.key === 'ArrowRight') hablar(idx + 1);
+});
+
+// Evita que el móvil apague la pantalla (y con ella la voz) mientras se lee
+async function pedirPantallaEncendida() {
+    try { if (!wakeLock && 'wakeLock' in navigator) { wakeLock = await navigator.wakeLock.request('screen'); wakeLock.addEventListener('release', () => { wakeLock = null; }); } } catch (e) {}
+}
+function soltarPantalla() { try { if (wakeLock) wakeLock.release(); } catch (e) {} wakeLock = null; }
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && leyendo) pedirPantallaEncendida(); });
+
+window.addEventListener('pagehide', () => { if (synth) synth.cancel(); });
+if (!synth) prepararVoces();
 </script>
 <script src="/js/cookies-consent.js?v=3" defer></script>
 <script src="/js/error-modal.js"></script>
