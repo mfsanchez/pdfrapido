@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="pdf a audio, escuchar pdf, leer pdf en voz alta, pdf a voz, convertir pdf a voz, pdf a mp3">
-    <meta name="description" content="Escucha cualquier PDF en voz alta, gratis y sin subirlo: se lee en tu navegador, sin límite de páginas y con la frase resaltada. La descarga en MP3 vuelve pronto.">
+    <meta name="description" content="Escucha cualquier PDF en voz alta en tu navegador, gratis y sin subirlo, o descarga un MP3 con voz de Google de hasta 20.000 caracteres.">
     <meta name="author" content="MF Sanchez - PDFRápido">
     <title>PDF a audio gratis: escucha tu PDF en voz alta | PDFRápido</title>
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -105,6 +105,16 @@
         .nota-voz{font-size:13px;color:var(--gray-500);margin:-4px 0 16px;line-height:1.5}
         .sin-voces{display:none;background:#FFFBEB;border:1px solid #FEF3C7;color:#78350F;border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;font-size:14px;line-height:1.6}.sin-voces.active{display:block}.sin-voces ul{margin:8px 0 0 18px}
         .acciones{margin-top:8px}.acciones .btn-convert{width:auto;flex:2;min-width:220px}.btn-mp3{flex:1;justify-content:center;min-width:180px}.btn-mp3:disabled{opacity:.55;cursor:not-allowed}.btn-mp3:disabled:hover{border-color:var(--gray-200);color:var(--gray-700)}
+        .panel-mp3{display:none;margin-top:16px;border:1px solid var(--gray-200);border-radius:var(--radius);background:#fff;padding:18px}.panel-mp3.active{display:block}
+        .panel-mp3 h3{font-size:16px;font-weight:700;color:var(--secondary);margin-bottom:8px}.mp3-intro{font-size:13px;color:var(--gray-600);line-height:1.6;margin-bottom:14px}
+        .mp3-cupo{font-size:13px;color:var(--gray-500);margin:0 0 10px;line-height:1.5}
+        .aviso-tope{display:none;background:var(--accent-light);border:1px solid #FDE2C8;color:#92400E;border-radius:var(--radius);padding:12px 16px;margin:0 0 12px;font-size:14px;line-height:1.55}.aviso-tope.active{display:block}
+        .aviso-tope .btn-convert{width:auto;display:inline-flex;margin-top:10px;padding:10px 18px;font-size:15px}
+        .ts-caja{margin:0 0 12px;max-width:100%}.ts-caja:empty{display:none}@media(max-width:640px){.panel-mp3{padding:14px}}
+        .mp3-progreso,.mp3-listo{display:none;margin-top:12px}.mp3-progreso.active,.mp3-listo.active{display:block}
+        .mp3-listo audio{width:100%;margin-bottom:10px}.mp3-listo .btn-primary{display:inline-flex;text-decoration:none}
+        .cual-elijo{margin-top:16px;font-size:14px;color:var(--gray-600)}.cual-elijo summary{cursor:pointer;color:var(--secondary)}
+        .tabla-scroll{overflow-x:auto;margin-top:10px}.cual-elijo table{width:100%;border-collapse:collapse;min-width:480px}.cual-elijo th,.cual-elijo td{border-bottom:1px solid var(--gray-200);padding:8px 10px;text-align:left;vertical-align:top;line-height:1.5}.cual-elijo thead th{color:var(--secondary)}.cual-elijo tbody th{font-weight:600;color:var(--gray-700);white-space:nowrap}
         .lector{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:20px}
         .lector-texto{max-height:320px;overflow-y:auto;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px 18px;font-size:16px;line-height:1.75;color:var(--gray-700)}
         .lector-texto p{margin:0 0 12px}.lector-texto p:last-child{margin-bottom:0}
@@ -119,7 +129,8 @@
         html[data-theme="dark"] .opt-num,html[data-theme="dark"] .texto-previo,html[data-theme="dark"] .lector-texto,html[data-theme="dark"] .ctl,html[data-theme="dark"] .lector-opciones select,html[data-theme="dark"] .opt-group select,html[data-theme="dark"] .file-info{background:var(--bg-hover);color:var(--text-primary)}
         html[data-theme="dark"] .ctl-main{background:var(--accent);color:#fff}
         html[data-theme="dark"] .frase.actual{background:#5A3410;color:#FFF4EB;box-shadow:0 0 0 2px #5A3410}
-        html[data-theme="dark"] .aviso-mp3{background:#3a2410;border-color:#5A3410;color:#FCD9B6}
+        html[data-theme="dark"] .aviso-tope{background:#3a2410;border-color:#5A3410;color:#FCD9B6}
+        html[data-theme="dark"] .panel-mp3{background:var(--bg-hover);border-color:var(--border-color,#374151)}html[data-theme="dark"] .panel-mp3 h3,html[data-theme="dark"] .cual-elijo summary,html[data-theme="dark"] .cual-elijo thead th{color:var(--text-primary)}html[data-theme="dark"] .mp3-intro,html[data-theme="dark"] .cual-elijo,html[data-theme="dark"] .cual-elijo tbody th{color:var(--text-secondary,#D1D5DB)}html[data-theme="dark"] #mp3Voz,html[data-theme="dark"] #mp3Vel{background:var(--bg-hover);color:var(--text-primary)}
         html[data-theme="dark"] .aviso-error{background:#3B1517;border-color:#7F1D1D;color:#FECACA}
         html[data-theme="dark"] .sin-voces{background:#3a2a10;border-color:#5A3F10;color:#FDE68A}
         @media(max-width:640px){.acciones .btn-convert,.btn-mp3{min-width:0;width:100%}.lector{padding:14px}.lector-texto{max-height:260px;font-size:15px}}
@@ -133,7 +144,7 @@
           "@type": "WebApplication",
           "name": "PDF a Audio online gratis",
           "url": "https://pdfrapido.eu/pdf-a-audio/",
-          "description": "Escucha cualquier PDF en voz alta en tu navegador, sin subirlo y sin límite de páginas, con la frase que se lee resaltada. Gratis y sin registro.",
+          "description": "Escucha cualquier PDF en voz alta en tu navegador, sin subirlo y sin límite de páginas, con la frase que se lee resaltada, o descarga el texto en MP3 con una voz neuronal de Google (hasta 20.000 caracteres, con cupo diario). Gratis y sin registro.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Web",
           "offers": {
@@ -173,7 +184,7 @@
               "name": "¿Puedo descargar el audio en MP3?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ahora mismo no: la descarga en MP3 está en pausa porque el servicio de voz que la generaba ha dejado de funcionar, y vuelve pronto. Mientras tanto, puedes escuchar el PDF entero en tu navegador con «Escuchar ahora», sin límite de páginas."
+                "text": "Sí, hasta 20.000 caracteres por MP3, con una voz neuronal de Google en español de España o de América. Hay un cupo diario gratuito compartido por todos los usuarios; si se agota, puedes escuchar el texto entero con «Escuchar ahora», que no tiene límite."
               }
             },
             {
@@ -181,7 +192,7 @@
               "name": "¿Se envía mi PDF a algún servidor?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con las voces marcadas «en tu dispositivo», el texto tampoco sale de él; con una voz «en línea», tu navegador envía el texto a su fabricante para generar la voz."
+                "text": "No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con «Escuchar ahora» y una voz «en tu dispositivo», el texto tampoco sale de él. Si pides el MP3, enviamos solo el texto elegido a nuestro servidor y a Google Cloud, en la UE; el texto se borra al terminar y el MP3, al descargarlo o como máximo a los 10 minutos."
               }
             },
             {
@@ -189,7 +200,7 @@
               "name": "¿Hay límite de páginas o de texto?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Puedes escuchar el documento entero o elegir un rango de páginas. La lectura avanza frase a frase y puedes saltar adelante o atrás, o pulsar cualquier frase para ir a ella."
+                "text": "«Escuchar ahora» no tiene límite: puedes escuchar el documento entero o elegir un rango de páginas, frase a frase. El MP3 admite hasta 20.000 caracteres (unos 25 minutos de audio) y depende del cupo diario; si el texto es más largo, se genera la primera parte."
               }
             },
             {
@@ -197,7 +208,7 @@
               "name": "¿Qué voces hay?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro. La página elige una voz en español si la hay y puedes cambiarla; si no hay ninguna, te explica cómo instalarla."
+                "text": "En «Escuchar ahora», las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro; la página elige una en español si la hay. En el MP3, dos voces sintéticas de Google (Chirp 3 HD): español de España y español de América, iguales en todos los dispositivos."
               }
             },
             {
@@ -213,7 +224,7 @@
               "name": "¿Puedo cambiar la velocidad de lectura?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sí, hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas: el cambio se aplica al momento, desde la frase que se está leyendo."
+                "text": "Sí. En «Escuchar ahora» hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas. El MP3 se genera a la velocidad que elijas antes, de 0,8× a 1,4×."
               }
             }
           ]
@@ -253,14 +264,14 @@
     <meta name="twitter:site" content="@pdfrapido">
     <meta name="twitter:creator" content="@mfsanchez">
     <meta property="og:title" content="PDF a audio gratis: escucha tu PDF en voz alta | PDFRápido">
-    <meta property="og:description" content="Escucha cualquier PDF en voz alta, gratis y sin subirlo: se lee en tu navegador, sin límite de páginas y con la frase resaltada. La descarga en MP3 vuelve pronto.">
+    <meta property="og:description" content="Escucha cualquier PDF en voz alta en tu navegador, gratis y sin subirlo, o descarga un MP3 con voz de Google de hasta 20.000 caracteres.">
     <meta property="og:url" content="https://pdfrapido.eu/pdf-a-audio/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdfrapido.eu/og-image.png">
     <meta property="og:site_name" content="PDFRápido">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PDF a audio gratis: escucha tu PDF en voz alta | PDFRápido">
-    <meta name="twitter:description" content="Escucha cualquier PDF en voz alta, gratis y sin subirlo: se lee en tu navegador, sin límite de páginas y con la frase resaltada. La descarga en MP3 vuelve pronto.">
+    <meta name="twitter:description" content="Escucha cualquier PDF en voz alta en tu navegador, gratis y sin subirlo, o descarga un MP3 con voz de Google de hasta 20.000 caracteres.">
     <meta name="twitter:image" content="https://pdfrapido.eu/og-image.png">
     <script src="/js/webmcp.js?v=2" defer></script>
 
@@ -331,12 +342,7 @@
             </svg>
         </div>
         <h1>PDF a Audio — PDFRápido</h1>
-        <p>Escucha tu PDF en voz alta en el navegador, sin subirlo y sin límite de páginas.</p>
-    </div>
-
-    <div class="aviso-mp3" role="note">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <p><strong>La descarga en MP3 vuelve pronto.</strong> Mientras tanto, puedes escuchar cualquier PDF aquí mismo, en tu navegador, sin subirlo y sin límite de páginas.</p>
+        <p>Escucha tu PDF en voz alta en el navegador, sin subirlo y sin límite de páginas, o descárgalo en MP3.</p>
     </div>
 
     <!-- Paso 1: abrir el PDF (se lee en el navegador) -->
@@ -420,12 +426,67 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" stroke="none" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>
                 Escuchar ahora
             </button>
-            <button type="button" class="btn-secondary btn-mp3" id="btnMp3" disabled aria-describedby="mp3Nota">
+            <button type="button" class="btn-secondary btn-mp3" id="btnMp3" aria-expanded="false" aria-controls="panelMp3">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Descargar MP3
             </button>
         </div>
-        <p class="info-note" id="mp3Nota">La descarga en MP3 está en pausa y vuelve pronto. «Escuchar ahora» no tiene límite de páginas y no envía el PDF a ningún servidor.</p>
+        <p class="info-note" id="mp3Nota">«Escuchar ahora» no tiene límite y no envía nada a nuestros servidores. «Descargar MP3» usa una voz de Google, con un cupo diario.</p>
+
+        <div class="panel-mp3" id="panelMp3" role="region" aria-labelledby="tituloMp3">
+            <h3 id="tituloMp3">Descargar en MP3</h3>
+            <p class="mp3-intro">El MP3 lo genera una voz neuronal de Google Cloud en servidores de la UE. Para eso enviamos a nuestro servidor y a Google <strong>solo el texto del cuadro</strong>, no el PDF. El texto se borra al terminar y el MP3, al descargarlo o como máximo a los 10 minutos. Máximo 20.000 caracteres por MP3, dentro de un cupo diario gratuito que compartimos todos.</p>
+            <div class="opt-row">
+                <div class="opt-group">
+                    <label for="mp3Voz">Voz del MP3</label>
+                    <select id="mp3Voz">
+                        <option value="es-ES" selected>Español de España (Google)</option>
+                        <option value="es-US">Español de América (Google)</option>
+                    </select>
+                </div>
+                <div class="opt-group">
+                    <label for="mp3Vel">Velocidad del MP3</label>
+                    <select id="mp3Vel">
+                        <option value="0.8">0,8× (lenta)</option>
+                        <option value="1" selected>1× (normal)</option>
+                        <option value="1.2">1,2×</option>
+                        <option value="1.4">1,4× (rápida)</option>
+                    </select>
+                </div>
+            </div>
+            <p class="mp3-cupo" id="mp3Cupo" aria-live="polite"></p>
+            <div class="aviso-tope" id="mp3Aviso" role="status" aria-live="polite"></div>
+            <div class="ts-caja" id="tsCaja"></div>
+            <button type="button" class="btn-convert" id="btnGenerar" disabled>Generar MP3</button>
+            <div class="mp3-progreso" id="mp3Progreso">
+                <div class="progress-wrap"><div class="progress-fill" id="mp3Barra"></div></div>
+                <p class="progress-label" id="mp3Estado" aria-live="polite"></p>
+            </div>
+            <div class="mp3-listo" id="mp3Listo">
+                <audio id="mp3Audio" controls preload="metadata"></audio>
+                <a class="btn-primary" id="mp3Guardar" href="#" download="audio.mp3">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Guardar MP3
+                </a>
+                <p class="info-note">El archivo ya está en tu navegador y lo hemos borrado del servidor. Si cierras la página sin guardarlo, tendrás que generarlo otra vez.</p>
+            </div>
+        </div>
+
+        <details class="cual-elijo">
+            <summary><strong>¿Cuál elijo?</strong></summary>
+            <div class="tabla-scroll">
+            <table>
+                <thead><tr><th></th><th>Escuchar ahora</th><th>Descargar MP3</th></tr></thead>
+                <tbody>
+                    <tr><th>Conviene si…</th><td>vas a escucharlo ya, en este dispositivo, o el texto es largo</td><td>quieres escucharlo luego, sin conexión, en el coche o en otro dispositivo</td></tr>
+                    <tr><th>Límite</th><td>ninguno</td><td>20.000 caracteres por MP3 y un cupo diario gratuito compartido</td></tr>
+                    <tr><th>Voz</th><td>la de tu dispositivo (la calidad varía)</td><td>voz neuronal de Google, igual en todos los dispositivos</td></tr>
+                    <tr><th>Privacidad</th><td>el texto no sale de tu dispositivo (salvo con voces «en línea», que se marcan)</td><td>el texto va a nuestro servidor y a Google Cloud (UE) y se borra al terminar</td></tr>
+                    <tr><th>Pantalla</th><td>mantén la pestaña abierta</td><td>te llevas el archivo</td></tr>
+                </tbody>
+            </table>
+            </div>
+        </details>
     </div>
 
     <!-- Paso 3: reproductor -->
@@ -492,13 +553,14 @@
 .content-seo .rtn a:hover{border-color:#E8453C;color:#E8453C}
 </style>
 <section class="content-seo" aria-label="Guía para escuchar un PDF en voz alta">
-  <p>Escucha el texto de tu PDF <strong>leído en voz alta</strong>, aquí mismo. El documento se abre en tu navegador, no sale de tu dispositivo y no hay límite de páginas ni de caracteres. La descarga en MP3 está en pausa y vuelve pronto.</p>
+  <p>Escucha el texto de tu PDF <strong>leído en voz alta</strong>, aquí mismo. El documento se abre en tu navegador, no sale de tu dispositivo y no hay límite de páginas ni de caracteres. Si prefieres un archivo, puedes descargar el texto en MP3 con una voz de Google.</p>
   <ul>
     <li>✅ El PDF no sale de tu dispositivo: se lee en tu navegador</li>
     <li>✅ Sin límite de páginas ni de caracteres</li>
     <li>✅ Eliges las páginas y puedes corregir el texto antes de escucharlo</li>
     <li>✅ Resalta la frase que se está leyendo y puedes saltar a cualquier otra</li>
     <li>✅ Cinco velocidades, de 0,75× a 2×</li>
+    <li>✅ MP3 con voz neuronal de Google, hasta 20.000 caracteres</li>
     <li>✅ Gratis y sin registro</li>
   </ul>
 
@@ -553,18 +615,20 @@
 
   <h2>Límites</h2>
   <p>No hay límite de páginas ni de caracteres: la lectura avanza frase a frase y puedes saltar adelante o atrás. Lo que sí necesitas es <strong>mantener la pestaña abierta</strong> mientras escuchas; en algunos móviles la voz se detiene al bloquear la pantalla, así que la página intenta mantenerla encendida mientras lee.</p>
-  <p>La página quita al abrir el PDF las cabeceras y los pies que se repiten en todas las páginas y los números de página sueltos, para que no se lean una y otra vez. Esta lectura no genera un archivo: la descarga en MP3 vuelve pronto.</p>
+  <p>La página quita al abrir el PDF las cabeceras y los pies que se repiten en todas las páginas y los números de página sueltos, para que no se lean una y otra vez. Esta lectura no genera un archivo. Para eso está «Descargar MP3».</p>
+  <p>El MP3 admite hasta <strong>20.000 caracteres</strong> (unos 25 minutos de audio a velocidad normal). Lo genera Google en unos 10 segundos por cada bloque de unos 4.500 caracteres: menos de un minuto para un MP3 de 20.000. Hay un <strong>cupo diario</strong> gratuito compartido por todos los usuarios, que se renueva a las 00:00 (hora de España), y un máximo de 40.000 caracteres al día por persona. Si el cupo se agota, la página te lo dice y puedes seguir con «Escuchar ahora», que no tiene límite.</p>
 
   <h2>Privacidad: qué pasa con tu archivo</h2>
   <p>El PDF se abre y se lee en tu navegador: <strong>no sale de tu dispositivo</strong>, no llega a nuestros servidores y no guardamos nada. Con las voces «en tu dispositivo», el texto tampoco sale de él. Con una voz «en línea», tu navegador envía el texto a su fabricante para generar la voz, según las condiciones de ese navegador.</p>
+  <p>Si pides el <strong>MP3</strong>, enviamos solo el texto del cuadro (hasta 20.000 caracteres) a nuestro servidor y a Google Cloud Text-to-Speech, que lo procesa en servidores de la UE como encargado del tratamiento. Google no conserva el texto ni el audio. Nosotros borramos el texto al terminar y el MP3 al descargarlo o, como máximo, a los 10 minutos. Antes de generarlo, Cloudflare Turnstile comprueba que no eres un robot. Más detalles en la <a href="/privacidad/">política de privacidad</a>.</p>
 
   <h2>Lo que esta herramienta no hace</h2>
   <ul>
     <li><strong>No lee PDFs escaneados.</strong> Un escaneo es una imagen sin texto: pásalo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</li>
-    <li><strong>De momento no genera MP3.</strong> La descarga vuelve pronto; mientras tanto, la lectura en el navegador no tiene límite.</li>
+    <li><strong>No genera MP3 de más de 20.000 caracteres.</strong> Con un texto más largo, se genera la primera parte; el resto lo puedes escuchar con «Escuchar ahora».</li>
     <li><strong>No detecta el idioma del texto.</strong> Elige una voz del mismo idioma que el documento.</li>
     <li><strong>No interpreta tablas, fórmulas ni maquetas complejas.</strong> El texto se lee en orden de lectura simple; en PDFs a varias columnas o con muchas tablas puede sonar desordenado.</li>
-    <li><strong>No elige la calidad de la voz.</strong> Depende de las voces de tu dispositivo y de tu navegador.</li>
+    <li><strong>«Escuchar ahora» no elige la calidad de la voz.</strong> Depende de las voces de tu dispositivo y de tu navegador. La voz del MP3 es la de Google, igual en todos los dispositivos.</li>
   </ul>
 
   <h2>Errores comunes y cómo evitarlos</h2>
@@ -573,17 +637,18 @@
     <li><strong>«Tu dispositivo no tiene ninguna voz en español».</strong> Instala una con las instrucciones que aparecen en la propia herramienta y recarga la página.</li>
     <li><strong>La voz se para al bloquear el móvil.</strong> Mantén la pantalla encendida y la pestaña en primer plano mientras escuchas.</li>
     <li><strong>Se leen notas al pie, índices o pies de página.</strong> Bórralos del texto antes de pulsar «Escuchar ahora»: el cuadro de texto se puede editar.</li>
+    <li><strong>«Hoy ya se han generado todos los MP3 disponibles del día».</strong> El cupo diario se ha agotado: escucha el texto con «Escuchar ahora» o vuelve mañana.</li>
     <li><strong>La voz lee con un acento extraño.</strong> La voz elegida no es del idioma del texto; cambia de voz en el desplegable.</li>
   </ul>
 
   <h2>Preguntas frecuentes sobre PDF a audio</h2>
   <div class="faq">
-    <div class="faq-item"><h3>¿Puedo descargar el audio en MP3?</h3><p>Ahora mismo no: la descarga en MP3 está en pausa porque el servicio de voz que la generaba ha dejado de funcionar, y vuelve pronto. Mientras tanto, puedes escuchar el PDF entero en tu navegador con «Escuchar ahora», sin límite de páginas.</p></div>
-    <div class="faq-item"><h3>¿Se envía mi PDF a algún servidor?</h3><p>No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con las voces marcadas «en tu dispositivo», el texto tampoco sale de él; con una voz «en línea», tu navegador envía el texto a su fabricante para generar la voz.</p></div>
-    <div class="faq-item"><h3>¿Hay límite de páginas o de texto?</h3><p>No. Puedes escuchar el documento entero o elegir un rango de páginas. La lectura avanza frase a frase y puedes saltar adelante o atrás, o pulsar cualquier frase para ir a ella.</p></div>
-    <div class="faq-item"><h3>¿Qué voces hay?</h3><p>Las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro. La página elige una voz en español si la hay y puedes cambiarla; si no hay ninguna, te explica cómo instalarla.</p></div>
+    <div class="faq-item"><h3>¿Puedo descargar el audio en MP3?</h3><p>Sí, hasta 20.000 caracteres por MP3, con una voz neuronal de Google en español de España o de América. Hay un cupo diario gratuito compartido por todos los usuarios; si se agota, puedes escuchar el texto entero con «Escuchar ahora», que no tiene límite.</p></div>
+    <div class="faq-item"><h3>¿Se envía mi PDF a algún servidor?</h3><p>No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con «Escuchar ahora» y una voz «en tu dispositivo», el texto tampoco sale de él. Si pides el MP3, enviamos solo el texto elegido a nuestro servidor y a Google Cloud, en la UE; el texto se borra al terminar y el MP3, al descargarlo o como máximo a los 10 minutos.</p></div>
+    <div class="faq-item"><h3>¿Hay límite de páginas o de texto?</h3><p>«Escuchar ahora» no tiene límite: puedes escuchar el documento entero o elegir un rango de páginas, frase a frase. El MP3 admite hasta 20.000 caracteres (unos 25 minutos de audio) y depende del cupo diario; si el texto es más largo, se genera la primera parte.</p></div>
+    <div class="faq-item"><h3>¿Qué voces hay?</h3><p>En «Escuchar ahora», las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro; la página elige una en español si la hay. En el MP3, dos voces sintéticas de Google (Chirp 3 HD): español de España y español de América, iguales en todos los dispositivos.</p></div>
     <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No, porque un escaneo es una imagen sin texto. La página lo detecta al abrir el archivo y te propone pasarlo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</p></div>
-    <div class="faq-item"><h3>¿Puedo cambiar la velocidad de lectura?</h3><p>Sí, hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas: el cambio se aplica al momento, desde la frase que se está leyendo.</p></div>
+    <div class="faq-item"><h3>¿Puedo cambiar la velocidad de lectura?</h3><p>Sí. En «Escuchar ahora» hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas. El MP3 se genera a la velocidad que elijas antes, de 0,8× a 1,4×.</p></div>
   </div>
 
   <h2>Otras herramientas PDF</h2>
@@ -1045,6 +1110,220 @@ async function pedirPantallaEncendida() {
 }
 function soltarPantalla() { try { if (wakeLock) wakeLock.release(); } catch (e) {} wakeLock = null; }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && leyendo) pedirPantallaEncendida(); });
+
+// ── 4. Descargar MP3 (Google Cloud TTS a través de /api/tts) ─────────────────
+const TURNSTILE_SITEKEY = '__TURNSTILE_SITEKEY__';
+const MP3_MAX = 20000;
+let mp3Estado = null;      // respuesta de /api/tts/estado
+let tsWidget = null, tsToken = '';
+let mp3Url = null, mp3Sondeo = null, mp3Generando = false;
+
+const MENSAJES_TOPE = {
+    tope_dia: 'Hoy ya se han generado todos los MP3 disponibles del día. Mañana a las 00:00 (hora de España) habrá cupo de nuevo.',
+    tope_ip: 'Ya has usado tu cupo de MP3 de hoy (40.000 caracteres). Puedes escuchar el texto en el navegador sin límite.',
+    tope_mes: 'Este mes ya no quedan MP3 disponibles; el cupo se renueva el día 1.',
+    corte: 'La descarga en MP3 no está disponible en este momento.',
+    en_curso: 'Ya tienes un MP3 generándose. Espera a que termine para pedir otro.',
+    ocupado: 'Ahora mismo hay varios MP3 en cola. Prueba otra vez dentro de un minuto.',
+    turnstile: 'No hemos podido comprobar que no eres un robot. Marca la casilla otra vez y vuelve a pulsar «Generar MP3».',
+    red: 'El servicio de MP3 no responde ahora mismo.',
+    google: 'Google no ha podido generar el audio. Prueba otra vez dentro de un rato.',
+    sin_texto: 'No hay texto suficiente para generar un MP3.',
+};
+
+function textoMp3() { return $('texto').value.trim(); }
+
+function recortarPorFrase(t, n) {
+    if (t.length <= n) return t;
+    const trozo = t.slice(0, n);
+    const m = Math.max(trozo.lastIndexOf('. '), trozo.lastIndexOf('\n'), trozo.lastIndexOf('? '), trozo.lastIndexOf('! '));
+    if (m > n * 0.6) return trozo.slice(0, m + 1).trim();
+    const e = trozo.lastIndexOf(' ');
+    return (e > 0 ? trozo.slice(0, e) : trozo).trim();
+}
+
+function avisoTope(motivo) {
+    const el = $('mp3Aviso');
+    el.innerHTML = '';
+    if (!motivo) { el.classList.remove('active'); return; }
+    const p = document.createElement('p');
+    p.textContent = MENSAJES_TOPE[motivo] || MENSAJES_TOPE.google;
+    el.appendChild(p);
+    if (motivo !== 'en_curso' && motivo !== 'turnstile') {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'btn-convert';
+        b.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg> Escuchar ahora';
+        b.addEventListener('click', () => {
+            if (/^tope_|^corte$/.test(motivo)) fetch('/api/tts/evento', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ tipo: 'escuchar_tras_tope' }) }).catch(() => {});
+            $('btnEscuchar').click();
+        });
+        el.appendChild(b);
+        el.classList.add('active');
+        b.focus();
+    } else {
+        el.classList.add('active');
+    }
+}
+
+function pintarCupo() {
+    const n = textoMp3().length;
+    const el = $('mp3Cupo');
+    if (!mp3Estado || !mp3Estado.disponible) { el.textContent = ''; actualizarGenerar(); return; }
+    const cabe = Math.min(mp3Estado.cabe, MP3_MAX);
+    if (n < 20) el.textContent = MENSAJES_TOPE.sin_texto;
+    else if (n > cabe) el.textContent = `El texto tiene ${n.toLocaleString('es')} caracteres. El MP3 incluirá las primeras ${cabe.toLocaleString('es')} (${cabe < MP3_MAX ? 'lo que queda del cupo de hoy' : 'el máximo por MP3'}); el resto lo puedes escuchar con «Escuchar ahora».`;
+    else el.textContent = `${n.toLocaleString('es')} caracteres: unos ${Math.max(1, Math.round(n / 14 / 60)).toLocaleString('es')} min de audio a velocidad normal.`;
+    actualizarGenerar();
+}
+
+function actualizarGenerar() {
+    $('btnGenerar').disabled = mp3Generando || !tsToken || !mp3Estado || !mp3Estado.disponible || textoMp3().length < 20;
+}
+
+async function consultarEstado() {
+    try {
+        const r = await fetch('/api/tts/estado', { cache: 'no-store' });
+        if (!r.ok) throw new Error(r.status);
+        mp3Estado = await r.json();
+    } catch (e) {
+        mp3Estado = null;
+        avisoTope('red');
+        return;
+    }
+    if (!mp3Estado.disponible) avisoTope(mp3Estado.motivo);
+    else { avisoTope(null); cargarTurnstile(); }
+    pintarCupo();
+}
+
+function cargarTurnstile() {
+    if (tsWidget !== null) return;
+    const pintar = () => {
+        tsWidget = window.turnstile.render('#tsCaja', {
+            sitekey: TURNSTILE_SITEKEY, action: 'mp3', language: 'es', size: $('tsCaja').clientWidth < 300 ? 'compact' : 'flexible', theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light',
+            callback: t => { tsToken = t; actualizarGenerar(); },
+            'expired-callback': () => { tsToken = ''; actualizarGenerar(); },
+            'error-callback': () => { tsToken = ''; actualizarGenerar(); },
+        });
+    };
+    if (window.turnstile) { pintar(); return; }
+    tsWidget = 'cargando';
+    window.pdfrTurnstileListo = pintar;
+    const s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=pdfrTurnstileListo';
+    s.async = true;
+    s.onerror = () => { tsWidget = null; avisoTope('red'); };
+    document.head.appendChild(s);
+}
+
+function nuevoToken() {
+    tsToken = '';
+    try { if (window.turnstile && tsWidget && tsWidget !== 'cargando') window.turnstile.reset(tsWidget); } catch (e) {}
+    actualizarGenerar();
+}
+
+function limpiarMp3() {
+    if (mp3Sondeo) { clearTimeout(mp3Sondeo); mp3Sondeo = null; }
+    if (mp3Url) { URL.revokeObjectURL(mp3Url); mp3Url = null; }
+    $('mp3Audio').removeAttribute('src');
+    $('mp3Listo').classList.remove('active');
+    $('mp3Progreso').classList.remove('active');
+    mp3Generando = false;
+}
+
+function progresoMp3(hechos, total, texto) {
+    $('mp3Progreso').classList.add('active');
+    $('mp3Barra').style.width = Math.round(100 * hechos / Math.max(1, total)) + '%';
+    $('mp3Estado').textContent = texto;
+}
+
+async function generarMp3() {
+    limpiarMp3();
+    avisoTope(null);
+    let texto = textoMp3();
+    const cabe = Math.min(mp3Estado.cabe, MP3_MAX);
+    if (texto.length > cabe) texto = recortarPorFrase(texto, cabe < MP3_MAX ? cabe - 100 : cabe);
+    mp3Generando = true;
+    actualizarGenerar();
+    progresoMp3(0, 1, 'Enviando el texto…');
+    let r, d;
+    try {
+        r = await fetch('/api/tts/trabajos', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ texto, voz: $('mp3Voz').value, velocidad: parseFloat($('mp3Vel').value), turnstile: tsToken, aceptar_recorte: true }),
+        });
+        d = await r.json().catch(() => ({}));
+    } catch (e) {
+        r = null;
+    }
+    nuevoToken();
+    if (!r || r.status !== 202) {
+        mp3Generando = false;
+        $('mp3Progreso').classList.remove('active');
+        const motivo = (d && d.detail && d.detail.motivo) || (r ? 'google' : 'red');
+        avisoTope(motivo);
+        if (/^tope_/.test(motivo)) consultarEstado();
+        actualizarGenerar();
+        return;
+    }
+    const seg = Math.max(5, d.bloques * 11);
+    progresoMp3(0, d.bloques, `En cola. ${d.bloques === 1 ? 'Tardará unos segundos' : 'Tardará menos de ' + Math.ceil(seg / 60) + ' min'}…`);
+    sondear(d.id, d.recortado);
+}
+
+function sondear(id, recortado) {
+    mp3Sondeo = setTimeout(async () => {
+        let e;
+        try { e = await (await fetch('/api/tts/trabajos/' + id, { cache: 'no-store' })).json(); }
+        catch (err) { return sondear(id, recortado); }
+        if (e.estado === 'en_cola' || e.estado === 'generando') {
+            progresoMp3(e.hechos, e.total, e.estado === 'en_cola' ? 'En cola…' : `Generando la voz: ${Math.round(100 * e.hechos / e.total)} %`);
+            return sondear(id, recortado);
+        }
+        if (e.estado === 'listo') return recogerMp3(id, recortado);
+        mp3Generando = false;
+        $('mp3Progreso').classList.remove('active');
+        avisoTope(e.error === 'corte' ? 'corte' : 'google');
+        if (e.error === 'corte') { mp3Estado = { disponible: false, motivo: 'corte' }; pintarCupo(); }
+        actualizarGenerar();
+    }, 2000);
+}
+
+async function recogerMp3(id, recortado) {
+    try {
+        const r = await fetch('/api/tts/trabajos/' + id + '/mp3', { cache: 'no-store' });
+        if (!r.ok) throw new Error(r.status);
+        mp3Url = URL.createObjectURL(await r.blob());
+    } catch (e) {
+        mp3Generando = false;
+        $('mp3Progreso').classList.remove('active');
+        avisoTope('google');
+        actualizarGenerar();
+        return;
+    }
+    mp3Generando = false;
+    progresoMp3(1, 1, recortado ? 'MP3 listo (con la primera parte del texto).' : 'MP3 listo.');
+    const base = ($('fileName').textContent || 'documento').replace(/\.pdf$/i, '').replace(/[^\wÀ-ſ-]+/g, '_').slice(0, 60) || 'documento';
+    $('mp3Audio').src = mp3Url;
+    $('mp3Guardar').href = mp3Url;
+    $('mp3Guardar').download = 'audio_' + base + '.mp3';
+    $('mp3Listo').classList.add('active');
+    $('mp3Guardar').focus();
+    consultarEstado();
+}
+
+$('btnMp3').addEventListener('click', () => {
+    const abierto = $('panelMp3').classList.toggle('active');
+    $('btnMp3').setAttribute('aria-expanded', abierto);
+    if (abierto) { consultarEstado(); $('panelMp3').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+});
+$('btnGenerar').addEventListener('click', generarMp3);
+$('texto').addEventListener('input', pintarCupo);
+['pagDesde', 'pagHasta'].forEach(id => $(id).addEventListener('change', pintarCupo));
+$('btnOtro').addEventListener('click', () => {
+    limpiarMp3(); avisoTope(null);
+    $('panelMp3').classList.remove('active'); $('btnMp3').setAttribute('aria-expanded', 'false');
+});
 
 window.addEventListener('pagehide', () => { if (synth) synth.cancel(); });
 if (!synth) prepararVoces();
