@@ -184,7 +184,7 @@
               "name": "¿Puedo descargar el audio en MP3?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sí, hasta 20.000 caracteres por MP3, con una voz neuronal de Google en español de España o de América. Hay un cupo diario gratuito compartido por todos los usuarios; si se agota, puedes escuchar el texto entero con «Escuchar ahora», que no tiene límite."
+                "text": "Sí, hasta 20.000 caracteres por MP3, con una voz neuronal de Google en español de España o de América, de mujer o de hombre. Hay un cupo diario gratuito compartido por todos los usuarios; si se agota, puedes escuchar el texto entero con «Escuchar ahora», que no tiene límite."
               }
             },
             {
@@ -208,7 +208,7 @@
               "name": "¿Qué voces hay?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "En «Escuchar ahora», las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro; la página elige una en español si la hay. En el MP3, dos voces sintéticas de Google (Chirp 3 HD): español de España y español de América, iguales en todos los dispositivos."
+                "text": "En «Escuchar ahora», las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro; la página elige una en español si la hay. En el MP3, cuatro voces sintéticas de Google (Chirp 3 HD): una de mujer y una de hombre en español de España y en español de América, iguales en todos los dispositivos."
               }
             },
             {
@@ -440,8 +440,14 @@
                 <div class="opt-group">
                     <label for="mp3Voz">Voz del MP3</label>
                     <select id="mp3Voz">
-                        <option value="es-ES" selected>Español de España (Google)</option>
-                        <option value="es-US">Español de América (Google)</option>
+                        <optgroup label="Español de España">
+                            <option value="es-ES-mujer" selected>Mujer · España</option>
+                            <option value="es-ES-hombre">Hombre · España</option>
+                        </optgroup>
+                        <optgroup label="Español de América">
+                            <option value="es-US-mujer">Mujer · América</option>
+                            <option value="es-US-hombre">Hombre · América</option>
+                        </optgroup>
                     </select>
                 </div>
                 <div class="opt-group">
@@ -643,10 +649,10 @@
 
   <h2>Preguntas frecuentes sobre PDF a audio</h2>
   <div class="faq">
-    <div class="faq-item"><h3>¿Puedo descargar el audio en MP3?</h3><p>Sí, hasta 20.000 caracteres por MP3, con una voz neuronal de Google en español de España o de América. Hay un cupo diario gratuito compartido por todos los usuarios; si se agota, puedes escuchar el texto entero con «Escuchar ahora», que no tiene límite.</p></div>
+    <div class="faq-item"><h3>¿Puedo descargar el audio en MP3?</h3><p>Sí, hasta 20.000 caracteres por MP3, con una voz neuronal de Google en español de España o de América, de mujer o de hombre. Hay un cupo diario gratuito compartido por todos los usuarios; si se agota, puedes escuchar el texto entero con «Escuchar ahora», que no tiene límite.</p></div>
     <div class="faq-item"><h3>¿Se envía mi PDF a algún servidor?</h3><p>No. El PDF se abre y se lee en tu navegador y no sale de tu dispositivo. Con «Escuchar ahora» y una voz «en tu dispositivo», el texto tampoco sale de él. Si pides el MP3, enviamos solo el texto elegido a nuestro servidor y a Google Cloud, en la UE; el texto se borra al terminar y el MP3, al descargarlo o como máximo a los 10 minutos.</p></div>
     <div class="faq-item"><h3>¿Hay límite de páginas o de texto?</h3><p>«Escuchar ahora» no tiene límite: puedes escuchar el documento entero o elegir un rango de páginas, frase a frase. El MP3 admite hasta 20.000 caracteres (unos 25 minutos de audio) y depende del cupo diario; si el texto es más largo, se genera la primera parte.</p></div>
-    <div class="faq-item"><h3>¿Qué voces hay?</h3><p>En «Escuchar ahora», las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro; la página elige una en español si la hay. En el MP3, dos voces sintéticas de Google (Chirp 3 HD): español de España y español de América, iguales en todos los dispositivos.</p></div>
+    <div class="faq-item"><h3>¿Qué voces hay?</h3><p>En «Escuchar ahora», las voces sintéticas de tu dispositivo y de tu navegador, que cambian de un sistema a otro; la página elige una en español si la hay. En el MP3, cuatro voces sintéticas de Google (Chirp 3 HD): una de mujer y una de hombre en español de España y en español de América, iguales en todos los dispositivos.</p></div>
     <div class="faq-item"><h3>¿Funciona con PDFs escaneados?</h3><p>No, porque un escaneo es una imagen sin texto. La página lo detecta al abrir el archivo y te propone pasarlo antes por <a href="/ocr-a-pdf/">OCR a PDF</a>.</p></div>
     <div class="faq-item"><h3>¿Puedo cambiar la velocidad de lectura?</h3><p>Sí. En «Escuchar ahora» hay cinco velocidades, de 0,75× a 2×, y puedes cambiarla mientras escuchas. El MP3 se genera a la velocidad que elijas antes, de 0,8× a 1,4×.</p></div>
   </div>
