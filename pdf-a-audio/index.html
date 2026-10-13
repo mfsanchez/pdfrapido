@@ -1112,7 +1112,7 @@ function soltarPantalla() { try { if (wakeLock) wakeLock.release(); } catch (e) 
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && leyendo) pedirPantallaEncendida(); });
 
 // ── 4. Descargar MP3 (Google Cloud TTS a través de /api/tts) ─────────────────
-const TURNSTILE_SITEKEY = '__TURNSTILE_SITEKEY__';
+const TURNSTILE_SITEKEY = '0x4AAAAAAFVTUU49Zm55q8ei';
 const MP3_MAX = 20000;
 let mp3Estado = null;      // respuesta de /api/tts/estado
 let tsWidget = null, tsToken = '';
